@@ -49,7 +49,7 @@ class EWSType_ResponseMessageType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'MessageText',

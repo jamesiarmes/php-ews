@@ -35,7 +35,7 @@ class EWSType_FolderChangeType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'FolderId',

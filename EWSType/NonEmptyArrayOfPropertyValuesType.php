@@ -21,7 +21,7 @@ class EWSType_NonEmptyArrayOfPropertyValuesType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'Value',

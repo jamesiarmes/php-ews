@@ -21,7 +21,7 @@ class EWSType_PathToExceptionFieldType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'FieldURI',

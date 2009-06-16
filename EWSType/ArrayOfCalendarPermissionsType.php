@@ -21,7 +21,7 @@ class EWSType_ArrayOfCalendarPermissionsType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'CalendarPermission',

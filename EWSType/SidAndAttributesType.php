@@ -28,7 +28,7 @@ class EWSType_SidAndAttributesType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'SecurityIdentifier',

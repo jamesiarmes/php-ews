@@ -84,7 +84,7 @@ class EWSType_NotificationType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'SubscriptionId',

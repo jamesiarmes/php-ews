@@ -42,7 +42,7 @@ class EWSType_SyncFolderItemsChangesType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'Create',

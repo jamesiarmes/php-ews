@@ -21,7 +21,7 @@ class EWSType_ResponseObjectType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'ObjectName',

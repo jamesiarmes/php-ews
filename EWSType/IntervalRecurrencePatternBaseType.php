@@ -21,7 +21,7 @@ class EWSType_IntervalRecurrencePatternBaseType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'Interval',

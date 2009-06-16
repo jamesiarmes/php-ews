@@ -21,7 +21,7 @@ class EWSType_IndividualAttendeeConflictData {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'BusyType',

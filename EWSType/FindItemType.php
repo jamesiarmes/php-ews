@@ -91,7 +91,7 @@ class EWSType_FindItemType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'ItemShape',

@@ -84,7 +84,7 @@ class EWSType_SmartResponseBaseType {
 	/**
 	 * Constructor
 	 */
-	public __construct() {
+	public function __construct() {
 		$this->schema = array(
 			array(
 				'name' => 'Subject',
