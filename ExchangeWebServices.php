@@ -1,59 +1,77 @@
 <?php
 /**
  * Base class of the Exchange Web Services application.
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 
 /**
  * Base class of the Exchange Web Services application.
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 class ExchangeWebServices {
+	/**
+	 * Location of the Exchange server.
+	 *
+	 * @var string
+	 */
 	protected $server;
+
+	/**
+	 * Username to use when connecting to the Exchange server.
+	 *
+	 * @var string
+	 */
 	protected $username;
+
+	/**
+	 * Password to use when connecting to the Exchange server.
+	 *
+	 * @var string
+	 */
 	protected $password;
-	
+
 	/**
 	 * Constructor for the ExchangeWebServices class
-	 * 
+	 *
 	 * @param string $server
 	 * @param string $username
 	 * @param string $password
 	 */
 	public function __construct($server = null, $username = null,
 		$password = null) {
-		$this->server = $server;
-		$this->username = $username;
-		$this->password = $password;
+		// set the object properties
+		$this->setServer($server);
+		$this->setUsername($username);
+		$this->setPassword($password);
 	} // end function __construct()
-	
+
 	/**
 	 * Sets the password property
-	 * 
+	 *
 	 * @param string $password
 	 */
 	public function setPassword($password) {
 		$this->password = $password;
-		
+
 		return true;
 	} // end function setPassword()
-	
+
 	/**
 	 * Sets the server property
-	 * 
+	 *
 	 * @param string $server
 	 */
 	public function setServer($server) {
 		$this->server = $server;
-		
+
 		return true;
 	} // end function setServer()
-	
+
 	/**
 	 * Sets the user name property
-	 * 
+	 *
 	 * @param string $username
 	 */
 	public function setUsername($username) {
@@ -173,10 +191,11 @@ class ExchangeWebServices {
 	/**
 	 * Function Description
 	 *
-	 * @param FindFolderType $request
-	 * @return FindFolderResponseType
+	 * @param EWS_FindFolderType $request
+	 * @return EWS_FindFolderResponseType
 	 */
 	public function FindFolder($request) {
+		return $this->initializeSoapClient()->FindFolder($request);
 	} // end function FindFolder()
 
 	/**
@@ -361,10 +380,25 @@ class ExchangeWebServices {
 
 	/**
 	 * Function Description
-	 * 
+	 *
 	 * @param UpdateItemType $request
 	 * @return UpdateItemResponseType
 	 */
 	public function UpdateItem($request) {
 	} // end function UpdateItem()
+
+	/**
+	 * Initializes the SoapClient object to make a request
+	 * 
+	 * @return Exchange_NTLMSoapClient
+	 */
+	protected function initializeSoapClient() {
+		return new Exchange_NTLMSoapClient(
+			dirname(__FILE__).'/wsdl/services.wsdl',
+			array(
+				'user' => $this->username,
+				'password' => $this->password,
+				'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+			)); // end return
+	} // end function initializeSoapClient()
 } // end class ExchangeWebService
