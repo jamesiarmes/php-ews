@@ -87,6 +87,7 @@ class ExchangeWebServices {
 	 * @return AddDelegateResponseMessageType
 	 */
 	public function AddDelegate($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function AddDelegate()
 
 	/**
@@ -96,6 +97,7 @@ class ExchangeWebServices {
 	 * @return ConvertIdResponseType
 	 */
 	public function ConvertId($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function ConvertId()
 
 	/**
@@ -105,6 +107,7 @@ class ExchangeWebServices {
 	 * @return CopyFolderResponseType
 	 */
 	public function CopyFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CopyFolder()
 
 	/**
@@ -114,6 +117,7 @@ class ExchangeWebServices {
 	 * @return CopyItemResponseType
 	 */
 	public function CopyItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CopyItem()
 
 	/**
@@ -123,6 +127,7 @@ class ExchangeWebServices {
 	 * @return CreateAttachmentResponseType
 	 */
 	public function CreateAttachment($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CreateAttachment()
 
 	/**
@@ -132,6 +137,7 @@ class ExchangeWebServices {
 	 * @return CreateFolderResponseType
 	 */
 	public function CreateFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CreateFolder()
 
 	/**
@@ -141,6 +147,7 @@ class ExchangeWebServices {
 	 * @return CreateItemResponseType
 	 */
 	public function CreateItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CreateItem()
 
 	/**
@@ -150,6 +157,7 @@ class ExchangeWebServices {
 	 * @return CreateManagedFolderResponseType
 	 */
 	public function CreateManagedFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function CreateManagedFolder()
 
 	/**
@@ -159,6 +167,7 @@ class ExchangeWebServices {
 	 * @return DeleteAttachmentResponseType
 	 */
 	public function DeleteAttachment($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function DeleteAttachment()
 
 	/**
@@ -168,6 +177,7 @@ class ExchangeWebServices {
 	 * @return DeleteFolderResponseType
 	 */
 	public function DeleteFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function DeleteFolder()
 
 	/**
@@ -177,6 +187,7 @@ class ExchangeWebServices {
 	 * @return DeleteItemResponseType
 	 */
 	public function DeleteItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function DeleteItem()
 
 	/**
@@ -186,6 +197,7 @@ class ExchangeWebServices {
 	 * @return ExpandDLResponseType
 	 */
 	public function ExpandDL($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function ExpandDL()
 
 	/**
@@ -195,7 +207,7 @@ class ExchangeWebServices {
 	 * @return EWS_FindFolderResponseType
 	 */
 	public function FindFolder($request) {
-		return $this->initializeSoapClient()->FindFolder($request);
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function FindFolder()
 
 	/**
@@ -205,6 +217,7 @@ class ExchangeWebServices {
 	 * @return FindItemResponseType
 	 */
 	public function FindItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function FindItem()
 
 	/**
@@ -214,6 +227,7 @@ class ExchangeWebServices {
 	 * @return GetAttachmentResponseType
 	 */
 	public function GetAttachment($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetAttachment()
 
 	/**
@@ -223,6 +237,7 @@ class ExchangeWebServices {
 	 * @return GetDelegateResponseMessageType
 	 */
 	public function GetDelegate($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetDelegate()
 
 	/**
@@ -232,6 +247,7 @@ class ExchangeWebServices {
 	 * @return GetEventsResponseType
 	 */
 	public function GetEvents($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetEvents()
 
 	/**
@@ -241,6 +257,7 @@ class ExchangeWebServices {
 	 * @return GetFolderResponseType
 	 */
 	public function GetFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetFolder()
 
 	/**
@@ -250,6 +267,7 @@ class ExchangeWebServices {
 	 * @return GetItemResponseType
 	 */
 	public function GetItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetItem()
 
 	/**
@@ -259,6 +277,7 @@ class ExchangeWebServices {
 	 * @return GetUserAvailabilityResponseType
 	 */
 	public function GetUserAvailability($GetUserAvailabilityRequest) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetUserAvailability()
 
 	/**
@@ -268,6 +287,7 @@ class ExchangeWebServices {
 	 * @return GetUserOofSettingsResponse
 	 */
 	public function GetUserOofSettings($GetUserOofSettingsRequest) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function GetUserOofSettings()
 
 	/**
@@ -277,6 +297,7 @@ class ExchangeWebServices {
 	 * @return MoveFolderResponseType
 	 */
 	public function MoveFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function MoveFolder()
 
 	/**
@@ -286,6 +307,7 @@ class ExchangeWebServices {
 	 * @return MoveItemResponseType
 	 */
 	public function MoveItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function MoveItem()
 
 	/**
@@ -295,6 +317,7 @@ class ExchangeWebServices {
 	 * @return RemoveDelegateResponseMessageType
 	 */
 	public function RemoveDelegate($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function RemoveDelegate()
 
 	/**
@@ -304,6 +327,7 @@ class ExchangeWebServices {
 	 * @return ResolveNamesResponseType
 	 */
 	public function ResolveNames($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function ResolveNames()
 
 	/**
@@ -313,6 +337,7 @@ class ExchangeWebServices {
 	 * @return SendItemResponseType
 	 */
 	public function SendItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function SendItem()
 
 	/**
@@ -322,6 +347,7 @@ class ExchangeWebServices {
 	 * @return SetUserOofSettingsResponse
 	 */
 	public function SetUserOofSettings($SetUserOofSettingsRequest) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function SetUserOofSettings()
 
 	/**
@@ -331,6 +357,7 @@ class ExchangeWebServices {
 	 * @return SubscribeResponseType
 	 */
 	public function Subscribe($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function Subscribe()
 
 	/**
@@ -340,6 +367,7 @@ class ExchangeWebServices {
 	 * @return SyncFolderHierarchyResponseType
 	 */
 	public function SyncFolderHierarchy($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function SyncFolderHierarchy()
 
 	/**
@@ -349,6 +377,7 @@ class ExchangeWebServices {
 	 * @return SyncFolderItemsResponseType
 	 */
 	public function SyncFolderItems($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function SyncFolderItems()
 
 	/**
@@ -358,6 +387,7 @@ class ExchangeWebServices {
 	 * @return UnsubscribeResponseType
 	 */
 	public function Unsubscribe($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function Unsubscribe()
 
 	/**
@@ -367,6 +397,7 @@ class ExchangeWebServices {
 	 * @return UpdateDelegateResponseMessageType
 	 */
 	public function UpdateDelegate($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function UpdateDelegate()
 
 	/**
@@ -376,6 +407,7 @@ class ExchangeWebServices {
 	 * @return UpdateFolderResponseType
 	 */
 	public function UpdateFolder($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function UpdateFolder()
 
 	/**
@@ -385,6 +417,7 @@ class ExchangeWebServices {
 	 * @return UpdateItemResponseType
 	 */
 	public function UpdateItem($request) {
+		return $this->initializeSoapClient()->{__FUNCTION__}($request);
 	} // end function UpdateItem()
 
 	/**
