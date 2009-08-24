@@ -1,5 +1,5 @@
 <?php
-class Exchange_NTLMStream extends NTLMStream {
+class NTLMStream_Exchange extends NTLMStream {
     protected $user = 'jarmes';
     protected $password = 'bobDude45';
-}
+} // end class NTLMStream_Exchange

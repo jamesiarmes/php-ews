@@ -5,7 +5,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class Exchange_NTLMSoapClient extends NTLMSoapClient {
+class NTLMSoapClient_Exchange extends NTLMSoapClient {
     protected $user;
     protected $password;
     
@@ -20,4 +20,4 @@ class Exchange_NTLMSoapClient extends NTLMSoapClient {
 
 		parent::SoapClient($wsdl, $options);
     } // end function __contruct()
-} // end class Exchange_NTLMSoapClient
+} // end class NTLMSoapClient_Exchange

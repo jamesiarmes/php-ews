@@ -423,10 +423,10 @@ class ExchangeWebServices {
 	/**
 	 * Initializes the SoapClient object to make a request
 	 * 
-	 * @return Exchange_NTLMSoapClient
+	 * @return NTLMSoapClient_Exchange
 	 */
 	protected function initializeSoapClient() {
-		return new Exchange_NTLMSoapClient(
+		return new NTLMSoapClient_Exchange(
 			dirname(__FILE__).'/wsdl/services.wsdl',
 			array(
 				'user' => $this->username,
