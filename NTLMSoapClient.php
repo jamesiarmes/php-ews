@@ -60,9 +60,6 @@ class NTLMSoapClient extends SoapClient {
 		$this->__last_request_headers = $headers;
 		$ch = curl_init($location);
 
-		$soap = new SoapClient();
-		$soap->__getLastRequestHeaders();
-		
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
