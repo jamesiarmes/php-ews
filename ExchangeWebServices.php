@@ -46,7 +46,17 @@ class ExchangeWebServices {
 		$this->setUsername($username);
 		$this->setPassword($password);
 	} // end function __construct()
-
+	
+	/**
+	 * Returns the SOAP Client that may be used to make calls against the server
+	 * 
+	 * @return NTLMSoapClient_Exchange
+	 */
+	public function getClient()
+	{
+		return $this->initializeSoapClient();
+	} // end function getClient()
+	
 	/**
 	 * Sets the password property
 	 *
