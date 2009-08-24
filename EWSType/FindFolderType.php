@@ -60,7 +60,7 @@ class EWSType_FindFolderType {
 		$this->schema = array(
 			array(
 				'name' => 'FolderShape',
-				'required' => false,
+				'required' => true,
 				'type' => 'FolderResponseShapeType',
 			),
 			array(
@@ -80,12 +80,12 @@ class EWSType_FindFolderType {
 			),
 			array(
 				'name' => 'ParentFolderIds',
-				'required' => false,
+				'required' => true,
 				'type' => 'NonEmptyArrayOfBaseFolderIdsType',
 			),
 			array(
 				'name' => 'Traversal',
-				'required' => false,
+				'required' => true,
 				'type' => 'FolderQueryTraversalType',
 			),
 		); // end $this->schema
