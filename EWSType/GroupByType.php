@@ -17,28 +17,35 @@ class EWSType_GroupByType {
 	 * @var EWSType_PathToUnindexedFieldType
 	 */
 	public $FieldURI;
-
+	
 	/**
 	 * IndexedFieldURI property
 	 * 
 	 * @var EWSType_PathToIndexedFieldType
 	 */
 	public $IndexedFieldURI;
-
+	
 	/**
 	 * ExtendedFieldURI property
 	 * 
 	 * @var EWSType_PathToExtendedFieldType
 	 */
 	public $ExtendedFieldURI;
-
+	
 	/**
 	 * AggregateOn property
 	 * 
 	 * @var EWSType_AggregateOnType
 	 */
 	public $AggregateOn;
-
+	
+	/**
+	 * Order property
+	 * 
+	 * @var EWSType_SortDirectionType
+	 */
+	public $Order;
+	
 	/**
 	 * Constructor
 	 */
@@ -63,6 +70,11 @@ class EWSType_GroupByType {
 				'name' => 'AggregateOn',
 				'required' => false,
 				'type' => 'AggregateOnType',
+			),
+			array(
+				'name' => 'Order',
+				'required' => true,
+				'type' => 'SortDirectionType',
 			),
 		); // end $this->schema
 	} // end function __construct()

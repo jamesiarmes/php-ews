@@ -95,7 +95,7 @@ class EWSType_FindItemType {
 		$this->schema = array(
 			array(
 				'name' => 'ItemShape',
-				'required' => false,
+				'required' => true,
 				'type' => 'ItemResponseShapeType',
 			),
 			array(
@@ -145,7 +145,7 @@ class EWSType_FindItemType {
 			),
 			array(
 				'name' => 'Traversal',
-				'required' => false,
+				'required' => true,
 				'type' => 'ItemQueryTraversalType',
 			),
 		); // end $this->schema

@@ -37,7 +37,7 @@ class EWSType_FieldOrderType {
 			),
 			array(
 				'name' => 'Order',
-				'required' => false,
+				'required' => true,
 				'type' => 'SortDirectionType',
 			),
 		); // end $this->schema
