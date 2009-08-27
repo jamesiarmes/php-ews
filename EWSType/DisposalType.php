@@ -12,21 +12,25 @@
  */
 class EWSType_DisposalType {
 	/**
-	 * Completely deletes the item from the server
+	 * Deletes the item irrevocably. Does not move the item to the Deleted Items
+	 * Folder.
 	 * 
 	 * @var string
 	 */
 	const HARD_DELETE = 'HardDelete';
 	
 	/**
-	 * Moves the item to the "Deleted Items" folder
+	 * Does not actually delete the item, but instead simply moves it to the
+	 * Deleted Items folder.
 	 * 
 	 * @var string
 	 */
 	const MOVE_TO_DELETED_ITEMS = 'MoveToDeletedItems';
 	
 	/**
-	 * Marks the item for deletion but does not expunge the item from the server
+	 * "Deletes" the item so that it is no longer visible in the folder, but
+	 * actually still exists there. Avoid using this because there is nothing
+	 * that you can do with soft-deleted items from EWS aside from finding them.
 	 * 
 	 * @var string
 	 */
