@@ -14,7 +14,7 @@ class EWSType_ConstantValueType {
 	/**
 	 * Value property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Value;
 

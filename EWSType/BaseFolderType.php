@@ -28,14 +28,14 @@ class EWSType_BaseFolderType {
 	/**
 	 * FolderClass property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FolderClass;
 
 	/**
 	 * DisplayName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $DisplayName;
 

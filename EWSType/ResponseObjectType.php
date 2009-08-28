@@ -14,7 +14,7 @@ class EWSType_ResponseObjectType {
 	/**
 	 * ObjectName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ObjectName;
 

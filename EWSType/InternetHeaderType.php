@@ -14,14 +14,14 @@ class EWSType_InternetHeaderType {
 	/**
 	 * _ property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $_;
 
 	/**
 	 * HeaderName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $HeaderName;
 

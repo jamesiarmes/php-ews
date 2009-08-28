@@ -14,21 +14,21 @@ class EWSType_CalendarEventDetails {
 	/**
 	 * ID property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ID;
 
 	/**
 	 * Subject property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Subject;
 
 	/**
 	 * Location property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Location;
 

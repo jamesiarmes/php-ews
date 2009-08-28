@@ -63,14 +63,14 @@ class EWSType_MeetingRequestMessageType {
 	/**
 	 * Location property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Location;
 
 	/**
 	 * When property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $When;
 
@@ -175,14 +175,14 @@ class EWSType_MeetingRequestMessageType {
 	/**
 	 * Duration property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Duration;
 
 	/**
 	 * TimeZone property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $TimeZone;
 
@@ -273,14 +273,14 @@ class EWSType_MeetingRequestMessageType {
 	/**
 	 * MeetingWorkspaceUrl property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $MeetingWorkspaceUrl;
 
 	/**
 	 * NetShowUrl property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $NetShowUrl;
 

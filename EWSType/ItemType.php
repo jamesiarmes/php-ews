@@ -42,7 +42,7 @@ class EWSType_ItemType {
 	/**
 	 * Subject property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Subject;
 
@@ -98,7 +98,7 @@ class EWSType_ItemType {
 	/**
 	 * InReplyTo property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $InReplyTo;
 
@@ -189,14 +189,14 @@ class EWSType_ItemType {
 	/**
 	 * DisplayCc property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $DisplayCc;
 
 	/**
 	 * DisplayTo property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $DisplayTo;
 
@@ -231,7 +231,7 @@ class EWSType_ItemType {
 	/**
 	 * LastModifiedName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $LastModifiedName;
 

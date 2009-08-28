@@ -21,7 +21,7 @@ class EWSType_ExtendedPropertyType {
 	/**
 	 * Value property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Value;
 

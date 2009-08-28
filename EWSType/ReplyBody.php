@@ -14,7 +14,7 @@ class EWSType_ReplyBody {
 	/**
 	 * Message property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Message;
 

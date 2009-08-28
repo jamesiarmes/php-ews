@@ -63,7 +63,7 @@ class EWSType_SuggestionsViewOptionsType {
 	/**
 	 * GlobalObjectId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $GlobalObjectId;
 

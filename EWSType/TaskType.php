@@ -28,7 +28,7 @@ class EWSType_TaskType {
 	/**
 	 * BillingInformation property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $BillingInformation;
 
@@ -70,7 +70,7 @@ class EWSType_TaskType {
 	/**
 	 * Delegator property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Delegator;
 
@@ -112,14 +112,14 @@ class EWSType_TaskType {
 	/**
 	 * Mileage property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Mileage;
 
 	/**
 	 * Owner property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Owner;
 
@@ -154,7 +154,7 @@ class EWSType_TaskType {
 	/**
 	 * StatusDescription property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $StatusDescription;
 

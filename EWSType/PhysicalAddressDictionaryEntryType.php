@@ -14,35 +14,35 @@ class EWSType_PhysicalAddressDictionaryEntryType {
 	/**
 	 * Street property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Street;
 
 	/**
 	 * City property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $City;
 
 	/**
 	 * State property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $State;
 
 	/**
 	 * CountryOrRegion property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $CountryOrRegion;
 
 	/**
 	 * PostalCode property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $PostalCode;
 

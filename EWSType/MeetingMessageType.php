@@ -49,7 +49,7 @@ class EWSType_MeetingMessageType {
 	/**
 	 * UID property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $UID;
 

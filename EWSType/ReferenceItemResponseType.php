@@ -21,7 +21,7 @@ class EWSType_ReferenceItemResponseType {
 	/**
 	 * ObjectName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ObjectName;
 

@@ -42,7 +42,7 @@ class EWSType_ServerVersionInfo {
 	/**
 	 * Version property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Version;
 

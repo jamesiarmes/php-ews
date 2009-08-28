@@ -14,14 +14,14 @@ class EWSType_ItemIdType {
 	/**
 	 * Id property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Id;
 
 	/**
 	 * ChangeKey property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ChangeKey;
 

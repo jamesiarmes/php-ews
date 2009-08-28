@@ -49,14 +49,14 @@ class EWSType_ManagedFolderInformationType {
 	/**
 	 * ManagedFolderId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ManagedFolderId;
 
 	/**
 	 * Comment property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Comment;
 
@@ -77,7 +77,7 @@ class EWSType_ManagedFolderInformationType {
 	/**
 	 * HomePage property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $HomePage;
 

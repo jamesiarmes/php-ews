@@ -14,7 +14,7 @@ class EWSType_CalendarItemType {
 	/**
 	 * UID property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $UID;
 
@@ -70,14 +70,14 @@ class EWSType_CalendarItemType {
 	/**
 	 * Location property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Location;
 
 	/**
 	 * When property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $When;
 
@@ -189,14 +189,14 @@ class EWSType_CalendarItemType {
 	/**
 	 * Duration property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Duration;
 
 	/**
 	 * TimeZone property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $TimeZone;
 
@@ -287,14 +287,14 @@ class EWSType_CalendarItemType {
 	/**
 	 * MeetingWorkspaceUrl property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $MeetingWorkspaceUrl;
 
 	/**
 	 * NetShowUrl property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $NetShowUrl;
 

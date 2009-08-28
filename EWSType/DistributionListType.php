@@ -14,14 +14,14 @@ class EWSType_DistributionListType {
 	/**
 	 * DisplayName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $DisplayName;
 
 	/**
 	 * FileAs property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FileAs;
 

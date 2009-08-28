@@ -21,7 +21,7 @@ class EWSType_RecurringMasterItemIdType {
 	/**
 	 * ChangeKey property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ChangeKey;
 

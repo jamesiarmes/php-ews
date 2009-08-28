@@ -14,7 +14,7 @@ class EWSType_GroupedItemsType {
 	/**
 	 * GroupIndex property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $GroupIndex;
 

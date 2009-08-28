@@ -14,7 +14,7 @@ class EWSType_SidAndAttributesType {
 	/**
 	 * SecurityIdentifier property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $SecurityIdentifier;
 

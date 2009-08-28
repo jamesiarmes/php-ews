@@ -21,28 +21,28 @@ class EWSType_AttachmentType {
 	/**
 	 * Name property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Name;
 
 	/**
 	 * ContentType property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ContentType;
 
 	/**
 	 * ContentId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ContentId;
 
 	/**
 	 * ContentLocation property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ContentLocation;
 

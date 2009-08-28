@@ -14,14 +14,14 @@ class EWSType_MimeContentType {
 	/**
 	 * _ property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $_;
 
 	/**
 	 * CharacterSet property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $CharacterSet;
 

@@ -14,7 +14,7 @@ class EWSType_PhoneNumberDictionaryEntryType {
 	/**
 	 * _ property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $_;
 

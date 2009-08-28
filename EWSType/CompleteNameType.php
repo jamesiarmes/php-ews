@@ -14,70 +14,70 @@ class EWSType_CompleteNameType {
 	/**
 	 * Title property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Title;
 
 	/**
 	 * FirstName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FirstName;
 
 	/**
 	 * MiddleName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $MiddleName;
 
 	/**
 	 * LastName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $LastName;
 
 	/**
 	 * Suffix property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Suffix;
 
 	/**
 	 * Initials property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Initials;
 
 	/**
 	 * FullName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FullName;
 
 	/**
 	 * Nickname property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Nickname;
 
 	/**
 	 * YomiFirstName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $YomiFirstName;
 
 	/**
 	 * YomiLastName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $YomiLastName;
 

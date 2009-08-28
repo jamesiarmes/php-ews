@@ -35,7 +35,7 @@ class EWSType_PathToExtendedFieldType {
 	/**
 	 * PropertyName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $PropertyName;
 

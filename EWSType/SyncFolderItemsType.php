@@ -28,7 +28,7 @@ class EWSType_SyncFolderItemsType {
 	/**
 	 * SyncState property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $SyncState;
 

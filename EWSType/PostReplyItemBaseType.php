@@ -14,7 +14,7 @@ class EWSType_PostReplyItemBaseType {
 	/**
 	 * Subject property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Subject;
 
@@ -35,7 +35,7 @@ class EWSType_PostReplyItemBaseType {
 	/**
 	 * ObjectName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ObjectName;
 

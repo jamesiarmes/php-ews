@@ -105,7 +105,7 @@ class EWSType_WellKnownResponseObjectType {
 	/**
 	 * ObjectName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ObjectName;
 

@@ -14,7 +14,7 @@ class EWSType_SmartResponseBaseType {
 	/**
 	 * Subject property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Subject;
 
@@ -77,7 +77,7 @@ class EWSType_SmartResponseBaseType {
 	/**
 	 * ObjectName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ObjectName;
 

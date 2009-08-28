@@ -14,7 +14,7 @@ class EWSType_ArrayOfStringsType {
 	/**
 	 * String property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $String;
 

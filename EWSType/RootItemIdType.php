@@ -14,14 +14,14 @@ class EWSType_RootItemIdType {
 	/**
 	 * RootItemId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $RootItemId;
 
 	/**
 	 * RootItemChangeKey property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $RootItemChangeKey;
 

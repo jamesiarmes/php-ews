@@ -63,7 +63,7 @@ class EWSType_MessageType {
 	/**
 	 * ConversationTopic property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ConversationTopic;
 
@@ -77,7 +77,7 @@ class EWSType_MessageType {
 	/**
 	 * InternetMessageId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $InternetMessageId;
 
@@ -98,7 +98,7 @@ class EWSType_MessageType {
 	/**
 	 * References property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $References;
 

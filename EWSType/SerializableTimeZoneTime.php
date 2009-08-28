@@ -21,7 +21,7 @@ class EWSType_SerializableTimeZoneTime {
 	/**
 	 * Time property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Time;
 
@@ -49,7 +49,7 @@ class EWSType_SerializableTimeZoneTime {
 	/**
 	 * Year property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Year;
 

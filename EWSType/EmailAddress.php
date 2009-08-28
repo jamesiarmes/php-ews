@@ -14,21 +14,21 @@ class EWSType_EmailAddress {
 	/**
 	 * Name property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Name;
 
 	/**
 	 * Address property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Address;
 
 	/**
 	 * RoutingType property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $RoutingType;
 

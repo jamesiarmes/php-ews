@@ -14,14 +14,14 @@ class EWSType_Value {
 	/**
 	 * _ property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $_;
 
 	/**
 	 * Name property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Name;
 

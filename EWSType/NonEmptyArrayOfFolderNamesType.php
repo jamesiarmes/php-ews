@@ -14,7 +14,7 @@ class EWSType_NonEmptyArrayOfFolderNamesType {
 	/**
 	 * FolderName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FolderName;
 

@@ -14,7 +14,7 @@ class EWSType_ContactItemType {
 	/**
 	 * FileAs property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FileAs;
 
@@ -28,35 +28,35 @@ class EWSType_ContactItemType {
 	/**
 	 * DisplayName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $DisplayName;
 
 	/**
 	 * GivenName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $GivenName;
 
 	/**
 	 * Initials property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Initials;
 
 	/**
 	 * MiddleName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $MiddleName;
 
 	/**
 	 * Nickname property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Nickname;
 
@@ -70,7 +70,7 @@ class EWSType_ContactItemType {
 	/**
 	 * CompanyName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $CompanyName;
 
@@ -98,7 +98,7 @@ class EWSType_ContactItemType {
 	/**
 	 * AssistantName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $AssistantName;
 
@@ -140,14 +140,14 @@ class EWSType_ContactItemType {
 	/**
 	 * Department property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Department;
 
 	/**
 	 * Generation property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Generation;
 
@@ -161,28 +161,28 @@ class EWSType_ContactItemType {
 	/**
 	 * JobTitle property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $JobTitle;
 
 	/**
 	 * Manager property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Manager;
 
 	/**
 	 * Mileage property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Mileage;
 
 	/**
 	 * OfficeLocation property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $OfficeLocation;
 
@@ -196,21 +196,21 @@ class EWSType_ContactItemType {
 	/**
 	 * Profession property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Profession;
 
 	/**
 	 * SpouseName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $SpouseName;
 
 	/**
 	 * Surname property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Surname;
 

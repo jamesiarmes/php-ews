@@ -14,7 +14,7 @@ class EWSType_EmailAddressDictionaryEntryType {
 	/**
 	 * _ property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $_;
 

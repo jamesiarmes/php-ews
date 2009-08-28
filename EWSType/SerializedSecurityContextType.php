@@ -14,7 +14,7 @@ class EWSType_SerializedSecurityContextType {
 	/**
 	 * UserSid property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $UserSid;
 
@@ -35,7 +35,7 @@ class EWSType_SerializedSecurityContextType {
 	/**
 	 * PrimarySmtpAddress property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $PrimarySmtpAddress;
 

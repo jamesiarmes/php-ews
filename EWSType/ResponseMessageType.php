@@ -14,7 +14,7 @@ class EWSType_ResponseMessageType {
 	/**
 	 * MessageText property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $MessageText;
 

@@ -21,7 +21,7 @@ class EWSType_PushSubscriptionRequestType {
 	/**
 	 * URL property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $URL;
 

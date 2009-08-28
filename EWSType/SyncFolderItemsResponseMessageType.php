@@ -14,7 +14,7 @@ class EWSType_SyncFolderItemsResponseMessageType {
 	/**
 	 * SyncState property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $SyncState;
 

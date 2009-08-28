@@ -14,14 +14,14 @@ class EWSType_ContactsViewType {
 	/**
 	 * InitialName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $InitialName;
 
 	/**
 	 * FinalName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FinalName;
 

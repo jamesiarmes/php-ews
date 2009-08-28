@@ -28,7 +28,7 @@ class EWSType_DistinguishedFolderIdType {
 	/**
 	 * ChangeKey property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ChangeKey;
 

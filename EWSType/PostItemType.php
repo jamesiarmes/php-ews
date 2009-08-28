@@ -21,7 +21,7 @@ class EWSType_PostItemType {
 	/**
 	 * ConversationTopic property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ConversationTopic;
 
@@ -35,7 +35,7 @@ class EWSType_PostItemType {
 	/**
 	 * InternetMessageId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $InternetMessageId;
 
@@ -56,7 +56,7 @@ class EWSType_PostItemType {
 	/**
 	 * References property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $References;
 

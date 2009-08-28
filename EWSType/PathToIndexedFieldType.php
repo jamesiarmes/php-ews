@@ -21,7 +21,7 @@ class EWSType_PathToIndexedFieldType {
 	/**
 	 * FieldIndex property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $FieldIndex;
 

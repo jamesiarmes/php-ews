@@ -14,7 +14,7 @@ class EWSType_AlternatePublicFolderItemIdType {
 	/**
 	 * ItemId property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $ItemId;
 

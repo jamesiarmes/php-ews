@@ -42,7 +42,7 @@ class EWSType_TimeChangeType {
 	/**
 	 * TimeZoneName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $TimeZoneName;
 

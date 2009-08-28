@@ -14,7 +14,7 @@ class EWSType_AlternateIdType {
 	/**
 	 * Id property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Id;
 

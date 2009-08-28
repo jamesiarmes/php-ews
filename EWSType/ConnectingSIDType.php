@@ -14,21 +14,21 @@ class EWSType_ConnectingSIDType {
 	/**
 	 * PrincipalName property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $PrincipalName;
 
 	/**
 	 * SID property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $SID;
 
 	/**
 	 * PrimarySmtpAddress property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $PrimarySmtpAddress;
 

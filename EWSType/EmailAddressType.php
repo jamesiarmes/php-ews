@@ -14,7 +14,7 @@ class EWSType_EmailAddressType {
 	/**
 	 * Name property
 	 * 
-	 * @var EWSType_string
+	 * @var string
 	 */
 	public $Name;
 
