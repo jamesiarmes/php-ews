@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FindItemResponseMessageType {
+class EWSType_FindItemResponseMessageType extends EWSType {
 	/**
 	 * RootFolder property
 	 * 

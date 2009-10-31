@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfFreeBusyResponse {
+class EWSType_ArrayOfFreeBusyResponse extends EWSType {
 	/**
 	 * FreeBusyResponse property
 	 * 

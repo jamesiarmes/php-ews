@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfDelegateUserType {
+class EWSType_ArrayOfDelegateUserType extends EWSType {
 	/**
 	 * DelegateUser property
 	 * 

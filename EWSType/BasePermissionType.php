@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BasePermissionType {
+class EWSType_BasePermissionType extends EWSType {
 	/**
 	 * UserId property
 	 * 

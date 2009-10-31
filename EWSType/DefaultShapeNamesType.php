@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DefaultShapeNamesType {
+class EWSType_DefaultShapeNamesType extends EWSType {
 	/**
 	 * All properties are retured in the response
 	 * 

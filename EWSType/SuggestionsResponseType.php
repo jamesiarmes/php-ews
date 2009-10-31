@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SuggestionsResponseType {
+class EWSType_SuggestionsResponseType extends EWSType {
 	/**
 	 * ResponseMessage property
 	 * 

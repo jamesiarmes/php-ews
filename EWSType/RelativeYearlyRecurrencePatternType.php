@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_RelativeYearlyRecurrencePatternType {
+class EWSType_RelativeYearlyRecurrencePatternType extends EWSType {
 	/**
 	 * DaysOfWeek property
 	 * 

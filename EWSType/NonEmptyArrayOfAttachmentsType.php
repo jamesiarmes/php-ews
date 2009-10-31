@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfAttachmentsType {
+class EWSType_NonEmptyArrayOfAttachmentsType extends EWSType {
 	/**
 	 * ItemAttachment property
 	 * 

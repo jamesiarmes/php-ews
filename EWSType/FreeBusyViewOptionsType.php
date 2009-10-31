@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FreeBusyViewOptionsType {
+class EWSType_FreeBusyViewOptionsType extends EWSType {
 	/**
 	 * TimeWindow property
 	 * 

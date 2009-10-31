@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DistinguishedFolderIdNameType {
+class EWSType_DistinguishedFolderIdNameType extends EWSType {
 	/**
 	 * Calendar folder
 	 * 

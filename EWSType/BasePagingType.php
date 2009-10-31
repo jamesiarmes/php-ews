@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BasePagingType {
+class EWSType_BasePagingType extends EWSType {
 	/**
 	 * MaxEntriesReturned property
 	 * 

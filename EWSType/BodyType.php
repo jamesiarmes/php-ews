@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BodyType {
+class EWSType_BodyType extends EWSType {
 	/**
 	 * _ property
 	 * 

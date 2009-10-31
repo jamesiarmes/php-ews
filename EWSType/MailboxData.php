@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_MailboxData {
+class EWSType_MailboxData extends EWSType {
 	/**
 	 * Email property
 	 * 

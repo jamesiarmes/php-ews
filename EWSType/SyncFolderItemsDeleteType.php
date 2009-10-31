@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SyncFolderItemsDeleteType {
+class EWSType_SyncFolderItemsDeleteType extends EWSType {
 	/**
 	 * ItemId property
 	 * 

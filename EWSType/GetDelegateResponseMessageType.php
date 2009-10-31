@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetDelegateResponseMessageType {
+class EWSType_GetDelegateResponseMessageType extends EWSType {
 	/**
 	 * DeliverMeetingRequests property
 	 * 

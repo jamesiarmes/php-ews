@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfItemChangeDescriptionsType {
+class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType {
 	/**
 	 * AppendToItemField property
 	 * 

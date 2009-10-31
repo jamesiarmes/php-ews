@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PhoneNumberDictionaryEntryType {
+class EWSType_PhoneNumberDictionaryEntryType extends EWSType {
 	/**
 	 * _ property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PathToUnindexedFieldType {
+class EWSType_PathToUnindexedFieldType extends EWSType {
 	/**
 	 * FieldURI property
 	 * 

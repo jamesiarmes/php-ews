@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ExchangeImpersonationType {
+class EWSType_ExchangeImpersonationType extends EWSType {
 	/**
 	 * ConnectingSID property
 	 * 

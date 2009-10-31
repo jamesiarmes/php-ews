@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfFoldersType {
+class EWSType_NonEmptyArrayOfFoldersType extends EWSType {
 	/**
 	 * Folder property
 	 * 

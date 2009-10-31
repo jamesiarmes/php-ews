@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FindFolderParentType {
+class EWSType_FindFolderParentType extends EWSType {
 	/**
 	 * Folders property
 	 * 

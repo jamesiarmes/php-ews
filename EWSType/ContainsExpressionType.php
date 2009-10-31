@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ContainsExpressionType {
+class EWSType_ContainsExpressionType extends EWSType {
 	/**
 	 * Path property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CompleteNameType {
+class EWSType_CompleteNameType extends EWSType {
 	/**
 	 * Title property
 	 * 

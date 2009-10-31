@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PostItemType {
+class EWSType_PostItemType extends EWSType {
 	/**
 	 * ConversationIndex property
 	 * 

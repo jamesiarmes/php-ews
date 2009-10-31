@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DelegateUserType {
+class EWSType_DelegateUserType extends EWSType {
 	/**
 	 * UserId property
 	 * 

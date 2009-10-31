@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ModifiedEventType {
+class EWSType_ModifiedEventType extends EWSType {
 	/**
 	 * UnreadCount property
 	 * 

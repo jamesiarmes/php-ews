@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_UpdateItemResponseMessageType {
+class EWSType_UpdateItemResponseMessageType extends EWSType {
 	/**
 	 * ConflictResults property
 	 * 

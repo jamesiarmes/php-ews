@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SyncFolderItemsType {
+class EWSType_SyncFolderItemsType extends EWSType {
 	/**
 	 * ItemShape property
 	 * 

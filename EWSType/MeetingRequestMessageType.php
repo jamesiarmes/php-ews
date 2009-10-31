@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_MeetingRequestMessageType {
+class EWSType_MeetingRequestMessageType extends EWSType {
 	/**
 	 * MeetingRequestType property
 	 * 

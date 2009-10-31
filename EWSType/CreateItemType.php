@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CreateItemType {
+class EWSType_CreateItemType extends EWSType {
 	/**
 	 * SavedItemFolderId property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PermissionSetType {
+class EWSType_PermissionSetType extends EWSType {
 	/**
 	 * Permissions property
 	 * 

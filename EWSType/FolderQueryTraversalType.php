@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FolderQueryTraversalType {
+class EWSType_FolderQueryTraversalType extends EWSType {
 	/**
 	 * Consider both direct children as well as all subfolders contained within
 	 * those children as well as the children's children, etc.

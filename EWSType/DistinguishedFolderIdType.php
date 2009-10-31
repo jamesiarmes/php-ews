@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DistinguishedFolderIdType {
+class EWSType_DistinguishedFolderIdType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

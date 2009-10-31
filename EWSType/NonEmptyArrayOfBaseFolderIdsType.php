@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfBaseFolderIdsType {
+class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType {
 	/**
 	 * FolderId property
 	 * 

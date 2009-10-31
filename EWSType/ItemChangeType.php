@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ItemChangeType {
+class EWSType_ItemChangeType extends EWSType {
 	/**
 	 * ItemId property
 	 * 

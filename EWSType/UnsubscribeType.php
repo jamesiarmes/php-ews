@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_UnsubscribeType {
+class EWSType_UnsubscribeType extends EWSType {
 	/**
 	 * SubscriptionId property
 	 * 

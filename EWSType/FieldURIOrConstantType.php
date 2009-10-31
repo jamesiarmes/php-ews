@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FieldURIOrConstantType {
+class EWSType_FieldURIOrConstantType extends EWSType {
 	/**
 	 * Path property
 	 * 

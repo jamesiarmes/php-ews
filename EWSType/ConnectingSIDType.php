@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ConnectingSIDType {
+class EWSType_ConnectingSIDType extends EWSType {
 	/**
 	 * PrincipalName property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GroupAttendeeConflictData {
+class EWSType_GroupAttendeeConflictData extends EWSType {
 	/**
 	 * NumberOfMembers property
 	 * 

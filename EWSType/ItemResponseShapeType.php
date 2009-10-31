@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ItemResponseShapeType {
+class EWSType_ItemResponseShapeType extends EWSType {
 	/**
 	 * BaseShape property
 	 * 

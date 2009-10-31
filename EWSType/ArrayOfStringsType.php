@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfStringsType {
+class EWSType_ArrayOfStringsType extends EWSType {
 	/**
 	 * String property
 	 * 

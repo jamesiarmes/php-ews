@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetUserOofSettingsRequest {
+class EWSType_GetUserOofSettingsRequest extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

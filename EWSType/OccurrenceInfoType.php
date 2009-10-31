@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_OccurrenceInfoType {
+class EWSType_OccurrenceInfoType extends EWSType {
 	/**
 	 * ItemId property
 	 * 

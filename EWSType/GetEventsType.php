@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetEventsType {
+class EWSType_GetEventsType extends EWSType {
 	/**
 	 * SubscriptionId property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_AlternateIdBaseType {
+class EWSType_AlternateIdBaseType extends EWSType {
 	/**
 	 * Format property
 	 * 

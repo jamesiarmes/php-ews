@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SearchFolderType {
+class EWSType_SearchFolderType extends EWSType {
 	/**
 	 * SearchParameters property
 	 * 

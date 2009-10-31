@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CreateFolderType {
+class EWSType_CreateFolderType extends EWSType {
 	/**
 	 * ParentFolderId property
 	 * 

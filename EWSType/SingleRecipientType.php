@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SingleRecipientType {
+class EWSType_SingleRecipientType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

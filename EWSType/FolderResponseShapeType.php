@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FolderResponseShapeType {
+class EWSType_FolderResponseShapeType extends EWSType {
 	/**
 	 * BaseShape property
 	 * 

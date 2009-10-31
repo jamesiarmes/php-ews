@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ManagedFolderInformationType {
+class EWSType_ManagedFolderInformationType extends EWSType {
 	/**
 	 * CanDelete property
 	 * 

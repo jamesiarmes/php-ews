@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ExpandDLResponseMessageType {
+class EWSType_ExpandDLResponseMessageType extends EWSType {
 	/**
 	 * DLExpansion property
 	 * 

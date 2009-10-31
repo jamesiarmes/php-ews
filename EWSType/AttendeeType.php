@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_AttendeeType {
+class EWSType_AttendeeType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

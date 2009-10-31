@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarPermissionSetType {
+class EWSType_CalendarPermissionSetType extends EWSType {
 	/**
 	 * CalendarPermissions property
 	 * 

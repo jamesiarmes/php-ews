@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_IntervalRecurrencePatternBaseType {
+class EWSType_IntervalRecurrencePatternBaseType extends EWSType {
 	/**
 	 * Interval property
 	 * 

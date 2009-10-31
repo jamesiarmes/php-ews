@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfItemChangesType {
+class EWSType_NonEmptyArrayOfItemChangesType extends EWSType {
 	/**
 	 * ItemChange property
 	 * 

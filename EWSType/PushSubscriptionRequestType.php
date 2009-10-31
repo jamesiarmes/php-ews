@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PushSubscriptionRequestType {
+class EWSType_PushSubscriptionRequestType extends EWSType {
 	/**
 	 * StatusFrequency property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DeleteFolderType {
+class EWSType_DeleteFolderType extends EWSType {
 	/**
 	 * FolderIds property
 	 * 

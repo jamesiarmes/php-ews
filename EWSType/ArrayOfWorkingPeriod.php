@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfWorkingPeriod {
+class EWSType_ArrayOfWorkingPeriod extends EWSType {
 	/**
 	 * WorkingPeriod property
 	 * 

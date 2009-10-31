@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfBaseItemIdsType {
+class EWSType_ArrayOfBaseItemIdsType extends EWSType {
 	/**
 	 * ItemId property
 	 * 

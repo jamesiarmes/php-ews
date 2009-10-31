@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PullSubscriptionRequestType {
+class EWSType_PullSubscriptionRequestType extends EWSType {
 	/**
 	 * Timeout property
 	 * 

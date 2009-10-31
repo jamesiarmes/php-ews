@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PathToExceptionFieldType {
+class EWSType_PathToExceptionFieldType extends EWSType {
 	/**
 	 * FieldURI property
 	 * 

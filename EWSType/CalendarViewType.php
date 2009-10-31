@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarViewType {
+class EWSType_CalendarViewType extends EWSType {
 	/**
 	 * StartDate property
 	 * 

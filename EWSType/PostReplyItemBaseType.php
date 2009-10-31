@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PostReplyItemBaseType {
+class EWSType_PostReplyItemBaseType extends EWSType {
 	/**
 	 * Subject property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_TargetFolderIdType {
+class EWSType_TargetFolderIdType extends EWSType {
 	/**
 	 * FolderId property
 	 * 

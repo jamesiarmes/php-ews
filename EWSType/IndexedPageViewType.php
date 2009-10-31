@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_IndexedPageViewType {
+class EWSType_IndexedPageViewType extends EWSType {
 	/**
 	 * Offset property
 	 * 

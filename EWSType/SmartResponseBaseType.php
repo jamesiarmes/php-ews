@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SmartResponseBaseType {
+class EWSType_SmartResponseBaseType extends EWSType {
 	/**
 	 * Subject property
 	 * 

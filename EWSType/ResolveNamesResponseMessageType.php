@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ResolveNamesResponseMessageType {
+class EWSType_ResolveNamesResponseMessageType extends EWSType {
 	/**
 	 * ResolutionSet property
 	 * 

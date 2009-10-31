@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_MessageXml {
+class EWSType_MessageXml extends EWSType {
 	/**
 	 * any property
 	 * 

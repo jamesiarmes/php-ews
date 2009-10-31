@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FindItemParentType {
+class EWSType_FindItemParentType extends EWSType {
 	/**
 	 * Items property
 	 * 

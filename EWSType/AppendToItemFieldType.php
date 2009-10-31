@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_AppendToItemFieldType {
+class EWSType_AppendToItemFieldType extends EWSType {
 	/**
 	 * Item property
 	 * 

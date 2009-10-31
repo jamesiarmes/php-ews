@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseSubscriptionRequestType {
+class EWSType_BaseSubscriptionRequestType extends EWSType {
 	/**
 	 * FolderIds property
 	 * 

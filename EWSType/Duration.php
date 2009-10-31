@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_Duration {
+class EWSType_Duration extends EWSType {
 	/**
 	 * StartTime property
 	 * 

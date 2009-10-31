@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_AggregateOnType {
+class EWSType_AggregateOnType extends EWSType {
 	/**
 	 * FieldURI property
 	 * 

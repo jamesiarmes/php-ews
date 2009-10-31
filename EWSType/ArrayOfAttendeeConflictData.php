@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfAttendeeConflictData {
+class EWSType_ArrayOfAttendeeConflictData extends EWSType {
 	/**
 	 * UnknownAttendeeConflictData property
 	 * 

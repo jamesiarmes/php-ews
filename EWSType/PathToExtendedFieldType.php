@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_PathToExtendedFieldType {
+class EWSType_PathToExtendedFieldType extends EWSType {
 	/**
 	 * DistinguishedPropertySetId property
 	 * 

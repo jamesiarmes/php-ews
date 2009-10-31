@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ConvertIdType {
+class EWSType_ConvertIdType extends EWSType {
 	/**
 	 * SourceIds property
 	 * 

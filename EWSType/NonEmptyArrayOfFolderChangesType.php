@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfFolderChangesType {
+class EWSType_NonEmptyArrayOfFolderChangesType extends EWSType {
 	/**
 	 * FolderChange property
 	 * 

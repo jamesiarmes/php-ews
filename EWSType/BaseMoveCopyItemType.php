@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseMoveCopyItemType {
+class EWSType_BaseMoveCopyItemType extends EWSType {
 	/**
 	 * ToFolderId property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseNotificationEventType {
+class EWSType_BaseNotificationEventType extends EWSType {
 	/**
 	 * Watermark property
 	 * 

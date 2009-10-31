@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_TwoOperandExpressionType {
+class EWSType_TwoOperandExpressionType extends EWSType {
 	/**
 	 * Path property
 	 * 

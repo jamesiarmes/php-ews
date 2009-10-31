@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BodyTypeResponseType {
+class EWSType_BodyTypeResponseType extends EWSType {
 	/**
 	 * All properties are retured in the response
 	 * 

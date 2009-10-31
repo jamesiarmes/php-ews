@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SubscribeType {
+class EWSType_SubscribeType extends EWSType {
 	/**
 	 * PullSubscriptionRequest property
 	 * 

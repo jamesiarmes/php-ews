@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SendNotificationResponseMessageType {
+class EWSType_SendNotificationResponseMessageType extends EWSType {
 	/**
 	 * Notification property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfDeletedOccurrencesType {
+class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType {
 	/**
 	 * DeletedOccurrence property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SyncFolderHierarchyCreateOrUpdateType {
+class EWSType_SyncFolderHierarchyCreateOrUpdateType extends EWSType {
 	/**
 	 * Folder property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SetFolderFieldType {
+class EWSType_SetFolderFieldType extends EWSType {
 	/**
 	 * Folder property
 	 * 

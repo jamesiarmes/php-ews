@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FolderInfoResponseMessageType {
+class EWSType_FolderInfoResponseMessageType extends EWSType {
 	/**
 	 * Folders property
 	 * 

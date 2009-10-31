@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetAttachmentType {
+class EWSType_GetAttachmentType extends EWSType {
 	/**
 	 * AttachmentShape property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SuggestionsViewOptionsType {
+class EWSType_SuggestionsViewOptionsType extends EWSType {
 	/**
 	 * GoodThreshold property
 	 * 

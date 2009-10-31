@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DistinguishedGroupByType {
+class EWSType_DistinguishedGroupByType extends EWSType {
 	/**
 	 * StandardGroupBy property
 	 * 

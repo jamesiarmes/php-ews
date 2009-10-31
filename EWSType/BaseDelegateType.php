@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseDelegateType {
+class EWSType_BaseDelegateType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

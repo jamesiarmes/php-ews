@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_TaskType {
+class EWSType_TaskType extends EWSType {
 	/**
 	 * ActualWork property
 	 * 

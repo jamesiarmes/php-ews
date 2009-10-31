@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfRecipientsType {
+class EWSType_ArrayOfRecipientsType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

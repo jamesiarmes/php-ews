@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetFolderType {
+class EWSType_GetFolderType extends EWSType {
 	/**
 	 * FolderShape property
 	 * 

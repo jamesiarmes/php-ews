@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_EmailAddressType {
+class EWSType_EmailAddressType extends EWSType {
 	/**
 	 * Name property
 	 * 

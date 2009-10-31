@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DeletedOccurrenceInfoType {
+class EWSType_DeletedOccurrenceInfoType extends EWSType {
 	/**
 	 * Start property
 	 * 

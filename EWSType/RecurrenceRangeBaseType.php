@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_RecurrenceRangeBaseType {
+class EWSType_RecurrenceRangeBaseType extends EWSType {
 	/**
 	 * StartDate property
 	 * 

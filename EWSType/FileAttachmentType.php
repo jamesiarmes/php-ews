@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FileAttachmentType {
+class EWSType_FileAttachmentType extends EWSType {
 	/**
 	 * Content property
 	 * 

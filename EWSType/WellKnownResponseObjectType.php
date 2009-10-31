@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_WellKnownResponseObjectType {
+class EWSType_WellKnownResponseObjectType extends EWSType {
 	/**
 	 * ItemClass property
 	 * 

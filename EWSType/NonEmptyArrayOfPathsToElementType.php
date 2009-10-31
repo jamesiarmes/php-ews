@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfPathsToElementType {
+class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType {
 	/**
 	 * Path property
 	 * 

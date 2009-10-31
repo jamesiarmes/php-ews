@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SearchParametersType {
+class EWSType_SearchParametersType extends EWSType {
 	/**
 	 * Restriction property
 	 * 

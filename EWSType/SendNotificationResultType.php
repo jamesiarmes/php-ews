@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SendNotificationResultType {
+class EWSType_SendNotificationResultType extends EWSType {
 	/**
 	 * SubscriptionStatus property
 	 * 

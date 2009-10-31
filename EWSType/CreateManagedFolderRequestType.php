@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CreateManagedFolderRequestType {
+class EWSType_CreateManagedFolderRequestType extends EWSType {
 	/**
 	 * FolderNames property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_RecurrenceType {
+class EWSType_RecurrenceType extends EWSType {
 	/**
 	 * RelativeYearlyRecurrence property
 	 * 

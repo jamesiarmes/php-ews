@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetUserOofSettingsResponse {
+class EWSType_GetUserOofSettingsResponse extends EWSType {
 	/**
 	 * ResponseMessage property
 	 * 

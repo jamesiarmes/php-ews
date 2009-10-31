@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfAllItemsType {
+class EWSType_NonEmptyArrayOfAllItemsType extends EWSType {
 	/**
 	 * Item property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseGroupByType {
+class EWSType_BaseGroupByType extends EWSType {
 	/**
 	 * Order property
 	 * 

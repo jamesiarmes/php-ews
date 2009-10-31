@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ResponseObjectType {
+class EWSType_ResponseObjectType extends EWSType {
 	/**
 	 * ObjectName property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_EmailAddressDictionaryType {
+class EWSType_EmailAddressDictionaryType extends EWSType {
 	/**
 	 * Entry property
 	 * 

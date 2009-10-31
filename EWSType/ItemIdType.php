@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ItemIdType {
+class EWSType_ItemIdType extends EWSType {
 	/**
 	 * Id property
 	 * 

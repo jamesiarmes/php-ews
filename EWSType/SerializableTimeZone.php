@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SerializableTimeZone {
+class EWSType_SerializableTimeZone extends EWSType {
 	/**
 	 * Bias property
 	 * 

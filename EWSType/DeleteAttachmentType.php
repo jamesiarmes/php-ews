@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DeleteAttachmentType {
+class EWSType_DeleteAttachmentType extends EWSType {
 	/**
 	 * AttachmentIds property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SerializedSecurityContextType {
+class EWSType_SerializedSecurityContextType extends EWSType {
 	/**
 	 * UserSid property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_TimeZoneType {
+class EWSType_TimeZoneType extends EWSType {
 	/**
 	 * BaseOffset property
 	 * 

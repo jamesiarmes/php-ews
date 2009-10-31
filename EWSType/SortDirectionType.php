@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SortDirectionType {
+class EWSType_SortDirectionType extends EWSType {
 	/**
 	 * Items are sorted in ascending order
 	 * 

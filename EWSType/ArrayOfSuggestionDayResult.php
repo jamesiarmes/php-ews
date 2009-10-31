@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfSuggestionDayResult {
+class EWSType_ArrayOfSuggestionDayResult extends EWSType {
 	/**
 	 * SuggestionDayResult property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ArrayOfCalendarEvent {
+class EWSType_ArrayOfCalendarEvent extends EWSType {
 	/**
 	 * CalendarEvent property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ConflictResultsType {
+class EWSType_ConflictResultsType extends EWSType {
 	/**
 	 * Count property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetItemType {
+class EWSType_GetItemType extends EWSType {
 	/**
 	 * ItemShape property
 	 * 

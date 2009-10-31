@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ReplyBody {
+class EWSType_ReplyBody extends EWSType {
 	/**
 	 * Message property
 	 * 

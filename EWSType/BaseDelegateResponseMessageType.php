@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_BaseDelegateResponseMessageType {
+class EWSType_BaseDelegateResponseMessageType extends EWSType {
 	/**
 	 * ResponseMessages property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_MovedCopiedEventType {
+class EWSType_MovedCopiedEventType extends EWSType {
 	/**
 	 * OldFolderId property
 	 * 

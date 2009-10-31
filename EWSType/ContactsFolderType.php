@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ContactsFolderType {
+class EWSType_ContactsFolderType extends EWSType {
 	/**
 	 * PermissionSet property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarEventDetails {
+class EWSType_CalendarEventDetails extends EWSType {
 	/**
 	 * ID property
 	 * 

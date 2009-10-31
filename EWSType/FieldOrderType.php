@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FieldOrderType {
+class EWSType_FieldOrderType extends EWSType {
 	/**
 	 * Path property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ItemQueryTraversalType {
+class EWSType_ItemQueryTraversalType extends EWSType {
 	/**
 	 * Consider only folders that are direct children of the parent folder(s) in
 	 * question

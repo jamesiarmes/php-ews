@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_DisposalType {
+class EWSType_DisposalType extends EWSType {
 	/**
 	 * Deletes the item irrevocably. Does not move the item to the Deleted Items
 	 * Folder.

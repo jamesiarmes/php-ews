@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FractionalPageViewType {
+class EWSType_FractionalPageViewType extends EWSType {
 	/**
 	 * Numerator property
 	 * 

@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ReferenceItemResponseType {
+class EWSType_ReferenceItemResponseType extends EWSType {
 	/**
 	 * ReferenceItemId property
 	 * 

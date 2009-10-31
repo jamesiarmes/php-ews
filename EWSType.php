@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWS_Types {
+abstract class EWSType {
 	/**
 	 * Schema definition for the type object
 	 * 
@@ -22,4 +22,4 @@ class EWS_Types {
 	 * Constructor
 	 */
 	public abstract function __construct();
-} // end class EWS_Types
+} // end class EWSType

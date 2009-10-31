@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_RootItemIdType {
+class EWSType_RootItemIdType extends EWSType {
 	/**
 	 * RootItemId property
 	 * 

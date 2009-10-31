@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ConvertIdResponseMessageType {
+class EWSType_ConvertIdResponseMessageType extends EWSType {
 	/**
 	 * AlternateId property
 	 * 

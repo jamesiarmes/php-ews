@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_FolderType {
+class EWSType_FolderType extends EWSType {
 	/**
 	 * PermissionSet property
 	 * 

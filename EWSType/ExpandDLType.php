@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ExpandDLType {
+class EWSType_ExpandDLType extends EWSType {
 	/**
 	 * Mailbox property
 	 * 

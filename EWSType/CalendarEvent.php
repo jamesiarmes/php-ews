@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarEvent {
+class EWSType_CalendarEvent extends EWSType {
 	/**
 	 * StartTime property
 	 * 

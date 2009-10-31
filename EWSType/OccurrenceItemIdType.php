@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_OccurrenceItemIdType {
+class EWSType_OccurrenceItemIdType extends EWSType {
 	/**
 	 * RecurringMasterId property
 	 * 

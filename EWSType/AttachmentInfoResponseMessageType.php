@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_AttachmentInfoResponseMessageType {
+class EWSType_AttachmentInfoResponseMessageType extends EWSType {
 	/**
 	 * Attachments property
 	 * 

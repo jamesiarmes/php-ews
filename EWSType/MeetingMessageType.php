@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_MeetingMessageType {
+class EWSType_MeetingMessageType extends EWSType {
 	/**
 	 * AssociatedCalendarItemId property
 	 * 

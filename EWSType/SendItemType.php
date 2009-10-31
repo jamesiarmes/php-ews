@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_SendItemType {
+class EWSType_SendItemType extends EWSType {
 	/**
 	 * ItemIds property
 	 * 

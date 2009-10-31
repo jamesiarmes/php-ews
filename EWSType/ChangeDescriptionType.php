@@ -10,7 +10,7 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ChangeDescriptionType {
+class EWSType_ChangeDescriptionType extends EWSType {
 	/**
 	 * Path property
 	 * 
