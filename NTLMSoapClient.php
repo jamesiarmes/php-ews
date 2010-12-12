@@ -49,7 +49,7 @@ class NTLMSoapClient extends SoapClient {
 	 * @return string the xml soap response.
 	 */
 	public function __doRequest($request, $location, $action, $version,
-		$one_way) {
+		$one_way = 0) {
 		$headers = array(
 			'Method: POST',
 			'Connection: Keep-Alive',
