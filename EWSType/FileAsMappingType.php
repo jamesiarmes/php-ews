@@ -114,9 +114,21 @@ class EWSType_FileAsMappingType extends EWSType {
 	 * Constructor
 	 */
 	public function __construct() {
+		$this->schema = array(
+			array(
+				'name' => '_',
+				'required' => true,
+				'type' => 'string',
+			),
+		); // end $this->schema
 	} // end function __construct()
 	
+	/**
+	 * Returns the value of this object as a string
+	 * 
+	 * @return string
+	 */
 	public function __toString() {
 		return $this->_;
-	}
-} // end class EWSType_DefaultShapeNamesType
+	} // end function __toString()
+} // end class EWSType_FileAsMappingType
