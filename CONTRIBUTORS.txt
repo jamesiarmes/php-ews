@@ -1,0 +1,5 @@
+Project maintainer:
+James I. Armes <jamesiarmes@gmail.com>
+
+Additional contributers:
+David Gwynne <jon.kloske.uq@gmail.com>
