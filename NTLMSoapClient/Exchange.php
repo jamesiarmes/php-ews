@@ -19,14 +19,14 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient {
 	 * 
 	 * @var string
 	 */
-    protected $user;
+	protected $user;
 	
 	/**
-	 * password for authentication on the exchnage server
+	 * Password for authentication on the exchnage server
 	 * 
 	 * @var string
 	 */
-    protected $password;
+	protected $password;
 	
 	/**
 	 * Constructor
@@ -43,6 +43,13 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient {
 		// set the username and password properties
 		$this->user = $options['user'];
 		$this->password = $options['password'];
+		
+		// if a version was set then add it to the headers
+		if (!empty($options['version'])) {
+		  $this->__default_headers[] = new SoapHeader(
+						'http://schemas.microsoft.com/exchange/services/2006/types',
+						'RequestServerVersion Version="'.$options['version'].'"');
+		} // end if a version was set
 		
 		parent::__construct($wsdl, $options);
 	} // end function __construct()
