@@ -7,10 +7,36 @@
 
 /**
  * Base class of the Exchange Web Services application.
- *
- * @author James I. Armes <http://www.jamesarmes.net>
  */
 class ExchangeWebServices {
+	/**
+	 * Microsoft Exchange 2007
+	 * 
+	 * @var string
+	 */
+	const VERSION_2007 = 'Exchange2007';
+	
+	/**
+	 * Microsoft Exchange 2007 SP1
+	 * 
+	 * @var string
+	 */
+	const VERSION_2007_SP1 = 'Exchange2007_SP1';
+	
+	/**
+	 * Microsoft Exchange 2010
+	 * 
+	 * @var string
+	 */
+	const VERSION_2010 = 'Exchange2010';
+	
+	/**
+	 * Microsoft Exchange 2010 SP1
+	 * 
+	 * @var string
+	 */
+	const VERSION_2010_SP1 = 'Exchange2010_SP1';
+	
 	/**
 	 * Location of the Exchange server.
 	 *
