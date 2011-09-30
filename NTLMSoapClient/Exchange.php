@@ -53,4 +53,13 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient {
 		
 		parent::__construct($wsdl, $options);
 	} // end function __construct()
+	
+	/**
+	 * Returns the response code from the last request
+	 * 
+	 * @return integer
+	 */
+	public function getResponseCode() {
+		return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
+	} // end function getResponseCode()
 } // end class NTLMSoapClient_Exchange
