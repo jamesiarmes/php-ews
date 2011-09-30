@@ -36,6 +36,13 @@ class ExchangeWebServices {
 	 * @var string
 	 */
 	const VERSION_2010_SP1 = 'Exchange2010_SP1';
+
+	/**
+	 * Password to use when connecting to the Exchange server.
+	 *
+	 * @var string
+	 */
+	protected $password;
 	
 	/**
 	 * Location of the Exchange server.
@@ -50,13 +57,18 @@ class ExchangeWebServices {
 	 * @var string
 	 */
 	protected $username;
-
+	
 	/**
-	 * Password to use when connecting to the Exchange server.
-	 *
+	 * Miscrosoft Exchange version that we are going to connect to
+	 * 
 	 * @var string
+	 * 
+	 * @see ExchangeWebServices::VERSION_2007
+	 * @see ExchangeWebServices::VERSION_2007_SP1
+	 * @see ExchangeWebServices::VERSION_2010
+	 * @see ExchangeWebServices::VERSION_2010_SP1
 	 */
-	protected $password;
+	protected $version;
 
 	/**
 	 * Constructor for the ExchangeWebServices class
@@ -64,13 +76,15 @@ class ExchangeWebServices {
 	 * @param string $server
 	 * @param string $username
 	 * @param string $password
+	 * @param string $version one of the ExchangeWebServices::VERSION_* constants
 	 */
 	public function __construct($server = null, $username = null,
-		$password = null) {
+		$password = null, $version = self::VERSION_2007) {
 		// set the object properties
 		$this->setServer($server);
 		$this->setUsername($username);
 		$this->setPassword($password);
+		$this->setVersion($version);
 	} // end function __construct()
 	
 	/**
@@ -115,6 +129,17 @@ class ExchangeWebServices {
 
 		return true;
 	} // end function setUsername()
+	
+	/**
+	 * Sets the version property
+	 *
+	 * @param string $version
+	 */
+	public function setVersion($version) {
+		$this->version = $version;
+		
+		return true;
+	} // end function setVersion()
 
 	/**
 	 * Function Description
@@ -467,6 +492,7 @@ class ExchangeWebServices {
 			array(
 				'user' => $this->username,
 				'password' => $this->password,
+				'version' => $this->version,
 				'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
 			)); // end return
 	} // end function initializeSoapClient()
