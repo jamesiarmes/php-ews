@@ -73,6 +73,13 @@ class ExchangeWebServices {
 	protected $username;
 	
 	/**
+	 * Exchange impersonation
+	 * 
+	 * @var ExchangeImpersonationType
+	 */
+	protected $impersonation;
+	
+	/**
 	 * Miscrosoft Exchange version that we are going to connect to
 	 * 
 	 * @var string
@@ -153,6 +160,17 @@ class ExchangeWebServices {
 		
 		return true;
 	} // end function setVersion()
+	
+	/**
+	 * Sets the impersonation property
+	 * 
+	 * @param ExchangeImpersonationType $impersonation
+	 */
+	public function setImpersonation($impersonation) {
+		$this->impersonation = $impersonation;
+		
+		return true;
+	} // end function setImpersonation()
 	
 	/**
 	 * Function Description
@@ -609,6 +627,7 @@ class ExchangeWebServices {
 				'password' => $this->password,
 				'version' => $this->version,
 				'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+				'impersonation' => $this->impersonation,
 			)); // end return
 		
 		return $this->soap;
