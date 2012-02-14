@@ -38,6 +38,13 @@ class ExchangeWebServices {
 	const VERSION_2010_SP1 = 'Exchange2010_SP1';
 	
 	/**
+	 * Microsoft Exchange 2010 SP2
+	 * 
+	 * @var string
+	 */
+	const VERSION_2010_SP2 = 'Exchange2010_SP2';
+	
+	/**
 	 * Password to use when connecting to the Exchange server.
 	 * 
 	 * @var string
