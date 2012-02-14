@@ -38,6 +38,13 @@ class ExchangeWebServices {
 	const VERSION_2010_SP1 = 'Exchange2010_SP1';
 	
 	/**
+	 * Microsoft Exchange 2010 SP2
+	 * 
+	 * @var string
+	 */
+	const VERSION_2010_SP2 = 'Exchange2010_SP2';
+	
+	/**
 	 * Password to use when connecting to the Exchange server.
 	 * 
 	 * @var string
@@ -64,6 +71,13 @@ class ExchangeWebServices {
 	 * @var string
 	 */
 	protected $username;
+	
+	/**
+	 * Exchange impersonation
+	 * 
+	 * @var EWSType_ExchangeImpersonationType
+	 */
+	protected $impersonation;
 	
 	/**
 	 * Miscrosoft Exchange version that we are going to connect to
@@ -102,6 +116,17 @@ class ExchangeWebServices {
 	public function getClient() {
 		return $this->initializeSoapClient();
 	} // end function getClient()
+	
+	/**
+	 * Sets the impersonation property
+	 * 
+	 * @param EWSType_ExchangeImpersonationType $impersonation
+	 */
+	public function setImpersonation($impersonation) {
+		$this->impersonation = $impersonation;
+		
+		return true;
+	} // end function setImpersonation()
 	
 	/**
 	 * Sets the password property
@@ -602,6 +627,7 @@ class ExchangeWebServices {
 				'password' => $this->password,
 				'version' => $this->version,
 				'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+				'impersonation' => $this->impersonation,
 			)); // end return
 		
 		return $this->soap;
