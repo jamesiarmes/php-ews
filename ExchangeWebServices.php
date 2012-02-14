@@ -75,7 +75,7 @@ class ExchangeWebServices {
 	/**
 	 * Exchange impersonation
 	 * 
-	 * @var ExchangeImpersonationType
+	 * @var EWSType_ExchangeImpersonationType
 	 */
 	protected $impersonation;
 	
@@ -116,6 +116,17 @@ class ExchangeWebServices {
 	public function getClient() {
 		return $this->initializeSoapClient();
 	} // end function getClient()
+	
+	/**
+	 * Sets the impersonation property
+	 * 
+	 * @param EWSType_ExchangeImpersonationType $impersonation
+	 */
+	public function setImpersonation($impersonation) {
+		$this->impersonation = $impersonation;
+		
+		return true;
+	} // end function setImpersonation()
 	
 	/**
 	 * Sets the password property
@@ -160,17 +171,6 @@ class ExchangeWebServices {
 		
 		return true;
 	} // end function setVersion()
-	
-	/**
-	 * Sets the impersonation property
-	 * 
-	 * @param ExchangeImpersonationType $impersonation
-	 */
-	public function setImpersonation($impersonation) {
-		$this->impersonation = $impersonation;
-		
-		return true;
-	} // end function setImpersonation()
 	
 	/**
 	 * Function Description
