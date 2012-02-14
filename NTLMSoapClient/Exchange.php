@@ -51,6 +51,14 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient {
 						'RequestServerVersion Version="'.$options['version'].'"');
 		} // end if a version was set
 		
+		// if impersonation was set then add it to the headers
+		if (!empty($options['impersonation'])) {
+		  $this->__default_headers[] = new SoapHeader(
+		  	  			'http://schemas.microsoft.com/exchange/services/2006/types',
+						'ExchangeImpersonation',
+						$options['impersonation']);
+		} // end if a impersonation was set
+		
 		parent::__construct($wsdl, $options);
 	} // end function __construct()
 	
