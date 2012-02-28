@@ -334,7 +334,7 @@ class EWSAutodiscover {
     {
         // discovery not yet attempted
         if ($this->discovered === null) {
-            $result = $this->discover();
+            $this->discovered = $this->discover();
         }
         
         // discovery not successful
@@ -481,7 +481,7 @@ class EWSAutodiscover {
         $lookup = dns_get_record($srvhost, DNS_SRV);
         if (sizeof($lookup) > 0) {
             $host = $lookup[0]['target'];
-            $url = 'https://' . $host . $this->path;
+            $url = 'https://' . $host . self::AUTODISCOVER_PATH;
             $result = $this->doNTLMPost($url);
             if ($result) {
                 return self::AUTODISCOVERED_VIA_SRV_RECORD;
