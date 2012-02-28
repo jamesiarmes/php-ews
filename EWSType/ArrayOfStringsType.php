@@ -30,4 +30,13 @@ class EWSType_ArrayOfStringsType extends EWSType {
 			),
 		); // end $this->schema
 	} // end function __construct()
+	
+	/**
+	 * Properly converts the value of this type to a string.
+	 * 
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->String;
+	} // end function __toString()
 } // end class ArrayOfStringsType
