@@ -61,7 +61,9 @@ class EWSType_ContactItemType extends EWSType {
 	public $Nickname;
 
 	/**
-	 * CompleteName property
+	 * CompleteName property.
+	 * 
+	 * This propery is read-only.
 	 * 
 	 * @var EWSType_CompleteNameType
 	 */
@@ -105,14 +107,14 @@ class EWSType_ContactItemType extends EWSType {
 	/**
 	 * Birthday property
 	 * 
-	 * @var EWSType_dateTime
+	 * @var string
 	 */
 	public $Birthday;
 
 	/**
 	 * BusinessHomePage property
 	 * 
-	 * @var EWSType_anyURI
+	 * @var string
 	 */
 	public $BusinessHomePage;
 
@@ -217,7 +219,7 @@ class EWSType_ContactItemType extends EWSType {
 	/**
 	 * WeddingAnniversary property
 	 * 
-	 * @var EWSType_dateTime
+	 * @var string
 	 */
 	public $WeddingAnniversary;
 
