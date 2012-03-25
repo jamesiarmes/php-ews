@@ -422,10 +422,10 @@ class ExchangeWebServices {
 	/**
 	 * Function Description
 	 * 
-	 * @param GetUserAvailabilityRequestType $GetUserAvailabilityRequest
+	 * @param GetUserAvailabilityRequestType $request
 	 * @return GetUserAvailabilityResponseType
 	 */
-	public function GetUserAvailability($GetUserAvailabilityRequest) {
+	public function GetUserAvailability($request) {
 		$this->initializeSoapClient();
 		$response = $this->soap->{__FUNCTION__}($request);
 		
@@ -435,10 +435,10 @@ class ExchangeWebServices {
 	/**
 	 * Function Description
 	 * 
-	 * @param GetUserOofSettingsRequest $GetUserOofSettingsRequest
+	 * @param GetUserOofSettingsRequest $request
 	 * @return GetUserOofSettingsResponse
 	 */
-	public function GetUserOofSettings($GetUserOofSettingsRequest) {
+	public function GetUserOofSettings($request) {
 		$this->initializeSoapClient();
 		$response = $this->soap->{__FUNCTION__}($request);
 		
@@ -513,10 +513,10 @@ class ExchangeWebServices {
 	/**
 	 * Function Description
 	 * 
-	 * @param SetUserOofSettingsRequest $SetUserOofSettingsRequest
+	 * @param SetUserOofSettingsRequest $request
 	 * @return SetUserOofSettingsResponse
 	 */
-	public function SetUserOofSettings($SetUserOofSettingsRequest) {
+	public function SetUserOofSettings($request) {
 		$this->initializeSoapClient();
 		$response = $this->soap->{__FUNCTION__}($request);
 		
