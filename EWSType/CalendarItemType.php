@@ -17,287 +17,294 @@ class EWSType_CalendarItemType extends EWSType {
 	 * @var string
 	 */
 	public $UID;
-
+	
 	/**
 	 * RecurrenceId property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $RecurrenceId;
-
+	
 	/**
 	 * DateTimeStamp property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $DateTimeStamp;
-
+	
 	/**
 	 * Start property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $Start;
-
+	
 	/**
 	 * End property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $End;
-
+	
 	/**
 	 * OriginalStart property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $OriginalStart;
-
+	
 	/**
 	 * IsAllDayEvent property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsAllDayEvent;
-
+	
 	/**
 	 * LegacyFreeBusyStatus property
 	 * 
 	 * @var EWSType_LegacyFreeBusyType
 	 */
 	public $LegacyFreeBusyStatus;
-
+	
 	/**
 	 * Location property
 	 * 
 	 * @var string
 	 */
 	public $Location;
-
+	
 	/**
 	 * When property
 	 * 
 	 * @var string
 	 */
 	public $When;
-
+	
 	/**
 	 * IsMeeting property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsMeeting;
-
+	
 	/**
 	 * IsCancelled property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsCancelled;
-
+	
 	/**
 	 * IsRecurring property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsRecurring;
-
+	
 	/**
 	 * MeetingRequestWasSent property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $MeetingRequestWasSent;
-
+	
 	/**
 	 * IsResponseRequested property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsResponseRequested;
-
+	
 	/**
 	 * CalendarItemType property
 	 * 
 	 * @var EWSType_CalendarItemTypeType
 	 */
 	public $CalendarItemType;
-
+	
 	/**
 	 * MyResponseType property
 	 * 
 	 * @var EWSType_ResponseTypeType
 	 */
 	public $MyResponseType;
-
+	
 	/**
 	 * Organizer property
 	 * 
 	 * @var EWSType_SingleRecipientType
 	 */
 	public $Organizer;
-
+	
 	/**
 	 * RequiredAttendees property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $RequiredAttendees;
-
+	
 	/**
 	 * OptionalAttendees property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $OptionalAttendees;
-
+	
 	/**
 	 * Resources property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $Resources;
-
+	
 	/**
 	 * ConflictingMeetingCount property
 	 * 
 	 * @var EWSType_int
 	 */
 	public $ConflictingMeetingCount;
-
+	
 	/**
 	 * AdjacentMeetingCount property
 	 * 
 	 * @var EWSType_int
 	 */
 	public $AdjacentMeetingCount;
-
+	
 	/**
 	 * ConflictingMeetings property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfAllItemsType
 	 */
 	public $ConflictingMeetings;
-
+	
 	/**
 	 * AdjacentMeetings property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfAllItemsType
 	 */
 	public $AdjacentMeetings;
-
+	
 	/**
 	 * Duration property
 	 * 
 	 * @var string
 	 */
 	public $Duration;
-
+	
 	/**
 	 * TimeZone property
 	 * 
 	 * @var string
 	 */
 	public $TimeZone;
-
+	
 	/**
 	 * AppointmentReplyTime property
 	 * 
 	 * @var EWSType_dateTime
 	 */
 	public $AppointmentReplyTime;
-
+	
 	/**
 	 * AppointmentSequenceNumber property
 	 * 
 	 * @var EWSType_int
 	 */
 	public $AppointmentSequenceNumber;
-
+	
 	/**
 	 * AppointmentState property
 	 * 
 	 * @var EWSType_int
 	 */
 	public $AppointmentState;
-
+	
 	/**
 	 * Recurrence property
 	 * 
 	 * @var EWSType_RecurrenceType
 	 */
 	public $Recurrence;
-
+	
 	/**
 	 * FirstOccurrence property
 	 * 
 	 * @var EWSType_OccurrenceInfoType
 	 */
 	public $FirstOccurrence;
-
+	
 	/**
 	 * LastOccurrence property
 	 * 
 	 * @var EWSType_OccurrenceInfoType
 	 */
 	public $LastOccurrence;
-
+	
 	/**
 	 * ModifiedOccurrences property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
 	 */
 	public $ModifiedOccurrences;
-
+	
 	/**
 	 * DeletedOccurrences property
 	 * 
 	 * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
 	 */
 	public $DeletedOccurrences;
-
+	
 	/**
 	 * MeetingTimeZone property
 	 * 
 	 * @var EWSType_TimeZoneType
 	 */
 	public $MeetingTimeZone;
-
+	
 	/**
 	 * ConferenceType property
 	 * 
 	 * @var EWSType_int
 	 */
 	public $ConferenceType;
-
+	
 	/**
 	 * AllowNewTimeProposal property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $AllowNewTimeProposal;
-
+	
 	/**
 	 * IsOnlineMeeting property
 	 * 
 	 * @var EWSType_boolean
 	 */
 	public $IsOnlineMeeting;
-
+	
 	/**
 	 * MeetingWorkspaceUrl property
 	 * 
 	 * @var string
 	 */
 	public $MeetingWorkspaceUrl;
-
+	
 	/**
 	 * NetShowUrl property
 	 * 
 	 * @var string
 	 */
 	public $NetShowUrl;
-
+	
+	/**
+	 * Subject property
+	 * 
+	 * @var string
+	 */
+	public $Subject;
+	
 	/**
 	 * Constructor
 	 */
@@ -508,6 +515,11 @@ class EWSType_CalendarItemType extends EWSType {
 				'required' => false,
 				'type' => 'string',
 			),
+			array(
+				'name' => 'Subject',
+				'required' => false,
+				'type' => 'string',
+			),
 		); // end $this->schema
 	} // end function __construct()
-} // end class CalendarItemType
+} // end class EWSType_CalendarItemType
