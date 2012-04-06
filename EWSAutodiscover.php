@@ -1,24 +1,9 @@
 <?php
 /**
- * Exchange Web Services Autodiscover implementation
+ * Exchange Web Services Autodiscover implementation.
  * 
- * Copyright (c) 2012 Clay Loveless http://claylo.com
- * 
- * Author : Clay Loveless
- * 
- * Permission to use, copy, modify, and distribute this software for any
- * purpose with or without fee is hereby granted, provided that the above
- * copyright notice and this permission notice appear in all copies.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
- * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
- * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
- * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
- * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
- * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- * 
- * @author Clay Loveless
+ * @package php-ews
+ * @subpackage Auto Discovery
  */
 
 /**
@@ -46,13 +31,10 @@
  * $auto->setCAinfo("/path/to/your/cacert.pem");
  * $ews = $auto->newEWS();
  * 
- * 
  * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
  * @link https://www.testexchangeconnectivity.com/
- * @author Clay Loveless
  */
 class EWSAutodiscover {
-    
     /**
      * The path appended to the various schemes and hostnames used during
      * autodiscovery.
@@ -64,7 +46,7 @@ class EWSAutodiscover {
     /**
      * Constants to indicate how the auto-discovery was ultimately found.
      * 
-     * @var int
+     * @var integer
      */
     const AUTODISCOVERED_VIA_TLD = 10;
     const AUTODISCOVERED_VIA_SUBDOMAIN = 11;
