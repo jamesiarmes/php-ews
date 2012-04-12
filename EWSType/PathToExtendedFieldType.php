@@ -42,7 +42,7 @@ class EWSType_PathToExtendedFieldType extends EWSType {
 	/**
 	 * PropertyId property
 	 * 
-	 * @var EWSType_int
+	 * @var integer
 	 */
 	public $PropertyId;
 
