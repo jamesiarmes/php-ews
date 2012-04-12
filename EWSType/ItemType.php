@@ -77,7 +77,7 @@ class EWSType_ItemType extends EWSType {
 	/**
 	 * Size property
 	 * 
-	 * @var EWSType_int
+	 * @var integer
 	 */
 	public $Size;
 
