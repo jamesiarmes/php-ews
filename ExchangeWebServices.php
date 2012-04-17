@@ -420,6 +420,21 @@ class ExchangeWebServices {
 	} // end function GetItem()
 	
 	/**
+	 * Retrieve the timezones supported by the server.
+	 * 
+	 * @param GetServerTimeZonesType $request
+	 * @return GetServerTimeZonesResponseType
+	 * 
+	 * @since Exchange2010
+	 */
+	public function GetServerTimeZones($request) {
+		$this->initializeSoapClient();
+		$response = $this->soap->{__FUNCTION__}($request);
+		
+		return $this->processResponse($response);
+	} // end function GetServerTimeZones()
+	
+	/**
 	 * Function Description
 	 * 
 	 * @param GetUserAvailabilityRequestType $request
