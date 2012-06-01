@@ -12,18 +12,18 @@
  */
 class EWSType_CalendarEvent extends EWSType {
 	/**
-	 * StartTime property
+	 * Start date and time of the event in ISO 8601 format.
 	 * 
-	 * @var EWSType_dateTime
+	 * @var string
 	 */
-	public $StartTime;
+	public $Start;
 
 	/**
-	 * EndTime property
+	 * End date and time of the event in ISO 8601 format.
 	 * 
-	 * @var EWSType_dateTime
+	 * @var string
 	 */
-	public $EndTime;
+	public $End;
 
 	/**
 	 * BusyType property
@@ -45,14 +45,14 @@ class EWSType_CalendarEvent extends EWSType {
 	public function __construct() {
 		$this->schema = array(
 			array(
-				'name' => 'StartTime',
+				'name' => 'Start',
 				'required' => false,
-				'type' => 'dateTime',
+				'type' => 'string',
 			),
 			array(
-				'name' => 'EndTime',
+				'name' => 'End',
 				'required' => false,
-				'type' => 'dateTime',
+				'type' => 'string',
 			),
 			array(
 				'name' => 'BusyType',
