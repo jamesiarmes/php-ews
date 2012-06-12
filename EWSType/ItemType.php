@@ -65,7 +65,7 @@ class EWSType_ItemType extends EWSType {
 
 	/**
 	 * Contains the items or files that are attached to an item in the Exchange
-	 * store.
+	 * store. This property is read-only.
 	 *
 	 * @var EWSType_NonEmptyArrayOfAttachmentsType
 	 */
