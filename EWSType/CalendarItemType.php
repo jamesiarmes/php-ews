@@ -1,310 +1,333 @@
 <?php
 /**
  * Definition of the CalendarItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 
 /**
  * Definition of the CalendarItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarItemType extends EWSType {
+class EWSType_CalendarItemType extends EWSType_ItemType {
 	/**
-	 * UID property
-	 * 
+	 * Identifies a calendar item.
+	 *
 	 * @var string
 	 */
 	public $UID;
-	
+
 	/**
-	 * RecurrenceId property
-	 * 
+	 * Used to identify a specific instance of a recurring calendar item.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $RecurrenceId;
-	
+
 	/**
-	 * DateTimeStamp property
-	 * 
+	 * Indicates the date and time that an instance of a iCalendar object was
+	 * created.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $DateTimeStamp;
-	
+
 	/**
-	 * Start property
-	 * 
+	 * Represents the start of a calendar item. This element only applies to a
+	 * single occurrence of a calendar item.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $Start;
-	
+
 	/**
-	 * End property
-	 * 
+	 * Represents the end of a duration. This element only applies to a single
+	 * occurrence of a calendar item.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $End;
-	
+
 	/**
-	 * OriginalStart property
-	 * 
+	 * Represents the original start time of a calendar item.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $OriginalStart;
-	
+
 	/**
-	 * IsAllDayEvent property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether a calendar item or meeting request represents an
+	 * all-day event.
+	 *
+	 * @var boolean
 	 */
 	public $IsAllDayEvent;
-	
+
 	/**
-	 * LegacyFreeBusyStatus property
-	 * 
+	 * Represents the free/busy status of the calendar item.
+	 *
 	 * @var EWSType_LegacyFreeBusyType
 	 */
 	public $LegacyFreeBusyStatus;
-	
+
 	/**
-	 * Location property
-	 * 
+	 * Represents the location of a meeting or appointment.
+	 *
 	 * @var string
 	 */
 	public $Location;
-	
+
 	/**
-	 * When property
-	 * 
+	 * Provides information about when a calendar item occurs.
+	 *
 	 * @var string
 	 */
 	public $When;
-	
+
 	/**
-	 * IsMeeting property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether the calendar item is a meeting or appointment.
+	 *
+	 * @var boolean
 	 */
 	public $IsMeeting;
-	
+
 	/**
-	 * IsCancelled property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether an appointment or meeting has been canceled.
+	 *
+	 * @var boolean
 	 */
 	public $IsCancelled;
-	
+
 	/**
-	 * IsRecurring property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether a calendar item is part of a recurring item. This
+	 * element is read-only.
+	 *
+	 * @var boolean
 	 */
 	public $IsRecurring;
-	
+
 	/**
-	 * MeetingRequestWasSent property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether a meeting request has been sent to requested attendees.
+	 *
+	 * @var boolean
 	 */
 	public $MeetingRequestWasSent;
-	
+
 	/**
-	 * IsResponseRequested property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether a response to an item is required.
+	 *
+	 * @var boolean
 	 */
 	public $IsResponseRequested;
-	
+
 	/**
-	 * CalendarItemType property
-	 * 
+	 * Represents the occurrence type of a calendar item.
+	 *
 	 * @var EWSType_CalendarItemTypeType
 	 */
 	public $CalendarItemType;
-	
+
 	/**
-	 * MyResponseType property
-	 * 
+	 * Contains the status of or response to a calendar item.
+	 *
 	 * @var EWSType_ResponseTypeType
 	 */
 	public $MyResponseType;
-	
+
 	/**
-	 * Organizer property
-	 * 
+	 * Represents the organizer of a meeting.
+	 *
 	 * @var EWSType_SingleRecipientType
 	 */
 	public $Organizer;
-	
+
 	/**
-	 * RequiredAttendees property
-	 * 
+	 * Represents attendees that are required to attend a meeting.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $RequiredAttendees;
-	
+
 	/**
-	 * OptionalAttendees property
-	 * 
+	 * Represents attendees that are not required to attend a meeting.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $OptionalAttendees;
-	
+
 	/**
-	 * Resources property
-	 * 
+	 * Represents a scheduled resource for a meeting.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAttendeesType
 	 */
 	public $Resources;
-	
+
 	/**
-	 * ConflictingMeetingCount property
-	 * 
-	 * @var EWSType_int
+	 * Represents the number of meetings that conflict with the calendar item.
+	 *
+	 * @var integer
 	 */
 	public $ConflictingMeetingCount;
-	
+
 	/**
-	 * AdjacentMeetingCount property
-	 * 
-	 * @var EWSType_int
+	 * Represents the total number of calendar items that are adjacent to a
+	 * meeting time.
+	 *
+	 * @var integer
 	 */
 	public $AdjacentMeetingCount;
-	
+
 	/**
-	 * ConflictingMeetings property
-	 * 
+	 * Identifies all items that conflict with a meeting time.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAllItemsType
 	 */
 	public $ConflictingMeetings;
-	
+
 	/**
-	 * AdjacentMeetings property
-	 * 
+	 * Describes all calendar items that are adjacent to a meeting time.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAllItemsType
 	 */
 	public $AdjacentMeetings;
-	
+
 	/**
-	 * Duration property
-	 * 
+	 * Represents the duration of a calendar item.
+	 *
 	 * @var string
 	 */
 	public $Duration;
-	
+
 	/**
-	 * TimeZone property
-	 * 
+	 * Provides a text description of a time zone.
+	 *
 	 * @var string
 	 */
 	public $TimeZone;
-	
+
 	/**
-	 * AppointmentReplyTime property
-	 * 
+	 * Represents the date and time when an attendee replied to a meeting
+	 * request.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $AppointmentReplyTime;
-	
+
 	/**
-	 * AppointmentSequenceNumber property
-	 * 
-	 * @var EWSType_int
+	 * Specifies the sequence number of a version of an appointment.
+	 *
+	 * @var integer
 	 */
 	public $AppointmentSequenceNumber;
-	
+
 	/**
-	 * AppointmentState property
-	 * 
-	 * @var EWSType_int
+	 * Specifies the status of the appointment.
+	 *
+	 * @var integer
 	 */
 	public $AppointmentState;
-	
+
 	/**
-	 * Recurrence property
-	 * 
+	 * Contains the recurrence pattern for calendar items and meeting requests.
+	 * This element is valid if CalendarItemType has the RecurringMaster value.
+	 *
 	 * @var EWSType_RecurrenceType
 	 */
 	public $Recurrence;
-	
+
 	/**
-	 * FirstOccurrence property
-	 * 
+	 * Represents the first occurrence of a recurring calendar item. This
+	 * element is valid if CalendarItemType has the RecurringMaster value.
+	 *
 	 * @var EWSType_OccurrenceInfoType
 	 */
 	public $FirstOccurrence;
-	
+
 	/**
-	 * LastOccurrence property
-	 * 
+	 * Represents the last occurrence of a recurring calendar item. This element
+	 * is valid if CalendarItemType has the RecurringMaster value.
+	 *
 	 * @var EWSType_OccurrenceInfoType
 	 */
 	public $LastOccurrence;
-	
+
 	/**
-	 * ModifiedOccurrences property
-	 * 
+	 * Contains an array of recurring calendar item occurrences that have been
+	 * modified so that they differ from the recurrence master item. This
+	 * element is valid if CalendarItemType has the RecurringMaster value.
+	 *
 	 * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
 	 */
 	public $ModifiedOccurrences;
-	
+
 	/**
-	 * DeletedOccurrences property
-	 * 
+	 * Contains an array of deleted occurrences of a recurring calendar item.
+	 * This element is valid if CalendarItemType has the RecurringMaster value.
+	 *
 	 * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
 	 */
 	public $DeletedOccurrences;
-	
+
 	/**
-	 * MeetingTimeZone property
-	 * 
+	 * Represents the time zone of the location where the meeting is hosted.
+	 *
 	 * @var EWSType_TimeZoneType
 	 */
 	public $MeetingTimeZone;
-	
+
 	/**
-	 * ConferenceType property
-	 * 
-	 * @var EWSType_int
+	 * Represents the start time zone of the calendar item.
+	 *
+	 * @var EWSType_TimeZoneDefinitionType
+	 */
+	public $StartTimeZone;
+
+	/**
+	 * Represents the end time zone of the calendar item.
+	 *
+	 * @var EWSType_TimeZoneDefinitionType
+	 */
+	public $EndTimeZone;
+
+	/**
+	 * Describes the type of conferencing that is performed with a calendar
+	 * item.
+	 *
+	 * @var integer
 	 */
 	public $ConferenceType;
-	
+
 	/**
-	 * AllowNewTimeProposal property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether a new meeting time can be proposed for a meeting by an
+	 * attendee.
+	 *
+	 * @var boolean
 	 */
 	public $AllowNewTimeProposal;
-	
+
 	/**
-	 * IsOnlineMeeting property
-	 * 
-	 * @var EWSType_boolean
+	 * Indicates whether the meeting is online.
+	 *
+	 * @var boolean
 	 */
 	public $IsOnlineMeeting;
-	
+
 	/**
-	 * MeetingWorkspaceUrl property
-	 * 
+	 * Contains the URL for the meeting workspace that is linked to by the
+	 * calendar item.
+	 *
 	 * @var string
 	 */
 	public $MeetingWorkspaceUrl;
-	
+
 	/**
-	 * NetShowUrl property
-	 * 
+	 * Specifies the URL for a Microsoft NetShow online meeting.
+	 *
 	 * @var string
 	 */
 	public $NetShowUrl;
-	
-	/**
-	 * Subject property
-	 * 
-	 * @var string
-	 */
-	public $Subject;
-	
+
 	/**
 	 * Constructor
 	 */
