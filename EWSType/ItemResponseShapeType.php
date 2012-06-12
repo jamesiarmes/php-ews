@@ -21,7 +21,7 @@ class EWSType_ItemResponseShapeType extends EWSType {
 	/**
 	 * IncludeMimeContent property
 	 * 
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IncludeMimeContent;
 
