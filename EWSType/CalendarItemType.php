@@ -1,16 +1,23 @@
 <?php
 /**
  * Definition of the CalendarItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 
 /**
  * Definition of the CalendarItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 class EWSType_CalendarItemType extends EWSType {
+	/**
+	 * Represents the actual body content of a message.
+	 *
+	 * @var EWSType_BodyType
+	 */
+	public $Body;
+
 	/**
 	 * UID property
 	 * 
