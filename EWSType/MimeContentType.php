@@ -1,26 +1,27 @@
 <?php
 /**
  * Definition of the MimeContentType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 
 /**
  * Definition of the MimeContentType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 class EWSType_MimeContentType extends EWSType {
 	/**
-	 * _ property
-	 * 
+	 * A text value that represents a base64Binary MIME stream.
+	 *
 	 * @var string
 	 */
 	public $_;
 
 	/**
-	 * CharacterSet property
-	 * 
+	 * The International Standards Organization (ISO) name of the character set
+	 * used in the MIME message.
+	 *
 	 * @var string
 	 */
 	public $CharacterSet;
@@ -42,4 +43,4 @@ class EWSType_MimeContentType extends EWSType {
 			),
 		); // end $this->schema
 	} // end function __construct()
-} // end class MimeContentType
+} // end class EWSType_MimeContentType
