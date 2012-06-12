@@ -19,6 +19,13 @@ class EWSType_CalendarItemType extends EWSType {
 	public $Body;
 
 	/**
+	 * The unique identifier and change key of the calendar item.
+	 *
+	 * @var EWSType_ItemIdType
+	 */
+	public $ItemId;
+
+	/**
 	 * Contains the native Multipurpose Internet Mail Extensions (MIME) stream
 	 * of an object that is represented in base64Binary format.
 	 *
