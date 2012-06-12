@@ -1,243 +1,260 @@
 <?php
 /**
  * Definition of the ItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 
 /**
  * Definition of the ItemType type
- * 
+ *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
 class EWSType_ItemType extends EWSType {
 	/**
-	 * MimeContent property
-	 * 
+	 * Contains the native Multipurpose Internet Mail Extensions (MIME) stream
+	 * of an object that is represented in base64Binary format.
+	 *
 	 * @var EWSType_MimeContentType
 	 */
 	public $MimeContent;
 
 	/**
-	 * ItemId property
-	 * 
+	 * Contains the unique identifier and change key of an item in the Exchange
+	 * store.
+	 *
 	 * @var EWSType_ItemIdType
 	 */
 	public $ItemId;
 
 	/**
-	 * ParentFolderId property
-	 * 
+	 * Represents the identifier of the parent folder that contains the item or
+	 * folder.
+	 *
 	 * @var EWSType_FolderIdType
 	 */
 	public $ParentFolderId;
 
 	/**
-	 * ItemClass property
-	 * 
+	 * Represents the message class of an item.
+	 *
 	 * @var EWSType_ItemClassType
 	 */
 	public $ItemClass;
 
 	/**
-	 * Subject property
-	 * 
+	 * Represents the subject for Exchange store items and response objects.
+	 *
 	 * @var string
 	 */
 	public $Subject;
 
 	/**
-	 * Sensitivity property
-	 * 
+	 * Indicates the sensitivity level of an item.
+	 *
 	 * @var EWSType_SensitivityChoicesType
 	 */
 	public $Sensitivity;
 
 	/**
-	 * Body property
-	 * 
+	 * Represents the actual body content of a message.
+	 *
 	 * @var EWSType_BodyType
 	 */
 	public $Body;
 
 	/**
-	 * Attachments property
-	 * 
+	 * Contains the items or files that are attached to an item in the Exchange
+	 * store.
+	 *
 	 * @var EWSType_NonEmptyArrayOfAttachmentsType
 	 */
 	public $Attachments;
 
 	/**
-	 * DateTimeReceived property
-	 * 
+	 * Represents the date and time that an item in a mailbox was received.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $DateTimeReceived;
 
 	/**
-	 * Size property
-	 * 
+	 * Represents the size in bytes of an item. This property is read-only.
+	 *
 	 * @var integer
 	 */
 	public $Size;
 
 	/**
-	 * Categories property
-	 * 
+	 * Represents a collection of strings that identify the categories to which
+	 * an item in the mailbox belongs.
+	 *
 	 * @var EWSType_ArrayOfStringsType
 	 */
 	public $Categories;
 
 	/**
-	 * Importance property
-	 * 
+	 * Describes the importance of an item.
+	 *
 	 * @var EWSType_ImportanceChoicesType
 	 */
 	public $Importance;
 
 	/**
-	 * InReplyTo property
-	 * 
+	 * Represents the identifier of the item to which this item is a reply.
+	 *
 	 * @var string
 	 */
 	public $InReplyTo;
 
 	/**
-	 * IsSubmitted property
-	 * 
+	 * Indicates whether an item has been submitted to the Outbox default
+	 * folder.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $IsSubmitted;
 
 	/**
-	 * IsDraft property
-	 * 
+	 * Indicates whether an item has not yet been sent.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $IsDraft;
 
 	/**
-	 * IsFromMe property
-	 * 
+	 * Indicates whether a user sent an item to him or herself.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $IsFromMe;
 
 	/**
-	 * IsResend property
-	 * 
+	 * Indicates whether the item had previously been sent.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $IsResend;
 
 	/**
-	 * IsUnmodified property
-	 * 
+	 * Indicates whether the item has been modified.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $IsUnmodified;
 
 	/**
-	 * InternetMessageHeaders property
-	 * 
+	 * Represents the collection of all Internet message headers that are
+	 * contained in an item in a mailbox.
+	 *
 	 * @var EWSType_NonEmptyArrayOfInternetHeadersType
 	 */
 	public $InternetMessageHeaders;
 
 	/**
-	 * DateTimeSent property
-	 * 
+	 * Represents the date and time that an item in a mailbox was sent.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $DateTimeSent;
 
 	/**
-	 * DateTimeCreated property
-	 * 
+	 * Represents the date and time that a given item in the mailbox was
+	 * created.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $DateTimeCreated;
 
 	/**
-	 * ResponseObjects property
-	 * 
+	 * Contains a collection of all the response objects that are associated
+	 * with an item in the Exchange store.
+	 *
 	 * @var EWSType_NonEmptyArrayOfResponseObjectsType
 	 */
 	public $ResponseObjects;
 
 	/**
-	 * ReminderDueBy property
-	 * 
+	 * Represents the date and time when the event occurs. This is used by the
+	 * ReminderMinutesBeforeStart element to determine when the reminder is
+	 * displayed.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $ReminderDueBy;
 
 	/**
-	 * ReminderIsSet property
-	 * 
+	 * Indicates whether a reminder has been set for an item in the Exchange
+	 * store.
+	 *
 	 * @var EWSType_boolean
 	 */
 	public $ReminderIsSet;
 
 	/**
-	 * ReminderMinutesBeforeStart property
-	 * 
+	 * Represents the number of minutes before an event when a reminder is
+	 * displayed.
+	 *
 	 * @var EWSType_ReminderMinutesBeforeStartType
 	 */
 	public $ReminderMinutesBeforeStart;
 
 	/**
-	 * DisplayCc property
-	 * 
+	 * Represents the display string that is used for the contents of the Cc
+	 * line. This is the concatenated string of all Cc recipient display names.
+	 *
 	 * @var string
 	 */
 	public $DisplayCc;
 
 	/**
-	 * DisplayTo property
-	 * 
+	 * Represents the display string that is used for the contents of the To
+	 * line. This is the concatenated string of all To recipient display names.
+	 *
 	 * @var string
 	 */
 	public $DisplayTo;
 
 	/**
-	 * HasAttachments property
-	 * 
-	 * @var EWSType_boolean
+	 * Represents a property that is set to true if an item has at least one
+	 * visible attachment. This property is read-only.
+	 *
+	 * @var boolean
 	 */
 	public $HasAttachments;
 
 	/**
-	 * ExtendedProperty property
-	 * 
+	 * Identifies extended properties on folders and items.
+	 *
 	 * @var EWSType_ExtendedPropertyType
 	 */
 	public $ExtendedProperty;
 
 	/**
-	 * Culture property
-	 * 
+	 * Represents the culture for a given item in a mailbox.
+	 *
 	 * @var EWSType_language
 	 */
 	public $Culture;
 
 	/**
-	 * EffectiveRights property
-	 * 
+	 * Contains the client's rights based on the permission settings for the
+	 * item or folder. This property is read-only.
+	 *
 	 * @var EWSType_EffectiveRightsType
 	 */
 	public $EffectiveRights;
 
 	/**
-	 * LastModifiedName property
-	 * 
+	 * Contains the display name of the last user to modify an item.
+	 *
 	 * @var string
 	 */
 	public $LastModifiedName;
 
 	/**
-	 * LastModifiedTime property
-	 * 
+	 * Indicates when an item was last modified.
+	 *
 	 * @var EWSType_dateTime
 	 */
 	public $LastModifiedTime;
@@ -414,4 +431,4 @@ class EWSType_ItemType extends EWSType {
 			),
 		); // end $this->schema
 	} // end function __construct()
-} // end class ItemType
+} // end class EWSType_ItemType
