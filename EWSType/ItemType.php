@@ -111,35 +111,35 @@ class EWSType_ItemType extends EWSType {
 	 * Indicates whether an item has been submitted to the Outbox default
 	 * folder.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IsSubmitted;
 
 	/**
 	 * Indicates whether an item has not yet been sent.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IsDraft;
 
 	/**
 	 * Indicates whether a user sent an item to him or herself.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IsFromMe;
 
 	/**
 	 * Indicates whether the item had previously been sent.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IsResend;
 
 	/**
 	 * Indicates whether the item has been modified.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $IsUnmodified;
 
@@ -187,7 +187,7 @@ class EWSType_ItemType extends EWSType {
 	 * Indicates whether a reminder has been set for an item in the Exchange
 	 * store.
 	 *
-	 * @var EWSType_boolean
+	 * @var boolean
 	 */
 	public $ReminderIsSet;
 
@@ -258,6 +258,44 @@ class EWSType_ItemType extends EWSType {
 	 * @var EWSType_dateTime
 	 */
 	public $LastModifiedTime;
+
+	/**
+	 * Indicates whether the item is associated with a folder.
+	 *
+	 * @var boolean
+	 */
+	public $IsAssociated;
+
+	/**
+	 * Represents a URL to concatenate to the Microsoft Office Outlook Web App
+	 * endpoint to read an item in Outlook Web App.
+	 *
+	 * @var string
+	 */
+	public $WebClientReadFormQueryString;
+
+	/**
+	 * Represents a URL to concatenate to the Microsoft Office Outlook Web App
+	 * endpoint to edit an item in Outlook Web App.
+	 *
+	 * @var string
+	 */
+	public $WebClientEditFormQueryString;
+
+	/**
+	 * Contains the identifier of an item or conversation.
+	 *
+	 * @var EWSType_ItemIdType
+	 */
+	public $ConversationId;
+
+	/**
+	 * Represents an HTML fragment or plain text which represents the unique
+	 * body of this conversation.
+	 *
+	 * @var EWSType_BodyType
+	 */
+	public $UniqueBody;
 
 	/**
 	 * Constructor
