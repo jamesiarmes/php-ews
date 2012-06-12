@@ -10,28 +10,7 @@
  *
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_CalendarItemType extends EWSType {
-	/**
-	 * Represents the actual body content of a message.
-	 *
-	 * @var EWSType_BodyType
-	 */
-	public $Body;
-
-	/**
-	 * The unique identifier and change key of the calendar item.
-	 *
-	 * @var EWSType_ItemIdType
-	 */
-	public $ItemId;
-
-	/**
-	 * Contains the native Multipurpose Internet Mail Extensions (MIME) stream
-	 * of an object that is represented in base64Binary format.
-	 *
-	 * @var EWSType_MimeContentType
-	 */
-	public $MimeContent;
+class EWSType_CalendarItemType extends EWSType_ItemType {
 
 	/**
 	 * UID property
@@ -319,13 +298,6 @@ class EWSType_CalendarItemType extends EWSType {
 	 * @var string
 	 */
 	public $NetShowUrl;
-	
-	/**
-	 * Subject property
-	 * 
-	 * @var string
-	 */
-	public $Subject;
 	
 	/**
 	 * Constructor
