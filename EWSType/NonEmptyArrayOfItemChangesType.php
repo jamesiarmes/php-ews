@@ -10,24 +10,15 @@
  * 
  * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfItemChangesType extends EWSType {
+class EWSType_NonEmptyArrayOfItemChangesType extends EWSType_NonEmptyArray {
 	/**
-	 * ItemChange property
+	 * ItemChange property. Array of EWSType_ItemChangeType objects.
 	 * 
-	 * @var EWSType_ItemChangeType
+	 * @var array
 	 */
-	public $ItemChange;
-
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'ItemChange',
-				'required' => false,
-				'type' => 'ItemChangeType',
-			),
-		); // end $this->schema
-	} // end function __construct()
+	protected $ItemChange = array();
+	
+	public function &getProperty() {
+		return $this->ItemChange;
+	}
 } // end class NonEmptyArrayOfItemChangesType
