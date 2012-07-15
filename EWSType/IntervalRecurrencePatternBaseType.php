@@ -1,33 +1,34 @@
 <?php
 /**
  * Definition of the IntervalRecurrencePatternBaseType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the IntervalRecurrencePatternBaseType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_IntervalRecurrencePatternBaseType extends EWSType {
-	/**
-	 * Interval property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $Interval;
+class EWSType_IntervalRecurrencePatternBaseType extends EWSType
+{
+    /**
+     * Interval property
+     *
+     * @var integer
+     */
+    public $Interval;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'Interval',
-				'required' => false,
-				'type' => 'int',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class IntervalRecurrencePatternBaseType
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'Interval',
+                'required' => false,
+                'type' => 'integer',
+            ),
+        );
+    }
+}

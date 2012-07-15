@@ -1,45 +1,46 @@
 <?php
 /**
  * Definition of the GetDelegateType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the GetDelegateType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GetDelegateType extends EWSType {
-	/**
-	 * UserIds property
-	 * 
-	 * @var EWSType_ArrayOfUserIdType
-	 */
-	public $UserIds;
+class EWSType_GetDelegateType extends EWSType
+{
+    /**
+     * UserIds property
+     *
+     * @var EWSType_ArrayOfUserIdType
+     */
+    public $UserIds;
 
-	/**
-	 * IncludePermissions property
-	 * 
-	 * @var EWSType_boolean
-	 */
-	public $IncludePermissions;
+    /**
+     * IncludePermissions property
+     *
+     * @var boolean
+     */
+    public $IncludePermissions;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'UserIds',
-				'required' => false,
-				'type' => 'ArrayOfUserIdType',
-			),
-			array(
-				'name' => 'IncludePermissions',
-				'required' => false,
-				'type' => 'boolean',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class GetDelegateType
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'UserIds',
+                'required' => false,
+                'type' => 'ArrayOfUserIdType',
+            ),
+            array(
+                'name' => 'IncludePermissions',
+                'required' => false,
+                'type' => 'boolean',
+            ),
+        );
+    }
+}

@@ -1,33 +1,34 @@
 <?php
 /**
  * Definition of the UnsubscribeType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the UnsubscribeType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_UnsubscribeType extends EWSType {
-	/**
-	 * SubscriptionId property
-	 * 
-	 * @var EWSType_SubscriptionIdType
-	 */
-	public $SubscriptionId;
+class EWSType_UnsubscribeType extends EWSType
+{
+    /**
+     * SubscriptionId property
+     *
+     * @var EWSType_SubscriptionIdType
+     */
+    public $SubscriptionId;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'SubscriptionId',
-				'required' => false,
-				'type' => 'SubscriptionIdType',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class UnsubscribeType
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'SubscriptionId',
+                'required' => false,
+                'type' => 'SubscriptionIdType',
+            ),
+        );
+    }
+}

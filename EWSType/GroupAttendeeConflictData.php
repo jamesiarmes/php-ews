@@ -1,69 +1,70 @@
 <?php
 /**
  * Definition of the GroupAttendeeConflictData type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the GroupAttendeeConflictData type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_GroupAttendeeConflictData extends EWSType {
-	/**
-	 * NumberOfMembers property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $NumberOfMembers;
+class EWSType_GroupAttendeeConflictData extends EWSType
+{
+    /**
+     * NumberOfMembers property
+     *
+     * @var integer
+     */
+    public $NumberOfMembers;
 
-	/**
-	 * NumberOfMembersAvailable property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $NumberOfMembersAvailable;
+    /**
+     * NumberOfMembersAvailable property
+     *
+     * @var integer
+     */
+    public $NumberOfMembersAvailable;
 
-	/**
-	 * NumberOfMembersWithConflict property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $NumberOfMembersWithConflict;
+    /**
+     * NumberOfMembersWithConflict property
+     *
+     * @var integer
+     */
+    public $NumberOfMembersWithConflict;
 
-	/**
-	 * NumberOfMembersWithNoData property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $NumberOfMembersWithNoData;
+    /**
+     * NumberOfMembersWithNoData property
+     *
+     * @var integer
+     */
+    public $NumberOfMembersWithNoData;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'NumberOfMembers',
-				'required' => false,
-				'type' => 'int',
-			),
-			array(
-				'name' => 'NumberOfMembersAvailable',
-				'required' => false,
-				'type' => 'int',
-			),
-			array(
-				'name' => 'NumberOfMembersWithConflict',
-				'required' => false,
-				'type' => 'int',
-			),
-			array(
-				'name' => 'NumberOfMembersWithNoData',
-				'required' => false,
-				'type' => 'int',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class GroupAttendeeConflictData
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'NumberOfMembers',
+                'required' => false,
+                'type' => 'integer',
+            ),
+            array(
+                'name' => 'NumberOfMembersAvailable',
+                'required' => false,
+                'type' => 'integer',
+            ),
+            array(
+                'name' => 'NumberOfMembersWithConflict',
+                'required' => false,
+                'type' => 'integer',
+            ),
+            array(
+                'name' => 'NumberOfMembersWithNoData',
+                'required' => false,
+                'type' => 'integer',
+            ),
+        );
+    }
+}
