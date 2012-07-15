@@ -1,33 +1,34 @@
 <?php
 /**
  * Definition of the ModifiedEventType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the ModifiedEventType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_ModifiedEventType extends EWSType {
-	/**
-	 * UnreadCount property
-	 * 
-	 * @var EWSType_int
-	 */
-	public $UnreadCount;
+class EWSType_ModifiedEventType extends EWSType
+{
+    /**
+     * UnreadCount property
+     *
+     * @var integer
+     */
+    public $UnreadCount;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'UnreadCount',
-				'required' => false,
-				'type' => 'int',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class ModifiedEventType
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'UnreadCount',
+                'required' => false,
+                'type' => 'integer',
+            ),
+        );
+    }
+}
