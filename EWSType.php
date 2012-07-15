@@ -3,7 +3,7 @@
  * Base class for Exchange Web Service Types
  *
  * @package php-ews
- * @subpackage types
+ * @subpackage Types
  */
 
 /**
