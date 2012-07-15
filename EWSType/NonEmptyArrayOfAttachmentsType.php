@@ -1,45 +1,46 @@
 <?php
 /**
  * Definition of the NonEmptyArrayOfAttachmentsType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
+ *
+ * @package php-ews
+ * @subpackage Types
  */
 
 /**
  * Definition of the NonEmptyArrayOfAttachmentsType type
- * 
- * @author James I. Armes <http://www.jamesarmes.net>
  */
-class EWSType_NonEmptyArrayOfAttachmentsType extends EWSType {
-	/**
-	 * ItemAttachment property
-	 * 
-	 * @var EWSType_ItemAttachmentType
-	 */
-	public $ItemAttachment;
+class EWSType_NonEmptyArrayOfAttachmentsType extends EWSType
+{
+    /**
+     * ItemAttachment property
+     *
+     * @var EWSType_ItemAttachmentType
+     */
+    public $ItemAttachment;
 
-	/**
-	 * FileAttachment property
-	 * 
-	 * @var EWSType_FileAttachmentType
-	 */
-	public $FileAttachment;
+    /**
+     * FileAttachment property
+     *
+     * @var EWSType_FileAttachmentType
+     */
+    public $FileAttachment;
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->schema = array(
-			array(
-				'name' => 'ItemAttachment',
-				'required' => false,
-				'type' => 'ItemAttachmentType',
-			),
-			array(
-				'name' => 'FileAttachment',
-				'required' => false,
-				'type' => 'FileAttachmentType',
-			),
-		); // end $this->schema
-	} // end function __construct()
-} // end class NonEmptyArrayOfAttachmentsType
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->schema = array(
+            array(
+                'name' => 'ItemAttachment',
+                'required' => false,
+                'type' => 'ItemAttachmentType',
+            ),
+            array(
+                'name' => 'FileAttachment',
+                'required' => false,
+                'type' => 'FileAttachmentType',
+            ),
+        );
+    }
+}
