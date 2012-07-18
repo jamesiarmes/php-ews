@@ -81,6 +81,16 @@ class NTLMSoapClient extends SoapClient
 
         $response = curl_exec($this->ch);
 
+        // TODO: Add some real error handling.
+        // If the response if false than there was an error and we should throw
+        // an exception.
+        if ($response === false) {
+            throw new EWS_Exception(
+              'Curl error: ' . curl_error($this->ch),
+              curl_errno($this->ch)
+            );
+        }
+
         return $response;
     }
 
