@@ -37,9 +37,26 @@ class EWSType_DisposalType extends EWSType
     const SOFT_DELETE = 'SoftDelete';
 
     /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
+    }
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->_;
     }
 }
