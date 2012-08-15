@@ -12,81 +12,102 @@
 class EWSType_SetItemFieldType extends EWSType
 {
     /**
-     * Item property
-     *
-     * @var EWSType_ItemType
-     */
-    public $Item;
-
-    /**
-     * Message property
-     *
-     * @var EWSType_MessageType
-     */
-    public $Message;
-
-    /**
-     * CalendarItem property
+     * Represents an Exchange calendar item to update.
      *
      * @var EWSType_CalendarItemType
      */
     public $CalendarItem;
 
     /**
-     * Contact property
+     * Represents an Exchange contact item to update.
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
-     * DistributionList property
+     * Represents a distribution list to update.
      *
      * @var EWSType_DistributionListType
      */
     public $DistributionList;
 
     /**
-     * MeetingMessage property
+     * Identifies extended MAPI properties to set.
      *
-     * @var EWSType_MeetingMessageType
+     * @var EWSType_PathToExtendedFieldType
      */
-    public $MeetingMessage;
+    public $ExtendedFieldURI;
 
     /**
-     * MeetingRequest property
+     * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_MeetingRequestMessageType
+     * @var EWSType_PathToUnindexedFieldType
      */
-    public $MeetingRequest;
+    public $FieldURI;
 
     /**
-     * MeetingResponse property
+     * Identifies individual members of a dictionary.
      *
-     * @var EWSType_MeetingResponseMessageType
+     * @var EWSType_PathToIndexedFieldType
      */
-    public $MeetingResponse;
+    public $IndexedFieldURI;
 
     /**
-     * MeetingCancellation property
+     * Represents an item in the Exchange store.
+     *
+     * @var EWSType_ItemType
+     */
+    public $Item;
+
+    /**
+     * Represents a meeting cancellation to update.
      *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
-     * Task property
+     * Represents a meeting message to update.
      *
-     * @var EWSType_TaskType
+     * @var EWSType_MeetingMessageType
      */
-    public $Task;
+    public $MeetingMessage;
 
     /**
-     * PostItem property
+     * Represents a meeting request to update.
+     *
+     * @var EWSType_MeetingRequestMessageType
+     */
+    public $MeetingRequest;
+
+    /**
+     * Represents a meeting response to update.
+     *
+     * @var EWSType_MeetingResponseMessageType
+     */
+    public $MeetingResponse;
+
+    /**
+     * Represents an Exchange e-mail message to update.
+     *
+     * @var EWSType_MessageType
+     */
+    public $Message;
+
+    /**
+     * represents a post item in the Exchange store.
      *
      * @var EWSType_PostItemType
      */
     public $PostItem;
+
+    /**
+     * Represents a task to update.
+     *
+     * @var EWSType_TaskType
+     */
+    public $Task;
 
     /**
      * Constructor
@@ -94,6 +115,21 @@ class EWSType_SetItemFieldType extends EWSType
     public function __construct()
     {
         $this->schema = array(
+            array(
+                'name' => 'ExtendedFieldURI',
+                'required' => false,
+                'type' => 'PathToExtendedFieldType',
+            ),
+            array(
+                'name' => 'FieldURI',
+                'required' => false,
+                'type' => 'PathToUnindexedFieldType',
+            ),
+            array(
+                'name' => 'IndexedFieldURI',
+                'required' => false,
+                'type' => 'PathToIndexedFieldType',
+            ),
             array(
                 'name' => 'Item',
                 'required' => false,
