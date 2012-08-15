@@ -33,9 +33,26 @@ class EWSType_CalendarItemCreateOrDeleteOperationType extends EWSType
     const SEND_TO_ALL_AND_SAVE_COPY = 'SendToAllAndSaveCopy';
 
     /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
+    }
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->_;
     }
 }
