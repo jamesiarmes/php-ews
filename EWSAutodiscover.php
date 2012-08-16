@@ -42,15 +42,40 @@ class EWSAutodiscover
     const AUTODISCOVER_PATH = '/autodiscover/autodiscover.xml';
 
     /**
-     * Constants to indicate how the auto-discovery was ultimately found.
-     * 
+     * Server was discovered using the TLD method.
+     *
      * @var integer
      */
     const AUTODISCOVERED_VIA_TLD = 10;
+
+    /**
+     * Server was discovered using the subdomain method.
+     *
+     * @var integer
+     */
     const AUTODISCOVERED_VIA_SUBDOMAIN = 11;
+
+    /**
+     * Server was discovered using the unauthenticated GET method.
+     *
+     * @var integer
+     */
     const AUTODISCOVERED_VIA_UNAUTHENTICATED_GET = 12;
+
+    /**
+     * Server was discovered using the DNS SRV redirect method.
+     *
+     * @var integer
+     */
     const AUTODISCOVERED_VIA_SRV_RECORD = 13;
-    // @todo
+
+    /**
+     * Server was discovered using the HTTP redirect method.
+     *
+     * @var integer
+     *
+     * @todo We do not currently support this.
+     */
     const AUTODISCOVERED_VIA_RESPONSE_REDIRECT = 14;
 
     /**
