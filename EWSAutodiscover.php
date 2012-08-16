@@ -284,11 +284,10 @@ class EWSAutodiscover
                     return ExchangeWebServices::VERSION_2007_SP1;
                     break;
                 case 2:
-                    // TODO: fix when EWS library is modified
-                    return ExchangeWebServices::VERSION_2007_SP1;
+                    return ExchangeWebServices::VERSION_2007_SP2;
                     break;
                 case 3:
-                    return ExchangeWebServices::VERSION_2007_SP1;
+                    return ExchangeWebServices::VERSION_2007_SP3;
                     break;
                 default:
                     return ExchangeWebServices::VERSION_2007;
@@ -300,6 +299,9 @@ class EWSAutodiscover
                     break;
                 case 1:
                     return ExchangeWebServices::VERSION_2010_SP1;
+                    break;
+                case 2:
+                    return ExchangeWebServices::VERSION_2010_SP2;
                     break;
                 default:
                     return ExchangeWebServices::VERSION_2010;
