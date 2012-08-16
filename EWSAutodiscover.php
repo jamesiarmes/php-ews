@@ -320,7 +320,7 @@ class EWSAutodiscover
     {
         // Discovery not yet attempted.
         if ($this->discovered === null) {
-            $this->discovered = $this->discover();
+            $this->discover();
         }
 
         // Discovery not successful.
@@ -556,6 +556,9 @@ class EWSAutodiscover
             CURLOPT_SSL_VERIFYPEER  => true,
             CURLOPT_SSL_VERIFYHOST  => true,
         );
+
+        // Set the appropriate content-type.
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml; charset=utf-8'));
 
         if (! empty($this->cainfo)) {
             $opts[CURLOPT_CAINFO] = $this->cainfo;
