@@ -1,18 +1,18 @@
 <?php
 /**
- * Definition of the ConstantValueType type
+ * The Constant element identifies a constant value in a restriction.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the ConstantValueType type
+ * Specifies the value to compare in the restriction.
  */
 class EWSType_ConstantValueType extends EWSType
 {
     /**
-     * Value property
+     * Specifies the value to compare in the restriction.
      *
      * @var string
      */

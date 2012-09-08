@@ -1,16 +1,18 @@
 <?php
 /**
- * The Not element represents a search expression that negates the Boolean value
- * of the search expression that it contains.
+ * The And element represents a search expression that allows you to perform a
+ * Boolean AND operation between two or more search expressions. The result of
+ * the AND operation is true if all the search expressions contained within the
+ * And element are true.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the NotType type.
+ * Definition of the AndType type.
  */
-class EWSType_NotType extends EWSType
+class EWSType_AndType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND
