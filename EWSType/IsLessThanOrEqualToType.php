@@ -1,16 +1,17 @@
 <?php
 /**
- * The Excludes element performs a bitwise mask of the specified property and a
- * supplied value.
+ * The IsLessThanOrEqualTo element represents a search expression that compares
+ * a property with either a constant value or another property and returns true
+ * if the first property is less than or equal to the second.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the ExcludesType type.
+ * Definition of the IsLessThanOrEqualToType type.
  */
-class EWSType_ExcludesType extends EWSType
+class EWSType_IsLessThanOrEqualToType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.
@@ -34,14 +35,12 @@ class EWSType_ExcludesType extends EWSType
     public $ExtendedFieldURI;
 
     /**
-     * Represents a hexadecimal or decimal mask to be used during an Excludes
-     * restriction operation. If the bitmask represents a hexadecimal number, it
-     * must be prefixed by 0x or 0X. Otherwise, it will be considered a decimal
-     * number.
+     * Represents either a property or a constant value to be used when
+     * comparing with another property.
      *
-     * @var EWSType_ExcludesValueType
+     * @var EWSType_FieldURIOrConstantType
      */
-    public $Bitmask;
+    public $FieldURIOrConstant;
 
     /**
      * Constructor
@@ -49,9 +48,9 @@ class EWSType_ExcludesType extends EWSType
     public function __construct()
     {
         $this->schema[] = array(
-            'name' => 'Bitmask',
+            'name' => 'FieldURIOrConstant',
             'required' => false,
-            'type' => 'ExcludesValueType',
+            'type' => 'FieldURIOrConstantType',
         );
     }
 }

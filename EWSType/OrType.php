@@ -1,16 +1,17 @@
 <?php
 /**
- * The Not element represents a search expression that negates the Boolean value
- * of the search expression that it contains.
+ * The Or element represents a search expression that performs a logical OR on
+ * the search expression that it contains. Or will return true if any of its
+ * children return true. Or must have two or more children.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the NotType type.
+ * Definition of the OrType type.
  */
-class EWSType_NotType extends EWSType
+class EWSType_OrType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

@@ -1,16 +1,17 @@
 <?php
 /**
- * The FieldURIOrConstant element represents either a property or a constant
- * value to be used when comparing with another property.
+ * The SearchExpression element is an abstract element that represents the
+ * substituted element within a restriction. All search expressions derive from
+ * this base type. This element is not used in an XML instance document.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the FieldURIOrConstantType type.
+ * Definition of the SearchExpressionType type.
  */
-class EWSType_FieldURIOrConstantType extends EWSType
+abstract class EWSType_SearchExpressionType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.
@@ -34,27 +35,25 @@ class EWSType_FieldURIOrConstantType extends EWSType
     public $ExtendedFieldURI;
 
     /**
-     * Identifies a constant value in a restriction.
-     *
-     * @var EWSType_ConstantValueType
-     */
-    public $Constant;
-
-    /**
      * Constructor
      */
     public function __construct()
     {
         $this->schema = array(
             array(
-                'name' => 'Path',
+                'name' => 'FieldURI',
                 'required' => false,
-                'type' => 'BasePathToElementType',
+                'type' => 'PathToUnindexedFieldType',
             ),
             array(
-                'name' => 'Constant',
+                'name' => 'IndexedFieldURI',
                 'required' => false,
-                'type' => 'ConstantValueType',
+                'type' => 'PathToIndexedFieldType',
+            ),
+            array(
+                'name' => 'PathToExtendedFieldType',
+                'required' => false,
+                'type' => 'ExtendedFieldURI',
             ),
         );
     }
