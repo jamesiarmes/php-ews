@@ -12,18 +12,6 @@
 abstract class EWSType
 {
     /**
-     * Schema definition for the type object
-     *
-     * @var array
-     */
-    protected $schema = array();
-
-    /**
-     * Constructor
-     */
-    abstract public function __construct();
-
-    /**
      * Clones any object properties on a type object when it is cloned. Allows
      * for a deep clone required when using object to represent data types when
      * making a SOAP call.
