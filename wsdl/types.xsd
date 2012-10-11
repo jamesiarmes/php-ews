@@ -2565,7 +2565,10 @@
 
   <xs:complexType name="ArrayOfTransitionsType">
     <xs:sequence>
-      <xs:element ref="t:Transition" maxOccurs="unbounded" />
+      <xs:element ref="t:AbsoluteDateTransition" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="t:RecurringDayTransition" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="t:RecurringDateTransition" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="t:Transition" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
     <xs:attribute name="Id" type="xs:string"/>
   </xs:complexType>
