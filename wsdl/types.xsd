@@ -2513,7 +2513,16 @@
       <xs:extension base="t:RecurringTimeTransitionType">
         <xs:sequence>
           <xs:element name="DayOfWeek" type="t:DayOfWeekType" />
-          <xs:element name="Occurrence" type="xs:int" />
+          <!--
+            Had to change the type for Occurrence to string because we can
+            not cast objects to ints. It technically works as the __toString()
+            method will still be called, but a notice will be thrown. Changing
+            the type to "string" avoids the notice and still works properly.
+            However, if the value is not indeed an integer, the server will
+            return an error.
+            See https://bugs.php.net/bug.php?id=46128 for a possible solution.
+          -->
+          <xs:element name="Occurrence" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
