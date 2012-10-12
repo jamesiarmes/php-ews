@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
      * @var EWSType_RequestAttachmentIdType
      */
     public $AttachmentId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AttachmentId',
-                'required' => false,
-                'type' => 'RequestAttachmentIdType',
-            ),
-        );
-    }
 }

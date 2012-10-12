@@ -17,18 +17,4 @@ class EWSType_ExchangeImpersonationType extends EWSType
      * @var EWSType_ConnectingSIDType
      */
     public $ConnectingSID;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ConnectingSID',
-                'required' => false,
-                'type' => 'ConnectingSIDType',
-            ),
-        );
-    }
 }

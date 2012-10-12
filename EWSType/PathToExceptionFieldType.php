@@ -17,18 +17,4 @@ class EWSType_PathToExceptionFieldType extends EWSType
      * @var EWSType_ExceptionPropertyURIType
      */
     public $FieldURI;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldURI',
-                'required' => false,
-                'type' => 'ExceptionPropertyURIType',
-            ),
-        );
-    }
 }

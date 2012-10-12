@@ -19,18 +19,4 @@ class EWSType_NonEmptyArrayOfPeriodsType extends EWSType
      * @var EWSType_PeriodType
      */
     public $Period;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Id',
-                'required' => true,
-                'type' => 'array',
-            ),
-        );
-    }
 }

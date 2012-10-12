@@ -17,18 +17,4 @@ class EWSType_ArrayOfDelegateUserType extends EWSType
      * @var EWSType_DelegateUserType
      */
     public $DelegateUser;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DelegateUser',
-                'required' => false,
-                'type' => 'DelegateUserType',
-            ),
-        );
-    }
 }

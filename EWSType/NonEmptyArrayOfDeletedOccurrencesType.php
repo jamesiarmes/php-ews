@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType
      * @var EWSType_DeletedOccurrenceInfoType
      */
     public $DeletedOccurrence;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DeletedOccurrence',
-                'required' => false,
-                'type' => 'DeletedOccurrenceInfoType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_BaseDelegateType extends EWSType
      * @var EWSType_EmailAddressType
      */
     public $Mailbox;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Mailbox',
-                'required' => false,
-                'type' => 'EmailAddressType',
-            ),
-        );
-    }
 }

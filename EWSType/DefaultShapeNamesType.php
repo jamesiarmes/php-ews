@@ -31,11 +31,4 @@ class EWSType_DefaultShapeNamesType extends EWSType
      * @var string
      */
     const ID_ONLY = 'IdOnly';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

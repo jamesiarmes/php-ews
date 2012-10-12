@@ -38,33 +38,4 @@ class EWSType_TimeZoneType extends EWSType
      * @var string
      */
     public $TimeZoneName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'BaseOffset',
-                'required' => false,
-                'type' => 'duration',
-            ),
-            array(
-                'name' => 'Standard',
-                'required' => false,
-                'type' => 'TimeChangeType',
-            ),
-            array(
-                'name' => 'Daylight',
-                'required' => false,
-                'type' => 'TimeChangeType',
-            ),
-            array(
-                'name' => 'TimeZoneName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_SetUserOofSettingsRequest extends EWSType
      * @var EWSType_UserOofSettings
      */
     public $UserOofSettings;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Mailbox',
-                'required' => false,
-                'type' => 'EmailAddress',
-            ),
-            array(
-                'name' => 'UserOofSettings',
-                'required' => false,
-                'type' => 'UserOofSettings',
-            ),
-        );
-    }
 }

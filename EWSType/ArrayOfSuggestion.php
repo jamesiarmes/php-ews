@@ -17,18 +17,4 @@ class EWSType_ArrayOfSuggestion extends EWSType
      * @var EWSType_Suggestion
      */
     public $Suggestion;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Suggestion',
-                'required' => false,
-                'type' => 'Suggestion',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_AlternatePublicFolderItemIdType extends EWSType
      * @var string
      */
     public $ItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

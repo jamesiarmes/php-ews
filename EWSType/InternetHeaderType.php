@@ -24,23 +24,4 @@ class EWSType_InternetHeaderType extends EWSType
      * @var string
      */
     public $HeaderName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'HeaderName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

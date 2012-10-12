@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfTimeZoneIdType extends EWSType
      * @var array
      */
     public $Id;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Id',
-                'required' => true,
-                'type' => 'array',
-            ),
-        );
-    }
 }

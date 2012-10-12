@@ -17,18 +17,4 @@ class EWSType_ArrayOfGroupedItemsType extends EWSType
      * @var EWSType_GroupedItemsType
      */
     public $GroupedItems;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'GroupedItems',
-                'required' => false,
-                'type' => 'GroupedItemsType',
-            ),
-        );
-    }
 }

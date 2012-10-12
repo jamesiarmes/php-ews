@@ -17,18 +17,4 @@ class EWSType_MessageXml extends EWSType
      * @var string
      */
     public $any;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'any',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

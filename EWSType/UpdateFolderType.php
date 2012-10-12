@@ -17,18 +17,4 @@ class EWSType_UpdateFolderType extends EWSType
      * @var EWSType_NonEmptyArrayOfFolderChangesType
      */
     public $FolderChanges;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderChanges',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfFolderChangesType',
-            ),
-        );
-    }
 }

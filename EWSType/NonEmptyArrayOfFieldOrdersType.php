@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
      * @var EWSType_FieldOrderType
      */
     public $FieldOrder;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldOrder',
-                'required' => false,
-                'type' => 'FieldOrderType',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_CreateAttachmentType extends EWSType
      * @var EWSType_NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ParentItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'Attachments',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfAttachmentsType',
-            ),
-        );
-    }
 }

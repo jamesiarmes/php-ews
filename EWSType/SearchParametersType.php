@@ -31,28 +31,4 @@ class EWSType_SearchParametersType extends EWSType
      * @var EWSType_SearchFolderTraversalType
      */
     public $Traversal;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Restriction',
-                'required' => false,
-                'type' => 'RestrictionType',
-            ),
-            array(
-                'name' => 'BaseFolderIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseFolderIdsType',
-            ),
-            array(
-                'name' => 'Traversal',
-                'required' => false,
-                'type' => 'SearchFolderTraversalType',
-            ),
-        );
-    }
 }

@@ -38,33 +38,4 @@ class EWSType_GetUserAvailabilityRequestType extends EWSType
      * @var EWSType_SuggestionsViewOptionsType
      */
     public $SuggestionsViewOptions;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'TimeZone',
-                'required' => false,
-                'type' => 'SerializableTimeZone',
-            ),
-            array(
-                'name' => 'MailboxDataArray',
-                'required' => false,
-                'type' => 'ArrayOfMailboxData',
-            ),
-            array(
-                'name' => 'FreeBusyViewOptions',
-                'required' => false,
-                'type' => 'FreeBusyViewOptionsType',
-            ),
-            array(
-                'name' => 'SuggestionsViewOptions',
-                'required' => false,
-                'type' => 'SuggestionsViewOptionsType',
-            ),
-        );
-    }
 }

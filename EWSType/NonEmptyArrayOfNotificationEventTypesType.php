@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
      * @var EWSType_NotificationEventTypeType
      */
     public $EventType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'EventType',
-                'required' => false,
-                'type' => 'NotificationEventTypeType',
-            ),
-        );
-    }
 }

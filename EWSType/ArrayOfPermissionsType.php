@@ -17,18 +17,4 @@ class EWSType_ArrayOfPermissionsType extends EWSType
      * @var EWSType_PermissionType
      */
     public $Permission;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Permission',
-                'required' => false,
-                'type' => 'PermissionType',
-            ),
-        );
-    }
 }

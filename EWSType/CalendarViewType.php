@@ -24,23 +24,4 @@ class EWSType_CalendarViewType extends EWSType
      * @var EWSType_dateTime
      */
     public $EndDate;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'StartDate',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'EndDate',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-        );
-    }
 }

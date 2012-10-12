@@ -18,18 +18,4 @@ class EWSType_GetServerTimeZonesType extends EWSType
      * @var EWSType_NonEmptyArrayOfTimeZoneIdType
      */
     public $Ids;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Ids',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfTimeZoneIdType',
-            ),
-        );
-    }
 }

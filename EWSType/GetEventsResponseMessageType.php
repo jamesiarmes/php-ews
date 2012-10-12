@@ -17,18 +17,4 @@ class EWSType_GetEventsResponseMessageType extends EWSType
      * @var EWSType_NotificationType
      */
     public $Notification;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Notification',
-                'required' => false,
-                'type' => 'NotificationType',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_FreeBusyResponseType extends EWSType
      * @var EWSType_FreeBusyView
      */
     public $FreeBusyView;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResponseMessage',
-                'required' => false,
-                'type' => 'ResponseMessageType',
-            ),
-            array(
-                'name' => 'FreeBusyView',
-                'required' => false,
-                'type' => 'FreeBusyView',
-            ),
-        );
-    }
 }

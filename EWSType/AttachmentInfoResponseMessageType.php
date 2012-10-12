@@ -17,18 +17,4 @@ class EWSType_AttachmentInfoResponseMessageType extends EWSType
      * @var EWSType_ArrayOfAttachmentsType
      */
     public $Attachments;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Attachments',
-                'required' => false,
-                'type' => 'ArrayOfAttachmentsType',
-            ),
-        );
-    }
 }

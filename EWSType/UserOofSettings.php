@@ -45,38 +45,4 @@ class EWSType_UserOofSettings extends EWSType
      * @var EWSType_ReplyBody
      */
     public $ExternalReply;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'OofState',
-                'required' => false,
-                'type' => 'OofState',
-            ),
-            array(
-                'name' => 'ExternalAudience',
-                'required' => false,
-                'type' => 'ExternalAudience',
-            ),
-            array(
-                'name' => 'Duration',
-                'required' => false,
-                'type' => 'Duration',
-            ),
-            array(
-                'name' => 'InternalReply',
-                'required' => false,
-                'type' => 'ReplyBody',
-            ),
-            array(
-                'name' => 'ExternalReply',
-                'required' => false,
-                'type' => 'ReplyBody',
-            ),
-        );
-    }
 }

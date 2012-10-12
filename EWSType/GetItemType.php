@@ -24,23 +24,4 @@ class EWSType_GetItemType extends EWSType
      * @var EWSType_NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemShape',
-                'required' => false,
-                'type' => 'ItemResponseShapeType',
-            ),
-            array(
-                'name' => 'ItemIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseItemIdsType',
-            ),
-        );
-    }
 }

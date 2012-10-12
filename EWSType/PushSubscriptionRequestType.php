@@ -24,23 +24,4 @@ class EWSType_PushSubscriptionRequestType extends EWSType
      * @var string
      */
     public $URL;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'StatusFrequency',
-                'required' => false,
-                'type' => 'SubscriptionStatusFrequencyType',
-            ),
-            array(
-                'name' => 'URL',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -114,18 +114,4 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * @var EWSType_OrType
      */
     public $Or;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SearchExpression',
-                'required' => false,
-                'type' => 'SearchExpressionType',
-            ),
-        );
-    }
 }

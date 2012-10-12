@@ -17,18 +17,4 @@ class EWSType_SearchFolderType extends EWSType
      * @var EWSType_SearchParametersType
      */
     public $SearchParameters;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SearchParameters',
-                'required' => false,
-                'type' => 'SearchParametersType',
-            ),
-        );
-    }
 }

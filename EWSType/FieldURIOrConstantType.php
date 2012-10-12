@@ -39,23 +39,4 @@ class EWSType_FieldURIOrConstantType extends EWSType
      * @var EWSType_ConstantValueType
      */
     public $Constant;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Path',
-                'required' => false,
-                'type' => 'BasePathToElementType',
-            ),
-            array(
-                'name' => 'Constant',
-                'required' => false,
-                'type' => 'ConstantValueType',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_CreateFolderType extends EWSType
      * @var EWSType_NonEmptyArrayOfFoldersType
      */
     public $Folders;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ParentFolderId',
-                'required' => false,
-                'type' => 'TargetFolderIdType',
-            ),
-            array(
-                'name' => 'Folders',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfFoldersType',
-            ),
-        );
-    }
 }

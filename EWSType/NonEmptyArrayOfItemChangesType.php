@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfItemChangesType extends EWSType
      * @var EWSType_ItemChangeType
      */
     public $ItemChange;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemChange',
-                'required' => false,
-                'type' => 'ItemChangeType',
-            ),
-        );
-    }
 }

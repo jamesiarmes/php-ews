@@ -24,23 +24,4 @@ class EWSType_ReferenceItemResponseType extends EWSType
      * @var string
      */
     public $ObjectName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ReferenceItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'ObjectName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

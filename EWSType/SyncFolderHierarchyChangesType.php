@@ -31,28 +31,4 @@ class EWSType_SyncFolderHierarchyChangesType extends EWSType
      * @var EWSType_SyncFolderHierarchyDeleteType
      */
     public $Delete;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Create',
-                'required' => false,
-                'type' => 'SyncFolderHierarchyCreateOrUpdateType',
-            ),
-            array(
-                'name' => 'Update',
-                'required' => false,
-                'type' => 'SyncFolderHierarchyCreateOrUpdateType',
-            ),
-            array(
-                'name' => 'Delete',
-                'required' => false,
-                'type' => 'SyncFolderHierarchyDeleteType',
-            ),
-        );
-    }
 }

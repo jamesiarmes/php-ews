@@ -17,18 +17,4 @@ class EWSType_ProxySecurityContextType extends EWSType
      * @var EWSType_base64Binary
      */
     public $_;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'base64Binary',
-            ),
-        );
-    }
 }

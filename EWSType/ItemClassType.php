@@ -238,20 +238,6 @@ class EWSType_ItemClassType extends EWSType
     const TASKREQUEST_UPDATE = 'IPM.TaskRequest.Update';
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
-
-    /**
      * Converts the object to a string.
      *
      * @return string The string representation of the current object.

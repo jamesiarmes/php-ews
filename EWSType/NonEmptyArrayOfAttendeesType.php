@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfAttendeesType extends EWSType
      * @var EWSType_AttendeeType
      */
     public $Attendee;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Attendee',
-                'required' => false,
-                'type' => 'AttendeeType',
-            ),
-        );
-    }
 }

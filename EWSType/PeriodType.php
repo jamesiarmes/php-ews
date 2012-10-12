@@ -33,11 +33,4 @@ class EWSType_PeriodType extends EWSType
      * @var string
      */
     public $Id;
-
-    /**
-     * Constructor.
-     */
-    public function __construct()
-    {
-    }
 }

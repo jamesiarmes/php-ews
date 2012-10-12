@@ -24,23 +24,4 @@ class EWSType_TwoOperandExpressionType extends EWSType
      * @var EWSType_FieldURIOrConstantType
      */
     public $FieldURIOrConstant;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Path',
-                'required' => false,
-                'type' => 'BasePathToElementType',
-            ),
-            array(
-                'name' => 'FieldURIOrConstant',
-                'required' => false,
-                'type' => 'FieldURIOrConstantType',
-            ),
-        );
-    }
 }

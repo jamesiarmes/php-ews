@@ -31,28 +31,4 @@ class EWSType_SyncFolderHierarchyType extends EWSType
      * @var string
      */
     public $SyncState;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderShape',
-                'required' => false,
-                'type' => 'FolderResponseShapeType',
-            ),
-            array(
-                'name' => 'SyncFolderId',
-                'required' => false,
-                'type' => 'TargetFolderIdType',
-            ),
-            array(
-                'name' => 'SyncState',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

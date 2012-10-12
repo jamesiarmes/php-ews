@@ -24,23 +24,4 @@ class EWSType_SyncFolderItemsReadFlagType extends EWSType
      * @var boolean
      */
     public $IsRead;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'IsRead',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-        );
-    }
 }

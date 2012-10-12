@@ -24,11 +24,4 @@ class EWSType_SortDirectionType extends EWSType
      * @var string
      */
     const DESCENDING = 'Descending';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_ArrayOfMailboxData extends EWSType
      * @var EWSType_MailboxData
      */
     public $MailboxData;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'MailboxData',
-                'required' => false,
-                'type' => 'MailboxData',
-            ),
-        );
-    }
 }

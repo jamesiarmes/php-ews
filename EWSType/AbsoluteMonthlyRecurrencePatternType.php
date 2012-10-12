@@ -17,18 +17,4 @@ class EWSType_AbsoluteMonthlyRecurrencePatternType extends EWSType
      * @var integer
      */
     public $DayOfMonth;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DayOfMonth',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

@@ -42,16 +42,4 @@ class EWSType_ExcludesType extends EWSType
      * @var EWSType_ExcludesValueType
      */
     public $Bitmask;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema[] = array(
-            'name' => 'Bitmask',
-            'required' => false,
-            'type' => 'ExcludesValueType',
-        );
-    }
 }

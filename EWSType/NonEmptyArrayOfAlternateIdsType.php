@@ -31,28 +31,4 @@ class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
      * @var EWSType_AlternatePublicFolderItemIdType
      */
     public $AlternatePublicFolderItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AlternateId',
-                'required' => false,
-                'type' => 'AlternateIdType',
-            ),
-            array(
-                'name' => 'AlternatePublicFolderId',
-                'required' => false,
-                'type' => 'AlternatePublicFolderIdType',
-            ),
-            array(
-                'name' => 'AlternatePublicFolderItemId',
-                'required' => false,
-                'type' => 'AlternatePublicFolderItemIdType',
-            ),
-        );
-    }
 }

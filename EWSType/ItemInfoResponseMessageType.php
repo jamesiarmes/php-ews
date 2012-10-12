@@ -17,18 +17,4 @@ class EWSType_ItemInfoResponseMessageType extends EWSType
      * @var EWSType_ArrayOfRealItemsType
      */
     public $Items;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Items',
-                'required' => false,
-                'type' => 'ArrayOfRealItemsType',
-            ),
-        );
-    }
 }

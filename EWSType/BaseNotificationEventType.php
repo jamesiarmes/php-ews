@@ -17,18 +17,4 @@ class EWSType_BaseNotificationEventType extends EWSType
      * @var EWSType_WatermarkType
      */
     public $Watermark;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Watermark',
-                'required' => false,
-                'type' => 'WatermarkType',
-            ),
-        );
-    }
 }

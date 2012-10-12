@@ -31,28 +31,4 @@ class EWSType_WorkingPeriod extends EWSType
      * @var integer
      */
     public $EndTimeInMinutes;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DayOfWeek',
-                'required' => false,
-                'type' => 'DaysOfWeekType',
-            ),
-            array(
-                'name' => 'StartTimeInMinutes',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'EndTimeInMinutes',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

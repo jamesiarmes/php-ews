@@ -52,43 +52,4 @@ class EWSType_SerializableTimeZoneTime extends EWSType
      * @var string
      */
     public $Year;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Bias',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'Time',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'DayOrder',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'Month',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'DayOfWeek',
-                'required' => false,
-                'type' => 'DayOfWeekType',
-            ),
-            array(
-                'name' => 'Year',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

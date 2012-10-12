@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
      * @var EWSType_BasePathToElementType
      */
     public $Path;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Path',
-                'required' => false,
-                'type' => 'BasePathToElementType',
-            ),
-        );
-    }
 }

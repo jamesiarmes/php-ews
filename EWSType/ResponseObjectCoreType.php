@@ -17,18 +17,4 @@ class EWSType_ResponseObjectCoreType extends EWSType
      * @var EWSType_ItemIdType
      */
     public $ReferenceItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ReferenceItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-        );
-    }
 }

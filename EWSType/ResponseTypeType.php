@@ -61,20 +61,6 @@ class EWSType_ResponseTypeType extends EWSType
     public $_;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
-
-    /**
      * Returns the value of this object as a string.
      *
      * @return string

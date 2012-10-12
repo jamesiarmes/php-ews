@@ -33,28 +33,4 @@ abstract class EWSType_SearchExpressionType extends EWSType
      * @var EWSType_PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldURI',
-                'required' => false,
-                'type' => 'PathToUnindexedFieldType',
-            ),
-            array(
-                'name' => 'IndexedFieldURI',
-                'required' => false,
-                'type' => 'PathToIndexedFieldType',
-            ),
-            array(
-                'name' => 'PathToExtendedFieldType',
-                'required' => false,
-                'type' => 'ExtendedFieldURI',
-            ),
-        );
-    }
 }

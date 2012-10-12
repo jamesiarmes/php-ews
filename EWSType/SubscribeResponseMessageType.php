@@ -24,23 +24,4 @@ class EWSType_SubscribeResponseMessageType extends EWSType
      * @var EWSType_WatermarkType
      */
     public $Watermark;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SubscriptionId',
-                'required' => false,
-                'type' => 'SubscriptionIdType',
-            ),
-            array(
-                'name' => 'Watermark',
-                'required' => false,
-                'type' => 'WatermarkType',
-            ),
-        );
-    }
 }

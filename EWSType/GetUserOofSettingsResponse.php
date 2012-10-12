@@ -31,28 +31,4 @@ class EWSType_GetUserOofSettingsResponse extends EWSType
      * @var EWSType_ExternalAudience
      */
     public $AllowExternalOof;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResponseMessage',
-                'required' => false,
-                'type' => 'ResponseMessageType',
-            ),
-            array(
-                'name' => 'OofSettings',
-                'required' => false,
-                'type' => 'UserOofSettings',
-            ),
-            array(
-                'name' => 'AllowExternalOof',
-                'required' => false,
-                'type' => 'ExternalAudience',
-            ),
-        );
-    }
 }

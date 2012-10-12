@@ -17,18 +17,4 @@ class EWSType_SmartResponseType extends EWSType
      * @var EWSType_BodyType
      */
     public $NewBodyContent;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'NewBodyContent',
-                'required' => false,
-                'type' => 'BodyType',
-            ),
-        );
-    }
 }

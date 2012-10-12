@@ -17,18 +17,4 @@ class EWSType_SetUserOofSettingsResponse extends EWSType
      * @var EWSType_ResponseMessageType
      */
     public $ResponseMessage;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResponseMessage',
-                'required' => false,
-                'type' => 'ResponseMessageType',
-            ),
-        );
-    }
 }

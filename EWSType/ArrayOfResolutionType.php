@@ -52,43 +52,4 @@ class EWSType_ArrayOfResolutionType extends EWSType
      * @var integer
      */
     public $TotalItemsInView;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Resolution',
-                'required' => false,
-                'type' => 'ResolutionType',
-            ),
-            array(
-                'name' => 'IndexedPagingOffset',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'NumeratorOffset',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'AbsoluteDenominator',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'IncludesLastItemInRange',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'TotalItemsInView',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

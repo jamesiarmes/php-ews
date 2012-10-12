@@ -17,18 +17,4 @@ class EWSType_RemoveDelegateType extends EWSType
      * @var EWSType_ArrayOfUserIdType
      */
     public $UserIds;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UserIds',
-                'required' => false,
-                'type' => 'ArrayOfUserIdType',
-            ),
-        );
-    }
 }

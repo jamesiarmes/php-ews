@@ -25,23 +25,4 @@ class EWSType_MimeContentType extends EWSType
      * @var string
      */
     public $CharacterSet;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'CharacterSet',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

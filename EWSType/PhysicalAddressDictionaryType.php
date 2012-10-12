@@ -17,18 +17,4 @@ class EWSType_PhysicalAddressDictionaryType extends EWSType
      * @var EWSType_PhysicalAddressDictionaryEntryType
      */
     public $Entry;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Entry',
-                'required' => false,
-                'type' => 'PhysicalAddressDictionaryEntryType',
-            ),
-        );
-    }
 }

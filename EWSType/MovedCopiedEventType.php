@@ -31,28 +31,4 @@ class EWSType_MovedCopiedEventType extends EWSType
      * @var EWSType_FolderIdType
      */
     public $OldParentFolderId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'OldFolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-            array(
-                'name' => 'OldItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'OldParentFolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-        );
-    }
 }

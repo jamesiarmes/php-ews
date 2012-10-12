@@ -24,23 +24,4 @@ class EWSType_CalendarPermissionType extends EWSType
      * @var EWSType_CalendarPermissionLevelType
      */
     public $CalendarPermissionLevel;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ReadItems',
-                'required' => false,
-                'type' => 'CalendarPermissionReadAccessType',
-            ),
-            array(
-                'name' => 'CalendarPermissionLevel',
-                'required' => false,
-                'type' => 'CalendarPermissionLevelType',
-            ),
-        );
-    }
 }
