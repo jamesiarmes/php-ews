@@ -31,28 +31,4 @@ class EWSType_NonEmptyArrayOfBaseItemIdsType extends EWSType
      * @var EWSType_RecurringMasterItemIdType
      */
     public $RecurringMasterItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'OccurrenceItemId',
-                'required' => false,
-                'type' => 'OccurrenceItemIdType',
-            ),
-            array(
-                'name' => 'RecurringMasterItemId',
-                'required' => false,
-                'type' => 'RecurringMasterItemIdType',
-            ),
-        );
-    }
 }

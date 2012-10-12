@@ -17,18 +17,4 @@ class EWSType_PullSubscriptionRequestType extends EWSType
      * @var EWSType_SubscriptionTimeoutType
      */
     public $Timeout;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Timeout',
-                'required' => false,
-                'type' => 'SubscriptionTimeoutType',
-            ),
-        );
-    }
 }

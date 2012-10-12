@@ -24,23 +24,4 @@ class EWSType_FolderResponseShapeType extends EWSType
      * @var EWSType_NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'BaseShape',
-                'required' => false,
-                'type' => 'DefaultShapeNamesType',
-            ),
-            array(
-                'name' => 'AdditionalProperties',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfPathsToElementType',
-            ),
-        );
-    }
 }

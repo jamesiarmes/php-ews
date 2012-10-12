@@ -38,33 +38,4 @@ class EWSType_DeleteItemType extends EWSType
      * @var EWSType_AffectedTaskOccurrencesType
      */
     public $AffectedTaskOccurrences;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseItemIdsType',
-            ),
-            array(
-                'name' => 'DeleteType',
-                'required' => false,
-                'type' => 'DisposalType',
-            ),
-            array(
-                'name' => 'SendMeetingCancellations',
-                'required' => false,
-                'type' => 'CalendarItemCreateOrDeleteOperationType',
-            ),
-            array(
-                'name' => 'AffectedTaskOccurrences',
-                'required' => false,
-                'type' => 'AffectedTaskOccurrencesType',
-            ),
-        );
-    }
 }

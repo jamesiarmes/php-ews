@@ -24,23 +24,4 @@ class EWSType_PathToIndexedFieldType extends EWSType
      * @var string
      */
     public $FieldIndex;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldURI',
-                'required' => false,
-                'type' => 'DictionaryURIType',
-            ),
-            array(
-                'name' => 'FieldIndex',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

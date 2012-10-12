@@ -24,23 +24,4 @@ class EWSType_PermissionType extends EWSType
      * @var EWSType_PermissionLevelType
      */
     public $PermissionLevel;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ReadItems',
-                'required' => false,
-                'type' => 'PermissionReadAccessType',
-            ),
-            array(
-                'name' => 'PermissionLevel',
-                'required' => false,
-                'type' => 'PermissionLevelType',
-            ),
-        );
-    }
 }

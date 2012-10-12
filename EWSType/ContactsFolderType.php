@@ -17,18 +17,4 @@ class EWSType_ContactsFolderType extends EWSType
      * @var EWSType_PermissionSetType
      */
     public $PermissionSet;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'PermissionSet',
-                'required' => false,
-                'type' => 'PermissionSetType',
-            ),
-        );
-    }
 }

@@ -31,28 +31,4 @@ class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
      * @var EWSType_MonthNamesType
      */
     public $Month;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DaysOfWeek',
-                'required' => false,
-                'type' => 'DayOfWeekType',
-            ),
-            array(
-                'name' => 'DayOfWeekIndex',
-                'required' => false,
-                'type' => 'DayOfWeekIndexType',
-            ),
-            array(
-                'name' => 'Month',
-                'required' => false,
-                'type' => 'MonthNamesType',
-            ),
-        );
-    }
 }

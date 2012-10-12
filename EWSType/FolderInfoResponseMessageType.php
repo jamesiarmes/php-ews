@@ -17,18 +17,4 @@ class EWSType_FolderInfoResponseMessageType extends EWSType
      * @var EWSType_ArrayOfFoldersType
      */
     public $Folders;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Folders',
-                'required' => false,
-                'type' => 'ArrayOfFoldersType',
-            ),
-        );
-    }
 }

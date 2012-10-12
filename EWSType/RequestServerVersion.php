@@ -17,18 +17,4 @@ class EWSType_RequestServerVersion extends EWSType
      * @var EWSType_ExchangeVersionType
      */
     public $Version;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Version',
-                'required' => false,
-                'type' => 'ExchangeVersionType',
-            ),
-        );
-    }
 }

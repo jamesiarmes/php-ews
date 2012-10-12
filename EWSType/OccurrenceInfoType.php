@@ -38,33 +38,4 @@ class EWSType_OccurrenceInfoType extends EWSType
      * @var EWSType_dateTime
      */
     public $OriginalStart;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'Start',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'End',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'OriginalStart',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-        );
-    }
 }

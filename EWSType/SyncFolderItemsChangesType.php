@@ -38,33 +38,4 @@ class EWSType_SyncFolderItemsChangesType extends EWSType
      * @var EWSType_SyncFolderItemsReadFlagType
      */
     public $ReadFlagChange;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Create',
-                'required' => false,
-                'type' => 'SyncFolderItemsCreateOrUpdateType',
-            ),
-            array(
-                'name' => 'Update',
-                'required' => false,
-                'type' => 'SyncFolderItemsCreateOrUpdateType',
-            ),
-            array(
-                'name' => 'Delete',
-                'required' => false,
-                'type' => 'SyncFolderItemsDeleteType',
-            ),
-            array(
-                'name' => 'ReadFlagChange',
-                'required' => false,
-                'type' => 'SyncFolderItemsReadFlagType',
-            ),
-        );
-    }
 }

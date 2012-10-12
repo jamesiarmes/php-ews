@@ -38,11 +38,4 @@ class EWSType_PhysicalAddressIndexType extends EWSType
      * @var string
      */
     const OTHER = 'Other';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

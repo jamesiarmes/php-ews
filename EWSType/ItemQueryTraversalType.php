@@ -26,11 +26,4 @@ class EWSType_ItemQueryTraversalType extends EWSType
      * @var string
      */
     const SOFT_DELETED = 'SoftDeleted';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

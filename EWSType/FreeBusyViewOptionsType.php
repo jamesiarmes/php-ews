@@ -31,28 +31,4 @@ class EWSType_FreeBusyViewOptionsType extends EWSType
      * @var EWSType_FreeBusyViewType
      */
     public $RequestedView;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'TimeWindow',
-                'required' => false,
-                'type' => 'Duration',
-            ),
-            array(
-                'name' => 'MergedFreeBusyIntervalInMinutes',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'RequestedView',
-                'required' => false,
-                'type' => 'FreeBusyViewType',
-            ),
-        );
-    }
 }

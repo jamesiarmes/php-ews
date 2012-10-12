@@ -17,18 +17,4 @@ class EWSType_BaseResponseMessageType extends EWSType
      * @var EWSType_ArrayOfResponseMessagesType
      */
     public $ResponseMessages;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResponseMessages',
-                'required' => false,
-                'type' => 'ArrayOfResponseMessagesType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_SyncFolderHierarchyDeleteType extends EWSType
      * @var EWSType_FolderIdType
      */
     public $FolderId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-        );
-    }
 }

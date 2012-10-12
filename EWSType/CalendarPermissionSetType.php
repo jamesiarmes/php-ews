@@ -24,23 +24,4 @@ class EWSType_CalendarPermissionSetType extends EWSType
      * @var EWSType_ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'CalendarPermissions',
-                'required' => false,
-                'type' => 'ArrayOfCalendarPermissionsType',
-            ),
-            array(
-                'name' => 'UnknownEntries',
-                'required' => false,
-                'type' => 'ArrayOfUnknownEntriesType',
-            ),
-        );
-    }
 }

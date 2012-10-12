@@ -26,23 +26,4 @@ class EWSType_AbsoluteDateTransitionType extends EWSType
      * @var string
      */
     public $DateTime;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'To',
-                'required' => false,
-                'type' => 'TransitionTargetType',
-            ),
-            array(
-                'name' => 'DateTime',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_ArrayOfFreeBusyResponse extends EWSType
      * @var EWSType_FreeBusyResponseType
      */
     public $FreeBusyResponse;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FreeBusyResponse',
-                'required' => false,
-                'type' => 'FreeBusyResponseType',
-            ),
-        );
-    }
 }

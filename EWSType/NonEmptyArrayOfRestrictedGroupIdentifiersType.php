@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType extends EWSType
      * @var EWSType_SidAndAttributesType
      */
     public $RestrictedGroupIdentifier;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'RestrictedGroupIdentifier',
-                'required' => false,
-                'type' => 'SidAndAttributesType',
-            ),
-        );
-    }
 }

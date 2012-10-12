@@ -17,18 +17,4 @@ class EWSType_ResponseObjectType extends EWSType
      * @var string
      */
     public $ObjectName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ObjectName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_GroupedItemsType extends EWSType
      * @var EWSType_ArrayOfRealItemsType
      */
     public $Items;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'GroupIndex',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Items',
-                'required' => false,
-                'type' => 'ArrayOfRealItemsType',
-            ),
-        );
-    }
 }

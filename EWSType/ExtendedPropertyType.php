@@ -31,28 +31,4 @@ class EWSType_ExtendedPropertyType extends EWSType
      * @var EWSType_NonEmptyArrayOfPropertyValuesType
      */
     public $Values;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ExtendedFieldURI',
-                'required' => false,
-                'type' => 'PathToExtendedFieldType',
-            ),
-            array(
-                'name' => 'Value',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Values',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfPropertyValuesType',
-            ),
-        );
-    }
 }

@@ -31,28 +31,4 @@ class EWSType_SyncFolderItemsResponseMessageType extends EWSType
      * @var EWSType_SyncFolderItemsChangesType
      */
     public $Changes;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SyncState',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'IncludesLastItemInRange',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'Changes',
-                'required' => false,
-                'type' => 'SyncFolderItemsChangesType',
-            ),
-        );
-    }
 }

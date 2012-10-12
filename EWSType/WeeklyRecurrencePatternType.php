@@ -17,18 +17,4 @@ class EWSType_WeeklyRecurrencePatternType extends EWSType
      * @var EWSType_DaysOfWeekType
      */
     public $DaysOfWeek;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DaysOfWeek',
-                'required' => false,
-                'type' => 'DaysOfWeekType',
-            ),
-        );
-    }
 }

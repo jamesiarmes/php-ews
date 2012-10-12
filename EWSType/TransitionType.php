@@ -18,11 +18,4 @@ class EWSType_TransitionType extends EWSType
      * @var EWSType_TransitionTargetType
      */
     public $To;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

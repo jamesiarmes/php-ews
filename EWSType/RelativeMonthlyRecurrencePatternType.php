@@ -24,23 +24,4 @@ class EWSType_RelativeMonthlyRecurrencePatternType extends EWSType
      * @var EWSType_DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DaysOfWeek',
-                'required' => false,
-                'type' => 'DayOfWeekType',
-            ),
-            array(
-                'name' => 'DayOfWeekIndex',
-                'required' => false,
-                'type' => 'DayOfWeekIndexType',
-            ),
-        );
-    }
 }

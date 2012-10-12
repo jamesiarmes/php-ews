@@ -17,18 +17,4 @@ class EWSType_ArrayOfSuggestionDayResult extends EWSType
      * @var EWSType_SuggestionDayResult
      */
     public $SuggestionDayResult;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SuggestionDayResult',
-                'required' => false,
-                'type' => 'SuggestionDayResult',
-            ),
-        );
-    }
 }

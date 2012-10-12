@@ -38,33 +38,4 @@ class EWSType_BaseObjectChangedEventType extends EWSType
      * @var EWSType_FolderIdType
      */
     public $ParentFolderId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'TimeStamp',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'FolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'ParentFolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-        );
-    }
 }

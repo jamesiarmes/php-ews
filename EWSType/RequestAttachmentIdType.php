@@ -17,18 +17,4 @@ class EWSType_RequestAttachmentIdType extends EWSType
      * @var string
      */
     public $Id;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Id',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

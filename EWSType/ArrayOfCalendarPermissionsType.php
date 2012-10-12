@@ -17,18 +17,4 @@ class EWSType_ArrayOfCalendarPermissionsType extends EWSType
      * @var EWSType_CalendarPermissionType
      */
     public $CalendarPermission;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'CalendarPermission',
-                'required' => false,
-                'type' => 'CalendarPermissionType',
-            ),
-        );
-    }
 }

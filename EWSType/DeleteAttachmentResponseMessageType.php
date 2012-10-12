@@ -17,18 +17,4 @@ class EWSType_DeleteAttachmentResponseMessageType extends EWSType
      * @var EWSType_RootItemIdType
      */
     public $RootItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'RootItemId',
-                'required' => false,
-                'type' => 'RootItemIdType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_DistinguishedGroupByType extends EWSType
      * @var EWSType_StandardGroupByType
      */
     public $StandardGroupBy;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'StandardGroupBy',
-                'required' => false,
-                'type' => 'StandardGroupByType',
-            ),
-        );
-    }
 }

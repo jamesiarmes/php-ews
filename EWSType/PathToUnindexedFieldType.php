@@ -17,18 +17,4 @@ class EWSType_PathToUnindexedFieldType extends EWSType
      * @var EWSType_UnindexedFieldURIType
      */
     public $FieldURI;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldURI',
-                'required' => false,
-                'type' => 'UnindexedFieldURIType',
-            ),
-        );
-    }
 }

@@ -31,28 +31,4 @@ class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
      * @var EWSType_DeleteFolderFieldType
      */
     public $DeleteFolderField;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AppendToFolderField',
-                'required' => false,
-                'type' => 'AppendToFolderFieldType',
-            ),
-            array(
-                'name' => 'SetFolderField',
-                'required' => false,
-                'type' => 'SetFolderFieldType',
-            ),
-            array(
-                'name' => 'DeleteFolderField',
-                'required' => false,
-                'type' => 'DeleteFolderFieldType',
-            ),
-        );
-    }
 }

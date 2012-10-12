@@ -17,18 +17,4 @@ class EWSType_ConflictResultsType extends EWSType
      * @var integer
      */
     public $Count;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Count',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

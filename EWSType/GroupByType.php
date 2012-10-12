@@ -45,38 +45,4 @@ class EWSType_GroupByType extends EWSType
      * @var EWSType_SortDirectionType
      */
     public $Order;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FieldURI',
-                'required' => false,
-                'type' => 'PathToUnindexedFieldType',
-            ),
-            array(
-                'name' => 'IndexedFieldURI',
-                'required' => false,
-                'type' => 'PathToIndexedFieldType',
-            ),
-            array(
-                'name' => 'ExtendedFieldURI',
-                'required' => false,
-                'type' => 'PathToExtendedFieldType',
-            ),
-            array(
-                'name' => 'AggregateOn',
-                'required' => false,
-                'type' => 'AggregateOnType',
-            ),
-            array(
-                'name' => 'Order',
-                'required' => true,
-                'type' => 'SortDirectionType',
-            ),
-        );
-    }
 }

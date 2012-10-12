@@ -24,23 +24,4 @@ class EWSType_DeleteFolderType extends EWSType
      * @var EWSType_DisposalType
      */
     public $DeleteType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseFolderIdsType',
-            ),
-            array(
-                'name' => 'DeleteType',
-                'required' => false,
-                'type' => 'DisposalType',
-            ),
-        );
-    }
 }

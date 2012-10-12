@@ -24,11 +24,4 @@ class EWSType_ContactSourceType extends EWSType
      * @var string
      */
     const EXCHANGE_STORE = 'Store';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

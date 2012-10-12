@@ -41,20 +41,6 @@ class EWSType_EmailAddressKeyType extends EWSType
     public $_;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => true,
-                'type' => 'string',
-            ),
-        );
-    }
-
-    /**
      * Returns the value of this object as a string
      *
      * @return string

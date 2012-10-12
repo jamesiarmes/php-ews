@@ -17,18 +17,4 @@ class EWSType_ConvertIdResponseMessageType extends EWSType
      * @var EWSType_AlternateIdBaseType
      */
     public $AlternateId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AlternateId',
-                'required' => false,
-                'type' => 'AlternateIdBaseType',
-            ),
-        );
-    }
 }

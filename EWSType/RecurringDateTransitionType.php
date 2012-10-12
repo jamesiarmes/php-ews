@@ -40,33 +40,4 @@ class EWSType_RecurringDateTransitionType extends EWSType
      * @var integer
      */
     public $Day;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'To',
-                'required' => false,
-                'type' => 'TransitionTargetType',
-            ),
-            array(
-                'name' => 'TimeOffset',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Month',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'Day',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

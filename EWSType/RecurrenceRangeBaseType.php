@@ -17,18 +17,4 @@ class EWSType_RecurrenceRangeBaseType extends EWSType
      * @var EWSType_date
      */
     public $StartDate;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'StartDate',
-                'required' => false,
-                'type' => 'date',
-            ),
-        );
-    }
 }

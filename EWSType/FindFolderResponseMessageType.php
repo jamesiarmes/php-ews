@@ -17,18 +17,4 @@ class EWSType_FindFolderResponseMessageType extends EWSType
      * @var EWSType_FindFolderParentType
      */
     public $RootFolder;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'RootFolder',
-                'required' => false,
-                'type' => 'FindFolderParentType',
-            ),
-        );
-    }
 }

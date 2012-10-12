@@ -38,33 +38,4 @@ class EWSType_FreeBusyView extends EWSType
      * @var EWSType_WorkingHours
      */
     public $WorkingHours;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FreeBusyViewType',
-                'required' => false,
-                'type' => 'FreeBusyViewType',
-            ),
-            array(
-                'name' => 'MergedFreeBusy',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'CalendarEventArray',
-                'required' => false,
-                'type' => 'ArrayOfCalendarEvent',
-            ),
-            array(
-                'name' => 'WorkingHours',
-                'required' => false,
-                'type' => 'WorkingHours',
-            ),
-        );
-    }
 }

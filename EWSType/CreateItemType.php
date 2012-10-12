@@ -38,33 +38,4 @@ class EWSType_CreateItemType extends EWSType
      * @var EWSType_CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingInvitations;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SavedItemFolderId',
-                'required' => false,
-                'type' => 'TargetFolderIdType',
-            ),
-            array(
-                'name' => 'Items',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfAllItemsType',
-            ),
-            array(
-                'name' => 'MessageDisposition',
-                'required' => false,
-                'type' => 'MessageDispositionType',
-            ),
-            array(
-                'name' => 'SendMeetingInvitations',
-                'required' => false,
-                'type' => 'CalendarItemCreateOrDeleteOperationType',
-            ),
-        );
-    }
 }

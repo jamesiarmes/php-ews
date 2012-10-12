@@ -52,43 +52,4 @@ class EWSType_EffectiveRightsType extends EWSType
      * @var boolean
      */
     public $Read;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'CreateAssociated',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'CreateContents',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'CreateHierarchy',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'Delete',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'Modify',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'Read',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-        );
-    }
 }

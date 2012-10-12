@@ -17,18 +17,4 @@ class EWSType_AlternateIdBaseType extends EWSType
      * @var EWSType_IdFormatType
      */
     public $Format;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Format',
-                'required' => false,
-                'type' => 'IdFormatType',
-            ),
-        );
-    }
 }

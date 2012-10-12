@@ -24,23 +24,4 @@ class EWSType_PermissionSetType extends EWSType
      * @var EWSType_ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Permissions',
-                'required' => false,
-                'type' => 'ArrayOfPermissionsType',
-            ),
-            array(
-                'name' => 'UnknownEntries',
-                'required' => false,
-                'type' => 'ArrayOfUnknownEntriesType',
-            ),
-        );
-    }
 }

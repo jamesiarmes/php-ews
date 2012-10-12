@@ -17,18 +17,4 @@ class EWSType_ArrayOfCalendarEvent extends EWSType
      * @var EWSType_CalendarEvent
      */
     public $CalendarEvent;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'CalendarEvent',
-                'required' => false,
-                'type' => 'CalendarEvent',
-            ),
-        );
-    }
 }

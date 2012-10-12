@@ -17,18 +17,4 @@ class EWSType_UpdateItemResponseMessageType extends EWSType
      * @var EWSType_ConflictResultsType
      */
     public $ConflictResults;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ConflictResults',
-                'required' => false,
-                'type' => 'ConflictResultsType',
-            ),
-        );
-    }
 }

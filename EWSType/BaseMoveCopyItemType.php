@@ -24,23 +24,4 @@ class EWSType_BaseMoveCopyItemType extends EWSType
      * @var EWSType_NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ToFolderId',
-                'required' => false,
-                'type' => 'TargetFolderIdType',
-            ),
-            array(
-                'name' => 'ItemIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseItemIdsType',
-            ),
-        );
-    }
 }

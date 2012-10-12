@@ -17,18 +17,4 @@ class EWSType_ImAddressDictionaryType extends EWSType
      * @var EWSType_ImAddressDictionaryEntryType
      */
     public $Entry;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Entry',
-                'required' => false,
-                'type' => 'ImAddressDictionaryEntryType',
-            ),
-        );
-    }
 }

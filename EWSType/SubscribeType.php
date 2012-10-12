@@ -24,23 +24,4 @@ class EWSType_SubscribeType extends EWSType
      * @var EWSType_PushSubscriptionRequestType
      */
     public $PushSubscriptionRequest;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'PullSubscriptionRequest',
-                'required' => false,
-                'type' => 'PullSubscriptionRequestType',
-            ),
-            array(
-                'name' => 'PushSubscriptionRequest',
-                'required' => false,
-                'type' => 'PushSubscriptionRequestType',
-            ),
-        );
-    }
 }

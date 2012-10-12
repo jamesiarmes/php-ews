@@ -38,33 +38,4 @@ class EWSType_SerializedSecurityContextType extends EWSType
      * @var string
      */
     public $PrimarySmtpAddress;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UserSid',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'GroupSids',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfGroupIdentifiersType',
-            ),
-            array(
-                'name' => 'RestrictedGroupSids',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfRestrictedGroupIdentifiersType',
-            ),
-            array(
-                'name' => 'PrimarySmtpAddress',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

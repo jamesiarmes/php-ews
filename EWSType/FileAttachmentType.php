@@ -87,18 +87,4 @@ class EWSType_FileAttachmentType extends EWSType
      * base64 conversion.
      */
     public $Content;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Content',
-                'required' => false,
-                'type' => 'base64Binary',
-            ),
-        );
-    }
 }

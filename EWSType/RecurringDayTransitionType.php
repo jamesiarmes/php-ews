@@ -49,38 +49,4 @@ class EWSType_RecurringDayTransitionType extends EWSType
      * @var EWSType_OccurrenceType
      */
     public $Occurrence;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'To',
-                'required' => false,
-                'type' => 'TransitionTargetType',
-            ),
-            array(
-                'name' => 'TimeOffset',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Month',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'DayOfWeek',
-                'required' => false,
-                'type' => 'DayOfWeekType',
-            ),
-            array(
-                'name' => 'Occurrence',
-                'required' => false,
-                'type' => 'OccurrenceType',
-            ),
-        );
-    }
 }

@@ -34,13 +34,6 @@ class EWSType_KindType extends EWSType
     public $_;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * Returns the value of this object as a string.
      *
      * @return string

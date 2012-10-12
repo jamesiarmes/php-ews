@@ -24,23 +24,4 @@ class EWSType_BodyType extends EWSType
      * @var EWSType_BodyTypeType
      */
     public $BodyType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'BodyType',
-                'required' => false,
-                'type' => 'BodyTypeType',
-            ),
-        );
-    }
 }

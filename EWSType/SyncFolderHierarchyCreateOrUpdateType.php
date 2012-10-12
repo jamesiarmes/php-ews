@@ -45,38 +45,4 @@ class EWSType_SyncFolderHierarchyCreateOrUpdateType extends EWSType
      * @var EWSType_TasksFolderType
      */
     public $TasksFolder;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Folder',
-                'required' => false,
-                'type' => 'FolderType',
-            ),
-            array(
-                'name' => 'CalendarFolder',
-                'required' => false,
-                'type' => 'CalendarFolderType',
-            ),
-            array(
-                'name' => 'ContactsFolder',
-                'required' => false,
-                'type' => 'ContactsFolderType',
-            ),
-            array(
-                'name' => 'SearchFolder',
-                'required' => false,
-                'type' => 'SearchFolderType',
-            ),
-            array(
-                'name' => 'TasksFolder',
-                'required' => false,
-                'type' => 'TasksFolderType',
-            ),
-        );
-    }
 }

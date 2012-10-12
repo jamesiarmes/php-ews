@@ -31,28 +31,4 @@ class EWSType_ConnectingSIDType extends EWSType
      * @var string
      */
     public $PrimarySmtpAddress;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'PrincipalName',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'SID',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'PrimarySmtpAddress',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

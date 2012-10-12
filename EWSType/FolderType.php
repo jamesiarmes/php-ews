@@ -24,23 +24,4 @@ class EWSType_FolderType extends EWSType
      * @var integer
      */
     public $UnreadCount;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'PermissionSet',
-                'required' => false,
-                'type' => 'PermissionSetType',
-            ),
-            array(
-                'name' => 'UnreadCount',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }
