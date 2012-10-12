@@ -18,18 +18,4 @@ class EWSType_ArrayOfTransitionsGroupsType extends EWSType
      * @var EWSType_ArrayOfTransitionsType
      */
     public $TransitionsGroup;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'TransitionsGroup',
-                'required' => false,
-                'type' => 'ArrayOfTransitionsType',
-            ),
-        );
-    }
 }

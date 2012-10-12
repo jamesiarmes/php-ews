@@ -24,23 +24,4 @@ class EWSType_GetDelegateType extends EWSType
      * @var boolean
      */
     public $IncludePermissions;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UserIds',
-                'required' => false,
-                'type' => 'ArrayOfUserIdType',
-            ),
-            array(
-                'name' => 'IncludePermissions',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-        );
-    }
 }

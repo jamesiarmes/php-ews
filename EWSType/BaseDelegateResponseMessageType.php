@@ -17,18 +17,4 @@ class EWSType_BaseDelegateResponseMessageType extends EWSType
      * @var EWSType_ArrayOfDelegateUserResponseMessageType
      */
     public $ResponseMessages;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResponseMessages',
-                'required' => false,
-                'type' => 'ArrayOfDelegateUserResponseMessageType',
-            ),
-        );
-    }
 }

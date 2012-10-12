@@ -17,18 +17,4 @@ class EWSType_BaseGroupByType extends EWSType
      * @var EWSType_SortDirectionType
      */
     public $Order;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Order',
-                'required' => false,
-                'type' => 'SortDirectionType',
-            ),
-        );
-    }
 }

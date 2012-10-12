@@ -38,33 +38,4 @@ class EWSType_GroupAttendeeConflictData extends EWSType
      * @var integer
      */
     public $NumberOfMembersWithNoData;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'NumberOfMembers',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'NumberOfMembersAvailable',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'NumberOfMembersWithConflict',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'NumberOfMembersWithNoData',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

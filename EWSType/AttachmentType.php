@@ -45,38 +45,4 @@ class EWSType_AttachmentType extends EWSType
      * @var string
      */
     public $ContentLocation;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AttachmentId',
-                'required' => false,
-                'type' => 'AttachmentIdType',
-            ),
-            array(
-                'name' => 'Name',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'ContentType',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'ContentId',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'ContentLocation',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

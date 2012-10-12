@@ -24,23 +24,4 @@ class EWSType_Value extends EWSType
      * @var string
      */
     public $Name;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Name',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

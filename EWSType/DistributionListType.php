@@ -31,28 +31,4 @@ class EWSType_DistributionListType extends EWSType
      * @var EWSType_ContactSourceType
      */
     public $ContactSource;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DisplayName',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'FileAs',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'ContactSource',
-                'required' => false,
-                'type' => 'ContactSourceType',
-            ),
-        );
-    }
 }

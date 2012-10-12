@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfGroupIdentifiersType extends EWSType
      * @var EWSType_SidAndAttributesType
      */
     public $GroupIdentifier;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'GroupIdentifier',
-                'required' => false,
-                'type' => 'SidAndAttributesType',
-            ),
-        );
-    }
 }

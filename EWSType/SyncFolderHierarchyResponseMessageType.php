@@ -31,28 +31,4 @@ class EWSType_SyncFolderHierarchyResponseMessageType extends EWSType
      * @var EWSType_SyncFolderHierarchyChangesType
      */
     public $Changes;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SyncState',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'IncludesLastFolderInRange',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'Changes',
-                'required' => false,
-                'type' => 'SyncFolderHierarchyChangesType',
-            ),
-        );
-    }
 }

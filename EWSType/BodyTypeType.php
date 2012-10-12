@@ -24,11 +24,4 @@ class EWSType_BodyTypeType extends EWSType
      * @var string
      */
     const TEXT = 'Text';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_UnsubscribeType extends EWSType
      * @var EWSType_SubscriptionIdType
      */
     public $SubscriptionId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SubscriptionId',
-                'required' => false,
-                'type' => 'SubscriptionIdType',
-            ),
-        );
-    }
 }

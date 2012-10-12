@@ -38,33 +38,4 @@ class EWSType_UserIdType extends EWSType
      * @var EWSType_DistinguishedUserType
      */
     public $DistinguishedUser;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SID',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'PrimarySmtpAddress',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'DisplayName',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'DistinguishedUser',
-                'required' => false,
-                'type' => 'DistinguishedUserType',
-            ),
-        );
-    }
 }

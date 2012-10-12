@@ -45,38 +45,4 @@ class EWSType_SyncFolderItemsType extends EWSType
      * @var EWSType_MaxSyncChangesReturnedType
      */
     public $MaxChangesReturned;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemShape',
-                'required' => false,
-                'type' => 'ItemResponseShapeType',
-            ),
-            array(
-                'name' => 'SyncFolderId',
-                'required' => false,
-                'type' => 'TargetFolderIdType',
-            ),
-            array(
-                'name' => 'SyncState',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Ignore',
-                'required' => false,
-                'type' => 'ArrayOfBaseItemIdsType',
-            ),
-            array(
-                'name' => 'MaxChangesReturned',
-                'required' => false,
-                'type' => 'MaxSyncChangesReturnedType',
-            ),
-        );
-    }
 }

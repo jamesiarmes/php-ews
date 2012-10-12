@@ -45,38 +45,4 @@ class EWSType_TimeChangeType extends EWSType
      * @var string
      */
     public $TimeZoneName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Offset',
-                'required' => false,
-                'type' => 'duration',
-            ),
-            array(
-                'name' => 'RelativeYearlyRecurrence',
-                'required' => false,
-                'type' => 'RelativeYearlyRecurrencePatternType',
-            ),
-            array(
-                'name' => 'AbsoluteDate',
-                'required' => false,
-                'type' => 'date',
-            ),
-            array(
-                'name' => 'Time',
-                'required' => false,
-                'type' => 'time',
-            ),
-            array(
-                'name' => 'TimeZoneName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

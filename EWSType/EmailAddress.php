@@ -31,28 +31,4 @@ class EWSType_EmailAddress extends EWSType
      * @var string
      */
     public $RoutingType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Name',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Address',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'RoutingType',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

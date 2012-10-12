@@ -38,33 +38,4 @@ class EWSType_Suggestion extends EWSType
      * @var EWSType_ArrayOfAttendeeConflictData
      */
     public $AttendeeConflictDataArray;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'MeetingTime',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'IsWorkTime',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'SuggestionQuality',
-                'required' => false,
-                'type' => 'SuggestionQuality',
-            ),
-            array(
-                'name' => 'AttendeeConflictDataArray',
-                'required' => false,
-                'type' => 'ArrayOfAttendeeConflictData',
-            ),
-        );
-    }
 }

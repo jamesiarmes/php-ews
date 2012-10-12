@@ -17,18 +17,4 @@ class EWSType_IndividualAttendeeConflictData extends EWSType
      * @var EWSType_LegacyFreeBusyType
      */
     public $BusyType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'BusyType',
-                'required' => false,
-                'type' => 'LegacyFreeBusyType',
-            ),
-        );
-    }
 }

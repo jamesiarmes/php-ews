@@ -41,16 +41,4 @@ class EWSType_IsLessThanOrEqualToType extends EWSType
      * @var EWSType_FieldURIOrConstantType
      */
     public $FieldURIOrConstant;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema[] = array(
-            'name' => 'FieldURIOrConstant',
-            'required' => false,
-            'type' => 'FieldURIOrConstantType',
-        );
-    }
 }

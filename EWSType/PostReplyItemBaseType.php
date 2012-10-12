@@ -38,33 +38,4 @@ class EWSType_PostReplyItemBaseType extends EWSType
      * @var string
      */
     public $ObjectName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Subject',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'Body',
-                'required' => false,
-                'type' => 'BodyType',
-            ),
-            array(
-                'name' => 'ReferenceItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'ObjectName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_RootItemIdType extends EWSType
      * @var string
      */
     public $RootItemChangeKey;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'RootItemId',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'RootItemChangeKey',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

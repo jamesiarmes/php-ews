@@ -38,33 +38,4 @@ class EWSType_DelegateUserType extends EWSType
      * @var boolean
      */
     public $ViewPrivateItems;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UserId',
-                'required' => false,
-                'type' => 'UserIdType',
-            ),
-            array(
-                'name' => 'DelegatePermissions',
-                'required' => false,
-                'type' => 'DelegatePermissionsType',
-            ),
-            array(
-                'name' => 'ReceiveCopiesOfMeetingMessages',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'ViewPrivateItems',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-        );
-    }
 }

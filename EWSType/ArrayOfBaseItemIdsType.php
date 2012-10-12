@@ -17,18 +17,4 @@ class EWSType_ArrayOfBaseItemIdsType extends EWSType
      * @var EWSType_ItemIdType
      */
     public $ItemId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-        );
-    }
 }

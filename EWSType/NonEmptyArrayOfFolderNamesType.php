@@ -17,18 +17,4 @@ class EWSType_NonEmptyArrayOfFolderNamesType extends EWSType
      * @var string
      */
     public $FolderName;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderName',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

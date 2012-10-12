@@ -32,11 +32,4 @@ class EWSType_ExistsType extends EWSType
      * @var EWSType_PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

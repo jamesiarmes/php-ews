@@ -52,43 +52,4 @@ class EWSType_DelegatePermissionsType extends EWSType
      * @var EWSType_DelegateFolderPermissionLevelType
      */
     public $JournalFolderPermissionLevel;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'CalendarFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-            array(
-                'name' => 'TasksFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-            array(
-                'name' => 'InboxFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-            array(
-                'name' => 'ContactsFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-            array(
-                'name' => 'NotesFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-            array(
-                'name' => 'JournalFolderPermissionLevel',
-                'required' => false,
-                'type' => 'DelegateFolderPermissionLevelType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_DeletedOccurrenceInfoType extends EWSType
      * @var EWSType_dateTime
      */
     public $Start;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Start',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-        );
-    }
 }

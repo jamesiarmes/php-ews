@@ -24,23 +24,4 @@ class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
      * @var EWSType_DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderId',
-                'required' => false,
-                'type' => 'FolderIdType',
-            ),
-            array(
-                'name' => 'DistinguishedFolderId',
-                'required' => false,
-                'type' => 'DistinguishedFolderIdType',
-            ),
-        );
-    }
 }

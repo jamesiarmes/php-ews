@@ -24,23 +24,4 @@ class EWSType_CreateManagedFolderRequestType extends EWSType
      * @var EWSType_EmailAddressType
      */
     public $Mailbox;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderNames',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfFolderNamesType',
-            ),
-            array(
-                'name' => 'Mailbox',
-                'required' => false,
-                'type' => 'EmailAddressType',
-            ),
-        );
-    }
 }

@@ -38,33 +38,4 @@ class EWSType_ArrayOfAttendeeConflictData extends EWSType
      * @var EWSType_GroupAttendeeConflictData
      */
     public $GroupAttendeeConflictData;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UnknownAttendeeConflictData',
-                'required' => false,
-                'type' => 'UnknownAttendeeConflictData',
-            ),
-            array(
-                'name' => 'IndividualAttendeeConflictData',
-                'required' => false,
-                'type' => 'IndividualAttendeeConflictData',
-            ),
-            array(
-                'name' => 'TooBigGroupAttendeeConflictData',
-                'required' => false,
-                'type' => 'TooBigGroupAttendeeConflictData',
-            ),
-            array(
-                'name' => 'GroupAttendeeConflictData',
-                'required' => false,
-                'type' => 'GroupAttendeeConflictData',
-            ),
-        );
-    }
 }

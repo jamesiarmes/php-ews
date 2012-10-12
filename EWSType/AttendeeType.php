@@ -31,28 +31,4 @@ class EWSType_AttendeeType extends EWSType
      * @var EWSType_dateTime
      */
     public $LastResponseTime;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Mailbox',
-                'required' => false,
-                'type' => 'EmailAddressType',
-            ),
-            array(
-                'name' => 'ResponseType',
-                'required' => false,
-                'type' => 'ResponseTypeType',
-            ),
-            array(
-                'name' => 'LastResponseTime',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-        );
-    }
 }

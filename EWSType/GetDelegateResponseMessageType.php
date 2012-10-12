@@ -17,18 +17,4 @@ class EWSType_GetDelegateResponseMessageType extends EWSType
      * @var EWSType_DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DeliverMeetingRequests',
-                'required' => false,
-                'type' => 'DeliverMeetingRequestsType',
-            ),
-        );
-    }
 }

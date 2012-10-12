@@ -31,28 +31,4 @@ class EWSType_OccurrenceItemIdType extends EWSType
      * @var integer
      */
     public $InstanceIndex;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'RecurringMasterId',
-                'required' => false,
-                'type' => 'DerivedItemIdType',
-            ),
-            array(
-                'name' => 'ChangeKey',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'InstanceIndex',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

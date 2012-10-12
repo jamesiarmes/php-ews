@@ -24,23 +24,4 @@ class EWSType_ConvertIdType extends EWSType
      * @var EWSType_IdFormatType
      */
     public $DestinationFormat;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'SourceIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfAlternateIdsType',
-            ),
-            array(
-                'name' => 'DestinationFormat',
-                'required' => false,
-                'type' => 'IdFormatType',
-            ),
-        );
-    }
 }

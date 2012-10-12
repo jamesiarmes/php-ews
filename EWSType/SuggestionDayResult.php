@@ -31,28 +31,4 @@ class EWSType_SuggestionDayResult extends EWSType
      * @var EWSType_ArrayOfSuggestion
      */
     public $SuggestionArray;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Date',
-                'required' => false,
-                'type' => 'dateTime',
-            ),
-            array(
-                'name' => 'DayQuality',
-                'required' => false,
-                'type' => 'SuggestionQuality',
-            ),
-            array(
-                'name' => 'SuggestionArray',
-                'required' => false,
-                'type' => 'ArrayOfSuggestion',
-            ),
-        );
-    }
 }

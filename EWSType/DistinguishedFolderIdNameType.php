@@ -122,11 +122,4 @@ class EWSType_DistinguishedFolderIdNameType extends EWSType
      * @var string
      */
     const VOICEMAIL = 'voicemail';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

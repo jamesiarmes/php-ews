@@ -28,23 +28,4 @@ class EWSType_TransitionTargetType extends EWSType
      * @var string
      */
     public $_;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DateTime',
-                'required' => false,
-                'type' => 'TransitionTargetType',
-            ),
-            array(
-                'name' => 'To',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_NumberedRecurrenceRangeType extends EWSType
      * @var integer
      */
     public $NumberOfOccurrences;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'NumberOfOccurrences',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

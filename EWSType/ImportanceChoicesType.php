@@ -40,20 +40,6 @@ class EWSType_ImportanceChoicesType extends EWSType
     const NORMAL = 'Normal';
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => '_',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
-
-    /**
      * Converts the object to a string.
      *
      * @return string The string representation of the current object.

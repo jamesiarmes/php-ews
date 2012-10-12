@@ -38,33 +38,4 @@ class EWSType_ItemChangeType extends EWSType
      * @var EWSType_NonEmptyArrayOfItemChangeDescriptionsType
      */
     public $Updates;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ItemId',
-                'required' => false,
-                'type' => 'ItemIdType',
-            ),
-            array(
-                'name' => 'OccurrenceItemId',
-                'required' => false,
-                'type' => 'OccurrenceItemIdType',
-            ),
-            array(
-                'name' => 'RecurringMasterItemId',
-                'required' => false,
-                'type' => 'RecurringMasterItemIdType',
-            ),
-            array(
-                'name' => 'Updates',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfItemChangeDescriptionsType',
-            ),
-        );
-    }
 }

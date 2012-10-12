@@ -46,11 +46,4 @@ class EWSType_TimeZoneDefinitionType extends EWSType
      * @var EWSType_ArrayOfTransitionsType
      */
     public $Transitions;
-
-    /**
-     * Constructor.
-     */
-    public function __construct()
-    {
-    }
 }

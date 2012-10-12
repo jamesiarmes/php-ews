@@ -17,18 +17,4 @@ class EWSType_ResolveNamesResponseMessageType extends EWSType
      * @var EWSType_ArrayOfResolutionType
      */
     public $ResolutionSet;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ResolutionSet',
-                'required' => false,
-                'type' => 'ArrayOfResolutionType',
-            ),
-        );
-    }
 }

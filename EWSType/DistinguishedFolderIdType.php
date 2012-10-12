@@ -31,28 +31,4 @@ class EWSType_DistinguishedFolderIdType extends EWSType
      * @var string
      */
     public $ChangeKey;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Mailbox',
-                'required' => false,
-                'type' => 'EmailAddressType',
-            ),
-            array(
-                'name' => 'Id',
-                'required' => false,
-                'type' => 'DistinguishedFolderIdNameType',
-            ),
-            array(
-                'name' => 'ChangeKey',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

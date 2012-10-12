@@ -17,18 +17,4 @@ class EWSType_ArrayOfUserIdType extends EWSType
      * @var EWSType_UserIdType
      */
     public $UserId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'UserId',
-                'required' => false,
-                'type' => 'UserIdType',
-            ),
-        );
-    }
 }

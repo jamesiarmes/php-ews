@@ -24,23 +24,4 @@ class EWSType_ItemIdType extends EWSType
      * @var string
      */
     public $ChangeKey;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Id',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'ChangeKey',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

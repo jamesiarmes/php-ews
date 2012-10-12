@@ -24,23 +24,4 @@ class EWSType_GetFolderType extends EWSType
      * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderShape',
-                'required' => false,
-                'type' => 'FolderResponseShapeType',
-            ),
-            array(
-                'name' => 'FolderIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseFolderIdsType',
-            ),
-        );
-    }
 }

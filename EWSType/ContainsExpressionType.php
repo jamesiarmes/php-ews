@@ -53,26 +53,4 @@ class EWSType_ContainsExpressionType extends EWSType
      * @var EWSType_ContainmentComparisonType
      */
     public $ContainmentComparison;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema[] = array(
-            'name' => 'Constant',
-            'required' => false,
-            'type' => 'ConstantValueType',
-        );
-        $this->schema[] = array(
-            'name' => 'ContainmentMode',
-            'required' => false,
-            'type' => 'ContainmentModeType',
-        );
-        $this->schema[] = array(
-            'name' => 'ContainmentComparison',
-            'required' => false,
-            'type' => 'ContainmentComparisonType',
-        );
-    }
 }

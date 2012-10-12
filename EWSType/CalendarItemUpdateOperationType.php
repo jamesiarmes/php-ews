@@ -45,11 +45,4 @@ class EWSType_CalendarItemUpdateOperationType extends EWSType
      * @var string
      */
     const SEND_TO_CHANGED_AND_SAVE_COPY = 'SendToChangedAndSaveCopy';
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_ConstantValueType extends EWSType
      * @var string
      */
     public $Value;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Value',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

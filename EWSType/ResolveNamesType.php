@@ -38,33 +38,4 @@ class EWSType_ResolveNamesType extends EWSType
      * @var EWSType_ResolveNamesSearchScopeType
      */
     public $SearchScope;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'ParentFolderIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseFolderIdsType',
-            ),
-            array(
-                'name' => 'UnresolvedEntry',
-                'required' => false,
-                'type' => 'NonEmptyStringType',
-            ),
-            array(
-                'name' => 'ReturnFullContactData',
-                'required' => false,
-                'type' => 'boolean',
-            ),
-            array(
-                'name' => 'SearchScope',
-                'required' => false,
-                'type' => 'ResolveNamesSearchScopeType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_BasePagingType extends EWSType
      * @var integer
      */
     public $MaxEntriesReturned;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'MaxEntriesReturned',
-                'required' => false,
-                'type' => 'integer',
-            ),
-        );
-    }
 }

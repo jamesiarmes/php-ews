@@ -17,18 +17,4 @@ class EWSType_EmailAddressDictionaryType extends EWSType
      * @var EWSType_EmailAddressDictionaryEntryType
      */
     public $Entry;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Entry',
-                'required' => false,
-                'type' => 'EmailAddressDictionaryEntryType',
-            ),
-        );
-    }
 }

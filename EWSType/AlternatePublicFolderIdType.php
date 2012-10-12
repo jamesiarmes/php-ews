@@ -17,18 +17,4 @@ class EWSType_AlternatePublicFolderIdType extends EWSType
      * @var string
      */
     public $FolderId;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderId',
-                'required' => false,
-                'type' => 'string',
-            ),
-        );
-    }
 }

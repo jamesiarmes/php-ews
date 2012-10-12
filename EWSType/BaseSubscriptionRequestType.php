@@ -31,28 +31,4 @@ class EWSType_BaseSubscriptionRequestType extends EWSType
      * @var EWSType_WatermarkType
      */
     public $Watermark;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'FolderIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfBaseFolderIdsType',
-            ),
-            array(
-                'name' => 'EventTypes',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfNotificationEventTypesType',
-            ),
-            array(
-                'name' => 'Watermark',
-                'required' => false,
-                'type' => 'WatermarkType',
-            ),
-        );
-    }
 }

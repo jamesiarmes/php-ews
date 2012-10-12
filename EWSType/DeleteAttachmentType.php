@@ -17,18 +17,4 @@ class EWSType_DeleteAttachmentType extends EWSType
      * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'AttachmentIds',
-                'required' => false,
-                'type' => 'NonEmptyArrayOfRequestAttachmentIdsType',
-            ),
-        );
-    }
 }

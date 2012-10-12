@@ -52,43 +52,4 @@ class EWSType_PathToExtendedFieldType extends EWSType
      * @var EWSType_MapiPropertyTypeType
      */
     public $PropertyType;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'DistinguishedPropertySetId',
-                'required' => false,
-                'type' => 'DistinguishedPropertySetType',
-            ),
-            array(
-                'name' => 'PropertySetId',
-                'required' => false,
-                'type' => 'GuidType',
-            ),
-            array(
-                'name' => 'PropertyTag',
-                'required' => false,
-                'type' => 'PropertyTagType',
-            ),
-            array(
-                'name' => 'PropertyName',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'PropertyId',
-                'required' => false,
-                'type' => 'integer',
-            ),
-            array(
-                'name' => 'PropertyType',
-                'required' => false,
-                'type' => 'MapiPropertyTypeType',
-            ),
-        );
-    }
 }

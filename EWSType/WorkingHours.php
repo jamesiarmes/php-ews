@@ -24,23 +24,4 @@ class EWSType_WorkingHours extends EWSType
      * @var EWSType_ArrayOfWorkingPeriod
      */
     public $WorkingPeriodArray;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'TimeZone',
-                'required' => false,
-                'type' => 'SerializableTimeZone',
-            ),
-            array(
-                'name' => 'WorkingPeriodArray',
-                'required' => false,
-                'type' => 'ArrayOfWorkingPeriod',
-            ),
-        );
-    }
 }

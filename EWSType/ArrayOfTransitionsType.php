@@ -48,33 +48,4 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      * @var EWSType_TransitionType
      */
     public $Transition;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Id',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'AbsoluteDateTransition',
-                'required' => false,
-                'type' => 'AbsoluteDateTransitionType',
-            ),
-            array(
-                'name' => 'RecurringDayTransition',
-                'required' => false,
-                'type' => 'RecurringDayTransitionType',
-            ),
-            array(
-                'name' => 'RecurringDateTransition',
-                'required' => false,
-                'type' => 'RecurringDateTransitionType',
-            ),
-        );
-    }
 }

@@ -17,18 +17,4 @@ class EWSType_ExcludesValueType extends EWSType
      * @var EWSType_ExcludesAttributeType
      */
     public $Value;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Value',
-                'required' => false,
-                'type' => 'ExcludesAttributeType',
-            ),
-        );
-    }
 }

@@ -24,23 +24,4 @@ class EWSType_ReplyBody extends EWSType
      * @var EWSType_UNKNOWN
      */
     public $lang;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->schema = array(
-            array(
-                'name' => 'Message',
-                'required' => false,
-                'type' => 'string',
-            ),
-            array(
-                'name' => 'lang',
-                'required' => false,
-                'type' => 'UNKNOWN',
-            ),
-        );
-    }
 }
