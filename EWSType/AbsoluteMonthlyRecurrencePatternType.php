@@ -1,20 +1,32 @@
 <?php
 /**
- * Definition of the AbsoluteMonthlyRecurrencePatternType type
+ * Represents a monthly recurrence pattern.
  *
  * @package php-ews
  * @subpackage Types
  */
 
 /**
- * Definition of the AbsoluteMonthlyRecurrencePatternType type
+ * Definition of the AbsoluteMonthlyRecurrencePatternType type.
  */
 class EWSType_AbsoluteMonthlyRecurrencePatternType extends EWSType
 {
     /**
-     * DayOfMonth property
+     * Describes the day in a month that a recurring item occurs. The range of
+     * values for this property is 1 to 31. If for a particular month this value
+     * is larger than the number of days in the month, the last day of the month
+     * is assumed for this property.
      *
      * @var integer
      */
     public $DayOfMonth;
+
+    /**
+     * Defines the interval between two consecutive recurring items. For
+     * example, if the Interval has a value of 5, the recurring item occurs
+     * every 5 months. The range of valid values is from 1 to 99.
+     *
+     * @var integer
+     */
+    public $Interval;
 }
