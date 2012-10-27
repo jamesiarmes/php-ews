@@ -1,25 +1,47 @@
 <?php
 /**
- * Definition of the FieldOrderType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_FieldOrderType.
  */
 
 /**
- * Definition of the FieldOrderType type
+ * Represents a single field by which to sort results and indicates the
+ * direction for the sort.
+ *
+ * @package php-ews\Types
  */
 class EWSType_FieldOrderType extends EWSType
 {
     /**
-     * Path property
+     * Identifies MAPI properties.
      *
-     * @var EWSType_BasePathToElementType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
      */
-    public $Path;
+    public $ExtendedFieldURI;
 
     /**
-     * Order property
+     * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
+     */
+    public $FieldURI;
+
+    /**
+     * Identifies individual members of a dictionary.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
+     */
+    public $IndexedFieldURI;
+
+    /**
+     * Describes the sort order direction.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SortDirectionType
      */

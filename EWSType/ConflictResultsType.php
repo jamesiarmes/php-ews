@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the ConflictResultsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ConflictResultsType.
  */
 
 /**
- * Definition of the ConflictResultsType type
+ * Indicates the number of conflicts in an UpdateItem Operation response.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ConflictResultsType extends EWSType
 {
     /**
-     * Count property
+     * Contains the number of conflicts in an UpdateItem Operation response.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */

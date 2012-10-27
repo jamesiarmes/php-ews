@@ -1,25 +1,29 @@
 <?php
 /**
- * Definition of the SuggestionsResponseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SuggestionsResponseType.
  */
 
 /**
- * Definition of the SuggestionsResponseType type
+ * Represents response status information and suggestion data for requested
+ * meeting suggestions.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SuggestionsResponseType extends EWSType
 {
     /**
-     * ResponseMessage property
+     * Provides descriptive information about the response status.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
-     * SuggestionDayResultArray property
+     * Contains an array of meeting suggestions organized by date.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfSuggestionDayResult
      */

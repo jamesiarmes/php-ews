@@ -1,41 +1,44 @@
 <?php
 /**
- * Definition of the PostReplyItemBaseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_PostReplyItemBaseType.
  */
 
 /**
- * Definition of the PostReplyItemBaseType type
+ * Base class for posting item replies.
+ *
+ * @package php-ews\Types
  */
-class EWSType_PostReplyItemBaseType extends EWSType
+abstract class EWSType_PostReplyItemBaseType extends EWSType
 {
     /**
-     * Subject property
+     * Represents the subject for Exchange store items and response objects.
+     *
+     * The subject is limited to 255 characters.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $Subject;
 
     /**
-     * Body property
+     * Represents the actual body content of a message.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_BodyType
      */
     public $Body;
 
     /**
-     * ReferenceItemId property
+     * Contains the unique identifier and change key of an item in the Exchange
+     * store.
+     *
+     * This property is read-only.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */
-    public $ReferenceItemId;
-
-    /**
-     * ObjectName property
-     *
-     * @var string
-     */
-    public $ObjectName;
+    public $ItemId;
 }

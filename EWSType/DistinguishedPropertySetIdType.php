@@ -1,18 +1,19 @@
 <?php
 /**
- * Defines the well-known property set IDs for extended MAPI properties.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DistinguishedPropertySetIdType.
  */
 
 /**
- * Definition of the DistinguishedPropertySetIdType type.
+ * Defines the well-known property set IDs for extended MAPI properties.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_DistinguishedPropertySetIdType extends EWSType
 {
     /**
      * Identifies the address property set ID by name.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -21,12 +22,16 @@ class EWSType_DistinguishedPropertySetIdType extends EWSType
     /**
      * Identifies the appointment property set ID by name.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const APPOINTMENT = 'Appointment';
 
     /**
      * Identifies the calendar assistant property set ID by name.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -35,12 +40,16 @@ class EWSType_DistinguishedPropertySetIdType extends EWSType
     /**
      * Identifies the common property set ID by name.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const COMMON = 'Common';
 
     /**
      * Identifies the Internet headers property set ID by name.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -49,6 +58,8 @@ class EWSType_DistinguishedPropertySetIdType extends EWSType
     /**
      * Identifies the meeting property set ID by name.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const MEETING = 'Meeting';
@@ -56,12 +67,16 @@ class EWSType_DistinguishedPropertySetIdType extends EWSType
     /**
      * Identifies the public strings property set ID by name.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const PUBLIC_STRINGS = 'PublicStrings';
 
     /**
      * Identifies the unified messaging property set ID by name.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

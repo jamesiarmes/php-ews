@@ -1,46 +1,59 @@
 <?php
 /**
- * Definition of the GroupByType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GroupByType.
  */
 
 /**
- * Definition of the GroupByType type
+ * Defines an arbitrary grouping for FindItem queries.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseGroupByType.
  */
 class EWSType_GroupByType extends EWSType
 {
     /**
-     * FieldURI property
+     * Represents the field that is used to determine the order of groups in a
+     * response.
      *
-     * @var EWSType_PathToUnindexedFieldType
-     */
-    public $FieldURI;
-
-    /**
-     * IndexedFieldURI property
-     *
-     * @var EWSType_PathToIndexedFieldType
-     */
-    public $IndexedFieldURI;
-
-    /**
-     * ExtendedFieldURI property
-     *
-     * @var EWSType_PathToExtendedFieldType
-     */
-    public $ExtendedFieldURI;
-
-    /**
-     * AggregateOn property
+     * @since Exchange 2007
      *
      * @var EWSType_AggregateOnType
      */
     public $AggregateOn;
 
     /**
-     * Order property
+     * Identifies extended MAPI properties to get, set, or create.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
+     */
+    public $ExtendedFieldURI;
+
+    /**
+     * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
+     */
+    public $FieldURI;
+
+    /**
+     * Identifies individual members of a dictionary.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
+     */
+    public $IndexedFieldURI;
+
+    /**
+     * Determines the order of the groups in the grouped item array that is
+     * returned in the response.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SortDirectionType
      */

@@ -1,90 +1,132 @@
 <?php
 /**
- * Definition of the AppendToItemFieldType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AppendToItemFieldType.
  */
 
 /**
- * Definition of the AppendToItemFieldType type
+ * Identifies data to append to a single property of an item during an
+ * UpdateItem operation.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_ItemChangeDescriptionType.
  */
 class EWSType_AppendToItemFieldType extends EWSType
 {
     /**
-     * Item property
+     * Represents an Exchange calendar item.
      *
-     * @var EWSType_ItemType
-     */
-    public $Item;
-
-    /**
-     * Message property
-     *
-     * @var EWSType_MessageType
-     */
-    public $Message;
-
-    /**
-     * CalendarItem property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarItemType
      */
     public $CalendarItem;
 
     /**
-     * Contact property
+     * Represents an Exchange contact item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
-     * DistributionList property
+     * Represents a distribution list.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistributionListType
      */
     public $DistributionList;
 
     /**
-     * MeetingMessage property
+     * Identifies extended MAPI properties to append.
      *
-     * @var EWSType_MeetingMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
      */
-    public $MeetingMessage;
+    public $ExtendedFieldURI;
 
     /**
-     * MeetingRequest property
+     * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_MeetingRequestMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
      */
-    public $MeetingRequest;
+    public $FieldURI;
 
     /**
-     * MeetingResponse property
+     * Identifies individual members of a dictionary.
      *
-     * @var EWSType_MeetingResponseMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
      */
-    public $MeetingResponse;
+    public $IndexedFieldURI;
 
     /**
-     * MeetingCancellation property
+     * Represents an item in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemType
+     */
+    public $Item;
+
+    /**
+     * Represents a meeting cancellation in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
-     * Task property
+     * Represents a meeting in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingMessageType
+     */
+    public $MeetingMessage;
+
+    /**
+     * Represents a meeting request in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingRequestMessageType
+     */
+    public $MeetingRequest;
+
+    /**
+     * Represents a meeting response in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingResponseMessageType
+     */
+    public $MeetingResponse;
+
+    /**
+     * Represents an Exchange e-mail message.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MessageType
+     */
+    public $Message;
+
+    /**
+     * Represents a task in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TaskType
      */
     public $Task;
-
-    /**
-     * PostItem property
-     *
-     * @var EWSType_PostItemType
-     */
-    public $PostItem;
 }

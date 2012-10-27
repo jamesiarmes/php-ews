@@ -1,34 +1,48 @@
 <?php
 /**
- * Definition of the OccurrenceItemIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_OccurrenceItemIdType.
  */
 
 /**
- * Definition of the OccurrenceItemIdType type
+ * Identifies a single occurrence of a recurring item.
+ *
+ * @package php-ews\Types
  */
 class EWSType_OccurrenceItemIdType extends EWSType
 {
     /**
-     * RecurringMasterId property
+     * Identifies a specific version of the recurring master or an item
+     * occurrence.
      *
-     * @var EWSType_DerivedItemIdType
-     */
-    public $RecurringMasterId;
-
-    /**
-     * ChangeKey property
+     * If either the recurring master or any of its occurrences change, the
+     * changeKey changes. The ChangeKey is the same for the recurring master and
+     * all occurrences.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $ChangeKey;
 
     /**
-     * InstanceIndex property
+     * Identifies the index of the item occurrence.
+     *
+     * This attribute is required.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $InstanceIndex;
+
+    /**
+     * Identifies the recurring master of a recurring item.
+     *
+     * This attribute is required.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $RecurringMasterId;
 }

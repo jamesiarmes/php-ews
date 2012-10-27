@@ -1,41 +1,61 @@
 <?php
 /**
- * Definition of the BaseObjectChangedEventType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BaseObjectChangedEventType.
  */
 
 /**
- * Definition of the BaseObjectChangedEventType type
+ * Represents an event in which an item or folder is created.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseNotificationEventType.
  */
 class EWSType_BaseObjectChangedEventType extends EWSType
 {
     /**
-     * TimeStamp property
+     * Represents the identifier of the folder.
      *
-     * @var EWSType_dateTime
-     */
-    public $TimeStamp;
-
-    /**
-     * FolderId property
+     * @since Exchange 2007
      *
      * @var EWSType_FolderIdType
      */
     public $FolderId;
 
     /**
-     * ItemId property
+     * Represents the identifier of the item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */
     public $ItemId;
 
     /**
-     * ParentFolderId property
+     * Represents the identifier of the folder that contains the copy.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FolderIdType
      */
     public $ParentFolderId;
+
+    /**
+     * Represents the timestamp of a copy item/folder mailbox event.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $TimeStamp;
+
+    /**
+     * Represents an events bookmark in the mailbox events table.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $Watermark;
 }

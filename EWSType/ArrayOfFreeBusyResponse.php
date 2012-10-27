@@ -1,18 +1,21 @@
 <?php
 /**
- * Definition of the ArrayOfFreeBusyResponse type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfFreeBusyResponse.
  */
 
 /**
- * Definition of the ArrayOfFreeBusyResponse type
+ * Represents the requested users' availability information and the response
+ * status.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfFreeBusyResponse extends EWSType
 {
     /**
-     * FreeBusyResponse property
+     * Contains the free/busy information for a single mailbox user and the
+     * response status.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FreeBusyResponseType
      */

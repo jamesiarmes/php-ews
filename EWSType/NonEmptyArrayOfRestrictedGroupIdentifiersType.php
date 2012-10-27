@@ -1,18 +1,20 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfRestrictedGroupIdentifiersType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfRestrictedGroupIdentifiersType type
+ * Represents a collection of restricted groups from a user's token.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType extends EWSType
 {
     /**
-     * RestrictedGroupIdentifier property
+     * Represents the group security identifier (SID) and attributes for a
+     * restricted group.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SidAndAttributesType
      */

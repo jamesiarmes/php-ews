@@ -1,36 +1,38 @@
 <?php
 /**
- * Definition of the DisposalType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DisposalType.
  */
 
 /**
- * Types of deletion for items and folders
+ * Indicates how items are deleted.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_DisposalType extends EWSType
 {
     /**
-     * Deletes the item irrevocably. Does not move the item to the Deleted Items
-     * Folder.
+     * Indicates that items are permanently removed from the database.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
     const HARD_DELETE = 'HardDelete';
 
     /**
-     * Does not actually delete the item, but instead simply moves it to the
-     * Deleted Items folder.
+     * Indicates that items are moved to the Deleted Items folder.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
     const MOVE_TO_DELETED_ITEMS = 'MoveToDeletedItems';
 
     /**
-     * "Deletes" the item so that it is no longer visible in the folder, but
-     * actually still exists there. Avoid using this because there is nothing
-     * that you can do with soft-deleted items from EWS aside from finding them.
+     * Indicates that items are moved to the dumpster if the dumpster is
+     * enabled.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */

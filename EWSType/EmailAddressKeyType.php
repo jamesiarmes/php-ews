@@ -1,47 +1,51 @@
 <?php
 /**
- * Definition of the EmailAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_EmailAddressKeyType.
  */
 
 /**
- * Email address key type
+ * Defines the key for an email address.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_EmailAddressKeyType extends EWSType
 {
     /**
-     * Key for a contacts first email address
+     * Key for a contacts first email address.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const EMAIL_ADDRESS_1 = 'EmailAddress1';
 
     /**
-     * Key for a contacts second email address
+     * Key for a contacts second email address.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const EMAIL_ADDRESS_2 = 'EmailAddress2';
 
     /**
-     * Key for a contacts third email address
+     * Key for a contacts third email address.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const EMAIL_ADDRESS_3 = 'EmailAddress3';
 
     /**
-     * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_EmailAddressKeyType class.
+     * Element value.
      *
      * @var string
      */
     public $_;
 
     /**
-     * Returns the value of this object as a string
+     * Returns the value of this object as a string.
      *
      * @return string
      */

@@ -1,41 +1,69 @@
 <?php
 /**
- * Definition of the ItemResponseShapeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ItemResponseShapeType.
  */
 
 /**
- * Definition of the ItemResponseShapeType type
+ * Represents a set of properties to return in a GetItem operation, FindItem
+ * operation, or SyncFolderItems operation response.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ItemResponseShapeType extends EWSType
 {
     /**
-     * BaseShape property
+     * Identifies additional properties to return in a response.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     */
+    public $AdditionalProperties;
+
+    /**
+     * Identifies the basic configuration of properties to return in an item or
+     * folder response.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DefaultShapeNamesType
      */
     public $BaseShape;
 
     /**
-     * IncludeMimeContent property
+     * Identifies how the body text is formatted in the response.
      *
-     * @var boolean
-     */
-    public $IncludeMimeContent;
-
-    /**
-     * BodyType property
+     * @since Exchange 2007
      *
      * @var EWSType_BodyTypeResponseType
      */
     public $BodyType;
 
     /**
-     * AdditionalProperties property
+     * Indicates whether the item HTML body is converted to UTF8.
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @since Exchange 2010
+     *
+     * @var boolean
      */
-    public $AdditionalProperties;
+    public $ConvertHtmlCodePageToUTF8;
+
+    /**
+     * Specifies whether HTML content filtering is enabled.
+     *
+     * @since Exchange 2010
+     *
+     * @var boolean
+     */
+    public $FilterHtmlContent;
+
+    /**
+     * Specifies whether the Multipurpose Internet Mail Extensions (MIME)
+     * content of an item is returned in the response.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IncludeMimeContent;
 }

@@ -1,46 +1,55 @@
 <?php
 /**
- * Definition of the SyncFolderHierarchyCreateOrUpdateType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SyncFolderHierarchyCreateOrUpdateType.
  */
 
 /**
- * Definition of the SyncFolderHierarchyCreateOrUpdateType type
+ * Identifies a single folder to create in the local client store.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SyncFolderHierarchyCreateOrUpdateType extends EWSType
 {
     /**
-     * Folder property
+     * Represents a folder that primarily contains calendar items.
      *
-     * @var EWSType_FolderType
-     */
-    public $Folder;
-
-    /**
-     * CalendarFolder property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarFolderType
      */
     public $CalendarFolder;
 
     /**
-     * ContactsFolder property
+     * Represents a contact folder in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactsFolderType
      */
     public $ContactsFolder;
 
     /**
-     * SearchFolder property
+     * Defines the folder to create, get, find, synchronize, or update.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderType
+     */
+    public $Folder;
+
+    /**
+     * Represents a search folder contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SearchFolderType
      */
     public $SearchFolder;
 
     /**
-     * TasksFolder property
+     * Represents a task folder contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TasksFolderType
      */

@@ -1,83 +1,97 @@
 <?php
 /**
- * Definition of the SmartResponseBaseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SmartResponseBaseType.
  */
 
 /**
- * Definition of the SmartResponseBaseType type
+ * Base class for smart responses.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SmartResponseBaseType extends EWSType
 {
     /**
-     * Subject property
+     * Represents a collection of recipients to receive a blind carbon copy
+     * (Bcc) of an e-mail.
      *
-     * @var string
-     */
-    public $Subject;
-
-    /**
-     * Body property
-     *
-     * @var EWSType_BodyType
-     */
-    public $Body;
-
-    /**
-     * ToRecipients property
-     *
-     * @var EWSType_ArrayOfRecipientsType
-     */
-    public $ToRecipients;
-
-    /**
-     * CcRecipients property
-     *
-     * @var EWSType_ArrayOfRecipientsType
-     */
-    public $CcRecipients;
-
-    /**
-     * BccRecipients property
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfRecipientsType
      */
     public $BccRecipients;
 
     /**
-     * IsReadReceiptRequested property
+     * Represents the actual body content of a message.
      *
-     * @var boolean
+     * @since Exchange 2007
+     *
+     * @var EWSType_BodyType
      */
-    public $IsReadReceiptRequested;
+    public $Body;
 
     /**
-     * IsDeliveryReceiptRequested property
+     * Represents a collection of recipients that will receive a copy of the
+     * message.
      *
-     * @var boolean
+     * @since Exchange 2007
+     *
+     * @var EWSType_ArrayOfRecipientsType
      */
-    public $IsDeliveryReceiptRequested;
+    public $CcRecipients;
 
     /**
-     * From property
+     * Represents the address from which the message was sent.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SingleRecipientType
      */
     public $From;
 
     /**
-     * ReferenceItemId property
+     * Indicates whether the sender of an item requests a delivery receipt.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsDeliveryReceiptRequested;
+
+    /**
+     * Indicates whether the sender of an item requests a read receipt.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsReadReceiptRequested;
+
+    /**
+     * Identifies the item to which the response object refers.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */
     public $ReferenceItemId;
 
     /**
-     * ObjectName property
+     * Represents the subject property of Exchange store items.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
-    public $ObjectName;
+    public $Subject;
+
+    /**
+     * Contains a set of recipients of an item.
+     *
+     * These are the primary recipients of an item.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ArrayOfRecipientsType
+     */
+    public $ToRecipients;
 }

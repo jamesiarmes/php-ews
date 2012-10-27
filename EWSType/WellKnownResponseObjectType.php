@@ -1,111 +1,126 @@
 <?php
 /**
- * Definition of the WellKnownResponseObjectType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_WellKnownResponseObjectType.
  */
 
 /**
- * Definition of the WellKnownResponseObjectType type
+ * Base class fot meeting request replies.
+ *
+ * @package php-ews\Types
  */
-class EWSType_WellKnownResponseObjectType extends EWSType
+abstract class EWSType_WellKnownResponseObjectType extends EWSType
 {
     /**
-     * ItemClass property
+     * Contains the item or file that is attached to an item in the Exchange
+     * store.
      *
-     * @var EWSType_ItemClassType
-     */
-    public $ItemClass;
-
-    /**
-     * Sensitivity property
+     * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
-     */
-    public $Sensitivity;
-
-    /**
-     * Body property
-     *
-     * @var EWSType_BodyType
-     */
-    public $Body;
-
-    /**
-     * Attachments property
-     *
-     * @var EWSType_NonEmptyArrayOfAttachmentsType
+     * @var EWSType_ArrayOfAttachmentsType
      */
     public $Attachments;
 
     /**
-     * InternetMessageHeaders property
+     * Represents a collection of recipients to receive a blind carbon copy
+     * (Bcc) of an e-mail.
      *
-     * @var EWSType_NonEmptyArrayOfInternetHeadersType
-     */
-    public $InternetMessageHeaders;
-
-    /**
-     * Sender property
-     *
-     * @var EWSType_SingleRecipientType
-     */
-    public $Sender;
-
-    /**
-     * ToRecipients property
-     *
-     * @var EWSType_ArrayOfRecipientsType
-     */
-    public $ToRecipients;
-
-    /**
-     * CcRecipients property
-     *
-     * @var EWSType_ArrayOfRecipientsType
-     */
-    public $CcRecipients;
-
-    /**
-     * BccRecipients property
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfRecipientsType
      */
     public $BccRecipients;
 
     /**
-     * IsReadReceiptRequested property
+     * Represents the actual body content of a message.
      *
-     * @var boolean
+     * @since Exchange 2007
+     *
+     * @var EWSType_BodyType
      */
-    public $IsReadReceiptRequested;
+    public $Body;
 
     /**
-     * IsDeliveryReceiptRequested property
+     * Represents a collection of recipients that will receive a copy of the
+     * message.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ArrayOfRecipientsType
+     */
+    public $CcRecipients;
+
+    /**
+     * Represents the Internet message header name for a given header within the
+     * headers collection.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_NonEmptyArrayOfInternetHeadersType
+     */
+    public $InternetMessageHeaders;
+
+    /**
+     * Indicates whether the sender of an item requests a delivery receipt.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IsDeliveryReceiptRequested;
 
     /**
-     * From property
+     * Indicates whether the sender of an item requests a read receipt.
      *
-     * @var EWSType_SingleRecipientType
+     * @since Exchange 2007
+     *
+     * @var boolean
      */
-    public $From;
+    public $IsReadReceiptRequested;
 
     /**
-     * ReferenceItemId property
+     * Represents the message class of an item.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemClassType
+     */
+    public $ItemClass;
+
+    /**
+     * Identifies the item to which the response object refers.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */
     public $ReferenceItemId;
 
     /**
-     * ObjectName property
+     * Identifies the sender of an item.
      *
-     * @var string
+     * @since Exchange 2007
+     *
+     * @var EWSType_SingleRecipientType
      */
-    public $ObjectName;
+    public $Sender;
+
+    /**
+     * Indicates the sensitivity level of an item.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_SensitivityChoicesType
+     */
+    public $Sensitivity;
+
+    /**
+     * Contains a set of recipients of an item.
+     *
+     * These are the primary recipients of an item.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ArrayOfRecipientsType
+     */
+    public $ToRecipients;
 }

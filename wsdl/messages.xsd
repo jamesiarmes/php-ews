@@ -476,7 +476,7 @@
             <xs:element name="ApplyConversationActionResponseMessage" type="m:ResponseMessageType"/>
             <!-- FindMailboxStatisticsByKeywords response-->
             <xs:element name="FindMailboxStatisticsByKeywordsResponseMessage" type="m:FindMailboxStatisticsByKeywordsResponseMessageType"/>
-            <!-- GetPasswordExpirationDate response -->          
+            <!-- GetPasswordExpirationDate response -->
             <xs:element name="GetPasswordExpirationDateResponse" type="m:GetPasswordExpirationDateResponseMessageType"/>
         </xs:choice>
     </xs:complexType>
@@ -500,8 +500,8 @@
         </xs:complexContent>
     </xs:complexType>
     <xs:element name="GetFolder" type="m:GetFolderType"/>
-    
-    
+
+
     <!-- Upload Items -->
     <!-- request -->
     <xs:complexType name="UploadItemsType">
@@ -556,7 +556,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <!-- ExportItems response type  -->
     <xs:complexType name="ExportItemsResponseType">
         <xs:complexContent>
@@ -948,7 +948,7 @@
     </xs:complexType>
 
   <xs:element name="ApplyConversationAction" type="m:ApplyConversationActionType"/>
-  
+
 
   <!-- ApplyConversationAction response -->
   <xs:complexType name="ApplyConversationActionResponseType">
@@ -1118,11 +1118,11 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:element name="GetPasswordExpirationDate" type="m:GetPasswordExpirationDateType"/>
-  
+
   <!-- GetPasswordExpirationDate response message -->
-  
+
   <xs:complexType name="GetPasswordExpirationDateResponseMessageType">
     <xs:complexContent>
       <xs:extension base="m:ResponseMessageType">
@@ -1134,7 +1134,7 @@
   </xs:complexType>
 
   <xs:element name="GetPasswordExpirationDateResponse" type="m:GetPasswordExpirationDateResponseMessageType"/>
-  
+
   <!-- MailTips -->
 
     <xs:complexType name="GetMailTipsType">
@@ -2176,8 +2176,8 @@
                 <xs:sequence>
                     <xs:element name="MessageTrackingReport" type="t:MessageTrackingReportType" minOccurs="0" />
                     <xs:element name="Diagnostics" type="t:ArrayOfStringsType" minOccurs="0"/>
-                    <xs:element name="Errors" type="t:ArrayOfArraysOfTrackingPropertiesType" minOccurs="0" />                  
-                    <xs:element name="Properties" type="t:ArrayOfTrackingPropertiesType" minOccurs="0" />                  
+                    <xs:element name="Errors" type="t:ArrayOfArraysOfTrackingPropertiesType" minOccurs="0" />
+                    <xs:element name="Properties" type="t:ArrayOfTrackingPropertiesType" minOccurs="0" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -2210,7 +2210,7 @@
     </xs:complexType>
 
     <xs:element name="GetInboxRulesResponse" type="m:GetInboxRulesResponseType" />
-  
+
     <xs:complexType name="UpdateInboxRulesRequestType">
         <xs:complexContent>
             <xs:extension base="m:BaseRequestType">

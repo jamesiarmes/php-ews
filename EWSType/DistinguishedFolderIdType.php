@@ -1,34 +1,47 @@
 <?php
 /**
- * Definition of the DistinguishedFolderIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DistinguishedFolderIdType.
  */
 
 /**
- * Definition of the DistinguishedFolderIdType type
+ * Identifies folders that can be referenced by name.
+ *
+ * @package php-ews\Types
  */
 class EWSType_DistinguishedFolderIdType extends EWSType
 {
     /**
-     * Mailbox property
+     * Contains a string that identifies a version of a folder that is
+     * identified by the Id attribute.
      *
-     * @var EWSType_EmailAddressType
+     * This attribute is optional. Use this attribute to make sure that the
+     * correct version of a folder is used.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $Mailbox;
+    public $ChangeKey;
 
     /**
-     * Id property
+     * Identifies a default folder.
+     *
+     * This attribute is required.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistinguishedFolderIdNameType
      */
     public $Id;
 
     /**
-     * ChangeKey property
+     * Identifies a primary SMTP address.
      *
-     * @var string
+     * Proxy addresses are not allowed.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_EmailAddressType
      */
-    public $ChangeKey;
+    public $Mailbox;
 }

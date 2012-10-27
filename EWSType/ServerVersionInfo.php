@@ -1,46 +1,55 @@
 <?php
 /**
- * Definition of the ServerVersionInfo type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ServerVersionInfo.
  */
 
 /**
- * Definition of the ServerVersionInfo type
+ * Represents the Microsoft Exchange Server version number.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ServerVersionInfo extends EWSType
 {
     /**
-     * MajorVersion property
+     * Describes the major version number.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $MajorVersion;
 
     /**
-     * MinorVersion property
+     * Describes the minor version number.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $MinorVersion;
 
     /**
-     * MajorBuildNumber property
+     * Describes the major build number.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $MajorBuildNumber;
 
     /**
-     * MinorBuildNumber property
+     * Describes the minor build number.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $MinorBuildNumber;
 
     /**
-     * Version property
+     * Describes the Exchange Web Services (EWS) schema version.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

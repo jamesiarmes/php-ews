@@ -1,69 +1,84 @@
 <?php
 /**
- * Definition of the BasePermissionType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BasePermissionType.
  */
 
 /**
- * Definition of the BasePermissionType type
+ * Base class for permission types.
+ *
+ * @package php-ews\Types
  */
-class EWSType_BasePermissionType extends EWSType
+abstract class EWSType_BasePermissionType extends EWSType
 {
     /**
-     * UserId property
+     * Indicates whether a user has permission to create items in a folder.
      *
-     * @var EWSType_UserIdType
-     */
-    public $UserId;
-
-    /**
-     * CanCreateItems property
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $CanCreateItems;
 
     /**
-     * CanCreateSubFolders property
+     * Indicates whether a user has permission to create subfolders in a folder.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $CanCreateSubFolders;
 
     /**
-     * IsFolderOwner property
+     * Indicates whether a user has permission to delete items in a folder.
      *
-     * @var boolean
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_PermissionActionType
      */
-    public $IsFolderOwner;
+    public $DeleteItems;
 
     /**
-     * IsFolderVisible property
+     * Indicates whether a user has permission to edit items in a folder.
      *
-     * @var boolean
-     */
-    public $IsFolderVisible;
-
-    /**
-     * IsFolderContact property
-     *
-     * @var boolean
-     */
-    public $IsFolderContact;
-
-    /**
-     * EditItems property
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_PermissionActionType
      */
     public $EditItems;
 
     /**
-     * DeleteItems property
+     * Indicates whether a user is a contact for a folder.
      *
-     * @var EWSType_PermissionActionType
+     * @since Exchange 2007 SP1
+     *
+     * @var boolean
      */
-    public $DeleteItems;
+    public $IsFolderContact;
+
+    /**
+     * Indicates whether a user is the owner of a folder.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var boolean
+     */
+    public $IsFolderOwner;
+
+    /**
+     * Indicates whether a user can view a folder.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var boolean
+     */
+    public $IsFolderVisible;
+
+    /**
+     * Identifies a delegate user or a user who has folder access permissions.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_UserIdType
+     */
+    public $UserId;
 }

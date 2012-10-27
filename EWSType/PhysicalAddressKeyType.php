@@ -1,47 +1,51 @@
 <?php
 /**
- * Definition of the PhysicalAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_PhysicalAddressKeyType.
  */
 
 /**
- * Physical address key type
+ * Defines the key for a physical address.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_PhysicalAddressKeyType extends EWSType
 {
     /**
-     * Business physical address type
+     * Indicates that the address is a business.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const BUSINESS = 'Business';
 
     /**
-     * Home physical address type
+     * Indicates that the address is a home.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const HOME = 'Home';
 
     /**
-     * Other physical address type
+     * Indicates that the address is another type of location.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const OTHER = 'Other';
 
     /**
-     * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_PhysicalAddressKeyType class.
+     * Element value.
      *
      * @var string
      */
     public $_;
 
     /**
-     * Returns the value of this object as a string
+     * Returns the value of this object as a string.
      *
      * @return string
      */

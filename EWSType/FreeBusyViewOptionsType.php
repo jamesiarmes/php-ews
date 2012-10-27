@@ -1,34 +1,40 @@
 <?php
 /**
- * Definition of the FreeBusyViewOptionsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_FreeBusyViewOptionsType.
  */
 
 /**
- * Definition of the FreeBusyViewOptionsType type
+ * Represents the type of free/busy information returned in a response.
+ *
+ * @package php-ews\Types
  */
 class EWSType_FreeBusyViewOptionsType extends EWSType
 {
     /**
-     * TimeWindow property
+     * Represents the time difference between two successive slots in the
+     * FreeBusyMerged view.
      *
-     * @var EWSType_Duration
-     */
-    public $TimeWindow;
-
-    /**
-     * MergedFreeBusyIntervalInMinutes property
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $MergedFreeBusyIntervalInMinutes;
 
     /**
-     * RequestedView property
+     * Defines the type of calendar information that a client requests.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FreeBusyViewType
      */
     public $RequestedView;
+
+    /**
+     * Identifies the time span queried for the user availability information.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_Duration
+     */
+    public $TimeWindow;
 }

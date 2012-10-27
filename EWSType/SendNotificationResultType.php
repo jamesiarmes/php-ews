@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the SendNotificationResultType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SendNotificationResultType.
  */
 
 /**
- * Definition of the SendNotificationResultType type
+ * Defines the response of a client application to a push notification.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SendNotificationResultType extends EWSType
 {
     /**
-     * SubscriptionStatus property
+     * Describes the status of a push subscription.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SubscriptionStatusType
      */

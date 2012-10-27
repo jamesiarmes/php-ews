@@ -1,32 +1,73 @@
 <?php
 /**
- * Represents a day of the week,
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DayOfWeekType.
  */
 
 /**
- * Definition of the DayOfWeekType type.
+ * Represents a day of the week.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_DayOfWeekType extends EWSType
 {
     /**
-     * Represents Sunday.
+     * Represents a day of the week.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
-    const SUNDAY = 'Sunday';
+    const DAY = 'Day';
+
+    /**
+     * Represents Friday.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const FRIDAY = 'Friday';
 
     /**
      * Represents Monday.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const MONDAY = 'Monday';
 
     /**
+     * Represents Saturday.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const SATURDAY = 'Saturday';
+
+    /**
+     * Represents Sunday.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const SUNDAY = 'Sunday';
+
+    /**
+     * Represents Thursday.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const THURSDAY = 'Thursday';
+
+    /**
      * Represents Tuesday.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -35,40 +76,16 @@ class EWSType_DayOfWeekType extends EWSType
     /**
      * Represents Wednesday.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const WEDNESDAY = 'Wednesday';
 
     /**
-     * Represents Thursday.
-     *
-     * @var string
-     */
-    const THURSDAY = 'Thursday';
-
-    /**
-     * Represents Friday.
-     *
-     * @var string
-     */
-    const FRIDAY = 'Friday';
-
-    /**
-     * Represents Saturday.
-     *
-     * @var string
-     */
-    const SATURDAY = 'Saturday';
-
-    /**
-     * Represents a day of the week.
-     *
-     * @var string
-     */
-    const DAY = 'Day';
-
-    /**
      * Represents a weekday.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -76,6 +93,8 @@ class EWSType_DayOfWeekType extends EWSType
 
     /**
      * Represents a weekend day.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

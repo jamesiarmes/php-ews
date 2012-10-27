@@ -1,90 +1,102 @@
 <?php
 /**
- * Definition of the SyncFolderItemsCreateOrUpdateType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SyncFolderItemsCreateOrUpdateType.
  */
 
 /**
- * Definition of the SyncFolderItemsCreateOrUpdateType type
+ * Identifies a single item to create in the local client store.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SyncFolderItemsCreateOrUpdateType extends EWSType
 {
     /**
-     * Item property
+     * Represents an Exchange calendar item to create.
      *
-     * @var EWSType_ItemType
-     */
-    public $Item;
-
-    /**
-     * Message property
-     *
-     * @var EWSType_MessageType
-     */
-    public $Message;
-
-    /**
-     * CalendarItem property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarItemType
      */
     public $CalendarItem;
 
     /**
-     * Contact property
+     * Represents an Exchange contact item to create.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
-     * DistributionList property
+     * Represents a distribution list to create.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistributionListType
      */
     public $DistributionList;
 
     /**
-     * MeetingMessage property
+     * Represents a generic Exchange item to create.
      *
-     * @var EWSType_MeetingMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemType
      */
-    public $MeetingMessage;
+    public $Item;
 
     /**
-     * MeetingRequest property
+     * Represents a meeting cancellation to create.
      *
-     * @var EWSType_MeetingRequestMessageType
-     */
-    public $MeetingRequest;
-
-    /**
-     * MeetingResponse property
-     *
-     * @var EWSType_MeetingResponseMessageType
-     */
-    public $MeetingResponse;
-
-    /**
-     * MeetingCancellation property
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
-     * Task property
+     * Represents a meeting message to create.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingMessageType
+     */
+    public $MeetingMessage;
+
+    /**
+     * Represents a meeting request to create.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingRequestMessageType
+     */
+    public $MeetingRequest;
+
+    /**
+     * Represents a meeting response to create.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingResponseMessageType
+     */
+    public $MeetingResponse;
+
+    /**
+     * Represents an Exchange e-mail message to create.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MessageType
+     */
+    public $Message;
+
+    /**
+     * Represents a task to create.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TaskType
      */
     public $Task;
-
-    /**
-     * PostItem property
-     *
-     * @var EWSType_PostItemType
-     */
-    public $PostItem;
 }

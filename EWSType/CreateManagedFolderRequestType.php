@@ -1,25 +1,30 @@
 <?php
 /**
- * Definition of the CreateManagedFolderRequestType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CreateManagedFolderRequestType.
  */
 
 /**
- * Definition of the CreateManagedFolderRequestType type
+ * Defines a request to add managed custom folders to a mailbox.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_CreateManagedFolderRequestType extends EWSType
 {
     /**
-     * FolderNames property
+     * Contains an array of named managed folders to add to a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfFolderNamesType
      */
     public $FolderNames;
 
     /**
-     * Mailbox property
+     * Identifies a mail-enabled Active Directory directory service object.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_EmailAddressType
      */

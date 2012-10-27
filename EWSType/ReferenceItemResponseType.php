@@ -1,27 +1,21 @@
 <?php
 /**
- * Definition of the ReferenceItemResponseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ReferenceItemResponseType.
  */
 
 /**
- * Definition of the ReferenceItemResponseType type
+ * Base class for responding to items with a reference.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ReferenceItemResponseType extends EWSType
 {
     /**
-     * ReferenceItemId property
+     * Identifies the item to which the response object refers.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */
     public $ReferenceItemId;
-
-    /**
-     * ObjectName property
-     *
-     * @var string
-     */
-    public $ObjectName;
 }

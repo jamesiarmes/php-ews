@@ -1,18 +1,22 @@
 <?php
 /**
- * Definition of the ArrayOfDelegateUserResponseMessageType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfDelegateUserResponseMessageType.
  */
 
 /**
- * Definition of the ArrayOfDelegateUserResponseMessageType type
+ * Contains the response messages for an Exchange Web Services delegate
+ * management request.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseDelegateResponseMessageType.
  */
 class EWSType_ArrayOfDelegateUserResponseMessageType extends EWSType
 {
     /**
-     * DelegateUserResponseMessageType property
+     * Contains response messages for delegate management operations.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_DelegateUserResponseMessageType
      */

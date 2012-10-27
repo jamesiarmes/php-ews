@@ -1,27 +1,39 @@
 <?php
 /**
- * Definition of the BodyType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BodyType.
  */
 
 /**
- * Definition of the BodyType type
+ * Specifies the body of an item.
+ *
+ * @package php-ews\Types
  */
 class EWSType_BodyType extends EWSType
 {
     /**
-     * _ property
+     * The body of the Exchange Web Services item.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $_;
 
     /**
-     * BodyType property
+     * Specifies the type of the body.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_BodyTypeType
      */
     public $BodyType;
+
+    /**
+     * Boolean value that indicates whether the body is truncated.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsTruncated;
 }

@@ -1,20 +1,24 @@
 <?php
 /**
- * Definition of the GetUserOofSettingsRequest type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetUserOofSettingsRequest.
  */
 
 /**
- * Definition of the GetUserOofSettingsRequest type
+ * Defines the arguments used to get a mailbox user's Out of Office (OOF)
+ * settings.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_GetUserOofSettingsRequest extends EWSType
 {
     /**
-     * Mailbox property
+     * Identifies the mailbox user for the request.
      *
-     * @var EWSType_EmailAddress
+     * @since Exchange 2007
+     *
+     * @var EWSType_EmailAddressType
      */
     public $Mailbox;
 }
