@@ -1,18 +1,20 @@
 <?php
 /**
- * Definition of the ExchangeImpersonationType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ExchangeImpersonationType.
  */
 
 /**
- * Definition of the ExchangeImpersonationType type
+ * Represents the account to impersonate within a request.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ExchangeImpersonationType extends EWSType
 {
     /**
-     * ConnectingSID property
+     * Represents an account to impersonate when you are using the
+     * ExchangeImpersonation SOAP header.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ConnectingSIDType
      */

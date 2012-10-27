@@ -1,20 +1,30 @@
 <?php
 /**
- * The SearchExpression element is an abstract element that represents the
- * substituted element within a restriction. All search expressions derive from
- * this base type. This element is not used in an XML instance document.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SearchExpressionType.
  */
 
 /**
- * Definition of the SearchExpressionType type.
+ * Represents the substituted element within a restriction.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Determine which classes need to extend this.
  */
 abstract class EWSType_SearchExpressionType extends EWSType
 {
     /**
+     * Identifies MAPI properties.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
+     */
+    public $ExtendedFieldURI;
+
+    /**
      * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_PathToUnindexedFieldType
      */
@@ -23,14 +33,9 @@ abstract class EWSType_SearchExpressionType extends EWSType
     /**
      * Identifies individual members of a dictionary.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_PathToIndexedFieldType
      */
     public $IndexedFieldURI;
-
-    /**
-     * Identifies MAPI properties.
-     *
-     * @var EWSType_PathToExtendedFieldType
-     */
-    public $ExtendedFieldURI;
 }

@@ -1,27 +1,30 @@
 <?php
 /**
- * Definition of the RootItemIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_RootItemIdType.
  */
 
 /**
- * Definition of the RootItemIdType type
+ * Identifies the root item of a deleted item.
+ *
+ * @package php-ews\Types
  */
 class EWSType_RootItemIdType extends EWSType
 {
     /**
-     * RootItemId property
+     * Identifies the new change key of the root item of a deleted item.
      *
-     * @var string
-     */
-    public $RootItemId;
-
-    /**
-     * RootItemChangeKey property
+     * @since Exchange 2007
      *
      * @var string
      */
     public $RootItemChangeKey;
+
+    /**
+     * Identifies the root item of a deleted item.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $RootItemId;
 }

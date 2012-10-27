@@ -1,32 +1,42 @@
 <?php
 /**
- * Definition of the MailboxData type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_MailboxData.
  */
 
 /**
- * Definition of the MailboxData type
+ * Represents an individual mailbox user and options for the type of data to be
+ * returned about the mailbox user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_MailboxData extends EWSType
 {
     /**
-     * Email property
+     * Represents the type of attendee identified in the Email
+     * (EmailAddressType) element.
      *
-     * @var EWSType_EmailAddress
-     */
-    public $Email;
-
-    /**
-     * AttendeeType property
+     * This is used in requests for meeting suggestions.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingAttendeeType
      */
     public $AttendeeType;
 
     /**
-     * ExcludeConflicts property
+     * Represents the mailbox user for a GetUserAvailability query.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_EmailAddressType
+     */
+    public $Email;
+
+    /**
+     * Specifies whether to return suggested times for calendar times that
+     * conflict among the attendees.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */

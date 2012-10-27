@@ -1,18 +1,24 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfFieldOrdersType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfFieldOrdersType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfFieldOrdersType type
+ * Defines how items are sorted in a FindItem or FindConversation request.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
 {
     /**
-     * FieldOrder property
+     * Represents a single field by which to sort results and indicates the
+     * direction for the sort.
+     *
+     * One or more of these elements may be included.
+     *
+     * FieldOrder elements are applied in the order specified for sorting.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FieldOrderType
      */

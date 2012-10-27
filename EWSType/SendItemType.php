@@ -1,34 +1,49 @@
 <?php
 /**
- * Definition of the SendItemType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SendItemType.
  */
 
 /**
- * Definition of the SendItemType type
+ * Defines a request to send an item in the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_SendItemType extends EWSType
 {
     /**
-     * ItemIds property
+     * Contains the unique identities of items, occurrence items, and recurring
+     * master items that are used to delete, send, get, move, or copy items in
+     * the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 
     /**
-     * SavedItemFolderId property
+     * Identifies whether a copy of the sent item is saved.
      *
-     * @var EWSType_TargetFolderIdType
-     */
-    public $SavedItemFolderId;
-
-    /**
-     * SaveItemToFolder property
+     * The save action depends on the value of SaveItemToFolder and whether a
+     * SavedItemFolderId element is present in the request.
+     *
+     * This element is required.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $SaveItemToFolder;
+
+    /**
+     * Identifies the target folder for operations that update, send, and create
+     * items in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_TargetFolderIdType
+     */
+    public $SavedItemFolderId;
 }

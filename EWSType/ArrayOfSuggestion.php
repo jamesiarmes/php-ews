@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the ArrayOfSuggestion type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfSuggestion.
  */
 
 /**
- * Definition of the ArrayOfSuggestion type
+ * Represents an array of meeting suggestions.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfSuggestion extends EWSType
 {
     /**
-     * Suggestion property
+     * Represents a single meeting suggestion.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_Suggestion
      */

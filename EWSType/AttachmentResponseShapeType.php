@@ -1,34 +1,59 @@
 <?php
 /**
- * Definition of the AttachmentResponseShapeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AttachmentResponseShapeType.
  */
 
 /**
- * Definition of the AttachmentResponseShapeType type
+ * Represents additional properties to return in a response to a GetAttachment
+ * request.
+ *
+ * @package php-ews\Types
  */
 class EWSType_AttachmentResponseShapeType extends EWSType
 {
     /**
-     * IncludeMimeContent property
+     * Identifies additional properties to return in a response.
      *
-     * @var boolean
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_NonEmptyArrayOfPathsToElementType
      */
-    public $IncludeMimeContent;
+    public $AdditionalProperties;
 
     /**
-     * BodyType property
+     * Identifies how the body text is formatted in the response.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_BodyTypeResponseType
      */
     public $BodyType;
 
     /**
-     * AdditionalProperties property
+     * Specifies whether potentially unsafe HTML content is filtered from an
+     * attachment.
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * This element is optional.
+     *
+     * @since Exchange 2010
+     *
+     * @var boolean
      */
-    public $AdditionalProperties;
+    public $FilterHtmlContent;
+
+    /**
+     * Specifies whether the Multipurpose Internet Mail Extensions (MIME)
+     * content of an item or attachment is returned in the response.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IncludeMimeContent;
 }

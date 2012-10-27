@@ -1,55 +1,82 @@
 <?php
 /**
- * Definition of the EffectiveRightsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_EffectiveRightsType.
  */
 
 /**
- * Definition of the EffectiveRightsType type
+ * Represents the client's rights based on the permission settings for an item
+ * or folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_EffectiveRightsType extends EWSType
 {
     /**
-     * CreateAssociated property
+     * Indicates whether a client can create an associated contents table.
+     *
+     * This property is only used on folder objects.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $CreateAssociated;
 
     /**
-     * CreateContents property
+     * Indicates whether a client can create a contents table.
+     *
+     * This property is only used on folder objects.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $CreateContents;
 
     /**
-     * CreateHierarchy property
+     * Indicates whether a client can create a hierarchy table.
+     *
+     * This property is only used on folder objects.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $CreateHierarchy;
 
     /**
-     * Delete property
+     * Indicates whether a client can delete a folder or item.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $Delete;
 
     /**
-     * Modify property
+     * Indicates whether a client can modify a folder or item.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $Modify;
 
     /**
-     * Read property
+     * Indicates whether a client can read a folder or item.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var boolean
      */
     public $Read;
+
+    /**
+     * Indicates whether a private item can be viewed.
+     *
+     * @since Exchange 2010
+     *
+     * @var boolean
+     */
+    public $ViewPrivateItems;
 }

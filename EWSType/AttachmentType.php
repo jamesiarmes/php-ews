@@ -1,48 +1,52 @@
 <?php
 /**
- * Definition of the AttachmentType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AttachmentType.
  */
 
 /**
- * Definition of the AttachmentType type
+ * Represents an Exchange attachment.
+ *
+ * @package php-ews\Types
  */
-class EWSType_AttachmentType extends EWSType
+abstract class EWSType_AttachmentType extends EWSType
 {
     /**
-     * AttachmentId property
+     * Identifies the attachment.
      *
      * @var EWSType_AttachmentIdType
      */
     public $AttachmentId;
 
     /**
-     * Name property
+     * Represents an identifier to the contents of the attachment.
      *
-     * @var string
-     */
-    public $Name;
-
-    /**
-     * ContentType property
-     *
-     * @var string
-     */
-    public $ContentType;
-
-    /**
-     * ContentId property
+     * ContentId can be set to any string value. Applications can use ContentId
+     * to implement their own identification mechanisms.
      *
      * @var string
      */
     public $ContentId;
 
     /**
-     * ContentLocation property
+     * Contains the Uniform Resource Identifier (URI) that corresponds to the
+     * location of the content of the attachment.
      *
      * @var string
      */
     public $ContentLocation;
+
+    /**
+     * Describes the Multipurpose Internet Mail Extensions (MIME) type of the
+     * attachment content.
+     *
+     * @var string
+     */
+    public $ContentType;
+
+    /**
+     * Represents the name of the attachment.
+     *
+     * @var string
+     */
+    public $Name;
 }

@@ -1,43 +1,50 @@
 <?php
 /**
- * Represents a time zone transition that occurs on a specific date each year.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_RecurringDateTransitionType.
  */
 
 /**
- * Definition of the RecurringDateTransitionType type.
+ * Represents a time zone transition that occurs on a specific date each year.
+ *
+ * @package php-ews\Types
  */
 class EWSType_RecurringDateTransitionType extends EWSType
 {
     /**
-     * Specifies the Period or TransitionsGroup that is the target of the time
-     * zone transition.
+     * The day of the month on which the time zone transition occurs.
      *
-     * @var EWSType_TransitionTargetType
-     */
-    public $To;
-
-    /**
-     * The duration offset from Coordinated Universal Time (UTC) for the time
-     * zone transition.
+     * @since Exchange 2010
      *
-     * @var string
+     * @var integer
      */
-    public $TimeOffset;
+    public $Day;
 
     /**
      * The month in which the time zone transition occurs.
+     *
+     * @since Exchange 2010
      *
      * @var integer
      */
     public $Month;
 
     /**
-     * The day of the month on which the time zone transition occurs.
+     * The duration offset from Coordinated Universal Time (UTC) for the time
+     * zone transition.
      *
-     * @var integer
+     * @since Exchange 2010
+     *
+     * @var string
      */
-    public $Day;
+    public $TimeOffset;
+
+    /**
+     * Specifies the Period or TransitionsGroup that is the target of the time
+     * zone transition.
+     *
+     * @since Exchange 2010
+     *
+     * @var EWSType_TransitionTargetType
+     */
+    public $To;
 }

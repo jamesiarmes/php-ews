@@ -1,18 +1,20 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfItemChangesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfItemChangesType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfItemChangesType type
+ * Represents an array of ItemChange elements that identify items and the
+ * updates to apply to the items.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfItemChangesType extends EWSType
 {
     /**
-     * ItemChange property
+     * Contains an item identifier and the updates to apply to the item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemChangeType
      */

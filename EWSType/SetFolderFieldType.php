@@ -1,46 +1,85 @@
 <?php
 /**
- * Definition of the SetFolderFieldType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SetFolderFieldType.
  */
 
 /**
- * Definition of the SetFolderFieldType type
+ * Represents an update that sets the value for a single property on a folder in
+ * an UpdateFolder operation.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_FolderChangeDescriptionType.
  */
 class EWSType_SetFolderFieldType extends EWSType
 {
     /**
-     * Folder property
+     * Represents a folder that primarily contains calendar items.
      *
-     * @var EWSType_FolderType
-     */
-    public $Folder;
-
-    /**
-     * CalendarFolder property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarFolderType
      */
     public $CalendarFolder;
 
     /**
-     * ContactsFolder property
+     * Represents a Contacts folder in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactsFolderType
      */
     public $ContactsFolder;
 
     /**
-     * SearchFolder property
+     * Identifies extended MAPI properties.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
+     */
+    public $ExtendedFieldURI;
+
+    /**
+     * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
+     */
+    public $FieldURI;
+
+    /**
+     * Identifies a folder to update.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderType
+     */
+    public $Folder;
+
+    /**
+     * Identifies individual members of a dictionary.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
+     */
+    public $IndexedFieldURI;
+
+    /**
+     * Represents a search folder that is contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SearchFolderType
      */
     public $SearchFolder;
 
     /**
-     * TasksFolder property
+     * Represents a Tasks folder that is contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TasksFolderType
      */

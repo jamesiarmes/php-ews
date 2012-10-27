@@ -1,36 +1,44 @@
 <?php
 /**
- * Definition of the CalendarItemCreateOrDeleteOperationType type.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CalendarItemCreateOrDeleteOperationType.
  */
 
 /**
- * Definition of the CalendarItemCreateOrDeleteOperationType type.
+ * Describes how meeting requests are handled after they are created.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_CalendarItemCreateOrDeleteOperationType extends EWSType
 {
     /**
-     * Send to no recipients.
+     * The meeting request is sent to all attendees but is not saved in the Sent
+     * Items folder.
      *
-     * @var string
-     */
-    const SEND_TO_NONE = 'SendToNone';
-
-    /**
-     * Send to all recipients but do not save a copy.
+     * @since Exchange 2007
      *
      * @var string
      */
     const SEND_ONLY_TO_ALL = 'SendOnlyToAll';
 
     /**
-     * Send to all recipients and save a copy.
+     * The meeting request is sent to all attendees and a copy is saved in the
+     * folder that is identified by the SavedItemFolderId element.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const SEND_TO_ALL_AND_SAVE_COPY = 'SendToAllAndSaveCopy';
+
+    /**
+     * If the item is a meeting request, it is saved as a calendar item but not
+     * sent.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const SEND_TO_NONE = 'SendToNone';
 
     /**
      * Element value.

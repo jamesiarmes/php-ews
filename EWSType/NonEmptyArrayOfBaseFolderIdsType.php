@@ -1,27 +1,32 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfBaseFolderIdsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfBaseFolderIdsType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfBaseFolderIdsType type
+ * Represents the collection of folders that will be mined to determine the
+ * contents of a search folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
 {
     /**
-     * FolderId property
+     * Identifies MicrosoftExchange Server 2007 folders that can be referenced
+     * by name.
      *
-     * @var EWSType_FolderIdType
-     */
-    public $FolderId;
-
-    /**
-     * DistinguishedFolderId property
+     * @since Exchange 2007
      *
      * @var EWSType_DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
+
+    /**
+     * Contains the identifier and change key of a folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderIdType
+     */
+    public $FolderId;
 }

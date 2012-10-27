@@ -1,47 +1,51 @@
 <?php
 /**
- * Definition of the ImAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ImAddressKeyType.
  */
 
 /**
- * Instant messenger address key type
+ * Represents the key for an instant messenger address.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_ImAddressKeyType extends EWSType
 {
     /**
-     * Instant messenger ket for instant messenger address one.
+     * Instant messenger key for instant messenger address one.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const IM_ADDRESS_1 = 'ImAddress1';
 
     /**
-     * Instant messenger ket for instant messenger address two.
+     * Instant messenger key for instant messenger address two.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const IM_ADDRESS_2 = 'ImAddress2';
 
     /**
-     * Instant messenger ket for instant messenger address three.
+     * Instant messenger key for instant messenger address three.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const IM_ADDRESS_3 = 'ImAddress3';
 
     /**
-     * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_ImAddressKeyType class.
+     * Element value.
      *
      * @var string
      */
     public $_;
 
     /**
-     * Returns the value of this object as a string
+     * Returns the value of this object as a string.
      *
      * @return string
      */

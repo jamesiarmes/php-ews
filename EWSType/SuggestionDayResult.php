@@ -1,32 +1,40 @@
 <?php
 /**
- * Definition of the SuggestionDayResult type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SuggestionDayResult.
  */
 
 /**
- * Definition of the SuggestionDayResult type
+ * Represents a single day that contains suggested meeting times.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SuggestionDayResult extends EWSType
 {
     /**
-     * Date property
+     * Represents the date that contains the suggested meeting times.
      *
-     * @var EWSType_dateTime
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
      */
     public $Date;
 
     /**
-     * DayQuality property
+     * Represents the quality of the day for containing quality suggested
+     * meeting times.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SuggestionQuality
      */
     public $DayQuality;
 
     /**
-     * SuggestionArray property
+     * Contains an array of meeting suggestions.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfSuggestion
      */

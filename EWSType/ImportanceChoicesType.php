@@ -1,25 +1,20 @@
 <?php
 /**
- * Definition of the ImportanceChoicesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ImportanceChoicesType.
  */
 
 /**
- * Definition of the ImportanceChoicesType type
+ * Describes the importance of an item or the aggregated importance of all items
+ * in a conversation in the current folder.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_ImportanceChoicesType extends EWSType
 {
     /**
-     * Importance level of the item.
-     *
-     * @var string
-     */
-    public $_;
-
-    /**
      * High importance level.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -28,6 +23,8 @@ class EWSType_ImportanceChoicesType extends EWSType
     /**
      * Low importance level.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const LOW = 'Low';
@@ -35,14 +32,25 @@ class EWSType_ImportanceChoicesType extends EWSType
     /**
      * Normal importance level.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const NORMAL = 'Normal';
 
     /**
-     * Converts the object to a string.
+     * Element value.
      *
-     * @return string The string representation of the current object.
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $_;
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
      */
     public function __toString()
     {

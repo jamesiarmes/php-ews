@@ -1,27 +1,36 @@
 <?php
 /**
- * Definition of the ConvertIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ConvertIdType.
  */
 
 /**
- * Definition of the ConvertIdType type
+ * Defines a request to convert item and folder identifiers between supported
+ * Exchange formats.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_ConvertIdType extends EWSType
 {
     /**
-     * SourceIds property
+     * Describes the identifier format that will be returned for all the
+     * converted identifiers.
      *
-     * @var EWSType_NonEmptyArrayOfAlternateIdsType
-     */
-    public $SourceIds;
-
-    /**
-     * DestinationFormat property
+     * The DestinationFormat is described by the IdFormatType.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_IdFormatType
      */
     public $DestinationFormat;
+
+    /**
+     * Contains the source identifiers to convert.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_NonEmptyArrayOfAlternateIdsType
+     */
+    public $SourceIds;
 }

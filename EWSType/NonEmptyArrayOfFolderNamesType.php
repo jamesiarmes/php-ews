@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfFolderNamesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfFolderNamesType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfFolderNamesType type
+ * Represents an array of named managed folders to add to a mailbox.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfFolderNamesType extends EWSType
 {
     /**
-     * FolderName property
+     * Identifies a single managed folder to add to mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

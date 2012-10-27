@@ -1,27 +1,32 @@
 <?php
 /**
- * Definition of the CreateFolderType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CreateFolderType.
  */
 
 /**
- * Definition of the CreateFolderType type
+ * Defines a request to create a folder in the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_CreateFolderType extends EWSType
 {
     /**
-     * ParentFolderId property
+     * The element that contains all the folders to create.
      *
-     * @var EWSType_TargetFolderIdType
-     */
-    public $ParentFolderId;
-
-    /**
-     * Folders property
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfFoldersType
      */
     public $Folders;
+
+    /**
+     * The element that identifies the location where the new folder is created.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_TargetFolderIdType
+     */
+    public $ParentFolderId;
 }

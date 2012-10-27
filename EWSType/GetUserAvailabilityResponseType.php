@@ -1,25 +1,31 @@
 <?php
 /**
- * Definition of the GetUserAvailabilityResponseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetUserAvailabilityResponseType.
  */
 
 /**
- * Definition of the GetUserAvailabilityResponseType type
+ * Defines the properties that define user availability information or suggested
+ * meeting time information.
+ *
+ * @package php-ews\Types
  */
 class EWSType_GetUserAvailabilityResponseType extends EWSType
 {
     /**
-     * FreeBusyResponseArray property
+     * FContains the requested users' availability information and the response
+     * status.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfFreeBusyResponse
      */
     public $FreeBusyResponseArray;
 
     /**
-     * SuggestionsResponse property
+     * Contains response status information and suggestion data for requested
+     * meeting suggestions.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SuggestionsResponseType
      */

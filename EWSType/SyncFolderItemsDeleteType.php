@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the SyncFolderItemsDeleteType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SyncFolderItemsDeleteType.
  */
 
 /**
- * Definition of the SyncFolderItemsDeleteType type
+ * Identifies a single item to delete in the local client store.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SyncFolderItemsDeleteType extends EWSType
 {
     /**
-     * ItemId property
+     * Contains the unique identifier and change key of an item in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemIdType
      */

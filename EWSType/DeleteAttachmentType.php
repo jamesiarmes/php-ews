@@ -1,18 +1,22 @@
 <?php
 /**
- * Definition of the DeleteAttachmentType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DeleteAttachmentType.
  */
 
 /**
- * Definition of the DeleteAttachmentType type
+ * Represents a request to delete an attachment from the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_DeleteAttachmentType extends EWSType
 {
     /**
-     * AttachmentIds property
+     * Contains an array of attachment identifiers that are used to delete the
+     * attachments.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
      */

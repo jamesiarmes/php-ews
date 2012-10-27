@@ -1,20 +1,23 @@
 <?php
 /**
- * Definition of the UnsubscribeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_UnsubscribeType.
  */
 
 /**
- * Definition of the UnsubscribeType type
+ * Defines the properties used to unsubscribe from a subscription.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_UnsubscribeType extends EWSType
 {
     /**
-     * SubscriptionId property
+     * Represents the identifier for a subscription.
      *
-     * @var EWSType_SubscriptionIdType
+     * @since Exchange 2007
+     *
+     * @var string
      */
     public $SubscriptionId;
 }

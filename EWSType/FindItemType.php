@@ -1,88 +1,145 @@
 <?php
 /**
- * Definition of the FindItemType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_FindItemType.
  */
 
 /**
- * Definition of the FindItemType type
+ * Defines a request to find items in a mailbox.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_FindItemType extends EWSType
 {
     /**
-     * ItemShape property
+     * Provides time span limits to define a search for calendar items.
      *
-     * @var EWSType_ItemResponseShapeType
-     */
-    public $ItemShape;
-
-    /**
-     * IndexedPageItemView property
+     * This element is optional.
      *
-     * @var EWSType_IndexedPageViewType
-     */
-    public $IndexedPageItemView;
-
-    /**
-     * FractionalPageItemView property
-     *
-     * @var EWSType_FractionalPageViewType
-     */
-    public $FractionalPageItemView;
-
-    /**
-     * CalendarView property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarViewType
      */
     public $CalendarView;
 
     /**
-     * ContactsView property
+     * Defines a search for contact items based on alphabetical display names.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactsViewType
      */
     public $ContactsView;
 
     /**
-     * GroupBy property
+     * Provides standard groupings for FindItem queries.
      *
-     * @var EWSType_GroupByType
-     */
-    public $GroupBy;
-
-    /**
-     * DistinguishedGroupBy property
+     * This element is optional.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistinguishedGroupByType
      */
     public $DistinguishedGroupBy;
 
     /**
-     * Restriction property
+     * Describes where the paged view starts and the maximum number of items
+     * returned in a FindItem request.
      *
-     * @var EWSType_RestrictionType
+     * The paged view offset from the beginning of the set of found items is
+     * described by a fraction.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FractionalPageViewType
      */
-    public $Restriction;
+    public $FractionalPageItemView;
 
     /**
-     * SortOrder property
+     * Specifies arbitrary groupings for FindItem queries.
      *
-     * @var EWSType_NonEmptyArrayOfFieldOrdersType
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_GroupByType
      */
-    public $SortOrder;
+    public $GroupBy;
 
     /**
-     * ParentFolderIds property
+     * Describes how paged item information is returned for a FindItem request.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_IndexedPageViewType
+     */
+    public $IndexedPageItemView;
+
+    /**
+     * Identifies the item properties and content to include in a FindItem
+     * operation response.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemResponseShapeType
+     */
+    public $ItemShape;
+
+    /**
+     * Identifies folders to search for the FindItem and FindFolder operations.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
      */
     public $ParentFolderIds;
 
     /**
-     * Traversal property
+     * Contains a mailbox query string based on Advanced Query Syntax (AQS).
+     *
+     * @since Exchange 2010
+     *
+     * @var EWSType_QueryStringType
+     */
+    public $QueryString;
+
+    /**
+     * Defines the restriction or query that is used to filter items or folders
+     * in FindItem/FindFolder and search folder operations.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_RestrictionType
+     */
+    public $Restriction;
+
+    /**
+     * Defines how items are sorted in a FindItem request.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_NonEmptyArrayOfFieldOrdersType
+     */
+    public $SortOrder;
+
+    /**
+     * Defines whether the search finds items in folders or the folders'
+     * dumpsters.
+     *
+     * This attribute is required.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemQueryTraversalType
      */

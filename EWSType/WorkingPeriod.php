@@ -1,34 +1,39 @@
 <?php
 /**
- * Definition of the WorkingPeriod type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_WorkingPeriod.
  */
 
 /**
- * Definition of the WorkingPeriod type
+ * Represents the work week days and hours of the mailbox user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_WorkingPeriod extends EWSType
 {
     /**
-     * DayOfWeek property
+     * Contains the list of working days scheduled for the mailbox user.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DaysOfWeekType
      */
     public $DayOfWeek;
 
     /**
-     * StartTimeInMinutes property
+     * Represents the end of the working day for a mailbox user.
      *
-     * @var integer
-     */
-    public $StartTimeInMinutes;
-
-    /**
-     * EndTimeInMinutes property
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $EndTimeInMinutes;
+
+    /**
+     * Represents the start of the working day for a mailbox user.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $StartTimeInMinutes;
 }

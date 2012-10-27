@@ -1,46 +1,65 @@
 <?php
 /**
- * Definition of the TimeChangeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_TimeChangeType.
  */
 
 /**
- * Definition of the TimeChangeType type
+ * Represents the date and time when a time change occurs.
+ *
+ * @package php-ews\Types
  */
 class EWSType_TimeChangeType extends EWSType
 {
     /**
-     * Offset property
+     * Represents the date when the time changes from standard time or daylight
+     * saving time.
      *
-     * @var EWSType_duration
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a Date object that extends DateTime.
+     */
+    public $AbsoluteDate;
+
+    /**
+     * Describes the offset from the BaseOffset.
+     *
+     * Together with the BaseOffset element, the Offset element identifies
+     * whether the time is standard time or daylight saving time.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
      */
     public $Offset;
 
     /**
-     * RelativeYearlyRecurrence property
+     * Describes a relative yearly recurrence pattern for a time zone transition
+     * date.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_RelativeYearlyRecurrencePatternType
      */
     public $RelativeYearlyRecurrence;
 
     /**
-     * AbsoluteDate property
+     * Describes the time when the time changes between standard time and
+     * daylight saving time.
      *
-     * @var EWSType_date
-     */
-    public $AbsoluteDate;
-
-    /**
-     * Time property
+     * @since Exchange 2007
      *
-     * @var EWSType_time
+     * @var string
+     *
+     * @todo Make a Time object that extends DateTime.
      */
     public $Time;
 
     /**
-     * TimeZoneName property
+     * Name of the time zone.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

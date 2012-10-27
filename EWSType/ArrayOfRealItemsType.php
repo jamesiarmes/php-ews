@@ -1,90 +1,111 @@
 <?php
 /**
- * Definition of the ArrayOfRealItemsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfRealItemsType.
  */
 
 /**
- * Definition of the ArrayOfRealItemsType type
+ * Represents an array of items.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfRealItemsType extends EWSType
 {
     /**
-     * Item property
+     * Represents an Exchange calendar item.
      *
-     * @var EWSType_ItemType
-     */
-    public $Item;
-
-    /**
-     * Message property
-     *
-     * @var EWSType_MessageType
-     */
-    public $Message;
-
-    /**
-     * CalendarItem property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarItemType
      */
     public $CalendarItem;
 
     /**
-     * Contact property
+     * Represents an Exchange contact item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
-     * DistributionList property
+     * Represents a distribution list.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistributionListType
      */
     public $DistributionList;
 
     /**
-     * MeetingMessage property
+     * Represents an item in the Exchange store.
      *
-     * @var EWSType_MeetingMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemType
      */
-    public $MeetingMessage;
+    public $Item;
 
     /**
-     * MeetingRequest property
+     * Represents a meeting cancellation in the Exchange store.
      *
-     * @var EWSType_MeetingRequestMessageType
-     */
-    public $MeetingRequest;
-
-    /**
-     * MeetingResponse property
-     *
-     * @var EWSType_MeetingResponseMessageType
-     */
-    public $MeetingResponse;
-
-    /**
-     * MeetingCancellation property
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
-     * Task property
+     * Represents a meeting message in the Exchange store.
      *
-     * @var EWSType_TaskType
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingMessageType
      */
-    public $Task;
+    public $MeetingMessage;
 
     /**
-     * PostItem property
+     * Represents a meeting request in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingRequestMessageType
+     */
+    public $MeetingRequest;
+
+    /**
+     * Represents a meeting response in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingResponseMessageType
+     */
+    public $MeetingResponse;
+
+    /**
+     * Represents an Exchange e-mail message.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MessageType
+     */
+    public $Message;
+
+    /**
+     * Represents a post item in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_PostItemType
      */
     public $PostItem;
+
+    /**
+     * Represents a task in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_TaskType
+     */
+    public $Task;
 }

@@ -1,41 +1,52 @@
 <?php
 /**
- * Definition of the Suggestion type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_Suggestion.
  */
 
 /**
- * Definition of the Suggestion type
+ * Represents a single meeting suggestion.
+ *
+ * @package php-ews\Types
  */
 class EWSType_Suggestion extends EWSType
 {
     /**
-     * MeetingTime property
+     * Contains an array of information that describes conflicts between users
+     * and resources and the suggested meeting time.
      *
-     * @var EWSType_dateTime
+     * @since Exchange 2007
+     *
+     * @var EWSType_ArrayOfAttendeeConflictData
      */
-    public $MeetingTime;
+    public $AttendeeConflictDataArray;
 
     /**
-     * IsWorkTime property
+     * Represents whether the suggested meeting time occurs during scheduled
+     * work hours.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IsWorkTime;
 
     /**
-     * SuggestionQuality property
+     * Represents a suggested meeting time.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $MeetingTime;
+
+    /**
+     * Represents the quality of the suggested meeting time.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SuggestionQuality
      */
     public $SuggestionQuality;
-
-    /**
-     * AttendeeConflictDataArray property
-     *
-     * @var EWSType_ArrayOfAttendeeConflictData
-     */
-    public $AttendeeConflictDataArray;
 }
