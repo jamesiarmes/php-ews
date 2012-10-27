@@ -466,10 +466,10 @@ class ExchangeWebServices
     /**
      * Retrieve the timezones supported by the server.
      *
+     * @since Exchange 2010
+     *
      * @param GetServerTimeZonesType $request
      * @return GetServerTimeZonesResponseType
-     *
-     * @since Exchange2010
      */
     public function GetServerTimeZones($request)
     {
