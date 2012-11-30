@@ -6,12 +6,13 @@
     "homepage": "https://github.com/jamesiarmes/php-ews/wiki",
     "license": "n.a.",
     "authors": [
-        {"name": "Jame Iarmes", "email": ""}
+        {"name": "Jame Iarmes", "email": ""},
+        {"name": "GitHub Contributors", "homepage": "https://github.com/jamesiarmes/php-ews/graphs/contributors"}
     ],
     "require": {
         "php": ">=5.2.0"
     },
     "autoload": {
-        "classmap": [ "."]
+        "classmap": ["."]
     }
 }
