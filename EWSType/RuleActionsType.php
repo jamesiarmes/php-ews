@@ -1,6 +1,6 @@
 <?php
 /**
- * Created EWSType_RuleActionsType.
+ * Contains EWSType_RuleActionsType.
  */
 
 /**
