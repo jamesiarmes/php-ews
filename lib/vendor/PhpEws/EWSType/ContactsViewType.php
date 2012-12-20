@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContactsViewType type
  */
-class EWSType_ContactsViewType extends EWSType
+class ContactsViewType extends EWSType
 {
     /**
      * InitialName property

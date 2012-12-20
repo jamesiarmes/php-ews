@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TaskRecurrenceType type
  */
-class EWSType_TaskRecurrenceType extends EWSType
+class TaskRecurrenceType extends EWSType
 {
     /**
      * RelativeYearlyRecurrence property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PermissionType type
  */
-class EWSType_PermissionType extends EWSType
+class PermissionType extends EWSType
 {
     /**
      * ReadItems property

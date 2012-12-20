@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfStringsType type
  */
-class EWSType_ArrayOfStringsType extends EWSType
+class ArrayOfStringsType extends EWSType
 {
     /**
      * String property

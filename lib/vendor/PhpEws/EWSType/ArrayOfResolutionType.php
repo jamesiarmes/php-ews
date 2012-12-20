@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfResolutionType type
  */
-class EWSType_ArrayOfResolutionType extends EWSType
+class ArrayOfResolutionType extends EWSType
 {
     /**
      * Resolution property

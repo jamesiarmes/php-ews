@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetFolderType type
  */
-class EWSType_GetFolderType extends EWSType
+class GetFolderType extends EWSType
 {
     /**
      * FolderShape property

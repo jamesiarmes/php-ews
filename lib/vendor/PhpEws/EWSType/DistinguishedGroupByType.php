@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DistinguishedGroupByType type
  */
-class EWSType_DistinguishedGroupByType extends EWSType
+class DistinguishedGroupByType extends EWSType
 {
     /**
      * StandardGroupBy property

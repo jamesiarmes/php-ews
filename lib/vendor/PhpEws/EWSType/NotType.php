@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NotType type.
  */
-class EWSType_NotType extends EWSType
+class NotType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

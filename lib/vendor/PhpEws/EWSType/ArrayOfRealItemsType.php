@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfRealItemsType type
  */
-class EWSType_ArrayOfRealItemsType extends EWSType
+class ArrayOfRealItemsType extends EWSType
 {
     /**
      * Item property

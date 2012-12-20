@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetAttachmentType type
  */
-class EWSType_GetAttachmentType extends EWSType
+class GetAttachmentType extends EWSType
 {
     /**
      * AttachmentShape property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SuggestionsViewOptionsType type
  */
-class EWSType_SuggestionsViewOptionsType extends EWSType
+class SuggestionsViewOptionsType extends EWSType
 {
     /**
      * GoodThreshold property

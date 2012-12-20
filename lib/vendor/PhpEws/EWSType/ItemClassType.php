@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ItemClassType type
  */
-class EWSType_ItemClassType extends EWSType
+class ItemClassType extends EWSType
 {
     /**
      * A text value that is consistent with the item's type may be required. For

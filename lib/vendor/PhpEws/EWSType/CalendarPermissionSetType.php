@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CalendarPermissionSetType type
  */
-class EWSType_CalendarPermissionSetType extends EWSType
+class CalendarPermissionSetType extends EWSType
 {
     /**
      * CalendarPermissions property

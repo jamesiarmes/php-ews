@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the MessageType type
  */
-class EWSType_MessageType extends EWSType
+class MessageType extends EWSType
 {
     /**
      * Sender property

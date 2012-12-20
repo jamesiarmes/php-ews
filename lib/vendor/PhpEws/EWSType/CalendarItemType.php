@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CalendarItemType type
  */
-class EWSType_CalendarItemType extends EWSType_ItemType
+class CalendarItemType extends EWSType_ItemType
 {
     /**
      * Identifies a calendar item.

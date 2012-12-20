@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DeleteAttachmentType type
  */
-class EWSType_DeleteAttachmentType extends EWSType
+class DeleteAttachmentType extends EWSType
 {
     /**
      * AttachmentIds property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GroupedItemsType type
  */
-class EWSType_GroupedItemsType extends EWSType
+class GroupedItemsType extends EWSType
 {
     /**
      * GroupIndex property

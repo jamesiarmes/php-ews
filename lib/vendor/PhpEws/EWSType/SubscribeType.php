@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SubscribeType type
  */
-class EWSType_SubscribeType extends EWSType
+class SubscribeType extends EWSType
 {
     /**
      * PullSubscriptionRequest property

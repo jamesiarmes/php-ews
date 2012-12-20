@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AbsoluteYearlyRecurrencePatternType type
  */
-class EWSType_AbsoluteYearlyRecurrencePatternType extends EWSType
+class AbsoluteYearlyRecurrencePatternType extends EWSType
 {
     /**
      * DayOfMonth property

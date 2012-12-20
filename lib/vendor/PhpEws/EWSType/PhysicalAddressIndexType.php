@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PhysicalAddressIndexType type
  */
-class EWSType_PhysicalAddressIndexType extends EWSType
+class PhysicalAddressIndexType extends EWSType
 {
     /**
      * Address index for business.

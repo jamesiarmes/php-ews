@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the UpdateFolderType type
  */
-class EWSType_UpdateFolderType extends EWSType
+class UpdateFolderType extends EWSType
 {
     /**
      * FolderChanges property

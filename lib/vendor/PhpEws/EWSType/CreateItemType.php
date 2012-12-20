@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CreateItemType type
  */
-class EWSType_CreateItemType extends EWSType
+class CreateItemType extends EWSType
 {
     /**
      * SavedItemFolderId property

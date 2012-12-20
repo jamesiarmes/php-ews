@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FolderResponseShapeType type
  */
-class EWSType_FolderResponseShapeType extends EWSType
+class FolderResponseShapeType extends EWSType
 {
     /**
      * BaseShape property

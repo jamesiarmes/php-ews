@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SearchExpressionType type.
  */
-abstract class EWSType_SearchExpressionType extends EWSType
+abstract class SearchExpressionType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

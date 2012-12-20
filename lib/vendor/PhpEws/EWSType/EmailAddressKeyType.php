@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Email address key type
  */
-class EWSType_EmailAddressKeyType extends EWSType
+class EmailAddressKeyType extends EWSType
 {
     /**
      * Key for a contacts first email address

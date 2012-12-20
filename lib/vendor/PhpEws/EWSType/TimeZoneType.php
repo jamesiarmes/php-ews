@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TimeZoneType type
  */
-class EWSType_TimeZoneType extends EWSType
+class TimeZoneType extends EWSType
 {
     /**
      * BaseOffset property

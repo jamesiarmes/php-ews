@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfSuggestion type
  */
-class EWSType_ArrayOfSuggestion extends EWSType
+class ArrayOfSuggestion extends EWSType
 {
     /**
      * Suggestion property

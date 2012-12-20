@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetUserAvailabilityRequestType type
  */
-class EWSType_GetUserAvailabilityRequestType extends EWSType
+class GetUserAvailabilityRequestType extends EWSType
 {
     /**
      * TimeZone property

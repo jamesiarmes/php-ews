@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SingleRecipientType type
  */
-class EWSType_SingleRecipientType extends EWSType
+class SingleRecipientType extends EWSType
 {
     /**
      * Mailbox property

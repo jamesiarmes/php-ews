@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the OrType type.
  */
-class EWSType_OrType extends EWSType
+class OrType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

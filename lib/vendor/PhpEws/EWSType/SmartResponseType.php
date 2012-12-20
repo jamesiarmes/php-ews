@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SmartResponseType type
  */
-class EWSType_SmartResponseType extends EWSType
+class SmartResponseType extends EWSType
 {
     /**
      * NewBodyContent property

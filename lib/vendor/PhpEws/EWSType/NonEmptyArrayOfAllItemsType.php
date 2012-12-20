@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfAllItemsType type
  */
-class EWSType_NonEmptyArrayOfAllItemsType extends EWSType
+class NonEmptyArrayOfAllItemsType extends EWSType
 {
     /**
      * Item property

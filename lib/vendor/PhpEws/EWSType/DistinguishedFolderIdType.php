@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DistinguishedFolderIdType type
  */
-class EWSType_DistinguishedFolderIdType extends EWSType
+class DistinguishedFolderIdType extends EWSType
 {
     /**
      * Mailbox property

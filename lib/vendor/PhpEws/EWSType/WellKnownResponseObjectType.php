@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the WellKnownResponseObjectType type
  */
-class EWSType_WellKnownResponseObjectType extends EWSType
+class WellKnownResponseObjectType extends EWSType
 {
     /**
      * ItemClass property

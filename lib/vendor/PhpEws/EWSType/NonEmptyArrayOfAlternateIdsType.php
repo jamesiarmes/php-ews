@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfAlternateIdsType type
  */
-class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
+class NonEmptyArrayOfAlternateIdsType extends EWSType
 {
     /**
      * AlternateId property

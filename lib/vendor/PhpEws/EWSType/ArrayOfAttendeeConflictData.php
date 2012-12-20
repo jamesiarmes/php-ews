@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfAttendeeConflictData type
  */
-class EWSType_ArrayOfAttendeeConflictData extends EWSType
+class ArrayOfAttendeeConflictData extends EWSType
 {
     /**
      * UnknownAttendeeConflictData property

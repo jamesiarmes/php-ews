@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CalendarEvent type
  */
-class EWSType_CalendarEvent extends EWSType
+class CalendarEvent extends EWSType
 {
     /**
      * Start date and time of the event in ISO 8601 format.

@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TransitionTargetType type.
  */
-class EWSType_TransitionTargetType extends EWSType
+class TransitionTargetType extends EWSType
 {
     /**
      * Indicates whether the time zone transition target is a time zone period

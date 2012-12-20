@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DistributionListType type
  */
-class EWSType_DistributionListType extends EWSType
+class DistributionListType extends EWSType
 {
     /**
      * DisplayName property

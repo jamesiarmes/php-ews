@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the EndDateRecurrenceRangeType type
  */
-class EWSType_EndDateRecurrenceRangeType extends EWSType
+class EndDateRecurrenceRangeType extends EWSType
 {
     /**
      * EndDate property

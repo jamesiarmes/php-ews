@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PathToUnindexedFieldType type
  */
-class EWSType_PathToUnindexedFieldType extends EWSType
+class PathToUnindexedFieldType extends EWSType
 {
     /**
      * FieldURI property

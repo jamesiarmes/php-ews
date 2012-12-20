@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContactSourceType type
  */
-class EWSType_ContactSourceType extends EWSType
+class ContactSourceType extends EWSType
 {
     /**
      * Contact is stored in Active Directory.

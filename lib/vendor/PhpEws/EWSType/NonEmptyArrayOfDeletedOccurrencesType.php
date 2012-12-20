@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfDeletedOccurrencesType type
  */
-class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType
+class NonEmptyArrayOfDeletedOccurrencesType extends EWSType
 {
     /**
      * DeletedOccurrence property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfRecipientsType type
  */
-class EWSType_ArrayOfRecipientsType extends EWSType
+class ArrayOfRecipientsType extends EWSType
 {
     /**
      * Mailbox property

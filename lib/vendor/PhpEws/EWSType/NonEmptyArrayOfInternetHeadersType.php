@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfInternetHeadersType type
  */
-class EWSType_NonEmptyArrayOfInternetHeadersType extends EWSType
+class NonEmptyArrayOfInternetHeadersType extends EWSType
 {
     /**
      * InternetMessageHeader property

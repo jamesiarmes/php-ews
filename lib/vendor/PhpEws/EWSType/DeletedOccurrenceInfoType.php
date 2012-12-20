@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DeletedOccurrenceInfoType type
  */
-class EWSType_DeletedOccurrenceInfoType extends EWSType
+class DeletedOccurrenceInfoType extends EWSType
 {
     /**
      * Start property

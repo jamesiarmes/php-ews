@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FieldURIOrConstantType type.
  */
-class EWSType_FieldURIOrConstantType extends EWSType
+class FieldURIOrConstantType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

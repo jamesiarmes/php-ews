@@ -5,6 +5,8 @@
  * @package php-ews
  */
 
+namespace \PhpEws;
+
 /**
  * Base class of the Exchange Web Services application.
  */

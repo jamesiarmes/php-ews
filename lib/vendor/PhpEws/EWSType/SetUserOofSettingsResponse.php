@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SetUserOofSettingsResponse type
  */
-class EWSType_SetUserOofSettingsResponse extends EWSType
+class SetUserOofSettingsResponse extends EWSType
 {
     /**
      * ResponseMessage property

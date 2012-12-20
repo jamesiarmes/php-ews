@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfTransitionsGroupsType type.
  */
-class EWSType_ArrayOfTransitionsGroupsType extends EWSType
+class ArrayOfTransitionsGroupsType extends EWSType
 {
     /**
      * Represents an array of time zone transitions.

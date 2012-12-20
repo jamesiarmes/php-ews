@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AlternatePublicFolderIdType type
  */
-class EWSType_AlternatePublicFolderIdType extends EWSType
+class AlternatePublicFolderIdType extends EWSType
 {
     /**
      * FolderId property

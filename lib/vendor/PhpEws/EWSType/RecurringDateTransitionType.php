@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RecurringDateTransitionType type.
  */
-class EWSType_RecurringDateTransitionType extends EWSType
+class RecurringDateTransitionType extends EWSType
 {
     /**
      * Specifies the Period or TransitionsGroup that is the target of the time

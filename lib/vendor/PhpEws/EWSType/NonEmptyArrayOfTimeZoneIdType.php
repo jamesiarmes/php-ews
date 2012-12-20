@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfTimeZoneIdType type
  */
-class EWSType_NonEmptyArrayOfTimeZoneIdType extends EWSType
+class NonEmptyArrayOfTimeZoneIdType extends EWSType
 {
     /**
      * Array of string timezone identifiers (ex. "Eastern Standard Time").

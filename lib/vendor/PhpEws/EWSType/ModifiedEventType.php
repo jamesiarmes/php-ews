@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ModifiedEventType type
  */
-class EWSType_ModifiedEventType extends EWSType
+class ModifiedEventType extends EWSType
 {
     /**
      * UnreadCount property

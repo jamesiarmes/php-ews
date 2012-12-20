@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResponseObjectCoreType type
  */
-class EWSType_ResponseObjectCoreType extends EWSType
+class ResponseObjectCoreType extends EWSType
 {
     /**
      * ReferenceItemId property

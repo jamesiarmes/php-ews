@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Types of sub-tree traversal for deletion and enumeration
  */
-class EWSType_ItemQueryTraversalType extends EWSType
+class ItemQueryTraversalType extends EWSType
 {
     /**
      * Consider only folders that are direct children of the parent folder(s) in

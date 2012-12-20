@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ServerVersionInfo type
  */
-class EWSType_ServerVersionInfo extends EWSType
+class ServerVersionInfo extends EWSType
 {
     /**
      * MajorVersion property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfFolderChangeDescriptionsType type
  */
-class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
+class NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
 {
     /**
      * AppendToFolderField property

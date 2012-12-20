@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FindItemType type
  */
-class EWSType_FindItemType extends EWSType
+class FindItemType extends EWSType
 {
     /**
      * ItemShape property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CalendarItemUpdateOperationType type.
  */
-class EWSType_CalendarItemUpdateOperationType extends EWSType
+class CalendarItemUpdateOperationType extends EWSType
 {
     /**
      * Send to no attendees.

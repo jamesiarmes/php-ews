@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfFieldOrdersType type
  */
-class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
+class NonEmptyArrayOfFieldOrdersType extends EWSType
 {
     /**
      * FieldOrder property

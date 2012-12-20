@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfTransitionsType type.
  */
-class EWSType_ArrayOfTransitionsType extends EWSType
+class ArrayOfTransitionsType extends EWSType
 {
     /**
      * A string value that represents the unique identifier of the transitions

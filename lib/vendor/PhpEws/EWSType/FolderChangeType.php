@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FolderChangeType type
  */
-class EWSType_FolderChangeType extends EWSType
+class FolderChangeType extends EWSType
 {
     /**
      * FolderId property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DelegateUserType type
  */
-class EWSType_DelegateUserType extends EWSType
+class DelegateUserType extends EWSType
 {
     /**
      * UserId property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BodyType type
  */
-class EWSType_BodyType extends EWSType
+class BodyType extends EWSType
 {
     /**
      * _ property

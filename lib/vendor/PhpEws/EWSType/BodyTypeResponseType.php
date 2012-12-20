@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Default shape names for response shapes
  */
-class EWSType_BodyTypeResponseType extends EWSType
+class BodyTypeResponseType extends EWSType
 {
     /**
      * All properties are retured in the response

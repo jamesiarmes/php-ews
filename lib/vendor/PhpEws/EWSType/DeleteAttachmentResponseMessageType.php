@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DeleteAttachmentResponseMessageType type
  */
-class EWSType_DeleteAttachmentResponseMessageType extends EWSType
+class DeleteAttachmentResponseMessageType extends EWSType
 {
     /**
      * RootItemId property

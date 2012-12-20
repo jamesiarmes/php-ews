@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SuggestionsResponseType type
  */
-class EWSType_SuggestionsResponseType extends EWSType
+class SuggestionsResponseType extends EWSType
 {
     /**
      * ResponseMessage property

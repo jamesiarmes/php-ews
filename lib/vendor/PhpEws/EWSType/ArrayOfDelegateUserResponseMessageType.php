@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfDelegateUserResponseMessageType type
  */
-class EWSType_ArrayOfDelegateUserResponseMessageType extends EWSType
+class ArrayOfDelegateUserResponseMessageType extends EWSType
 {
     /**
      * DelegateUserResponseMessageType property

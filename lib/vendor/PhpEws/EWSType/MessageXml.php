@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the MessageXml type
  */
-class EWSType_MessageXml extends EWSType
+class MessageXml extends EWSType
 {
     /**
      * any property

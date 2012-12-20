@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PostReplyItemType type
  */
-class EWSType_PostReplyItemType extends EWSType
+class PostReplyItemType extends EWSType
 {
     /**
      * NewBodyContent property

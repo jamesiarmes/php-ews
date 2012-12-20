@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FreeBusyViewOptionsType type
  */
-class EWSType_FreeBusyViewOptionsType extends EWSType
+class FreeBusyViewOptionsType extends EWSType
 {
     /**
      * TimeWindow property

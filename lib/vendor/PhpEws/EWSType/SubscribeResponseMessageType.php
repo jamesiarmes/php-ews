@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SubscribeResponseMessageType type
  */
-class EWSType_SubscribeResponseMessageType extends EWSType
+class SubscribeResponseMessageType extends EWSType
 {
     /**
      * SubscriptionId property

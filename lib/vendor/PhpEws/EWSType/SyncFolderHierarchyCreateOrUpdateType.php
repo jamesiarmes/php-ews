@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SyncFolderHierarchyCreateOrUpdateType type
  */
-class EWSType_SyncFolderHierarchyCreateOrUpdateType extends EWSType
+class SyncFolderHierarchyCreateOrUpdateType extends EWSType
 {
     /**
      * Folder property

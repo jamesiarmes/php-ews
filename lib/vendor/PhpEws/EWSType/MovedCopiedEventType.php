@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the MovedCopiedEventType type
  */
-class EWSType_MovedCopiedEventType extends EWSType
+class MovedCopiedEventType extends EWSType
 {
     /**
      * OldFolderId property

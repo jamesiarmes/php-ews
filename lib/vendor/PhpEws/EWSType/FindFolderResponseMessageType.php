@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FindFolderResponseMessageType type
  */
-class EWSType_FindFolderResponseMessageType extends EWSType
+class FindFolderResponseMessageType extends EWSType
 {
     /**
      * RootFolder property

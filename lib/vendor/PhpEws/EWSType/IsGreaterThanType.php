@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IsGreaterThanType type.
  */
-class EWSType_IsGreaterThanType extends EWSType
+class IsGreaterThanType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

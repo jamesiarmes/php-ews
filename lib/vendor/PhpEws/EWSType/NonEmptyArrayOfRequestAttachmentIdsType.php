@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfRequestAttachmentIdsType type
  */
-class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
+class NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
 {
     /**
      * AttachmentId property

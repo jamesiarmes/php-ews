@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContactItemType type
  */
-class EWSType_ContactItemType extends EWSType
+class ContactItemType extends EWSType
 {
     /**
      * FileAs property

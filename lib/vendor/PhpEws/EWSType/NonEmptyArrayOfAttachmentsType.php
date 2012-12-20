@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfAttachmentsType type
  */
-class EWSType_NonEmptyArrayOfAttachmentsType extends EWSType
+class NonEmptyArrayOfAttachmentsType extends EWSType
 {
     /**
      * ItemAttachment property

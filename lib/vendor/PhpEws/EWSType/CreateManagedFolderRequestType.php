@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CreateManagedFolderRequestType type
  */
-class EWSType_CreateManagedFolderRequestType extends EWSType
+class CreateManagedFolderRequestType extends EWSType
 {
     /**
      * FolderNames property

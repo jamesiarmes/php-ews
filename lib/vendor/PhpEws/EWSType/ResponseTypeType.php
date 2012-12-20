@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResponseTypeType type
  */
-class EWSType_ResponseTypeType extends EWSType
+class ResponseTypeType extends EWSType
 {
     /**
      * Response type indicating that a request has been accepted.

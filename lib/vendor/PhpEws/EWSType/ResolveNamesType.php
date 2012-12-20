@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResolveNamesType type
  */
-class EWSType_ResolveNamesType extends EWSType
+class ResolveNamesType extends EWSType
 {
     /**
      * ParentFolderIds property

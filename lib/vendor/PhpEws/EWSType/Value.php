@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the Value type
  */
-class EWSType_Value extends EWSType
+class Value extends EWSType
 {
     /**
      * _ property

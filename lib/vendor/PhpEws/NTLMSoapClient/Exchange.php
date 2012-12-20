@@ -7,13 +7,15 @@
  * @subpackage NTLM
  */
 
+namespace \PhpEws\NTLMSoapClient;
+
 /**
  * Handles Soap communication with the Exchnage server using NTLM
  * authentication
  * 
  * @author James I. Armes <jamesiarmes@gmail.com>
  */
-class NTLMSoapClient_Exchange extends NTLMSoapClient
+class Exchange extends NTLMSoapClient
 {
     /**
      * Username for authentication on the exchnage server

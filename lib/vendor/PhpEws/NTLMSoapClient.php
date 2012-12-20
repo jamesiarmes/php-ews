@@ -25,6 +25,8 @@
  * @subpackage NTLM
  */
 
+namespace \PhpEws;
+
 /**
  * Soap Client using Microsoft's NTLM Authentication.
  */

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PhysicalAddressDictionaryEntryType type
  */
-class EWSType_PhysicalAddressDictionaryEntryType extends EWSType
+class PhysicalAddressDictionaryEntryType extends EWSType
 {
     /**
      * Street property

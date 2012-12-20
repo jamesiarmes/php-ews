@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PathToExtendedFieldType type
  */
-class EWSType_PathToExtendedFieldType extends EWSType
+class PathToExtendedFieldType extends EWSType
 {
     /**
      * DistinguishedPropertySetId property

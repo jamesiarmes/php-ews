@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FolderType type
  */
-class EWSType_FolderType extends EWSType
+class FolderType extends EWSType
 {
     /**
      * PermissionSet property

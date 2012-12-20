@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IndividualAttendeeConflictData type
  */
-class EWSType_IndividualAttendeeConflictData extends EWSType
+class IndividualAttendeeConflictData extends EWSType
 {
     /**
      * BusyType property

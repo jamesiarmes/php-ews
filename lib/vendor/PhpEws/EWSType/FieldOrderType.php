@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FieldOrderType type
  */
-class EWSType_FieldOrderType extends EWSType
+class FieldOrderType extends EWSType
 {
     /**
      * Path property

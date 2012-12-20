@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the InternetHeaderType type
  */
-class EWSType_InternetHeaderType extends EWSType
+class InternetHeaderType extends EWSType
 {
     /**
      * _ property

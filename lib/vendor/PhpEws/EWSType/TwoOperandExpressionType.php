@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TwoOperandExpressionType type
  */
-class EWSType_TwoOperandExpressionType extends EWSType
+class TwoOperandExpressionType extends EWSType
 {
     /**
      * Path property

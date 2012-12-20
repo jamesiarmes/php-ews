@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseFolderType type
  */
-class EWSType_BaseFolderType extends EWSType
+class BaseFolderType extends EWSType
 {
     /**
      * FolderId property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AppendToFolderFieldType type
  */
-class EWSType_AppendToFolderFieldType extends EWSType
+class AppendToFolderFieldType extends EWSType
 {
     /**
      * Folder property

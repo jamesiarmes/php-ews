@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AttachmentResponseShapeType type
  */
-class EWSType_AttachmentResponseShapeType extends EWSType
+class AttachmentResponseShapeType extends EWSType
 {
     /**
      * IncludeMimeContent property

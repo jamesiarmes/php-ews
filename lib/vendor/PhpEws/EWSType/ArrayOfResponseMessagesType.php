@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfResponseMessagesType type
  */
-class EWSType_ArrayOfResponseMessagesType extends EWSType
+class ArrayOfResponseMessagesType extends EWSType
 {
     /**
      * CreateItemResponseMessage property

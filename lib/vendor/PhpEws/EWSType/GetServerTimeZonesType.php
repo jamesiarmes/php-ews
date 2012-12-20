@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetServerTimeZonesType type
  */
-class EWSType_GetServerTimeZonesType extends EWSType
+class GetServerTimeZonesType extends EWSType
 {
     /**
      * Collection of timezone identifiers to get the definition for. Omit to get

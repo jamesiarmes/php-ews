@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfPeriodsType type.
  */
-class EWSType_NonEmptyArrayOfPeriodsType extends EWSType
+class NonEmptyArrayOfPeriodsType extends EWSType
 {
     /**
      * The name, time offset, and unique identifier for a specific stage of the

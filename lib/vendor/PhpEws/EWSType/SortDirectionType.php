@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Sort order specification
  */
-class EWSType_SortDirectionType extends EWSType
+class SortDirectionType extends EWSType
 {
     /**
      * Items are sorted in ascending order

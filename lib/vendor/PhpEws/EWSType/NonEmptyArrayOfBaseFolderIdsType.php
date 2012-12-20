@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfBaseFolderIdsType type
  */
-class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
+class NonEmptyArrayOfBaseFolderIdsType extends EWSType
 {
     /**
      * FolderId property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DayOfWeekType type.
  */
-class EWSType_DayOfWeekType extends EWSType
+class DayOfWeekType extends EWSType
 {
     /**
      * Represents Sunday.

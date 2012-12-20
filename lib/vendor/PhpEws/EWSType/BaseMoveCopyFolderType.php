@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseMoveCopyFolderType type
  */
-class EWSType_BaseMoveCopyFolderType extends EWSType
+class BaseMoveCopyFolderType extends EWSType
 {
     /**
      * ToFolderId property

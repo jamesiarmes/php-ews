@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the Suggestion type
  */
-class EWSType_Suggestion extends EWSType
+class Suggestion extends EWSType
 {
     /**
      * MeetingTime property

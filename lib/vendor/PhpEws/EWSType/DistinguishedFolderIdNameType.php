@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * URIs for the distinguished folders accessible from a mailbox
  */
-class EWSType_DistinguishedFolderIdNameType extends EWSType
+class DistinguishedFolderIdNameType extends EWSType
 {
     /**
      * Calendar folder

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SerializableTimeZone type
  */
-class EWSType_SerializableTimeZone extends EWSType
+class SerializableTimeZone extends EWSType
 {
     /**
      * Bias property

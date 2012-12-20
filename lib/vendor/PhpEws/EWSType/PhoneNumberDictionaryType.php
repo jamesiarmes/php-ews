@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PhoneNumberDictionaryType type
  */
-class EWSType_PhoneNumberDictionaryType extends EWSType
+class PhoneNumberDictionaryType extends EWSType
 {
     /**
      * Entry property

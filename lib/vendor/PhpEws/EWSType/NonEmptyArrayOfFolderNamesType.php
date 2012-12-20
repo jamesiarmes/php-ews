@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfFolderNamesType type
  */
-class EWSType_NonEmptyArrayOfFolderNamesType extends EWSType
+class NonEmptyArrayOfFolderNamesType extends EWSType
 {
     /**
      * FolderName property

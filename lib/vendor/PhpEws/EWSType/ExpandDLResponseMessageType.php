@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExpandDLResponseMessageType type
  */
-class EWSType_ExpandDLResponseMessageType extends EWSType
+class ExpandDLResponseMessageType extends EWSType
 {
     /**
      * DLExpansion property

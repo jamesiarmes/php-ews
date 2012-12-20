@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ItemIdType type
  */
-class EWSType_ItemIdType extends EWSType
+class ItemIdType extends EWSType
 {
     /**
      * Id property

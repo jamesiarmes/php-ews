@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SyncFolderItemsChangesType type
  */
-class EWSType_SyncFolderItemsChangesType extends EWSType
+class SyncFolderItemsChangesType extends EWSType
 {
     /**
      * Create property

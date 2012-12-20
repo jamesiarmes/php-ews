@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SensitivityChoicesType type
  */
-class EWSType_SensitivityChoicesType extends EWSType
+class SensitivityChoicesType extends EWSType
 {
     /**
      * Sensitivity level of the item

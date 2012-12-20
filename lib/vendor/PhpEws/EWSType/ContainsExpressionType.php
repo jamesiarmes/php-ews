@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContainsExpressionType type.
  */
-class EWSType_ContainsExpressionType extends EWSType
+class ContainsExpressionType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

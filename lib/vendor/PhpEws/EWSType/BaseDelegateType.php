@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseDelegateType type
  */
-class EWSType_BaseDelegateType extends EWSType
+class BaseDelegateType extends EWSType
 {
     /**
      * Mailbox property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseSubscriptionRequestType type
  */
-class EWSType_BaseSubscriptionRequestType extends EWSType
+class BaseSubscriptionRequestType extends EWSType
 {
     /**
      * FolderIds property

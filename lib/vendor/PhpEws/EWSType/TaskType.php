@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TaskType type
  */
-class EWSType_TaskType extends EWSType
+class TaskType extends EWSType
 {
     /**
      * ActualWork property

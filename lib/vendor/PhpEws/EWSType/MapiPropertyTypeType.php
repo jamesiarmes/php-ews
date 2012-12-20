@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the MapiPropertyTypeType type.
  */
-class EWSType_MapiPropertyTypeType extends EWSType
+class MapiPropertyTypeType extends EWSType
 {
     /**
      * A double value that is interpreted as a date and time. The integer part

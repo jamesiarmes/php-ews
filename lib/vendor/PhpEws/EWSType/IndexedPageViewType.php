@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IndexedPageViewType type
  */
-class EWSType_IndexedPageViewType extends EWSType
+class IndexedPageViewType extends EWSType
 {
     /**
      * Offset property

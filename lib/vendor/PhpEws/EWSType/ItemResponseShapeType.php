@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ItemResponseShapeType type
  */
-class EWSType_ItemResponseShapeType extends EWSType
+class ItemResponseShapeType extends EWSType
 {
     /**
      * BaseShape property

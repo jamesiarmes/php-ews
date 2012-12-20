@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfFoldersType type
  */
-class EWSType_ArrayOfFoldersType extends EWSType
+class ArrayOfFoldersType extends EWSType
 {
     /**
      * Folder property

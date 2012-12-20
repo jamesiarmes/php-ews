@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the OccurrenceItemIdType type
  */
-class EWSType_OccurrenceItemIdType extends EWSType
+class OccurrenceItemIdType extends EWSType
 {
     /**
      * RecurringMasterId property

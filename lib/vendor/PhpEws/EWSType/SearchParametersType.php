@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SearchParametersType type
  */
-class EWSType_SearchParametersType extends EWSType
+class SearchParametersType extends EWSType
 {
     /**
      * Restriction property

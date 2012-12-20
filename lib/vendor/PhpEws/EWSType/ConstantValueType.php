@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Specifies the value to compare in the restriction.
  */
-class EWSType_ConstantValueType extends EWSType
+class ConstantValueType extends EWSType
 {
     /**
      * Specifies the value to compare in the restriction.

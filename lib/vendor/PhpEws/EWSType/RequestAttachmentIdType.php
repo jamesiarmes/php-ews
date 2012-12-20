@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RequestAttachmentIdType type
  */
-class EWSType_RequestAttachmentIdType extends EWSType
+class RequestAttachmentIdType extends EWSType
 {
     /**
      * Id property

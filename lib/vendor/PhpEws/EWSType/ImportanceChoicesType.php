@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ImportanceChoicesType type
  */
-class EWSType_ImportanceChoicesType extends EWSType
+class ImportanceChoicesType extends EWSType
 {
     /**
      * Importance level of the item.

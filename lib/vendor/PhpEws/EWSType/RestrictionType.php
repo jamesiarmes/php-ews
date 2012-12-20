@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RestrictionType type.
  */
-class EWSType_RestrictionType extends EWSType
+class RestrictionType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

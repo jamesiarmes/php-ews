@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SuggestionDayResult type
  */
-class EWSType_SuggestionDayResult extends EWSType
+class SuggestionDayResult extends EWSType
 {
     /**
      * Date property

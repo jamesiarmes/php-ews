@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CreateAttachmentType type
  */
-class EWSType_CreateAttachmentType extends EWSType
+class CreateAttachmentType extends EWSType
 {
     /**
      * ParentItemId property

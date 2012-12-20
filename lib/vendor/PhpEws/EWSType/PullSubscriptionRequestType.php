@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PullSubscriptionRequestType type
  */
-class EWSType_PullSubscriptionRequestType extends EWSType
+class PullSubscriptionRequestType extends EWSType
 {
     /**
      * Timeout property

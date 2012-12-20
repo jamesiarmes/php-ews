@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the EmailAddressDictionaryType type
  */
-class EWSType_EmailAddressDictionaryType extends EWSType
+class EmailAddressDictionaryType extends EWSType
 {
     /**
      * Entry property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetItemType type
  */
-class EWSType_GetItemType extends EWSType
+class GetItemType extends EWSType
 {
     /**
      * ItemShape property

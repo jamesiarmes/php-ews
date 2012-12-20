@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfFreeBusyResponse type
  */
-class EWSType_ArrayOfFreeBusyResponse extends EWSType
+class ArrayOfFreeBusyResponse extends EWSType
 {
     /**
      * FreeBusyResponse property

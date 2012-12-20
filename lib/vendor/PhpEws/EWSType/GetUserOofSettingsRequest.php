@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetUserOofSettingsRequest type
  */
-class EWSType_GetUserOofSettingsRequest extends EWSType
+class GetUserOofSettingsRequest extends EWSType
 {
     /**
      * Mailbox property

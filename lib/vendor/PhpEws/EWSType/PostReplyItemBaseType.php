@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PostReplyItemBaseType type
  */
-class EWSType_PostReplyItemBaseType extends EWSType
+class PostReplyItemBaseType extends EWSType
 {
     /**
      * Subject property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the DistinguishedPropertySetIdType type.
  */
-class EWSType_DistinguishedPropertySetIdType extends EWSType
+class DistinguishedPropertySetIdType extends EWSType
 {
     /**
      * Identifies the address property set ID by name.

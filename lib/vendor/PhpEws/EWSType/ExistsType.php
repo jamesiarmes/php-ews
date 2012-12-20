@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExistsType type.
  */
-class EWSType_ExistsType extends EWSType
+class ExistsType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

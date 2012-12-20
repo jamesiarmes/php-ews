@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfResponseObjectsType type
  */
-class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
+class NonEmptyArrayOfResponseObjectsType extends EWSType
 {
     /**
      * AcceptItem property

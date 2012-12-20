@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseObjectChangedEventType type
  */
-class EWSType_BaseObjectChangedEventType extends EWSType
+class BaseObjectChangedEventType extends EWSType
 {
     /**
      * TimeStamp property

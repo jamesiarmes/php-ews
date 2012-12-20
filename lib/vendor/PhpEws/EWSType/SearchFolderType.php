@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SearchFolderType type
  */
-class EWSType_SearchFolderType extends EWSType
+class SearchFolderType extends EWSType
 {
     /**
      * SearchParameters property

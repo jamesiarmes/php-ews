@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the UpdateDelegateType type
  */
-class EWSType_UpdateDelegateType extends EWSType
+class UpdateDelegateType extends EWSType
 {
     /**
      * DelegateUsers property

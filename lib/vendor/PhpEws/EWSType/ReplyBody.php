@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ReplyBody type
  */
-class EWSType_ReplyBody extends EWSType
+class ReplyBody extends EWSType
 {
     /**
      * Message property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FindFolderParentType type
  */
-class EWSType_FindFolderParentType extends EWSType
+class FindFolderParentType extends EWSType
 {
     /**
      * Folders property

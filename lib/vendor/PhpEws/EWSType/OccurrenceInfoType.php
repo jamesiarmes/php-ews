@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the OccurrenceInfoType type
  */
-class EWSType_OccurrenceInfoType extends EWSType
+class OccurrenceInfoType extends EWSType
 {
     /**
      * ItemId property

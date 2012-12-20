@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExcludesType type.
  */
-class EWSType_ExcludesType extends EWSType
+class ExcludesType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

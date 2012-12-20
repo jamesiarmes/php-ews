@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SerializedSecurityContextType type
  */
-class EWSType_SerializedSecurityContextType extends EWSType
+class SerializedSecurityContextType extends EWSType
 {
     /**
      * UserSid property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the WorkingHours type
  */
-class EWSType_WorkingHours extends EWSType
+class WorkingHours extends EWSType
 {
     /**
      * TimeZone property

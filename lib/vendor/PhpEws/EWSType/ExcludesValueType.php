@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExcludesValueType type
  */
-class EWSType_ExcludesValueType extends EWSType
+class ExcludesValueType extends EWSType
 {
     /**
      * Value property

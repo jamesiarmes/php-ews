@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfCalendarEvent type
  */
-class EWSType_ArrayOfCalendarEvent extends EWSType
+class ArrayOfCalendarEvent extends EWSType
 {
     /**
      * CalendarEvent property

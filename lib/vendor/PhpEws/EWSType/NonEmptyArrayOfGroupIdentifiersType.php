@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfGroupIdentifiersType type
  */
-class EWSType_NonEmptyArrayOfGroupIdentifiersType extends EWSType
+class NonEmptyArrayOfGroupIdentifiersType extends EWSType
 {
     /**
      * GroupIdentifier property

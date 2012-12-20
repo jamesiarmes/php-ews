@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FolderInfoResponseMessageType type
  */
-class EWSType_FolderInfoResponseMessageType extends EWSType
+class FolderInfoResponseMessageType extends EWSType
 {
     /**
      * Folders property

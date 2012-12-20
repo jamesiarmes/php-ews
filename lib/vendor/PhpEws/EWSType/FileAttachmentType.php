@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FileAttachmentType type
  */
-class EWSType_FileAttachmentType extends EWSType
+class FileAttachmentType extends EWSType
 {
     /**
      * Identifies the file attachment.

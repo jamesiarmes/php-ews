@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Types of deletion for items and folders
  */
-class EWSType_DisposalType extends EWSType
+class DisposalType extends EWSType
 {
     /**
      * Deletes the item irrevocably. Does not move the item to the Deleted Items

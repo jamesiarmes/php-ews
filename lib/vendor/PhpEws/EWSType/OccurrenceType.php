@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the OccurrenceType type.
  */
-class EWSType_OccurrenceType extends EWSType
+class OccurrenceType extends EWSType
 {
     /**
      * The first occurrence of the specified day of the week from the beginning

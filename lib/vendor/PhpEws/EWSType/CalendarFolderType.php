@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the CalendarFolderType type
  */
-class EWSType_CalendarFolderType extends EWSType
+class CalendarFolderType extends EWSType
 {
     /**
      * PermissionSet property

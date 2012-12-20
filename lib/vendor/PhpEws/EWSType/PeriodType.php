@@ -7,10 +7,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PeriodType type.
  */
-class EWSType_PeriodType extends EWSType
+class PeriodType extends EWSType
 {
     /**
      * An xs:duration value that represents the time offset from Coordinated

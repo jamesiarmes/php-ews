@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ConvertIdResponseMessageType type
  */
-class EWSType_ConvertIdResponseMessageType extends EWSType
+class ConvertIdResponseMessageType extends EWSType
 {
     /**
      * AlternateId property

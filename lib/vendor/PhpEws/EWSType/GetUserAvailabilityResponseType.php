@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetUserAvailabilityResponseType type
  */
-class EWSType_GetUserAvailabilityResponseType extends EWSType
+class GetUserAvailabilityResponseType extends EWSType
 {
     /**
      * FreeBusyResponseArray property

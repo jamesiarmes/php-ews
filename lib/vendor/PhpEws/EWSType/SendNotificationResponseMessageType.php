@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SendNotificationResponseMessageType type
  */
-class EWSType_SendNotificationResponseMessageType extends EWSType
+class SendNotificationResponseMessageType extends EWSType
 {
     /**
      * Notification property

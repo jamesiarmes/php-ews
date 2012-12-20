@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RecurrenceType type
  */
-class EWSType_RecurrenceType extends EWSType
+class RecurrenceType extends EWSType
 {
     /**
      * RelativeYearlyRecurrence property

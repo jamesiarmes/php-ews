@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AttachmentInfoResponseMessageType type
  */
-class EWSType_AttachmentInfoResponseMessageType extends EWSType
+class AttachmentInfoResponseMessageType extends EWSType
 {
     /**
      * Attachments property

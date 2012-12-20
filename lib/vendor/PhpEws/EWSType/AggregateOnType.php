@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AggregateOnType type
  */
-class EWSType_AggregateOnType extends EWSType
+class AggregateOnType extends EWSType
 {
     /**
      * FieldURI property

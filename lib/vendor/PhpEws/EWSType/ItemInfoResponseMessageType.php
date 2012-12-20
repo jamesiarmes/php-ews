@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ItemInfoResponseMessageType type
  */
-class EWSType_ItemInfoResponseMessageType extends EWSType
+class ItemInfoResponseMessageType extends EWSType
 {
     /**
      * Items property

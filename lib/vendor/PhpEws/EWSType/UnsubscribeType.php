@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the UnsubscribeType type
  */
-class EWSType_UnsubscribeType extends EWSType
+class UnsubscribeType extends EWSType
 {
     /**
      * SubscriptionId property

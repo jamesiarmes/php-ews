@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the TimeZoneDefinitionType type.
  */
-class EWSType_TimeZoneDefinitionType extends EWSType
+class TimeZoneDefinitionType extends EWSType
 {
     /**
      * Unique identifier of the time zone definition.

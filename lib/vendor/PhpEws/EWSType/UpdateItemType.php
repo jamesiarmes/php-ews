@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the UpdateItemType type
  */
-class EWSType_UpdateItemType extends EWSType
+class UpdateItemType extends EWSType
 {
     /**
      * SavedItemFolderId property

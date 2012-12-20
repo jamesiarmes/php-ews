@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContainmentComparisonType type.
  */
-class EWSType_ContainmentComparisonType extends EWSType
+class ContainmentComparisonType extends EWSType
 {
     /**
      * The comparison must be exact.

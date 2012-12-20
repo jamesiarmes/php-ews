@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the EmailAddress type
  */
-class EWSType_EmailAddress extends EWSType
+class EmailAddress extends EWSType
 {
     /**
      * Name property

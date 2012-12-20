@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExtendedPropertyType type
  */
-class EWSType_ExtendedPropertyType extends EWSType
+class ExtendedPropertyType extends EWSType
 {
     /**
      * ExtendedFieldURI property

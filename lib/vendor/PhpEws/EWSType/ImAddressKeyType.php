@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Instant messenger address key type
  */
-class EWSType_ImAddressKeyType extends EWSType
+class ImAddressKeyType extends EWSType
 {
     /**
      * Instant messenger ket for instant messenger address one.

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ItemType type
  */
-class EWSType_ItemType extends EWSType
+class ItemType extends EWSType
 {
     /**
      * Contains the native Multipurpose Internet Mail Extensions (MIME) stream

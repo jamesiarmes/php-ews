@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the MultipleOperandBooleanExpressionType type.
  */
-abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
+abstract class MultipleOperandBooleanExpressionType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

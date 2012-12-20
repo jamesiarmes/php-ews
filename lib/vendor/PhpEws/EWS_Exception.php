@@ -6,6 +6,8 @@
  * @subpackage Exception
  */
 
+namespace \PhpEws;
+
 /**
  * Exception class for Exchange Web Services
  */

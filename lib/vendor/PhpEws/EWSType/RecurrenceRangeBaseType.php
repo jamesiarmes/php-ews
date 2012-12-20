@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RecurrenceRangeBaseType type
  */
-class EWSType_RecurrenceRangeBaseType extends EWSType
+class RecurrenceRangeBaseType extends EWSType
 {
     /**
      * StartDate property

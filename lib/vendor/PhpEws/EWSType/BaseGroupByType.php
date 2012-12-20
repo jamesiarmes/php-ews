@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseGroupByType type
  */
-class EWSType_BaseGroupByType extends EWSType
+class BaseGroupByType extends EWSType
 {
     /**
      * Order property

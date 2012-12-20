@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResolveNamesResponseMessageType type
  */
-class EWSType_ResolveNamesResponseMessageType extends EWSType
+class ResolveNamesResponseMessageType extends EWSType
 {
     /**
      * ResolutionSet property

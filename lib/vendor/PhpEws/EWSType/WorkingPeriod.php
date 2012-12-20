@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the WorkingPeriod type
  */
-class EWSType_WorkingPeriod extends EWSType
+class WorkingPeriod extends EWSType
 {
     /**
      * DayOfWeek property

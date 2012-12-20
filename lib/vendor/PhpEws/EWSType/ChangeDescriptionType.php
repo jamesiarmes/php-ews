@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ChangeDescriptionType type
  */
-class EWSType_ChangeDescriptionType extends EWSType
+class ChangeDescriptionType extends EWSType
 {
     /**
      * Path property

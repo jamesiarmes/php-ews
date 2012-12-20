@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfUserIdType type
  */
-class EWSType_ArrayOfUserIdType extends EWSType
+class ArrayOfUserIdType extends EWSType
 {
     /**
      * UserId property

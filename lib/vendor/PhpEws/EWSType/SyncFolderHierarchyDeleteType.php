@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SyncFolderHierarchyDeleteType type
  */
-class EWSType_SyncFolderHierarchyDeleteType extends EWSType
+class SyncFolderHierarchyDeleteType extends EWSType
 {
     /**
      * FolderId property

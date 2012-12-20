@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SyncFolderItemsResponseMessageType type
  */
-class EWSType_SyncFolderItemsResponseMessageType extends EWSType
+class SyncFolderItemsResponseMessageType extends EWSType
 {
     /**
      * SyncState property

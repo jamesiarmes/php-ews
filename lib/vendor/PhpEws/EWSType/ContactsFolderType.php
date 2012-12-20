@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContactsFolderType type
  */
-class EWSType_ContactsFolderType extends EWSType
+class ContactsFolderType extends EWSType
 {
     /**
      * PermissionSet property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfAttendeesType type
  */
-class EWSType_NonEmptyArrayOfAttendeesType extends EWSType
+class NonEmptyArrayOfAttendeesType extends EWSType
 {
     /**
      * Attendee property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the FreeBusyResponseType type
  */
-class EWSType_FreeBusyResponseType extends EWSType
+class FreeBusyResponseType extends EWSType
 {
     /**
      * ResponseMessage property

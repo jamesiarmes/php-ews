@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ProxySecurityContextType type
  */
-class EWSType_ProxySecurityContextType extends EWSType
+class ProxySecurityContextType extends EWSType
 {
     /**
      * _ property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Phone number key type
  */
-class EWSType_PhoneNumberKeyType extends EWSType
+class PhoneNumberKeyType extends EWSType
 {
     /**
      * Phone number key for assistant phone number

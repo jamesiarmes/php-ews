@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IntervalRecurrencePatternBaseType type
  */
-class EWSType_IntervalRecurrencePatternBaseType extends EWSType
+class IntervalRecurrencePatternBaseType extends EWSType
 {
     /**
      * Interval property

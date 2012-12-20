@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ImAddressDictionaryEntryType type
  */
-class EWSType_ImAddressDictionaryEntryType extends EWSType
+class ImAddressDictionaryEntryType extends EWSType
 {
     /**
      * _ property

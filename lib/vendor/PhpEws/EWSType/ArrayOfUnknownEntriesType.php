@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ArrayOfUnknownEntriesType type
  */
-class EWSType_ArrayOfUnknownEntriesType extends EWSType
+class ArrayOfUnknownEntriesType extends EWSType
 {
     /**
      * UnknownEntry property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RemoveDelegateType type
  */
-class EWSType_RemoveDelegateType extends EWSType
+class RemoveDelegateType extends EWSType
 {
     /**
      * UserIds property

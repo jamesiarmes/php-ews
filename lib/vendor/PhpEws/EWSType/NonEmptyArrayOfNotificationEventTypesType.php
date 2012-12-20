@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfNotificationEventTypesType type
  */
-class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
+class NonEmptyArrayOfNotificationEventTypesType extends EWSType
 {
     /**
      * EventType property

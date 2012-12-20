@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SendItemType type
  */
-class EWSType_SendItemType extends EWSType
+class SendItemType extends EWSType
 {
     /**
      * ItemIds property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SetFolderFieldType type
  */
-class EWSType_SetFolderFieldType extends EWSType
+class SetFolderFieldType extends EWSType
 {
     /**
      * Folder property

@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IsLessThanOrEqualToType type.
  */
-class EWSType_IsLessThanOrEqualToType extends EWSType
+class IsLessThanOrEqualToType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.

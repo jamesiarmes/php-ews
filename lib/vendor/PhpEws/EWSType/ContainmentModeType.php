@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ContainmentModeType type.
  */
-class EWSType_ContainmentModeType extends EWSType
+class ContainmentModeType extends EWSType
 {
     /**
      * The comparison is between an exact phrase in the string and the constant.

@@ -9,10 +9,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AndType type.
  */
-class EWSType_AndType extends EWSType
+class AndType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND

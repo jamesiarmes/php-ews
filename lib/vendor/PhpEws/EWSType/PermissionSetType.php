@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the PermissionSetType type
  */
-class EWSType_PermissionSetType extends EWSType
+class PermissionSetType extends EWSType
 {
     /**
      * Permissions property

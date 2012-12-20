@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AttendeeType type
  */
-class EWSType_AttendeeType extends EWSType
+class AttendeeType extends EWSType
 {
     /**
      * Mailbox property

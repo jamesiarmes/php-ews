@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BasePermissionType type
  */
-class EWSType_BasePermissionType extends EWSType
+class BasePermissionType extends EWSType
 {
     /**
      * UserId property

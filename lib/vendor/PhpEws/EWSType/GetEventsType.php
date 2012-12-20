@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GetEventsType type
  */
-class EWSType_GetEventsType extends EWSType
+class GetEventsType extends EWSType
 {
     /**
      * SubscriptionId property

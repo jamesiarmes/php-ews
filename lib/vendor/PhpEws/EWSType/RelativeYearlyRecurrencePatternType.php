@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the RelativeYearlyRecurrencePatternType type
  */
-class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
+class RelativeYearlyRecurrencePatternType extends EWSType
 {
     /**
      * DaysOfWeek property

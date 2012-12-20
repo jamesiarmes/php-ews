@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResolutionType type
  */
-class EWSType_ResolutionType extends EWSType
+class ResolutionType extends EWSType
 {
     /**
      * Mailbox property

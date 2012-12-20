@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NumberedRecurrenceRangeType type
  */
-class EWSType_NumberedRecurrenceRangeType extends EWSType
+class NumberedRecurrenceRangeType extends EWSType
 {
     /**
      * NumberOfOccurrences property

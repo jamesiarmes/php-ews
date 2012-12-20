@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Physical address key type
  */
-class EWSType_PhysicalAddressKeyType extends EWSType
+class PhysicalAddressKeyType extends EWSType
 {
     /**
      * Business physical address type

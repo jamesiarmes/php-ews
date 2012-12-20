@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the AbsoluteMonthlyRecurrencePatternType type
  */
-class EWSType_AbsoluteMonthlyRecurrencePatternType extends EWSType
+class AbsoluteMonthlyRecurrencePatternType extends EWSType
 {
     /**
      * DayOfMonth property

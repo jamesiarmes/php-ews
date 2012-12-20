@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the BaseDelegateResponseMessageType type
  */
-class EWSType_BaseDelegateResponseMessageType extends EWSType
+class BaseDelegateResponseMessageType extends EWSType
 {
     /**
      * ResponseMessages property

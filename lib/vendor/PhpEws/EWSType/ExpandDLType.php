@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ExpandDLType type
  */
-class EWSType_ExpandDLType extends EWSType
+class ExpandDLType extends EWSType
 {
     /**
      * Mailbox property

@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SyncFolderItemsReadFlagType type
  */
-class EWSType_SyncFolderItemsReadFlagType extends EWSType
+class SyncFolderItemsReadFlagType extends EWSType
 {
     /**
      * ItemId property

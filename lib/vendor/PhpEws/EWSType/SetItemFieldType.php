@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the SetItemFieldType type
  */
-class EWSType_SetItemFieldType extends EWSType
+class SetItemFieldType extends EWSType
 {
     /**
      * Represents an Exchange calendar item to update.

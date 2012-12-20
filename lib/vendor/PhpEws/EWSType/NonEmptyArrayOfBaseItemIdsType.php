@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the NonEmptyArrayOfBaseItemIdsType type
  */
-class EWSType_NonEmptyArrayOfBaseItemIdsType extends EWSType
+class NonEmptyArrayOfBaseItemIdsType extends EWSType
 {
     /**
      * ItemId property

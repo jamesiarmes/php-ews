@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the GroupByType type
  */
-class EWSType_GroupByType extends EWSType
+class GroupByType extends EWSType
 {
     /**
      * FieldURI property

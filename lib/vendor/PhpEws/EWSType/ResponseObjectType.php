@@ -6,10 +6,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the ResponseObjectType type
  */
-class EWSType_ResponseObjectType extends EWSType
+class ResponseObjectType extends EWSType
 {
     /**
      * ObjectName property

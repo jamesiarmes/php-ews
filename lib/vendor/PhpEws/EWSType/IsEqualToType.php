@@ -8,10 +8,12 @@
  * @subpackage Types
  */
 
+namespace \PhpEws\EWSType;
+
 /**
  * Definition of the IsEqualToType type.
  */
-class EWSType_IsEqualToType extends EWSType
+class IsEqualToType extends EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.
