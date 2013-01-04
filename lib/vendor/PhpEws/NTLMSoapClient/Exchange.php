@@ -7,7 +7,7 @@
  * @subpackage NTLM
  */
 
-namespace \PhpEws\NTLMSoapClient;
+namespace PhpEws\NTLMSoapClient;
 
 /**
  * Handles Soap communication with the Exchnage server using NTLM

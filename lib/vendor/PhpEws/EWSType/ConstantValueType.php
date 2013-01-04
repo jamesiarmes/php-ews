@@ -6,7 +6,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws\EWSType;
+namespace PhpEws\EWSType;
 
 /**
  * Specifies the value to compare in the restriction.

@@ -6,7 +6,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws\EWSType;
+namespace PhpEws\EWSType;
 
 /**
  * Types of deletion for items and folders

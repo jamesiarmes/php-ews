@@ -6,7 +6,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws\EWSType;
+namespace PhpEws\EWSType;
 
 /**
  * Types of sub-tree traversal for deletion and enumeration

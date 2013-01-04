@@ -7,7 +7,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws\EWSType;
+namespace PhpEws\EWSType;
 
 /**
  * Definition of the ArrayOfTransitionsGroupsType type.

@@ -6,7 +6,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws\EWSType;
+namespace PhpEws\EWSType;
 
 /**
  * URIs for the distinguished folders accessible from a mailbox

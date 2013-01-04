@@ -6,11 +6,11 @@
  * @subpackage Exception
  */
 
-namespace \PhpEws;
+namespace PhpEws;
 
 /**
  * Exception class for Exchange Web Services
  */
-class EWS_Exception extends Exception
+class EWSException extends Exception
 {
 }

@@ -6,7 +6,7 @@
  * @subpackage Auto Discovery
  */
 
-namespace \PhpEws;
+namespace PhpEws;
 
 /**
  * Exchange Web Services Autodiscover implementation

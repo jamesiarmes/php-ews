@@ -6,7 +6,7 @@
  * @subpackage Types
  */
 
-namespace \PhpEws;
+namespace PhpEws;
 
 /**
  * Base class for Exchange Web Service Types
