@@ -8,6 +8,8 @@
 
 namespace PhpEws;
 
+use XMLWriter;
+
 /**
  * Exchange Web Services Autodiscover implementation
  *
