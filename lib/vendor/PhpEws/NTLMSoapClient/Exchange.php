@@ -11,6 +11,7 @@ namespace PhpEws\NTLMSoapClient;
 
 use PhpEws\EWSException;
 use PhpEws\NTLMSoapClient;
+use SoapHeader;
 
 /**
  * Handles Soap communication with the Exchnage server using NTLM
