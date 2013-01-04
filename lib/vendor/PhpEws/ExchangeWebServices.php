@@ -7,6 +7,8 @@
 
 namespace PhpEws;
 
+use PhpEws\NTLMSoapClient\Exchange;
+
 /**
  * Base class of the Exchange Web Services application.
  */
@@ -78,7 +80,7 @@ class ExchangeWebServices
     /**
      * SOAP client used to make the request
      *
-     * @var NTLMSoapClient_Exchange
+     * @var NTLMSoapClientExchange
      */
     protected $soap;
 
@@ -132,7 +134,7 @@ class ExchangeWebServices
     /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
-     * @return NTLMSoapClient_Exchange
+     * @return NTLMSoapClientExchange
      */
     public function getClient()
     {
@@ -694,11 +696,11 @@ class ExchangeWebServices
     /**
      * Initializes the SoapClient object to make a request
      *
-     * @return NTLMSoapClient_Exchange
+     * @return NTLMSoapClientExchange
      */
     protected function initializeSoapClient()
     {
-        $this->soap = new NTLMSoapClient_Exchange(
+        $this->soap = new Exchange(
             dirname(__FILE__).'/wsdl/services.wsdl',
             array(
                 'user' => $this->username,
