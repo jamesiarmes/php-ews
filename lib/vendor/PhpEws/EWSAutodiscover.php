@@ -388,7 +388,7 @@ class EWSAutodiscover
             }
             return new ExchangeWebServices(
                 $server,
-                $this->email,
+                $this->username,
                 $this->password,
                 $version
             );
