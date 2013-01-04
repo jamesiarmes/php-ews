@@ -27,6 +27,8 @@
 
 namespace PhpEws;
 
+use SoapClient;
+
 /**
  * Soap Client using Microsoft's NTLM Authentication.
  */
