@@ -1,15 +1,25 @@
 <?php
 /**
- * Contains EWSType_DelegateUserResponseMessageType.
+ * Contains EWSType_AddDelegateResponseMessageType.
  */
 
 /**
- * contains the response message for a single delegate user.
+ * Contains the status and result of an AddDelegate Operation request.
  *
  * @package php-ews\Types
  */
-class EWSType_DelegateUserResponseMessageType extends EWSType
+class EWSType_AddDelegateResponseMessageType extends EWSType
 {
+    /**
+     * Contains the response messages for an Exchange Web Services delegate
+     * management request.
+     *
+     * @since Exchnage 2007 SP1
+     *
+     * @var EWSType_ArrayOfDelegateUserResponseMessageType
+     */
+    public $ResponseMessages;
+
     /**
      * Provides a text description of the status of the response.
      *
@@ -30,7 +40,8 @@ class EWSType_DelegateUserResponseMessageType extends EWSType
     public $ResponseCode;
 
     /**
-     * Currently unused and is reserved for future use; contains a value of 0.
+     * Currently unused and is reserved for future use. It contains a value of
+     * 0.
      *
      * @since Exchnage 2007 SP1
      *
@@ -43,17 +54,7 @@ class EWSType_DelegateUserResponseMessageType extends EWSType
      *
      * @since Exchnage 2007 SP1
      *
-     * @var string
+     * @var mixed
      */
     public $MessageXml;
-
-    /**
-     * Identifies a single delegate that is returned in a delegate management
-     * response.
-     *
-     * @since Exchnage 2007 SP1
-     *
-     * @var EWSType_DelegateUserType
-     */
-    public $DelegateUser;
 }

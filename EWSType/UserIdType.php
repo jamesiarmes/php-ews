@@ -1,41 +1,61 @@
 <?php
 /**
- * Definition of the UserIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_UserIdType.
  */
 
 /**
- * Definition of the UserIdType type
+ * Identifies a delegate user or a user who has folder access permissions.
+ *
+ * @package php-ews\Types
  */
 class EWSType_UserIdType extends EWSType
 {
     /**
-     * SID property
+     * Represents the security descriptor definition language (SDDL) form of the
+     * security identifier (SID).
+     *
+     * @since Exchange 2007 SP1
      *
      * @var string
      */
     public $SID;
 
     /**
-     * PrimarySmtpAddress property
+     * Represents the primary Simple Mail Transfer Protocol (SMTP) address of an
+     * account to be used for delegate access.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var string
      */
     public $PrimarySmtpAddress;
 
     /**
-     * DisplayName property
+     * Defines the display name of a folder, contact, distribution list, or
+     * delegate user.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var string
      */
     public $DisplayName;
 
     /**
-     * DistinguishedUser property
+     * Identifies Anonymous and Default user accounts for delegate access.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_DistinguishedUserType
      */
     public $DistinguishedUser;
+
+    /**
+     * Identifies an external delegate user or an external user who has folder
+     * access permissions.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    public $ExternalUserIdentity;
 }

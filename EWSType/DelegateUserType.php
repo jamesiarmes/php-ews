@@ -1,39 +1,49 @@
 <?php
 /**
- * Definition of the DelegateUserType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DelegateUserType.
  */
 
 /**
- * Definition of the DelegateUserType type
+ * Identifies a single delegate to add or update in a mailbox or a delegate
+ * returned in a delegate management response.
+ *
+ * @package php-ews\Types
  */
 class EWSType_DelegateUserType extends EWSType
 {
     /**
-     * UserId property
+     * Identifies the delegate.
+     *
+     * @since Exchnage 2007 SP1
      *
      * @var EWSType_UserIdType
      */
     public $UserId;
 
     /**
-     * DelegatePermissions property
+     * Contains the delegate permission level settings.
+     *
+     * @since Exchnage 2007 SP1
      *
      * @var EWSType_DelegatePermissionsType
      */
     public $DelegatePermissions;
 
     /**
-     * ReceiveCopiesOfMeetingMessages property
+     * Indicates whether a delegate receives copies of meeting-related messages
+     * that are addressed to the principal.
+     *
+     * @since Exchnage 2007 SP1
      *
      * @var boolean
      */
     public $ReceiveCopiesOfMeetingMessages;
 
     /**
-     * ViewPrivateItems property
+     * Indicates whether a delegate has permission to view private calendar
+     * items in the principal's mailbox.
+     *
+     * @since Exchnage 2007 SP1
      *
      * @var boolean
      */
