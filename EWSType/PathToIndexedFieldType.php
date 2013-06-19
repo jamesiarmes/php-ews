@@ -1,25 +1,30 @@
 <?php
 /**
- * Definition of the PathToIndexedFieldType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_PathToIndexedFieldType.
  */
 
 /**
- * Definition of the PathToIndexedFieldType type
+ * Identifies individual members of a dictionary.
+ *
+ * @package php-ews\Types
  */
 class EWSType_PathToIndexedFieldType extends EWSType
 {
     /**
      * FieldURI property
      *
+     * @since Exchnage 2007
+     *
      * @var EWSType_DictionaryURIType
      */
     public $FieldURI;
 
     /**
-     * FieldIndex property
+     * Identifies the member of the dictionary to return.
+     *
+     * This attribute is required.
+     *
+     * @since Exchnage 2007
      *
      * @var string
      */
