@@ -122,4 +122,11 @@ class EWSType_MessageType extends EWSType
      * @var EWSType_SingleRecipientType
      */
     public $ReceivedRepresenting;
+
+	/**
+     * NewBodyContent property
+     *
+     * @var EWSType_BodyType
+     */
+	public $NewBodyContent;
 }
