@@ -1,32 +1,38 @@
 <?php
 /**
- * Definition of the RelativeYearlyRecurrencePatternType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_RelativeYearlyRecurrencePatternType.
  */
 
 /**
- * Definition of the RelativeYearlyRecurrencePatternType type
+ * Describes a relative yearly recurrence pattern.
+ *
+ * @package php-ews\Types
  */
 class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
 {
     /**
-     * DaysOfWeek property
+     * Describes the days of the week that are used in item recurrence patterns.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DayOfWeekType
      */
     public $DaysOfWeek;
 
     /**
-     * DayOfWeekIndex property
+     * Describes which week in a month is used in a relative yearly recurrence
+     * pattern.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
 
     /**
-     * Month property
+     * Describes the month when a yearly recurring item occurs.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MonthNamesType
      */

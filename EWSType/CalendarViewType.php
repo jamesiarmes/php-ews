@@ -15,6 +15,8 @@ class EWSType_CalendarViewType extends EWSType
      * StartDate property
      *
      * @var EWSType_dateTime
+     *
+     * @todo Make a DateTime object.
      */
     public $StartDate;
 
@@ -22,6 +24,8 @@ class EWSType_CalendarViewType extends EWSType
      * EndDate property
      *
      * @var EWSType_dateTime
+     *
+     * @todo Make a DateTime object.
      */
     public $EndDate;
 }

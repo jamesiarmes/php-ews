@@ -1,19 +1,20 @@
 <?php
 /**
- * Used to accept an invitation that allows access to another user’s calendar or
- * contacts data.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AcceptSharingInvitationType.
  */
 
 /**
- * Definition of the AcceptSharingInvitationType type.
+ * Used to accept an invitation that allows access to another user’s calendar or
+ * contacts data.
+ *
+ * @package php-ews\Types
  */
 class EWSType_AcceptSharingInvitationType extends EWSType
 {
     /**
      * Identifies the item to which the response object refers.
+     *
+     * @since Exchange 2010
      *
      * @var EWSType_ItemIdType
      */

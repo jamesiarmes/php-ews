@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfPropertyValuesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfPropertyValuesType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfPropertyValuesType type
+ * Represents a collection of values for an extended property.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfPropertyValuesType extends EWSType
 {
     /**
-     * Value property
+     * Contains a value of an extended property.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

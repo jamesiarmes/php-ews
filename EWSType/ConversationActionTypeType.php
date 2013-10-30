@@ -1,20 +1,21 @@
 <?php
 /**
- * Contains the action to perform on the conversation specified by a
- * ConversationId.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ConversationActionTypeType
  */
 
 /**
- * Definition of the ConversationActionTypeType type.
+ * Contains the action to perform on a conversation specified by a
+ * ConversationId.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_ConversationActionTypeType extends EWSType
 {
     /**
      * The current items and new items in the conversation will automatically be
-     * set with the categories identified by the Categorie element.
+     * set with the categories identified by the Categorie property.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -22,7 +23,11 @@ class EWSType_ConversationActionTypeType extends EWSType
 
     /**
      * The current items and new items in the conversation will automatically be
-     * deleted. The deletion mode is set by the DeleteType element.
+     * deleted.
+     *
+     * The deletion mode is set by the DeleteType property.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -30,7 +35,9 @@ class EWSType_ConversationActionTypeType extends EWSType
 
     /**
      * The current items and new items in the conversation will automatically be
-     * moved to the folder identified by the DestinationFolderId element.
+     * moved to the folder identified by the DestinationFolderId property.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -38,17 +45,23 @@ class EWSType_ConversationActionTypeType extends EWSType
 
     /**
      * The current items in the conversation will be copied to the folder
-     * identified by the DestinationFolderId element. Subsequent items in the
-     * conversation will not be copied.
+     * identified by the DestinationFolderId property.
+     *
+     * Subsequent items in the conversation will not be copied.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
     const COPY = 'Copy';
 
     /**
-     * The current items in the conversation will be deleted. Subsequent items
-     * in the conversation will not be deleted. The deletion mode is set by the
-     * DeleteType element.
+     * The current items in the conversation will be deleted.
+     *
+     * Subsequent items in the conversation will not be deleted. The deletion
+     * mode is set by the DeleteType property.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -56,16 +69,22 @@ class EWSType_ConversationActionTypeType extends EWSType
 
     /**
      * The current items in the conversation will be moved to the folder
-     * identified by the DestinationFolderId element. Subsequent items in the
-     * conversation will not be moved.
+     * identified by the DestinationFolderId property.
+     *
+     * Subsequent items in the conversation will not be moved.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
     const MOVE = 'Move';
 
     /**
-     * The current items in the conversation will have their read state set. The
-     * read state is set by the IsRead element.
+     * The current items in the conversation will have their read state set.
+     *
+     * The read state is set by the IsRead property.
+     *
+     * @since Exchange 2010 SP1
      *
      * @var string
      */

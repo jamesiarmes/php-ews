@@ -1,51 +1,49 @@
 <?php
 /**
- * The TransitionsGroups element represents an array of time zone transition
- * groups.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfTransitionsType.
  */
 
 /**
- * Definition of the ArrayOfTransitionsType type.
+ * Represents an array of time zone transitions.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfTransitionsType extends EWSType
 {
     /**
-     * A string value that represents the unique identifier of the transitions
-     * group.
-     *
-     * @var string
-     */
-    public $Id;
-
-    /**
      * A time zone transition that occurs on a specific date and at a specific
      * time.
+     *
+     * @since Exchange 2010
      *
      * @var EWSType_AbsoluteDateTransitionType
      */
     public $AbsoluteDateTransition;
 
     /**
-     * A time zone transition that occurs on the same day each year.
+     * The unique identifier of the transitions group.
      *
-     * @var EWSType_RecurringDayTransitionType
+     * @since Exchange 2010
+     *
+     * @var string
      */
-    public $RecurringDayTransition;
+    public $Id;
 
     /**
      * A time zone transition that occurs on a specified day of the year.
+     *
+     * @since Exchange 2010
      *
      * @var EWSType_RecurringDateTransitionType
      */
     public $RecurringDateTransition;
 
     /**
-     * A time zone transition.
+     * A time zone transition that occurs on the same day each year.
      *
-     * @var EWSType_TransitionType
+     * @since Exchange 2010
+     *
+     * @var EWSType_RecurringDayTransitionType
      */
-    public $Transition;
+    public $RecurringDayTransition;
 }

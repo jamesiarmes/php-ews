@@ -1,18 +1,39 @@
 <?php
 /**
- * Definition of the AlternatePublicFolderItemIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AlternatePublicFolderItemIdType.
  */
 
 /**
- * Definition of the AlternatePublicFolderItemIdType type
+ * Describes a public folder item identifier to convert to another identifier
+ * format.
+ *
+ * @package php-ews\Types
  */
 class EWSType_AlternatePublicFolderItemIdType extends EWSType
 {
     /**
-     * ItemId property
+     * Identifies the public folder that contains the public folder item.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var string
+     */
+    public $FolderId;
+
+    /**
+     * Identifies the format that describes the public folder item identifier to
+     * convert.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_IdFormatType
+     */
+    public $Format;
+
+    /**
+     * Identifier the public folder item to convert.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var string
      */

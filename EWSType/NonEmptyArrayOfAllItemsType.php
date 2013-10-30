@@ -1,13 +1,12 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfAllItemsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfAllItemsType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfAllItemsType type
+ * Identifies items of any type for numerous requests.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfAllItemsType extends EWSType
 {
@@ -26,7 +25,9 @@ class EWSType_NonEmptyArrayOfAllItemsType extends EWSType
     public $Message;
 
     /**
-     * CalendarItem property
+     * Represents an Exchange calendar item.
+     *
+     * @since Exchnage 2007
      *
      * @var EWSType_CalendarItemType
      */

@@ -1,34 +1,43 @@
 <?php
 /**
- * Definition of the AttendeeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AttendeeType.
  */
 
 /**
- * Definition of the AttendeeType type
+ * Represents attendees and resources for a meeting.
+ *
+ * @package php-ews\Types
  */
 class EWSType_AttendeeType extends EWSType
 {
     /**
-     * Mailbox property
+     * Represents the date and time of the latest response that is received.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $LastResponseTime;
+
+    /**
+     * Identifies a fully resolved e-mail address.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_EmailAddressType
      */
     public $Mailbox;
 
     /**
-     * ResponseType property
+     * Represents the type of recipient response that is received for a meeting.
+     *
+     * This property is only relevant to a meeting organizer's calendar item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ResponseTypeType
      */
     public $ResponseType;
-
-    /**
-     * LastResponseTime property
-     *
-     * @var EWSType_dateTime
-     */
-    public $LastResponseTime;
 }

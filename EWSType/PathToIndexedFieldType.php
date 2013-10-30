@@ -11,15 +11,6 @@
 class EWSType_PathToIndexedFieldType extends EWSType
 {
     /**
-     * FieldURI property
-     *
-     * @since Exchnage 2007
-     *
-     * @var EWSType_DictionaryURIType
-     */
-    public $FieldURI;
-
-    /**
      * Identifies the member of the dictionary to return.
      *
      * This attribute is required.
@@ -29,4 +20,13 @@ class EWSType_PathToIndexedFieldType extends EWSType
      * @var string
      */
     public $FieldIndex;
+
+    /**
+     * FieldURI property
+     *
+     * @since Exchnage 2007
+     *
+     * @var EWSType_DictionaryURIType
+     */
+    public $FieldURI;
 }

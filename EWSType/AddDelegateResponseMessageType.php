@@ -54,7 +54,7 @@ class EWSType_AddDelegateResponseMessageType extends EWSType
      *
      * @since Exchnage 2007 SP1
      *
-     * @var mixed
+     * @var string
      */
     public $MessageXml;
 }

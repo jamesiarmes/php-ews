@@ -7,9 +7,6 @@
  * Describes the month when a yearly recurring item occurs.
  *
  * @package php-ews\Enumerations
- *
- * @link http://msdn.microsoft.com/en-us/library/aa565486(v=exchg.80).aspx Exchnage 2007
- * @link http://msdn.microsoft.com/en-us/library/aa565486(v=exchg.140).aspx Exchnage 2010
  */
 class EWSType_MonthNamesType extends EWSType
 {

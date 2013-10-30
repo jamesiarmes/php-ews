@@ -1,25 +1,19 @@
 <?php
 /**
- * Definition of the SensitivityChoicesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SensitivityChoicesType.
  */
 
 /**
- * Definition of the SensitivityChoicesType type
+ * Indicates the sensitivity level of an item.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_SensitivityChoicesType extends EWSType
 {
     /**
-     * Sensitivity level of the item
-     *
-     * @var string
-     */
-    public $_;
-
-    /**
      * Indiciates theat the item is confidential.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -28,12 +22,16 @@ class EWSType_SensitivityChoicesType extends EWSType
     /**
      * Indiciates theat the item has a normal sensativity.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const NORMAL = 'Normal';
 
     /**
      * Indiciates theat the item is personal.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
@@ -42,14 +40,23 @@ class EWSType_SensitivityChoicesType extends EWSType
     /**
      * Indiciates theat the item is private.
      *
+     * @since Exchange 2007
+     *
      * @var string
      */
     const PRIVATE_ITEM = 'Private';
 
     /**
-     * Converts the object to a string.
+     * Element value.
      *
-     * @return string The string representation of the current object.
+     * @var string
+     */
+    public $_;
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
      */
     public function __toString()
     {

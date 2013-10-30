@@ -15,6 +15,8 @@ class EWSType_CalendarEvent extends EWSType
      * Start date and time of the event in ISO 8601 format.
      *
      * @var string
+     *
+     * @todo Make a DateTime object.
      */
     public $Start;
 
@@ -22,6 +24,8 @@ class EWSType_CalendarEvent extends EWSType
      * End date and time of the event in ISO 8601 format.
      *
      * @var string
+     *
+     * @todo Make a DateTime object.
      */
     public $End;
 

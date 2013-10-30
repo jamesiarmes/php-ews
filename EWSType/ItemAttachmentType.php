@@ -1,83 +1,174 @@
 <?php
 /**
- * Definition of the ItemAttachmentType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ItemAttachmentType.
  */
 
 /**
- * Definition of the ItemAttachmentType type
+ * Represents an Exchange item that is attached to another Exchange item.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ItemAttachmentType extends EWSType
 {
     /**
-     * Item property
+     * Identifies the attachment.
      *
-     * @var EWSType_ItemType
+     * @since Exchange 2007
+     *
+     * @var EWSType_AttachmentIdType
      */
-    public $Item;
+    public $AttachmentId;
 
     /**
-     * Message property
+     * Represents an Exchange calendar item attachment.
      *
-     * @var EWSType_MessageType
-     */
-    public $Message;
-
-    /**
-     * CalendarItem property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarItemType
      */
     public $CalendarItem;
 
     /**
-     * Contact property
+     * Represents an Exchange contact item attachment.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
-     * MeetingMessage property
+     * Represents an identifier to the contents of the attachment.
      *
-     * @var EWSType_MeetingMessageType
+     * ContentId can be set to any string value. Applications can use ContentId
+     * to implement their own identification mechanisms.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $MeetingMessage;
+    public $ContentId;
 
     /**
-     * MeetingRequest property
+     * Describes the Multipurpose Internet Mail Extensions (MIME) type of the
+     * attachment content.
      *
-     * @var EWSType_MeetingRequestMessageType
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $MeetingRequest;
+    public $ContentType;
 
     /**
-     * MeetingResponse property
+     * Contains the Uniform Resource Identifier (URI) that corresponds to the
+     * location of the content of the attachment.
      *
-     * @var EWSType_MeetingResponseMessageType
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $MeetingResponse;
+    public $ContentLocation;
 
     /**
-     * MeetingCancellation property
+     * Represents whether the attachment appears inline within an item.
+     *
+     * @since Exchange 2010
+     *
+     * @var boolean
+     */
+    public $IsInline;
+
+    /**
+     * Represents a generic Exchange item attachment.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemType
+     */
+    public $Item;
+
+    /**
+     * Represents when the attachment was last modified.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $LastModifiedTime;
+
+    /**
+     * Represents a meeting cancellation in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
-     * Task property
+     * Represents a meeting in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingMessageType
+     */
+    public $MeetingMessage;
+
+    /**
+     * Represents a meeting request in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingRequestMessageType
+     */
+    public $MeetingRequest;
+
+    /**
+     * Represents a meeting response in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MeetingResponseMessageType
+     */
+    public $MeetingResponse;
+
+    /**
+     * Represents an Exchange e-mail message attachment.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_MessageType
+     */
+    public $Message;
+
+    /**
+     * Represents the name of the attachment.
+     *
+     * @since Exchnage 2007
+     *
+     * @var string
+     */
+    public $Name;
+
+    /**
+     * Represents the size in bytes of the file attachment.
+     *
+     * This property is read-only.
+     *
+     * @since Exchange 2010
+     *
+     * @var integer
+     */
+    public $Size;
+
+    /**
+     * Represents an Exchange task attachment.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TaskType
      */
     public $Task;
-
-    /**
-     * PostItem property
-     *
-     * @var EWSType_PostItemType
-     */
-    public $PostItem;
 }

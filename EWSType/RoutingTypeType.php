@@ -20,7 +20,7 @@ class EWSType_RoutingTypeType extends EWSType
     const SMTP = 'SMTP';
 
     /**
-     * Indicates the routing type for a recipient.
+     * Element value.
      *
      * @var string
      */
