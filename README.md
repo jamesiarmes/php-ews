@@ -38,7 +38,7 @@ require_once 'php-ews/EWSType/BodyType.php';
 function __autoload($class_name)
 {
     // Start from the base path and determine the location from the class name,
-    $base_path = 'path/to/php-ews;
+    $base_path = 'path/to/php-ews';
     $include_file = $base_path . '/' . str_replace('_', '/', $class_name) . '.php';
 
     return (file_exists($include_file) ? require_once $include_file : false);
