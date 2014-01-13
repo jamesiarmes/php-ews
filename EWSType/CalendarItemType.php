@@ -8,7 +8,7 @@
  *
  * @package php-ews\Types
  */
-class EWSType_CalendarItemType extends EWSType_ItemType
+class EWSType_CalendarItemType extends EWSType
 {
     /**
      * Represents the total number of calendar items that are adjacent to a
