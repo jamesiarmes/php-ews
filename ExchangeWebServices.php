@@ -714,7 +714,7 @@ class ExchangeWebServices
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @throws EWS_Exception
+     * @throws EWSException
      *
      * @param stdClass $response
      * @return EWSType
@@ -726,7 +726,7 @@ class ExchangeWebServices
         // If the soap call failed then we need to thow an exception.
         $code = $this->soap->getResponseCode();
         if ($code != 200) {
-            throw new EWS_Exception('SOAP client returned status of '.$code, $code);
+            throw new EWSException('SOAP client returned status of '.$code, $code);
         }
 
         return $response;
