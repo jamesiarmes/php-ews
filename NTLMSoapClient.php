@@ -76,7 +76,17 @@ class NTLMSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_POST, true );
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-        curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
+		
+		$curlVersion = curl_version();
+		
+		$version = (double) $curlVersion['version'];
+		
+		if ($version >= 7.3) {
+			curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM );
+		} else {
+			curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC /** | CURLAUTH_NTLM */); // Commented NTLM for compatibility issues with curl 7.22
+		}
+		
         curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
 
         $response = curl_exec($this->ch);
@@ -85,7 +95,7 @@ class NTLMSoapClient extends SoapClient
         // If the response if false than there was an error and we should throw
         // an exception.
         if ($response === false) {
-            throw new EWS_Exception(
+            throw new EWSException(
               'Curl error: ' . curl_error($this->ch),
               curl_errno($this->ch)
             );

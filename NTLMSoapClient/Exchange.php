@@ -39,7 +39,7 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
     {
         // Verify that a user name and password were entered.
         if (empty($options['user']) || empty($options['password'])) {
-            throw new EWS_Exception('A username and password is required.');
+            throw new EWSException('A username and password is required.');
         }
 
         // Set the username and password properties.
