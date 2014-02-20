@@ -6,6 +6,10 @@
  * @subpackage Types
  */
 
+namespace PhpEws\EWSType; 
+
+use EWSType;
+
 /**
  * Definition of the FindItemType type
  */
