@@ -5,6 +5,10 @@
  * @package php-ews
  */
 
+namespace PhpEws;
+
+use PhpEws\NTLMSoapClient\Exchange;
+
 /**
  * Base class of the Exchange Web Services application.
  */
