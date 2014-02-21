@@ -1,4 +1,0 @@
-# pack-refs with: peeled fully-peeled 
-8cfb1dc0c3d395954ad73bb5f61152f9fcc5b11d refs/remotes/origin/array-object
-4ea2fdc828ab153af607a1eb7e2298db5501f1d1 refs/remotes/origin/issue-86-missing-types
-1d40c51c6687df106d43b8cf0c14eff2228df88d refs/remotes/origin/master
