@@ -3,18 +3,21 @@
  * Definition of the FileAttachmentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FileAttachmentType type
  */
-class EWSType_FileAttachmentType extends EWSType
+class FileAttachmentType extends PhpEws\EWSType
 {
     /**
      * Identifies the file attachment.
      *
-     * @var EWSType_AttachmentIdType
+     * @var AttachmentIdType
      */
     public $AttachmentId;
 
@@ -60,7 +63,7 @@ class EWSType_FileAttachmentType extends EWSType
     /**
      * Represents when the file attachment was last modified.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $LastModifiedTime;
 

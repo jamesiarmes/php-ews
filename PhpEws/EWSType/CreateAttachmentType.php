@@ -3,25 +3,28 @@
  * Definition of the CreateAttachmentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CreateAttachmentType type
  */
-class EWSType_CreateAttachmentType extends EWSType
+class CreateAttachmentType extends PhpEws\EWSType
 {
     /**
      * ParentItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ParentItemId;
 
     /**
      * Attachments property
      *
-     * @var EWSType_NonEmptyArrayOfAttachmentsType
+     * @var NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
 }

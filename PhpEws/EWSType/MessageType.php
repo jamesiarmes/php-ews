@@ -3,39 +3,42 @@
  * Definition of the MessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MessageType type
  */
-class EWSType_MessageType extends EWSType
+class MessageType extends PhpEws\EWSType
 {
     /**
      * Sender property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Sender;
 
     /**
      * ToRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $ToRecipients;
 
     /**
      * CcRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $CcRecipients;
 
     /**
      * BccRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $BccRecipients;
 
@@ -56,7 +59,7 @@ class EWSType_MessageType extends EWSType
     /**
      * ConversationIndex property
      *
-     * @var EWSType_base64Binary
+     * @var base64Binary
      */
     public $ConversationIndex;
 
@@ -70,7 +73,7 @@ class EWSType_MessageType extends EWSType
     /**
      * From property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $From;
 
@@ -105,21 +108,21 @@ class EWSType_MessageType extends EWSType
     /**
      * ReplyTo property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $ReplyTo;
 
     /**
      * ReceivedBy property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $ReceivedBy;
 
     /**
      * ReceivedRepresenting property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $ReceivedRepresenting;
 }

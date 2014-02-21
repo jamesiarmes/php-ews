@@ -3,13 +3,16 @@
  * Definition of the MessageXml type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MessageXml type
  */
-class EWSType_MessageXml extends EWSType
+class MessageXml extends PhpEws\EWSType
 {
     /**
      * any property

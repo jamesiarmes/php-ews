@@ -3,13 +3,16 @@
  * Definition of the IntervalRecurrencePatternBaseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the IntervalRecurrencePatternBaseType type
  */
-class EWSType_IntervalRecurrencePatternBaseType extends EWSType
+class IntervalRecurrencePatternBaseType extends PhpEws\EWSType
 {
     /**
      * Interval property

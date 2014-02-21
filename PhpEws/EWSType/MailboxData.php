@@ -3,25 +3,28 @@
  * Definition of the MailboxData type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MailboxData type
  */
-class EWSType_MailboxData extends EWSType
+class MailboxData extends PhpEws\EWSType
 {
     /**
      * Email property
      *
-     * @var EWSType_EmailAddress
+     * @var EmailAddress
      */
     public $Email;
 
     /**
      * AttendeeType property
      *
-     * @var EWSType_MeetingAttendeeType
+     * @var MeetingAttendeeType
      */
     public $AttendeeType;
 

@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfFolderChangesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfFolderChangesType type
  */
-class EWSType_NonEmptyArrayOfFolderChangesType extends EWSType
+class NonEmptyArrayOfFolderChangesType extends PhpEws\EWSType
 {
     /**
      * FolderChange property
      *
-     * @var EWSType_FolderChangeType
+     * @var FolderChangeType
      */
     public $FolderChange;
 }

@@ -3,18 +3,21 @@
  * Definition of the ArrayOfDelegateUserType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfDelegateUserType type
  */
-class EWSType_ArrayOfDelegateUserType extends EWSType
+class ArrayOfDelegateUserType extends PhpEws\EWSType
 {
     /**
      * DelegateUser property
      *
-     * @var EWSType_DelegateUserType
+     * @var DelegateUserType
      */
     public $DelegateUser;
 }

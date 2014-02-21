@@ -3,32 +3,35 @@
  * Definition of the FolderChangeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FolderChangeType type
  */
-class EWSType_FolderChangeType extends EWSType
+class FolderChangeType extends PhpEws\EWSType
 {
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * DistinguishedFolderId property
      *
-     * @var EWSType_DistinguishedFolderIdType
+     * @var DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
 
     /**
      * Updates property
      *
-     * @var EWSType_NonEmptyArrayOfFolderChangeDescriptionsType
+     * @var NonEmptyArrayOfFolderChangeDescriptionsType
      */
     public $Updates;
 }

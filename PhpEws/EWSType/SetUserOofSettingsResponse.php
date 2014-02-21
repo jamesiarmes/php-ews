@@ -3,18 +3,21 @@
  * Definition of the SetUserOofSettingsResponse type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SetUserOofSettingsResponse type
  */
-class EWSType_SetUserOofSettingsResponse extends EWSType
+class SetUserOofSettingsResponse extends PhpEws\EWSType
 {
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 }

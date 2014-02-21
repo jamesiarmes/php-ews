@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfDeletedOccurrencesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfDeletedOccurrencesType type
  */
-class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType
+class NonEmptyArrayOfDeletedOccurrencesType extends PhpEws\EWSType
 {
     /**
      * DeletedOccurrence property
      *
-     * @var EWSType_DeletedOccurrenceInfoType
+     * @var DeletedOccurrenceInfoType
      */
     public $DeletedOccurrence;
 }

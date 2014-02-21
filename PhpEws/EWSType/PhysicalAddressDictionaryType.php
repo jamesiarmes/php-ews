@@ -3,18 +3,21 @@
  * Definition of the PhysicalAddressDictionaryType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PhysicalAddressDictionaryType type
  */
-class EWSType_PhysicalAddressDictionaryType extends EWSType
+class PhysicalAddressDictionaryType extends PhpEws\EWSType
 {
     /**
      * Entry property
      *
-     * @var EWSType_PhysicalAddressDictionaryEntryType
+     * @var PhysicalAddressDictionaryEntryType
      */
     public $Entry;
 }

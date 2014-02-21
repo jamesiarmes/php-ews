@@ -3,18 +3,21 @@
  * Definition of the CalendarFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarFolderType type
  */
-class EWSType_CalendarFolderType extends EWSType
+class CalendarFolderType extends PhpEws\EWSType
 {
     /**
      * PermissionSet property
      *
-     * @var EWSType_CalendarPermissionSetType
+     * @var CalendarPermissionSetType
      */
     public $PermissionSet;
 }

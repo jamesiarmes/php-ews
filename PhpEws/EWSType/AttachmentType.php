@@ -3,18 +3,21 @@
  * Definition of the AttachmentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AttachmentType type
  */
-class EWSType_AttachmentType extends EWSType
+class AttachmentType extends PhpEws\EWSType
 {
     /**
      * AttachmentId property
      *
-     * @var EWSType_AttachmentIdType
+     * @var AttachmentIdType
      */
     public $AttachmentId;
 

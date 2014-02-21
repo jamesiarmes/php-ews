@@ -3,18 +3,21 @@
  * Definition of the UpdateFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the UpdateFolderType type
  */
-class EWSType_UpdateFolderType extends EWSType
+class UpdateFolderType extends PhpEws\EWSType
 {
     /**
      * FolderChanges property
      *
-     * @var EWSType_NonEmptyArrayOfFolderChangesType
+     * @var NonEmptyArrayOfFolderChangesType
      */
     public $FolderChanges;
 }

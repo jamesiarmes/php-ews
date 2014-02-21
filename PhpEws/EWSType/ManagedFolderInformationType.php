@@ -3,13 +3,16 @@
  * Definition of the ManagedFolderInformationType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ManagedFolderInformationType type
  */
-class EWSType_ManagedFolderInformationType extends EWSType
+class ManagedFolderInformationType extends PhpEws\EWSType
 {
     /**
      * CanDelete property

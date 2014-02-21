@@ -3,13 +3,16 @@
  * Definition of the AbsoluteMonthlyRecurrencePatternType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AbsoluteMonthlyRecurrencePatternType type
  */
-class EWSType_AbsoluteMonthlyRecurrencePatternType extends EWSType
+class AbsoluteMonthlyRecurrencePatternType extends PhpEws\EWSType
 {
     /**
      * DayOfMonth property

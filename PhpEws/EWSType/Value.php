@@ -3,13 +3,16 @@
  * Definition of the Value type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the Value type
  */
-class EWSType_Value extends EWSType
+class Value extends PhpEws\EWSType
 {
     /**
      * _ property

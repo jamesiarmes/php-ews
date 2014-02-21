@@ -3,13 +3,16 @@
  * Definition of the SensitivityChoicesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SensitivityChoicesType type
  */
-class EWSType_SensitivityChoicesType extends EWSType
+class SensitivityChoicesType extends PhpEws\EWSType
 {
     /**
      * Sensitivity level of the item

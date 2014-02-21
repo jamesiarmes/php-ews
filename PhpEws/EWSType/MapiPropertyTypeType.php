@@ -4,13 +4,16 @@
  * significant word in a property tag.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MapiPropertyTypeType type.
  */
-class EWSType_MapiPropertyTypeType extends EWSType
+class MapiPropertyTypeType extends PhpEws\EWSType
 {
     /**
      * A double value that is interpreted as a date and time. The integer part

@@ -3,18 +3,21 @@
  * Definition of the DeletedOccurrenceInfoType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DeletedOccurrenceInfoType type
  */
-class EWSType_DeletedOccurrenceInfoType extends EWSType
+class DeletedOccurrenceInfoType extends PhpEws\EWSType
 {
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 }

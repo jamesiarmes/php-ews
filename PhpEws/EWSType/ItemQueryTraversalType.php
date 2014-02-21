@@ -3,13 +3,17 @@
  * Definition of the ItemQueryTraversalType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
+
+namespace EWSType;
+
+use PhpEws;
 
 /**
  * Types of sub-tree traversal for deletion and enumeration
  */
-class EWSType_ItemQueryTraversalType extends EWSType
+class ItemQueryTraversalType extends PhpEws\EWSType
 {
     /**
      * Consider only folders that are direct children of the parent folder(s) in

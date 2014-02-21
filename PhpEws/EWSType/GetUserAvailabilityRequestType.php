@@ -3,39 +3,42 @@
  * Definition of the GetUserAvailabilityRequestType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetUserAvailabilityRequestType type
  */
-class EWSType_GetUserAvailabilityRequestType extends EWSType
+class GetUserAvailabilityRequestType extends PhpEws\EWSType
 {
     /**
      * TimeZone property
      *
-     * @var EWSType_SerializableTimeZone
+     * @var SerializableTimeZone
      */
     public $TimeZone;
 
     /**
      * MailboxDataArray property
      *
-     * @var EWSType_ArrayOfMailboxData
+     * @var ArrayOfMailboxData
      */
     public $MailboxDataArray;
 
     /**
      * FreeBusyViewOptions property
      *
-     * @var EWSType_FreeBusyViewOptionsType
+     * @var FreeBusyViewOptionsType
      */
     public $FreeBusyViewOptions;
 
     /**
      * SuggestionsViewOptions property
      *
-     * @var EWSType_SuggestionsViewOptionsType
+     * @var SuggestionsViewOptionsType
      */
     public $SuggestionsViewOptions;
 }

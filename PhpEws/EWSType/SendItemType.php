@@ -3,25 +3,28 @@
  * Definition of the SendItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SendItemType type
  */
-class EWSType_SendItemType extends EWSType
+class SendItemType extends PhpEws\EWSType
 {
     /**
      * ItemIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 
     /**
      * SavedItemFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SavedItemFolderId;
 

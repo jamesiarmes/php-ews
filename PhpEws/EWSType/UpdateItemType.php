@@ -3,46 +3,49 @@
  * Definition of the UpdateItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the UpdateItemType type
  */
-class EWSType_UpdateItemType extends EWSType
+class UpdateItemType extends PhpEws\EWSType
 {
     /**
      * SavedItemFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SavedItemFolderId;
 
     /**
      * ItemChanges property
      *
-     * @var EWSType_NonEmptyArrayOfItemChangesType
+     * @var NonEmptyArrayOfItemChangesType
      */
     public $ItemChanges;
 
     /**
      * ConflictResolution property
      *
-     * @var EWSType_ConflictResolutionType
+     * @var ConflictResolutionType
      */
     public $ConflictResolution;
 
     /**
      * MessageDisposition property
      *
-     * @var EWSType_MessageDispositionType
+     * @var MessageDispositionType
      */
     public $MessageDisposition;
 
     /**
      * SendMeetingInvitationsOrCancellations property
      *
-     * @var EWSType_CalendarItemUpdateOperationType
+     * @var CalendarItemUpdateOperationType
      */
     public $SendMeetingInvitationsOrCancellations;
 }

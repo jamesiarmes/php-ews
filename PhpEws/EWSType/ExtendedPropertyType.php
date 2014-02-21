@@ -3,18 +3,21 @@
  * Definition of the ExtendedPropertyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ExtendedPropertyType type
  */
-class EWSType_ExtendedPropertyType extends EWSType
+class ExtendedPropertyType extends PhpEws\EWSType
 {
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
@@ -28,7 +31,7 @@ class EWSType_ExtendedPropertyType extends EWSType
     /**
      * Values property
      *
-     * @var EWSType_NonEmptyArrayOfPropertyValuesType
+     * @var NonEmptyArrayOfPropertyValuesType
      */
     public $Values;
 }

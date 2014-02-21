@@ -3,13 +3,16 @@
  * Definition of the EmailAddressDictionaryEntryType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the EmailAddressDictionaryEntryType type
  */
-class EWSType_EmailAddressDictionaryEntryType extends EWSType
+class EmailAddressDictionaryEntryType extends PhpEws\EWSType
 {
     /**
      * _ property
@@ -21,7 +24,7 @@ class EWSType_EmailAddressDictionaryEntryType extends EWSType
     /**
      * Key property
      *
-     * @var EWSType_EmailAddressKeyType
+     * @var EmailAddressKeyType
      */
     public $Key;
 }

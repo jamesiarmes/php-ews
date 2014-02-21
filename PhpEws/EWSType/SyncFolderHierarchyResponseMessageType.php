@@ -3,13 +3,16 @@
  * Definition of the SyncFolderHierarchyResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderHierarchyResponseMessageType type
  */
-class EWSType_SyncFolderHierarchyResponseMessageType extends EWSType
+class SyncFolderHierarchyResponseMessageType extends PhpEws\EWSType
 {
     /**
      * SyncState property
@@ -28,7 +31,7 @@ class EWSType_SyncFolderHierarchyResponseMessageType extends EWSType
     /**
      * Changes property
      *
-     * @var EWSType_SyncFolderHierarchyChangesType
+     * @var SyncFolderHierarchyChangesType
      */
     public $Changes;
 }

@@ -3,102 +3,105 @@
  * Definition of the TaskRecurrenceType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TaskRecurrenceType type
  */
-class EWSType_TaskRecurrenceType extends EWSType
+class TaskRecurrenceType extends PhpEws\EWSType
 {
     /**
      * RelativeYearlyRecurrence property
      *
-     * @var EWSType_RelativeYearlyRecurrencePatternType
+     * @var RelativeYearlyRecurrencePatternType
      */
     public $RelativeYearlyRecurrence;
 
     /**
      * AbsoluteYearlyRecurrence property
      *
-     * @var EWSType_AbsoluteYearlyRecurrencePatternType
+     * @var AbsoluteYearlyRecurrencePatternType
      */
     public $AbsoluteYearlyRecurrence;
 
     /**
      * RelativeMonthlyRecurrence property
      *
-     * @var EWSType_RelativeMonthlyRecurrencePatternType
+     * @var RelativeMonthlyRecurrencePatternType
      */
     public $RelativeMonthlyRecurrence;
 
     /**
      * AbsoluteMonthlyRecurrence property
      *
-     * @var EWSType_AbsoluteMonthlyRecurrencePatternType
+     * @var AbsoluteMonthlyRecurrencePatternType
      */
     public $AbsoluteMonthlyRecurrence;
 
     /**
      * WeeklyRecurrence property
      *
-     * @var EWSType_WeeklyRecurrencePatternType
+     * @var WeeklyRecurrencePatternType
      */
     public $WeeklyRecurrence;
 
     /**
      * DailyRecurrence property
      *
-     * @var EWSType_DailyRecurrencePatternType
+     * @var DailyRecurrencePatternType
      */
     public $DailyRecurrence;
 
     /**
      * DailyRegeneration property
      *
-     * @var EWSType_DailyRegeneratingPatternType
+     * @var DailyRegeneratingPatternType
      */
     public $DailyRegeneration;
 
     /**
      * WeeklyRegeneration property
      *
-     * @var EWSType_WeeklyRegeneratingPatternType
+     * @var WeeklyRegeneratingPatternType
      */
     public $WeeklyRegeneration;
 
     /**
      * MonthlyRegeneration property
      *
-     * @var EWSType_MonthlyRegeneratingPatternType
+     * @var MonthlyRegeneratingPatternType
      */
     public $MonthlyRegeneration;
 
     /**
      * YearlyRegeneration property
      *
-     * @var EWSType_YearlyRegeneratingPatternType
+     * @var YearlyRegeneratingPatternType
      */
     public $YearlyRegeneration;
 
     /**
      * NoEndRecurrence property
      *
-     * @var EWSType_NoEndRecurrenceRangeType
+     * @var NoEndRecurrenceRangeType
      */
     public $NoEndRecurrence;
 
     /**
      * EndDateRecurrence property
      *
-     * @var EWSType_EndDateRecurrenceRangeType
+     * @var EndDateRecurrenceRangeType
      */
     public $EndDateRecurrence;
 
     /**
      * NumberedRecurrence property
      *
-     * @var EWSType_NumberedRecurrenceRangeType
+     * @var NumberedRecurrenceRangeType
      */
     public $NumberedRecurrence;
 }

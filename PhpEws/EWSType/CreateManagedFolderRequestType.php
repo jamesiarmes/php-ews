@@ -3,25 +3,28 @@
  * Definition of the CreateManagedFolderRequestType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CreateManagedFolderRequestType type
  */
-class EWSType_CreateManagedFolderRequestType extends EWSType
+class CreateManagedFolderRequestType extends PhpEws\EWSType
 {
     /**
      * FolderNames property
      *
-     * @var EWSType_NonEmptyArrayOfFolderNamesType
+     * @var NonEmptyArrayOfFolderNamesType
      */
     public $FolderNames;
 
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

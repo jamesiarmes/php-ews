@@ -3,25 +3,28 @@
  * Definition of the GetItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetItemType type
  */
-class EWSType_GetItemType extends EWSType
+class GetItemType extends PhpEws\EWSType
 {
     /**
      * ItemShape property
      *
-     * @var EWSType_ItemResponseShapeType
+     * @var ItemResponseShapeType
      */
     public $ItemShape;
 
     /**
      * ItemIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 }

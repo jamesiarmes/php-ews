@@ -3,53 +3,56 @@
  * Definition of the DelegatePermissionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DelegatePermissionsType type
  */
-class EWSType_DelegatePermissionsType extends EWSType
+class DelegatePermissionsType extends PhpEws\EWSType
 {
     /**
      * CalendarFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $CalendarFolderPermissionLevel;
 
     /**
      * TasksFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $TasksFolderPermissionLevel;
 
     /**
      * InboxFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $InboxFolderPermissionLevel;
 
     /**
      * ContactsFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $ContactsFolderPermissionLevel;
 
     /**
      * NotesFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $NotesFolderPermissionLevel;
 
     /**
      * JournalFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $JournalFolderPermissionLevel;
 }

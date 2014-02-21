@@ -3,13 +3,16 @@
  * Definition of the SerializableTimeZoneTime type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SerializableTimeZoneTime type
  */
-class EWSType_SerializableTimeZoneTime extends EWSType
+class SerializableTimeZoneTime extends PhpEws\EWSType
 {
     /**
      * Bias property
@@ -42,7 +45,7 @@ class EWSType_SerializableTimeZoneTime extends EWSType
     /**
      * DayOfWeek property
      *
-     * @var EWSType_DayOfWeekType
+     * @var DayOfWeekType
      */
     public $DayOfWeek;
 

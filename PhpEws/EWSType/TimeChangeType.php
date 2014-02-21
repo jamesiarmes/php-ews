@@ -3,39 +3,42 @@
  * Definition of the TimeChangeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TimeChangeType type
  */
-class EWSType_TimeChangeType extends EWSType
+class TimeChangeType extends PhpEws\EWSType
 {
     /**
      * Offset property
      *
-     * @var EWSType_duration
+     * @var duration
      */
     public $Offset;
 
     /**
      * RelativeYearlyRecurrence property
      *
-     * @var EWSType_RelativeYearlyRecurrencePatternType
+     * @var RelativeYearlyRecurrencePatternType
      */
     public $RelativeYearlyRecurrence;
 
     /**
      * AbsoluteDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $AbsoluteDate;
 
     /**
      * Time property
      *
-     * @var EWSType_time
+     * @var time
      */
     public $Time;
 

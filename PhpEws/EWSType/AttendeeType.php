@@ -3,32 +3,35 @@
  * Definition of the AttendeeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AttendeeType type
  */
-class EWSType_AttendeeType extends EWSType
+class AttendeeType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 
     /**
      * ResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $ResponseType;
 
     /**
      * LastResponseTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $LastResponseTime;
 }

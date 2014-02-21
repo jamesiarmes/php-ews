@@ -3,13 +3,16 @@
  * Definition of the ServerVersionInfo type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ServerVersionInfo type
  */
-class EWSType_ServerVersionInfo extends EWSType
+class ServerVersionInfo extends PhpEws\EWSType
 {
     /**
      * MajorVersion property

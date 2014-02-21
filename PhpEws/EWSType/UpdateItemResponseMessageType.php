@@ -3,18 +3,21 @@
  * Definition of the UpdateItemResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the UpdateItemResponseMessageType type
  */
-class EWSType_UpdateItemResponseMessageType extends EWSType
+class UpdateItemResponseMessageType extends PhpEws\EWSType
 {
     /**
      * ConflictResults property
      *
-     * @var EWSType_ConflictResultsType
+     * @var ConflictResultsType
      */
     public $ConflictResults;
 }

@@ -3,18 +3,21 @@
  * Definition of the RecurrenceRangeBaseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RecurrenceRangeBaseType type
  */
-class EWSType_RecurrenceRangeBaseType extends EWSType
+class RecurrenceRangeBaseType extends PhpEws\EWSType
 {
     /**
      * StartDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $StartDate;
 }

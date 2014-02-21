@@ -3,18 +3,21 @@
  * Definition of the ArrayOfGroupedItemsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfGroupedItemsType type
  */
-class EWSType_ArrayOfGroupedItemsType extends EWSType
+class ArrayOfGroupedItemsType extends PhpEws\EWSType
 {
     /**
      * GroupedItems property
      *
-     * @var EWSType_GroupedItemsType
+     * @var GroupedItemsType
      */
     public $GroupedItems;
 }

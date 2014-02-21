@@ -3,13 +3,16 @@
  * Determines whether the search ignores cases and spaces.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ContainmentComparisonType type.
  */
-class EWSType_ContainmentComparisonType extends EWSType
+class ContainmentComparisonType extends PhpEws\EWSType
 {
     /**
      * The comparison must be exact.

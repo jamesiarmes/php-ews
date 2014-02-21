@@ -3,13 +3,16 @@
  * Definition of the InternetHeaderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the InternetHeaderType type
  */
-class EWSType_InternetHeaderType extends EWSType
+class InternetHeaderType extends PhpEws\EWSType
 {
     /**
      * _ property

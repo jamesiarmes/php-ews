@@ -4,13 +4,16 @@
  * specific stage of the time zone.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PeriodType type.
  */
-class EWSType_PeriodType extends EWSType
+class PeriodType extends PhpEws\EWSType
 {
     /**
      * An xs:duration value that represents the time offset from Coordinated

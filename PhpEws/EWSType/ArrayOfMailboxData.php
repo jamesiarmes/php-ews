@@ -3,18 +3,21 @@
  * Definition of the ArrayOfMailboxData type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfMailboxData type
  */
-class EWSType_ArrayOfMailboxData extends EWSType
+class ArrayOfMailboxData extends PhpEws\EWSType
 {
     /**
      * MailboxData property
      *
-     * @var EWSType_MailboxData
+     * @var MailboxData
      */
     public $MailboxData;
 }

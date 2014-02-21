@@ -3,18 +3,21 @@
  * Definition of the ArrayOfBaseItemIdsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfBaseItemIdsType type
  */
-class EWSType_ArrayOfBaseItemIdsType extends EWSType
+class ArrayOfBaseItemIdsType extends PhpEws\EWSType
 {
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 }

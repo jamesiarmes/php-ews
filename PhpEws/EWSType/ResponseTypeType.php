@@ -3,13 +3,16 @@
  * Definition of the ResponseTypeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResponseTypeType type
  */
-class EWSType_ResponseTypeType extends EWSType
+class ResponseTypeType extends PhpEws\EWSType
 {
     /**
      * Response type indicating that a request has been accepted.

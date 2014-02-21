@@ -3,18 +3,21 @@
  * Definition of the GetUserOofSettingsRequest type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetUserOofSettingsRequest type
  */
-class EWSType_GetUserOofSettingsRequest extends EWSType
+class GetUserOofSettingsRequest extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddress
+     * @var EmailAddress
      */
     public $Mailbox;
 }

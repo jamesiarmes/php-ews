@@ -3,18 +3,21 @@
  * Definition of the BaseResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseResponseMessageType type
  */
-class EWSType_BaseResponseMessageType extends EWSType
+class BaseResponseMessageType extends PhpEws\EWSType
 {
     /**
      * ResponseMessages property
      *
-     * @var EWSType_ArrayOfResponseMessagesType
+     * @var ArrayOfResponseMessagesType
      */
     public $ResponseMessages;
 }

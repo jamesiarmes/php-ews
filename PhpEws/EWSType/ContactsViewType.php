@@ -3,13 +3,16 @@
  * Definition of the ContactsViewType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ContactsViewType type
  */
-class EWSType_ContactsViewType extends EWSType
+class ContactsViewType extends PhpEws\EWSType
 {
     /**
      * InitialName property

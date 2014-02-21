@@ -3,25 +3,28 @@
  * Definition of the FreeBusyResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FreeBusyResponseType type
  */
-class EWSType_FreeBusyResponseType extends EWSType
+class FreeBusyResponseType extends PhpEws\EWSType
 {
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
      * FreeBusyView property
      *
-     * @var EWSType_FreeBusyView
+     * @var FreeBusyView
      */
     public $FreeBusyView;
 }

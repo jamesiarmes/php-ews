@@ -3,18 +3,21 @@
  * Definition of the AlternateIdBaseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AlternateIdBaseType type
  */
-class EWSType_AlternateIdBaseType extends EWSType
+class AlternateIdBaseType extends PhpEws\EWSType
 {
     /**
      * Format property
      *
-     * @var EWSType_IdFormatType
+     * @var IdFormatType
      */
     public $Format;
 }

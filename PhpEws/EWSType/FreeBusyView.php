@@ -3,18 +3,21 @@
  * Definition of the FreeBusyView type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FreeBusyView type
  */
-class EWSType_FreeBusyView extends EWSType
+class FreeBusyView extends PhpEws\EWSType
 {
     /**
      * FreeBusyViewType property
      *
-     * @var EWSType_FreeBusyViewType
+     * @var FreeBusyViewType
      */
     public $FreeBusyViewType;
 
@@ -28,14 +31,14 @@ class EWSType_FreeBusyView extends EWSType
     /**
      * CalendarEventArray property
      *
-     * @var EWSType_ArrayOfCalendarEvent
+     * @var ArrayOfCalendarEvent
      */
     public $CalendarEventArray;
 
     /**
      * WorkingHours property
      *
-     * @var EWSType_WorkingHours
+     * @var WorkingHours
      */
     public $WorkingHours;
 }

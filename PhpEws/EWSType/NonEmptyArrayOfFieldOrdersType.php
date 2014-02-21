@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfFieldOrdersType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfFieldOrdersType type
  */
-class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
+class NonEmptyArrayOfFieldOrdersType extends PhpEws\EWSType
 {
     /**
      * FieldOrder property
      *
-     * @var EWSType_FieldOrderType
+     * @var FieldOrderType
      */
     public $FieldOrder;
 }

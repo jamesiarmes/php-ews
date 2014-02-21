@@ -3,13 +3,16 @@
  * The Constant element identifies a constant value in a restriction.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Specifies the value to compare in the restriction.
  */
-class EWSType_ConstantValueType extends EWSType
+class ConstantValueType extends PhpEws\EWSType
 {
     /**
      * Specifies the value to compare in the restriction.

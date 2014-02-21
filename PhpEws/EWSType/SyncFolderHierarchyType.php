@@ -3,25 +3,28 @@
  * Definition of the SyncFolderHierarchyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderHierarchyType type
  */
-class EWSType_SyncFolderHierarchyType extends EWSType
+class SyncFolderHierarchyType extends PhpEws\EWSType
 {
     /**
      * FolderShape property
      *
-     * @var EWSType_FolderResponseShapeType
+     * @var FolderResponseShapeType
      */
     public $FolderShape;
 
     /**
      * SyncFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SyncFolderId;
 

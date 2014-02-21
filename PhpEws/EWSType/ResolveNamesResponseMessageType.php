@@ -3,18 +3,21 @@
  * Definition of the ResolveNamesResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResolveNamesResponseMessageType type
  */
-class EWSType_ResolveNamesResponseMessageType extends EWSType
+class ResolveNamesResponseMessageType extends PhpEws\EWSType
 {
     /**
      * ResolutionSet property
      *
-     * @var EWSType_ArrayOfResolutionType
+     * @var ArrayOfResolutionType
      */
     public $ResolutionSet;
 }

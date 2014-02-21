@@ -3,18 +3,21 @@
  * Definition of the RecurringMasterItemIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RecurringMasterItemIdType type
  */
-class EWSType_RecurringMasterItemIdType extends EWSType
+class RecurringMasterItemIdType extends PhpEws\EWSType
 {
     /**
      * OccurrenceId property
      *
-     * @var EWSType_DerivedItemIdType
+     * @var DerivedItemIdType
      */
     public $OccurrenceId;
 

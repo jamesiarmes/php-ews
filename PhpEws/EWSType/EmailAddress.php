@@ -3,13 +3,16 @@
  * Definition of the EmailAddress type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the EmailAddress type
  */
-class EWSType_EmailAddress extends EWSType
+class EmailAddress extends PhpEws\EWSType
 {
     /**
      * Name property

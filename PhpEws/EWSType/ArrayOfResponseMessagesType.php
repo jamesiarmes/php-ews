@@ -3,207 +3,210 @@
  * Definition of the ArrayOfResponseMessagesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfResponseMessagesType type
  */
-class EWSType_ArrayOfResponseMessagesType extends EWSType
+class ArrayOfResponseMessagesType extends PhpEws\EWSType
 {
     /**
      * CreateItemResponseMessage property
      *
-     * @var EWSType_ItemInfoResponseMessageType
+     * @var ItemInfoResponseMessageType
      */
     public $CreateItemResponseMessage;
 
     /**
      * DeleteItemResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $DeleteItemResponseMessage;
 
     /**
      * GetItemResponseMessage property
      *
-     * @var EWSType_ItemInfoResponseMessageType
+     * @var ItemInfoResponseMessageType
      */
     public $GetItemResponseMessage;
 
     /**
      * UpdateItemResponseMessage property
      *
-     * @var EWSType_UpdateItemResponseMessageType
+     * @var UpdateItemResponseMessageType
      */
     public $UpdateItemResponseMessage;
 
     /**
      * SendItemResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $SendItemResponseMessage;
 
     /**
      * DeleteFolderResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $DeleteFolderResponseMessage;
 
     /**
      * CreateFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $CreateFolderResponseMessage;
 
     /**
      * GetFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $GetFolderResponseMessage;
 
     /**
      * FindFolderResponseMessage property
      *
-     * @var EWSType_FindFolderResponseMessageType
+     * @var FindFolderResponseMessageType
      */
     public $FindFolderResponseMessage;
 
     /**
      * UpdateFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $UpdateFolderResponseMessage;
 
     /**
      * MoveFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $MoveFolderResponseMessage;
 
     /**
      * CopyFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $CopyFolderResponseMessage;
 
     /**
      * CreateAttachmentResponseMessage property
      *
-     * @var EWSType_AttachmentInfoResponseMessageType
+     * @var AttachmentInfoResponseMessageType
      */
     public $CreateAttachmentResponseMessage;
 
     /**
      * DeleteAttachmentResponseMessage property
      *
-     * @var EWSType_DeleteAttachmentResponseMessageType
+     * @var DeleteAttachmentResponseMessageType
      */
     public $DeleteAttachmentResponseMessage;
 
     /**
      * GetAttachmentResponseMessage property
      *
-     * @var EWSType_AttachmentInfoResponseMessageType
+     * @var AttachmentInfoResponseMessageType
      */
     public $GetAttachmentResponseMessage;
 
     /**
      * FindItemResponseMessage property
      *
-     * @var EWSType_FindItemResponseMessageType
+     * @var FindItemResponseMessageType
      */
     public $FindItemResponseMessage;
 
     /**
      * MoveItemResponseMessage property
      *
-     * @var EWSType_ItemInfoResponseMessageType
+     * @var ItemInfoResponseMessageType
      */
     public $MoveItemResponseMessage;
 
     /**
      * CopyItemResponseMessage property
      *
-     * @var EWSType_ItemInfoResponseMessageType
+     * @var ItemInfoResponseMessageType
      */
     public $CopyItemResponseMessage;
 
     /**
      * ResolveNamesResponseMessage property
      *
-     * @var EWSType_ResolveNamesResponseMessageType
+     * @var ResolveNamesResponseMessageType
      */
     public $ResolveNamesResponseMessage;
 
     /**
      * ExpandDLResponseMessage property
      *
-     * @var EWSType_ExpandDLResponseMessageType
+     * @var ExpandDLResponseMessageType
      */
     public $ExpandDLResponseMessage;
 
     /**
      * GetEventsResponseMessage property
      *
-     * @var EWSType_GetEventsResponseMessageType
+     * @var GetEventsResponseMessageType
      */
     public $GetEventsResponseMessage;
 
     /**
      * SubscribeResponseMessage property
      *
-     * @var EWSType_SubscribeResponseMessageType
+     * @var SubscribeResponseMessageType
      */
     public $SubscribeResponseMessage;
 
     /**
      * UnsubscribeResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $UnsubscribeResponseMessage;
 
     /**
      * SendNotificationResponseMessage property
      *
-     * @var EWSType_SendNotificationResponseMessageType
+     * @var SendNotificationResponseMessageType
      */
     public $SendNotificationResponseMessage;
 
     /**
      * SyncFolderHierarchyResponseMessage property
      *
-     * @var EWSType_SyncFolderHierarchyResponseMessageType
+     * @var SyncFolderHierarchyResponseMessageType
      */
     public $SyncFolderHierarchyResponseMessage;
 
     /**
      * SyncFolderItemsResponseMessage property
      *
-     * @var EWSType_SyncFolderItemsResponseMessageType
+     * @var SyncFolderItemsResponseMessageType
      */
     public $SyncFolderItemsResponseMessage;
 
     /**
      * CreateManagedFolderResponseMessage property
      *
-     * @var EWSType_FolderInfoResponseMessageType
+     * @var FolderInfoResponseMessageType
      */
     public $CreateManagedFolderResponseMessage;
 
     /**
      * ConvertIdResponseMessage property
      *
-     * @var EWSType_ConvertIdResponseMessageType
+     * @var ConvertIdResponseMessageType
      */
     public $ConvertIdResponseMessage;
 }

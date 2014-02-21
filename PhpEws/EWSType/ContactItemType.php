@@ -3,13 +3,16 @@
  * Definition of the ContactItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ContactItemType type
  */
-class EWSType_ContactItemType extends EWSType
+class ContactItemType extends PhpEws\EWSType
 {
     /**
      * FileAs property
@@ -21,7 +24,7 @@ class EWSType_ContactItemType extends EWSType
     /**
      * FileAsMapping property
      *
-     * @var EWSType_FileAsMappingType
+     * @var FileAsMappingType
      */
     public $FileAsMapping;
 
@@ -65,7 +68,7 @@ class EWSType_ContactItemType extends EWSType
      *
      * This propery is read-only.
      *
-     * @var EWSType_CompleteNameType
+     * @var CompleteNameType
      */
     public $CompleteName;
 
@@ -79,21 +82,21 @@ class EWSType_ContactItemType extends EWSType
     /**
      * EmailAddresses property
      *
-     * @var EWSType_EmailAddressDictionaryType
+     * @var EmailAddressDictionaryType
      */
     public $EmailAddresses;
 
     /**
      * PhysicalAddresses property
      *
-     * @var EWSType_PhysicalAddressDictionaryType
+     * @var PhysicalAddressDictionaryType
      */
     public $PhysicalAddresses;
 
     /**
      * PhoneNumbers property
      *
-     * @var EWSType_PhoneNumberDictionaryType
+     * @var PhoneNumberDictionaryType
      */
     public $PhoneNumbers;
 
@@ -121,21 +124,21 @@ class EWSType_ContactItemType extends EWSType
     /**
      * Children property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Children;
 
     /**
      * Companies property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Companies;
 
     /**
      * ContactSource property
      *
-     * @var EWSType_ContactSourceType
+     * @var ContactSourceType
      */
     public $ContactSource;
 
@@ -156,7 +159,7 @@ class EWSType_ContactItemType extends EWSType
     /**
      * ImAddresses property
      *
-     * @var EWSType_ImAddressDictionaryType
+     * @var ImAddressDictionaryType
      */
     public $ImAddresses;
 
@@ -191,7 +194,7 @@ class EWSType_ContactItemType extends EWSType
     /**
      * PostalAddressIndex property
      *
-     * @var EWSType_PhysicalAddressIndexType
+     * @var PhysicalAddressIndexType
      */
     public $PostalAddressIndex;
 

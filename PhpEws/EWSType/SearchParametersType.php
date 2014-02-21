@@ -3,32 +3,35 @@
  * Definition of the SearchParametersType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SearchParametersType type
  */
-class EWSType_SearchParametersType extends EWSType
+class SearchParametersType extends PhpEws\EWSType
 {
     /**
      * Restriction property
      *
-     * @var EWSType_RestrictionType
+     * @var RestrictionType
      */
     public $Restriction;
 
     /**
      * BaseFolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $BaseFolderIds;
 
     /**
      * Traversal property
      *
-     * @var EWSType_SearchFolderTraversalType
+     * @var SearchFolderTraversalType
      */
     public $Traversal;
 }

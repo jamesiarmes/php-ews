@@ -3,18 +3,21 @@
  * Definition of the PostItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PostItemType type
  */
-class EWSType_PostItemType extends EWSType
+class PostItemType extends PhpEws\EWSType
 {
     /**
      * ConversationIndex property
      *
-     * @var EWSType_base64Binary
+     * @var base64Binary
      */
     public $ConversationIndex;
 
@@ -28,7 +31,7 @@ class EWSType_PostItemType extends EWSType
     /**
      * From property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $From;
 
@@ -49,7 +52,7 @@ class EWSType_PostItemType extends EWSType
     /**
      * PostedTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $PostedTime;
 
@@ -63,7 +66,7 @@ class EWSType_PostItemType extends EWSType
     /**
      * Sender property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Sender;
 }

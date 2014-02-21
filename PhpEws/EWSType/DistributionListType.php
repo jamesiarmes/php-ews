@@ -3,13 +3,16 @@
  * Definition of the DistributionListType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DistributionListType type
  */
-class EWSType_DistributionListType extends EWSType
+class DistributionListType extends PhpEws\EWSType
 {
     /**
      * DisplayName property
@@ -28,7 +31,7 @@ class EWSType_DistributionListType extends EWSType
     /**
      * ContactSource property
      *
-     * @var EWSType_ContactSourceType
+     * @var ContactSourceType
      */
     public $ContactSource;
 }

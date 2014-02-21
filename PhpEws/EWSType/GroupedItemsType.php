@@ -3,13 +3,16 @@
  * Definition of the GroupedItemsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GroupedItemsType type
  */
-class EWSType_GroupedItemsType extends EWSType
+class GroupedItemsType extends PhpEws\EWSType
 {
     /**
      * GroupIndex property
@@ -21,7 +24,7 @@ class EWSType_GroupedItemsType extends EWSType
     /**
      * Items property
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var ArrayOfRealItemsType
      */
     public $Items;
 }

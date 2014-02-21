@@ -3,25 +3,28 @@
  * Definition of the ArrayOfAttachmentsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfAttachmentsType type
  */
-class EWSType_ArrayOfAttachmentsType extends EWSType
+class ArrayOfAttachmentsType extends PhpEws\EWSType
 {
     /**
      * ItemAttachment property
      *
-     * @var EWSType_ItemAttachmentType
+     * @var ItemAttachmentType
      */
     public $ItemAttachment;
 
     /**
      * FileAttachment property
      *
-     * @var EWSType_FileAttachmentType
+     * @var FileAttachmentType
      */
     public $FileAttachment;
 }

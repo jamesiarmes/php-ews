@@ -3,13 +3,16 @@
  * Definition of the ResponseObjectType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResponseObjectType type
  */
-class EWSType_ResponseObjectType extends EWSType
+class ResponseObjectType extends PhpEws\EWSType
 {
     /**
      * ObjectName property

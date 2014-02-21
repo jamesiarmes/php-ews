@@ -3,13 +3,16 @@
  * Definition of the IndexedPageViewType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the IndexedPageViewType type
  */
-class EWSType_IndexedPageViewType extends EWSType
+class IndexedPageViewType extends PhpEws\EWSType
 {
     /**
      * Offset property
@@ -21,7 +24,7 @@ class EWSType_IndexedPageViewType extends EWSType
     /**
      * BasePoint property
      *
-     * @var EWSType_IndexBasePointType
+     * @var IndexBasePointType
      */
     public $BasePoint;
 }

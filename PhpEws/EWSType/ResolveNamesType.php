@@ -3,25 +3,28 @@
  * Definition of the ResolveNamesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResolveNamesType type
  */
-class EWSType_ResolveNamesType extends EWSType
+class ResolveNamesType extends PhpEws\EWSType
 {
     /**
      * ParentFolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $ParentFolderIds;
 
     /**
      * UnresolvedEntry property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $UnresolvedEntry;
 
@@ -35,7 +38,7 @@ class EWSType_ResolveNamesType extends EWSType
     /**
      * SearchScope property
      *
-     * @var EWSType_ResolveNamesSearchScopeType
+     * @var ResolveNamesSearchScopeType
      */
     public $SearchScope;
 }

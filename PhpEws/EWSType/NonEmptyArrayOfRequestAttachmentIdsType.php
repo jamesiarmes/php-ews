@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfRequestAttachmentIdsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfRequestAttachmentIdsType type
  */
-class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
+class NonEmptyArrayOfRequestAttachmentIdsType extends PhpEws\EWSType
 {
     /**
      * AttachmentId property
      *
-     * @var EWSType_RequestAttachmentIdType
+     * @var RequestAttachmentIdType
      */
     public $AttachmentId;
 }

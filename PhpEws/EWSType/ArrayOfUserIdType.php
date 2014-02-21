@@ -3,18 +3,21 @@
  * Definition of the ArrayOfUserIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfUserIdType type
  */
-class EWSType_ArrayOfUserIdType extends EWSType
+class ArrayOfUserIdType extends PhpEws\EWSType
 {
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 }

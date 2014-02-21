@@ -3,25 +3,28 @@
  * Definition of the PermissionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PermissionType type
  */
-class EWSType_PermissionType extends EWSType
+class PermissionType extends PhpEws\EWSType
 {
     /**
      * ReadItems property
      *
-     * @var EWSType_PermissionReadAccessType
+     * @var PermissionReadAccessType
      */
     public $ReadItems;
 
     /**
      * PermissionLevel property
      *
-     * @var EWSType_PermissionLevelType
+     * @var PermissionLevelType
      */
     public $PermissionLevel;
 }

@@ -3,13 +3,16 @@
  * Represents the occurrence of the day of the week in a month.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the OccurrenceType type.
  */
-class EWSType_OccurrenceType extends EWSType
+class OccurrenceType extends PhpEws\EWSType
 {
     /**
      * The first occurrence of the specified day of the week from the beginning

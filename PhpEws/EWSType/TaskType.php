@@ -3,13 +3,16 @@
  * Definition of the TaskType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TaskType type
  */
-class EWSType_TaskType extends EWSType
+class TaskType extends PhpEws\EWSType
 {
     /**
      * ActualWork property
@@ -21,7 +24,7 @@ class EWSType_TaskType extends EWSType
     /**
      * AssignedTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $AssignedTime;
 
@@ -42,28 +45,28 @@ class EWSType_TaskType extends EWSType
     /**
      * Companies property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Companies;
 
     /**
      * CompleteDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $CompleteDate;
 
     /**
      * Contacts property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Contacts;
 
     /**
      * DelegationState property
      *
-     * @var EWSType_TaskDelegateStateType
+     * @var TaskDelegateStateType
      */
     public $DelegationState;
 
@@ -77,7 +80,7 @@ class EWSType_TaskType extends EWSType
     /**
      * DueDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DueDate;
 
@@ -133,21 +136,21 @@ class EWSType_TaskType extends EWSType
     /**
      * Recurrence property
      *
-     * @var EWSType_TaskRecurrenceType
+     * @var TaskRecurrenceType
      */
     public $Recurrence;
 
     /**
      * StartDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $StartDate;
 
     /**
      * Status property
      *
-     * @var EWSType_TaskStatusType
+     * @var TaskStatusType
      */
     public $Status;
 

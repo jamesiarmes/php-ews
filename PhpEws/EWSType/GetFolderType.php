@@ -3,25 +3,28 @@
  * Definition of the GetFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetFolderType type
  */
-class EWSType_GetFolderType extends EWSType
+class GetFolderType extends PhpEws\EWSType
 {
     /**
      * FolderShape property
      *
-     * @var EWSType_FolderResponseShapeType
+     * @var FolderResponseShapeType
      */
     public $FolderShape;
 
     /**
      * FolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 }

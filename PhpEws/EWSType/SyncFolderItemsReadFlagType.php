@@ -3,18 +3,21 @@
  * Definition of the SyncFolderItemsReadFlagType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderItemsReadFlagType type
  */
-class EWSType_SyncFolderItemsReadFlagType extends EWSType
+class SyncFolderItemsReadFlagType extends PhpEws\EWSType
 {
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 

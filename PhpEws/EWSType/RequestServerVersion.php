@@ -3,18 +3,21 @@
  * Definition of the RequestServerVersion type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RequestServerVersion type
  */
-class EWSType_RequestServerVersion extends EWSType
+class RequestServerVersion extends PhpEws\EWSType
 {
     /**
      * Version property
      *
-     * @var EWSType_ExchangeVersionType
+     * @var ExchangeVersionType
      */
     public $Version;
 }

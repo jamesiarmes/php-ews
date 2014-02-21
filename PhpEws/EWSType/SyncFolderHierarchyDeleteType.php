@@ -3,18 +3,21 @@
  * Definition of the SyncFolderHierarchyDeleteType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderHierarchyDeleteType type
  */
-class EWSType_SyncFolderHierarchyDeleteType extends EWSType
+class SyncFolderHierarchyDeleteType extends PhpEws\EWSType
 {
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 }

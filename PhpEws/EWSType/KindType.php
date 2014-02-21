@@ -3,13 +3,16 @@
  * Definition of the KindType type.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the KindType type.
  */
-class EWSType_KindType extends EWSType
+class KindType extends PhpEws\EWSType
 {
     /**
      * Specifies that the time zone transition target is a time zone period.

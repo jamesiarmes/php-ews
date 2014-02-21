@@ -3,32 +3,35 @@
  * Definition of the GetUserOofSettingsResponse type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetUserOofSettingsResponse type
  */
-class EWSType_GetUserOofSettingsResponse extends EWSType
+class GetUserOofSettingsResponse extends PhpEws\EWSType
 {
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
      * OofSettings property
      *
-     * @var EWSType_UserOofSettings
+     * @var UserOofSettings
      */
     public $OofSettings;
 
     /**
      * AllowExternalOof property
      *
-     * @var EWSType_ExternalAudience
+     * @var ExternalAudience
      */
     public $AllowExternalOof;
 }

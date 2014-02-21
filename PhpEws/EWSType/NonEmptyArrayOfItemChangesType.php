@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfItemChangesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfItemChangesType type
  */
-class EWSType_NonEmptyArrayOfItemChangesType extends EWSType
+class NonEmptyArrayOfItemChangesType extends PhpEws\EWSType
 {
     /**
      * ItemChange property
      *
-     * @var EWSType_ItemChangeType
+     * @var ItemChangeType
      */
     public $ItemChange;
 }

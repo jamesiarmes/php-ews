@@ -3,13 +3,16 @@
  * Definition of the FractionalPageViewType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FractionalPageViewType type
  */
-class EWSType_FractionalPageViewType extends EWSType
+class FractionalPageViewType extends PhpEws\EWSType
 {
     /**
      * Numerator property

@@ -3,13 +3,16 @@
  * Definition of the EmailAddressKeyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Email address key type
  */
-class EWSType_EmailAddressKeyType extends EWSType
+class EmailAddressKeyType extends PhpEws\EWSType
 {
     /**
      * Key for a contacts first email address
@@ -34,7 +37,7 @@ class EWSType_EmailAddressKeyType extends EWSType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_EmailAddressKeyType class.
+     * EmailAddressKeyType class.
      *
      * @var string
      */

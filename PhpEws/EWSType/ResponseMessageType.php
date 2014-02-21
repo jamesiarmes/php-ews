@@ -3,13 +3,16 @@
  * Definition of the ResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResponseMessageType type
  */
-class EWSType_ResponseMessageType extends EWSType
+class ResponseMessageType extends PhpEws\EWSType
 {
     /**
      * MessageText property
@@ -21,7 +24,7 @@ class EWSType_ResponseMessageType extends EWSType
     /**
      * ResponseCode property
      *
-     * @var EWSType_ResponseCodeType
+     * @var ResponseCodeType
      */
     public $ResponseCode;
 
@@ -35,14 +38,14 @@ class EWSType_ResponseMessageType extends EWSType
     /**
      * MessageXml property
      *
-     * @var EWSType_MessageXml
+     * @var MessageXml
      */
     public $MessageXml;
 
     /**
      * ResponseClass property
      *
-     * @var EWSType_ResponseClassType
+     * @var ResponseClassType
      */
     public $ResponseClass;
 }

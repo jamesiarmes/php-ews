@@ -3,18 +3,21 @@
  * Definition of the SendNotificationResultType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SendNotificationResultType type
  */
-class EWSType_SendNotificationResultType extends EWSType
+class SendNotificationResultType extends PhpEws\EWSType
 {
     /**
      * SubscriptionStatus property
      *
-     * @var EWSType_SubscriptionStatusType
+     * @var SubscriptionStatusType
      */
     public $SubscriptionStatus;
 }

@@ -3,13 +3,16 @@
  * Definition of the ItemClassType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ItemClassType type
  */
-class EWSType_ItemClassType extends EWSType
+class ItemClassType extends PhpEws\EWSType
 {
     /**
      * A text value that is consistent with the item's type may be required. For

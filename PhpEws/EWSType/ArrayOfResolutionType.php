@@ -3,18 +3,21 @@
  * Definition of the ArrayOfResolutionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfResolutionType type
  */
-class EWSType_ArrayOfResolutionType extends EWSType
+class ArrayOfResolutionType extends PhpEws\EWSType
 {
     /**
      * Resolution property
      *
-     * @var EWSType_ResolutionType
+     * @var ResolutionType
      */
     public $Resolution;
 

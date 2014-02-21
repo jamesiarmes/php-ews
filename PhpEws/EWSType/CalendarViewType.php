@@ -3,25 +3,28 @@
  * Definition of the CalendarViewType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarViewType type
  */
-class EWSType_CalendarViewType extends EWSType
+class CalendarViewType extends PhpEws\EWSType
 {
     /**
      * StartDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $StartDate;
 
     /**
      * EndDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $EndDate;
 }

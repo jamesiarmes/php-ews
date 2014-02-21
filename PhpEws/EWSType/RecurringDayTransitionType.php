@@ -4,19 +4,22 @@
  * occurs on the same day each year.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RecurringDayTransitionType type.
  */
-class EWSType_RecurringDayTransitionType extends EWSType
+class RecurringDayTransitionType extends PhpEws\EWSType
 {
     /**
      * Specifies the Period or TransitionsGroup that is the target of the time
      * zone transition.
      *
-     * @var EWSType_TransitionTargetType
+     * @var TransitionTargetType
      */
     public $To;
 
@@ -38,7 +41,7 @@ class EWSType_RecurringDayTransitionType extends EWSType
     /**
      * The day of the week on which the time zone transition occurs.
      *
-     * @var EWSType_DayOfWeekType
+     * @var DayOfWeekType
      */
     public $DayOfWeek;
 
@@ -46,7 +49,7 @@ class EWSType_RecurringDayTransitionType extends EWSType
      * The occurrence of the day of the week in the month that the time zone
      * transition occurs.
      *
-     * @var EWSType_OccurrenceType
+     * @var OccurrenceType
      */
     public $Occurrence;
 }

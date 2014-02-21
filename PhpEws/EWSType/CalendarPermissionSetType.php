@@ -3,25 +3,28 @@
  * Definition of the CalendarPermissionSetType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarPermissionSetType type
  */
-class EWSType_CalendarPermissionSetType extends EWSType
+class CalendarPermissionSetType extends PhpEws\EWSType
 {
     /**
      * CalendarPermissions property
      *
-     * @var EWSType_ArrayOfCalendarPermissionsType
+     * @var ArrayOfCalendarPermissionsType
      */
     public $CalendarPermissions;
 
     /**
      * UnknownEntries property
      *
-     * @var EWSType_ArrayOfUnknownEntriesType
+     * @var ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
 }

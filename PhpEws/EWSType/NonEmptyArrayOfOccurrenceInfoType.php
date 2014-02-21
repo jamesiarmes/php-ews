@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfOccurrenceInfoType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfOccurrenceInfoType type
  */
-class EWSType_NonEmptyArrayOfOccurrenceInfoType extends EWSType
+class NonEmptyArrayOfOccurrenceInfoType extends PhpEws\EWSType
 {
     /**
      * Occurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $Occurrence;
 }

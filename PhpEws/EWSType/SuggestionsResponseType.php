@@ -3,25 +3,28 @@
  * Definition of the SuggestionsResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SuggestionsResponseType type
  */
-class EWSType_SuggestionsResponseType extends EWSType
+class SuggestionsResponseType extends PhpEws\EWSType
 {
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
      * SuggestionDayResultArray property
      *
-     * @var EWSType_ArrayOfSuggestionDayResult
+     * @var ArrayOfSuggestionDayResult
      */
     public $SuggestionDayResultArray;
 }

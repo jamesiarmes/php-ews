@@ -3,13 +3,16 @@
  * Definition of the AlternateIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AlternateIdType type
  */
-class EWSType_AlternateIdType extends EWSType
+class AlternateIdType extends PhpEws\EWSType
 {
     /**
      * Id property
@@ -21,7 +24,7 @@ class EWSType_AlternateIdType extends EWSType
     /**
      * Mailbox property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $Mailbox;
 }

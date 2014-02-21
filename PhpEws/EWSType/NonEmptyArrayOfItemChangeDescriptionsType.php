@@ -3,32 +3,35 @@
  * Definition of the NonEmptyArrayOfItemChangeDescriptionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfItemChangeDescriptionsType type
  */
-class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType
+class NonEmptyArrayOfItemChangeDescriptionsType extends PhpEws\EWSType
 {
     /**
      * AppendToItemField property
      *
-     * @var EWSType_AppendToItemFieldType
+     * @var AppendToItemFieldType
      */
     public $AppendToItemField;
 
     /**
      * SetItemField property
      *
-     * @var EWSType_SetItemFieldType
+     * @var SetItemFieldType
      */
     public $SetItemField;
 
     /**
      * DeleteItemField property
      *
-     * @var EWSType_DeleteItemFieldType
+     * @var DeleteItemFieldType
      */
     public $DeleteItemField;
 }

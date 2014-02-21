@@ -3,18 +3,21 @@
  * Definition of the SearchFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SearchFolderType type
  */
-class EWSType_SearchFolderType extends EWSType
+class SearchFolderType extends PhpEws\EWSType
 {
     /**
      * SearchParameters property
      *
-     * @var EWSType_SearchParametersType
+     * @var SearchParametersType
      */
     public $SearchParameters;
 }

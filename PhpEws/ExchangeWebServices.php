@@ -7,8 +7,6 @@
 
 namespace PhpEws;
 
-use PhpEws\NTLMSoapClient\Exchange;
-
 /**
  * Base class of the Exchange Web Services application.
  */
@@ -122,7 +120,7 @@ class ExchangeWebServices
         $server = null,
         $username = null,
         $password = null,
-        $version = self::VERSION_2007
+        $version = self::VERSION_2007_SP1
     ) {
         // Set the object properties.
         $this->setServer($server);
@@ -700,7 +698,7 @@ class ExchangeWebServices
      */
     protected function initializeSoapClient()
     {
-        $this->soap = new NTLMSoapClient_Exchange(
+        $this->soap = new NTLMSoapClientExchange(
             dirname(__FILE__).'/wsdl/services.wsdl',
             array(
                 'user' => $this->username,
@@ -710,10 +708,18 @@ class ExchangeWebServices
                 'impersonation' => $this->impersonation,
             )
         );
-
+        if (!is_null($this->version)) {
+        	$_soapverheader = new \SoapHeader(
+        			'http://schemas.microsoft.com/exchange/services/2006/types',
+        			sprintf('RequestServerVersion Version="%s"', $this->version));
+        	$this->soap->__setSoapHeaders($_soapverheader);
+        }
+        $this->soap->setUser( $this->username );
+        $this->soap->setPassword( $this->password );
+        
         return $this->soap;
     }
-
+    
     /**
      * Process a response to verify that it succeeded and take the appropriate
      * action
@@ -728,8 +734,7 @@ class ExchangeWebServices
     protected function processResponse($response)
     {
         // If the soap call failed then we need to thow an exception.
-        $code = $this->soap->getResponseCode();
-        if ($code != 200) {
+        if ( $response->ResponseMessages->FindItemResponseMessage->ResponseClass !== 'Success') {
             throw new EWS_Exception('SOAP client returned status of '.$code, $code);
         }
 

@@ -3,13 +3,17 @@
  * Definition of the AlternatePublicFolderItemIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
+
+namespace EWSType;
+
+use PhpEws;
 
 /**
  * Definition of the AlternatePublicFolderItemIdType type
  */
-class EWSType_AlternatePublicFolderItemIdType extends EWSType
+class AlternatePublicFolderItemIdType extends PhpEws\EWSType
 {
     /**
      * ItemId property

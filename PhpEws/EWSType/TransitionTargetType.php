@@ -4,19 +4,22 @@
  * zone period or a group of time zone transitions.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TransitionTargetType type.
  */
-class EWSType_TransitionTargetType extends EWSType
+class TransitionTargetType extends PhpEws\EWSType
 {
     /**
      * Indicates whether the time zone transition target is a time zone period
      * or of a group of time zone transitions.
      *
-     * @var EWSType_KindType
+     * @var KindType
      */
     public $Kind;
 

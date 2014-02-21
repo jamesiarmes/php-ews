@@ -3,18 +3,21 @@
  * Definition of the ArrayOfSuggestion type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfSuggestion type
  */
-class EWSType_ArrayOfSuggestion extends EWSType
+class ArrayOfSuggestion extends PhpEws\EWSType
 {
     /**
      * Suggestion property
      *
-     * @var EWSType_Suggestion
+     * @var Suggestion
      */
     public $Suggestion;
 }

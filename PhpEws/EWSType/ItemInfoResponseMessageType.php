@@ -3,18 +3,21 @@
  * Definition of the ItemInfoResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ItemInfoResponseMessageType type
  */
-class EWSType_ItemInfoResponseMessageType extends EWSType
+class ItemInfoResponseMessageType extends PhpEws\EWSType
 {
     /**
      * Items property
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var ArrayOfRealItemsType
      */
     public $Items;
 }

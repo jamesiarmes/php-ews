@@ -3,32 +3,35 @@
  * Definition of the PathToExtendedFieldType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PathToExtendedFieldType type
  */
-class EWSType_PathToExtendedFieldType extends EWSType
+class PathToExtendedFieldType extends PhpEws\EWSType
 {
     /**
      * DistinguishedPropertySetId property
      *
-     * @var EWSType_DistinguishedPropertySetType
+     * @var DistinguishedPropertySetType
      */
     public $DistinguishedPropertySetId;
 
     /**
      * PropertySetId property
      *
-     * @var EWSType_GuidType
+     * @var GuidType
      */
     public $PropertySetId;
 
     /**
      * PropertyTag property
      *
-     * @var EWSType_PropertyTagType
+     * @var PropertyTagType
      */
     public $PropertyTag;
 
@@ -49,7 +52,7 @@ class EWSType_PathToExtendedFieldType extends EWSType
     /**
      * PropertyType property
      *
-     * @var EWSType_MapiPropertyTypeType
+     * @var MapiPropertyTypeType
      */
     public $PropertyType;
 }

@@ -3,25 +3,28 @@
  * Definition of the GetUserAvailabilityResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetUserAvailabilityResponseType type
  */
-class EWSType_GetUserAvailabilityResponseType extends EWSType
+class GetUserAvailabilityResponseType extends PhpEws\EWSType
 {
     /**
      * FreeBusyResponseArray property
      *
-     * @var EWSType_ArrayOfFreeBusyResponse
+     * @var ArrayOfFreeBusyResponse
      */
     public $FreeBusyResponseArray;
 
     /**
      * SuggestionsResponse property
      *
-     * @var EWSType_SuggestionsResponseType
+     * @var SuggestionsResponseType
      */
     public $SuggestionsResponse;
 }

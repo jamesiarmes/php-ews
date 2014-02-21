@@ -3,46 +3,49 @@
  * Definition of the SyncFolderHierarchyCreateOrUpdateType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderHierarchyCreateOrUpdateType type
  */
-class EWSType_SyncFolderHierarchyCreateOrUpdateType extends EWSType
+class SyncFolderHierarchyCreateOrUpdateType extends PhpEws\EWSType
 {
     /**
      * Folder property
      *
-     * @var EWSType_FolderType
+     * @var FolderType
      */
     public $Folder;
 
     /**
      * CalendarFolder property
      *
-     * @var EWSType_CalendarFolderType
+     * @var CalendarFolderType
      */
     public $CalendarFolder;
 
     /**
      * ContactsFolder property
      *
-     * @var EWSType_ContactsFolderType
+     * @var ContactsFolderType
      */
     public $ContactsFolder;
 
     /**
      * SearchFolder property
      *
-     * @var EWSType_SearchFolderType
+     * @var SearchFolderType
      */
     public $SearchFolder;
 
     /**
      * TasksFolder property
      *
-     * @var EWSType_TasksFolderType
+     * @var TasksFolderType
      */
     public $TasksFolder;
 }

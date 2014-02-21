@@ -3,13 +3,16 @@
  * Definition of the SuggestionsViewOptionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SuggestionsViewOptionsType type
  */
-class EWSType_SuggestionsViewOptionsType extends EWSType
+class SuggestionsViewOptionsType extends PhpEws\EWSType
 {
     /**
      * GoodThreshold property
@@ -42,21 +45,21 @@ class EWSType_SuggestionsViewOptionsType extends EWSType
     /**
      * MinimumSuggestionQuality property
      *
-     * @var EWSType_SuggestionQuality
+     * @var SuggestionQuality
      */
     public $MinimumSuggestionQuality;
 
     /**
      * DetailedSuggestionsWindow property
      *
-     * @var EWSType_Duration
+     * @var Duration
      */
     public $DetailedSuggestionsWindow;
 
     /**
      * CurrentMeetingTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $CurrentMeetingTime;
 

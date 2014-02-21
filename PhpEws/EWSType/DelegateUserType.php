@@ -3,25 +3,28 @@
  * Definition of the DelegateUserType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DelegateUserType type
  */
-class EWSType_DelegateUserType extends EWSType
+class DelegateUserType extends PhpEws\EWSType
 {
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 
     /**
      * DelegatePermissions property
      *
-     * @var EWSType_DelegatePermissionsType
+     * @var DelegatePermissionsType
      */
     public $DelegatePermissions;
 

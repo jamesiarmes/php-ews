@@ -3,13 +3,16 @@
  * Definition of the ImAddressKeyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Instant messenger address key type
  */
-class EWSType_ImAddressKeyType extends EWSType
+class ImAddressKeyType extends PhpEws\EWSType
 {
     /**
      * Instant messenger ket for instant messenger address one.
@@ -34,7 +37,7 @@ class EWSType_ImAddressKeyType extends EWSType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_ImAddressKeyType class.
+     * ImAddressKeyType class.
      *
      * @var string
      */

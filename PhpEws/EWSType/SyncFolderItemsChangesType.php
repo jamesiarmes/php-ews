@@ -3,39 +3,42 @@
  * Definition of the SyncFolderItemsChangesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderItemsChangesType type
  */
-class EWSType_SyncFolderItemsChangesType extends EWSType
+class SyncFolderItemsChangesType extends PhpEws\EWSType
 {
     /**
      * Create property
      *
-     * @var EWSType_SyncFolderItemsCreateOrUpdateType
+     * @var SyncFolderItemsCreateOrUpdateType
      */
     public $Create;
 
     /**
      * Update property
      *
-     * @var EWSType_SyncFolderItemsCreateOrUpdateType
+     * @var SyncFolderItemsCreateOrUpdateType
      */
     public $Update;
 
     /**
      * Delete property
      *
-     * @var EWSType_SyncFolderItemsDeleteType
+     * @var SyncFolderItemsDeleteType
      */
     public $Delete;
 
     /**
      * ReadFlagChange property
      *
-     * @var EWSType_SyncFolderItemsReadFlagType
+     * @var SyncFolderItemsReadFlagType
      */
     public $ReadFlagChange;
 }

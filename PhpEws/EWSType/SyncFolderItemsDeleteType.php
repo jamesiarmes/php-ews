@@ -3,18 +3,21 @@
  * Definition of the SyncFolderItemsDeleteType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderItemsDeleteType type
  */
-class EWSType_SyncFolderItemsDeleteType extends EWSType
+class SyncFolderItemsDeleteType extends PhpEws\EWSType
 {
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 }

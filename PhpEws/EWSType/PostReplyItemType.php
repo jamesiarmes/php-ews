@@ -3,18 +3,21 @@
  * Definition of the PostReplyItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PostReplyItemType type
  */
-class EWSType_PostReplyItemType extends EWSType
+class PostReplyItemType extends PhpEws\EWSType
 {
     /**
      * NewBodyContent property
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $NewBodyContent;
 }

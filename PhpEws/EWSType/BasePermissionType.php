@@ -3,18 +3,21 @@
  * Definition of the BasePermissionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BasePermissionType type
  */
-class EWSType_BasePermissionType extends EWSType
+class BasePermissionType extends PhpEws\EWSType
 {
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 
@@ -56,14 +59,14 @@ class EWSType_BasePermissionType extends EWSType
     /**
      * EditItems property
      *
-     * @var EWSType_PermissionActionType
+     * @var PermissionActionType
      */
     public $EditItems;
 
     /**
      * DeleteItems property
      *
-     * @var EWSType_PermissionActionType
+     * @var PermissionActionType
      */
     public $DeleteItems;
 }

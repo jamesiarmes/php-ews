@@ -3,13 +3,16 @@
  * Definition of the RootItemIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RootItemIdType type
  */
-class EWSType_RootItemIdType extends EWSType
+class RootItemIdType extends PhpEws\EWSType
 {
     /**
      * RootItemId property

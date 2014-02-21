@@ -3,13 +3,16 @@
  * Definition of the DisposalType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Types of deletion for items and folders
  */
-class EWSType_DisposalType extends EWSType
+class DisposalType extends PhpEws\EWSType
 {
     /**
      * Deletes the item irrevocably. Does not move the item to the Deleted Items

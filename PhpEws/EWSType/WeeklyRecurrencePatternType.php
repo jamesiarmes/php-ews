@@ -3,18 +3,21 @@
  * Definition of the WeeklyRecurrencePatternType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the WeeklyRecurrencePatternType type
  */
-class EWSType_WeeklyRecurrencePatternType extends EWSType
+class WeeklyRecurrencePatternType extends PhpEws\EWSType
 {
     /**
      * DaysOfWeek property
      *
-     * @var EWSType_DaysOfWeekType
+     * @var DaysOfWeekType
      */
     public $DaysOfWeek;
 }

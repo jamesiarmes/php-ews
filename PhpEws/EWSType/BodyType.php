@@ -3,13 +3,16 @@
  * Definition of the BodyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BodyType type
  */
-class EWSType_BodyType extends EWSType
+class BodyType extends PhpEws\EWSType
 {
     /**
      * _ property
@@ -21,7 +24,7 @@ class EWSType_BodyType extends EWSType
     /**
      * BodyType property
      *
-     * @var EWSType_BodyTypeType
+     * @var BodyTypeType
      */
     public $BodyType;
 }

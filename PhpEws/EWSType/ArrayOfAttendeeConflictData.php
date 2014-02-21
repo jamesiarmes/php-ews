@@ -3,39 +3,42 @@
  * Definition of the ArrayOfAttendeeConflictData type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfAttendeeConflictData type
  */
-class EWSType_ArrayOfAttendeeConflictData extends EWSType
+class ArrayOfAttendeeConflictData extends PhpEws\EWSType
 {
     /**
      * UnknownAttendeeConflictData property
      *
-     * @var EWSType_UnknownAttendeeConflictData
+     * @var UnknownAttendeeConflictData
      */
     public $UnknownAttendeeConflictData;
 
     /**
      * IndividualAttendeeConflictData property
      *
-     * @var EWSType_IndividualAttendeeConflictData
+     * @var IndividualAttendeeConflictData
      */
     public $IndividualAttendeeConflictData;
 
     /**
      * TooBigGroupAttendeeConflictData property
      *
-     * @var EWSType_TooBigGroupAttendeeConflictData
+     * @var TooBigGroupAttendeeConflictData
      */
     public $TooBigGroupAttendeeConflictData;
 
     /**
      * GroupAttendeeConflictData property
      *
-     * @var EWSType_GroupAttendeeConflictData
+     * @var GroupAttendeeConflictData
      */
     public $GroupAttendeeConflictData;
 }

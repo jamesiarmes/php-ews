@@ -3,13 +3,16 @@
  * Definition of the SidAndAttributesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SidAndAttributesType type
  */
-class EWSType_SidAndAttributesType extends EWSType
+class SidAndAttributesType extends PhpEws\EWSType
 {
     /**
      * SecurityIdentifier property
@@ -21,7 +24,7 @@ class EWSType_SidAndAttributesType extends EWSType
     /**
      * Attributes property
      *
-     * @var EWSType_unsignedInt
+     * @var unsignedInt
      */
     public $Attributes;
 }

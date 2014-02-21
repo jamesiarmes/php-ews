@@ -3,32 +3,35 @@
  * Definition of the MovedCopiedEventType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MovedCopiedEventType type
  */
-class EWSType_MovedCopiedEventType extends EWSType
+class MovedCopiedEventType extends PhpEws\EWSType
 {
     /**
      * OldFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $OldFolderId;
 
     /**
      * OldItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $OldItemId;
 
     /**
      * OldParentFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $OldParentFolderId;
 }

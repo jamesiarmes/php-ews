@@ -3,18 +3,21 @@
  * Definition of the BaseDelegateType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseDelegateType type
  */
-class EWSType_BaseDelegateType extends EWSType
+class BaseDelegateType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

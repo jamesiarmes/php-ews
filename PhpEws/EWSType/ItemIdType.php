@@ -3,13 +3,16 @@
  * Definition of the ItemIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ItemIdType type
  */
-class EWSType_ItemIdType extends EWSType
+class ItemIdType extends PhpEws\EWSType
 {
     /**
      * Id property

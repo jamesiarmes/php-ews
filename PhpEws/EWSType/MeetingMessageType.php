@@ -3,18 +3,21 @@
  * Definition of the MeetingMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MeetingMessageType type
  */
-class EWSType_MeetingMessageType extends EWSType
+class MeetingMessageType extends PhpEws\EWSType
 {
     /**
      * AssociatedCalendarItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $AssociatedCalendarItemId;
 
@@ -42,7 +45,7 @@ class EWSType_MeetingMessageType extends EWSType
     /**
      * ResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $ResponseType;
 
@@ -56,14 +59,14 @@ class EWSType_MeetingMessageType extends EWSType
     /**
      * RecurrenceId property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $RecurrenceId;
 
     /**
      * DateTimeStamp property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeStamp;
 }

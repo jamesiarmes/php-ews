@@ -3,13 +3,16 @@
  * Definition of the ConnectingSIDType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ConnectingSIDType type
  */
-class EWSType_ConnectingSIDType extends EWSType
+class ConnectingSIDType extends PhpEws\EWSType
 {
     /**
      * PrincipalName property

@@ -3,32 +3,35 @@
  * Definition of the NonEmptyArrayOfFolderChangeDescriptionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfFolderChangeDescriptionsType type
  */
-class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
+class NonEmptyArrayOfFolderChangeDescriptionsType extends PhpEws\EWSType
 {
     /**
      * AppendToFolderField property
      *
-     * @var EWSType_AppendToFolderFieldType
+     * @var AppendToFolderFieldType
      */
     public $AppendToFolderField;
 
     /**
      * SetFolderField property
      *
-     * @var EWSType_SetFolderFieldType
+     * @var SetFolderFieldType
      */
     public $SetFolderField;
 
     /**
      * DeleteFolderField property
      *
-     * @var EWSType_DeleteFolderFieldType
+     * @var DeleteFolderFieldType
      */
     public $DeleteFolderField;
 }

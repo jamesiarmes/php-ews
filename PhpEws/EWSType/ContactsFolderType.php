@@ -3,18 +3,21 @@
  * Definition of the ContactsFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ContactsFolderType type
  */
-class EWSType_ContactsFolderType extends EWSType
+class ContactsFolderType extends PhpEws\EWSType
 {
     /**
      * PermissionSet property
      *
-     * @var EWSType_PermissionSetType
+     * @var PermissionSetType
      */
     public $PermissionSet;
 }

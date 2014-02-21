@@ -3,18 +3,21 @@
  * Definition of the UnsubscribeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the UnsubscribeType type
  */
-class EWSType_UnsubscribeType extends EWSType
+class UnsubscribeType extends PhpEws\EWSType
 {
     /**
      * SubscriptionId property
      *
-     * @var EWSType_SubscriptionIdType
+     * @var SubscriptionIdType
      */
     public $SubscriptionId;
 }

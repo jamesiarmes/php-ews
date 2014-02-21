@@ -3,25 +3,28 @@
  * Definition of the AddDelegateType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AddDelegateType type
  */
-class EWSType_AddDelegateType extends EWSType
+class AddDelegateType extends PhpEws\EWSType
 {
     /**
      * DelegateUsers property
      *
-     * @var EWSType_ArrayOfDelegateUserType
+     * @var ArrayOfDelegateUserType
      */
     public $DelegateUsers;
 
     /**
      * DeliverMeetingRequests property
      *
-     * @var EWSType_DeliverMeetingRequestsType
+     * @var DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
 }

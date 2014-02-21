@@ -3,18 +3,22 @@
  * Definition of the ItemResponseShapeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
+
+namespace EWSType;
+
+use PhpEws;
 
 /**
  * Definition of the ItemResponseShapeType type
  */
-class EWSType_ItemResponseShapeType extends EWSType
+class ItemResponseShapeType extends PhpEws\EWSType
 {
     /**
      * BaseShape property
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var DefaultShapeNamesType
      */
     public $BaseShape;
 
@@ -28,14 +32,14 @@ class EWSType_ItemResponseShapeType extends EWSType
     /**
      * BodyType property
      *
-     * @var EWSType_BodyTypeResponseType
+     * @var BodyTypeResponseType
      */
     public $BodyType;
 
     /**
      * AdditionalProperties property
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 }

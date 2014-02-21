@@ -3,13 +3,16 @@
  * Definition of the BodyTypeResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Default shape names for response shapes
  */
-class EWSType_BodyTypeResponseType extends EWSType
+class BodyTypeResponseType extends PhpEws\EWSType
 {
     /**
      * All properties are retured in the response

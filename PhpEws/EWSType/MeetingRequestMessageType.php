@@ -3,46 +3,49 @@
  * Definition of the MeetingRequestMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MeetingRequestMessageType type
  */
-class EWSType_MeetingRequestMessageType extends EWSType
+class MeetingRequestMessageType extends PhpEws\EWSType
 {
     /**
      * MeetingRequestType property
      *
-     * @var EWSType_MeetingRequestTypeType
+     * @var MeetingRequestTypeType
      */
     public $MeetingRequestType;
 
     /**
      * IntendedFreeBusyStatus property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $IntendedFreeBusyStatus;
 
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $OriginalStart;
 
@@ -56,7 +59,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
     /**
      * LegacyFreeBusyStatus property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -105,42 +108,42 @@ class EWSType_MeetingRequestMessageType extends EWSType
     /**
      * CalendarItemType property
      *
-     * @var EWSType_CalendarItemTypeType
+     * @var CalendarItemTypeType
      */
     public $CalendarItemType;
 
     /**
      * MyResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $MyResponseType;
 
     /**
      * Organizer property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Organizer;
 
     /**
      * RequiredAttendees property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $RequiredAttendees;
 
     /**
      * OptionalAttendees property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $OptionalAttendees;
 
     /**
      * Resources property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $Resources;
 
@@ -161,14 +164,14 @@ class EWSType_MeetingRequestMessageType extends EWSType
     /**
      * ConflictingMeetings property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $ConflictingMeetings;
 
     /**
      * AdjacentMeetings property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $AdjacentMeetings;
 
@@ -189,7 +192,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
     /**
      * AppointmentReplyTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $AppointmentReplyTime;
 
@@ -210,42 +213,42 @@ class EWSType_MeetingRequestMessageType extends EWSType
     /**
      * Recurrence property
      *
-     * @var EWSType_RecurrenceType
+     * @var RecurrenceType
      */
     public $Recurrence;
 
     /**
      * FirstOccurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $FirstOccurrence;
 
     /**
      * LastOccurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $LastOccurrence;
 
     /**
      * ModifiedOccurrences property
      *
-     * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
+     * @var NonEmptyArrayOfOccurrenceInfoType
      */
     public $ModifiedOccurrences;
 
     /**
      * DeletedOccurrences property
      *
-     * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
+     * @var NonEmptyArrayOfDeletedOccurrencesType
      */
     public $DeletedOccurrences;
 
     /**
      * MeetingTimeZone property
      *
-     * @var EWSType_TimeZoneType
+     * @var TimeZoneType
      */
     public $MeetingTimeZone;
 

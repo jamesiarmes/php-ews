@@ -3,13 +3,16 @@
  * Definition of the AttachmentIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AttachmentIdType type
  */
-class EWSType_AttachmentIdType extends EWSType
+class AttachmentIdType extends PhpEws\EWSType
 {
     /**
      * RootItemId property

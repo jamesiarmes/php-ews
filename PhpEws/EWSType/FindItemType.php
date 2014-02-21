@@ -3,92 +3,92 @@
  * Definition of the FindItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
-namespace PhpEws\EWSType; 
+namespace EWSType;
 
-use EWSType;
+use PhpEws;
 
 /**
  * Definition of the FindItemType type
  */
-class EWSType_FindItemType extends EWSType
+class FindItemType extends PhpEws\EWSType
 {
     /**
      * ItemShape property
      *
-     * @var EWSType_ItemResponseShapeType
+     * @var ItemResponseShapeType
      */
     public $ItemShape;
 
     /**
      * IndexedPageItemView property
      *
-     * @var EWSType_IndexedPageViewType
+     * @var IndexedPageViewType
      */
     public $IndexedPageItemView;
 
     /**
      * FractionalPageItemView property
      *
-     * @var EWSType_FractionalPageViewType
+     * @var FractionalPageViewType
      */
     public $FractionalPageItemView;
 
     /**
      * CalendarView property
      *
-     * @var EWSType_CalendarViewType
+     * @var CalendarViewType
      */
     public $CalendarView;
 
     /**
      * ContactsView property
      *
-     * @var EWSType_ContactsViewType
+     * @var ContactsViewType
      */
     public $ContactsView;
 
     /**
      * GroupBy property
      *
-     * @var EWSType_GroupByType
+     * @var GroupByType
      */
     public $GroupBy;
 
     /**
      * DistinguishedGroupBy property
      *
-     * @var EWSType_DistinguishedGroupByType
+     * @var DistinguishedGroupByType
      */
     public $DistinguishedGroupBy;
 
     /**
      * Restriction property
      *
-     * @var EWSType_RestrictionType
+     * @var RestrictionType
      */
     public $Restriction;
 
     /**
      * SortOrder property
      *
-     * @var EWSType_NonEmptyArrayOfFieldOrdersType
+     * @var NonEmptyArrayOfFieldOrdersType
      */
     public $SortOrder;
 
     /**
      * ParentFolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $ParentFolderIds;
 
     /**
      * Traversal property
      *
-     * @var EWSType_ItemQueryTraversalType
+     * @var ItemQueryTraversalType
      */
     public $Traversal;
 }

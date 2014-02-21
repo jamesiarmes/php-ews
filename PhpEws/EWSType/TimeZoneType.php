@@ -3,32 +3,35 @@
  * Definition of the TimeZoneType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TimeZoneType type
  */
-class EWSType_TimeZoneType extends EWSType
+class TimeZoneType extends PhpEws\EWSType
 {
     /**
      * BaseOffset property
      *
-     * @var EWSType_duration
+     * @var duration
      */
     public $BaseOffset;
 
     /**
      * Standard property
      *
-     * @var EWSType_TimeChangeType
+     * @var TimeChangeType
      */
     public $Standard;
 
     /**
      * Daylight property
      *
-     * @var EWSType_TimeChangeType
+     * @var TimeChangeType
      */
     public $Daylight;
 

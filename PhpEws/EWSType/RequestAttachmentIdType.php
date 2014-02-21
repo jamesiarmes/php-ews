@@ -3,13 +3,16 @@
  * Definition of the RequestAttachmentIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RequestAttachmentIdType type
  */
-class EWSType_RequestAttachmentIdType extends EWSType
+class RequestAttachmentIdType extends PhpEws\EWSType
 {
     /**
      * Id property

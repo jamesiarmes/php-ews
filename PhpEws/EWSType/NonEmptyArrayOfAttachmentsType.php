@@ -3,25 +3,28 @@
  * Definition of the NonEmptyArrayOfAttachmentsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfAttachmentsType type
  */
-class EWSType_NonEmptyArrayOfAttachmentsType extends EWSType
+class NonEmptyArrayOfAttachmentsType extends PhpEws\EWSType
 {
     /**
      * ItemAttachment property
      *
-     * @var EWSType_ItemAttachmentType
+     * @var ItemAttachmentType
      */
     public $ItemAttachment;
 
     /**
      * FileAttachment property
      *
-     * @var EWSType_FileAttachmentType
+     * @var FileAttachmentType
      */
     public $FileAttachment;
 }

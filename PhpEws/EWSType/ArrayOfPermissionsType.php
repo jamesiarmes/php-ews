@@ -3,18 +3,21 @@
  * Definition of the ArrayOfPermissionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfPermissionsType type
  */
-class EWSType_ArrayOfPermissionsType extends EWSType
+class ArrayOfPermissionsType extends PhpEws\EWSType
 {
     /**
      * Permission property
      *
-     * @var EWSType_PermissionType
+     * @var PermissionType
      */
     public $Permission;
 }

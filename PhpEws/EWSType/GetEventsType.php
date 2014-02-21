@@ -3,25 +3,28 @@
  * Definition of the GetEventsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetEventsType type
  */
-class EWSType_GetEventsType extends EWSType
+class GetEventsType extends PhpEws\EWSType
 {
     /**
      * SubscriptionId property
      *
-     * @var EWSType_SubscriptionIdType
+     * @var SubscriptionIdType
      */
     public $SubscriptionId;
 
     /**
      * Watermark property
      *
-     * @var EWSType_WatermarkType
+     * @var WatermarkType
      */
     public $Watermark;
 }

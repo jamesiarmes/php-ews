@@ -3,18 +3,21 @@
  * Definition of the FindItemResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FindItemResponseMessageType type
  */
-class EWSType_FindItemResponseMessageType extends EWSType
+class FindItemResponseMessageType extends PhpEws\EWSType
 {
     /**
      * RootFolder property
      *
-     * @var EWSType_FindItemParentType
+     * @var FindItemParentType
      */
     public $RootFolder;
 }

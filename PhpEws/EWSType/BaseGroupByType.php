@@ -3,18 +3,21 @@
  * Definition of the BaseGroupByType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseGroupByType type
  */
-class EWSType_BaseGroupByType extends EWSType
+class BaseGroupByType extends PhpEws\EWSType
 {
     /**
      * Order property
      *
-     * @var EWSType_SortDirectionType
+     * @var SortDirectionType
      */
     public $Order;
 }

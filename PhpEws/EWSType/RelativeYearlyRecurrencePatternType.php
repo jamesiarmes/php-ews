@@ -3,32 +3,35 @@
  * Definition of the RelativeYearlyRecurrencePatternType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RelativeYearlyRecurrencePatternType type
  */
-class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
+class RelativeYearlyRecurrencePatternType extends PhpEws\EWSType
 {
     /**
      * DaysOfWeek property
      *
-     * @var EWSType_DayOfWeekType
+     * @var DayOfWeekType
      */
     public $DaysOfWeek;
 
     /**
      * DayOfWeekIndex property
      *
-     * @var EWSType_DayOfWeekIndexType
+     * @var DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
 
     /**
      * Month property
      *
-     * @var EWSType_MonthNamesType
+     * @var MonthNamesType
      */
     public $Month;
 }

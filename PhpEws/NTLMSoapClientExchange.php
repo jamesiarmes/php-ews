@@ -25,11 +25,17 @@
  * @subpackage NTLM
  */
 
+namespace PhpEws;
+
 /**
  * Soap Client using Microsoft's NTLM Authentication.
  */
-class NTLMSoapClient extends SoapClient
+class NTLMSoapClientExchange extends \SoapClient
 {
+	
+	protected $user;
+	protected $password;
+	
     /**
      * cURL resource used to make the SOAP request
      *
@@ -44,6 +50,14 @@ class NTLMSoapClient extends SoapClient
      */
     protected $validate = false;
 
+    public function setUser( $user ) {
+    	$this->user = $user;
+    }
+    
+    public function setPassword( $password ) {
+    	$this->password = $password;
+    }
+    
     /**
      * Performs a SOAP request
      *
@@ -80,7 +94,7 @@ class NTLMSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
 
         $response = curl_exec($this->ch);
-
+// var_dump($response);
         // TODO: Add some real error handling.
         // If the response if false than there was an error and we should throw
         // an exception.

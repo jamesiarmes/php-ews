@@ -3,25 +3,28 @@
  * Definition of the BaseMoveCopyFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseMoveCopyFolderType type
  */
-class EWSType_BaseMoveCopyFolderType extends EWSType
+class BaseMoveCopyFolderType extends PhpEws\EWSType
 {
     /**
      * ToFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $ToFolderId;
 
     /**
      * FolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 }

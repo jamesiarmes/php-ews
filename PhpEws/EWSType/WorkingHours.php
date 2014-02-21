@@ -3,25 +3,28 @@
  * Definition of the WorkingHours type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the WorkingHours type
  */
-class EWSType_WorkingHours extends EWSType
+class WorkingHours extends PhpEws\EWSType
 {
     /**
      * TimeZone property
      *
-     * @var EWSType_SerializableTimeZone
+     * @var SerializableTimeZone
      */
     public $TimeZone;
 
     /**
      * WorkingPeriodArray property
      *
-     * @var EWSType_ArrayOfWorkingPeriod
+     * @var ArrayOfWorkingPeriod
      */
     public $WorkingPeriodArray;
 }

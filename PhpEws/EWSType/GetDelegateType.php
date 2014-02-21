@@ -3,18 +3,21 @@
  * Definition of the GetDelegateType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetDelegateType type
  */
-class EWSType_GetDelegateType extends EWSType
+class GetDelegateType extends PhpEws\EWSType
 {
     /**
      * UserIds property
      *
-     * @var EWSType_ArrayOfUserIdType
+     * @var ArrayOfUserIdType
      */
     public $UserIds;
 

@@ -3,18 +3,21 @@
  * Definition of the ArrayOfDLExpansionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfDLExpansionType type
  */
-class EWSType_ArrayOfDLExpansionType extends EWSType
+class ArrayOfDLExpansionType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 

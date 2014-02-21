@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfAttendeesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfAttendeesType type
  */
-class EWSType_NonEmptyArrayOfAttendeesType extends EWSType
+class NonEmptyArrayOfAttendeesType extends PhpEws\EWSType
 {
     /**
      * Attendee property
      *
-     * @var EWSType_AttendeeType
+     * @var AttendeeType
      */
     public $Attendee;
 }

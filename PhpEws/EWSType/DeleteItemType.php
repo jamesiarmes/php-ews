@@ -3,39 +3,42 @@
  * Definition of the DeleteItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DeleteItemType type
  */
-class EWSType_DeleteItemType extends EWSType
+class DeleteItemType extends PhpEws\EWSType
 {
     /**
      * ItemIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 
     /**
      * DeleteType property
      *
-     * @var EWSType_DisposalType
+     * @var DisposalType
      */
     public $DeleteType;
 
     /**
      * SendMeetingCancellations property
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingCancellations;
 
     /**
      * AffectedTaskOccurrences property
      *
-     * @var EWSType_AffectedTaskOccurrencesType
+     * @var AffectedTaskOccurrencesType
      */
     public $AffectedTaskOccurrences;
 }

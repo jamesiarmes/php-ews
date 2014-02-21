@@ -3,18 +3,21 @@
  * Definition of the DistinguishedGroupByType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DistinguishedGroupByType type
  */
-class EWSType_DistinguishedGroupByType extends EWSType
+class DistinguishedGroupByType extends PhpEws\EWSType
 {
     /**
      * StandardGroupBy property
      *
-     * @var EWSType_StandardGroupByType
+     * @var StandardGroupByType
      */
     public $StandardGroupBy;
 }

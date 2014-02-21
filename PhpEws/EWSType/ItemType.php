@@ -3,19 +3,22 @@
  * Definition of the ItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ItemType type
  */
-class EWSType_ItemType extends EWSType
+class ItemType extends PhpEws\EWSType
 {
     /**
      * Contains the native Multipurpose Internet Mail Extensions (MIME) stream
      * of an object that is represented in base64Binary format.
      *
-     * @var EWSType_MimeContentType
+     * @var MimeContentType
      */
     public $MimeContent;
 
@@ -23,7 +26,7 @@ class EWSType_ItemType extends EWSType
      * Contains the unique identifier and change key of an item in the Exchange
      * store.
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
@@ -31,14 +34,14 @@ class EWSType_ItemType extends EWSType
      * Represents the identifier of the parent folder that contains the item or
      * folder.
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $ParentFolderId;
 
     /**
      * Represents the message class of an item.
      *
-     * @var EWSType_ItemClassType
+     * @var ItemClassType
      */
     public $ItemClass;
 
@@ -52,14 +55,14 @@ class EWSType_ItemType extends EWSType
     /**
      * Indicates the sensitivity level of an item.
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var SensitivityChoicesType
      */
     public $Sensitivity;
 
     /**
      * Represents the actual body content of a message.
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $Body;
 
@@ -67,14 +70,14 @@ class EWSType_ItemType extends EWSType
      * Contains the items or files that are attached to an item in the Exchange
      * store. This property is read-only.
      *
-     * @var EWSType_NonEmptyArrayOfAttachmentsType
+     * @var NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
 
     /**
      * Represents the date and time that an item in a mailbox was received.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeReceived;
 
@@ -89,14 +92,14 @@ class EWSType_ItemType extends EWSType
      * Represents a collection of strings that identify the categories to which
      * an item in the mailbox belongs.
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Categories;
 
     /**
      * Describes the importance of an item.
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var ImportanceChoicesType
      */
     public $Importance;
 
@@ -147,14 +150,14 @@ class EWSType_ItemType extends EWSType
      * Represents the collection of all Internet message headers that are
      * contained in an item in a mailbox.
      *
-     * @var EWSType_NonEmptyArrayOfInternetHeadersType
+     * @var NonEmptyArrayOfInternetHeadersType
      */
     public $InternetMessageHeaders;
 
     /**
      * Represents the date and time that an item in a mailbox was sent.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeSent;
 
@@ -162,7 +165,7 @@ class EWSType_ItemType extends EWSType
      * Represents the date and time that a given item in the mailbox was
      * created.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeCreated;
 
@@ -170,7 +173,7 @@ class EWSType_ItemType extends EWSType
      * Contains a collection of all the response objects that are associated
      * with an item in the Exchange store.
      *
-     * @var EWSType_NonEmptyArrayOfResponseObjectsType
+     * @var NonEmptyArrayOfResponseObjectsType
      */
     public $ResponseObjects;
 
@@ -179,7 +182,7 @@ class EWSType_ItemType extends EWSType
      * ReminderMinutesBeforeStart element to determine when the reminder is
      * displayed.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $ReminderDueBy;
 
@@ -195,7 +198,7 @@ class EWSType_ItemType extends EWSType
      * Represents the number of minutes before an event when a reminder is
      * displayed.
      *
-     * @var EWSType_ReminderMinutesBeforeStartType
+     * @var ReminderMinutesBeforeStartType
      */
     public $ReminderMinutesBeforeStart;
 
@@ -226,14 +229,14 @@ class EWSType_ItemType extends EWSType
     /**
      * Identifies extended properties on folders and items.
      *
-     * @var EWSType_ExtendedPropertyType
+     * @var ExtendedPropertyType
      */
     public $ExtendedProperty;
 
     /**
      * Represents the culture for a given item in a mailbox.
      *
-     * @var EWSType_language
+     * @var language
      */
     public $Culture;
 
@@ -241,7 +244,7 @@ class EWSType_ItemType extends EWSType
      * Contains the client's rights based on the permission settings for the
      * item or folder. This property is read-only.
      *
-     * @var EWSType_EffectiveRightsType
+     * @var EffectiveRightsType
      */
     public $EffectiveRights;
 
@@ -255,7 +258,7 @@ class EWSType_ItemType extends EWSType
     /**
      * Indicates when an item was last modified.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $LastModifiedTime;
 
@@ -285,7 +288,7 @@ class EWSType_ItemType extends EWSType
     /**
      * Contains the identifier of an item or conversation.
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ConversationId;
 
@@ -293,7 +296,7 @@ class EWSType_ItemType extends EWSType
      * Represents an HTML fragment or plain text which represents the unique
      * body of this conversation.
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $UniqueBody;
 }

@@ -3,25 +3,28 @@
  * Definition of the FolderResponseShapeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FolderResponseShapeType type
  */
-class EWSType_FolderResponseShapeType extends EWSType
+class FolderResponseShapeType extends PhpEws\EWSType
 {
     /**
      * BaseShape property
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var DefaultShapeNamesType
      */
     public $BaseShape;
 
     /**
      * AdditionalProperties property
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 }

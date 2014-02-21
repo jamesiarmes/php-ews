@@ -3,13 +3,16 @@
  * Defines a timezone.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TimeZoneDefinitionType type.
  */
-class EWSType_TimeZoneDefinitionType extends EWSType
+class TimeZoneDefinitionType extends PhpEws\EWSType
 {
     /**
      * Unique identifier of the time zone definition.
@@ -29,21 +32,21 @@ class EWSType_TimeZoneDefinitionType extends EWSType
      * Array of Period elements that define the time offset at different stages
      * of the time zone.
      *
-     * @var EWSType_NonEmptyArrayOfPeriodsType
+     * @var NonEmptyArrayOfPeriodsType
      */
     public $Periods;
 
     /**
      * Array of TransitionsGroup elements that specify time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsGroupsType
+     * @var ArrayOfTransitionsGroupsType
      */
     public $TransitionsGroups;
 
     /**
      * Array of time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsType
+     * @var ArrayOfTransitionsType
      */
     public $Transitions;
 }

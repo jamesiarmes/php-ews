@@ -3,13 +3,16 @@
  * Definition of the CalendarItemCreateOrDeleteOperationType type.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarItemCreateOrDeleteOperationType type.
  */
-class EWSType_CalendarItemCreateOrDeleteOperationType extends EWSType
+class CalendarItemCreateOrDeleteOperationType extends PhpEws\EWSType
 {
     /**
      * Send to no recipients.

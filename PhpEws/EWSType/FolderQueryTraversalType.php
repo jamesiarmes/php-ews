@@ -3,13 +3,16 @@
  * Definition of the FolderQueryTraversalType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Types of sub-tree traversal for deletion and enumeration
  */
-class EWSType_FolderQueryTraversalType extends EWSType
+class FolderQueryTraversalType extends PhpEws\EWSType
 {
     /**
      * Consider both direct children as well as all subfolders contained within

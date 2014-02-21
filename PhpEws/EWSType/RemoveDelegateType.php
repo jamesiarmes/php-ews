@@ -3,18 +3,21 @@
  * Definition of the RemoveDelegateType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RemoveDelegateType type
  */
-class EWSType_RemoveDelegateType extends EWSType
+class RemoveDelegateType extends PhpEws\EWSType
 {
     /**
      * UserIds property
      *
-     * @var EWSType_ArrayOfUserIdType
+     * @var ArrayOfUserIdType
      */
     public $UserIds;
 }

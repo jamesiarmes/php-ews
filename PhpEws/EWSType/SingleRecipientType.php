@@ -3,18 +3,21 @@
  * Definition of the SingleRecipientType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SingleRecipientType type
  */
-class EWSType_SingleRecipientType extends EWSType
+class SingleRecipientType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

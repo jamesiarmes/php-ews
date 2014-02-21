@@ -3,13 +3,16 @@
  * Definition of the PhoneNumberDictionaryEntryType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PhoneNumberDictionaryEntryType type
  */
-class EWSType_PhoneNumberDictionaryEntryType extends EWSType
+class PhoneNumberDictionaryEntryType extends PhpEws\EWSType
 {
     /**
      * _ property
@@ -21,7 +24,7 @@ class EWSType_PhoneNumberDictionaryEntryType extends EWSType
     /**
      * Key property
      *
-     * @var EWSType_PhoneNumberKeyType
+     * @var PhoneNumberKeyType
      */
     public $Key;
 }

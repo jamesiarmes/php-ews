@@ -3,18 +3,21 @@
  * Definition of the DeleteAttachmentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DeleteAttachmentType type
  */
-class EWSType_DeleteAttachmentType extends EWSType
+class DeleteAttachmentType extends PhpEws\EWSType
 {
     /**
      * AttachmentIds property
      *
-     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
+     * @var NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
 }

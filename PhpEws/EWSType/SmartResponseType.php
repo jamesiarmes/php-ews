@@ -3,18 +3,21 @@
  * Definition of the SmartResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SmartResponseType type
  */
-class EWSType_SmartResponseType extends EWSType
+class SmartResponseType extends PhpEws\EWSType
 {
     /**
      * NewBodyContent property
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $NewBodyContent;
 }

@@ -3,25 +3,28 @@
  * Definition of the CreateFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CreateFolderType type
  */
-class EWSType_CreateFolderType extends EWSType
+class CreateFolderType extends PhpEws\EWSType
 {
     /**
      * ParentFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $ParentFolderId;
 
     /**
      * Folders property
      *
-     * @var EWSType_NonEmptyArrayOfFoldersType
+     * @var NonEmptyArrayOfFoldersType
      */
     public $Folders;
 }

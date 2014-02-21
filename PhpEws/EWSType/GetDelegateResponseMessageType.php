@@ -3,18 +3,21 @@
  * Definition of the GetDelegateResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetDelegateResponseMessageType type
  */
-class EWSType_GetDelegateResponseMessageType extends EWSType
+class GetDelegateResponseMessageType extends PhpEws\EWSType
 {
     /**
      * DeliverMeetingRequests property
      *
-     * @var EWSType_DeliverMeetingRequestsType
+     * @var DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
 }

@@ -3,18 +3,21 @@
  * Definition of the DeleteAttachmentResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DeleteAttachmentResponseMessageType type
  */
-class EWSType_DeleteAttachmentResponseMessageType extends EWSType
+class DeleteAttachmentResponseMessageType extends PhpEws\EWSType
 {
     /**
      * RootItemId property
      *
-     * @var EWSType_RootItemIdType
+     * @var RootItemIdType
      */
     public $RootItemId;
 }

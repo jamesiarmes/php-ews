@@ -3,18 +3,21 @@
  * Definition of the PullSubscriptionRequestType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PullSubscriptionRequestType type
  */
-class EWSType_PullSubscriptionRequestType extends EWSType
+class PullSubscriptionRequestType extends PhpEws\EWSType
 {
     /**
      * Timeout property
      *
-     * @var EWSType_SubscriptionTimeoutType
+     * @var SubscriptionTimeoutType
      */
     public $Timeout;
 }

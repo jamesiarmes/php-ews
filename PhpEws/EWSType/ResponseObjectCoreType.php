@@ -3,18 +3,21 @@
  * Definition of the ResponseObjectCoreType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ResponseObjectCoreType type
  */
-class EWSType_ResponseObjectCoreType extends EWSType
+class ResponseObjectCoreType extends PhpEws\EWSType
 {
     /**
      * ReferenceItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ReferenceItemId;
 }

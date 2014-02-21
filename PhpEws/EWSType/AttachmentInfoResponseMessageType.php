@@ -3,18 +3,21 @@
  * Definition of the AttachmentInfoResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AttachmentInfoResponseMessageType type
  */
-class EWSType_AttachmentInfoResponseMessageType extends EWSType
+class AttachmentInfoResponseMessageType extends PhpEws\EWSType
 {
     /**
      * Attachments property
      *
-     * @var EWSType_ArrayOfAttachmentsType
+     * @var ArrayOfAttachmentsType
      */
     public $Attachments;
 }

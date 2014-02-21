@@ -3,18 +3,21 @@
  * Definition of the ProxySecurityContextType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ProxySecurityContextType type
  */
-class EWSType_ProxySecurityContextType extends EWSType
+class ProxySecurityContextType extends PhpEws\EWSType
 {
     /**
      * _ property
      *
-     * @var EWSType_base64Binary
+     * @var base64Binary
      */
     public $_;
 }

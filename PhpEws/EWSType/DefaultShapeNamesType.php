@@ -3,13 +3,17 @@
  * Definition of the DefaultShapeNamesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
+
+namespace EWSType;
+
+use PhpEws;
 
 /**
  * Default shape names for response shapes
  */
-class EWSType_DefaultShapeNamesType extends EWSType
+class DefaultShapeNamesType extends PhpEws\EWSType
 {
     /**
      * All properties are retured in the response

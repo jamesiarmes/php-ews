@@ -3,13 +3,16 @@
  * Definition of the DistinguishedFolderIdNameType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * URIs for the distinguished folders accessible from a mailbox
  */
-class EWSType_DistinguishedFolderIdNameType extends EWSType
+class DistinguishedFolderIdNameType extends PhpEws\EWSType
 {
     /**
      * Calendar folder

@@ -3,13 +3,16 @@
  * Defines the well-known property set IDs for extended MAPI properties.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DistinguishedPropertySetIdType type.
  */
-class EWSType_DistinguishedPropertySetIdType extends EWSType
+class DistinguishedPropertySetIdType extends PhpEws\EWSType
 {
     /**
      * Identifies the address property set ID by name.

@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfNotificationEventTypesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfNotificationEventTypesType type
  */
-class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
+class NonEmptyArrayOfNotificationEventTypesType extends PhpEws\EWSType
 {
     /**
      * EventType property
      *
-     * @var EWSType_NotificationEventTypeType
+     * @var NotificationEventTypeType
      */
     public $EventType;
 }

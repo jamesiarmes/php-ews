@@ -3,13 +3,16 @@
  * Definition of the ArrayOfStringsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfStringsType type
  */
-class EWSType_ArrayOfStringsType extends EWSType
+class ArrayOfStringsType extends PhpEws\EWSType
 {
     /**
      * String property

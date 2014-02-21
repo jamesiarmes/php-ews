@@ -3,13 +3,16 @@
  * Definition of the NonEmptyArrayOfPropertyValuesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfPropertyValuesType type
  */
-class EWSType_NonEmptyArrayOfPropertyValuesType extends EWSType
+class NonEmptyArrayOfPropertyValuesType extends PhpEws\EWSType
 {
     /**
      * Value property

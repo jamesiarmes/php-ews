@@ -3,13 +3,16 @@
  * Definition of the AttachmentResponseShapeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AttachmentResponseShapeType type
  */
-class EWSType_AttachmentResponseShapeType extends EWSType
+class AttachmentResponseShapeType extends PhpEws\EWSType
 {
     /**
      * IncludeMimeContent property
@@ -21,14 +24,14 @@ class EWSType_AttachmentResponseShapeType extends EWSType
     /**
      * BodyType property
      *
-     * @var EWSType_BodyTypeResponseType
+     * @var BodyTypeResponseType
      */
     public $BodyType;
 
     /**
      * AdditionalProperties property
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 }

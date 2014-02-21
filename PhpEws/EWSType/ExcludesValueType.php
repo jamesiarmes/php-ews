@@ -3,18 +3,21 @@
  * Definition of the ExcludesValueType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ExcludesValueType type
  */
-class EWSType_ExcludesValueType extends EWSType
+class ExcludesValueType extends PhpEws\EWSType
 {
     /**
      * Value property
      *
-     * @var EWSType_ExcludesAttributeType
+     * @var ExcludesAttributeType
      */
     public $Value;
 }

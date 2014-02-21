@@ -3,18 +3,21 @@
  * Definition of the Suggestion type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the Suggestion type
  */
-class EWSType_Suggestion extends EWSType
+class Suggestion extends PhpEws\EWSType
 {
     /**
      * MeetingTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $MeetingTime;
 
@@ -28,14 +31,14 @@ class EWSType_Suggestion extends EWSType
     /**
      * SuggestionQuality property
      *
-     * @var EWSType_SuggestionQuality
+     * @var SuggestionQuality
      */
     public $SuggestionQuality;
 
     /**
      * AttendeeConflictDataArray property
      *
-     * @var EWSType_ArrayOfAttendeeConflictData
+     * @var ArrayOfAttendeeConflictData
      */
     public $AttendeeConflictDataArray;
 }

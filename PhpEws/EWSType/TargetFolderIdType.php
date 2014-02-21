@@ -3,25 +3,28 @@
  * Definition of the TargetFolderIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TargetFolderIdType type
  */
-class EWSType_TargetFolderIdType extends EWSType
+class TargetFolderIdType extends PhpEws\EWSType
 {
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * DistinguishedFolderId property
      *
-     * @var EWSType_DistinguishedFolderIdType
+     * @var DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
 }

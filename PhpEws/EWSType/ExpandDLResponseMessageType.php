@@ -3,18 +3,21 @@
  * Definition of the ExpandDLResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ExpandDLResponseMessageType type
  */
-class EWSType_ExpandDLResponseMessageType extends EWSType
+class ExpandDLResponseMessageType extends PhpEws\EWSType
 {
     /**
      * DLExpansion property
      *
-     * @var EWSType_ArrayOfDLExpansionType
+     * @var ArrayOfDLExpansionType
      */
     public $DLExpansion;
 

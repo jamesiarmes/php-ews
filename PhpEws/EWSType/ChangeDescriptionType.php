@@ -3,18 +3,21 @@
  * Definition of the ChangeDescriptionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ChangeDescriptionType type
  */
-class EWSType_ChangeDescriptionType extends EWSType
+class ChangeDescriptionType extends PhpEws\EWSType
 {
     /**
      * Path property
      *
-     * @var EWSType_BasePathToElementType
+     * @var BasePathToElementType
      */
     public $Path;
 }

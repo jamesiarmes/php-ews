@@ -3,18 +3,21 @@
  * Definition of the FolderInfoResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FolderInfoResponseMessageType type
  */
-class EWSType_FolderInfoResponseMessageType extends EWSType
+class FolderInfoResponseMessageType extends PhpEws\EWSType
 {
     /**
      * Folders property
      *
-     * @var EWSType_ArrayOfFoldersType
+     * @var ArrayOfFoldersType
      */
     public $Folders;
 }

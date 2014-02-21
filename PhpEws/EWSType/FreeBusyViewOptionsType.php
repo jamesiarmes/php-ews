@@ -3,18 +3,21 @@
  * Definition of the FreeBusyViewOptionsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FreeBusyViewOptionsType type
  */
-class EWSType_FreeBusyViewOptionsType extends EWSType
+class FreeBusyViewOptionsType extends PhpEws\EWSType
 {
     /**
      * TimeWindow property
      *
-     * @var EWSType_Duration
+     * @var Duration
      */
     public $TimeWindow;
 
@@ -28,7 +31,7 @@ class EWSType_FreeBusyViewOptionsType extends EWSType
     /**
      * RequestedView property
      *
-     * @var EWSType_FreeBusyViewType
+     * @var FreeBusyViewType
      */
     public $RequestedView;
 }

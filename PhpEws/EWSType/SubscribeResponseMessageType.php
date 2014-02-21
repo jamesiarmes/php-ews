@@ -3,25 +3,28 @@
  * Definition of the SubscribeResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SubscribeResponseMessageType type
  */
-class EWSType_SubscribeResponseMessageType extends EWSType
+class SubscribeResponseMessageType extends PhpEws\EWSType
 {
     /**
      * SubscriptionId property
      *
-     * @var EWSType_SubscriptionIdType
+     * @var SubscriptionIdType
      */
     public $SubscriptionId;
 
     /**
      * Watermark property
      *
-     * @var EWSType_WatermarkType
+     * @var WatermarkType
      */
     public $Watermark;
 }

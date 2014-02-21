@@ -3,19 +3,22 @@
  * Represents a time zone transition that occurs on a specific date each year.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RecurringDateTransitionType type.
  */
-class EWSType_RecurringDateTransitionType extends EWSType
+class RecurringDateTransitionType extends PhpEws\EWSType
 {
     /**
      * Specifies the Period or TransitionsGroup that is the target of the time
      * zone transition.
      *
-     * @var EWSType_TransitionTargetType
+     * @var TransitionTargetType
      */
     public $To;
 

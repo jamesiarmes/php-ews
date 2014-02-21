@@ -3,13 +3,16 @@
  * Definition of the ArrayOfUnknownEntriesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfUnknownEntriesType type
  */
-class EWSType_ArrayOfUnknownEntriesType extends EWSType
+class ArrayOfUnknownEntriesType extends PhpEws\EWSType
 {
     /**
      * UnknownEntry property

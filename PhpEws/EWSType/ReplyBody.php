@@ -3,13 +3,16 @@
  * Definition of the ReplyBody type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ReplyBody type
  */
-class EWSType_ReplyBody extends EWSType
+class ReplyBody extends PhpEws\EWSType
 {
     /**
      * Message property
@@ -21,7 +24,7 @@ class EWSType_ReplyBody extends EWSType
     /**
      * lang property
      *
-     * @var EWSType_UNKNOWN
+     * @var UNKNOWN
      */
     public $lang;
 }

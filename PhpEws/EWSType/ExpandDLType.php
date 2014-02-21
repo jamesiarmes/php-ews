@@ -3,18 +3,21 @@
  * Definition of the ExpandDLType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ExpandDLType type
  */
-class EWSType_ExpandDLType extends EWSType
+class ExpandDLType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

@@ -3,13 +3,16 @@
  * Definition of the CalendarEvent type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarEvent type
  */
-class EWSType_CalendarEvent extends EWSType
+class CalendarEvent extends PhpEws\EWSType
 {
     /**
      * Start date and time of the event in ISO 8601 format.
@@ -28,14 +31,14 @@ class EWSType_CalendarEvent extends EWSType
     /**
      * BusyType property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $BusyType;
 
     /**
      * CalendarEventDetails property
      *
-     * @var EWSType_CalendarEventDetails
+     * @var CalendarEventDetails
      */
     public $CalendarEventDetails;
 }

@@ -3,13 +3,16 @@
  * Definition of the FileAsMappingType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Mapping types for Contacts
  */
-class EWSType_FileAsMappingType extends EWSType
+class FileAsMappingType extends PhpEws\EWSType
 {
     /**
      * File as mapping for "company"
@@ -104,7 +107,7 @@ class EWSType_FileAsMappingType extends EWSType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_FileAsMappingType class.
+     * FileAsMappingType class.
      *
      * @var string
      */

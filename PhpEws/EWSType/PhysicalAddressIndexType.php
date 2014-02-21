@@ -3,13 +3,16 @@
  * Definition of the PhysicalAddressIndexType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PhysicalAddressIndexType type
  */
-class EWSType_PhysicalAddressIndexType extends EWSType
+class PhysicalAddressIndexType extends PhpEws\EWSType
 {
     /**
      * Address index for business.

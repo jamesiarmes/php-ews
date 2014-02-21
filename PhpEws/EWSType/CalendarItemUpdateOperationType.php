@@ -3,13 +3,16 @@
  * Definition of the CalendarItemUpdateOperationType type.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarItemUpdateOperationType type.
  */
-class EWSType_CalendarItemUpdateOperationType extends EWSType
+class CalendarItemUpdateOperationType extends PhpEws\EWSType
 {
     /**
      * Send to no attendees.

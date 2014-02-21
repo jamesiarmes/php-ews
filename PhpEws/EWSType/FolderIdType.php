@@ -3,13 +3,16 @@
  * Definition of the FolderIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FolderIdType type
  */
-class EWSType_FolderIdType extends EWSType
+class FolderIdType extends PhpEws\EWSType
 {
     /**
      * Id property

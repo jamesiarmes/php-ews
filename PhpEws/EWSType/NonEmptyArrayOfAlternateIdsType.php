@@ -3,32 +3,35 @@
  * Definition of the NonEmptyArrayOfAlternateIdsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfAlternateIdsType type
  */
-class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
+class NonEmptyArrayOfAlternateIdsType extends PhpEws\EWSType
 {
     /**
      * AlternateId property
      *
-     * @var EWSType_AlternateIdType
+     * @var AlternateIdType
      */
     public $AlternateId;
 
     /**
      * AlternatePublicFolderId property
      *
-     * @var EWSType_AlternatePublicFolderIdType
+     * @var AlternatePublicFolderIdType
      */
     public $AlternatePublicFolderId;
 
     /**
      * AlternatePublicFolderItemId property
      *
-     * @var EWSType_AlternatePublicFolderItemIdType
+     * @var AlternatePublicFolderItemIdType
      */
     public $AlternatePublicFolderItemId;
 }

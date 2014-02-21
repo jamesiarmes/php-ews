@@ -3,18 +3,21 @@
  * Definition of the ReferenceItemResponseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ReferenceItemResponseType type
  */
-class EWSType_ReferenceItemResponseType extends EWSType
+class ReferenceItemResponseType extends PhpEws\EWSType
 {
     /**
      * ReferenceItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ReferenceItemId;
 

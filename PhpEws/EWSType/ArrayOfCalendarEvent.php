@@ -3,18 +3,21 @@
  * Definition of the ArrayOfCalendarEvent type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfCalendarEvent type
  */
-class EWSType_ArrayOfCalendarEvent extends EWSType
+class ArrayOfCalendarEvent extends PhpEws\EWSType
 {
     /**
      * CalendarEvent property
      *
-     * @var EWSType_CalendarEvent
+     * @var CalendarEvent
      */
     public $CalendarEvent;
 }

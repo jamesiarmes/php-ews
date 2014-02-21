@@ -3,25 +3,28 @@
  * Definition of the NotificationType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NotificationType type
  */
-class EWSType_NotificationType extends EWSType
+class NotificationType extends PhpEws\EWSType
 {
     /**
      * SubscriptionId property
      *
-     * @var EWSType_SubscriptionIdType
+     * @var SubscriptionIdType
      */
     public $SubscriptionId;
 
     /**
      * PreviousWatermark property
      *
-     * @var EWSType_WatermarkType
+     * @var WatermarkType
      */
     public $PreviousWatermark;
 
@@ -35,49 +38,49 @@ class EWSType_NotificationType extends EWSType
     /**
      * CopiedEvent property
      *
-     * @var EWSType_MovedCopiedEventType
+     * @var MovedCopiedEventType
      */
     public $CopiedEvent;
 
     /**
      * CreatedEvent property
      *
-     * @var EWSType_BaseObjectChangedEventType
+     * @var BaseObjectChangedEventType
      */
     public $CreatedEvent;
 
     /**
      * DeletedEvent property
      *
-     * @var EWSType_BaseObjectChangedEventType
+     * @var BaseObjectChangedEventType
      */
     public $DeletedEvent;
 
     /**
      * ModifiedEvent property
      *
-     * @var EWSType_ModifiedEventType
+     * @var ModifiedEventType
      */
     public $ModifiedEvent;
 
     /**
      * MovedEvent property
      *
-     * @var EWSType_MovedCopiedEventType
+     * @var MovedCopiedEventType
      */
     public $MovedEvent;
 
     /**
      * NewMailEvent property
      *
-     * @var EWSType_BaseObjectChangedEventType
+     * @var BaseObjectChangedEventType
      */
     public $NewMailEvent;
 
     /**
      * StatusEvent property
      *
-     * @var EWSType_BaseNotificationEventType
+     * @var BaseNotificationEventType
      */
     public $StatusEvent;
 }

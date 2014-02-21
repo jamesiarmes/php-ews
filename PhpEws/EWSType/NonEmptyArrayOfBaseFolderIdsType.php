@@ -3,25 +3,28 @@
  * Definition of the NonEmptyArrayOfBaseFolderIdsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfBaseFolderIdsType type
  */
-class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
+class NonEmptyArrayOfBaseFolderIdsType extends PhpEws\EWSType
 {
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * DistinguishedFolderId property
      *
-     * @var EWSType_DistinguishedFolderIdType
+     * @var DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
 }

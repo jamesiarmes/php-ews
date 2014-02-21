@@ -3,39 +3,42 @@
  * Definition of the AggregateOnType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the AggregateOnType type
  */
-class EWSType_AggregateOnType extends EWSType
+class AggregateOnType extends PhpEws\EWSType
 {
     /**
      * FieldURI property
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * IndexedFieldURI property
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * Aggregate property
      *
-     * @var EWSType_AggregateType
+     * @var AggregateType
      */
     public $Aggregate;
 }

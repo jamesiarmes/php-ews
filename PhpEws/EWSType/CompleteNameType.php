@@ -3,13 +3,16 @@
  * Definition of the CompleteNameType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CompleteNameType type
  */
-class EWSType_CompleteNameType extends EWSType
+class CompleteNameType extends PhpEws\EWSType
 {
     /**
      * Title property

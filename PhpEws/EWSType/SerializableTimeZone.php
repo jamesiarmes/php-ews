@@ -3,13 +3,16 @@
  * Definition of the SerializableTimeZone type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SerializableTimeZone type
  */
-class EWSType_SerializableTimeZone extends EWSType
+class SerializableTimeZone extends PhpEws\EWSType
 {
     /**
      * Bias property
@@ -21,14 +24,14 @@ class EWSType_SerializableTimeZone extends EWSType
     /**
      * StandardTime property
      *
-     * @var EWSType_SerializableTimeZoneTime
+     * @var SerializableTimeZoneTime
      */
     public $StandardTime;
 
     /**
      * DaylightTime property
      *
-     * @var EWSType_SerializableTimeZoneTime
+     * @var SerializableTimeZoneTime
      */
     public $DaylightTime;
 }

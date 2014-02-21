@@ -3,32 +3,35 @@
  * Definition of the SyncFolderHierarchyChangesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderHierarchyChangesType type
  */
-class EWSType_SyncFolderHierarchyChangesType extends EWSType
+class SyncFolderHierarchyChangesType extends PhpEws\EWSType
 {
     /**
      * Create property
      *
-     * @var EWSType_SyncFolderHierarchyCreateOrUpdateType
+     * @var SyncFolderHierarchyCreateOrUpdateType
      */
     public $Create;
 
     /**
      * Update property
      *
-     * @var EWSType_SyncFolderHierarchyCreateOrUpdateType
+     * @var SyncFolderHierarchyCreateOrUpdateType
      */
     public $Update;
 
     /**
      * Delete property
      *
-     * @var EWSType_SyncFolderHierarchyDeleteType
+     * @var SyncFolderHierarchyDeleteType
      */
     public $Delete;
 }

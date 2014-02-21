@@ -3,25 +3,28 @@
  * Definition of the SyncFolderItemsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderItemsType type
  */
-class EWSType_SyncFolderItemsType extends EWSType
+class SyncFolderItemsType extends PhpEws\EWSType
 {
     /**
      * ItemShape property
      *
-     * @var EWSType_ItemResponseShapeType
+     * @var ItemResponseShapeType
      */
     public $ItemShape;
 
     /**
      * SyncFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SyncFolderId;
 
@@ -35,14 +38,14 @@ class EWSType_SyncFolderItemsType extends EWSType
     /**
      * Ignore property
      *
-     * @var EWSType_ArrayOfBaseItemIdsType
+     * @var ArrayOfBaseItemIdsType
      */
     public $Ignore;
 
     /**
      * MaxChangesReturned property
      *
-     * @var EWSType_MaxSyncChangesReturnedType
+     * @var MaxSyncChangesReturnedType
      */
     public $MaxChangesReturned;
 }

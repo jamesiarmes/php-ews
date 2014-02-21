@@ -3,46 +3,49 @@
  * Definition of the GroupByType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GroupByType type
  */
-class EWSType_GroupByType extends EWSType
+class GroupByType extends PhpEws\EWSType
 {
     /**
      * FieldURI property
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * IndexedFieldURI property
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * AggregateOn property
      *
-     * @var EWSType_AggregateOnType
+     * @var AggregateOnType
      */
     public $AggregateOn;
 
     /**
      * Order property
      *
-     * @var EWSType_SortDirectionType
+     * @var SortDirectionType
      */
     public $Order;
 }

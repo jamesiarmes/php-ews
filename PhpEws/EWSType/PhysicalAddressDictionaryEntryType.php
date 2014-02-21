@@ -3,13 +3,16 @@
  * Definition of the PhysicalAddressDictionaryEntryType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PhysicalAddressDictionaryEntryType type
  */
-class EWSType_PhysicalAddressDictionaryEntryType extends EWSType
+class PhysicalAddressDictionaryEntryType extends PhpEws\EWSType
 {
     /**
      * Street property
@@ -49,7 +52,7 @@ class EWSType_PhysicalAddressDictionaryEntryType extends EWSType
     /**
      * Key property
      *
-     * @var EWSType_PhysicalAddressKeyType
+     * @var PhysicalAddressKeyType
      */
     public $Key;
 }

@@ -3,25 +3,28 @@
  * Definition of the GetAttachmentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetAttachmentType type
  */
-class EWSType_GetAttachmentType extends EWSType
+class GetAttachmentType extends PhpEws\EWSType
 {
     /**
      * AttachmentShape property
      *
-     * @var EWSType_AttachmentResponseShapeType
+     * @var AttachmentResponseShapeType
      */
     public $AttachmentShape;
 
     /**
      * AttachmentIds property
      *
-     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
+     * @var NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
 }

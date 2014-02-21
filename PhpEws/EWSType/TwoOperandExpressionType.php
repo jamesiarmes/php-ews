@@ -3,25 +3,28 @@
  * Definition of the TwoOperandExpressionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the TwoOperandExpressionType type
  */
-class EWSType_TwoOperandExpressionType extends EWSType
+class TwoOperandExpressionType extends PhpEws\EWSType
 {
     /**
      * Path property
      *
-     * @var EWSType_BasePathToElementType
+     * @var BasePathToElementType
      */
     public $Path;
 
     /**
      * FieldURIOrConstant property
      *
-     * @var EWSType_FieldURIOrConstantType
+     * @var FieldURIOrConstantType
      */
     public $FieldURIOrConstant;
 }

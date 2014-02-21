@@ -3,25 +3,28 @@
  * Definition of the Duration type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the Duration type
  */
-class EWSType_Duration extends EWSType
+class Duration extends PhpEws\EWSType
 {
     /**
      * StartTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $StartTime;
 
     /**
      * EndTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $EndTime;
 }

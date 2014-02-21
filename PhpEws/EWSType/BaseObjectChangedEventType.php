@@ -3,39 +3,42 @@
  * Definition of the BaseObjectChangedEventType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseObjectChangedEventType type
  */
-class EWSType_BaseObjectChangedEventType extends EWSType
+class BaseObjectChangedEventType extends PhpEws\EWSType
 {
     /**
      * TimeStamp property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $TimeStamp;
 
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
     /**
      * ParentFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $ParentFolderId;
 }

@@ -3,13 +3,16 @@
  * Definition of the EmailAddressType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the EmailAddressType type
  */
-class EWSType_EmailAddressType extends EWSType
+class EmailAddressType extends PhpEws\EWSType
 {
     /**
      * Name property
@@ -21,28 +24,28 @@ class EWSType_EmailAddressType extends EWSType
     /**
      * EmailAddress property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $EmailAddress;
 
     /**
      * RoutingType property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $RoutingType;
 
     /**
      * MailboxType property
      *
-     * @var EWSType_MailboxTypeType
+     * @var MailboxTypeType
      */
     public $MailboxType;
 
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 }

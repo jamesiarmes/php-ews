@@ -3,13 +3,16 @@
  * Definition of the MimeContentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the MimeContentType type
  */
-class EWSType_MimeContentType extends EWSType
+class MimeContentType extends PhpEws\EWSType
 {
     /**
      * A text value that represents a base64Binary MIME stream.

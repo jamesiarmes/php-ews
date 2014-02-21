@@ -3,74 +3,77 @@
  * Definition of the RecurrenceType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the RecurrenceType type
  */
-class EWSType_RecurrenceType extends EWSType
+class RecurrenceType extends PhpEws\EWSType
 {
     /**
      * RelativeYearlyRecurrence property
      *
-     * @var EWSType_RelativeYearlyRecurrencePatternType
+     * @var RelativeYearlyRecurrencePatternType
      */
     public $RelativeYearlyRecurrence;
 
     /**
      * AbsoluteYearlyRecurrence property
      *
-     * @var EWSType_AbsoluteYearlyRecurrencePatternType
+     * @var AbsoluteYearlyRecurrencePatternType
      */
     public $AbsoluteYearlyRecurrence;
 
     /**
      * RelativeMonthlyRecurrence property
      *
-     * @var EWSType_RelativeMonthlyRecurrencePatternType
+     * @var RelativeMonthlyRecurrencePatternType
      */
     public $RelativeMonthlyRecurrence;
 
     /**
      * AbsoluteMonthlyRecurrence property
      *
-     * @var EWSType_AbsoluteMonthlyRecurrencePatternType
+     * @var AbsoluteMonthlyRecurrencePatternType
      */
     public $AbsoluteMonthlyRecurrence;
 
     /**
      * WeeklyRecurrence property
      *
-     * @var EWSType_WeeklyRecurrencePatternType
+     * @var WeeklyRecurrencePatternType
      */
     public $WeeklyRecurrence;
 
     /**
      * DailyRecurrence property
      *
-     * @var EWSType_DailyRecurrencePatternType
+     * @var DailyRecurrencePatternType
      */
     public $DailyRecurrence;
 
     /**
      * NoEndRecurrence property
      *
-     * @var EWSType_NoEndRecurrenceRangeType
+     * @var NoEndRecurrenceRangeType
      */
     public $NoEndRecurrence;
 
     /**
      * EndDateRecurrence property
      *
-     * @var EWSType_EndDateRecurrenceRangeType
+     * @var EndDateRecurrenceRangeType
      */
     public $EndDateRecurrence;
 
     /**
      * NumberedRecurrence property
      *
-     * @var EWSType_NumberedRecurrenceRangeType
+     * @var NumberedRecurrenceRangeType
      */
     public $NumberedRecurrence;
 }

@@ -3,18 +3,21 @@
  * Definition of the WorkingPeriod type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the WorkingPeriod type
  */
-class EWSType_WorkingPeriod extends EWSType
+class WorkingPeriod extends PhpEws\EWSType
 {
     /**
      * DayOfWeek property
      *
-     * @var EWSType_DaysOfWeekType
+     * @var DaysOfWeekType
      */
     public $DayOfWeek;
 

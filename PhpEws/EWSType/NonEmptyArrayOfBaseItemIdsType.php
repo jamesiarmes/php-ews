@@ -3,32 +3,35 @@
  * Definition of the NonEmptyArrayOfBaseItemIdsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfBaseItemIdsType type
  */
-class EWSType_NonEmptyArrayOfBaseItemIdsType extends EWSType
+class NonEmptyArrayOfBaseItemIdsType extends PhpEws\EWSType
 {
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
     /**
      * OccurrenceItemId property
      *
-     * @var EWSType_OccurrenceItemIdType
+     * @var OccurrenceItemIdType
      */
     public $OccurrenceItemId;
 
     /**
      * RecurringMasterItemId property
      *
-     * @var EWSType_RecurringMasterItemIdType
+     * @var RecurringMasterItemIdType
      */
     public $RecurringMasterItemId;
 }

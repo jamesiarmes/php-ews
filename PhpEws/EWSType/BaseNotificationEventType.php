@@ -3,18 +3,21 @@
  * Definition of the BaseNotificationEventType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseNotificationEventType type
  */
-class EWSType_BaseNotificationEventType extends EWSType
+class BaseNotificationEventType extends PhpEws\EWSType
 {
     /**
      * Watermark property
      *
-     * @var EWSType_WatermarkType
+     * @var WatermarkType
      */
     public $Watermark;
 }

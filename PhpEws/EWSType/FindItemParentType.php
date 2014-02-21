@@ -3,25 +3,28 @@
  * Definition of the FindItemParentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FindItemParentType type
  */
-class EWSType_FindItemParentType extends EWSType
+class FindItemParentType extends PhpEws\EWSType
 {
     /**
      * Items property
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var ArrayOfRealItemsType
      */
     public $Items;
 
     /**
      * Groups property
      *
-     * @var EWSType_ArrayOfGroupedItemsType
+     * @var ArrayOfGroupedItemsType
      */
     public $Groups;
 

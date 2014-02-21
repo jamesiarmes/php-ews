@@ -3,18 +3,21 @@
  * Definition of the EndDateRecurrenceRangeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the EndDateRecurrenceRangeType type
  */
-class EWSType_EndDateRecurrenceRangeType extends EWSType
+class EndDateRecurrenceRangeType extends PhpEws\EWSType
 {
     /**
      * EndDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $EndDate;
 }

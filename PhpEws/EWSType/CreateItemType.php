@@ -3,39 +3,42 @@
  * Definition of the CreateItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CreateItemType type
  */
-class EWSType_CreateItemType extends EWSType
+class CreateItemType extends PhpEws\EWSType
 {
     /**
      * SavedItemFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SavedItemFolderId;
 
     /**
      * Items property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $Items;
 
     /**
      * MessageDisposition property
      *
-     * @var EWSType_MessageDispositionType
+     * @var MessageDispositionType
      */
     public $MessageDisposition;
 
     /**
      * SendMeetingInvitations property
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingInvitations;
 }

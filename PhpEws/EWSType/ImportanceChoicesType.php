@@ -3,13 +3,16 @@
  * Definition of the ImportanceChoicesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ImportanceChoicesType type
  */
-class EWSType_ImportanceChoicesType extends EWSType
+class ImportanceChoicesType extends PhpEws\EWSType
 {
     /**
      * Importance level of the item.

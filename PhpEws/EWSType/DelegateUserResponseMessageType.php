@@ -3,18 +3,21 @@
  * Definition of the DelegateUserResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DelegateUserResponseMessageType type
  */
-class EWSType_DelegateUserResponseMessageType extends EWSType
+class DelegateUserResponseMessageType extends PhpEws\EWSType
 {
     /**
      * DelegateUser property
      *
-     * @var EWSType_DelegateUserType
+     * @var DelegateUserType
      */
     public $DelegateUser;
 }

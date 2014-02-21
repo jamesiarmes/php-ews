@@ -3,13 +3,16 @@
  * Definition of the EffectiveRightsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the EffectiveRightsType type
  */
-class EWSType_EffectiveRightsType extends EWSType
+class EffectiveRightsType extends PhpEws\EWSType
 {
     /**
      * CreateAssociated property

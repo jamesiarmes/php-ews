@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfPathsToElementType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfPathsToElementType type
  */
-class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
+class NonEmptyArrayOfPathsToElementType extends PhpEws\EWSType
 {
     /**
      * Path property
      *
-     * @var EWSType_BasePathToElementType
+     * @var BasePathToElementType
      */
     public $Path;
 }

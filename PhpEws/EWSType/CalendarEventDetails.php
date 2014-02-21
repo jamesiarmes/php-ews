@@ -3,13 +3,16 @@
  * Definition of the CalendarEventDetails type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarEventDetails type
  */
-class EWSType_CalendarEventDetails extends EWSType
+class CalendarEventDetails extends PhpEws\EWSType
 {
     /**
      * ID property

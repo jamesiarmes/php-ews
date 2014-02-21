@@ -3,13 +3,16 @@
  * Definition of the CalendarItemType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the CalendarItemType type
  */
-class EWSType_CalendarItemType extends EWSType_ItemType
+class CalendarItemType extends ItemType
 {
     /**
      * Identifies a calendar item.
@@ -21,7 +24,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
     /**
      * Used to identify a specific instance of a recurring calendar item.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $RecurrenceId;
 
@@ -29,7 +32,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Indicates the date and time that an instance of a iCalendar object was
      * created.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeStamp;
 
@@ -37,7 +40,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Represents the start of a calendar item. This element only applies to a
      * single occurrence of a calendar item.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 
@@ -45,14 +48,14 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Represents the end of a duration. This element only applies to a single
      * occurrence of a calendar item.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $End;
 
     /**
      * Represents the original start time of a calendar item.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $OriginalStart;
 
@@ -67,7 +70,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
     /**
      * Represents the free/busy status of the calendar item.
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -124,42 +127,42 @@ class EWSType_CalendarItemType extends EWSType_ItemType
     /**
      * Represents the occurrence type of a calendar item.
      *
-     * @var EWSType_CalendarItemTypeType
+     * @var CalendarItemTypeType
      */
     public $CalendarItemType;
 
     /**
      * Contains the status of or response to a calendar item.
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $MyResponseType;
 
     /**
      * Represents the organizer of a meeting.
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Organizer;
 
     /**
      * Represents attendees that are required to attend a meeting.
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $RequiredAttendees;
 
     /**
      * Represents attendees that are not required to attend a meeting.
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $OptionalAttendees;
 
     /**
      * Represents a scheduled resource for a meeting.
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $Resources;
 
@@ -181,14 +184,14 @@ class EWSType_CalendarItemType extends EWSType_ItemType
     /**
      * Identifies all items that conflict with a meeting time.
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $ConflictingMeetings;
 
     /**
      * Describes all calendar items that are adjacent to a meeting time.
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $AdjacentMeetings;
 
@@ -210,7 +213,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Represents the date and time when an attendee replied to a meeting
      * request.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $AppointmentReplyTime;
 
@@ -232,7 +235,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Contains the recurrence pattern for calendar items and meeting requests.
      * This element is valid if CalendarItemType has the RecurringMaster value.
      *
-     * @var EWSType_RecurrenceType
+     * @var RecurrenceType
      */
     public $Recurrence;
 
@@ -240,7 +243,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Represents the first occurrence of a recurring calendar item. This
      * element is valid if CalendarItemType has the RecurringMaster value.
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $FirstOccurrence;
 
@@ -248,7 +251,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Represents the last occurrence of a recurring calendar item. This element
      * is valid if CalendarItemType has the RecurringMaster value.
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $LastOccurrence;
 
@@ -257,7 +260,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * modified so that they differ from the recurrence master item. This
      * element is valid if CalendarItemType has the RecurringMaster value.
      *
-     * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
+     * @var NonEmptyArrayOfOccurrenceInfoType
      */
     public $ModifiedOccurrences;
 
@@ -265,28 +268,28 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      * Contains an array of deleted occurrences of a recurring calendar item.
      * This element is valid if CalendarItemType has the RecurringMaster value.
      *
-     * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
+     * @var NonEmptyArrayOfDeletedOccurrencesType
      */
     public $DeletedOccurrences;
 
     /**
      * Represents the time zone of the location where the meeting is hosted.
      *
-     * @var EWSType_TimeZoneType
+     * @var TimeZoneType
      */
     public $MeetingTimeZone;
 
     /**
      * Represents the start time zone of the calendar item.
      *
-     * @var EWSType_TimeZoneDefinitionType
+     * @var TimeZoneDefinitionType
      */
     public $StartTimeZone;
 
     /**
      * Represents the end time zone of the calendar item.
      *
-     * @var EWSType_TimeZoneDefinitionType
+     * @var TimeZoneDefinitionType
      */
     public $EndTimeZone;
 

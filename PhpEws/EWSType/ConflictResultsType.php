@@ -3,13 +3,16 @@
  * Definition of the ConflictResultsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ConflictResultsType type
  */
-class EWSType_ConflictResultsType extends EWSType
+class ConflictResultsType extends PhpEws\EWSType
 {
     /**
      * Count property

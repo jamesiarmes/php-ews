@@ -3,18 +3,21 @@
  * Definition of the PathToExceptionFieldType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PathToExceptionFieldType type
  */
-class EWSType_PathToExceptionFieldType extends EWSType
+class PathToExceptionFieldType extends PhpEws\EWSType
 {
     /**
      * FieldURI property
      *
-     * @var EWSType_ExceptionPropertyURIType
+     * @var ExceptionPropertyURIType
      */
     public $FieldURI;
 }

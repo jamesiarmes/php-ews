@@ -3,18 +3,21 @@
  * Definition of the ConvertIdResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ConvertIdResponseMessageType type
  */
-class EWSType_ConvertIdResponseMessageType extends EWSType
+class ConvertIdResponseMessageType extends PhpEws\EWSType
 {
     /**
      * AlternateId property
      *
-     * @var EWSType_AlternateIdBaseType
+     * @var AlternateIdBaseType
      */
     public $AlternateId;
 }

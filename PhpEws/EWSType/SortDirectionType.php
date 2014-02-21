@@ -3,13 +3,16 @@
  * Definition of the SortDirectionType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Sort order specification
  */
-class EWSType_SortDirectionType extends EWSType
+class SortDirectionType extends PhpEws\EWSType
 {
     /**
      * Items are sorted in ascending order

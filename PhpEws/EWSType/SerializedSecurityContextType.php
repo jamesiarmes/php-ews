@@ -3,13 +3,16 @@
  * Definition of the SerializedSecurityContextType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SerializedSecurityContextType type
  */
-class EWSType_SerializedSecurityContextType extends EWSType
+class SerializedSecurityContextType extends PhpEws\EWSType
 {
     /**
      * UserSid property
@@ -21,14 +24,14 @@ class EWSType_SerializedSecurityContextType extends EWSType
     /**
      * GroupSids property
      *
-     * @var EWSType_NonEmptyArrayOfGroupIdentifiersType
+     * @var NonEmptyArrayOfGroupIdentifiersType
      */
     public $GroupSids;
 
     /**
      * RestrictedGroupSids property
      *
-     * @var EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType
+     * @var NonEmptyArrayOfRestrictedGroupIdentifiersType
      */
     public $RestrictedGroupSids;
 

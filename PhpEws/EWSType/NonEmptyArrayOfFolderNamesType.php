@@ -3,13 +3,16 @@
  * Definition of the NonEmptyArrayOfFolderNamesType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfFolderNamesType type
  */
-class EWSType_NonEmptyArrayOfFolderNamesType extends EWSType
+class NonEmptyArrayOfFolderNamesType extends PhpEws\EWSType
 {
     /**
      * FolderName property

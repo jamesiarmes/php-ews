@@ -3,13 +3,16 @@
  * Definition of the SyncFolderItemsResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SyncFolderItemsResponseMessageType type
  */
-class EWSType_SyncFolderItemsResponseMessageType extends EWSType
+class SyncFolderItemsResponseMessageType extends PhpEws\EWSType
 {
     /**
      * SyncState property
@@ -28,7 +31,7 @@ class EWSType_SyncFolderItemsResponseMessageType extends EWSType
     /**
      * Changes property
      *
-     * @var EWSType_SyncFolderItemsChangesType
+     * @var SyncFolderItemsChangesType
      */
     public $Changes;
 }

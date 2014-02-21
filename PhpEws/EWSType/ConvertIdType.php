@@ -3,25 +3,28 @@
  * Definition of the ConvertIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ConvertIdType type
  */
-class EWSType_ConvertIdType extends EWSType
+class ConvertIdType extends PhpEws\EWSType
 {
     /**
      * SourceIds property
      *
-     * @var EWSType_NonEmptyArrayOfAlternateIdsType
+     * @var NonEmptyArrayOfAlternateIdsType
      */
     public $SourceIds;
 
     /**
      * DestinationFormat property
      *
-     * @var EWSType_IdFormatType
+     * @var IdFormatType
      */
     public $DestinationFormat;
 }

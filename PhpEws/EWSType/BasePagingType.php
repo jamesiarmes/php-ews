@@ -3,13 +3,16 @@
  * Definition of the BasePagingType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BasePagingType type
  */
-class EWSType_BasePagingType extends EWSType
+class BasePagingType extends PhpEws\EWSType
 {
     /**
      * MaxEntriesReturned property

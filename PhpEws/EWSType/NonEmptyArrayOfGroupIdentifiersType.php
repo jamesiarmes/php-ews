@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfGroupIdentifiersType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfGroupIdentifiersType type
  */
-class EWSType_NonEmptyArrayOfGroupIdentifiersType extends EWSType
+class NonEmptyArrayOfGroupIdentifiersType extends PhpEws\EWSType
 {
     /**
      * GroupIdentifier property
      *
-     * @var EWSType_SidAndAttributesType
+     * @var SidAndAttributesType
      */
     public $GroupIdentifier;
 }

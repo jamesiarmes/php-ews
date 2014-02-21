@@ -3,39 +3,42 @@
  * Definition of the OccurrenceInfoType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the OccurrenceInfoType type
  */
-class EWSType_OccurrenceInfoType extends EWSType
+class OccurrenceInfoType extends PhpEws\EWSType
 {
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $OriginalStart;
 }

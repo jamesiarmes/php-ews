@@ -3,81 +3,84 @@
  * Definition of the NonEmptyArrayOfResponseObjectsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfResponseObjectsType type
  */
-class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
+class NonEmptyArrayOfResponseObjectsType extends PhpEws\EWSType
 {
     /**
      * AcceptItem property
      *
-     * @var EWSType_AcceptItemType
+     * @var AcceptItemType
      */
     public $AcceptItem;
 
     /**
      * TentativelyAcceptItem property
      *
-     * @var EWSType_TentativelyAcceptItemType
+     * @var TentativelyAcceptItemType
      */
     public $TentativelyAcceptItem;
 
     /**
      * DeclineItem property
      *
-     * @var EWSType_DeclineItemType
+     * @var DeclineItemType
      */
     public $DeclineItem;
 
     /**
      * ReplyToItem property
      *
-     * @var EWSType_ReplyToItemType
+     * @var ReplyToItemType
      */
     public $ReplyToItem;
 
     /**
      * ForwardItem property
      *
-     * @var EWSType_ForwardItemType
+     * @var ForwardItemType
      */
     public $ForwardItem;
 
     /**
      * ReplyAllToItem property
      *
-     * @var EWSType_ReplyAllToItemType
+     * @var ReplyAllToItemType
      */
     public $ReplyAllToItem;
 
     /**
      * CancelCalendarItem property
      *
-     * @var EWSType_CancelCalendarItemType
+     * @var CancelCalendarItemType
      */
     public $CancelCalendarItem;
 
     /**
      * RemoveItem property
      *
-     * @var EWSType_RemoveItemType
+     * @var RemoveItemType
      */
     public $RemoveItem;
 
     /**
      * SuppressReadReceipt property
      *
-     * @var EWSType_SuppressReadReceiptType
+     * @var SuppressReadReceiptType
      */
     public $SuppressReadReceipt;
 
     /**
      * PostReplyItem property
      *
-     * @var EWSType_PostReplyItemType
+     * @var PostReplyItemType
      */
     public $PostReplyItem;
 }

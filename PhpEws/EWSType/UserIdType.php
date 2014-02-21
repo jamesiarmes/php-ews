@@ -3,13 +3,16 @@
  * Definition of the UserIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the UserIdType type
  */
-class EWSType_UserIdType extends EWSType
+class UserIdType extends PhpEws\EWSType
 {
     /**
      * SID property
@@ -35,7 +38,7 @@ class EWSType_UserIdType extends EWSType
     /**
      * DistinguishedUser property
      *
-     * @var EWSType_DistinguishedUserType
+     * @var DistinguishedUserType
      */
     public $DistinguishedUser;
 }

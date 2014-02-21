@@ -3,18 +3,21 @@
  * Definition of the ArrayOfWorkingPeriod type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfWorkingPeriod type
  */
-class EWSType_ArrayOfWorkingPeriod extends EWSType
+class ArrayOfWorkingPeriod extends PhpEws\EWSType
 {
     /**
      * WorkingPeriod property
      *
-     * @var EWSType_WorkingPeriod
+     * @var WorkingPeriod
      */
     public $WorkingPeriod;
 }

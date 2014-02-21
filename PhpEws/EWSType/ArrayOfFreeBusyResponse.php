@@ -3,18 +3,21 @@
  * Definition of the ArrayOfFreeBusyResponse type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfFreeBusyResponse type
  */
-class EWSType_ArrayOfFreeBusyResponse extends EWSType
+class ArrayOfFreeBusyResponse extends PhpEws\EWSType
 {
     /**
      * FreeBusyResponse property
      *
-     * @var EWSType_FreeBusyResponseType
+     * @var FreeBusyResponseType
      */
     public $FreeBusyResponse;
 }

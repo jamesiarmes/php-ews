@@ -4,13 +4,16 @@
  * groups.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfTransitionsType type.
  */
-class EWSType_ArrayOfTransitionsType extends EWSType
+class ArrayOfTransitionsType extends PhpEws\EWSType
 {
     /**
      * A string value that represents the unique identifier of the transitions
@@ -24,28 +27,28 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      * A time zone transition that occurs on a specific date and at a specific
      * time.
      *
-     * @var EWSType_AbsoluteDateTransitionType
+     * @var AbsoluteDateTransitionType
      */
     public $AbsoluteDateTransition;
 
     /**
      * A time zone transition that occurs on the same day each year.
      *
-     * @var EWSType_RecurringDayTransitionType
+     * @var RecurringDayTransitionType
      */
     public $RecurringDayTransition;
 
     /**
      * A time zone transition that occurs on a specified day of the year.
      *
-     * @var EWSType_RecurringDateTransitionType
+     * @var RecurringDateTransitionType
      */
     public $RecurringDateTransition;
 
     /**
      * A time zone transition.
      *
-     * @var EWSType_TransitionType
+     * @var TransitionType
      */
     public $Transition;
 }

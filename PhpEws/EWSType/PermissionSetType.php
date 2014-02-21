@@ -3,25 +3,28 @@
  * Definition of the PermissionSetType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PermissionSetType type
  */
-class EWSType_PermissionSetType extends EWSType
+class PermissionSetType extends PhpEws\EWSType
 {
     /**
      * Permissions property
      *
-     * @var EWSType_ArrayOfPermissionsType
+     * @var ArrayOfPermissionsType
      */
     public $Permissions;
 
     /**
      * UnknownEntries property
      *
-     * @var EWSType_ArrayOfUnknownEntriesType
+     * @var ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
 }

@@ -3,18 +3,21 @@
  * Definition of the FindFolderParentType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FindFolderParentType type
  */
-class EWSType_FindFolderParentType extends EWSType
+class FindFolderParentType extends PhpEws\EWSType
 {
     /**
      * Folders property
      *
-     * @var EWSType_ArrayOfFoldersType
+     * @var ArrayOfFoldersType
      */
     public $Folders;
 

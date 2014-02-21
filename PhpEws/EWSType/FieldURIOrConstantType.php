@@ -4,39 +4,42 @@
  * value to be used when comparing with another property.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FieldURIOrConstantType type.
  */
-class EWSType_FieldURIOrConstantType extends EWSType
+class FieldURIOrConstantType extends PhpEws\EWSType
 {
     /**
      * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * Identifies individual members of a dictionary.
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * Identifies MAPI properties.
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * Identifies a constant value in a restriction.
      *
-     * @var EWSType_ConstantValueType
+     * @var ConstantValueType
      */
     public $Constant;
 }

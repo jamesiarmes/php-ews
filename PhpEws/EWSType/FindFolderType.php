@@ -3,53 +3,56 @@
  * Definition of the FindFolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FindFolderType type
  */
-class EWSType_FindFolderType extends EWSType
+class FindFolderType extends PhpEws\EWSType
 {
     /**
      * FolderShape property
      *
-     * @var EWSType_FolderResponseShapeType
+     * @var FolderResponseShapeType
      */
     public $FolderShape;
 
     /**
      * IndexedPageFolderView property
      *
-     * @var EWSType_IndexedPageViewType
+     * @var IndexedPageViewType
      */
     public $IndexedPageFolderView;
 
     /**
      * FractionalPageFolderView property
      *
-     * @var EWSType_FractionalPageViewType
+     * @var FractionalPageViewType
      */
     public $FractionalPageFolderView;
 
     /**
      * Restriction property
      *
-     * @var EWSType_RestrictionType
+     * @var RestrictionType
      */
     public $Restriction;
 
     /**
      * ParentFolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $ParentFolderIds;
 
     /**
      * Traversal property
      *
-     * @var EWSType_FolderQueryTraversalType
+     * @var FolderQueryTraversalType
      */
     public $Traversal;
 }

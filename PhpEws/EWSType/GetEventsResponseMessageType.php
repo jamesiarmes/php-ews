@@ -3,18 +3,21 @@
  * Definition of the GetEventsResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GetEventsResponseMessageType type
  */
-class EWSType_GetEventsResponseMessageType extends EWSType
+class GetEventsResponseMessageType extends PhpEws\EWSType
 {
     /**
      * Notification property
      *
-     * @var EWSType_NotificationType
+     * @var NotificationType
      */
     public $Notification;
 }

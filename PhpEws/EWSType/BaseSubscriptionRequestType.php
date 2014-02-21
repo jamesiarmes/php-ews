@@ -3,32 +3,35 @@
  * Definition of the BaseSubscriptionRequestType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the BaseSubscriptionRequestType type
  */
-class EWSType_BaseSubscriptionRequestType extends EWSType
+class BaseSubscriptionRequestType extends PhpEws\EWSType
 {
     /**
      * FolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 
     /**
      * EventTypes property
      *
-     * @var EWSType_NonEmptyArrayOfNotificationEventTypesType
+     * @var NonEmptyArrayOfNotificationEventTypesType
      */
     public $EventTypes;
 
     /**
      * Watermark property
      *
-     * @var EWSType_WatermarkType
+     * @var WatermarkType
      */
     public $Watermark;
 }

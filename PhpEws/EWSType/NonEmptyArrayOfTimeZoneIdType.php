@@ -3,13 +3,16 @@
  * Definition of the NonEmptyArrayOfTimeZoneIdType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfTimeZoneIdType type
  */
-class EWSType_NonEmptyArrayOfTimeZoneIdType extends EWSType
+class NonEmptyArrayOfTimeZoneIdType extends PhpEws\EWSType
 {
     /**
      * Array of string timezone identifiers (ex. "Eastern Standard Time").

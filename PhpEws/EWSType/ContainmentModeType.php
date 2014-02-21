@@ -3,13 +3,16 @@
  * Identifies the boundaries of a search.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ContainmentModeType type.
  */
-class EWSType_ContainmentModeType extends EWSType
+class ContainmentModeType extends PhpEws\EWSType
 {
     /**
      * The comparison is between an exact phrase in the string and the constant.

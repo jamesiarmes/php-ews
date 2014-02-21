@@ -3,13 +3,16 @@
  * Definition of the NumberedRecurrenceRangeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NumberedRecurrenceRangeType type
  */
-class EWSType_NumberedRecurrenceRangeType extends EWSType
+class NumberedRecurrenceRangeType extends PhpEws\EWSType
 {
     /**
      * NumberOfOccurrences property

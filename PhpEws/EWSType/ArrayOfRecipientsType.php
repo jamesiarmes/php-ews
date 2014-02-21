@@ -3,18 +3,21 @@
  * Definition of the ArrayOfRecipientsType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfRecipientsType type
  */
-class EWSType_ArrayOfRecipientsType extends EWSType
+class ArrayOfRecipientsType extends PhpEws\EWSType
 {
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

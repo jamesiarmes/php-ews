@@ -3,13 +3,16 @@
  * Definition of the SmartResponseBaseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SmartResponseBaseType type
  */
-class EWSType_SmartResponseBaseType extends EWSType
+class SmartResponseBaseType extends PhpEws\EWSType
 {
     /**
      * Subject property
@@ -21,28 +24,28 @@ class EWSType_SmartResponseBaseType extends EWSType
     /**
      * Body property
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $Body;
 
     /**
      * ToRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $ToRecipients;
 
     /**
      * CcRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $CcRecipients;
 
     /**
      * BccRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $BccRecipients;
 
@@ -63,14 +66,14 @@ class EWSType_SmartResponseBaseType extends EWSType
     /**
      * From property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $From;
 
     /**
      * ReferenceItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ReferenceItemId;
 

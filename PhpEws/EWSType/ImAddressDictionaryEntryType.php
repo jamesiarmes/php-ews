@@ -3,13 +3,16 @@
  * Definition of the ImAddressDictionaryEntryType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ImAddressDictionaryEntryType type
  */
-class EWSType_ImAddressDictionaryEntryType extends EWSType
+class ImAddressDictionaryEntryType extends PhpEws\EWSType
 {
     /**
      * _ property
@@ -21,7 +24,7 @@ class EWSType_ImAddressDictionaryEntryType extends EWSType
     /**
      * Key property
      *
-     * @var EWSType_ImAddressKeyType
+     * @var ImAddressKeyType
      */
     public $Key;
 }

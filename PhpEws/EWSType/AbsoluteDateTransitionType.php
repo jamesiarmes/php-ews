@@ -4,19 +4,23 @@
  * occurs on a specific date and at a specific time.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
+
+namespace EWSType;
+
+use PhpEws;
 
 /**
  * Definition of the AbsoluteDateTransitionType type.
  */
-class EWSType_AbsoluteDateTransitionType extends EWSType
+class AbsoluteDateTransitionType extends PhpEws\EWSType
 {
     /**
      * Specifies the Period or TransitionsGroup that is the target of the time
      * zone transition.
      *
-     * @var EWSType_TransitionTargetType
+     * @var TransitionTargetType
      */
     public $To;
 

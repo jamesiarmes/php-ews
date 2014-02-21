@@ -4,18 +4,21 @@
  * groups.
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the ArrayOfTransitionsGroupsType type.
  */
-class EWSType_ArrayOfTransitionsGroupsType extends EWSType
+class ArrayOfTransitionsGroupsType extends PhpEws\EWSType
 {
     /**
      * Represents an array of time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsType
+     * @var ArrayOfTransitionsType
      */
     public $TransitionsGroup;
 }

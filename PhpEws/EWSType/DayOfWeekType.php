@@ -3,13 +3,16 @@
  * Represents a day of the week,
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the DayOfWeekType type.
  */
-class EWSType_DayOfWeekType extends EWSType
+class DayOfWeekType extends PhpEws\EWSType
 {
     /**
      * Represents Sunday.

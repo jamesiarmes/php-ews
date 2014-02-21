@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfInternetHeadersType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfInternetHeadersType type
  */
-class EWSType_NonEmptyArrayOfInternetHeadersType extends EWSType
+class NonEmptyArrayOfInternetHeadersType extends PhpEws\EWSType
 {
     /**
      * InternetMessageHeader property
      *
-     * @var EWSType_InternetHeaderType
+     * @var InternetHeaderType
      */
     public $InternetMessageHeader;
 }

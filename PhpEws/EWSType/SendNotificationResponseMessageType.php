@@ -3,18 +3,21 @@
  * Definition of the SendNotificationResponseMessageType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SendNotificationResponseMessageType type
  */
-class EWSType_SendNotificationResponseMessageType extends EWSType
+class SendNotificationResponseMessageType extends PhpEws\EWSType
 {
     /**
      * Notification property
      *
-     * @var EWSType_NotificationType
+     * @var NotificationType
      */
     public $Notification;
 }

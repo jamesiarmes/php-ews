@@ -3,18 +3,21 @@
  * Definition of the PushSubscriptionRequestType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PushSubscriptionRequestType type
  */
-class EWSType_PushSubscriptionRequestType extends EWSType
+class PushSubscriptionRequestType extends PhpEws\EWSType
 {
     /**
      * StatusFrequency property
      *
-     * @var EWSType_SubscriptionStatusFrequencyType
+     * @var SubscriptionStatusFrequencyType
      */
     public $StatusFrequency;
 

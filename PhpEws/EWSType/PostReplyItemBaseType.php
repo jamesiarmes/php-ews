@@ -3,13 +3,16 @@
  * Definition of the PostReplyItemBaseType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the PostReplyItemBaseType type
  */
-class EWSType_PostReplyItemBaseType extends EWSType
+class PostReplyItemBaseType extends PhpEws\EWSType
 {
     /**
      * Subject property
@@ -21,14 +24,14 @@ class EWSType_PostReplyItemBaseType extends EWSType
     /**
      * Body property
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $Body;
 
     /**
      * ReferenceItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ReferenceItemId;
 

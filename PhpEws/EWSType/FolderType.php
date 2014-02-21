@@ -3,18 +3,21 @@
  * Definition of the FolderType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the FolderType type
  */
-class EWSType_FolderType extends EWSType
+class FolderType extends PhpEws\EWSType
 {
     /**
      * PermissionSet property
      *
-     * @var EWSType_PermissionSetType
+     * @var PermissionSetType
      */
     public $PermissionSet;
 

@@ -3,13 +3,16 @@
  * Definition of the GroupAttendeeConflictData type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the GroupAttendeeConflictData type
  */
-class EWSType_GroupAttendeeConflictData extends EWSType
+class GroupAttendeeConflictData extends PhpEws\EWSType
 {
     /**
      * NumberOfMembers property

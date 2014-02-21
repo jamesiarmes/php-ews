@@ -3,18 +3,21 @@
  * Definition of the NonEmptyArrayOfRestrictedGroupIdentifiersType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the NonEmptyArrayOfRestrictedGroupIdentifiersType type
  */
-class EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType extends EWSType
+class NonEmptyArrayOfRestrictedGroupIdentifiersType extends PhpEws\EWSType
 {
     /**
      * RestrictedGroupIdentifier property
      *
-     * @var EWSType_SidAndAttributesType
+     * @var SidAndAttributesType
      */
     public $RestrictedGroupIdentifier;
 }

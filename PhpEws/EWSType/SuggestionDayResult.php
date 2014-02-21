@@ -3,32 +3,35 @@
  * Definition of the SuggestionDayResult type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SuggestionDayResult type
  */
-class EWSType_SuggestionDayResult extends EWSType
+class SuggestionDayResult extends PhpEws\EWSType
 {
     /**
      * Date property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Date;
 
     /**
      * DayQuality property
      *
-     * @var EWSType_SuggestionQuality
+     * @var SuggestionQuality
      */
     public $DayQuality;
 
     /**
      * SuggestionArray property
      *
-     * @var EWSType_ArrayOfSuggestion
+     * @var ArrayOfSuggestion
      */
     public $SuggestionArray;
 }

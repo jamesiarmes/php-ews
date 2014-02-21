@@ -3,25 +3,28 @@
  * Definition of the SubscribeType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Definition of the SubscribeType type
  */
-class EWSType_SubscribeType extends EWSType
+class SubscribeType extends PhpEws\EWSType
 {
     /**
      * PullSubscriptionRequest property
      *
-     * @var EWSType_PullSubscriptionRequestType
+     * @var PullSubscriptionRequestType
      */
     public $PullSubscriptionRequest;
 
     /**
      * PushSubscriptionRequest property
      *
-     * @var EWSType_PushSubscriptionRequestType
+     * @var PushSubscriptionRequestType
      */
     public $PushSubscriptionRequest;
 }

@@ -3,13 +3,16 @@
  * Definition of the PhysicalAddressKeyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Physical address key type
  */
-class EWSType_PhysicalAddressKeyType extends EWSType
+class PhysicalAddressKeyType extends PhpEws\EWSType
 {
     /**
      * Business physical address type
@@ -34,7 +37,7 @@ class EWSType_PhysicalAddressKeyType extends EWSType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_PhysicalAddressKeyType class.
+     * PhysicalAddressKeyType class.
      *
      * @var string
      */

@@ -3,13 +3,16 @@
  * Definition of the PhoneNumberKeyType type
  *
  * @package php-ews
- * @subpackage Types
+* @subpackage Types
  */
 
+namespace EWSType;
+
+use PhpEws;
 /**
  * Phone number key type
  */
-class EWSType_PhoneNumberKeyType extends EWSType
+class PhoneNumberKeyType extends PhpEws\EWSType
 {
     /**
      * Phone number key for assistant phone number
@@ -146,7 +149,7 @@ class EWSType_PhoneNumberKeyType extends EWSType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_PhoneNumberKeyType class.
+     * PhoneNumberKeyType class.
      *
      * @var string
      */
