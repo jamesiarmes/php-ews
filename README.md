@@ -15,7 +15,7 @@ Currently you need to do 2 things to get it to work:
 	in symfony/composer.json		
 	
 	 "repositories": [{
-        "type": "git",
+        "type": "vcs",
         "url": "https://github.com/dlefkon/php-ews.git"
     }]
 
