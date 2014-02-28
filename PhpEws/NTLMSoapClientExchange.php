@@ -27,6 +27,8 @@
 
 namespace PhpEws;
 
+use EWS_Exception;
+
 /**
  * Soap Client using Microsoft's NTLM Authentication.
  */
@@ -92,17 +94,11 @@ class NTLMSoapClientExchange extends \SoapClient
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
         curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
+        curl_setopt($this->ch, CURLOPT_FAILONERROR, true);
 
         $response = curl_exec($this->ch);
-// var_dump($response);
-        // TODO: Add some real error handling.
-        // If the response if false than there was an error and we should throw
-        // an exception.
-        if ($response === false) {
-            throw new EWS_Exception(
-              'Curl error: ' . curl_error($this->ch),
-              curl_errno($this->ch)
-            );
+            if ($response === false) {
+			die(curl_error($this->ch));
         }
 
         return $response;
