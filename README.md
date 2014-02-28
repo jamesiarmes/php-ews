@@ -1,3 +1,35 @@
+This has been updated for Symfony .. added class namespaces, composer.json.
+
+Currently you need to do 2 things to get it to work:
+
+	in web/app.php:
+	
+		$loader = new \Composer\Autoload\ClassLoader();
+	
+		$loader->add( 'PhpEws', '/Applications/MAMP/htdocs/symfony/intranet/vendor/dlefkon/phpews' );
+		$loader->add( 'EWSType', '/Applications/MAMP/htdocs/symfony/intranet/vendor/dlefkon/phpews/PhpEws' );
+		$loader->add( 'NTLMSoapClient', '/Applications/MAMP/htdocs/symfony/intranet/vendor/dlefkon/phpews/PhpEws' );
+		
+		$loader->register();
+
+	in symfony/composer.json		
+	
+	 "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/dlefkon/php-ews.git"
+    }]
+
+	AND
+	
+	"require": {
+        "dlefkon/phpews": "*@dev"
+    }
+    
+    
+    
+
+Following is original readme from James Iarmes:
+
 # PHP Exchange Web Services
 The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.
 
