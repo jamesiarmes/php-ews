@@ -235,6 +235,7 @@ class EWSAutodiscover
     {
         $result = $this->tryTLD();
 
+
         if ($result === false) {
             $result = $this->trySubdomain();
         }
@@ -246,7 +247,7 @@ class EWSAutodiscover
         if ($result === false) {
             $result = $this->trySRVRecord();
         }
-
+        
         return $result;
     }
 
@@ -346,8 +347,8 @@ class EWSAutodiscover
     public function newEWS()
     {
         // Discovery not yet attempted.
-        if ($this->discovered === null) {
-            $this->discover();
+        if ($this->discovered === NULL) {
+            $this->discovered = $this->discover();
         }
 
         // Discovery not successful.
@@ -581,9 +582,9 @@ class EWSAutodiscover
             CURLOPT_HEADERFUNCTION  => array($this, 'readHeaders'),
             CURLOPT_IPRESOLVE       => CURL_IPRESOLVE_V4,
             CURLOPT_SSL_VERIFYPEER  => true,
-            CURLOPT_SSL_VERIFYHOST  => true,
+            CURLOPT_SSL_VERIFYHOST  => 2,
         );
-
+        
         // Set the appropriate content-type.
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml; charset=utf-8'));
 
