@@ -235,6 +235,7 @@ class EWSAutodiscover
     {
         $result = $this->tryTLD();
 
+
         if ($result === false) {
             $result = $this->trySubdomain();
         }
@@ -246,7 +247,7 @@ class EWSAutodiscover
         if ($result === false) {
             $result = $this->trySRVRecord();
         }
-
+        
         return $result;
     }
 
@@ -346,8 +347,8 @@ class EWSAutodiscover
     public function newEWS()
     {
         // Discovery not yet attempted.
-        if ($this->discovered === null) {
-            $this->discover();
+        if ($this->discovered === NULL) {
+            $this->discovered = $this->discover();
         }
 
         // Discovery not successful.
