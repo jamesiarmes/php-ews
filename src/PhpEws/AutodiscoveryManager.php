@@ -3,7 +3,7 @@
 namespace PhpEws;
 
 /**
- * Exchange Web Services Autodiscover implementation
+ * Exchange Web Services Autodiscovery implementation
  *
  * This class supports POX (Plain Old XML), which is deprecated but functional
  * in Exchange 2010. It may make sense for you to combine your Autodiscovery 
@@ -13,7 +13,7 @@ namespace PhpEws;
  *
  * (after any auto-loading class incantation)
  *
- * $ews = Autodiscovery::getEWS($email, $password);
+ * $ews = Autodiscovery::getConnection($email, $password);
  *
  * -- OR --
  *
@@ -22,7 +22,7 @@ namespace PhpEws;
  *
  * $auto = new self($email, $password);
  * $auto->setCAInfo('/path/to/your/cacert.pem');
- * $ews = $auto->newEWS();
+ * $ews = $auto->createNewConnection();
  *
  * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
  * @link https://www.testexchangeconnectivity.com/
