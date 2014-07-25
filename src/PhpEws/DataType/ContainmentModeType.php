@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Identifies the boundaries of a search.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the ContainmentModeType type.

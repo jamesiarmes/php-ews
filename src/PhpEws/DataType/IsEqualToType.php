@@ -3,17 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The IsEqualTo element represents a search expression that compares a property
  * with either a constant value or another property and evaluates to true if
  * they are equal.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the IsEqualToType type.
  */
 class IsEqualToType extends DataType
 {

@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The Excludes element performs a bitwise mask of the specified property and a
  * supplied value.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the ExcludesType type.
  */
 class ExcludesType extends DataType
 {

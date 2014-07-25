@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the ResolveNamesType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the ResolveNamesType type

@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Represents a time zone transition.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the TransitionType type.

@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * Specifies the target of a time zone transition. The target is either a time
  * zone period or a group of time zone transitions.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the TransitionTargetType type.
  */
 class TransitionTargetType extends DataType
 {

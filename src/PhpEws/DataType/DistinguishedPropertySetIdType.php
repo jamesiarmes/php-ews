@@ -3,15 +3,9 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Defines the well-known property set IDs for extended MAPI properties.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
- * Definition of the DistinguishedPropertySetIdType type.
+ * Defines the well-known property set IDs for extended MAPI properties.
  */
 class DistinguishedPropertySetIdType extends DataType
 {

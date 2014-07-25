@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the PhoneNumberKeyType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Phone number key type

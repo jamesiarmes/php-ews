@@ -3,18 +3,12 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The And element represents a search expression that allows you to perform a
  * Boolean AND operation between two or more search expressions. The result of
  * the AND operation is true if all the search expressions contained within the
  * And element are true.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the AndType type.
  */
 class AndType extends DataType
 {

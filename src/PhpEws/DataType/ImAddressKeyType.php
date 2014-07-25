@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the ImAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Instant messenger address key type

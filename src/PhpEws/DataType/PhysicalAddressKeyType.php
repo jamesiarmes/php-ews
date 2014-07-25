@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the PhysicalAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Physical address key type

@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Represents the occurrence of the day of the week in a month.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the OccurrenceType type.

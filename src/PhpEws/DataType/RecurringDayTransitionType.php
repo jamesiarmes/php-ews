@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The RecurringDayTransition element represents a time zone transition that
  * occurs on the same day each year.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the RecurringDayTransitionType type.
  */
 class RecurringDayTransitionType extends DataType
 {

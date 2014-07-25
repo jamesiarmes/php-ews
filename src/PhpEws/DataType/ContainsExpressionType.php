@@ -3,15 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The Contains element represents a search expression that determines whether a
  * given property contains the supplied constant string value.
  *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
  * Definition of the ContainsExpressionType type.
  */
 class ContainsExpressionType extends DataType

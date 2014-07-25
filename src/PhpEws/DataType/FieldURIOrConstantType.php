@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The FieldURIOrConstant element represents either a property or a constant
  * value to be used when comparing with another property.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the FieldURIOrConstantType type.
  */
 class FieldURIOrConstantType extends DataType
 {

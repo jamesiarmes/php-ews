@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the DefaultShapeNamesType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Default shape names for response shapes

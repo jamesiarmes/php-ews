@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the ResponseTypeType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the ResponseTypeType type

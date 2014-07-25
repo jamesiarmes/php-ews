@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The Not element represents a search expression that negates the Boolean value
  * of the search expression that it contains.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the NotType type.
  */
 class NotType extends DataType
 {

@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Defines a timezone.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the TimeZoneDefinitionType type.

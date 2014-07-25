@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Determines whether the search ignores cases and spaces.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the ContainmentComparisonType type.

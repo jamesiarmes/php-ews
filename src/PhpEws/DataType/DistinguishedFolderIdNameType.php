@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the DistinguishedFolderIdNameType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * URIs for the distinguished folders accessible from a mailbox

@@ -3,15 +3,9 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Represents a time zone transition that occurs on a specific date each year.
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
- * Definition of the RecurringDateTransitionType type.
+ * Represents a time zone transition that occurs on a specific date each year.
  */
 class RecurringDateTransitionType extends DataType
 {

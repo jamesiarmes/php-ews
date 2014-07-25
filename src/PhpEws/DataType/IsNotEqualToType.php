@@ -3,17 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The IsNotEqualTo element represents a search expression that compares a
  * property with either a constant value or another property and returns true if
  * the values are not the same.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the IsNotEqualToType type.
  */
 class IsNotEqualToType extends DataType
 {

@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the EmailAddressKeyType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Email address key type

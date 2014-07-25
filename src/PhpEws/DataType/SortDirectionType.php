@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the SortDirectionType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Sort order specification

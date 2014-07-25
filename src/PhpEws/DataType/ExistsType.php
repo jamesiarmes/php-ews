@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The Exists element represents a search expression that returns true if the
  * supplied property exists on an item.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the ExistsType type.
  */
 class ExistsType extends DataType
 {

@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Represents a day of the week,
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Definition of the DayOfWeekType type.

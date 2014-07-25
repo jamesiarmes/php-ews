@@ -3,17 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The IsGreaterThanOrEqualTo element represents a search expression that
  * compares a property with either a constant value or another property and
  * returns true if the first property is greater than or equal to the second.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the IsGreaterThanOrEqualToType type.
  */
 class IsGreaterThanOrEqualToType extends DataType
 {

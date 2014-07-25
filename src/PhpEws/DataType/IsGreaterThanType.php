@@ -3,17 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The IsGreaterThan element represents a search expression that compares a
  * property with either a constant value or another property and returns true if
  * the first property is greater.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the IsGreaterThanType type.
  */
 class IsGreaterThanType extends DataType
 {

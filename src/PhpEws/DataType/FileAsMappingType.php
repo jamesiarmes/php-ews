@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the FileAsMappingType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Mapping types for Contacts

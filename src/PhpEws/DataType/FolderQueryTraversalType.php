@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the FolderQueryTraversalType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Types of sub-tree traversal for deletion and enumeration

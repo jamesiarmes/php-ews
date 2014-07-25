@@ -3,17 +3,11 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * The MultipleOperandBooleanExpressionType element is the base element for
  * derived elements that represent a restriction formed by two or more Boolean
  * operands.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the MultipleOperandBooleanExpressionType type.
  */
 abstract class MultipleOperandBooleanExpressionType extends DataType
 {

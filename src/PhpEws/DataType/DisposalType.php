@@ -3,12 +3,6 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
-/**
- * Definition of the DisposalType type
- *
- * @package php-ews
- * @subpackage Types
- */
 
 /**
  * Types of deletion for items and folders

@@ -3,16 +3,10 @@
 namespace PhpEws\DataType;
 
 use PhpEws\DataType;
+
 /**
  * Represents the property type of a property tag. This corresponds to the least
  * significant word in a property tag.
- *
- * @package php-ews
- * @subpackage Types
- */
-
-/**
- * Definition of the MapiPropertyTypeType type.
  */
 class MapiPropertyTypeType extends DataType
 {
