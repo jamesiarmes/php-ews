@@ -47,7 +47,7 @@ class ExchangeSoapClient extends NtlmSoapClient
 
         // If a version was set then add it to the headers.
         if (!empty($options['version'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->__default_headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'RequestServerVersion Version="' . $options['version'] . '"'
             );
@@ -55,7 +55,7 @@ class ExchangeSoapClient extends NtlmSoapClient
 
         // If impersonation was set then add it to the headers.
         if (!empty($options['impersonation'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->__default_headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
                 $options['impersonation']
