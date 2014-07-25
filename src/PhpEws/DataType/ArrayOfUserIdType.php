@@ -12,7 +12,7 @@ class ArrayOfUserIdType extends DataType
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 }

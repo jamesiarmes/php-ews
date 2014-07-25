@@ -102,7 +102,7 @@ class FileAsMappingType extends DataType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_FileAsMappingType class.
+     * FileAsMappingType class.
      *
      * @var string
      */

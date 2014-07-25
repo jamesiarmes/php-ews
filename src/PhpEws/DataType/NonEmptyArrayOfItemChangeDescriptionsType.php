@@ -12,21 +12,21 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends DataType
     /**
      * AppendToItemField property
      *
-     * @var EWSType_AppendToItemFieldType
+     * @var AppendToItemFieldType
      */
     public $AppendToItemField;
 
     /**
      * SetItemField property
      *
-     * @var EWSType_SetItemFieldType
+     * @var SetItemFieldType
      */
     public $SetItemField;
 
     /**
      * DeleteItemField property
      *
-     * @var EWSType_DeleteItemFieldType
+     * @var DeleteItemFieldType
      */
     public $DeleteItemField;
 }

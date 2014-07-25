@@ -12,35 +12,35 @@ class UserOofSettings extends DataType
     /**
      * OofState property
      *
-     * @var EWSType_OofState
+     * @var OofState
      */
     public $OofState;
 
     /**
      * ExternalAudience property
      *
-     * @var EWSType_ExternalAudience
+     * @var ExternalAudience
      */
     public $ExternalAudience;
 
     /**
      * Duration property
      *
-     * @var EWSType_Duration
+     * @var Duration
      */
     public $Duration;
 
     /**
      * InternalReply property
      *
-     * @var EWSType_ReplyBody
+     * @var ReplyBody
      */
     public $InternalReply;
 
     /**
      * ExternalReply property
      *
-     * @var EWSType_ReplyBody
+     * @var ReplyBody
      */
     public $ExternalReply;
 }

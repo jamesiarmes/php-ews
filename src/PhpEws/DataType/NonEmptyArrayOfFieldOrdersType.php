@@ -12,7 +12,7 @@ class NonEmptyArrayOfFieldOrdersType extends DataType
     /**
      * FieldOrder property
      *
-     * @var EWSType_FieldOrderType
+     * @var FieldOrderType
      */
     public $FieldOrder;
 }

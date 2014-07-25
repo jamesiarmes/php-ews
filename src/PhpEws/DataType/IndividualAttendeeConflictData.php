@@ -12,7 +12,7 @@ class IndividualAttendeeConflictData extends DataType
     /**
      * BusyType property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $BusyType;
 }

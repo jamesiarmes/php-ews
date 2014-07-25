@@ -12,7 +12,7 @@ class BaseDelegateType extends DataType
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 }

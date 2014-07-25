@@ -13,7 +13,7 @@ class RecurringDateTransitionType extends DataType
      * Specifies the Period or TransitionsGroup that is the target of the time
      * zone transition.
      *
-     * @var EWSType_TransitionTargetType
+     * @var TransitionTargetType
      */
     public $To;
 

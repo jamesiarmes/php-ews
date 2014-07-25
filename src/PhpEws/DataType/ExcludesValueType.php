@@ -12,7 +12,7 @@ class ExcludesValueType extends DataType
     /**
      * Value property
      *
-     * @var EWSType_ExcludesAttributeType
+     * @var ExcludesAttributeType
      */
     public $Value;
 }

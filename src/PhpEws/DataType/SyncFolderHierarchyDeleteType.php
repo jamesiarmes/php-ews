@@ -12,7 +12,7 @@ class SyncFolderHierarchyDeleteType extends DataType
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 }

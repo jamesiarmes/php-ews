@@ -12,7 +12,7 @@ class ExchangeImpersonationType extends DataType
     /**
      * ConnectingSID property
      *
-     * @var EWSType_ConnectingSIDType
+     * @var ConnectingSIDType
      */
     public $ConnectingSID;
 }

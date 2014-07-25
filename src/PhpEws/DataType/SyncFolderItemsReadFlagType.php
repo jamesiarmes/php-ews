@@ -12,7 +12,7 @@ class SyncFolderItemsReadFlagType extends DataType
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 

@@ -19,28 +19,28 @@ class EmailAddressType extends DataType
     /**
      * EmailAddress property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $EmailAddress;
 
     /**
      * RoutingType property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $RoutingType;
 
     /**
      * MailboxType property
      *
-     * @var EWSType_MailboxTypeType
+     * @var MailboxTypeType
      */
     public $MailboxType;
 
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 }

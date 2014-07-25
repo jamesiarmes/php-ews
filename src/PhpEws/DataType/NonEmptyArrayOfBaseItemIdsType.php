@@ -12,21 +12,21 @@ class NonEmptyArrayOfBaseItemIdsType extends DataType
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
     /**
      * OccurrenceItemId property
      *
-     * @var EWSType_OccurrenceItemIdType
+     * @var OccurrenceItemIdType
      */
     public $OccurrenceItemId;
 
     /**
      * RecurringMasterItemId property
      *
-     * @var EWSType_RecurringMasterItemIdType
+     * @var RecurringMasterItemIdType
      */
     public $RecurringMasterItemId;
 }

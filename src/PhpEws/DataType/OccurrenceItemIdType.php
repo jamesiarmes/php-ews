@@ -12,7 +12,7 @@ class OccurrenceItemIdType extends DataType
     /**
      * RecurringMasterId property
      *
-     * @var EWSType_DerivedItemIdType
+     * @var DerivedItemIdType
      */
     public $RecurringMasterId;
 

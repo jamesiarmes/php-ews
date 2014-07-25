@@ -14,7 +14,7 @@ class NotType extends DataType
      * Represents a search expression that enables you to perform a Boolean AND
      * operation between two or more search expressions.
      *
-     * @var EWSType_AndType
+     * @var AndType
      */
     public $And;
 
@@ -22,14 +22,14 @@ class NotType extends DataType
      * Represents a search expression that determines whether a given property
      * contains the supplied constant string value.
      *
-     * @var EWSType_ContainsExpressionType
+     * @var ContainsExpressionType
      */
     public $Contains;
 
     /**
      * Performs a bitwise mask of the properties.
      *
-     * @var EWSType_ExcludesType
+     * @var ExcludesType
      */
     public $Excludes;
 
@@ -37,7 +37,7 @@ class NotType extends DataType
      * Represents a search expression that returns true if the supplied property
      * exists on an item.
      *
-     * @var EWSType_ExistsType
+     * @var ExistsType
      */
     public $Exists;
 
@@ -46,7 +46,7 @@ class NotType extends DataType
      * constant value or another property and evaluates to true if they are
      * equal.
      *
-     * @var EWSType_IsEqualToType
+     * @var IsEqualToType
      */
     public $IsEqualTo;
 
@@ -55,7 +55,7 @@ class NotType extends DataType
      * constant value or another property and returns true if the first property
      * is greater than the value or property.
      *
-     * @var EWSType_IsGreaterThanType
+     * @var IsGreaterThanType
      */
     public $IsGreaterThan;
 
@@ -64,7 +64,7 @@ class NotType extends DataType
      * constant value or another property and returns true if the first property
      * is greater than or equal to the value or property.
      *
-     * @var EWSType_IsGreaterThanOrEqualToType
+     * @var IsGreaterThanOrEqualToType
      */
     public $IsGreaterThanOrEqualTo;
 
@@ -73,7 +73,7 @@ class NotType extends DataType
      * constant value or another property and returns true if the first property
      * is less than the value or property.
      *
-     * @var EWSType_IsLessThanType
+     * @var IsLessThanType
      */
     public $IsLessThan;
 
@@ -82,7 +82,7 @@ class NotType extends DataType
      * constant value or another property and returns true if the first property
      * is less than or equal to the value or property.
      *
-     * @var EWSType_IsLessThanOrEqualToType
+     * @var IsLessThanOrEqualToType
      */
     public $IsLessThanOrEqualTo;
 
@@ -91,7 +91,7 @@ class NotType extends DataType
      * constant value or another property and returns true if the values are not
      * the same.
      *
-     * @var EWSType_IsNotEqualToType
+     * @var IsNotEqualToType
      */
     public $IsNotEqualTo;
 
@@ -99,7 +99,7 @@ class NotType extends DataType
      * Represents a search expression that negates the Boolean value of the
      * search expression it contains.
      *
-     * @var EWSType_NotType
+     * @var NotType
      */
     public $Not;
 
@@ -108,7 +108,7 @@ class NotType extends DataType
      * the search expression it contains. The Or element will return true if any
      * of its children return true.
      *
-     * @var EWSType_OrType
+     * @var OrType
      */
     public $Or;
 }

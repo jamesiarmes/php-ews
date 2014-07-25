@@ -12,35 +12,35 @@ class GroupByType extends DataType
     /**
      * FieldURI property
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * IndexedFieldURI property
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * AggregateOn property
      *
-     * @var EWSType_AggregateOnType
+     * @var AggregateOnType
      */
     public $AggregateOn;
 
     /**
      * Order property
      *
-     * @var EWSType_SortDirectionType
+     * @var SortDirectionType
      */
     public $Order;
 }

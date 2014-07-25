@@ -12,7 +12,7 @@ class DeleteAttachmentType extends DataType
     /**
      * AttachmentIds property
      *
-     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
+     * @var NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
 }

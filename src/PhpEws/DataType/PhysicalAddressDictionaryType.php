@@ -12,7 +12,7 @@ class PhysicalAddressDictionaryType extends DataType
     /**
      * Entry property
      *
-     * @var EWSType_PhysicalAddressDictionaryEntryType
+     * @var PhysicalAddressDictionaryEntryType
      */
     public $Entry;
 }

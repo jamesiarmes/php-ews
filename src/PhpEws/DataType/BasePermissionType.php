@@ -12,7 +12,7 @@ class BasePermissionType extends DataType
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 
@@ -54,14 +54,14 @@ class BasePermissionType extends DataType
     /**
      * EditItems property
      *
-     * @var EWSType_PermissionActionType
+     * @var PermissionActionType
      */
     public $EditItems;
 
     /**
      * DeleteItems property
      *
-     * @var EWSType_PermissionActionType
+     * @var PermissionActionType
      */
     public $DeleteItems;
 }

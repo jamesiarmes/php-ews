@@ -12,14 +12,14 @@ class CreateAttachmentType extends DataType
     /**
      * ParentItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ParentItemId;
 
     /**
      * Attachments property
      *
-     * @var EWSType_NonEmptyArrayOfAttachmentsType
+     * @var NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
 }

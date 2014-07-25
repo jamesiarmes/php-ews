@@ -144,7 +144,7 @@ class PhoneNumberKeyType extends DataType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_PhoneNumberKeyType class.
+     * PhoneNumberKeyType class.
      *
      * @var string
      */

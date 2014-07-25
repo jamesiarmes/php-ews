@@ -12,7 +12,7 @@ class ReferenceItemResponseType extends DataType
     /**
      * ReferenceItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ReferenceItemId;
 

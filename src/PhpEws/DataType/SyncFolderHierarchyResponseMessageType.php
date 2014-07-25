@@ -26,7 +26,7 @@ class SyncFolderHierarchyResponseMessageType extends DataType
     /**
      * Changes property
      *
-     * @var EWSType_SyncFolderHierarchyChangesType
+     * @var SyncFolderHierarchyChangesType
      */
     public $Changes;
 }

@@ -12,35 +12,35 @@ class MeetingRequestMessageType extends DataType
     /**
      * MeetingRequestType property
      *
-     * @var EWSType_MeetingRequestTypeType
+     * @var MeetingRequestTypeType
      */
     public $MeetingRequestType;
 
     /**
      * IntendedFreeBusyStatus property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $IntendedFreeBusyStatus;
 
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $OriginalStart;
 
@@ -54,7 +54,7 @@ class MeetingRequestMessageType extends DataType
     /**
      * LegacyFreeBusyStatus property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -103,42 +103,42 @@ class MeetingRequestMessageType extends DataType
     /**
      * CalendarItemType property
      *
-     * @var EWSType_CalendarItemTypeType
+     * @var CalendarItemTypeType
      */
     public $CalendarItemType;
 
     /**
      * MyResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $MyResponseType;
 
     /**
      * Organizer property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Organizer;
 
     /**
      * RequiredAttendees property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $RequiredAttendees;
 
     /**
      * OptionalAttendees property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $OptionalAttendees;
 
     /**
      * Resources property
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var NonEmptyArrayOfAttendeesType
      */
     public $Resources;
 
@@ -159,14 +159,14 @@ class MeetingRequestMessageType extends DataType
     /**
      * ConflictingMeetings property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $ConflictingMeetings;
 
     /**
      * AdjacentMeetings property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $AdjacentMeetings;
 
@@ -187,7 +187,7 @@ class MeetingRequestMessageType extends DataType
     /**
      * AppointmentReplyTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $AppointmentReplyTime;
 
@@ -208,42 +208,42 @@ class MeetingRequestMessageType extends DataType
     /**
      * Recurrence property
      *
-     * @var EWSType_RecurrenceType
+     * @var RecurrenceType
      */
     public $Recurrence;
 
     /**
      * FirstOccurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $FirstOccurrence;
 
     /**
      * LastOccurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $LastOccurrence;
 
     /**
      * ModifiedOccurrences property
      *
-     * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
+     * @var NonEmptyArrayOfOccurrenceInfoType
      */
     public $ModifiedOccurrences;
 
     /**
      * DeletedOccurrences property
      *
-     * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
+     * @var NonEmptyArrayOfDeletedOccurrencesType
      */
     public $DeletedOccurrences;
 
     /**
      * MeetingTimeZone property
      *
-     * @var EWSType_TimeZoneType
+     * @var TimeZoneType
      */
     public $MeetingTimeZone;
 

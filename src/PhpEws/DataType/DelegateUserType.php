@@ -12,14 +12,14 @@ class DelegateUserType extends DataType
     /**
      * UserId property
      *
-     * @var EWSType_UserIdType
+     * @var UserIdType
      */
     public $UserId;
 
     /**
      * DelegatePermissions property
      *
-     * @var EWSType_DelegatePermissionsType
+     * @var DelegatePermissionsType
      */
     public $DelegatePermissions;
 

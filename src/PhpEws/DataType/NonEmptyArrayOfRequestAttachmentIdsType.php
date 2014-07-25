@@ -12,7 +12,7 @@ class NonEmptyArrayOfRequestAttachmentIdsType extends DataType
     /**
      * AttachmentId property
      *
-     * @var EWSType_RequestAttachmentIdType
+     * @var RequestAttachmentIdType
      */
     public $AttachmentId;
 }

@@ -12,7 +12,7 @@ class SmartResponseType extends DataType
     /**
      * NewBodyContent property
      *
-     * @var EWSType_BodyType
+     * @var BodyType
      */
     public $NewBodyContent;
 }

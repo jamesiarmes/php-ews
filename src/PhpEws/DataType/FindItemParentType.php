@@ -12,14 +12,14 @@ class FindItemParentType extends DataType
     /**
      * Items property
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var ArrayOfRealItemsType
      */
     public $Items;
 
     /**
      * Groups property
      *
-     * @var EWSType_ArrayOfGroupedItemsType
+     * @var ArrayOfGroupedItemsType
      */
     public $Groups;
 

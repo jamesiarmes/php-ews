@@ -12,7 +12,7 @@ class PullSubscriptionRequestType extends DataType
     /**
      * Timeout property
      *
-     * @var EWSType_SubscriptionTimeoutType
+     * @var SubscriptionTimeoutType
      */
     public $Timeout;
 }

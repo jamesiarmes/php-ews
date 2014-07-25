@@ -12,14 +12,14 @@ class RelativeMonthlyRecurrencePatternType extends DataType
     /**
      * DaysOfWeek property
      *
-     * @var EWSType_DayOfWeekType
+     * @var DayOfWeekType
      */
     public $DaysOfWeek;
 
     /**
      * DayOfWeekIndex property
      *
-     * @var EWSType_DayOfWeekIndexType
+     * @var DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
 }

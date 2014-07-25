@@ -12,7 +12,7 @@ class FreeBusyViewOptionsType extends DataType
     /**
      * TimeWindow property
      *
-     * @var EWSType_Duration
+     * @var Duration
      */
     public $TimeWindow;
 
@@ -26,7 +26,7 @@ class FreeBusyViewOptionsType extends DataType
     /**
      * RequestedView property
      *
-     * @var EWSType_FreeBusyViewType
+     * @var FreeBusyViewType
      */
     public $RequestedView;
 }

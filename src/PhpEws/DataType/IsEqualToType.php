@@ -14,21 +14,21 @@ class IsEqualToType extends DataType
     /**
      * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * Identifies individual members of a dictionary.
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * Identifies MAPI properties.
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
@@ -36,7 +36,7 @@ class IsEqualToType extends DataType
      * Represents either a property or a constant value to be used when
      * comparing with another property.
      *
-     * @var EWSType_FieldURIOrConstantType
+     * @var FieldURIOrConstantType
      */
     public $FieldURIOrConstant;
 }

@@ -12,7 +12,7 @@ class SetUserOofSettingsResponse extends DataType
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 }

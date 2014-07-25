@@ -12,21 +12,21 @@ class GetUserOofSettingsResponse extends DataType
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
      * OofSettings property
      *
-     * @var EWSType_UserOofSettings
+     * @var UserOofSettings
      */
     public $OofSettings;
 
     /**
      * AllowExternalOof property
      *
-     * @var EWSType_ExternalAudience
+     * @var ExternalAudience
      */
     public $AllowExternalOof;
 }

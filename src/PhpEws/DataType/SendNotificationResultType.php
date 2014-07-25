@@ -12,7 +12,7 @@ class SendNotificationResultType extends DataType
     /**
      * SubscriptionStatus property
      *
-     * @var EWSType_SubscriptionStatusType
+     * @var SubscriptionStatusType
      */
     public $SubscriptionStatus;
 }

@@ -14,7 +14,7 @@ class TransitionTargetType extends DataType
      * Indicates whether the time zone transition target is a time zone period
      * or of a group of time zone transitions.
      *
-     * @var EWSType_KindType
+     * @var KindType
      */
     public $Kind;
 

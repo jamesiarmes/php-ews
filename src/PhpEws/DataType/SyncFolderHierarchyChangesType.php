@@ -12,21 +12,21 @@ class SyncFolderHierarchyChangesType extends DataType
     /**
      * Create property
      *
-     * @var EWSType_SyncFolderHierarchyCreateOrUpdateType
+     * @var SyncFolderHierarchyCreateOrUpdateType
      */
     public $Create;
 
     /**
      * Update property
      *
-     * @var EWSType_SyncFolderHierarchyCreateOrUpdateType
+     * @var SyncFolderHierarchyCreateOrUpdateType
      */
     public $Update;
 
     /**
      * Delete property
      *
-     * @var EWSType_SyncFolderHierarchyDeleteType
+     * @var SyncFolderHierarchyDeleteType
      */
     public $Delete;
 }

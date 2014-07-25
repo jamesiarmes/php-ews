@@ -12,7 +12,7 @@ class EmailAddressDictionaryType extends DataType
     /**
      * Entry property
      *
-     * @var EWSType_EmailAddressDictionaryEntryType
+     * @var EmailAddressDictionaryEntryType
      */
     public $Entry;
 }

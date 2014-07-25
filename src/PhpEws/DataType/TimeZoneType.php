@@ -12,21 +12,21 @@ class TimeZoneType extends DataType
     /**
      * BaseOffset property
      *
-     * @var EWSType_duration
+     * @var duration
      */
     public $BaseOffset;
 
     /**
      * Standard property
      *
-     * @var EWSType_TimeChangeType
+     * @var TimeChangeType
      */
     public $Standard;
 
     /**
      * Daylight property
      *
-     * @var EWSType_TimeChangeType
+     * @var TimeChangeType
      */
     public $Daylight;
 

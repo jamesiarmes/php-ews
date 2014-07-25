@@ -12,7 +12,7 @@ class NonEmptyArrayOfItemChangesType extends DataType
     /**
      * ItemChange property
      *
-     * @var EWSType_ItemChangeType
+     * @var ItemChangeType
      */
     public $ItemChange;
 }

@@ -26,14 +26,14 @@ class CalendarEvent extends DataType
     /**
      * BusyType property
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var LegacyFreeBusyType
      */
     public $BusyType;
 
     /**
      * CalendarEventDetails property
      *
-     * @var EWSType_CalendarEventDetails
+     * @var CalendarEventDetails
      */
     public $CalendarEventDetails;
 }

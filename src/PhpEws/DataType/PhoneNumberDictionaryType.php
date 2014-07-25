@@ -12,7 +12,7 @@ class PhoneNumberDictionaryType extends DataType
     /**
      * Entry property
      *
-     * @var EWSType_PhoneNumberDictionaryEntryType
+     * @var PhoneNumberDictionaryEntryType
      */
     public $Entry;
 }

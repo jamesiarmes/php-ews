@@ -12,7 +12,7 @@ class Suggestion extends DataType
     /**
      * MeetingTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $MeetingTime;
 
@@ -26,14 +26,14 @@ class Suggestion extends DataType
     /**
      * SuggestionQuality property
      *
-     * @var EWSType_SuggestionQuality
+     * @var SuggestionQuality
      */
     public $SuggestionQuality;
 
     /**
      * AttendeeConflictDataArray property
      *
-     * @var EWSType_ArrayOfAttendeeConflictData
+     * @var ArrayOfAttendeeConflictData
      */
     public $AttendeeConflictDataArray;
 }

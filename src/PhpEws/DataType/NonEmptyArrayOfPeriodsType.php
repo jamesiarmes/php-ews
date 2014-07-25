@@ -14,7 +14,7 @@ class NonEmptyArrayOfPeriodsType extends DataType
      * The name, time offset, and unique identifier for a specific stage of the
      * time zone.
      *
-     * @var EWSType_PeriodType
+     * @var PeriodType
      */
     public $Period;
 }

@@ -12,28 +12,28 @@ class DeleteItemType extends DataType
     /**
      * ItemIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 
     /**
      * DeleteType property
      *
-     * @var EWSType_DisposalType
+     * @var DisposalType
      */
     public $DeleteType;
 
     /**
      * SendMeetingCancellations property
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingCancellations;
 
     /**
      * AffectedTaskOccurrences property
      *
-     * @var EWSType_AffectedTaskOccurrencesType
+     * @var AffectedTaskOccurrencesType
      */
     public $AffectedTaskOccurrences;
 }

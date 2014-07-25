@@ -12,7 +12,7 @@ class DeletedOccurrenceInfoType extends DataType
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 }

@@ -12,14 +12,14 @@ class BaseFolderType extends DataType
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * ParentFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $ParentFolderId;
 
@@ -54,21 +54,21 @@ class BaseFolderType extends DataType
     /**
      * ExtendedProperty property
      *
-     * @var EWSType_ExtendedPropertyType
+     * @var ExtendedPropertyType
      */
     public $ExtendedProperty;
 
     /**
      * ManagedFolderInformation property
      *
-     * @var EWSType_ManagedFolderInformationType
+     * @var ManagedFolderInformationType
      */
     public $ManagedFolderInformation;
 
     /**
      * EffectiveRights property
      *
-     * @var EWSType_EffectiveRightsType
+     * @var EffectiveRightsType
      */
     public $EffectiveRights;
 }

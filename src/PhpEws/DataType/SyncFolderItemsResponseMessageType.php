@@ -26,7 +26,7 @@ class SyncFolderItemsResponseMessageType extends DataType
     /**
      * Changes property
      *
-     * @var EWSType_SyncFolderItemsChangesType
+     * @var SyncFolderItemsChangesType
      */
     public $Changes;
 }

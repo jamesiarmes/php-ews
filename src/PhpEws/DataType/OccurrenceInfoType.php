@@ -12,28 +12,28 @@ class OccurrenceInfoType extends DataType
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 
     /**
      * Start property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $OriginalStart;
 }

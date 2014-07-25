@@ -12,7 +12,7 @@ class ExtendedPropertyType extends DataType
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
@@ -26,7 +26,7 @@ class ExtendedPropertyType extends DataType
     /**
      * Values property
      *
-     * @var EWSType_NonEmptyArrayOfPropertyValuesType
+     * @var NonEmptyArrayOfPropertyValuesType
      */
     public $Values;
 }

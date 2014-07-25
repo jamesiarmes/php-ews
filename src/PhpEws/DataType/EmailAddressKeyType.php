@@ -32,7 +32,7 @@ class EmailAddressKeyType extends DataType
 
     /**
      * Value of the desired mapping. Should be one of the constants from the
-     * EWSType_EmailAddressKeyType class.
+     * EmailAddressKeyType class.
      *
      * @var string
      */

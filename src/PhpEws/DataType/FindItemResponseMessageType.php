@@ -12,7 +12,7 @@ class FindItemResponseMessageType extends DataType
     /**
      * RootFolder property
      *
-     * @var EWSType_FindItemParentType
+     * @var FindItemParentType
      */
     public $RootFolder;
 }

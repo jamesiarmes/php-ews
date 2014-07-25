@@ -12,7 +12,7 @@ class ArrayOfResolutionType extends DataType
     /**
      * Resolution property
      *
-     * @var EWSType_ResolutionType
+     * @var ResolutionType
      */
     public $Resolution;
 

@@ -12,21 +12,21 @@ class PathToExtendedFieldType extends DataType
     /**
      * DistinguishedPropertySetId property
      *
-     * @var EWSType_DistinguishedPropertySetType
+     * @var DistinguishedPropertySetType
      */
     public $DistinguishedPropertySetId;
 
     /**
      * PropertySetId property
      *
-     * @var EWSType_GuidType
+     * @var GuidType
      */
     public $PropertySetId;
 
     /**
      * PropertyTag property
      *
-     * @var EWSType_PropertyTagType
+     * @var PropertyTagType
      */
     public $PropertyTag;
 
@@ -47,7 +47,7 @@ class PathToExtendedFieldType extends DataType
     /**
      * PropertyType property
      *
-     * @var EWSType_MapiPropertyTypeType
+     * @var MapiPropertyTypeType
      */
     public $PropertyType;
 }

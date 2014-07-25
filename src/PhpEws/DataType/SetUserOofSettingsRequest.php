@@ -12,14 +12,14 @@ class SetUserOofSettingsRequest extends DataType
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddress
+     * @var EmailAddress
      */
     public $Mailbox;
 
     /**
      * UserOofSettings property
      *
-     * @var EWSType_UserOofSettings
+     * @var UserOofSettings
      */
     public $UserOofSettings;
 }

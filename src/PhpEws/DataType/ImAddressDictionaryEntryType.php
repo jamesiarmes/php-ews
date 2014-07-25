@@ -19,7 +19,7 @@ class ImAddressDictionaryEntryType extends DataType
     /**
      * Key property
      *
-     * @var EWSType_ImAddressKeyType
+     * @var ImAddressKeyType
      */
     public $Key;
 }

@@ -12,7 +12,7 @@ class ArrayOfDelegateUserType extends DataType
     /**
      * DelegateUser property
      *
-     * @var EWSType_DelegateUserType
+     * @var DelegateUserType
      */
     public $DelegateUser;
 }

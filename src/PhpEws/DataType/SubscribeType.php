@@ -12,14 +12,14 @@ class SubscribeType extends DataType
     /**
      * PullSubscriptionRequest property
      *
-     * @var EWSType_PullSubscriptionRequestType
+     * @var PullSubscriptionRequestType
      */
     public $PullSubscriptionRequest;
 
     /**
      * PushSubscriptionRequest property
      *
-     * @var EWSType_PushSubscriptionRequestType
+     * @var PushSubscriptionRequestType
      */
     public $PushSubscriptionRequest;
 }

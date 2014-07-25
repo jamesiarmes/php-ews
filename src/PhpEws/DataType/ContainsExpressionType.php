@@ -15,42 +15,42 @@ class ContainsExpressionType extends DataType
     /**
      * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * Identifies individual members of a dictionary.
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * Identifies MAPI properties.
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * Identifies a constant value in a restriction.
      *
-     * @var EWSType_ConstantValueType
+     * @var ConstantValueType
      */
     public $Constant;
 
     /**
      * Identifies the boundaries of a search.
      *
-     * @var EWSType_ContainmentModeType
+     * @var ContainmentModeType
      */
     public $ContainmentMode;
 
     /**
      * Determines whether the search ignores cases and spaces.
      *
-     * @var EWSType_ContainmentComparisonType
+     * @var ContainmentComparisonType
      */
     public $ContainmentComparison;
 }

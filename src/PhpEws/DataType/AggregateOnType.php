@@ -12,28 +12,28 @@ class AggregateOnType extends DataType
     /**
      * FieldURI property
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var PathToUnindexedFieldType
      */
     public $FieldURI;
 
     /**
      * IndexedFieldURI property
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * ExtendedFieldURI property
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * Aggregate property
      *
-     * @var EWSType_AggregateType
+     * @var AggregateType
      */
     public $Aggregate;
 }

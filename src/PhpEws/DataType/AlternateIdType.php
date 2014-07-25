@@ -19,7 +19,7 @@ class AlternateIdType extends DataType
     /**
      * Mailbox property
      *
-     * @var EWSType_NonEmptyStringType
+     * @var NonEmptyStringType
      */
     public $Mailbox;
 }

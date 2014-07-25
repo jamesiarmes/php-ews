@@ -40,7 +40,7 @@ class SerializableTimeZoneTime extends DataType
     /**
      * DayOfWeek property
      *
-     * @var EWSType_DayOfWeekType
+     * @var DayOfWeekType
      */
     public $DayOfWeek;
 

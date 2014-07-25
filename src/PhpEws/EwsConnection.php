@@ -2,6 +2,7 @@
 
 namespace PhpEws;
 
+use PhpEws\DataType\ExchangeImpersonationType;
 use PhpEws\Exception\EwsException;
 use PhpEws\Ntlm\ExchangeSoapClient;
 
@@ -90,7 +91,7 @@ class EwsConnection
     /**
      * Exchange impersonation
      *
-     * @var EWSType_ExchangeImpersonationType
+     * @var ExchangeImpersonationType
      */
     protected $impersonation;
 
@@ -140,7 +141,9 @@ class EwsConnection
     /**
      * Sets the impersonation property
      *
-     * @param EWSType_ExchangeImpersonationType $impersonation
+     * @param ExchangeImpersonationType $impersonation
+     *
+     * @return boolean
      */
     public function setImpersonation($impersonation)
     {

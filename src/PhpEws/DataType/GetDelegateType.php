@@ -12,7 +12,7 @@ class GetDelegateType extends DataType
     /**
      * UserIds property
      *
-     * @var EWSType_ArrayOfUserIdType
+     * @var ArrayOfUserIdType
      */
     public $UserIds;
 

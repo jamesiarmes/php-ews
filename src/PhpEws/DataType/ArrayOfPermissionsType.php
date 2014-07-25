@@ -12,7 +12,7 @@ class ArrayOfPermissionsType extends DataType
     /**
      * Permission property
      *
-     * @var EWSType_PermissionType
+     * @var PermissionType
      */
     public $Permission;
 }

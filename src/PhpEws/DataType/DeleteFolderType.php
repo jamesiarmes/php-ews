@@ -12,14 +12,14 @@ class DeleteFolderType extends DataType
     /**
      * FolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 
     /**
      * DeleteType property
      *
-     * @var EWSType_DisposalType
+     * @var DisposalType
      */
     public $DeleteType;
 }

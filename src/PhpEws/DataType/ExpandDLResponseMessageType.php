@@ -12,7 +12,7 @@ class ExpandDLResponseMessageType extends DataType
     /**
      * DLExpansion property
      *
-     * @var EWSType_ArrayOfDLExpansionType
+     * @var ArrayOfDLExpansionType
      */
     public $DLExpansion;
 

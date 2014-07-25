@@ -12,28 +12,28 @@ class MessageType extends DataType
     /**
      * Sender property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $Sender;
 
     /**
      * ToRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $ToRecipients;
 
     /**
      * CcRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $CcRecipients;
 
     /**
      * BccRecipients property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $BccRecipients;
 
@@ -54,7 +54,7 @@ class MessageType extends DataType
     /**
      * ConversationIndex property
      *
-     * @var EWSType_base64Binary
+     * @var base64Binary
      */
     public $ConversationIndex;
 
@@ -68,7 +68,7 @@ class MessageType extends DataType
     /**
      * From property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $From;
 
@@ -103,21 +103,21 @@ class MessageType extends DataType
     /**
      * ReplyTo property
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var ArrayOfRecipientsType
      */
     public $ReplyTo;
 
     /**
      * ReceivedBy property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $ReceivedBy;
 
     /**
      * ReceivedRepresenting property
      *
-     * @var EWSType_SingleRecipientType
+     * @var SingleRecipientType
      */
     public $ReceivedRepresenting;
 }

@@ -13,7 +13,7 @@ class ArrayOfTransitionsGroupsType extends DataType
     /**
      * Represents an array of time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsType
+     * @var ArrayOfTransitionsType
      */
     public $TransitionsGroup;
 }

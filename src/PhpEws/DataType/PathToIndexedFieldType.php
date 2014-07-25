@@ -12,7 +12,7 @@ class PathToIndexedFieldType extends DataType
     /**
      * FieldURI property
      *
-     * @var EWSType_DictionaryURIType
+     * @var DictionaryURIType
      */
     public $FieldURI;
 

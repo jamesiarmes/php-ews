@@ -12,7 +12,7 @@ class FolderType extends DataType
     /**
      * PermissionSet property
      *
-     * @var EWSType_PermissionSetType
+     * @var PermissionSetType
      */
     public $PermissionSet;
 

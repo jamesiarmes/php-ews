@@ -19,7 +19,7 @@ class TaskType extends DataType
     /**
      * AssignedTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $AssignedTime;
 
@@ -40,28 +40,28 @@ class TaskType extends DataType
     /**
      * Companies property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Companies;
 
     /**
      * CompleteDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $CompleteDate;
 
     /**
      * Contacts property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Contacts;
 
     /**
      * DelegationState property
      *
-     * @var EWSType_TaskDelegateStateType
+     * @var TaskDelegateStateType
      */
     public $DelegationState;
 
@@ -75,7 +75,7 @@ class TaskType extends DataType
     /**
      * DueDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DueDate;
 
@@ -131,21 +131,21 @@ class TaskType extends DataType
     /**
      * Recurrence property
      *
-     * @var EWSType_TaskRecurrenceType
+     * @var TaskRecurrenceType
      */
     public $Recurrence;
 
     /**
      * StartDate property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $StartDate;
 
     /**
      * Status property
      *
-     * @var EWSType_TaskStatusType
+     * @var TaskStatusType
      */
     public $Status;
 

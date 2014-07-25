@@ -19,7 +19,7 @@ class PhoneNumberDictionaryEntryType extends DataType
     /**
      * Key property
      *
-     * @var EWSType_PhoneNumberKeyType
+     * @var PhoneNumberKeyType
      */
     public $Key;
 }

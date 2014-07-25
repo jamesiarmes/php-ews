@@ -12,7 +12,7 @@ class NonEmptyArrayOfInternetHeadersType extends DataType
     /**
      * InternetMessageHeader property
      *
-     * @var EWSType_InternetHeaderType
+     * @var InternetHeaderType
      */
     public $InternetMessageHeader;
 }

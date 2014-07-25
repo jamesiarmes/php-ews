@@ -12,7 +12,7 @@ class FileAttachmentType extends DataType
     /**
      * Identifies the file attachment.
      *
-     * @var EWSType_AttachmentIdType
+     * @var AttachmentIdType
      */
     public $AttachmentId;
 
@@ -58,7 +58,7 @@ class FileAttachmentType extends DataType
     /**
      * Represents when the file attachment was last modified.
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $LastModifiedTime;
 

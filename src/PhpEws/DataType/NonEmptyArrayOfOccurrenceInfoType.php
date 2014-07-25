@@ -12,7 +12,7 @@ class NonEmptyArrayOfOccurrenceInfoType extends DataType
     /**
      * Occurrence property
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var OccurrenceInfoType
      */
     public $Occurrence;
 }

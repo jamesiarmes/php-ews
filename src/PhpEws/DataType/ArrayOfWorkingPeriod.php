@@ -12,7 +12,7 @@ class ArrayOfWorkingPeriod extends DataType
     /**
      * WorkingPeriod property
      *
-     * @var EWSType_WorkingPeriod
+     * @var WorkingPeriod
      */
     public $WorkingPeriod;
 }

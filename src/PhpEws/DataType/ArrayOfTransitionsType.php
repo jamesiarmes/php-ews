@@ -24,28 +24,28 @@ class ArrayOfTransitionsType extends DataType
      * A time zone transition that occurs on a specific date and at a specific
      * time.
      *
-     * @var EWSType_AbsoluteDateTransitionType
+     * @var AbsoluteDateTransitionType
      */
     public $AbsoluteDateTransition;
 
     /**
      * A time zone transition that occurs on the same day each year.
      *
-     * @var EWSType_RecurringDayTransitionType
+     * @var RecurringDayTransitionType
      */
     public $RecurringDayTransition;
 
     /**
      * A time zone transition that occurs on a specified day of the year.
      *
-     * @var EWSType_RecurringDateTransitionType
+     * @var RecurringDateTransitionType
      */
     public $RecurringDateTransition;
 
     /**
      * A time zone transition.
      *
-     * @var EWSType_TransitionType
+     * @var TransitionType
      */
     public $Transition;
 }

@@ -12,28 +12,28 @@ class CreateItemType extends DataType
     /**
      * SavedItemFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SavedItemFolderId;
 
     /**
      * Items property
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var NonEmptyArrayOfAllItemsType
      */
     public $Items;
 
     /**
      * MessageDisposition property
      *
-     * @var EWSType_MessageDispositionType
+     * @var MessageDispositionType
      */
     public $MessageDisposition;
 
     /**
      * SendMeetingInvitations property
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingInvitations;
 }

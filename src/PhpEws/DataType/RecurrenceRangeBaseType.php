@@ -12,7 +12,7 @@ class RecurrenceRangeBaseType extends DataType
     /**
      * StartDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $StartDate;
 }

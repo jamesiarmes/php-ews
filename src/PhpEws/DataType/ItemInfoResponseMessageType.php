@@ -12,7 +12,7 @@ class ItemInfoResponseMessageType extends DataType
     /**
      * Items property
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var ArrayOfRealItemsType
      */
     public $Items;
 }

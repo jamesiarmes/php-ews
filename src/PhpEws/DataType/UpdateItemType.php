@@ -12,35 +12,35 @@ class UpdateItemType extends DataType
     /**
      * SavedItemFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SavedItemFolderId;
 
     /**
      * ItemChanges property
      *
-     * @var EWSType_NonEmptyArrayOfItemChangesType
+     * @var NonEmptyArrayOfItemChangesType
      */
     public $ItemChanges;
 
     /**
      * ConflictResolution property
      *
-     * @var EWSType_ConflictResolutionType
+     * @var ConflictResolutionType
      */
     public $ConflictResolution;
 
     /**
      * MessageDisposition property
      *
-     * @var EWSType_MessageDispositionType
+     * @var MessageDispositionType
      */
     public $MessageDisposition;
 
     /**
      * SendMeetingInvitationsOrCancellations property
      *
-     * @var EWSType_CalendarItemUpdateOperationType
+     * @var CalendarItemUpdateOperationType
      */
     public $SendMeetingInvitationsOrCancellations;
 }

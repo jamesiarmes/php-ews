@@ -12,14 +12,14 @@ class CalendarPermissionType extends DataType
     /**
      * ReadItems property
      *
-     * @var EWSType_CalendarPermissionReadAccessType
+     * @var CalendarPermissionReadAccessType
      */
     public $ReadItems;
 
     /**
      * CalendarPermissionLevel property
      *
-     * @var EWSType_CalendarPermissionLevelType
+     * @var CalendarPermissionLevelType
      */
     public $CalendarPermissionLevel;
 }

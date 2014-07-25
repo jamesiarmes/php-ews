@@ -12,7 +12,7 @@ class NonEmptyArrayOfRestrictedGroupIdentifiersType extends DataType
     /**
      * RestrictedGroupIdentifier property
      *
-     * @var EWSType_SidAndAttributesType
+     * @var SidAndAttributesType
      */
     public $RestrictedGroupIdentifier;
 }

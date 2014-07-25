@@ -12,7 +12,7 @@ class UpdateFolderType extends DataType
     /**
      * FolderChanges property
      *
-     * @var EWSType_NonEmptyArrayOfFolderChangesType
+     * @var NonEmptyArrayOfFolderChangesType
      */
     public $FolderChanges;
 }

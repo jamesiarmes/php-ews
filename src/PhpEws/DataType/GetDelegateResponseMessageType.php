@@ -12,7 +12,7 @@ class GetDelegateResponseMessageType extends DataType
     /**
      * DeliverMeetingRequests property
      *
-     * @var EWSType_DeliverMeetingRequestsType
+     * @var DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
 }

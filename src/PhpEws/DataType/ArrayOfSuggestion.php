@@ -12,7 +12,7 @@ class ArrayOfSuggestion extends DataType
     /**
      * Suggestion property
      *
-     * @var EWSType_Suggestion
+     * @var Suggestion
      */
     public $Suggestion;
 }

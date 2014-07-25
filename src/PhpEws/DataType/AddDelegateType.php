@@ -12,14 +12,14 @@ class AddDelegateType extends DataType
     /**
      * DelegateUsers property
      *
-     * @var EWSType_ArrayOfDelegateUserType
+     * @var ArrayOfDelegateUserType
      */
     public $DelegateUsers;
 
     /**
      * DeliverMeetingRequests property
      *
-     * @var EWSType_DeliverMeetingRequestsType
+     * @var DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
 }

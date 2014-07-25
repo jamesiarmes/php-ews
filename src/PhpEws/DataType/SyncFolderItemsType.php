@@ -12,14 +12,14 @@ class SyncFolderItemsType extends DataType
     /**
      * ItemShape property
      *
-     * @var EWSType_ItemResponseShapeType
+     * @var ItemResponseShapeType
      */
     public $ItemShape;
 
     /**
      * SyncFolderId property
      *
-     * @var EWSType_TargetFolderIdType
+     * @var TargetFolderIdType
      */
     public $SyncFolderId;
 
@@ -33,14 +33,14 @@ class SyncFolderItemsType extends DataType
     /**
      * Ignore property
      *
-     * @var EWSType_ArrayOfBaseItemIdsType
+     * @var ArrayOfBaseItemIdsType
      */
     public $Ignore;
 
     /**
      * MaxChangesReturned property
      *
-     * @var EWSType_MaxSyncChangesReturnedType
+     * @var MaxSyncChangesReturnedType
      */
     public $MaxChangesReturned;
 }

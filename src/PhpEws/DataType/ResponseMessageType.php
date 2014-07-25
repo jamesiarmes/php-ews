@@ -19,7 +19,7 @@ class ResponseMessageType extends DataType
     /**
      * ResponseCode property
      *
-     * @var EWSType_ResponseCodeType
+     * @var ResponseCodeType
      */
     public $ResponseCode;
 
@@ -33,14 +33,14 @@ class ResponseMessageType extends DataType
     /**
      * MessageXml property
      *
-     * @var EWSType_MessageXml
+     * @var MessageXml
      */
     public $MessageXml;
 
     /**
      * ResponseClass property
      *
-     * @var EWSType_ResponseClassType
+     * @var ResponseClassType
      */
     public $ResponseClass;
 }

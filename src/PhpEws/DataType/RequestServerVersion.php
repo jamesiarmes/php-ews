@@ -12,7 +12,7 @@ class RequestServerVersion extends DataType
     /**
      * Version property
      *
-     * @var EWSType_ExchangeVersionType
+     * @var ExchangeVersionType
      */
     public $Version;
 }

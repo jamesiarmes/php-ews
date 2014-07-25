@@ -12,7 +12,7 @@ class WeeklyRecurrencePatternType extends DataType
     /**
      * DaysOfWeek property
      *
-     * @var EWSType_DaysOfWeekType
+     * @var DaysOfWeekType
      */
     public $DaysOfWeek;
 }

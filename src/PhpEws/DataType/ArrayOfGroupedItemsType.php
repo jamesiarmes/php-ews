@@ -12,7 +12,7 @@ class ArrayOfGroupedItemsType extends DataType
     /**
      * GroupedItems property
      *
-     * @var EWSType_GroupedItemsType
+     * @var GroupedItemsType
      */
     public $GroupedItems;
 }

@@ -12,7 +12,7 @@ class ArrayOfDelegateUserResponseMessageType extends DataType
     /**
      * DelegateUserResponseMessageType property
      *
-     * @var EWSType_DelegateUserResponseMessageType
+     * @var DelegateUserResponseMessageType
      */
     public $DelegateUserResponseMessageType;
 }

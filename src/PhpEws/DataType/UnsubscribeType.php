@@ -12,7 +12,7 @@ class UnsubscribeType extends DataType
     /**
      * SubscriptionId property
      *
-     * @var EWSType_SubscriptionIdType
+     * @var SubscriptionIdType
      */
     public $SubscriptionId;
 }

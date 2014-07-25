@@ -12,14 +12,14 @@ class NonEmptyArrayOfAttachmentsType extends DataType
     /**
      * ItemAttachment property
      *
-     * @var EWSType_ItemAttachmentType
+     * @var ItemAttachmentType
      */
     public $ItemAttachment;
 
     /**
      * FileAttachment property
      *
-     * @var EWSType_FileAttachmentType
+     * @var FileAttachmentType
      */
     public $FileAttachment;
 }

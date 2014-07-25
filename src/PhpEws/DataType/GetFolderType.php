@@ -12,14 +12,14 @@ class GetFolderType extends DataType
     /**
      * FolderShape property
      *
-     * @var EWSType_FolderResponseShapeType
+     * @var FolderResponseShapeType
      */
     public $FolderShape;
 
     /**
      * FolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 }

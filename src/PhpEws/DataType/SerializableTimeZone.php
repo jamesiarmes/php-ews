@@ -19,14 +19,14 @@ class SerializableTimeZone extends DataType
     /**
      * StandardTime property
      *
-     * @var EWSType_SerializableTimeZoneTime
+     * @var SerializableTimeZoneTime
      */
     public $StandardTime;
 
     /**
      * DaylightTime property
      *
-     * @var EWSType_SerializableTimeZoneTime
+     * @var SerializableTimeZoneTime
      */
     public $DaylightTime;
 }

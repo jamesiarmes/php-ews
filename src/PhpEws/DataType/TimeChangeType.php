@@ -12,28 +12,28 @@ class TimeChangeType extends DataType
     /**
      * Offset property
      *
-     * @var EWSType_duration
+     * @var duration
      */
     public $Offset;
 
     /**
      * RelativeYearlyRecurrence property
      *
-     * @var EWSType_RelativeYearlyRecurrencePatternType
+     * @var RelativeYearlyRecurrencePatternType
      */
     public $RelativeYearlyRecurrence;
 
     /**
      * AbsoluteDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $AbsoluteDate;
 
     /**
      * Time property
      *
-     * @var EWSType_time
+     * @var time
      */
     public $Time;
 

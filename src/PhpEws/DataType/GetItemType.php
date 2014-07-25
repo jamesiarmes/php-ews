@@ -12,14 +12,14 @@ class GetItemType extends DataType
     /**
      * ItemShape property
      *
-     * @var EWSType_ItemResponseShapeType
+     * @var ItemResponseShapeType
      */
     public $ItemShape;
 
     /**
      * ItemIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 }

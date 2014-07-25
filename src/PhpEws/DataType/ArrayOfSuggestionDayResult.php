@@ -12,7 +12,7 @@ class ArrayOfSuggestionDayResult extends DataType
     /**
      * SuggestionDayResult property
      *
-     * @var EWSType_SuggestionDayResult
+     * @var SuggestionDayResult
      */
     public $SuggestionDayResult;
 }

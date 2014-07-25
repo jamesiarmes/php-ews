@@ -12,7 +12,7 @@ class CalendarFolderType extends DataType
     /**
      * PermissionSet property
      *
-     * @var EWSType_CalendarPermissionSetType
+     * @var CalendarPermissionSetType
      */
     public $PermissionSet;
 }

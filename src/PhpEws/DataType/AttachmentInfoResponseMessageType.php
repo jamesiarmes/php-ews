@@ -12,7 +12,7 @@ class AttachmentInfoResponseMessageType extends DataType
     /**
      * Attachments property
      *
-     * @var EWSType_ArrayOfAttachmentsType
+     * @var ArrayOfAttachmentsType
      */
     public $Attachments;
 }

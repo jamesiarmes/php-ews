@@ -12,7 +12,7 @@ class ArrayOfMailboxData extends DataType
     /**
      * MailboxData property
      *
-     * @var EWSType_MailboxData
+     * @var MailboxData
      */
     public $MailboxData;
 }

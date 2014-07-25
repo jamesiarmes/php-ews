@@ -12,21 +12,21 @@ class AttendeeType extends DataType
     /**
      * Mailbox property
      *
-     * @var EWSType_EmailAddressType
+     * @var EmailAddressType
      */
     public $Mailbox;
 
     /**
      * ResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $ResponseType;
 
     /**
      * LastResponseTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $LastResponseTime;
 }

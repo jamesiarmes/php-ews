@@ -12,42 +12,42 @@ class DelegatePermissionsType extends DataType
     /**
      * CalendarFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $CalendarFolderPermissionLevel;
 
     /**
      * TasksFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $TasksFolderPermissionLevel;
 
     /**
      * InboxFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $InboxFolderPermissionLevel;
 
     /**
      * ContactsFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $ContactsFolderPermissionLevel;
 
     /**
      * NotesFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $NotesFolderPermissionLevel;
 
     /**
      * JournalFolderPermissionLevel property
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var DelegateFolderPermissionLevelType
      */
     public $JournalFolderPermissionLevel;
 }

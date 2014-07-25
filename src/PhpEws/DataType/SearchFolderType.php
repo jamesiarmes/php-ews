@@ -12,7 +12,7 @@ class SearchFolderType extends DataType
     /**
      * SearchParameters property
      *
-     * @var EWSType_SearchParametersType
+     * @var SearchParametersType
      */
     public $SearchParameters;
 }

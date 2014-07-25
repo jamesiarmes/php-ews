@@ -19,14 +19,14 @@ class AttachmentResponseShapeType extends DataType
     /**
      * BodyType property
      *
-     * @var EWSType_BodyTypeResponseType
+     * @var BodyTypeResponseType
      */
     public $BodyType;
 
     /**
      * AdditionalProperties property
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 }

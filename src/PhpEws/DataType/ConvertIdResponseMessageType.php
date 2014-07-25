@@ -12,7 +12,7 @@ class ConvertIdResponseMessageType extends DataType
     /**
      * AlternateId property
      *
-     * @var EWSType_AlternateIdBaseType
+     * @var AlternateIdBaseType
      */
     public $AlternateId;
 }

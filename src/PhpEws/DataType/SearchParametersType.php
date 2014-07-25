@@ -12,21 +12,21 @@ class SearchParametersType extends DataType
     /**
      * Restriction property
      *
-     * @var EWSType_RestrictionType
+     * @var RestrictionType
      */
     public $Restriction;
 
     /**
      * BaseFolderIds property
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var NonEmptyArrayOfBaseFolderIdsType
      */
     public $BaseFolderIds;
 
     /**
      * Traversal property
      *
-     * @var EWSType_SearchFolderTraversalType
+     * @var SearchFolderTraversalType
      */
     public $Traversal;
 }

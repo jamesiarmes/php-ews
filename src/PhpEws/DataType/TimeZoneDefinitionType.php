@@ -27,21 +27,21 @@ class TimeZoneDefinitionType extends DataType
      * Array of Period elements that define the time offset at different stages
      * of the time zone.
      *
-     * @var EWSType_NonEmptyArrayOfPeriodsType
+     * @var NonEmptyArrayOfPeriodsType
      */
     public $Periods;
 
     /**
      * Array of TransitionsGroup elements that specify time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsGroupsType
+     * @var ArrayOfTransitionsGroupsType
      */
     public $TransitionsGroups;
 
     /**
      * Array of time zone transitions.
      *
-     * @var EWSType_ArrayOfTransitionsType
+     * @var ArrayOfTransitionsType
      */
     public $Transitions;
 }

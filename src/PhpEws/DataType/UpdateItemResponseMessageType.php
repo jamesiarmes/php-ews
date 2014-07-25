@@ -12,7 +12,7 @@ class UpdateItemResponseMessageType extends DataType
     /**
      * ConflictResults property
      *
-     * @var EWSType_ConflictResultsType
+     * @var ConflictResultsType
      */
     public $ConflictResults;
 }

@@ -12,7 +12,7 @@ class NonEmptyArrayOfDeletedOccurrencesType extends DataType
     /**
      * DeletedOccurrence property
      *
-     * @var EWSType_DeletedOccurrenceInfoType
+     * @var DeletedOccurrenceInfoType
      */
     public $DeletedOccurrence;
 }

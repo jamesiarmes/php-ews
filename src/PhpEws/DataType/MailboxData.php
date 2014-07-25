@@ -12,14 +12,14 @@ class MailboxData extends DataType
     /**
      * Email property
      *
-     * @var EWSType_EmailAddress
+     * @var EmailAddress
      */
     public $Email;
 
     /**
      * AttendeeType property
      *
-     * @var EWSType_MeetingAttendeeType
+     * @var MeetingAttendeeType
      */
     public $AttendeeType;
 

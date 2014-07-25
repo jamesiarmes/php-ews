@@ -12,14 +12,14 @@ class PermissionSetType extends DataType
     /**
      * Permissions property
      *
-     * @var EWSType_ArrayOfPermissionsType
+     * @var ArrayOfPermissionsType
      */
     public $Permissions;
 
     /**
      * UnknownEntries property
      *
-     * @var EWSType_ArrayOfUnknownEntriesType
+     * @var ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
 }

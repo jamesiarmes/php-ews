@@ -12,7 +12,7 @@ class ProxySecurityContextType extends DataType
     /**
      * _ property
      *
-     * @var EWSType_base64Binary
+     * @var base64Binary
      */
     public $_;
 }

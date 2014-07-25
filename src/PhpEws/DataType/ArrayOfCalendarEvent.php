@@ -12,7 +12,7 @@ class ArrayOfCalendarEvent extends DataType
     /**
      * CalendarEvent property
      *
-     * @var EWSType_CalendarEvent
+     * @var CalendarEvent
      */
     public $CalendarEvent;
 }

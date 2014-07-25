@@ -12,7 +12,7 @@ class GetEventsResponseMessageType extends DataType
     /**
      * Notification property
      *
-     * @var EWSType_NotificationType
+     * @var NotificationType
      */
     public $Notification;
 }

@@ -12,21 +12,21 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends DataType
     /**
      * AppendToFolderField property
      *
-     * @var EWSType_AppendToFolderFieldType
+     * @var AppendToFolderFieldType
      */
     public $AppendToFolderField;
 
     /**
      * SetFolderField property
      *
-     * @var EWSType_SetFolderFieldType
+     * @var SetFolderFieldType
      */
     public $SetFolderField;
 
     /**
      * DeleteFolderField property
      *
-     * @var EWSType_DeleteFolderFieldType
+     * @var DeleteFolderFieldType
      */
     public $DeleteFolderField;
 }

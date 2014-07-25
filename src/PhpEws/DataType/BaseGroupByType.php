@@ -12,7 +12,7 @@ class BaseGroupByType extends DataType
     /**
      * Order property
      *
-     * @var EWSType_SortDirectionType
+     * @var SortDirectionType
      */
     public $Order;
 }

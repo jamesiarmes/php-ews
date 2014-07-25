@@ -19,7 +19,7 @@ class BodyType extends DataType
     /**
      * BodyType property
      *
-     * @var EWSType_BodyTypeType
+     * @var BodyTypeType
      */
     public $BodyType;
 }

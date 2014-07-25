@@ -12,7 +12,7 @@ class MeetingMessageType extends DataType
     /**
      * AssociatedCalendarItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $AssociatedCalendarItemId;
 
@@ -40,7 +40,7 @@ class MeetingMessageType extends DataType
     /**
      * ResponseType property
      *
-     * @var EWSType_ResponseTypeType
+     * @var ResponseTypeType
      */
     public $ResponseType;
 
@@ -54,14 +54,14 @@ class MeetingMessageType extends DataType
     /**
      * RecurrenceId property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $RecurrenceId;
 
     /**
      * DateTimeStamp property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $DateTimeStamp;
 }

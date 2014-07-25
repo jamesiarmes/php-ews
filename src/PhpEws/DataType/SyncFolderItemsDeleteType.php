@@ -12,7 +12,7 @@ class SyncFolderItemsDeleteType extends DataType
     /**
      * ItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $ItemId;
 }

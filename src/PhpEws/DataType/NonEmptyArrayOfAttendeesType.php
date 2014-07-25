@@ -12,7 +12,7 @@ class NonEmptyArrayOfAttendeesType extends DataType
     /**
      * Attendee property
      *
-     * @var EWSType_AttendeeType
+     * @var AttendeeType
      */
     public $Attendee;
 }

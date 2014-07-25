@@ -12,7 +12,7 @@ class PushSubscriptionRequestType extends DataType
     /**
      * StatusFrequency property
      *
-     * @var EWSType_SubscriptionStatusFrequencyType
+     * @var SubscriptionStatusFrequencyType
      */
     public $StatusFrequency;
 

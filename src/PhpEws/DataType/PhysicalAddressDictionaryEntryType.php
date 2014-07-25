@@ -47,7 +47,7 @@ class PhysicalAddressDictionaryEntryType extends DataType
     /**
      * Key property
      *
-     * @var EWSType_PhysicalAddressKeyType
+     * @var PhysicalAddressKeyType
      */
     public $Key;
 }

@@ -12,7 +12,7 @@ class ImAddressDictionaryType extends DataType
     /**
      * Entry property
      *
-     * @var EWSType_ImAddressDictionaryEntryType
+     * @var ImAddressDictionaryEntryType
      */
     public $Entry;
 }

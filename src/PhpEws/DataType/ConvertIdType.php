@@ -12,14 +12,14 @@ class ConvertIdType extends DataType
     /**
      * SourceIds property
      *
-     * @var EWSType_NonEmptyArrayOfAlternateIdsType
+     * @var NonEmptyArrayOfAlternateIdsType
      */
     public $SourceIds;
 
     /**
      * DestinationFormat property
      *
-     * @var EWSType_IdFormatType
+     * @var IdFormatType
      */
     public $DestinationFormat;
 }

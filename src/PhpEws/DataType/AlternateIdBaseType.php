@@ -12,7 +12,7 @@ class AlternateIdBaseType extends DataType
     /**
      * Format property
      *
-     * @var EWSType_IdFormatType
+     * @var IdFormatType
      */
     public $Format;
 }

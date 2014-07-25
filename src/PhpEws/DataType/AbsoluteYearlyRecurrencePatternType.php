@@ -19,7 +19,7 @@ class AbsoluteYearlyRecurrencePatternType extends DataType
     /**
      * Month property
      *
-     * @var EWSType_MonthNamesType
+     * @var MonthNamesType
      */
     public $Month;
 }

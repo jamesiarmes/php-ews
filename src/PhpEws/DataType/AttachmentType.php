@@ -12,7 +12,7 @@ class AttachmentType extends DataType
     /**
      * AttachmentId property
      *
-     * @var EWSType_AttachmentIdType
+     * @var AttachmentIdType
      */
     public $AttachmentId;
 

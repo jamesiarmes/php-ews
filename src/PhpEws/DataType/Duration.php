@@ -12,14 +12,14 @@ class Duration extends DataType
     /**
      * StartTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $StartTime;
 
     /**
      * EndTime property
      *
-     * @var EWSType_dateTime
+     * @var dateTime
      */
     public $EndTime;
 }

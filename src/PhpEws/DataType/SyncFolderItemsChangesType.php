@@ -12,28 +12,28 @@ class SyncFolderItemsChangesType extends DataType
     /**
      * Create property
      *
-     * @var EWSType_SyncFolderItemsCreateOrUpdateType
+     * @var SyncFolderItemsCreateOrUpdateType
      */
     public $Create;
 
     /**
      * Update property
      *
-     * @var EWSType_SyncFolderItemsCreateOrUpdateType
+     * @var SyncFolderItemsCreateOrUpdateType
      */
     public $Update;
 
     /**
      * Delete property
      *
-     * @var EWSType_SyncFolderItemsDeleteType
+     * @var SyncFolderItemsDeleteType
      */
     public $Delete;
 
     /**
      * ReadFlagChange property
      *
-     * @var EWSType_SyncFolderItemsReadFlagType
+     * @var SyncFolderItemsReadFlagType
      */
     public $ReadFlagChange;
 }

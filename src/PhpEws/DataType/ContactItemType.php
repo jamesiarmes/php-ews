@@ -19,7 +19,7 @@ class ContactItemType extends DataType
     /**
      * FileAsMapping property
      *
-     * @var EWSType_FileAsMappingType
+     * @var FileAsMappingType
      */
     public $FileAsMapping;
 
@@ -63,7 +63,7 @@ class ContactItemType extends DataType
      *
      * This propery is read-only.
      *
-     * @var EWSType_CompleteNameType
+     * @var CompleteNameType
      */
     public $CompleteName;
 
@@ -77,21 +77,21 @@ class ContactItemType extends DataType
     /**
      * EmailAddresses property
      *
-     * @var EWSType_EmailAddressDictionaryType
+     * @var EmailAddressDictionaryType
      */
     public $EmailAddresses;
 
     /**
      * PhysicalAddresses property
      *
-     * @var EWSType_PhysicalAddressDictionaryType
+     * @var PhysicalAddressDictionaryType
      */
     public $PhysicalAddresses;
 
     /**
      * PhoneNumbers property
      *
-     * @var EWSType_PhoneNumberDictionaryType
+     * @var PhoneNumberDictionaryType
      */
     public $PhoneNumbers;
 
@@ -119,21 +119,21 @@ class ContactItemType extends DataType
     /**
      * Children property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Children;
 
     /**
      * Companies property
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var ArrayOfStringsType
      */
     public $Companies;
 
     /**
      * ContactSource property
      *
-     * @var EWSType_ContactSourceType
+     * @var ContactSourceType
      */
     public $ContactSource;
 
@@ -154,7 +154,7 @@ class ContactItemType extends DataType
     /**
      * ImAddresses property
      *
-     * @var EWSType_ImAddressDictionaryType
+     * @var ImAddressDictionaryType
      */
     public $ImAddresses;
 
@@ -189,7 +189,7 @@ class ContactItemType extends DataType
     /**
      * PostalAddressIndex property
      *
-     * @var EWSType_PhysicalAddressIndexType
+     * @var PhysicalAddressIndexType
      */
     public $PostalAddressIndex;
 

@@ -12,14 +12,14 @@ class FreeBusyResponseType extends DataType
     /**
      * ResponseMessage property
      *
-     * @var EWSType_ResponseMessageType
+     * @var ResponseMessageType
      */
     public $ResponseMessage;
 
     /**
      * FreeBusyView property
      *
-     * @var EWSType_FreeBusyView
+     * @var FreeBusyView
      */
     public $FreeBusyView;
 }

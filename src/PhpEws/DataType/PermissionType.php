@@ -12,14 +12,14 @@ class PermissionType extends DataType
     /**
      * ReadItems property
      *
-     * @var EWSType_PermissionReadAccessType
+     * @var PermissionReadAccessType
      */
     public $ReadItems;
 
     /**
      * PermissionLevel property
      *
-     * @var EWSType_PermissionLevelType
+     * @var PermissionLevelType
      */
     public $PermissionLevel;
 }

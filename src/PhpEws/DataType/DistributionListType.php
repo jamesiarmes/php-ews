@@ -26,7 +26,7 @@ class DistributionListType extends DataType
     /**
      * ContactSource property
      *
-     * @var EWSType_ContactSourceType
+     * @var ContactSourceType
      */
     public $ContactSource;
 }

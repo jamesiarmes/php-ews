@@ -12,7 +12,7 @@ class EndDateRecurrenceRangeType extends DataType
     /**
      * EndDate property
      *
-     * @var EWSType_date
+     * @var date
      */
     public $EndDate;
 }

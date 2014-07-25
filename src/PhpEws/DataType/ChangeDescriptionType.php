@@ -12,7 +12,7 @@ class ChangeDescriptionType extends DataType
     /**
      * Path property
      *
-     * @var EWSType_BasePathToElementType
+     * @var BasePathToElementType
      */
     public $Path;
 }

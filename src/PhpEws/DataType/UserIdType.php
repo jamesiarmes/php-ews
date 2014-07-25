@@ -33,7 +33,7 @@ class UserIdType extends DataType
     /**
      * DistinguishedUser property
      *
-     * @var EWSType_DistinguishedUserType
+     * @var DistinguishedUserType
      */
     public $DistinguishedUser;
 }

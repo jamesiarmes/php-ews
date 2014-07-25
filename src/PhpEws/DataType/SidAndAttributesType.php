@@ -19,7 +19,7 @@ class SidAndAttributesType extends DataType
     /**
      * Attributes property
      *
-     * @var EWSType_unsignedInt
+     * @var unsignedInt
      */
     public $Attributes;
 }

@@ -12,21 +12,21 @@ class MovedCopiedEventType extends DataType
     /**
      * OldFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $OldFolderId;
 
     /**
      * OldItemId property
      *
-     * @var EWSType_ItemIdType
+     * @var ItemIdType
      */
     public $OldItemId;
 
     /**
      * OldParentFolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $OldParentFolderId;
 }

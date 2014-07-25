@@ -12,7 +12,7 @@ class ArrayOfCalendarPermissionsType extends DataType
     /**
      * CalendarPermission property
      *
-     * @var EWSType_CalendarPermissionType
+     * @var CalendarPermissionType
      */
     public $CalendarPermission;
 }

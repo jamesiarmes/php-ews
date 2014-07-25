@@ -12,14 +12,14 @@ class TargetFolderIdType extends DataType
     /**
      * FolderId property
      *
-     * @var EWSType_FolderIdType
+     * @var FolderIdType
      */
     public $FolderId;
 
     /**
      * DistinguishedFolderId property
      *
-     * @var EWSType_DistinguishedFolderIdType
+     * @var DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
 }

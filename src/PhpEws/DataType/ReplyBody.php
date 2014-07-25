@@ -19,7 +19,7 @@ class ReplyBody extends DataType
     /**
      * lang property
      *
-     * @var EWSType_UNKNOWN
+     * @var UNKNOWN
      */
     public $lang;
 }

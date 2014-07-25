@@ -12,7 +12,7 @@ class BaseResponseMessageType extends DataType
     /**
      * ResponseMessages property
      *
-     * @var EWSType_ArrayOfResponseMessagesType
+     * @var ArrayOfResponseMessagesType
      */
     public $ResponseMessages;
 }

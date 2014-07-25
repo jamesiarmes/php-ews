@@ -12,7 +12,7 @@ class PathToUnindexedFieldType extends DataType
     /**
      * FieldURI property
      *
-     * @var EWSType_UnindexedFieldURIType
+     * @var UnindexedFieldURIType
      */
     public $FieldURI;
 }
