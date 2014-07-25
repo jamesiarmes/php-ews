@@ -27,7 +27,7 @@ namespace PhpEws;
  * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
  * @link https://www.testexchangeconnectivity.com/
  */
-class Autodiscovery
+class AutodiscoveryManager
 {
     /**
      * The path appended to the various schemes and hostnames used during
@@ -265,7 +265,7 @@ class Autodiscovery
      * Toggle skipping of SSL verification in cURL requests.
      *
      * @param boolean $skip To skip, or not.
-     * @return self
+     * @return AutodiscoveryManager
      */
     public function skipSSLVerification($skip = true)
     {
@@ -490,7 +490,7 @@ class Autodiscovery
      * Attempt to retrieve the autodiscover host from an SRV DNS record.
      *
      * @link http://support.microsoft.com/kb/940881
-     * @return self::AUTODISCOVERED_VIA_SRV_RECORD or false
+     * @return AutodiscoveryManager::AUTODISCOVERED_VIA_SRV_RECORD or false
      */
     public function trySRVRecord()
     {
@@ -512,7 +512,7 @@ class Autodiscovery
      * Set the path to the file to be used by CURLOPT_CAINFO.
      *
      * @param string $path Path to a certificate file such as cacert.pem
-     * @return self
+     * @return AutodiscoveryManager
      */
     public function setCAInfo($path)
     {
@@ -528,7 +528,7 @@ class Autodiscovery
      *
      * @param string $path Path to a directory containing one or more CA 
      * certificates.
-     * @return self
+     * @return AutodiscoveryManager
      */
     public function setCAPath($path)
     {
@@ -543,7 +543,7 @@ class Autodiscovery
      * Set a connection timeout for the POST methods.
      *
      * @param integer $seconds Seconds to wait for a connection.
-     * @return self
+     * @return AutodiscoveryManager
      */
     public function setConnectionTimeout($seconds)
     {
@@ -675,7 +675,7 @@ class Autodiscovery
      * Reset the response-related structures. Called before making a new 
      * request.
      *
-     * @return self
+     * @return AutodiscoveryManager
      */
     public function reset()
     {
