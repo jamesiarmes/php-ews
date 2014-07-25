@@ -1,0 +1,24 @@
+<?php
+
+namespace PhpEws\DataType;
+
+use PhpEws\DataType;
+/**
+ * Definition of the BaseNotificationEventType type
+ *
+ * @package php-ews
+ * @subpackage Types
+ */
+
+/**
+ * Definition of the BaseNotificationEventType type
+ */
+class BaseNotificationEventType extends DataType
+{
+    /**
+     * Watermark property
+     *
+     * @var EWSType_WatermarkType
+     */
+    public $Watermark;
+}

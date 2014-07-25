@@ -1,0 +1,27 @@
+{
+    "name": "php-ews/php-ews",
+    "description": "The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Elsodaney",
+            "email": "adam.elso@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "~5.4"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}

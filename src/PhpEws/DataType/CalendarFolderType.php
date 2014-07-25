@@ -1,0 +1,24 @@
+<?php
+
+namespace PhpEws\DataType;
+
+use PhpEws\DataType;
+/**
+ * Definition of the CalendarFolderType type
+ *
+ * @package php-ews
+ * @subpackage Types
+ */
+
+/**
+ * Definition of the CalendarFolderType type
+ */
+class CalendarFolderType extends DataType
+{
+    /**
+     * PermissionSet property
+     *
+     * @var EWSType_CalendarPermissionSetType
+     */
+    public $PermissionSet;
+}

@@ -1,0 +1,24 @@
+<?php
+
+namespace PhpEws\DataType;
+
+use PhpEws\DataType;
+/**
+ * Definition of the PhysicalAddressDictionaryType type
+ *
+ * @package php-ews
+ * @subpackage Types
+ */
+
+/**
+ * Definition of the PhysicalAddressDictionaryType type
+ */
+class PhysicalAddressDictionaryType extends DataType
+{
+    /**
+     * Entry property
+     *
+     * @var EWSType_PhysicalAddressDictionaryEntryType
+     */
+    public $Entry;
+}

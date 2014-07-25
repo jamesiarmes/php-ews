@@ -280,7 +280,7 @@ class EWSAutodiscover
 
     /**
      * Parse the hex ServerVersion value and return a valid
-     * ExchangeWebServices::VERSION_* constant.
+     * \PhpEws\EwsConnection::VERSION_* constant.
      *
      * @return string|boolean A known version constant, or FALSE if it could not
      * be determined.
@@ -303,33 +303,33 @@ class EWSAutodiscover
         if ($majorversion == 8) {
             switch ($minorversion) {
                 case 0:
-                    return ExchangeWebServices::VERSION_2007;
+                    return \PhpEws\EwsConnection::VERSION_2007;
                     break;
                 case 1:
-                    return ExchangeWebServices::VERSION_2007_SP1;
+                    return \PhpEws\EwsConnection::VERSION_2007_SP1;
                     break;
                 case 2:
-                    return ExchangeWebServices::VERSION_2007_SP2;
+                    return \PhpEws\EwsConnection::VERSION_2007_SP2;
                     break;
                 case 3:
-                    return ExchangeWebServices::VERSION_2007_SP3;
+                    return \PhpEws\EwsConnection::VERSION_2007_SP3;
                     break;
                 default:
-                    return ExchangeWebServices::VERSION_2007;
+                    return \PhpEws\EwsConnection::VERSION_2007;
             }
         } elseif ($majorversion == 14) {
             switch ($minorversion) {
                 case 0:
-                    return ExchangeWebServices::VERSION_2010;
+                    return \PhpEws\EwsConnection::VERSION_2010;
                     break;
                 case 1:
-                    return ExchangeWebServices::VERSION_2010_SP1;
+                    return \PhpEws\EwsConnection::VERSION_2010_SP1;
                     break;
                 case 2:
-                    return ExchangeWebServices::VERSION_2010_SP2;
+                    return \PhpEws\EwsConnection::VERSION_2010_SP2;
                     break;
                 default:
-                    return ExchangeWebServices::VERSION_2010;
+                    return \PhpEws\EwsConnection::VERSION_2010;
             }
         }
 
@@ -338,10 +338,10 @@ class EWSAutodiscover
     }
 
     /**
-     * Method to return a new ExchangeWebServices object, auto-configured
+     * Method to return a new \PhpEws\EwsConnection object, auto-configured
      * with the proper hostname.
      *
-     * @return mixed ExchangeWebServices object on success, FALSE on failure.
+     * @return mixed \PhpEws\EwsConnection object on success, FALSE on failure.
      */
     public function newEWS()
     {
@@ -380,9 +380,9 @@ class EWSAutodiscover
         if ($server) {
             if ($version === null) {
                 // EWS class default.
-                $version = ExchangeWebServices::VERSION_2007;
+                $version = \PhpEws\EwsConnection::VERSION_2007;
             }
-            return new ExchangeWebServices(
+            return new \PhpEws\EwsConnection(
                 $server,
                 $this->email,
                 $this->password,

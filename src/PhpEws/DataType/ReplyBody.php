@@ -1,0 +1,31 @@
+<?php
+
+namespace PhpEws\DataType;
+
+use PhpEws\DataType;
+/**
+ * Definition of the ReplyBody type
+ *
+ * @package php-ews
+ * @subpackage Types
+ */
+
+/**
+ * Definition of the ReplyBody type
+ */
+class ReplyBody extends DataType
+{
+    /**
+     * Message property
+     *
+     * @var string
+     */
+    public $Message;
+
+    /**
+     * lang property
+     *
+     * @var EWSType_UNKNOWN
+     */
+    public $lang;
+}

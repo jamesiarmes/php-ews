@@ -1,0 +1,24 @@
+<?php
+
+namespace PhpEws\DataType;
+
+use PhpEws\DataType;
+/**
+ * Definition of the NonEmptyArrayOfPathsToElementType type
+ *
+ * @package php-ews
+ * @subpackage Types
+ */
+
+/**
+ * Definition of the NonEmptyArrayOfPathsToElementType type
+ */
+class NonEmptyArrayOfPathsToElementType extends DataType
+{
+    /**
+     * Path property
+     *
+     * @var EWSType_BasePathToElementType
+     */
+    public $Path;
+}
