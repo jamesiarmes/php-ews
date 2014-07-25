@@ -1,10 +1,6 @@
 <?php
-/**
- * Exchange Web Services Autodiscover implementation.
- *
- * @package php-ews
- * @subpackage Auto Discovery
- */
+
+namespace PhpEws;
 
 /**
  * Exchange Web Services Autodiscover implementation
@@ -17,7 +13,7 @@
  *
  * (after any auto-loading class incantation)
  *
- * $ews = EWSAutodiscover::getEWS($email, $password);
+ * $ews = Autodiscovery::getEWS($email, $password);
  *
  * -- OR --
  *
@@ -31,7 +27,7 @@
  * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
  * @link https://www.testexchangeconnectivity.com/
  */
-class EWSAutodiscover
+class Autodiscovery
 {
     /**
      * The path appended to the various schemes and hostnames used during
@@ -206,7 +202,7 @@ class EWSAutodiscover
     public $discovered = null;
 
     /**
-     * Constructor for the EWSAutodiscover class. 
+     * Constructor for the Autodiscovery class.
      *
      * @param string $email
      * @param string $password
@@ -303,33 +299,33 @@ class EWSAutodiscover
         if ($majorversion == 8) {
             switch ($minorversion) {
                 case 0:
-                    return \PhpEws\EwsConnection::VERSION_2007;
+                    return EwsConnection::VERSION_2007;
                     break;
                 case 1:
-                    return \PhpEws\EwsConnection::VERSION_2007_SP1;
+                    return EwsConnection::VERSION_2007_SP1;
                     break;
                 case 2:
-                    return \PhpEws\EwsConnection::VERSION_2007_SP2;
+                    return EwsConnection::VERSION_2007_SP2;
                     break;
                 case 3:
-                    return \PhpEws\EwsConnection::VERSION_2007_SP3;
+                    return EwsConnection::VERSION_2007_SP3;
                     break;
                 default:
-                    return \PhpEws\EwsConnection::VERSION_2007;
+                    return EwsConnection::VERSION_2007;
             }
         } elseif ($majorversion == 14) {
             switch ($minorversion) {
                 case 0:
-                    return \PhpEws\EwsConnection::VERSION_2010;
+                    return EwsConnection::VERSION_2010;
                     break;
                 case 1:
-                    return \PhpEws\EwsConnection::VERSION_2010_SP1;
+                    return EwsConnection::VERSION_2010_SP1;
                     break;
                 case 2:
-                    return \PhpEws\EwsConnection::VERSION_2010_SP2;
+                    return EwsConnection::VERSION_2010_SP2;
                     break;
                 default:
-                    return \PhpEws\EwsConnection::VERSION_2010;
+                    return EwsConnection::VERSION_2010;
             }
         }
 
@@ -338,12 +334,12 @@ class EWSAutodiscover
     }
 
     /**
-     * Method to return a new \PhpEws\EwsConnection object, auto-configured
+     * Method to return a new EwsConnection object, auto-configured
      * with the proper hostname.
      *
-     * @return mixed \PhpEws\EwsConnection object on success, FALSE on failure.
+     * @return EwsConnection|false EwsConnection on success, false on failure.
      */
-    public function newEWS()
+    public function createNewConnection()
     {
         // Discovery not yet attempted.
         if ($this->discovered === null) {
@@ -380,9 +376,9 @@ class EWSAutodiscover
         if ($server) {
             if ($version === null) {
                 // EWS class default.
-                $version = \PhpEws\EwsConnection::VERSION_2007;
+                $version = EwsConnection::VERSION_2007;
             }
-            return new \PhpEws\EwsConnection(
+            return new EwsConnection(
                 $server,
                 $this->email,
                 $this->password,
@@ -400,12 +396,14 @@ class EWSAutodiscover
      * @param string $email
      * @param string $password
      * @param string $username If left blank, the email provided will be used.
-     * @return mixed
+     *
+     * @return EwsConnection
      */
-    public static function getEWS($email, $password, $username = null)
+    public static function getConnection($email, $password, $username = null)
     {
         $auto = new self($email, $password, $username);
-        return $auto->newEWS();
+
+        return $auto->createNewConnection();
     }
 
     /** 
@@ -815,5 +813,4 @@ class EWSAutodiscover
 
         return $output;
     }
-
 }
