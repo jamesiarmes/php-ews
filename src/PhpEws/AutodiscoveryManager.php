@@ -698,7 +698,7 @@ class AutodiscoveryManager
             return $this->requestxml;
         }
 
-        $xml = new XMLWriter;
+        $xml = new \XMLWriter();
         $xml->openMemory();
         $xml->setIndent(true);
         $xml->startDocument('1.0', 'UTF-8');
