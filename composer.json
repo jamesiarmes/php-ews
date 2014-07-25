@@ -14,7 +14,8 @@
         "php": "~5.4"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2"
+        "phpspec/phpspec": "~2",
+        "symfony/console": "~2"
     },
     "config": {
         "bin-dir": "bin"

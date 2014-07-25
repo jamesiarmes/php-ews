@@ -5,5 +5,5 @@ tests/
 /nbproject/
 /.idea/
 /vendor/
-/bin/
+/bin/phpspec
 
