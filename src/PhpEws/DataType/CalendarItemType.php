@@ -19,7 +19,7 @@ class CalendarItemType extends ItemType
     /**
      * Used to identify a specific instance of a recurring calendar item.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $RecurrenceId;
 
@@ -27,7 +27,7 @@ class CalendarItemType extends ItemType
      * Indicates the date and time that an instance of a iCalendar object was
      * created.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DateTimeStamp;
 
@@ -35,7 +35,7 @@ class CalendarItemType extends ItemType
      * Represents the start of a calendar item. This element only applies to a
      * single occurrence of a calendar item.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $Start;
 
@@ -43,14 +43,14 @@ class CalendarItemType extends ItemType
      * Represents the end of a duration. This element only applies to a single
      * occurrence of a calendar item.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $End;
 
     /**
      * Represents the original start time of a calendar item.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $OriginalStart;
 
@@ -208,7 +208,7 @@ class CalendarItemType extends ItemType
      * Represents the date and time when an attendee replied to a meeting
      * request.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $AppointmentReplyTime;
 

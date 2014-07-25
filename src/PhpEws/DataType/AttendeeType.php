@@ -26,7 +26,7 @@ class AttendeeType extends DataType
     /**
      * LastResponseTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $LastResponseTime;
 }

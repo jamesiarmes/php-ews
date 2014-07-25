@@ -26,21 +26,21 @@ class MeetingRequestMessageType extends DataType
     /**
      * Start property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $OriginalStart;
 
@@ -187,7 +187,7 @@ class MeetingRequestMessageType extends DataType
     /**
      * AppointmentReplyTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $AppointmentReplyTime;
 

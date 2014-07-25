@@ -19,7 +19,7 @@ class TaskType extends DataType
     /**
      * AssignedTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $AssignedTime;
 
@@ -47,7 +47,7 @@ class TaskType extends DataType
     /**
      * CompleteDate property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $CompleteDate;
 
@@ -75,7 +75,7 @@ class TaskType extends DataType
     /**
      * DueDate property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DueDate;
 
@@ -138,7 +138,7 @@ class TaskType extends DataType
     /**
      * StartDate property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $StartDate;
 

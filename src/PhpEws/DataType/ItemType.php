@@ -72,7 +72,7 @@ class ItemType extends DataType
     /**
      * Represents the date and time that an item in a mailbox was received.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DateTimeReceived;
 
@@ -152,7 +152,7 @@ class ItemType extends DataType
     /**
      * Represents the date and time that an item in a mailbox was sent.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DateTimeSent;
 
@@ -160,7 +160,7 @@ class ItemType extends DataType
      * Represents the date and time that a given item in the mailbox was
      * created.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DateTimeCreated;
 
@@ -177,7 +177,7 @@ class ItemType extends DataType
      * ReminderMinutesBeforeStart element to determine when the reminder is
      * displayed.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $ReminderDueBy;
 
@@ -253,7 +253,7 @@ class ItemType extends DataType
     /**
      * Indicates when an item was last modified.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $LastModifiedTime;
 

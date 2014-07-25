@@ -12,14 +12,14 @@ class CalendarViewType extends DataType
     /**
      * StartDate property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $StartDate;
 
     /**
      * EndDate property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $EndDate;
 }

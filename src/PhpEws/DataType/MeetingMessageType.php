@@ -54,14 +54,14 @@ class MeetingMessageType extends DataType
     /**
      * RecurrenceId property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $RecurrenceId;
 
     /**
      * DateTimeStamp property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $DateTimeStamp;
 }

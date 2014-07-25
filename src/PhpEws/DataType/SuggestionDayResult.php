@@ -12,7 +12,7 @@ class SuggestionDayResult extends DataType
     /**
      * Date property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $Date;
 

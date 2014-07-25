@@ -12,7 +12,7 @@ class BaseObjectChangedEventType extends DataType
     /**
      * TimeStamp property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $TimeStamp;
 

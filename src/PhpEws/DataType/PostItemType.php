@@ -47,7 +47,7 @@ class PostItemType extends DataType
     /**
      * PostedTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $PostedTime;
 

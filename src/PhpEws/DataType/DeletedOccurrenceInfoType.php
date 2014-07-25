@@ -12,7 +12,7 @@ class DeletedOccurrenceInfoType extends DataType
     /**
      * Start property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $Start;
 }

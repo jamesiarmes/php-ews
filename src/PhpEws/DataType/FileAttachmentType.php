@@ -58,7 +58,7 @@ class FileAttachmentType extends DataType
     /**
      * Represents when the file attachment was last modified.
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $LastModifiedTime;
 

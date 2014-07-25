@@ -54,7 +54,7 @@ class SuggestionsViewOptionsType extends DataType
     /**
      * CurrentMeetingTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $CurrentMeetingTime;
 

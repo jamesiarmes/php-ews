@@ -12,7 +12,7 @@ class Suggestion extends DataType
     /**
      * MeetingTime property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $MeetingTime;
 

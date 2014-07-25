@@ -19,21 +19,21 @@ class OccurrenceInfoType extends DataType
     /**
      * Start property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $Start;
 
     /**
      * End property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $End;
 
     /**
      * OriginalStart property
      *
-     * @var dateTime
+     * @var \DateTime
      */
     public $OriginalStart;
 }
