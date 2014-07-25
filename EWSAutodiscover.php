@@ -24,7 +24,7 @@
  * If there are issues with your cURL installation that require you to specify
  * a path to a valid Certificate Authority, you can configure that manually.
  *
- * $auto = new EWSAutodiscover($email, $password);
+ * $auto = new self($email, $password);
  * $auto->setCAInfo('/path/to/your/cacert.pem');
  * $ews = $auto->newEWS();
  *
@@ -404,7 +404,7 @@ class EWSAutodiscover
      */
     public static function getEWS($email, $password, $username = null)
     {
-        $auto = new EWSAutodiscover($email, $password, $username);
+        $auto = new self($email, $password, $username);
         return $auto->newEWS();
     }
 
