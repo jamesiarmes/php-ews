@@ -3,3 +3,7 @@
 .settings/
 tests/
 /nbproject/
+/.idea/
+/vendor/
+/bin/
+
