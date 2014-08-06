@@ -7,7 +7,7 @@ easier. It handles the NTLM authentication required to use the SOAP
 services and provides an object-oriented interface to the complex types
 required to form a request.
 
-__This is a forked version__ of Adam Elso's fork [adamelso/php-ews] (adamelso/php-ews) of the the original GitHub project at [jamesiarmes/php-ews](/jamesiarmes/php-ews) to bring Composer installation,
+__This is a forked version__ of the original GitHub project at [jamesiarmes/php-ews](/jamesiarmes/php-ews) to bring Composer installation,
 namespaces and PSR-0 autoloading of classes.
 
 Dependencies
