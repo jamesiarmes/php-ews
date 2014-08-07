@@ -10,6 +10,10 @@ required to form a request.
 __This is a forked version__ of the original GitHub project at [jamesiarmes/php-ews](/jamesiarmes/php-ews) to bring Composer installation,
 namespaces and PSR-0 autoloading of classes.
 
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adamelso/php-ews/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adamelso/php-ews/?branch=master)
+
+
 Dependencies
 ------------
 
