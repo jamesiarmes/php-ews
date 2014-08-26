@@ -21,7 +21,7 @@ class EWSType_ConvertIdType extends EWSType
     /**
      * DestinationFormat property
      *
-     * @var EWSType_IdFormatType
+     * @var EWSType_ConvertIdFormatType
      */
     public $DestinationFormat;
 }

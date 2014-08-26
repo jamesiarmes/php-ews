@@ -24,4 +24,11 @@ class EWSType_AlternateIdType extends EWSType
      * @var EWSType_NonEmptyStringType
      */
     public $Mailbox;
+    
+    /**
+     * Format property
+     * 
+     * @var EWSType_ConvertIdFormatType
+     */
+    public $Format;
 }
