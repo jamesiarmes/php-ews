@@ -68,6 +68,10 @@ class NTLMSoapClient extends SoapClient
 
         $this->__last_request_headers = $headers;
         $this->ch = curl_init($location);
+        
+        //added lines to handle cookies to avoid 401 errors
+        curl_setopt($this->ch, CURLOPT_COOKIEJAR, "tmp".DIRECTORY_SEPARATOR.$this->user.'.txt'); //store cookie
+        curl_setopt($this->ch, CURLOPT_COOKIEFILE, "tmp".DIRECTORY_SEPARATOR.$this->user.'.txt'); //send cookie
 
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);

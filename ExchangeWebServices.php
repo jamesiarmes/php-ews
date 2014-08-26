@@ -688,6 +688,34 @@ class ExchangeWebServices
 
         return $this->processResponse($response);
     }
+    
+    /**
+     * Function GetRoomLists
+     *
+     * @param GetRoomLists $request
+     * @return GetRoomListsResponseType
+     */
+    public function GetRoomLists($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+    
+    /**
+     * Function GetRooms
+     *
+     * @param GetRooms $request
+     * @return GetRoomsResponseType
+     */
+    public function GetRooms($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
 
     /**
      * Initializes the SoapClient object to make a request
