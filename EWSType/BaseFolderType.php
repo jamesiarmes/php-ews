@@ -1,76 +1,99 @@
 <?php
 /**
- * Definition of the BaseFolderType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BaseFolderType.
  */
 
 /**
- * Definition of the BaseFolderType type
+ * Base class for folder types.
+ *
+ * @package php-ews\Types
  */
 class EWSType_BaseFolderType extends EWSType
 {
     /**
-     * FolderId property
+     * Represents the number of child folders that are contained within a
+     * folder.
      *
-     * @var EWSType_FolderIdType
-     */
-    public $FolderId;
-
-    /**
-     * ParentFolderId property
+     * This property is read-only.
      *
-     * @var EWSType_FolderIdType
-     */
-    public $ParentFolderId;
-
-    /**
-     * FolderClass property
-     *
-     * @var string
-     */
-    public $FolderClass;
-
-    /**
-     * DisplayName property
-     *
-     * @var string
-     */
-    public $DisplayName;
-
-    /**
-     * TotalCount property
-     *
-     * @var integer
-     */
-    public $TotalCount;
-
-    /**
-     * ChildFolderCount property
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $ChildFolderCount;
 
     /**
-     * ExtendedProperty property
+     * Contains the display name of a folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $DisplayName;
+
+    /**
+     * Contains the client's rights based on the permission settings for the
+     * item or folder.
+     *
+     * This element is read-only.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_EffectiveRightsType
+     */
+    public $EffectiveRights;
+
+    /**
+     * Identifies extended properties on folders.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ExtendedPropertyType
      */
     public $ExtendedProperty;
 
     /**
-     * ManagedFolderInformation property
+     * Represents the folder class for a given folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $FolderClass;
+
+    /**
+     * Contains the identifier and change key of a folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderIdType
+     */
+    public $FolderId;
+
+    /**
+     * Contains information about a managed folder.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ManagedFolderInformationType
      */
     public $ManagedFolderInformation;
 
     /**
-     * EffectiveRights property
+     * Represents the identifier of the parent folder that contains the folder.
      *
-     * @var EWSType_EffectiveRightsType
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderIdType
      */
-    public $EffectiveRights;
+    public $ParentFolderId;
+
+    /**
+     * Represents the total count of items within a given folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $TotalCount;
 }

@@ -1,32 +1,37 @@
 <?php
 /**
- * Definition of the ExtendedPropertyType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ExtendedPropertyType.
  */
 
 /**
- * Definition of the ExtendedPropertyType type
+ * Identifies extended MAPI properties on folders and items.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ExtendedPropertyType extends EWSType
 {
     /**
-     * ExtendedFieldURI property
+     * Identifies an extended MAPI property to get, set, or create.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
-     * Value property
+     * Contains the value of single-valued MAPI extended property.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $Value;
 
     /**
-     * Values property
+     * Contains a collection of values for a multivalued extended MAPI property.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfPropertyValuesType
      */

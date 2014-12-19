@@ -1,18 +1,20 @@
 <?php
 /**
- * Definition of the ArrayOfCalendarEvent type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfCalendarEvent.
  */
 
 /**
- * Definition of the ArrayOfCalendarEvent type
+ * Represents a set of unique calendar item occurrences that represent the
+ * requested user's availability.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfCalendarEvent extends EWSType
 {
     /**
-     * CalendarEvent property
+     * Represents a unique calendar item occurrence.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarEvent
      */

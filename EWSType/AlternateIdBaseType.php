@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the AlternateIdBaseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AlternateIdBaseType.
  */
 
 /**
- * Definition of the AlternateIdBaseType type
+ * Base class for alternate id types.
+ *
+ * @package php-ews\Types
  */
-class EWSType_AlternateIdBaseType extends EWSType
+abstract class EWSType_AlternateIdBaseType extends EWSType
 {
     /**
-     * Format property
+     * Describes the source or destination format in a request.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_IdFormatType
      */

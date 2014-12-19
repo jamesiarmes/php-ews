@@ -1,18 +1,22 @@
 <?php
 /**
- * Definition of the SetItemFieldType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SetItemFieldType.
  */
 
 /**
- * Definition of the SetItemFieldType type
+ * Represents an update to a single property of an item in an UpdateItem
+ * operation.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_ItemChangeDescriptionType.
  */
 class EWSType_SetItemFieldType extends EWSType
 {
     /**
      * Represents an Exchange calendar item to update.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarItemType
      */
@@ -21,12 +25,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Represents an Exchange contact item to update.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_ContactItemType
      */
     public $Contact;
 
     /**
      * Represents a distribution list to update.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_DistributionListType
      */
@@ -35,12 +43,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Identifies extended MAPI properties to set.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
      * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_PathToUnindexedFieldType
      */
@@ -49,12 +61,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Identifies individual members of a dictionary.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 
     /**
      * Represents an item in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ItemType
      */
@@ -63,12 +79,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Represents a meeting cancellation to update.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
     /**
      * Represents a meeting message to update.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingMessageType
      */
@@ -77,12 +97,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Represents a meeting request to update.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_MeetingRequestMessageType
      */
     public $MeetingRequest;
 
     /**
      * Represents a meeting response to update.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MeetingResponseMessageType
      */
@@ -91,19 +115,16 @@ class EWSType_SetItemFieldType extends EWSType
     /**
      * Represents an Exchange e-mail message to update.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_MessageType
      */
     public $Message;
 
     /**
-     * represents a post item in the Exchange store.
-     *
-     * @var EWSType_PostItemType
-     */
-    public $PostItem;
-
-    /**
      * Represents a task to update.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TaskType
      */

@@ -1,48 +1,80 @@
 <?php
 /**
- * Definition of the CalendarItemUpdateOperationType type.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CalendarItemUpdateOperationType.
  */
 
 /**
- * Definition of the CalendarItemUpdateOperationType type.
+ * Defines how meeting updates are communicated after a calendar item is
+ * updated.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_CalendarItemUpdateOperationType extends EWSType
 {
     /**
-     * Send to no attendees.
+     * The calendar item is updated and the meeting update is sent to all
+     * attendees but is not saved in the Sent Items folder.
      *
-     * @var string
-     */
-    const SEND_TO_NONE = 'SendToNone';
-
-    /**
-     * Send to all attendees but do not save a copy.
+     * @since Exchange 2007
      *
      * @var string
      */
     const SEND_ONLY_TO_ALL = 'SendOnlyToAll';
 
     /**
-     * Send to all attendees and save a copy.
+     * The calendar item is updated and the meeting update is sent only to
+     * attendees that are affected by the change in the meeting.
      *
-     * @var string
-     */
-    const SEND_TO_ALL_AND_SAVE_COPY = 'SendToAllAndSaveCopy';
-
-    /**
-     * Send to only the changed attendees but do not save a copy.
+     * @since Exchange 2007
      *
      * @var string
      */
     const SEND_ONLY_TO_CHANGED = 'SendOnlyToChanged';
 
     /**
-     * Send to only the changed attendees and save a copy.
+     * The calendar item is updated, the meeting update is sent to all
+     * attendees, and a copy is saved in the Sent Items folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const SEND_TO_ALL_AND_SAVE_COPY = 'SendToAllAndSaveCopy';
+
+    /**
+     * The calendar item is updated, the meeting update is sent to all attendees
+     * that are affected by the change in the meeting, and a copy is saved in
+     * the Sent Items folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const SEND_TO_CHANGED_AND_SAVE_COPY = 'SendToChangedAndSaveCopy';
+
+    /**
+     * The calendar item is updated but updates are not sent to attendees.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const SEND_TO_NONE = 'SendToNone';
+
+    /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_ ;
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this-> _ ;
+    }
 }

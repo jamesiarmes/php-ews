@@ -1,25 +1,30 @@
 <?php
 /**
- * Definition of the GroupedItemsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GroupedItemsType.
  */
 
 /**
- * Definition of the GroupedItemsType type
+ * Represents a collection of items that are the result of a grouped FindItem
+ * operation call.
+ *
+ * @package php-ews\Types
  */
 class EWSType_GroupedItemsType extends EWSType
 {
     /**
-     * GroupIndex property
+     * Represents the property value that is used to group items in a grouped
+     * FindItem operation call.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $GroupIndex;
 
     /**
-     * Items property
+     * Contains an array of grouped items.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfRealItemsType
      */

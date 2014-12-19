@@ -1,48 +1,63 @@
 <?php
 /**
- * Definition of the UserOofSettings type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_UserOofSettings.
  */
 
 /**
- * Definition of the UserOofSettings type
+ * Defines the Out of Office (OOF) settings.
+ *
+ * @package php-ews\Types
  */
 class EWSType_UserOofSettings extends EWSType
 {
     /**
-     * OofState property
+     * Contains the duration for which the OOF status is enabled if the OofState
+     * element is set to Scheduled.
      *
-     * @var EWSType_OofState
-     */
-    public $OofState;
-
-    /**
-     * ExternalAudience property
+     * If the OofState element is set to Enabled or Disabled, the value of this
+     * element is ignored.
      *
-     * @var EWSType_ExternalAudience
-     */
-    public $ExternalAudience;
-
-    /**
-     * Duration property
+     * @since Exchange 2007
      *
      * @var EWSType_Duration
      */
     public $Duration;
 
     /**
-     * InternalReply property
+     * Contains a value that determines to whom external OOF messages are sent.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ExternalAudience
+     */
+    public $ExternalAudience;
+
+    /**
+     * Contains the OOF response sent to addresses outside the recipient's
+     * domain or trusted domains.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ReplyBody
+     */
+    public $ExternalReply;
+
+    /**
+     * Contains the OOF response sent to other users in the user's domain or
+     * trusted domain.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ReplyBody
      */
     public $InternalReply;
 
     /**
-     * ExternalReply property
+     * Contains the user's OOF state.
      *
-     * @var EWSType_ReplyBody
+     * @since Exchange 2007
+     *
+     * @var EWSType_OofState
      */
-    public $ExternalReply;
+    public $OofState;
 }

@@ -1,18 +1,21 @@
 <?php
 /**
- * Definition of the SmartResponseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SmartResponseType.
  */
 
 /**
- * Definition of the SmartResponseType type
+ * Base class for smart responses that include new body content.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_SmartResponseBaseType.
  */
 class EWSType_SmartResponseType extends EWSType
 {
     /**
-     * NewBodyContent property
+     * Represents the actual body content of a message.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_BodyType
      */

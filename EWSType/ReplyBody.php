@@ -1,27 +1,33 @@
 <?php
 /**
- * Definition of the ReplyBody type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ReplyBody.
  */
 
 /**
- * Definition of the ReplyBody type
+ * Defines the out of office (OOF) response that is sent to addresses outside
+ * the recipient's domain or trusted domains.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ReplyBody extends EWSType
 {
     /**
-     * Message property
+     * Specifies the language used in the ExternalReply message.
+     *
+     * The possible values for this attribute are defined by IETF RFC 3066.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $lang;
+
+    /**
+     * Contains the OOF response.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $Message;
-
-    /**
-     * lang property
-     *
-     * @var EWSType_UNKNOWN
-     */
-    public $lang;
 }

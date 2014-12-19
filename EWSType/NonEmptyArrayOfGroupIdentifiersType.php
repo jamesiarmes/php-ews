@@ -1,18 +1,21 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfGroupIdentifiersType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfGroupIdentifiersType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfGroupIdentifiersType type
+ * Represents a collection of Active Directory directory service group object
+ * security identifiers.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfGroupIdentifiersType extends EWSType
 {
     /**
-     * GroupIdentifier property
+     * Represents a single security identifier and attribute for an Active
+     * Directory object group of which the account is a member.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SidAndAttributesType
      */

@@ -1,48 +1,58 @@
 <?php
 /**
- * Definition of the EmailAddressType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_EmailAddressType.
  */
 
 /**
- * Definition of the EmailAddressType type
+ * Represents an e-mail address.
+ *
+ * @package php-ews\Types
  */
 class EWSType_EmailAddressType extends EWSType
 {
     /**
-     * Name property
+     * The e-mail address that is represented.
+     *
+     * @since Exchange 2007
      *
      * @var string
-     */
-    public $Name;
-
-    /**
-     * EmailAddress property
-     *
-     * @var EWSType_NonEmptyStringType
      */
     public $EmailAddress;
 
     /**
-     * RoutingType property
+     * Specifies the item identifier for the e-mail address.
      *
-     * @var EWSType_NonEmptyStringType
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemIdType
      */
-    public $RoutingType;
+    public $ItemId;
 
     /**
-     * MailboxType property
+     * Specifies the type of mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_MailboxTypeType
      */
     public $MailboxType;
 
     /**
-     * ItemId property
+     * Specifies the name of the mailbox that is associated with the e-mail
+     * address.
      *
-     * @var EWSType_ItemIdType
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $ItemId;
+    public $Name;
+
+    /**
+     * Specifies the type of routing for the e-mail address.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_RoutingTypeType
+     */
+    public $RoutingType;
 }

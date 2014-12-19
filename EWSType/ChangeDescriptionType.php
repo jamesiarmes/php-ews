@@ -1,20 +1,39 @@
 <?php
 /**
- * Definition of the ChangeDescriptionType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ChangeDescriptionType.
  */
 
 /**
- * Definition of the ChangeDescriptionType type
+ * Base class for changes to individual properties.
+ *
+ * @package php-ews\Types
  */
-class EWSType_ChangeDescriptionType extends EWSType
+abstract class EWSType_ChangeDescriptionType extends EWSType
 {
     /**
-     * Path property
+     * Identifies extended MAPI properties to set.
      *
-     * @var EWSType_BasePathToElementType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToExtendedFieldType
      */
-    public $Path;
+    public $ExtendedFieldURI;
+
+    /**
+     * Identifies frequently referenced properties by URI.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
+     */
+    public $FieldURI;
+
+    /**
+     * Identifies individual members of a dictionary.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
+     */
+    public $IndexedFieldURI;
 }

@@ -1,27 +1,30 @@
 <?php
 /**
- * Definition of the SyncFolderItemsReadFlagType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SyncFolderItemsReadFlagType.
  */
 
 /**
- * Definition of the SyncFolderItemsReadFlagType type
+ * Identifies whether or not an item has been read.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SyncFolderItemsReadFlagType extends EWSType
 {
     /**
-     * ItemId property
+     * Indicates whether the read-flag has been set to true.
      *
-     * @var EWSType_ItemIdType
-     */
-    public $ItemId;
-
-    /**
-     * IsRead property
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IsRead;
+
+    /**
+     * Identifies the item for which the read-flag has been changed.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemIdType
+     */
+    public $ItemId;
 }

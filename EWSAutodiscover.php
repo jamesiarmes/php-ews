@@ -1,16 +1,13 @@
 <?php
 /**
- * Exchange Web Services Autodiscover implementation.
- *
- * @package php-ews
- * @subpackage Auto Discovery
+ * Contains EWSAutodiscover.
  */
 
 /**
  * Exchange Web Services Autodiscover implementation
  *
  * This class supports POX (Plain Old XML), which is deprecated but functional
- * in Exchange 2010. It may make sense for you to combine your Autodiscovery 
+ * in Exchange 2010. It may make sense for you to combine your Autodiscovery
  * efforts with a SOAP Autodiscover request as well.
  *
  * USAGE:
@@ -30,6 +27,8 @@
  *
  * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
  * @link https://www.testexchangeconnectivity.com/
+ *
+ * @package php-ews\AutoDiscovery
  */
 class EWSAutodiscover
 {
@@ -136,7 +135,7 @@ class EWSAutodiscover
 
     /**
      * Skip SSL verification. Bad idea, and violates the strict Autodiscover
-     * protocol. But, here in case you have no other option. 
+     * protocol. But, here in case you have no other option.
      * Defaults to FALSE.
      *
      * @var boolean
@@ -144,7 +143,7 @@ class EWSAutodiscover
     protected $skip_ssl_verification = false;
 
     /**
-     * An associative array of response headers that resulted from the 
+     * An associative array of response headers that resulted from the
      * last request. Keys are lowercased for easy checking.
      *
      * @var array
@@ -166,7 +165,7 @@ class EWSAutodiscover
     public $last_curl_errno;
 
     /**
-     * Human-readable description of the most recent cURL error. 
+     * Human-readable description of the most recent cURL error.
      *
      * @var string
      */
@@ -182,7 +181,7 @@ class EWSAutodiscover
     public $connection_timeout = 2;
 
     /**
-     * Information about an Autodiscover Response containing an error will 
+     * Information about an Autodiscover Response containing an error will
      * be stored here.
      *
      * @var mixed
@@ -190,7 +189,7 @@ class EWSAutodiscover
     public $error = false;
 
     /**
-     * Information about an Autodiscover Response with a redirect will be 
+     * Information about an Autodiscover Response with a redirect will be
      * retained here.
      *
      * @var mixed
@@ -206,7 +205,7 @@ class EWSAutodiscover
     public $discovered = null;
 
     /**
-     * Constructor for the EWSAutodiscover class. 
+     * Constructor for the EWSAutodiscover class.
      *
      * @param string $email
      * @param string $password
@@ -254,7 +253,7 @@ class EWSAutodiscover
      * Return the settings discovered from the Autodiscover process.
      *
      * NULL indicates discovery hasn't completed (or been attempted)
-     * FALSE indicates discovery wasn't successful. Check for errors 
+     * FALSE indicates discovery wasn't successful. Check for errors
      *  or redirects.
      * An array will be returned with discovered settings on success.
      *
@@ -408,9 +407,9 @@ class EWSAutodiscover
         return $auto->newEWS();
     }
 
-    /** 
-     * Perform an NTLM authenticated HTTPS POST to the top-level 
-     * domain of the email address. 
+    /**
+     * Perform an NTLM authenticated HTTPS POST to the top-level
+     * domain of the email address.
      *
      * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
      */
@@ -426,7 +425,7 @@ class EWSAutodiscover
     }
 
     /**
-     * Perform an NTLM authenticated HTTPS POST to the 'autodiscover' 
+     * Perform an NTLM authenticated HTTPS POST to the 'autodiscover'
      * subdomain of the email address' TLD.
      *
      * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
@@ -528,7 +527,7 @@ class EWSAutodiscover
     /**
      * Set the path to the file to be used by CURLOPT_CAPATH.
      *
-     * @param string $path Path to a directory containing one or more CA 
+     * @param string $path Path to a directory containing one or more CA
      * certificates.
      * @return self
      */
@@ -616,7 +615,7 @@ class EWSAutodiscover
     }
 
     /**
-     * Parse the Autoresponse Payload, particularly to determine if an 
+     * Parse the Autoresponse Payload, particularly to determine if an
      * additional request is necessary.
      *
      * @return mixed FALSE if response isn't XML or parsed response array
@@ -674,7 +673,7 @@ class EWSAutodiscover
     }
 
     /**
-     * Reset the response-related structures. Called before making a new 
+     * Reset the response-related structures. Called before making a new
      * request.
      *
      * @return self
@@ -760,7 +759,7 @@ class EWSAutodiscover
     }
 
     /**
-     * Recursive method for parsing DOM nodes. 
+     * Recursive method for parsing DOM nodes.
      *
      * @link https://github.com/gaarf/XML-string-to-PHP-array
      * @param object $node DOMNode object

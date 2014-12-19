@@ -1,41 +1,54 @@
 <?php
 /**
- * Definition of the AggregateOnType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AggregateOnType.
  */
 
 /**
- * Definition of the AggregateOnType type
+ * Represents the property that is used to determine the order of grouped items
+ * for a grouped FindItem result set.
+ *
+ * @package php-ews\Types
  */
 class EWSType_AggregateOnType extends EWSType
 {
     /**
-     * FieldURI property
+     * Indicates the maximum or minimum value of the property identified by the
+     * FieldURI element that is used for ordering the groups of items.
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * The following are the possible values:
+     * - Minimum
+     * - Maximum
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_AggregateType
      */
-    public $FieldURI;
+    public $Aggregate;
 
     /**
-     * IndexedFieldURI property
+     * Identifies extended MAPI properties to get, set, or create.
      *
-     * @var EWSType_PathToIndexedFieldType
-     */
-    public $IndexedFieldURI;
-
-    /**
-     * ExtendedFieldURI property
+     * @since Exchange 2007
      *
      * @var EWSType_PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
     /**
-     * Aggregate property
+     * Identifies frequently referenced properties by URI.
      *
-     * @var EWSType_AggregateType
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToUnindexedFieldType
      */
-    public $Aggregate;
+    public $FieldURI;
+
+    /**
+     * Identifies individual members of a dictionary.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_PathToIndexedFieldType
+     */
+    public $IndexedFieldURI;
 }

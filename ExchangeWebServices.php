@@ -1,12 +1,12 @@
 <?php
 /**
- * Base class of the Exchange Web Services application.
- *
- * @package php-ews
+ * Contains ExchangeWebServices.
  */
 
 /**
  * Base class of the Exchange Web Services application.
+ *
+ * @package php-ews\Client
  */
 class ExchangeWebServices
 {
@@ -466,10 +466,10 @@ class ExchangeWebServices
     /**
      * Retrieve the timezones supported by the server.
      *
+     * @since Exchange 2010
+     *
      * @param GetServerTimeZonesType $request
      * @return GetServerTimeZonesResponseType
-     *
-     * @since Exchange2010
      */
     public function GetServerTimeZones($request)
     {

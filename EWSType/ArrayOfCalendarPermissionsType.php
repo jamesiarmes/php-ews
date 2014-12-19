@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the ArrayOfCalendarPermissionsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfCalendarPermissionsType.
  */
 
 /**
- * Definition of the ArrayOfCalendarPermissionsType type
+ * Represents an array of calendar permissions for a folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfCalendarPermissionsType extends EWSType
 {
     /**
-     * CalendarPermission property
+     * Defines the access that a delegate user has to a calendar folder.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_CalendarPermissionType
      */

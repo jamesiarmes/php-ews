@@ -1,18 +1,20 @@
 <?php
 /**
- * Definition of the BaseGroupByType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BaseGroupByType.
  */
 
 /**
- * Definition of the BaseGroupByType type
+ * Base class for item ordering.
+ *
+ * @package php-ews\Types
  */
 class EWSType_BaseGroupByType extends EWSType
 {
     /**
-     * Order property
+     * Determines the order of the groups in the grouped item array that is
+     * returned in the response.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SortDirectionType
      */

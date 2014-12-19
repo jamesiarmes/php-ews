@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the ArrayOfStringsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfStringsType.
  */
 
 /**
- * Definition of the ArrayOfStringsType type
+ * Represents a collection of strings.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfStringsType extends EWSType
 {
     /**
-     * String property
+     * Contains a single string.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

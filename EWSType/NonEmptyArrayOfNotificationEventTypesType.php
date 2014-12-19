@@ -1,18 +1,21 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfNotificationEventTypesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfNotificationEventTypesType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfNotificationEventTypesType type
+ * Represents a collection of event notification types that are used to create a
+ * subscription.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
 {
     /**
-     * EventType property
+     * Represents a requested event notification type that is used to create a
+     * subscription.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NotificationEventTypeType
      */

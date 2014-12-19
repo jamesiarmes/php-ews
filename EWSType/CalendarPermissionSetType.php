@@ -1,25 +1,29 @@
 <?php
 /**
- * Definition of the CalendarPermissionSetType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CalendarPermissionSetType.
  */
 
 /**
- * Definition of the CalendarPermissionSetType type
+ * Contains all the permissions that are configured for a calendar folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_CalendarPermissionSetType extends EWSType
 {
     /**
-     * CalendarPermissions property
+     * Contains an array of calendar permissions for a folder.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_ArrayOfCalendarPermissionsType
      */
     public $CalendarPermissions;
 
     /**
-     * UnknownEntries property
+     * Contains an array of unknown entries that cannot be resolved against the
+     * Active Directory directory service.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_ArrayOfUnknownEntriesType
      */

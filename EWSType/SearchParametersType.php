@@ -1,34 +1,41 @@
 <?php
 /**
- * Definition of the SearchParametersType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SearchParametersType.
  */
 
 /**
- * Definition of the SearchParametersType type
+ * Represents the parameters that define a search folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SearchParametersType extends EWSType
 {
     /**
-     * Restriction property
+     * Represents the collection of folders that will be mined to determine the
+     * contents of a search folder.
      *
-     * @var EWSType_RestrictionType
-     */
-    public $Restriction;
-
-    /**
-     * BaseFolderIds property
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
      */
     public $BaseFolderIds;
 
     /**
-     * Traversal property
+     * Represents the restriction or query that is used to filter items or
+     * folders in FindItem/FindFolder and search folder operations.
      *
-     * @var EWSType_SearchFolderTraversalType
+     * @since Exchange 2007
+     *
+     * @var EWSType_RestrictionType
+     */
+    public $Restriction;
+
+    /**
+     * Describes how a search folder traverses the folder hierarchy.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_TraversalType
      */
     public $Traversal;
 }

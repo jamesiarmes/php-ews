@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the ArrayOfSuggestionDayResult type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfSuggestionDayResult.
  */
 
 /**
- * Definition of the ArrayOfSuggestionDayResult type
+ * Represents an array of meeting suggestions organized by date.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfSuggestionDayResult extends EWSType
 {
     /**
-     * SuggestionDayResult property
+     * Represents a single day that contains suggested meeting times.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SuggestionDayResult
      */

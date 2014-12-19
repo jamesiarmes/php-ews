@@ -1,39 +1,49 @@
 <?php
 /**
- * Definition of the FreeBusyView type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_FreeBusyView.
  */
 
 /**
- * Definition of the FreeBusyView type
+ * Represents availability information for a specific user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_FreeBusyView extends EWSType
 {
     /**
-     * FreeBusyViewType property
+     * Contains a set of unique calendar item occurrences that represent the
+     * requested user's availability.
      *
-     * @var EWSType_FreeBusyViewType
-     */
-    public $FreeBusyViewType;
-
-    /**
-     * MergedFreeBusy property
-     *
-     * @var string
-     */
-    public $MergedFreeBusy;
-
-    /**
-     * CalendarEventArray property
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfCalendarEvent
      */
     public $CalendarEventArray;
 
     /**
-     * WorkingHours property
+     * Represents the type of requested free/busy information returned in the
+     * response.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FreeBusyViewType
+     */
+    public $FreeBusyViewType;
+
+    /**
+     * Contains the merged free/busy stream of data.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $MergedFreeBusy;
+
+    /**
+     * Represents the time zone settings and working hours for the requested
+     * mailbox user.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_WorkingHours
      */

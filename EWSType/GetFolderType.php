@@ -1,27 +1,34 @@
 <?php
 /**
- * Definition of the GetFolderType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetFolderType.
  */
 
 /**
- * Definition of the GetFolderType type
+ * Defines a request to get a folder from a mailbox in the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_GetFolderType extends EWSType
 {
     /**
-     * FolderShape property
+     * Contains an array of folder identifiers that are used to identify folders
+     * to get from a mailbox in the Exchange store.
      *
-     * @var EWSType_FolderResponseShapeType
-     */
-    public $FolderShape;
-
-    /**
-     * FolderIds property
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
+
+    /**
+     * Identifies the properties to get for each folder identified in the
+     * FolderIds element.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderResponseShapeType
+     */
+    public $FolderShape;
 }

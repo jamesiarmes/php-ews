@@ -1,13 +1,12 @@
 <?php
 /**
- * Base class for Exchange Web Service Types
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType.
  */
 
 /**
- * Base class for Exchange Web Service Types
+ * Base class for Exchange Web Service Types.
+ *
+ * @package php-ews\Types
  */
 abstract class EWSType
 {

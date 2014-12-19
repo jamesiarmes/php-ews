@@ -1,20 +1,21 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfTimeZoneIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfTimeZoneIdType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfTimeZoneIdType type
+ * Represents an array of time zone definition identifiers.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfTimeZoneIdType extends EWSType
 {
     /**
-     * Array of string timezone identifiers (ex. "Eastern Standard Time").
+     * The element that identifies a single time zone definition.
      *
-     * @var array
+     * @since Exchange 2010
+     *
+     * @var string
      */
     public $Id;
 }
