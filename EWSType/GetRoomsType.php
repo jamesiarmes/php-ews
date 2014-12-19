@@ -15,7 +15,7 @@ class EWSType_GetRoomsType extends EWSType
     /**
      * Represents an e-mail address that identifies a list of meeting rooms.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var EWSType_EmailAddressType
      */

@@ -15,7 +15,7 @@ class EWSType_DeleteUserConfigurationType extends EWSType
     /**
      * Represents the name of the user configuration object to delete.
      *
-     * @since Exchange 2007
+     * @since Exchange 2010
      *
      * @var EWSType_UserConfigurationNameType
      */

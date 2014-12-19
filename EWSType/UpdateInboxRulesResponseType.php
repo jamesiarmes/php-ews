@@ -17,7 +17,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
      *
      * This element contains a value of 0.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var integer
      */
@@ -26,7 +26,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
     /**
      * Provides a text description of the status of the response.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -35,7 +35,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
     /**
      * Provides additional error response information.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var string
      *
@@ -46,7 +46,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
     /**
      * Describes the status of the response.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var EWSType_ResponseClassType
      */
@@ -56,7 +56,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
      * Provides an error code that identifies the specific error that the
      * request encountered.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var EWSType_ResponseCodeType
      */
@@ -66,7 +66,7 @@ class EWSType_UpdateInboxRulesResponseType extends EWSType
      * Represents an array of rule validation errors on each rule field that has
      * an error.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var EWSType_ArrayOfRuleOperationErrorsType
      */

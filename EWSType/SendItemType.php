@@ -24,6 +24,16 @@ class EWSType_SendItemType extends EWSType
     public $ItemIds;
 
     /**
+     * Identifies the target folder for operations that update, send, and create
+     * items in the Exchange store.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_TargetFolderIdType
+     */
+    public $SavedItemFolderId;
+
+    /**
      * Identifies whether a copy of the sent item is saved.
      *
      * The save action depends on the value of SaveItemToFolder and whether a
@@ -36,14 +46,4 @@ class EWSType_SendItemType extends EWSType
      * @var boolean
      */
     public $SaveItemToFolder;
-
-    /**
-     * Identifies the target folder for operations that update, send, and create
-     * items in the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_TargetFolderIdType
-     */
-    public $SavedItemFolderId;
 }
