@@ -17,7 +17,7 @@ class EWSType_UpdateDelegateResponseMessageType extends EWSType
      *
      * This element contains a value of 0.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var integer
      */
@@ -26,7 +26,7 @@ class EWSType_UpdateDelegateResponseMessageType extends EWSType
     /**
      * Provides a text description of the status of the response.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var string
      */
@@ -35,7 +35,7 @@ class EWSType_UpdateDelegateResponseMessageType extends EWSType
     /**
      * Provides additional error response information.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var string
      *
@@ -47,7 +47,7 @@ class EWSType_UpdateDelegateResponseMessageType extends EWSType
      * Provides an error code that identifies the specific error that the
      * request encountered.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_ResponseCodeType
      */

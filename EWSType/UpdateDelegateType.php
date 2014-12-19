@@ -35,7 +35,7 @@ class EWSType_UpdateDelegateType extends EWSType
     /**
      * Identifies a mail-enabled Active Directory directory service object.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_EmailAddressType
      */
