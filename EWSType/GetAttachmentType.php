@@ -13,6 +13,15 @@
 class EWSType_GetAttachmentType extends EWSType
 {
     /**
+     * Contains an array of attachment identifiers.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
+     */
+    public $AttachmentIds;
+
+    /**
      * Identifies additional extended item properties to return in a response to
      * a GetAttachment request.
      *
@@ -23,13 +32,4 @@ class EWSType_GetAttachmentType extends EWSType
      * @var EWSType_AttachmentResponseShapeType
      */
     public $AttachmentShape;
-
-    /**
-     * Contains an array of attachment identifiers.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
-     */
-    public $AttachmentIds;
 }

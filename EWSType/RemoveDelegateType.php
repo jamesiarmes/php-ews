@@ -15,7 +15,7 @@ class EWSType_RemoveDelegateType extends EWSType
     /**
      * Identifies the principal's mailbox.
      *
-     * @since Exchange 2007
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_EmailAddressType
      */

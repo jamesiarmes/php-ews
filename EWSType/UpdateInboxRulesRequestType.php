@@ -16,7 +16,7 @@ class EWSType_UpdateInboxRulesRequestType extends EWSType
      * Represents the SMTP address of the user whose Inbox rules are to be
      * created, modified, or deleted.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var string
      */
@@ -25,7 +25,7 @@ class EWSType_UpdateInboxRulesRequestType extends EWSType
     /**
      * Contains an array of rule operations that can be performed on an Inbox.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var EWSType_ArrayOfRuleOperationsType
      */
@@ -34,7 +34,7 @@ class EWSType_UpdateInboxRulesRequestType extends EWSType
     /**
      * Indicates whether to remove the Microsoft Outlook rule blob.
      *
-     * @since Exchange 2010
+     * @since Exchange 2010 SP1
      *
      * @var boolean
      */
