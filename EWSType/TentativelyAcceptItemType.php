@@ -84,7 +84,7 @@ class EWSType_TentativelyAcceptItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -129,7 +129,7 @@ class EWSType_TentativelyAcceptItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

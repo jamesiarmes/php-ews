@@ -43,7 +43,7 @@ class EWSType_CalendarEvent extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BusyType
+     * @var \jamesiarmes\PEWS\Enumeration\LegacyFreeBusyType
      */
     public $BusyType;
 

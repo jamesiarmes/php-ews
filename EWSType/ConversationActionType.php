@@ -18,7 +18,7 @@ class EWSType_ConversationActionType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ConversationActionTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ConversationActionTypeType
      */
     public $Action;
 
@@ -75,7 +75,7 @@ class EWSType_ConversationActionType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_DisposalType
+     * @var \jamesiarmes\PEWS\Enumeration\DisposalType
      */
     public $DeleteType;
 

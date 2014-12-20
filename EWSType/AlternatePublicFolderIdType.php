@@ -27,7 +27,7 @@ class EWSType_AlternatePublicFolderIdType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_IdFormatType
+     * @var \jamesiarmes\PEWS\Enumeration\IdFormatType
      */
     public $Format;
 }

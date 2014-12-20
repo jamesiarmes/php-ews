@@ -15,7 +15,7 @@ class EWSType_PathToUnindexedFieldType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_UnindexedFieldURIType
+     * @var \jamesiarmes\PEWS\Enumeration\UnindexedFieldURIType
      */
     public $FieldURI;
 }

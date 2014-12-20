@@ -15,7 +15,7 @@ class EWSType_WorkingPeriod extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DaysOfWeekType
+     * @var \jamesiarmes\PEWS\Enumeration\DaysOfWeekType
      */
     public $DayOfWeek;
 

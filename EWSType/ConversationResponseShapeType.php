@@ -26,7 +26,7 @@ class EWSType_FindConversationResponseMessageType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var \jamesiarmes\PEWS\Enumeration\DefaultShapeNamesType
      */
     public $BaseShape;
 }

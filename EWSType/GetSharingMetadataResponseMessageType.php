@@ -67,7 +67,7 @@ class EWSType_GetSharingMetadataResponseMessageType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -77,7 +77,7 @@ class EWSType_GetSharingMetadataResponseMessageType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

@@ -18,7 +18,7 @@ class EWSType_GetStreamingEventsResponseMessageType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ConnectionStatusType
+     * @var \jamesiarmes\PEWS\Enumeration\ConnectionStatusType
      */
     public $ConnectionStatus;
 
@@ -77,7 +77,7 @@ class EWSType_GetStreamingEventsResponseMessageType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -87,7 +87,7 @@ class EWSType_GetStreamingEventsResponseMessageType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

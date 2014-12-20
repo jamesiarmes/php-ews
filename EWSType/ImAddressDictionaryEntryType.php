@@ -27,7 +27,7 @@ class EWSType_ImAddressDictionaryEntryType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImAddressKeyType
+     * @var \jamesiarmes\PEWS\Enumeration\ImAddressKeyType
      */
     public $Key;
 }

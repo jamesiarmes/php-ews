@@ -58,7 +58,7 @@ class EWSType_FindMailboxStatisticsByKeywordsResponseMessageType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -68,7 +68,7 @@ class EWSType_FindMailboxStatisticsByKeywordsResponseMessageType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

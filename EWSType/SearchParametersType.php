@@ -35,7 +35,7 @@ class EWSType_SearchParametersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TraversalType
+     * @var \jamesiarmes\PEWS\Enumeration\SearchFolderTraversalType
      */
     public $Traversal;
 }

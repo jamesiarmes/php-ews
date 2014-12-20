@@ -17,7 +17,7 @@ class EWSType_UploadItemType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_CreateActionType
+     * @var \jamesiarmes\PEWS\Enumeration\CreateActionType
      */
     public $CreateAction;
 

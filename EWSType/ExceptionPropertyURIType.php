@@ -20,7 +20,7 @@ class EWSType_ExceptionPropertyURIType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ExceptionPropertyFieldURIType
+     * @var \jamesiarmes\PEWS\Enumeration\ExceptionPropertyURIType
      */
     public $FieldURI;
 }

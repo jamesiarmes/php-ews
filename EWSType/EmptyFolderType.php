@@ -32,7 +32,7 @@ class EWSType_EmptyFolderType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_DisposalType
+     * @var \jamesiarmes\PEWS\Enumeration\DisposalType
      */
     public $DeleteType;
 }

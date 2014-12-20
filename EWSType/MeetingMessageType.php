@@ -235,7 +235,7 @@ class EWSType_MeetingMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -382,7 +382,7 @@ class EWSType_MeetingMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -540,7 +540,7 @@ class EWSType_MeetingMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseTypeType
      */
     public $ResponseType;
 
@@ -558,7 +558,7 @@ class EWSType_MeetingMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

@@ -26,7 +26,7 @@ class EWSType_TransitionTargetType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_TransitionTargetKindType
+     * @var \jamesiarmes\PEWS\Enumeration\TransitionTargetKindType
      */
     public $Kind;
 }

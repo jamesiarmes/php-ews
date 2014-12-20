@@ -15,7 +15,7 @@ class EWSType_SendNotificationResultType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SubscriptionStatusType
+     * @var \jamesiarmes\PEWS\Enumeration\SubscriptionStatusType
      */
     public $SubscriptionStatus;
 }

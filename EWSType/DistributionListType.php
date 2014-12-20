@@ -16,7 +16,7 @@ class EWSType_DistributionListType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfAttachmentsType 
+     * @var EWSType_ArrayOfAttachmentsType
      */
     public $Attachments;
 
@@ -45,7 +45,7 @@ class EWSType_DistributionListType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ContactSourceType
+     * @var \jamesiarmes\PEWS\Enumeration\ContactSourceType
      */
     public $ContactSource;
 
@@ -182,7 +182,7 @@ class EWSType_DistributionListType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -265,7 +265,7 @@ class EWSType_DistributionListType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -398,7 +398,7 @@ class EWSType_DistributionListType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

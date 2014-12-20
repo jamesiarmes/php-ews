@@ -27,7 +27,7 @@ class EWSType_PhoneNumberDictionaryEntryType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PhoneNumberKeyType
+     * @var \jamesiarmes\PEWS\Enumeration\PhoneNumberKeyType
      */
     public $Key;
 }

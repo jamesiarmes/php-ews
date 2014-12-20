@@ -27,7 +27,7 @@ class EWSType_SuggestionDayResult extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SuggestionQuality
+     * @var \jamesiarmes\PEWS\Enumeration\SuggestionQuality
      */
     public $DayQuality;
 

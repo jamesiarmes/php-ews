@@ -105,7 +105,7 @@ class EWSType_ContactsFolderType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_PermissionReadAccessType
+     * @var \jamesiarmes\PEWS\Enumeration\PermissionReadAccessType
      */
     public $SharingEffectiveRights;
 

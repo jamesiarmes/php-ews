@@ -36,7 +36,7 @@ class EWSType_PhysicalAddressDictionaryEntryType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PhysicalAddressKeyType
+     * @var \jamesiarmes\PEWS\Enumeration\PhysicalAddressKeyType
      */
     public $Key;
 

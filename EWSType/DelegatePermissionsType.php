@@ -15,7 +15,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $CalendarFolderPermissionLevel;
 
@@ -24,7 +24,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $ContactsFolderPermissionLevel;
 
@@ -33,7 +33,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $InboxFolderPermissionLevel;
 
@@ -42,7 +42,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $JournalFolderPermissionLevel;
 
@@ -51,7 +51,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $NotesFolderPermissionLevel;
 
@@ -60,7 +60,7 @@ class EWSType_DelegatePermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateFolderPermissionLevelType
+     * @var \jamesiarmes\PEWS\Enumeration\DelegateFolderPermissionLevelType
      */
     public $TasksFolderPermissionLevel;
 }

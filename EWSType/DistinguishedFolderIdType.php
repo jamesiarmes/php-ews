@@ -30,7 +30,7 @@ class EWSType_DistinguishedFolderIdType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DistinguishedFolderIdNameType
+     * @var \jamesiarmes\PEWS\Enumeration\DistinguishedFolderIdNameType
      */
     public $Id;
 

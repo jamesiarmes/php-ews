@@ -22,7 +22,7 @@ class EWSType_DeleteItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AffectedTaskOccurrencesType
+     * @var \jamesiarmes\PEWS\Enumeration\AffectedTaskOccurrencesType
      */
     public $AffectedTaskOccurrences;
 
@@ -33,7 +33,7 @@ class EWSType_DeleteItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DisposalType
+     * @var \jamesiarmes\PEWS\Enumeration\DisposalType
      */
     public $DeleteType;
 
@@ -58,7 +58,7 @@ class EWSType_DeleteItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var \jamesiarmes\PEWS\Enumeration\CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingCancellations;
 

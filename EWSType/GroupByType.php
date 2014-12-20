@@ -55,7 +55,7 @@ class EWSType_GroupByType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SortDirectionType
+     * @var \jamesiarmes\PEWS\Enumeration\SortDirectionType
      */
     public $Order;
 }

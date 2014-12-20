@@ -22,7 +22,7 @@ class EWSType_SeekToConditionPageViewType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_BasePointType
+     * @var \jamesiarmes\PEWS\Enumeration\IndexBasePointType
      */
     public $BasePoint;
 

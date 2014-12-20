@@ -15,7 +15,7 @@ class EWSType_UserConfigurationDictionaryObjectType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_UserConfigurationDictionaryObjectTypesType
+     * @var \jamesiarmes\PEWS\Enumeration\UserConfigurationDictionaryObjectTypesType
      */
     public $Type;
 

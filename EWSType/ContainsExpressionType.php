@@ -25,7 +25,7 @@ class EWSType_ContainsExpressionType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ContainmentComparisonType
+     * @var \jamesiarmes\PEWS\Enumeration\ContainmentComparisonType
      */
     public $ContainmentComparison;
 
@@ -34,7 +34,7 @@ class EWSType_ContainsExpressionType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ContainmentModeType
+     * @var \jamesiarmes\PEWS\Enumeration\ContainmentModeType
      */
     public $ContainmentMode;
 

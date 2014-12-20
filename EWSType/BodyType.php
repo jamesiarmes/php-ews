@@ -24,7 +24,7 @@ class EWSType_BodyType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\BodyTypeType
      */
     public $BodyType;
 

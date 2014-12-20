@@ -24,7 +24,7 @@ class EWSType_IndexedPageViewType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BasePointType
+     * @var \jamesiarmes\PEWS\Enumeration\IndexBasePointType
      */
     public $BasePoint;
 

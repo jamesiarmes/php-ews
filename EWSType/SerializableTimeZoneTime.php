@@ -33,7 +33,7 @@ class EWSType_SerializableTimeZoneTime extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DayOfWeekType
+     * @var \jamesiarmes\PEWS\Enumeration\DayOfWeekType
      */
     public $DayOfWeek;
 

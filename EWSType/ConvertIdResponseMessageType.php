@@ -57,7 +57,7 @@ class EWSType_ConvertIdResponseMessageType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -67,7 +67,7 @@ class EWSType_ConvertIdResponseMessageType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

@@ -157,7 +157,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -240,7 +240,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -366,7 +366,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

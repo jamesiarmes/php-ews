@@ -111,7 +111,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\CalendarItemTypeType
      */
     public $CalendarItemType;
 
@@ -140,7 +140,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ConferenceTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ConferenceType
      */
     public $ConferenceType;
 
@@ -382,7 +382,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -401,7 +401,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var \jamesiarmes\PEWS\Enumeration\LegacyFreeBusyType
      */
     public $IntendedFreeBusyStatus;
 
@@ -587,7 +587,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -639,7 +639,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var \jamesiarmes\PEWS\Enumeration\LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -657,7 +657,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingRequestTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\MeetingRequestTypeType
      */
     public $MeetingRequestType;
 
@@ -716,7 +716,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseTypeType
      */
     public $MyResponseType;
 
@@ -897,7 +897,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseTypeType
      */
     public $ResponseType;
 
@@ -915,7 +915,7 @@ class EWSType_MeetingRequestMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PEWS\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

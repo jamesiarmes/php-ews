@@ -19,7 +19,7 @@ class EWSType_UpdateItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ConflictResolutionType
+     * @var \jamesiarmes\PEWS\Enumeration\ConflictResolutionType
      */
     public $ConflictResolution;
 
@@ -42,7 +42,7 @@ class EWSType_UpdateItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MessageDispositionType
+     * @var \jamesiarmes\PEWS\Enumeration\MessageDispositionType
      */
     public $MessageDisposition;
 
@@ -65,7 +65,7 @@ class EWSType_UpdateItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemUpdateOperationType
+     * @var \jamesiarmes\PEWS\Enumeration\CalendarItemUpdateOperationType
      */
     public $SendMeetingInvitationsOrCancellations;
 

@@ -57,7 +57,7 @@ class EWSType_ItemInfoResponseMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -67,7 +67,7 @@ class EWSType_ItemInfoResponseMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

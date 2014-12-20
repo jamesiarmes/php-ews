@@ -20,7 +20,7 @@ class EWSType_GetMessageTrackingReportRequestType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ScopeType
+     * @var \jamesiarmes\PEWS\Enumeration\Scope
      */
     public $Scope;
 
@@ -31,7 +31,7 @@ class EWSType_GetMessageTrackingReportRequestType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_MessageTrackingReportTemplateType
+     * @var \jamesiarmes\PEWS\Enumeration\MessageTrackingReportTemplateType
      */
     public $ReportTemplate;
 

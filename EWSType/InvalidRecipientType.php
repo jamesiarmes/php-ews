@@ -30,7 +30,7 @@ class EWSType_InvalidRecipientType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_InvalidRecipientResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\InvalidRecipientResponseCodeType
      */
     public $ResponseCode;
 

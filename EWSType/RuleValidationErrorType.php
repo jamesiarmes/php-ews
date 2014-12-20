@@ -17,7 +17,7 @@ class EWSType_RuleValidationErrorType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RuleValidationErrorCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\RuleValidationErrorCodeType
      */
     public $ErrorCode;
 
@@ -35,7 +35,7 @@ class EWSType_RuleValidationErrorType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RuleFieldURIType
+     * @var \jamesiarmes\PEWS\Enumeration\RuleFieldURIType
      */
     public $FieldUri;
 

@@ -37,7 +37,7 @@ class EWSType_AttendeeType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseTypeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseTypeType
      */
     public $ResponseType;
 }

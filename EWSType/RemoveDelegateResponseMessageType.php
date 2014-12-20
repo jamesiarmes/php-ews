@@ -49,7 +49,7 @@ class EWSType_RemoveDelegateResponseMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PEWS\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 

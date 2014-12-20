@@ -15,7 +15,7 @@ class EWSType_RequestServerVersion extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ExchangeVersionType
+     * @var \jamesiarmes\PEWS\Enumeration\ExchangeVersionType
      */
     public $Version;
 }

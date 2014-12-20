@@ -19,7 +19,7 @@ class EWSType_MailboxData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingAttendeeType
+     * @var \jamesiarmes\PEWS\Enumeration\MeetingAttendeeType
      */
     public $AttendeeType;
 

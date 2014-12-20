@@ -27,7 +27,7 @@ class EWSType_FolderResponseShapeType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var \jamesiarmes\PEWS\Enumeration\DefaultShapeNamesType
      */
     public $BaseShape;
 }
