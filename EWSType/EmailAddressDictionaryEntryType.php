@@ -27,7 +27,7 @@ class EWSType_EmailAddressDictionaryEntryType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_EmailAddressKeyType
+     * @var \jamesiarmes\PhpEws\Enumeration\EmailAddressKeyType
      */
     public $Key;
 
@@ -38,7 +38,7 @@ class EWSType_EmailAddressDictionaryEntryType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_MailboxTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
      */
     public $MailboxType;
 
@@ -60,7 +60,7 @@ class EWSType_EmailAddressDictionaryEntryType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RoutingTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\RoutingType
      */
     public $RoutingType;
 }

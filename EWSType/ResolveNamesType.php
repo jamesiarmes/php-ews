@@ -17,7 +17,7 @@ class EWSType_ResolveNamesType extends EWSType
      *
      * @since Exchange 2010 SP2
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
      */
     public $ContactDataShape;
 
@@ -63,7 +63,7 @@ class EWSType_ResolveNamesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResolveNamesSearchScopeType
+     * @var \jamesiarmes\PhpEws\Enumeration\ResolveNamesSearchScopeType
      */
     public $SearchScope;
 

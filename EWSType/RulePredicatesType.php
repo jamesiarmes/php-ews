@@ -88,7 +88,7 @@ class EWSType_RulePredicatesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_FlaggedForActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\FlaggedForActionType
      */
     public $FlaggedForAction;
 
@@ -128,7 +128,7 @@ class EWSType_RulePredicatesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -279,7 +279,7 @@ class EWSType_RulePredicatesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

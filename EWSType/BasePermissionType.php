@@ -33,7 +33,7 @@ abstract class EWSType_BasePermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $DeleteItems;
 
@@ -42,7 +42,7 @@ abstract class EWSType_BasePermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $EditItems;
 

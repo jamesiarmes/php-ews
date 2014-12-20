@@ -18,7 +18,7 @@ class EWSType_DistinguishedGroupByType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SortDirectionType
+     * @var \jamesiarmes\PhpEws\Enumeration\SortDirectionType
      */
     public $Order;
 
@@ -28,7 +28,7 @@ class EWSType_DistinguishedGroupByType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_StandardGroupByType
+     * @var \jamesiarmes\PhpEws\Enumeration\StandardGroupByType
      */
     public $StandardGroupBy;
 }

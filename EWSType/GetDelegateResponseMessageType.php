@@ -59,7 +59,7 @@ class EWSType_GetDelegateResponseMessageType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PhpEws\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 

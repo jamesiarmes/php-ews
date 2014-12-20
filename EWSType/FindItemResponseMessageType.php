@@ -48,7 +48,7 @@ class EWSType_FindItemResponseMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseClassType
+     * @var \jamesiarmes\PhpEws\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -58,7 +58,7 @@ class EWSType_FindItemResponseMessageType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseCodeType
+     * @var \jamesiarmes\PhpEws\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 

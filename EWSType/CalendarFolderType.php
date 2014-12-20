@@ -105,7 +105,7 @@ class EWSType_CalendarFolderType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_CalendarPermissionReadAccessType
+     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
      */
     public $SharingEffectiveRights;
 

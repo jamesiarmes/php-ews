@@ -62,7 +62,7 @@ class EWSType_RuleActionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $MarkImportance;
 

@@ -26,7 +26,7 @@ class EWSType_PathToIndexedFieldType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DictionaryURIType
+     * @var \jamesiarmes\PhpEws\Enumeration\DictionaryURIType
      */
     public $FieldURI;
 }

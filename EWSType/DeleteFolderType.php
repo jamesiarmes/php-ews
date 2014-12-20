@@ -17,7 +17,7 @@ class EWSType_DeleteFolderType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DisposalType
+     * @var \jamesiarmes\PhpEws\Enumeration\DisposalType
      */
     public $DeleteType;
 

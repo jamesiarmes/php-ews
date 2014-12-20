@@ -30,7 +30,7 @@ class EWSType_GetUserConfigurationType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_UserConfigurationPropertyType
+     * @var \jamesiarmes\PhpEws\Enumeration\UserConfigurationPropertyType
      */
     public $UserConfigurationProperties;
 }

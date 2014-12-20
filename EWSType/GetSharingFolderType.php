@@ -20,7 +20,7 @@ class EWSType_GetSharingFolderType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_SharingDataType
+     * @var \jamesiarmes\PhpEws\Enumeration\SharingDataType
      */
     public $DataType;
 

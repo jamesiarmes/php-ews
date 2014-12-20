@@ -15,7 +15,7 @@ class EWSType_ArrayOfItemClassType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 }

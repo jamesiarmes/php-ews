@@ -31,7 +31,7 @@ class EWSType_CreateItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MessageDispositionType
+     * @var \jamesiarmes\PhpEws\Enumeration\MessageDispositionType
      */
     public $MessageDisposition;
 
@@ -55,7 +55,7 @@ class EWSType_CreateItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemCreateOrDeleteOperationType
+     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingInvitations;
 }

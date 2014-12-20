@@ -26,7 +26,7 @@ class EWSType_FreeBusyView extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FreeBusyViewType
+     * @var \jamesiarmes\PhpEws\Enumeration\FreeBusyViewType
      */
     public $FreeBusyViewType;
 

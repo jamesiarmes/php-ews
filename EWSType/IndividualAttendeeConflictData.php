@@ -19,7 +19,7 @@ class EWSType_IndividualAttendeeConflictData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $BusyType;
 }

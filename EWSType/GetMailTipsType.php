@@ -17,7 +17,7 @@ class EWSType_GetMailTipsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_MailTipTypes
+     * @var \jamesiarmes\PhpEws\Enumeration\MailTipTypes
      */
     public $MailTipsRequested;
 

@@ -15,7 +15,7 @@ class EWSType_ArrayOfServiceConfigurationType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ServiceConfigurationType
+     * @var \jamesiarmes\PhpEws\Enumeration\ServiceConfigurationType
      */
     public $ConfigurationName;
 }

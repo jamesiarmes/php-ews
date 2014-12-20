@@ -168,7 +168,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TaskDelegateStateType
+     * @var \jamesiarmes\PhpEws\Enumeration\TaskDelegateStateType
      */
     public $DelegationState;
 
@@ -254,7 +254,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -284,7 +284,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TaskTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\TaskType
      */
     public $IsAssignmentEditable;
 
@@ -377,7 +377,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -521,7 +521,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 
@@ -552,7 +552,7 @@ class EWSType_TaskType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TaskStatusType
+     * @var \jamesiarmes\PhpEws\Enumeration\TaskStatusType
      */
     public $Status;
 

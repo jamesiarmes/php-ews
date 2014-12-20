@@ -30,7 +30,7 @@ class EWSType_AbsoluteYearlyRecurrencePatternType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MonthNamesType
+     * @var \jamesiarmes\PhpEws\Enumeration\MonthNamesType
      */
     public $Month;
 }

@@ -73,7 +73,7 @@ class EWSType_FindFolderType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FolderQueryTraversalType
+     * @var \jamesiarmes\PhpEws\Enumeration\FolderQueryTraversalType
      */
     public $Traversal;
 }

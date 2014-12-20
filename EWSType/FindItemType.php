@@ -141,7 +141,7 @@ class EWSType_FindItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemQueryTraversalType
+     * @var \jamesiarmes\PhpEws\Enumeration\ItemQueryTraversalType
      */
     public $Traversal;
 }

@@ -65,7 +65,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AppointmentStateType
+     * @var \jamesiarmes\PhpEws\Enumeration\AppointmentState
      */
     public $AppointmentState;
 
@@ -93,7 +93,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemTypeType
      */
     public $CalendarItemType;
 
@@ -113,7 +113,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ConferenceTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\ConferenceType
      */
     public $ConferenceType;
 
@@ -316,7 +316,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -456,7 +456,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -506,7 +506,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_LegacyFreeBusyType
+     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -574,7 +574,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResponseTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
      */
     public $MyResponseType;
 
@@ -718,7 +718,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

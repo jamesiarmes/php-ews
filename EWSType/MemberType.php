@@ -39,7 +39,7 @@ class EWSType_MemberType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_MemberStatusType
+     * @var \jamesiarmes\PhpEws\Enumeration\MemberStatusType
      */
     public $Status;
 }

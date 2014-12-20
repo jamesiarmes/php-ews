@@ -15,7 +15,7 @@ class EWSType_RecurringDayTransitionType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_DayOfWeekType
+     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $DayOfWeek;
 
@@ -34,7 +34,7 @@ class EWSType_RecurringDayTransitionType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_OccurrenceType
+     * @var \jamesiarmes\PhpEws\Enumeration\Occurrence
      */
     public $Occurrence;
 

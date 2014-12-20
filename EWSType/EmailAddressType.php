@@ -33,7 +33,7 @@ class EWSType_EmailAddressType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MailboxTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
      */
     public $MailboxType;
 
@@ -52,7 +52,7 @@ class EWSType_EmailAddressType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_RoutingTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\RoutingType
      */
     public $RoutingType;
 }

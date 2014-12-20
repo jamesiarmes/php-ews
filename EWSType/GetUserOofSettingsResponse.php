@@ -16,7 +16,7 @@ class EWSType_GetUserOofSettingsResponse extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ExternalAudience
+     * @var \jamesiarmes\PhpEws\Enumeration\ExternalAudience
      */
     public $AllowExternalOof;
 

@@ -26,7 +26,7 @@ class EWSType_ItemResponseShapeType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DefaultShapeNamesType
+     * @var \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
      */
     public $BaseShape;
 
@@ -35,7 +35,7 @@ class EWSType_ItemResponseShapeType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyTypeResponseType
+     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
      */
     public $BodyType;
 

@@ -53,7 +53,7 @@ class EWSType_ReminderType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ReminderGroupType
+     * @var \jamesiarmes\PhpEws\Enumeration\ReminderGroup
      */
     public $ReminderGroup;
 

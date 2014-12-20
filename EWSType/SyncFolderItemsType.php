@@ -66,7 +66,7 @@ class EWSType_SyncFolderItemsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_SyncFolderItemsScopeType
+     * @var \jamesiarmes\PhpEws\Enumeration\SyncFolderItemsScopeType
      */
     public $SyncScope;
 

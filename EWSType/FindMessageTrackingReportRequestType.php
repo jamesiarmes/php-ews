@@ -94,7 +94,7 @@ class EWSType_FindMessageTrackingReportRequestType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ScopeType
+     * @var \jamesiarmes\PhpEws\Enumeration\Scope
      */
     public $Scope;
 

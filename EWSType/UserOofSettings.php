@@ -28,7 +28,7 @@ class EWSType_UserOofSettings extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ExternalAudience
+     * @var \jamesiarmes\PhpEws\Enumeration\ExternalAudience
      */
     public $ExternalAudience;
 
@@ -57,7 +57,7 @@ class EWSType_UserOofSettings extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_OofState
+     * @var \jamesiarmes\PhpEws\Enumeration\OofState
      */
     public $OofState;
 }

@@ -17,7 +17,7 @@ class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DayOfWeekType
+     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $DaysOfWeek;
 
@@ -27,7 +27,7 @@ class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DayOfWeekIndexType
+     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
 
@@ -36,7 +36,7 @@ class EWSType_RelativeYearlyRecurrencePatternType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MonthNamesType
+     * @var \jamesiarmes\PhpEws\Enumeration\MonthNamesType
      */
     public $Month;
 }

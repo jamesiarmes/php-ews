@@ -84,7 +84,7 @@ class EWSType_DeclineItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemClassType
+     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -129,7 +129,7 @@ class EWSType_DeclineItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SensitivityChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

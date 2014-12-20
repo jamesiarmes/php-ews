@@ -38,7 +38,7 @@ class EWSType_FindConversationType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_MailboxSearchLocationType
+     * @var \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
      */
     public $MailboxScope;
 
@@ -90,7 +90,7 @@ class EWSType_FindConversationType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_TraversalType
+     * @var \jamesiarmes\PhpEws\Enumeration\ConversationQueryTraversalType
      */
     public $Traversal;
 
@@ -101,7 +101,7 @@ class EWSType_FindConversationType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ViewFilterType
+     * @var \jamesiarmes\PhpEws\Enumeration\ViewFilterType
      */
     public $ViewFilter;
 }

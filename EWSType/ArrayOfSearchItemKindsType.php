@@ -15,7 +15,7 @@ class EWSType_ArrayOfSearchItemKindsType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_SearchItemKindType
+     * @var \jamesiarmes\PhpEws\Enumeration\SearchItemKindType
      */
     public $SearchItemKind;
 }

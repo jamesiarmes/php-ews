@@ -17,7 +17,7 @@ class EWSType_CalendarPermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_CalendarPermissionLevelType
+     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionLevelType
      */
     public $CalendarPermissionLevel;
 
@@ -44,7 +44,7 @@ class EWSType_CalendarPermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $DeleteItems;
 
@@ -53,7 +53,7 @@ class EWSType_CalendarPermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $EditItems;
 
@@ -89,7 +89,7 @@ class EWSType_CalendarPermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionLevelType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionLevelType
      */
     public $PermissionLevel;
 
@@ -98,7 +98,7 @@ class EWSType_CalendarPermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_CalendarPermissionReadAccessType
+     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
      */
     public $ReadItems;
 

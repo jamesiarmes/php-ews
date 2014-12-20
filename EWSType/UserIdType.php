@@ -25,7 +25,7 @@ class EWSType_UserIdType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DistinguishedUserType
+     * @var \jamesiarmes\PhpEws\Enumeration\DistinguishedUserType
      */
     public $DistinguishedUser;
 

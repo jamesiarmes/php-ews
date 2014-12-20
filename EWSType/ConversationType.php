@@ -46,7 +46,7 @@ class EWSType_ConversationType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_FlagStatusType
+     * @var \jamesiarmes\PhpEws\Enumeration\FlagStatusType
      */
     public $FlagStatus;
 
@@ -65,7 +65,7 @@ class EWSType_ConversationType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_FlagStatusType
+     * @var \jamesiarmes\PhpEws\Enumeration\FlagStatusType
      */
     public $GlobalFlagStatus;
 
@@ -85,7 +85,7 @@ class EWSType_ConversationType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $GlobalImportance;
 
@@ -196,7 +196,7 @@ class EWSType_ConversationType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ImportanceChoicesType
+     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 

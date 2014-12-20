@@ -46,7 +46,7 @@ class EWSType_Suggestion extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SuggestionQuality
+     * @var \jamesiarmes\PhpEws\Enumeration\SuggestionQuality
      */
     public $SuggestionQuality;
 }

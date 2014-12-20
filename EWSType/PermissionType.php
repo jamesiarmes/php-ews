@@ -35,7 +35,7 @@ class EWSType_PermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $DeleteItems;
 
@@ -44,7 +44,7 @@ class EWSType_PermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionActionType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $EditItems;
 
@@ -80,7 +80,7 @@ class EWSType_PermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionLevelType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionLevelType
      */
     public $PermissionLevel;
 
@@ -89,7 +89,7 @@ class EWSType_PermissionType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionReadAccessType
+     * @var \jamesiarmes\PhpEws\Enumeration\PermissionReadAccessType
      */
     public $ReadItems;
 

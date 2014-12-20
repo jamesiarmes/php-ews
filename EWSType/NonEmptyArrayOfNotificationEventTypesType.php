@@ -7,7 +7,7 @@
  * Represents a collection of event notification types that are used to create a
  * subscription.
  *
- * @package php-ews\Enumerations
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfNotificationEventTypesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NotificationEventTypeType
+     * @var \jamesiarmes\PhpEws\Enumeration\NotificationEventTypeType
      */
     public $EventType;
 }
