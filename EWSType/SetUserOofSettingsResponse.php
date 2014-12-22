@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the SetUserOofSettingsResponse type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SetUserOofSettingsResponse.
  */
 
 /**
- * Definition of the SetUserOofSettingsResponse type
+ * Defines the result of a SetUserOofSettingsRequest message attempt.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SetUserOofSettingsResponse extends EWSType
 {
     /**
-     * ResponseMessage property
+     * Provides descriptive information about the response status.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ResponseMessageType
      */

@@ -1,53 +1,68 @@
 <?php
 /**
- * Definition of the ArrayOfDLExpansionType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfDLExpansionType.
  */
 
 /**
- * Definition of the ArrayOfDLExpansionType type
+ * Represents an array of mailboxes that are contained in a distribution list.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfDLExpansionType extends EWSType
 {
     /**
-     * Mailbox property
+     * Represents the next denominator to use for the next request when you are
+     * using fraction page views.
      *
-     * @var EWSType_EmailAddressType
-     */
-    public $Mailbox;
-
-    /**
-     * IndexedPagingOffset property
-     *
-     * @var integer
-     */
-    public $IndexedPagingOffset;
-
-    /**
-     * NumeratorOffset property
-     *
-     * @var integer
-     */
-    public $NumeratorOffset;
-
-    /**
-     * AbsoluteDenominator property
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $AbsoluteDenominator;
 
     /**
-     * IncludesLastItemInRange property
+     * Indicates whether the current results contain the last item in the query
+     * so that additional paging is not needed.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IncludesLastItemInRange;
 
     /**
-     * TotalItemsInView property
+     * Represents the next index that should be used for the next request when
+     * you are using an indexed page view.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $IndexedPagingOffset;
+
+    /**
+     * Identifies a mail-enabled Active Directory directory service object.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_EmailAddressType
+     */
+    public $Mailbox;
+
+    /**
+     * Represents the new numerator value to use for the next request when you
+     * are using fraction page views.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $NumeratorOffset;
+
+    /**
+     * Represents the total number of items in the view.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */

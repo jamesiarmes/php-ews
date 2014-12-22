@@ -1,18 +1,22 @@
 <?php
 /**
- * Definition of the BaseDelegateResponseMessageType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BaseDelegateResponseMessageType.
  */
 
 /**
- * Definition of the BaseDelegateResponseMessageType type
+ * Base class for delegate response messages.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseDelegateResponseMessageType.
  */
-class EWSType_BaseDelegateResponseMessageType extends EWSType
+abstract class EWSType_BaseDelegateResponseMessageType extends EWSType
 {
     /**
-     * ResponseMessages property
+     * Contains the response messages for an Exchange Web Services delegate
+     * management request.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_ArrayOfDelegateUserResponseMessageType
      */

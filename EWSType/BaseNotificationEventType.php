@@ -1,20 +1,21 @@
 <?php
 /**
- * Definition of the BaseNotificationEventType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BaseNotificationEventType.
  */
 
 /**
- * Definition of the BaseNotificationEventType type
+ * Represents a notification that no new activity has occurred in the mailbox.
+ *
+ * @package php-ews\Types
  */
 class EWSType_BaseNotificationEventType extends EWSType
 {
     /**
-     * Watermark property
+     * Represents the last valid watermark for a subscription.
      *
-     * @var EWSType_WatermarkType
+     * @since Exchange 2007
+     *
+     * @var string
      */
     public $Watermark;
 }

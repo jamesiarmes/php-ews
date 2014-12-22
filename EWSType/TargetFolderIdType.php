@@ -1,27 +1,30 @@
 <?php
 /**
- * Definition of the TargetFolderIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_TargetFolderIdType.
  */
 
 /**
- * Definition of the TargetFolderIdType type
+ * Indicates the folder that is targeted for actions that use folders.
+ *
+ * @package php-ews\Types
  */
 class EWSType_TargetFolderIdType extends EWSType
 {
     /**
-     * FolderId property
+     * Identifies folders that can be referenced by name.
      *
-     * @var EWSType_FolderIdType
-     */
-    public $FolderId;
-
-    /**
-     * DistinguishedFolderId property
+     * @since Exchange 2007
      *
      * @var EWSType_DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
+
+    /**
+     * Contains the identifier and change key of the context folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderIdType
+     */
+    public $FolderId;
 }

@@ -1,69 +1,94 @@
 <?php
 /**
- * Definition of the SuggestionsViewOptionsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SuggestionsViewOptionsType.
  */
 
 /**
- * Definition of the SuggestionsViewOptionsType type
+ * Defines  the options for obtaining meeting suggestion information.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SuggestionsViewOptionsType extends EWSType
 {
     /**
-     * GoodThreshold property
+     * Represents the start time of a meeting that you want to update with the
+     * suggested meeting time results.
      *
-     * @var integer
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
      */
-    public $GoodThreshold;
+    public $CurrentMeetingTime;
 
     /**
-     * MaximumResultsByDay property
+     * Identifies the time span that is queried for detailed information about
+     * suggested meeting times.
      *
-     * @var integer
-     */
-    public $MaximumResultsByDay;
-
-    /**
-     * MaximumNonWorkHourResultsByDay property
-     *
-     * @var integer
-     */
-    public $MaximumNonWorkHourResultsByDay;
-
-    /**
-     * MeetingDurationInMinutes property
-     *
-     * @var integer
-     */
-    public $MeetingDurationInMinutes;
-
-    /**
-     * MinimumSuggestionQuality property
-     *
-     * @var EWSType_SuggestionQuality
-     */
-    public $MinimumSuggestionQuality;
-
-    /**
-     * DetailedSuggestionsWindow property
+     * @since Exchange 2007
      *
      * @var EWSType_Duration
      */
     public $DetailedSuggestionsWindow;
 
     /**
-     * CurrentMeetingTime property
+     * This element is not used.
      *
-     * @var EWSType_dateTime
-     */
-    public $CurrentMeetingTime;
-
-    /**
-     * GlobalObjectId property
+     * @since Exchange 2007
      *
      * @var string
+     *
+     * @todo Make a DateTime object.
      */
     public $GlobalObjectId;
+
+    /**
+     * Specifies the percentage of attendees that must have the time period open
+     * for the time period to qualify as a good suggested meeting time.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $GoodThreshold;
+
+    /**
+     * Specifies the number of suggested results for meeting times outside
+     * regular working hours per day.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $MaximumNonWorkHourResultsByDay;
+
+    /**
+     * Specifies the number of suggested meeting times per day returned in the
+     * response.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $MaximumResultsByDay;
+
+    /**
+     * Specifies the length of the meeting to be suggested.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $MeetingDurationInMinutes;
+
+    /**
+     * Specifies the quality of meeting suggestions to be returned in the
+     * response.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_SuggestionQuality
+     */
+    public $MinimumSuggestionQuality;
 }

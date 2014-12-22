@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfFolderChangesType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfFolderChangesType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfFolderChangesType type
+ * Represents a collection of changes for a folder.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfFolderChangesType extends EWSType
 {
     /**
-     * FolderChange property
+     * Represents a single change to be performed on a single folder.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FolderChangeType
      */

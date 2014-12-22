@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfRequestAttachmentIdsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfRequestAttachmentIdsType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfRequestAttachmentIdsType type
+ * Represents an array of attachment identifiers.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
 {
     /**
-     * AttachmentId property
+     * The element that identifies a single attachment.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_RequestAttachmentIdType
      */

@@ -1,25 +1,36 @@
 <?php
 /**
- * Definition of the WorkingHours type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_WorkingHours.
  */
 
 /**
- * Definition of the WorkingHours type
+ * Represents the time zone settings and working hours for the requested mailbox
+ * user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_WorkingHours extends EWSType
 {
     /**
-     * TimeZone property
+     * Contains elements that identify time zone information.
+     *
+     * This element also contains information about the transition between
+     * standard time and daylight saving time.
+     *
+     * This element is required if the WorkingHours element is used.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SerializableTimeZone
      */
     public $TimeZone;
 
     /**
-     * WorkingPeriodArray property
+     * Contains working period information for the mailbox user.
+     *
+     * This element is required if the WorkingHours element is used.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ArrayOfWorkingPeriod
      */

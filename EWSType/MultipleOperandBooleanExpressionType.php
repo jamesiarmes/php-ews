@@ -1,21 +1,21 @@
 <?php
 /**
- * The MultipleOperandBooleanExpressionType element is the base element for
- * derived elements that represent a restriction formed by two or more Boolean
- * operands.
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_MultipleOperandBooleanExpressionType.
  */
 
 /**
- * Definition of the MultipleOperandBooleanExpressionType type.
+ * Base class for derived elements that represent a restriction formed by two or
+ * more Boolean operands.
+ *
+ * @package php-ews\Types
  */
 abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
 {
     /**
      * Represents a search expression that enables you to perform a Boolean AND
      * operation between two or more search expressions.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_AndType
      */
@@ -25,12 +25,16 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * Represents a search expression that determines whether a given property
      * contains the supplied constant string value.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_ContainsExpressionType
      */
     public $Contains;
 
     /**
      * Performs a bitwise mask of the properties.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ExcludesType
      */
@@ -39,6 +43,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
     /**
      * Represents a search expression that returns true if the supplied property
      * exists on an item.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ExistsType
      */
@@ -49,6 +55,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * constant value or another property and evaluates to true if they are
      * equal.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_IsEqualToType
      */
     public $IsEqualTo;
@@ -57,6 +65,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * Represents a search expression that compares a property with either a
      * constant value or another property and returns true if the first property
      * is greater than the value or property.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_IsGreaterThanType
      */
@@ -67,6 +77,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * constant value or another property and returns true if the first property
      * is greater than or equal to the value or property.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_IsGreaterThanOrEqualToType
      */
     public $IsGreaterThanOrEqualTo;
@@ -75,6 +87,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * Represents a search expression that compares a property with either a
      * constant value or another property and returns true if the first property
      * is less than the value or property.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_IsLessThanType
      */
@@ -85,6 +99,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * constant value or another property and returns true if the first property
      * is less than or equal to the value or property.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_IsLessThanOrEqualToType
      */
     public $IsLessThanOrEqualTo;
@@ -94,6 +110,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * constant value or another property and returns true if the values are not
      * the same.
      *
+     * @since Exchange 2007
+     *
      * @var EWSType_IsNotEqualToType
      */
     public $IsNotEqualTo;
@@ -101,6 +119,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
     /**
      * Represents a search expression that negates the Boolean value of the
      * search expression it contains.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NotType
      */
@@ -110,6 +130,8 @@ abstract class EWSType_MultipleOperandBooleanExpressionType extends EWSType
      * Represents a search expression that performs a logical OR operation on
      * the search expression it contains. The Or element will return true if any
      * of its children return true.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_OrType
      */

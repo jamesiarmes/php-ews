@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the RequestAttachmentIdType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_RequestAttachmentIdType.
  */
 
 /**
- * Definition of the RequestAttachmentIdType type
+ * Identifies a single attachment.
+ *
+ * @package php-ews\Types
  */
 class EWSType_RequestAttachmentIdType extends EWSType
 {
     /**
-     * Id property
+     * Specifies the attachment identifier.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */

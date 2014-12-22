@@ -1,53 +1,68 @@
 <?php
 /**
- * Definition of the ArrayOfResolutionType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ArrayOfResolutionType.
  */
 
 /**
- * Definition of the ArrayOfResolutionType type
+ * Defines an array of resolutions for an ambiguous name.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ArrayOfResolutionType extends EWSType
 {
     /**
-     * Resolution property
+     * Represents the next denominator to use for the next request when you are
+     * using fraction page views.
      *
-     * @var EWSType_ResolutionType
-     */
-    public $Resolution;
-
-    /**
-     * IndexedPagingOffset property
-     *
-     * @var integer
-     */
-    public $IndexedPagingOffset;
-
-    /**
-     * NumeratorOffset property
-     *
-     * @var integer
-     */
-    public $NumeratorOffset;
-
-    /**
-     * AbsoluteDenominator property
+     * @since Exchange 2007
      *
      * @var integer
      */
     public $AbsoluteDenominator;
 
     /**
-     * IncludesLastItemInRange property
+     * This attribute will be true if the current results contain the last item
+     * in the query, so that additional paging is not needed.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IncludesLastItemInRange;
 
     /**
-     * TotalItemsInView property
+     * Represents the next index that should be used for the next request when
+     * you are using an indexed page view.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $IndexedPagingOffset;
+
+    /**
+     * Represents the new numerator value to use for the next request when you
+     * are using fraction page views.
+     *
+     * @since Exchange 2007
+     *
+     * @var integer
+     */
+    public $NumeratorOffset;
+
+    /**
+     * Contains a single resolved entity.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ResolutionType
+     */
+    public $Resolution;
+
+    /**
+     * Represents the total number of items in the view.
+     *
+     * @since Exchange 2007
      *
      * @var integer
      */

@@ -1,5 +1,9 @@
 <?php
 /**
+ * Contains NTLMSoapClient.
+ */
+
+/**
  * Soap Client using Microsoft's NTLM Authentication.
  *
  * Copyright (c) 2008 Invest-In-France Agency http://www.invest-in-france.org
@@ -21,12 +25,7 @@
  * @link http://rabaix.net/en/articles/2008/03/13/using-soap-php-with-ntlm-authentication
  * @author Thomas Rabaix
  *
- * @package php-ews
- * @subpackage NTLM
- */
-
-/**
- * Soap Client using Microsoft's NTLM Authentication.
+ * @package php-ews\Auth
  */
 class NTLMSoapClient extends SoapClient
 {

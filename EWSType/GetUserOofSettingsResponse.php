@@ -1,34 +1,40 @@
 <?php
 /**
- * Definition of the GetUserOofSettingsResponse type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetUserOofSettingsResponse.
  */
 
 /**
- * Definition of the GetUserOofSettingsResponse type
+ * Represents the response message and the Out of Office (OOF) settings for a
+ * user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_GetUserOofSettingsResponse extends EWSType
 {
     /**
-     * ResponseMessage property
+     * Contains a value that identifies to whom external OOF messages are sent.
      *
-     * @var EWSType_ResponseMessageType
+     * @since Exchange 2007
+     *
+     * @var EWSType_ExternalAudience
      */
-    public $ResponseMessage;
+    public $AllowExternalOof;
 
     /**
-     * OofSettings property
+     * Contains the OOF settings.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_UserOofSettings
      */
     public $OofSettings;
 
     /**
-     * AllowExternalOof property
+     * Provides descriptive information about the response status.
      *
-     * @var EWSType_ExternalAudience
+     * @since Exchange 2007
+     *
+     * @var EWSType_ResponseMessageType
      */
-    public $AllowExternalOof;
+    public $ResponseMessage;
 }

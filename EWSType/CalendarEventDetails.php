@@ -1,69 +1,86 @@
 <?php
 /**
- * Definition of the CalendarEventDetails type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CalendarEventDetails.
  */
 
 /**
- * Definition of the CalendarEventDetails type
+ * Represents additional information about a calendar event.
+ *
+ * @package php-ews\Types
  */
 class EWSType_CalendarEventDetails extends EWSType
 {
     /**
-     * ID property
+     * Represents the entry ID of the calendar item.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     public $ID;
 
     /**
-     * Subject property
+     * Indicates whether an instance of a recurring calendar item is changed
+     * from the master.
      *
-     * @var string
-     */
-    public $Subject;
-
-    /**
-     * Location property
-     *
-     * @var string
-     */
-    public $Location;
-
-    /**
-     * IsMeeting property
-     *
-     * @var boolean
-     */
-    public $IsMeeting;
-
-    /**
-     * IsRecurring property
-     *
-     * @var boolean
-     */
-    public $IsRecurring;
-
-    /**
-     * IsException property
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IsException;
 
     /**
-     * IsReminderSet property
+     * Indicates whether the calendar event is a meeting or an appointment.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsMeeting;
+
+    /**
+     * Indicates whether the calendar item is private.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsPrivate;
+
+    /**
+     * Indicates whether the calendar event is an instance of a recurring
+     * calendar item or a single calendar item.
+     *
+     * @since Exchange 2007
+     *
+     * @var boolean
+     */
+    public $IsRecurring;
+
+    /**
+     * Indicates whether a reminder has been set for the calendar event.
+     *
+     * @since Exchange 2007
      *
      * @var boolean
      */
     public $IsReminderSet;
 
     /**
-     * IsPrivate property
+     * Represents the location field of the calendar item.
      *
-     * @var boolean
+     * @since Exchange 2007
+     *
+     * @var string
      */
-    public $IsPrivate;
+    public $Location;
+
+    /**
+     * Represents the subject of the calendar item.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    public $Subject;
 }

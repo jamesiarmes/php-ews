@@ -1,27 +1,35 @@
 <?php
 /**
- * Definition of the GetAttachmentType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetAttachmentType.
  */
 
 /**
- * Definition of the GetAttachmentType type
+ * Defines a request to get an attachment from the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_GetAttachmentType extends EWSType
 {
     /**
-     * AttachmentShape property
+     * Contains an array of attachment identifiers.
      *
-     * @var EWSType_AttachmentResponseShapeType
-     */
-    public $AttachmentShape;
-
-    /**
-     * AttachmentIds property
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
+
+    /**
+     * Identifies additional extended item properties to return in a response to
+     * a GetAttachment request.
+     *
+     * This element is optional.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_AttachmentResponseShapeType
+     */
+    public $AttachmentShape;
 }

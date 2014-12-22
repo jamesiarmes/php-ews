@@ -1,32 +1,37 @@
 <?php
 /**
- * Definition of the NonEmptyArrayOfAlternateIdsType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_NonEmptyArrayOfAlternateIdsType.
  */
 
 /**
- * Definition of the NonEmptyArrayOfAlternateIdsType type
+ * Defines the source identifiers to convert.
+ *
+ * @package php-ews\Types
  */
 class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
 {
     /**
-     * AlternateId property
+     * Describes an item or folder identifier to convert.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_AlternateIdType
      */
     public $AlternateId;
 
     /**
-     * AlternatePublicFolderId property
+     * Describes a public folder identifier to convert.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_AlternatePublicFolderIdType
      */
     public $AlternatePublicFolderId;
 
     /**
-     * AlternatePublicFolderItemId property
+     * Describes a public folder item identifier to convert.
+     *
+     * @since Exchange 2007 SP1
      *
      * @var EWSType_AlternatePublicFolderItemIdType
      */

@@ -1,27 +1,47 @@
 <?php
 /**
- * Definition of the BodyTypeType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_BodyTypeType.
  */
 
 /**
- * Definition of the BodyTypeType type
+ * Specifies the type of an item body.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_BodyTypeType extends EWSType
 {
     /**
-     * HTML body type.
+     * Indicates that the body is in HTML.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const HTML = 'HTML';
 
     /**
-     * Text body type.
+     * Indicates that the body is in text.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const TEXT = 'Text';
+
+    /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_;
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->_;
+    }
 }

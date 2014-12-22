@@ -1,18 +1,19 @@
 <?php
 /**
- * Definition of the SyncFolderHierarchyDeleteType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_SyncFolderHierarchyDeleteType.
  */
 
 /**
- * Definition of the SyncFolderHierarchyDeleteType type
+ * Identifies a single folder to delete in the local client store.
+ *
+ * @package php-ews\Types
  */
 class EWSType_SyncFolderHierarchyDeleteType extends EWSType
 {
     /**
-     * FolderId property
+     * Contains the identifier and change key of a folder.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_FolderIdType
      */

@@ -1,46 +1,58 @@
 <?php
 /**
- * Definition of the AppendToFolderFieldType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_AppendToFolderFieldType.
  */
 
 /**
- * Definition of the AppendToFolderFieldType type
+ * This type element is not implemented. Any request that uses this type will
+ * always return an error response.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_FolderChangeDescriptionType.
  */
 class EWSType_AppendToFolderFieldType extends EWSType
 {
     /**
-     * Folder property
+     * Represents a folder that primarily contains calendar items.
      *
-     * @var EWSType_FolderType
-     */
-    public $Folder;
-
-    /**
-     * CalendarFolder property
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarFolderType
      */
     public $CalendarFolder;
 
     /**
-     * ContactsFolder property
+     * Represents a Contacts folder in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_ContactsFolderType
      */
     public $ContactsFolder;
 
     /**
-     * SearchFolder property
+     * Identifies a folder to update.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_FolderType
+     */
+    public $Folder;
+
+    /**
+     * Represents a search folder that is contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_SearchFolderType
      */
     public $SearchFolder;
 
     /**
-     * TasksFolder property
+     * Represents a Tasks folder that is contained in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_TasksFolderType
      */

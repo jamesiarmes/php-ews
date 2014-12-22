@@ -1,27 +1,37 @@
 <?php
 /**
- * Definition of the GetItemType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_GetItemType.
  */
 
 /**
- * Definition of the GetItemType type
+ * Defines a request to get an item from a mailbox in the Exchange store.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_GetItemType extends EWSType
 {
     /**
-     * ItemShape property
+     * Contains the unique identities of items, occurrence items, and recurring
+     * master items that are used to get items from the Exchange store.
      *
-     * @var EWSType_ItemResponseShapeType
-     */
-    public $ItemShape;
-
-    /**
-     * ItemIds property
+     * These items represent contacts, tasks, messages, calendar items, meeting
+     * requests, and other valid items in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
+
+    /**
+     * Identifies the item properties and content to include in a GetItem
+     * response.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ItemResponseShapeType
+     */
+    public $ItemShape;
 }

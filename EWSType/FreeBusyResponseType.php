@@ -1,27 +1,30 @@
 <?php
 /**
- * Definition of the FreeBusyResponseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_FreeBusyResponseType.
  */
 
 /**
- * Definition of the FreeBusyResponseType type
+ * Represents the free/busy information for a single mailbox user.
+ *
+ * @package php-ews\Types
  */
 class EWSType_FreeBusyResponseType extends EWSType
 {
     /**
-     * ResponseMessage property
+     * Contains availability information for a specific user.
      *
-     * @var EWSType_ResponseMessageType
-     */
-    public $ResponseMessage;
-
-    /**
-     * FreeBusyView property
+     * @since Exchange 2007
      *
      * @var EWSType_FreeBusyView
      */
     public $FreeBusyView;
+
+    /**
+     * Provides descriptive information about the response status.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_ResponseMessageType
+     */
+    public $ResponseMessage;
 }

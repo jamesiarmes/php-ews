@@ -1,39 +1,58 @@
 <?php
 /**
- * Definition of the CalendarEvent type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_CalendarEvent.
  */
 
 /**
- * Definition of the CalendarEvent type
+ * Represents a unique calendar item occurrence.
+ *
+ * @package php-ews\Types
  */
 class EWSType_CalendarEvent extends EWSType
 {
     /**
-     * Start date and time of the event in ISO 8601 format.
+     * Represents the start of a calendar event.
+     *
+     * This property is required.
+     *
+     * @since Exchange 2007
      *
      * @var string
+     *
+     * @todo Make a DateTime object.
      */
-    public $Start;
+    public $StartTime;
 
     /**
-     * End date and time of the event in ISO 8601 format.
+     * Represents the end of a calendar event.
+     *
+     * This property is required,
+     *
+     * @since Exchange 2007
      *
      * @var string
+     *
+     * @todo Make a DateTime object.
      */
-    public $End;
+    public $EndTime;
 
     /**
-     * BusyType property
+     * Represents the free/busy status set for a calendar event.
      *
-     * @var EWSType_LegacyFreeBusyType
+     * This property is required.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_BusyType
      */
     public $BusyType;
 
     /**
-     * CalendarEventDetails property
+     * Provides additional information for a calendar event.
+     *
+     * This property is optional.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_CalendarEventDetails
      */

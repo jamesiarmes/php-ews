@@ -1,18 +1,22 @@
 <?php
 /**
- * Definition of the UpdateFolderType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_UpdateFolderType.
  */
 
 /**
- * Definition of the UpdateFolderType type
+ * Represents the operation that is used to update properties for a specified
+ * folder.
+ *
+ * @package php-ews\Types
+ *
+ * @todo Extend EWSType_BaseRequestType.
  */
 class EWSType_UpdateFolderType extends EWSType
 {
     /**
-     * FolderChanges property
+     * Contains a collection of changes for a specified folder.
+     *
+     * @since Exchange 2007
      *
      * @var EWSType_NonEmptyArrayOfFolderChangesType
      */

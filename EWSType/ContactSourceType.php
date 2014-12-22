@@ -1,27 +1,48 @@
 <?php
 /**
- * Definition of the ContactSourceType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ContactSourceType.
  */
 
 /**
- * Definition of the ContactSourceType type
+ * Describes whether the contact is located in the Exchange store or Active
+ * Directory Domain Services (AD DS).
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_ContactSourceType extends EWSType
 {
     /**
-     * Contact is stored in Active Directory.
+     * Indicates that the contact is stored in Active Directory.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const ACTIVE_DIRECTORY = 'ActiveDirectory';
 
     /**
-     * Contact is stored in the Exchange Store.
+     * Indicates that the contact is stored in the Exchange Store.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const EXCHANGE_STORE = 'Store';
+
+    /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_;
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+      return $this->_;
+    }
 }

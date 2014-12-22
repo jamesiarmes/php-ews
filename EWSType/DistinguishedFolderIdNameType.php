@@ -1,125 +1,399 @@
 <?php
 /**
- * Definition of the DistinguishedFolderIdNameType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_DistinguishedFolderIdNameType.
  */
 
 /**
- * URIs for the distinguished folders accessible from a mailbox
+ * Represents default calendar ids.
+ *
+ * @package php-ews\Enumerations
  */
 class EWSType_DistinguishedFolderIdNameType extends EWSType
 {
     /**
-     * Calendar folder
+     * Represents the admin audit logs folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const ADMIN_AUDIT_LOGS = 'adminauditlogs';
+
+    /**
+     * Represents the archive deleted items folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_DELETED = 'archivedeleteditems';
+
+    /**
+     * Represents the archive Inbox folder.
+     *
+     * @since Exchange 2013 CU5
+     *
+     * @var string
+     */
+    const ARCHIVE_INBOX = 'archiveinbox';
+
+    /**
+     * Represents the root archive message folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_MESSAGE_ROOT = 'archivemsgfolderroot';
+
+    /**
+     * Represents the archive recoverable items deletions folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_RECOVERABLE_DELETIONS = 'Archiverecoverableitemsdeletions';
+
+    /**
+     * Represents the archive recoverable items purges folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_RECOVERABLE_PURGES = 'Archiverecoverableitemspurges';
+
+    /**
+     * Represents the archive recoverable items root folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_RECOVERABLE_ROOT = 'archiverecoverableitemsroot';
+
+    /**
+     * Represents the archive recoverable items versions folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_RECOVERABLE_VERSIONS = 'Archiverecoverableitemsversions';
+
+    /**
+     * Represents the root archive folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const ARCHIVE_ROOT = 'archiveroot';
+
+    /**
+     * Represents the Calendar folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const CALENDAR = 'calendar';
 
     /**
-     * Contacts folder
+     * Represents the conflicts folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const CONFLICTS = 'conflicts';
+
+    /**
+     * Represents the Contacts folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const CONTACTS = 'contacts';
 
     /**
-     * Deleted Items folder (ie. trash)
+     * Represents the conversation history folder.
+     *
+     * @since Exchange 2013
      *
      * @var string
      */
-    const DELETED_ITEMS = 'deleteditems';
+    const CONVERSATION_HISTORY = 'conversationhistory';
 
     /**
-     * Drafts folder
+     * Represents the Deleted Items folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const DELETED = 'deleteditems';
+
+    /**
+     * Represents the directory folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const DIRECTORY = 'directory';
+
+    /**
+     * Represents the Drafts folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const DRAFTS = 'drafts';
 
     /**
-     * Inbox folder
+     * Represents the Favorites folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const FAVORITES = 'favorites';
+
+    /**
+     * Represents the Inbox folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const INBOX = 'inbox';
 
     /**
-     * Journal folder
+     * Represents the IM contact list folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const IM_CONTACT_LIST = 'imcontactlist';
+
+    /**
+     * Represents the Journal folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const JOURNAL = 'journal';
 
     /**
-     * Notes folder
+     * Represents the Junk E-mail folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const JUNK = 'jußnkemail';
+
+    /**
+     * Represents the local failures folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const LOCAL_FAILURES = 'localfailures';
+
+    /**
+     * Represents the message folder root.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const MESSAGE_ROOT = 'msgfolderroot';
+
+    /**
+     * Represents the My Contacts folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const MY_CONTACTS = 'mycontacts';
+
+    /**
+     * Represents the Notes folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const NOTES = 'notes';
 
     /**
-     * Outbox folder
+     * Represents the Outbox folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const OUTBOX = 'outbox';
 
     /**
-     * Sent Items folder
+     * Represents the people connect folder.
+     *
+     * @since Exchange 2013
      *
      * @var string
      */
-    const SENT_ITEMS = 'sentitems';
+    const PEOPLE_CONNECT = 'peopleconnect';
 
     /**
-     * Tasks folder
+     * Represents the quick contacts folder.
+     *
+     * @since Exchange 2013
      *
      * @var string
      */
-    const TASKS = 'tasks';
+    const QUICK_CONTACTS = 'quickcontacts';
 
     /**
-     * Root of the message folders
+     * Represents the recipient cache folder.
+     *
+     * @since Exchange 2013
      *
      * @var string
      */
-    const MESSAGE_FOLDER_ROOT = 'msgfolderroot';
+    const RECIPIENT_CACHE = 'recipientcache';
 
     /**
-     * Root of the public folders
+     * Represents the dumpster deletions folder.
+     *
+     * @since Exchange 2010
      *
      * @var string
      */
-    const PUBLIC_FOLDERS_ROOT = 'publicfoldersroot';
+    const RECOVERABLE_DELETIONS = 'recoverableitemsdeletions';
 
     /**
-     * Root of the user's mailbox
+     * Represents the dumpster purges folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const RECOVERABLE_PURGES = 'recoverableitemspurges';
+
+    /**
+     * Represents the dumpster root folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const RECOVERABLE_ROOT = 'recoverableitemsroot';
+
+    /**
+     * Represents the dumpster versions folder.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    const RECOVERABLE_VERSIONS = 'recoverableitemsversions';
+
+    /**
+     * Represents the root of the mailbox.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
     const ROOT = 'root';
 
     /**
-     * Junk Email folder
+     * Represents the Search Folders folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
-    const JUNK_EMAIL = 'junkemail';
+    const SEARCH = 'searchfolders';
 
     /**
-     * Search folders
+     * Represents the Sent Items folder.
+     *
+     * @since Exchange 2007
      *
      * @var string
      */
-    const SEARCH_FOLDERS = 'searchfolders';
+    const SENT = 'sentitems';
 
     /**
-     * Voicemail folder
+     * Represents the server failures folder.
+     *
+     * @since Exchange 2013
      *
      * @var string
      */
-    const VOICEMAIL = 'voicemail';
+    const SERVER_FAILURES = 'serverfailures';
+
+    /**
+     * Represents the sync issues folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const SYNC_ISSUES = 'syncissues';
+
+    /**
+     * Represents the Tasks folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const TASKS = 'tasks';
+
+    /**
+     * Represents the todo search folder.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    const TODO_SEARCH = 'todosearch';
+
+    /**
+     * Represents the Voice Mail folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const VOICE_MAIL = 'voicemail';
+
+    /**
+     * Element value.
+     *
+     * @var string
+     */
+    public $_;
+
+
+    /**
+     * Returns the value of this object as a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->_;
+    }
 }

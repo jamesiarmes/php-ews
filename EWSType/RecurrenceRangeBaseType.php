@@ -1,20 +1,23 @@
 <?php
 /**
- * Definition of the RecurrenceRangeBaseType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_RecurrenceRangeBaseType.
  */
 
 /**
- * Definition of the RecurrenceRangeBaseType type
+ * Base class for recurrence ranges,
+ *
+ * @package php-ews\Types
  */
-class EWSType_RecurrenceRangeBaseType extends EWSType
+abstract class EWSType_RecurrenceRangeBaseType extends EWSType
 {
     /**
-     * StartDate property
+     * Represents the start date of a recurring task or calendar item.
      *
-     * @var EWSType_date
+     * @since Exchange 2007
+     *
+     * @var string
+     *
+     * @todo Make a date object that extends DateTime.
      */
     public $StartDate;
 }

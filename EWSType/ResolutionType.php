@@ -1,27 +1,30 @@
 <?php
 /**
- * Definition of the ResolutionType type
- *
- * @package php-ews
- * @subpackage Types
+ * Contains EWSType_ResolutionType.
  */
 
 /**
- * Definition of the ResolutionType type
+ * Represents a single resolved entity.
+ *
+ * @package php-ews\Types
  */
 class EWSType_ResolutionType extends EWSType
 {
     /**
-     * Mailbox property
+     * Represents an Exchange contact item.
      *
-     * @var EWSType_EmailAddressType
-     */
-    public $Mailbox;
-
-    /**
-     * Contact property
+     * @since Exchange 2007
      *
      * @var EWSType_ContactItemType
      */
     public $Contact;
+
+    /**
+     * Identifies a mail-enabled Active Directory directory service object.
+     *
+     * @since Exchange 2007
+     *
+     * @var EWSType_EmailAddressType
+     */
+    public $Mailbox;
 }
