@@ -6,7 +6,7 @@
     "homepage": "https://github.com/jamesiarmes/php-ews/wiki",
     "license": "n.a.",
     "authors": [
-        {"name": "Jame Iarmes", "email": ""},
+        {"name": "James Iarmes", "email": "jamesiarmes@gmail.com", "homepage": "http://jamesarmes.com"}
         {"name": "GitHub Contributors", "homepage": "https://github.com/jamesiarmes/php-ews/graphs/contributors"}
     ],
     "require": {
