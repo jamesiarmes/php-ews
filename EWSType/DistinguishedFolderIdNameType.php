@@ -197,7 +197,7 @@ class EWSType_DistinguishedFolderIdNameType extends EWSType
      *
      * @var string
      */
-    const JUNK = 'jußnkemail';
+    const JUNK = 'junkemail';
 
     /**
      * Represents the local failures folder.
