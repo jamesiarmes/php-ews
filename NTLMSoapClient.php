@@ -22,8 +22,8 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * @link http://rabaix.net/en/articles/2008/03/13/using-soap-php-with-ntlm-authentication
- * @author Thomas Rabaix
+ * @link    http://rabaix.net/en/articles/2008/03/13/using-soap-php-with-ntlm-authentication
+ * @author  Thomas Rabaix
  *
  * @package php-ews\Auth
  */
@@ -44,15 +44,22 @@ class NTLMSoapClient extends SoapClient
     protected $validate = false;
 
     /**
+     * @var array
+     */
+    protected $__last_request_headers;
+
+    /**
      * Performs a SOAP request
      *
      * @link http://php.net/manual/en/function.soap-soapclient-dorequest.php
      *
-     * @param string $request the xml soap request
-     * @param string $location the url to request
-     * @param string $action the soap action.
-     * @param integer $version the soap version
+     * @param string  $request  the xml soap request
+     * @param string  $location the url to request
+     * @param string  $action   the soap action.
+     * @param integer $version  the soap version
      * @param integer $one_way
+     *
+     * @throws EWS_Exception
      * @return string the xml soap response.
      */
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
@@ -62,7 +69,7 @@ class NTLMSoapClient extends SoapClient
             'Connection: Keep-Alive',
             'User-Agent: PHP-SOAP-CURL',
             'Content-Type: text/xml; charset=utf-8',
-            'SOAPAction: "'.$action.'"',
+            'SOAPAction: "' . $action . '"',
         );
 
         $this->__last_request_headers = $headers;
@@ -72,11 +79,11 @@ class NTLMSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($this->ch, CURLOPT_POST, true );
+        curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
-        curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
+        curl_setopt($this->ch, CURLOPT_USERPWD, $this->user . ':' . $this->password);
 
         $response = curl_exec($this->ch);
 
@@ -85,8 +92,8 @@ class NTLMSoapClient extends SoapClient
         // an exception.
         if ($response === false) {
             throw new EWS_Exception(
-              'Curl error: ' . curl_error($this->ch),
-              curl_errno($this->ch)
+                'Curl error: ' . curl_error($this->ch),
+                curl_errno($this->ch)
             );
         }
 
@@ -109,6 +116,8 @@ class NTLMSoapClient extends SoapClient
      * Sets whether or not to validate ssl certificates
      *
      * @param boolean $validate
+     *
+     * @return bool
      */
     public function validateCertificate($validate = true)
     {

@@ -141,6 +141,8 @@ class ExchangeWebServices
      * Sets the impersonation property.
      *
      * @param EWSType_ExchangeImpersonationType $impersonation
+     *
+     * @return bool
      */
     public function setImpersonation($impersonation)
     {
@@ -153,6 +155,8 @@ class ExchangeWebServices
      * Sets the password property.
      *
      * @param string $password
+     *
+     * @return bool
      */
     public function setPassword($password)
     {
@@ -165,6 +169,8 @@ class ExchangeWebServices
      * Sets the server property.
      *
      * @param string $server
+     *
+     * @return bool
      */
     public function setServer($server)
     {
@@ -177,6 +183,8 @@ class ExchangeWebServices
      * Sets the user name property.
      *
      * @param string $username
+     *
+     * @return bool
      */
     public function setUsername($username)
     {
@@ -189,6 +197,8 @@ class ExchangeWebServices
      * Sets the version property.
      *
      * @param string $version
+     *
+     * @return bool
      */
     public function setVersion($version)
     {
@@ -204,6 +214,7 @@ class ExchangeWebServices
      * @since Exchange 2007 SP1
      *
      * @param EWSTYpe_AddDelegateType $request
+     *
      * @return EWSType_AddDelegateResponseMessageType
      */
     public function AddDelegate($request)
@@ -224,6 +235,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_ApplyConversationActionType $request
+     *
      * @return EWSType_ApplyConversationActionResponseType
      */
     public function ApplyConversationAction($request)
@@ -241,6 +253,7 @@ class ExchangeWebServices
      * @since Exchange 2007 SP1
      *
      * @param EWSType_ConvertIdType $request
+     *
      * @return EWSType_ConvertIdResponseType
      */
     public function ConvertId($request)
@@ -257,6 +270,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CopyFolderType $request
+     *
      * @return EWSType_CopyFolderResponseType
      */
     public function CopyFolder($request)
@@ -273,6 +287,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CopyItemType $request
+     *
      * @return EWSType_CopyItemResponseType
      */
     public function CopyItem($request)
@@ -290,6 +305,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CreateAttachmentType $request
+     *
      * @return EWSType_CreateAttachmentResponseType
      */
     public function CreateAttachment($request)
@@ -307,6 +323,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CreateFolderType $request
+     *
      * @return EWSType_CreateFolderResponseType
      */
     public function CreateFolder($request)
@@ -323,6 +340,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CreateItemType $request
+     *
      * @return EWSType_CreateItemResponseType
      */
     public function CreateItem($request)
@@ -339,6 +357,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_CreateUserConfigurationType $request
+     *
      * @return EWSType_CreateUserConfigurationResponseType
      */
     public function CreateUserConfiguration($request)
@@ -355,6 +374,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_CreateManagedFolderRequestType $request
+     *
      * @return EWSType_CreateManagedFolderResponseType
      */
     public function CreateManagedFolder($request)
@@ -372,6 +392,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_DeleteAttachmentType $request
+     *
      * @return EWSType_DeleteAttachmentResponseType
      */
     public function DeleteAttachment($request)
@@ -388,6 +409,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_DeleteFolderType $request
+     *
      * @return EWSType_DeleteFolderResponseType
      */
     public function DeleteFolder($request)
@@ -404,6 +426,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_DeleteItemType $request
+     *
      * @return EWSType_DeleteItemResponseType
      */
     public function DeleteItem($request)
@@ -420,6 +443,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_DeleteUserConfigurationType $request
+     *
      * @return EWSType_DeleteUserConfigurationResponseType
      */
     public function DeleteUserConfiguration($request)
@@ -436,6 +460,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_DisconnectPhoneCallType $request
+     *
      * @return EWSType_DisconnectPhoneCallResponseMessageType
      */
     public function DisconnectPhoneCall($request)
@@ -456,6 +481,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_EmptyFolderType $request
+     *
      * @return EWSType_EmptyFolderResponseType
      */
     public function EmptyFolder($request)
@@ -472,6 +498,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_ExpandDLType $request
+     *
      * @return EWSType_ExpandDLResponseType
      */
     public function ExpandDL($request)
@@ -488,6 +515,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_ExportItemsType $request
+     *
      * @return EWSType_ExportItemsResponseType
      */
     public function ExportItems($request)
@@ -504,6 +532,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_FindConversationType $request
+     *
      * @return EWSType_FindConversationResponseMessageType
      */
     public function FindConversation($request)
@@ -521,6 +550,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_FindFolderType $request
+     *
      * @return EWSType_FindFolderResponseType
      */
     public function FindFolder($request)
@@ -537,6 +567,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_FindItemType $request
+     *
      * @return EWSType_FindItemResponseType
      */
     public function FindItem($request)
@@ -553,6 +584,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_FindMessageTrackingReportRequestType $request
+     *
      * @return EWSType_FindMessageTrackingReportResponseMessageType
      */
     public function FindMessageTrackingReport($request)
@@ -569,6 +601,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetAttachmentType $request
+     *
      * @return EWSType_GetAttachmentResponseType
      */
     public function GetAttachment($request)
@@ -585,6 +618,7 @@ class ExchangeWebServices
      * @since Exchange 2007 SP1
      *
      * @param EWSType_GetDelegateType $request
+     *
      * @return EWSType_GetDelegateResponseMessageType
      */
     public function GetDelegate($request)
@@ -602,6 +636,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetEventsType $request
+     *
      * @return EWSType_GetEventsResponseType
      */
     public function GetEvents($request)
@@ -618,6 +653,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetFolderType $request
+     *
      * @return EWSType_GetFolderResponseType
      */
     public function GetFolder($request)
@@ -634,6 +670,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_GetInboxRulesRequestType $request
+     *
      * @return EWSType_GetInboxRulesResponseType
      */
     public function GetInboxRules($request)
@@ -650,6 +687,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetItemType $request
+     *
      * @return EWSType_GetItemResponseType
      */
     public function GetItem($request)
@@ -666,6 +704,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetMailTipsType $request
+     *
      * @return EWSType_GetMailTipsResponseMessageType
      */
     public function GetMailTips($request)
@@ -682,6 +721,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetMessageTrackingReportRequestType $request
+     *
      * @return EWSType_GetMessageTrackingReportResponseMessageType
      */
     public function GetMessageTrackingReport($request)
@@ -698,6 +738,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_GetPasswordExpirationDateType $request
+     *
      * @return EWSType_GetPasswordExpirationDateResponseMessageType
      */
     public function GetPasswordExpirationDate($request)
@@ -714,6 +755,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetPhoneCallInformationType $request
+     *
      * @return EWSType_GetPhoneCallInformationResponseMessageType
      */
     public function GetPhoneCallInformation($request)
@@ -730,6 +772,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_GetRoomListsType $request
+     *
      * @return EWSType_GetRoomListsResponseMessageType
      */
     public function GetRoomLists($request)
@@ -746,6 +789,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_GetRoomsType $request
+     *
      * @return EWSType_GetRoomsResponseMessageType
      */
     public function GetRooms($request)
@@ -763,6 +807,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetServerTimeZonesType $request
+     *
      * @return EWSType_GetServerTimeZonesResponseType
      */
     public function GetServerTimeZones($request)
@@ -779,6 +824,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetServiceConfigurationType $request
+     *
      * @return EWSType_GetServiceConfigurationResponseMessageType
      */
     public function GetServiceConfiguration($request)
@@ -795,6 +841,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetSharingFolderType $request
+     *
      * @return EWSType_GetSharingFolderResponseMessageType
      */
     public function GetSharingFolder($request)
@@ -811,6 +858,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetSharingMetadataType $request
+     *
      * @return EWSType_GetSharingMetadataResponseMessageType
      */
     public function GetSharingMetadata($request)
@@ -827,6 +875,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_GetStreamingEventsType $request
+     *
      * @return EWSType_GetStreamingEventsResponseType
      */
     public function GetStreamingEvents($request)
@@ -844,6 +893,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetUserAvailabilityRequestType $request
+     *
      * @return EWSType_GetUserAvailabilityResponseType
      */
     public function GetUserAvailability($request)
@@ -860,6 +910,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_GetUserConfigurationType $request
+     *
      * @return EWSType_GetUserConfigurationResponseType
      */
     public function GetUserConfiguration($request)
@@ -876,6 +927,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_GetUserOofSettingsRequest $request
+     *
      * @return EWSType_GetUserOofSettingsResponse
      */
     public function GetUserOofSettings($request)
@@ -892,6 +944,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_MoveFolderType $request
+     *
      * @return EWSType_MoveFolderResponseType
      */
     public function MoveFolder($request)
@@ -908,6 +961,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_MoveItemType $request
+     *
      * @return EWSType_MoveItemResponseType
      */
     public function MoveItem($request)
@@ -924,6 +978,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_PlayOnPhoneType $request
+     *
      * @return EWSType_PlayOnPhoneResponseMessageType
      */
     public function PlayOnPhone($request)
@@ -941,6 +996,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_RefreshSharingFolderType $request
+     *
      * @return EWSType_RefreshSharingFolderResponseMessageType
      */
     public function RefreshSharingFolder($request)
@@ -957,6 +1013,7 @@ class ExchangeWebServices
      * @since Exchange 2007 SP1
      *
      * @param EWSType_RemoveDelegateType $request
+     *
      * @return EWSType_RemoveDelegateResponseMessageType
      */
     public function RemoveDelegate($request)
@@ -973,6 +1030,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_ResolveNamesType $request
+     *
      * @return EWSType_ResolveNamesResponseType
      */
     public function ResolveNames($request)
@@ -989,6 +1047,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_SendItemType $request
+     *
      * @return EWSType_SendItemResponseType
      */
     public function SendItem($request)
@@ -1005,6 +1064,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_SetUserOofSettingsRequest $request
+     *
      * @return EWSType_SetUserOofSettingsResponse
      */
     public function SetUserOofSettings($request)
@@ -1021,6 +1081,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_SubscribeType $request
+     *
      * @return EWSType_SubscribeResponseType
      */
     public function Subscribe($request)
@@ -1038,6 +1099,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_SyncFolderHierarchyType $request
+     *
      * @return EWSType_SyncFolderHierarchyResponseType
      */
     public function SyncFolderHierarchy($request)
@@ -1054,6 +1116,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_SyncFolderItemsType $request
+     *
      * @return EWSType_SyncFolderItemsResponseType
      */
     public function SyncFolderItems($request)
@@ -1074,6 +1137,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_UnsubscribeType $request
+     *
      * @return EWSType_UnsubscribeResponseType
      */
     public function Unsubscribe($request)
@@ -1090,6 +1154,7 @@ class ExchangeWebServices
      * @since Exchange 2007 SP1
      *
      * @param EWSType_UpdateDelegateType $request
+     *
      * @return EWSType_UpdateDelegateResponseMessageType
      */
     public function UpdateDelegate($request)
@@ -1106,6 +1171,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_UpdateFolderType $request
+     *
      * @return EWSType_UpdateFolderResponseType
      */
     public function UpdateFolder($request)
@@ -1123,6 +1189,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_UpdateInboxRulesRequestType $request
+     *
      * @return EWSType_UpdateInboxRulesResponseType
      */
     public function UpdateInboxRules($request)
@@ -1139,6 +1206,7 @@ class ExchangeWebServices
      * @since Exchange 2007
      *
      * @param EWSType_UpdateItemType $request
+     *
      * @return EWSType_UpdateItemResponseType
      */
     public function UpdateItem($request)
@@ -1155,6 +1223,7 @@ class ExchangeWebServices
      * @since Exchange 2010
      *
      * @param EWSType_UpdateUserConfigurationType $request
+     *
      * @return EWSType_UpdateUserConfigurationResponseType
      */
     public function UpdateUserConfiguration($request)
@@ -1171,6 +1240,7 @@ class ExchangeWebServices
      * @since Exchange 2010 SP1
      *
      * @param EWSType_UploadItemsType $request
+     *
      * @return EWSType_UploadItemsResponseType
      */
     public function UploadItems($request)
@@ -1189,12 +1259,12 @@ class ExchangeWebServices
     protected function initializeSoapClient()
     {
         $this->soap = new NTLMSoapClient_Exchange(
-            dirname(__FILE__).'/wsdl/services.wsdl',
+            dirname(__FILE__) . '/wsdl/services.wsdl',
             array(
-                'user' => $this->username,
-                'password' => $this->password,
-                'version' => $this->version,
-                'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+                'user'          => $this->username,
+                'password'      => $this->password,
+                'version'       => $this->version,
+                'location'      => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'impersonation' => $this->impersonation,
             )
         );
@@ -1209,6 +1279,7 @@ class ExchangeWebServices
      * @throws EWS_Exception
      *
      * @param stdClass $response
+     *
      * @return EWSType
      *
      * @todo Map the response to a real object.
@@ -1218,7 +1289,7 @@ class ExchangeWebServices
         // If the soap call failed then we need to thow an exception.
         $code = $this->soap->getResponseCode();
         if ($code != 200) {
-            throw new EWS_Exception('SOAP client returned status of '.$code, $code);
+            throw new EWS_Exception('SOAP client returned status of ' . $code, $code);
         }
 
         return $response;

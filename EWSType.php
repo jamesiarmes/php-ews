@@ -22,8 +22,7 @@ abstract class EWSType
             // If the value of the property is an object then clone it.
             if (is_object($value)) {
                 $this->$property = clone $value;
-            }
-            elseif (is_array($value)) {
+            } elseif (is_array($value)) {
                 // The value is an array that may use objects as values. Iterate
                 // over the array and clone any values that are objects into a
                 // new array.

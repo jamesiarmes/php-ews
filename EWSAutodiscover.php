@@ -25,8 +25,8 @@
  * $auto->setCAInfo('/path/to/your/cacert.pem');
  * $ews = $auto->newEWS();
  *
- * @link http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
- * @link https://www.testexchangeconnectivity.com/
+ * @link    http://technet.microsoft.com/en-us/library/bb332063(EXCHG.80).aspx
+ * @link    https://www.testexchangeconnectivity.com/
  *
  * @package php-ews\AutoDiscovery
  */
@@ -205,6 +205,15 @@ class EWSAutodiscover
     public $discovered = null;
 
     /**
+     * ??
+     *
+     * TODO [lapistano]: shall this be public??
+     *
+     * @var null
+     */
+    public $last_response = null;
+
+    /**
      * Constructor for the EWSAutodiscover class.
      *
      * @param string $email
@@ -268,11 +277,12 @@ class EWSAutodiscover
      * Toggle skipping of SSL verification in cURL requests.
      *
      * @param boolean $skip To skip, or not.
+     *
      * @return self
      */
     public function skipSSLVerification($skip = true)
     {
-        $this->skip_ssl_verification = (bool) $skip;
+        $this->skip_ssl_verification = (bool)$skip;
 
         return $this;
     }
@@ -292,7 +302,7 @@ class EWSAutodiscover
     {
         $svbinary = base_convert($version_hex, 16, 2);
         if (strlen($svbinary) == 31) {
-            $svbinary = '0'.$svbinary;
+            $svbinary = '0' . $svbinary;
         }
 
         $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
@@ -357,22 +367,24 @@ class EWSAutodiscover
         $server = false;
         $version = null;
 
-        // Pick out the host from the EXPR (Exchange RPC over HTTP).
-        foreach ($this->discovered['Account']['Protocol'] as $protocol) {
-            if (
-                ($protocol['Type'] == 'EXCH' || $protocol['Type'] == 'EXPR')
-                && isset($protocol['ServerVersion'])
-            ) {
-                if ($version == null) {
-                    $sv = $this->parseServerVersion($protocol['ServerVersion']);
-                    if ($sv !== false) {
-                        $version = $sv;
+        if (!empty($this->discovered)) {
+            // Pick out the host from the EXPR (Exchange RPC over HTTP).
+            foreach ($this->discovered['Account']['Protocol'] as $protocol) {
+                if (
+                    ($protocol['Type'] == 'EXCH' || $protocol['Type'] == 'EXPR')
+                    && isset($protocol['ServerVersion'])
+                ) {
+                    if ($version == null) {
+                        $sv = $this->parseServerVersion($protocol['ServerVersion']);
+                        if ($sv !== false) {
+                            $version = $sv;
+                        }
                     }
                 }
-            }
 
-            if ($protocol['Type'] == 'EXPR' && isset($protocol['Server'])) {
-                $server = $protocol['Server'];
+                if ($protocol['Type'] == 'EXPR' && isset($protocol['Server'])) {
+                    $server = $protocol['Server'];
+                }
             }
         }
 
@@ -399,6 +411,7 @@ class EWSAutodiscover
      * @param string $email
      * @param string $password
      * @param string $username If left blank, the email provided will be used.
+     *
      * @return mixed
      */
     public static function getEWS($email, $password, $username = null)
@@ -415,7 +428,10 @@ class EWSAutodiscover
      */
     public function tryTLD()
     {
-        $url = 'https://www.'.$this->tld . self::AUTODISCOVER_PATH;
+        $url = 'https://mail.' . $this->tld . self::AUTODISCOVER_PATH;
+
+//        $url = 'https://mail.presence.fean.ch/'. self::AUTODISCOVER_PATH;
+
         $result = $this->doNTLMPost($url, 5);
         if ($result) {
             return self::AUTODISCOVERED_VIA_TLD;
@@ -432,7 +448,7 @@ class EWSAutodiscover
      */
     public function trySubdomain()
     {
-        $url = 'https://autodiscover.'.$this->tld . self::AUTODISCOVER_PATH;
+        $url = 'https://autodiscover.' . $this->tld . self::AUTODISCOVER_PATH;
         $result = $this->doNTLMPost($url, 5);
         if ($result) {
             return self::AUTODISCOVERED_VIA_SUBDOMAIN;
@@ -450,25 +466,25 @@ class EWSAutodiscover
     public function trySubdomainUnauthenticatedGet()
     {
         $this->reset();
-        $url = 'http://autodiscover.'.$this->tld . self::AUTODISCOVER_PATH;
+        $url = 'http://autodiscover.' . $this->tld . self::AUTODISCOVER_PATH;
         $ch = curl_init();
         $opts = array(
-            CURLOPT_URL                 => $url,
-            CURLOPT_HTTPGET             => true,
-            CURLOPT_RETURNTRANSFER      => true,
-            CURLOPT_TIMEOUT             => 4,
-            CURLOPT_CONNECTTIMEOUT      => $this->connection_timeout,
-            CURLOPT_FOLLOWLOCATION      => false,
-            CURLOPT_HEADER              => false,
-            CURLOPT_HEADERFUNCTION      => array($this, 'readHeaders'),
-            CURLOPT_HTTP200ALIASES      => array(301, 302),
-            CURLOPT_IPRESOLVE           => CURL_IPRESOLVE_V4
+            CURLOPT_URL            => $url,
+            CURLOPT_HTTPGET        => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 4,
+            CURLOPT_CONNECTTIMEOUT => $this->connection_timeout,
+            CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_HEADER         => false,
+            CURLOPT_HEADERFUNCTION => array($this, 'readHeaders'),
+            CURLOPT_HTTP200ALIASES => array(301, 302),
+            CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4
         );
         curl_setopt_array($ch, $opts);
-        $this->last_response    = curl_exec($ch);
-        $this->last_info        = curl_getinfo($ch);
-        $this->last_curl_errno  = curl_errno($ch);
-        $this->last_curl_error  = curl_error($ch);
+        $this->last_response = curl_exec($ch);
+        $this->last_info = curl_getinfo($ch);
+        $this->last_curl_errno = curl_errno($ch);
+        $this->last_curl_error = curl_error($ch);
 
         if (
             $this->last_info['http_code'] == 302
@@ -513,6 +529,7 @@ class EWSAutodiscover
      * Set the path to the file to be used by CURLOPT_CAINFO.
      *
      * @param string $path Path to a certificate file such as cacert.pem
+     *
      * @return self
      */
     public function setCAInfo($path)
@@ -528,7 +545,8 @@ class EWSAutodiscover
      * Set the path to the file to be used by CURLOPT_CAPATH.
      *
      * @param string $path Path to a directory containing one or more CA
-     * certificates.
+     *                     certificates.
+     *
      * @return self
      */
     public function setCAPath($path)
@@ -544,6 +562,7 @@ class EWSAutodiscover
      * Set a connection timeout for the POST methods.
      *
      * @param integer $seconds Seconds to wait for a connection.
+     *
      * @return self
      */
     public function setConnectionTimeout($seconds)
@@ -557,8 +576,9 @@ class EWSAutodiscover
      * Perform the NTLM authenticated post against one of the chosen
      * endpoints.
      *
-     * @param string $url URL to try posting to
+     * @param string  $url     URL to try posting to
      * @param integer $timeout Overall cURL timeout for this request
+     *
      * @return boolean
      */
     public function doNTLMPost($url, $timeout = 6)
@@ -567,30 +587,31 @@ class EWSAutodiscover
 
         $ch = curl_init();
         $opts = array(
-            CURLOPT_URL             => $url,
-            CURLOPT_HTTPAUTH        => CURLAUTH_NTLM,
-            CURLOPT_CUSTOMREQUEST   => 'POST',
-            CURLOPT_POSTFIELDS      => $this->getAutoDiscoverRequest(),
-            CURLOPT_RETURNTRANSFER  => true,
-            CURLOPT_USERPWD         => $this->username.':'.$this->password,
-            CURLOPT_TIMEOUT         => $timeout,
-            CURLOPT_CONNECTTIMEOUT  => $this->connection_timeout,
-            CURLOPT_FOLLOWLOCATION  => true,
-            CURLOPT_HEADER          => false,
-            CURLOPT_HEADERFUNCTION  => array($this, 'readHeaders'),
-            CURLOPT_IPRESOLVE       => CURL_IPRESOLVE_V4,
-            CURLOPT_SSL_VERIFYPEER  => true,
-            CURLOPT_SSL_VERIFYHOST  => true,
+            CURLOPT_URL            => $url,
+            CURLOPT_HTTPAUTH       => CURLAUTH_NTLM,
+            CURLOPT_CUSTOMREQUEST  => 'POST',
+            CURLOPT_POSTFIELDS     => $this->getAutoDiscoverRequest(),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_USERPWD        => $this->username . ':' . $this->password,
+            CURLOPT_TIMEOUT        => $timeout,
+            CURLOPT_CONNECTTIMEOUT => $this->connection_timeout,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HEADER         => false,
+            CURLOPT_HEADERFUNCTION => array($this, 'readHeaders'),
+            CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
+            CURLOPT_RETURNTRANSFER => true,
         );
 
         // Set the appropriate content-type.
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml; charset=utf-8'));
 
-        if (! empty($this->cainfo)) {
+        if (!empty($this->cainfo)) {
             $opts[CURLOPT_CAINFO] = $this->cainfo;
         }
 
-        if (! empty($this->capath)) {
+        if (!empty($this->capath)) {
             $opts[CURLOPT_CAPATH] = $this->capath;
         }
 
@@ -600,10 +621,10 @@ class EWSAutodiscover
         }
 
         curl_setopt_array($ch, $opts);
-        $this->last_response    = curl_exec($ch);
-        $this->last_info        = curl_getinfo($ch);
-        $this->last_curl_errno  = curl_errno($ch);
-        $this->last_curl_error  = curl_error($ch);
+        $this->last_response = curl_exec($ch);
+        $this->last_info = curl_getinfo($ch);
+        $this->last_curl_errno = curl_errno($ch);
+        $this->last_curl_error = curl_error($ch);
 
         if ($this->last_curl_errno != CURLE_OK) {
             return false;
@@ -665,7 +686,7 @@ class EWSAutodiscover
     {
         $pos = strpos($this->email, '@');
         if ($pos !== false) {
-            $this->tld = trim(substr($this->email, $pos+1));
+            $this->tld = trim(substr($this->email, $pos + 1));
             return true;
         }
 
@@ -695,7 +716,7 @@ class EWSAutodiscover
      */
     public function getAutodiscoverRequest()
     {
-        if (! empty($this->requestxml)) {
+        if (!empty($this->requestxml)) {
             return $this->requestxml;
         }
 
@@ -727,7 +748,8 @@ class EWSAutodiscover
      * Used with CURLOPT_HEADERFUNCTION.
      *
      * @param resource $_ch cURL handle
-     * @param string $str Header string to read
+     * @param string   $str Header string to read
+     *
      * @return integer Bytes read
      */
     public function readHeaders($_ch, $str)
@@ -735,7 +757,7 @@ class EWSAutodiscover
         $pos = strpos($str, ':');
         if ($pos !== false) {
             $key = strtolower(substr($str, 0, $pos));
-            $val = trim(substr($str, $pos+1));
+            $val = trim(substr($str, $pos + 1));
             $this->last_response_headers[$key] = $val;
         }
 
@@ -747,6 +769,7 @@ class EWSAutodiscover
      * to manage associative arrays.
      *
      * @param string $xml XML to parse
+     *
      * @return array
      */
     public function responseToArray($xml)
@@ -762,7 +785,9 @@ class EWSAutodiscover
      * Recursive method for parsing DOM nodes.
      *
      * @link https://github.com/gaarf/XML-string-to-PHP-array
+     *
      * @param object $node DOMNode object
+     *
      * @return mixed
      */
     protected function nodeToArray($node)
@@ -774,7 +799,7 @@ class EWSAutodiscover
                 $output = trim($node->textContent);
                 break;
             case XML_ELEMENT_NODE:
-                for ($i=0, $m = $node->childNodes->length; $i < $m; $i++) {
+                for ($i = 0, $m = $node->childNodes->length; $i < $m; $i++) {
                     $child = $node->childNodes->item($i);
                     $v = $this->nodeToArray($child);
                     if (isset($child->tagName)) {
@@ -784,7 +809,7 @@ class EWSAutodiscover
                         }
                         $output[$t][] = $v;
                     } elseif ($v || $v === '0') {
-                        $output = (string) $v;
+                        $output = (string)$v;
                     }
                 }
 
@@ -799,12 +824,12 @@ class EWSAutodiscover
                     if ($node->attributes->length) {
                         $a = array();
                         foreach ($node->attributes as $attrName => $attrNode) {
-                            $a[$attrName] = (string) $attrNode->value;
+                            $a[$attrName] = (string)$attrNode->value;
                         }
                         $output['@attributes'] = $a;
                     }
                     foreach ($output as $t => $v) {
-                        if (is_array($v) && count($v)==1 && $t!='@attributes') {
+                        if (is_array($v) && count($v) == 1 && $t != '@attributes') {
                             $output[$t] = $v[0];
                         }
                     }
@@ -814,5 +839,4 @@ class EWSAutodiscover
 
         return $output;
     }
-
 }

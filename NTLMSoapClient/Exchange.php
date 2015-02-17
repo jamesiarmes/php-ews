@@ -29,9 +29,11 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
      * Constructor
      *
      * @param string $wsdl
-     * @param array $options
+     * @param array  $options
+     *
+     * @throws EWS_Exception
      */
-    public function __construct($wsdl, $options)
+    public function __construct($wsdl, array $options = array())
     {
         // Verify that a user name and password were entered.
         if (empty($options['user']) || empty($options['password'])) {
