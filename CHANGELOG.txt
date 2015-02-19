@@ -1,0 +1,10 @@
+php-ews v0.1.1 - 2015-02-19
+---------------------------
+- Fixed EWSType_DistinguishedFolderIdNameType::JUNK value.
+- Added CHANGELOG.txt.
+- Added missing quote in README.txt.
+
+php-ews v0.1.0 - 2014-12-18
+---------------------------
+- Initial release.
+- Supports Exchange 2007 and 2010.
