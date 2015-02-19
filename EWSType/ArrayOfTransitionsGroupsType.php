@@ -6,7 +6,7 @@
 /**
  * Represents an array of time zone transition groups.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfTransitionsGroupsType extends EWSType
 {

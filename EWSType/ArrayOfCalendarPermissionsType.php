@@ -6,7 +6,7 @@
 /**
  * Represents an array of calendar permissions for a folder.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfCalendarPermissionsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfCalendarPermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_CalendarPermissionType
+     * @var \jamesiarmes\PhpEws\Type\CalendarPermissionType
      */
     public $CalendarPermission;
 }

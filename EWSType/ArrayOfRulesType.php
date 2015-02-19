@@ -6,7 +6,7 @@
 /**
  * Represents an array of rules in the user's mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRulesType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRulesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RuleType
+     * @var \jamesiarmes\PhpEws\Type\RuleType
      */
     public $Rule;
 }

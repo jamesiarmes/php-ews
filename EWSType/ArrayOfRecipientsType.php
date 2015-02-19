@@ -6,7 +6,7 @@
 /**
  * Represents an array of recipients of an item.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRecipientsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRecipientsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_EmailAddressType
+     * @var \jamesiarmes\PhpEws\Type\EmailAddressType
      */
     public $Mailbox;
 }

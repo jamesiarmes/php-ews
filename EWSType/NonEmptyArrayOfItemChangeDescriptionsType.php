@@ -7,7 +7,7 @@
  * Represents a set of elements that define append, set, and delete changes to
  * item properties.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AppendToItemFieldType
+     * @var \jamesiarmes\PhpEws\Type\AppendToItemFieldType
      */
     public $AppendToItemField;
 
@@ -27,7 +27,7 @@ class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DeleteItemFieldType
+     * @var \jamesiarmes\PhpEws\Type\DeleteItemFieldType
      */
     public $DeleteItemField;
 
@@ -37,7 +37,7 @@ class EWSType_NonEmptyArrayOfItemChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SetItemFieldType
+     * @var \jamesiarmes\PhpEws\Type\SetItemFieldType
      */
     public $SetItemField;
 }

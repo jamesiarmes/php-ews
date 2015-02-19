@@ -6,7 +6,7 @@
 /**
  * Represents an array of time zone transitions.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfTransitionsType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_AbsoluteDateTransitionType
+     * @var \jamesiarmes\PhpEws\Type\AbsoluteDateTransitionType
      */
     public $AbsoluteDateTransition;
 
@@ -34,7 +34,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RecurringDateTransitionType
+     * @var \jamesiarmes\PhpEws\Type\RecurringDateTransitionType
      */
     public $RecurringDateTransition;
 
@@ -43,7 +43,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RecurringDayTransitionType
+     * @var \jamesiarmes\PhpEws\Type\RecurringDayTransitionType
      */
     public $RecurringDayTransition;
 }

@@ -7,7 +7,7 @@
  * Contains an array of unknown permission entries that cannot be resolved
  * against the Active Directory directory service.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfUnknownEntriesType extends EWSType
 {

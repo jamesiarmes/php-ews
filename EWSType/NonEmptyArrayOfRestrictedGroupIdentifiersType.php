@@ -6,7 +6,7 @@
 /**
  * Represents a collection of restricted groups from a user's token.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SidAndAttributesType
+     * @var \jamesiarmes\PhpEws\Type\SidAndAttributesType
      */
     public $RestrictedGroupIdentifier;
 }

@@ -6,7 +6,7 @@
 /**
  * Represents the recipients of a folder sharing request that are invalid.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfInvalidRecipientsType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfInvalidRecipientsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_InvalidRecipientType
+     * @var \jamesiarmes\PhpEws\Type\InvalidRecipientType
      */
     public $InvalidRecipient;
 }

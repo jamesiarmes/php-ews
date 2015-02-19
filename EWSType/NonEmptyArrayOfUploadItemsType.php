@@ -6,7 +6,7 @@
 /**
  * Represents an array of items to upload into a mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfUploadItemsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfUploadItemsType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_UploadItemType
+     * @var \jamesiarmes\PhpEws\Type\UploadItemType
      */
     public $Item;
 }

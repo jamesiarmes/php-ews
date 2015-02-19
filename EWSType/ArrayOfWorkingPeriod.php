@@ -6,7 +6,7 @@
 /**
  * Represents working period information for the mailbox user.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfWorkingPeriod extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfWorkingPeriod extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_WorkingPeriod
+     * @var \jamesiarmes\PhpEws\Type\WorkingPeriod
      */
     public $WorkingPeriod;
 }

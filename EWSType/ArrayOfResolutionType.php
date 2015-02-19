@@ -6,7 +6,7 @@
 /**
  * Defines an array of resolutions for an ambiguous name.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfResolutionType extends EWSType
 {
@@ -55,7 +55,7 @@ class EWSType_ArrayOfResolutionType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ResolutionType
+     * @var \jamesiarmes\PhpEws\Type\ResolutionType
      */
     public $Resolution;
 

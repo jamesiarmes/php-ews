@@ -8,7 +8,7 @@
  * master items that are used to delete, send, get, move, or copy items in the
  * Exchange store.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfBaseItemIdsType extends EWSType
 {
@@ -18,7 +18,7 @@ class EWSType_ArrayOfBaseItemIdsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemIdType
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $ItemId;
 }

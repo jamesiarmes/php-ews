@@ -6,7 +6,7 @@
 /**
  * Defines an array of conflict data.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfAttendeeConflictData extends EWSType
 {
@@ -18,7 +18,7 @@ class EWSType_ArrayOfAttendeeConflictData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_GroupAttendeeConflictData
+     * @var \jamesiarmes\PhpEws\Type\GroupAttendeeConflictData
      */
     public $GroupAttendeeConflictData;
 
@@ -29,7 +29,7 @@ class EWSType_ArrayOfAttendeeConflictData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_IndividualAttendeeConflictData
+     * @var \jamesiarmes\PhpEws\Type\IndividualAttendeeConflictData
      */
     public $IndividualAttendeeConflictData;
 
@@ -39,7 +39,7 @@ class EWSType_ArrayOfAttendeeConflictData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TooBigGroupAttendeeConflictData
+     * @var \jamesiarmes\PhpEws\Type\TooBigGroupAttendeeConflictData
      */
     public $TooBigGroupAttendeeConflictData;
 
@@ -49,7 +49,7 @@ class EWSType_ArrayOfAttendeeConflictData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_UnknownAttendeeConflictData
+     * @var \jamesiarmes\PhpEws\Type\UnknownAttendeeConflictData
      */
     public $UnknownAttendeeConflictData;
 }

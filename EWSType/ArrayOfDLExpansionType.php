@@ -6,7 +6,7 @@
 /**
  * Represents an array of mailboxes that are contained in a distribution list.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfDLExpansionType extends EWSType
 {
@@ -45,7 +45,7 @@ class EWSType_ArrayOfDLExpansionType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_EmailAddressType
+     * @var \jamesiarmes\PhpEws\Type\EmailAddressType
      */
     public $Mailbox;
 

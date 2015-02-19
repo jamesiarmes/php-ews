@@ -6,7 +6,7 @@
 /**
  * Represents an array of rule operations that can be performed on an Inbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRuleOperationsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRuleOperationsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_CreateRuleOperationType
+     * @var \jamesiarmes\PhpEws\Type\CreateRuleOperationType
      */
     public $CreateRuleOperation;
 
@@ -24,7 +24,7 @@ class EWSType_ArrayOfRuleOperationsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_DeleteRuleOperationType
+     * @var \jamesiarmes\PhpEws\Type\DeleteRuleOperationType
      */
     public $DeleteRuleOperation;
 
@@ -33,7 +33,7 @@ class EWSType_ArrayOfRuleOperationsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_SetRuleOperationType
+     * @var \jamesiarmes\PhpEws\Type\SetRuleOperationType
      */
     public $SetRuleOperation;
 }

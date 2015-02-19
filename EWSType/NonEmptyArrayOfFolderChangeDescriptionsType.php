@@ -7,7 +7,7 @@
  * Represents a set of elements that define append, set, and delete changes to
  * folder properties.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
 {
@@ -19,7 +19,7 @@ class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AppendToFolderFieldType
+     * @var \jamesiarmes\PhpEws\Type\AppendToFolderFieldType
      */
     public $AppendToFolderField;
 
@@ -29,7 +29,7 @@ class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DeleteFolderFieldType
+     * @var \jamesiarmes\PhpEws\Type\DeleteFolderFieldType
      */
     public $DeleteFolderField;
 
@@ -39,7 +39,7 @@ class EWSType_NonEmptyArrayOfFolderChangeDescriptionsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SetFolderFieldType
+     * @var \jamesiarmes\PhpEws\Type\SetFolderFieldType
      */
     public $SetFolderField;
 }

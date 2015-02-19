@@ -8,7 +8,7 @@ namespace jamesiarmes\PhpEws;
 /**
  * Base class for Exchange Web Service Types.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 abstract class Type
 {

@@ -6,7 +6,7 @@
 /**
  * Represents an array of attachment identifiers.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_RequestAttachmentIdType
+     * @var \jamesiarmes\PhpEws\Type\RequestAttachmentIdType
      */
     public $AttachmentId;
 }

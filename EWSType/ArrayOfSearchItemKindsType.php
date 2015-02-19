@@ -6,7 +6,7 @@
 /**
  * Represents an array of messages to search.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfSearchItemKindsType extends EWSType
 {

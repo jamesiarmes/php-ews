@@ -7,7 +7,7 @@
  * Defines additional properties for use in GetItem, UpdateItem, CreateItem,
  * FindItem, or FindFolder requests.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PathToExtendedFieldType
+     * @var \jamesiarmes\PhpEws\Type\PathToExtendedFieldType
      */
     public $ExtendedFieldURI;
 
@@ -25,7 +25,7 @@ class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PathToUnindexedFieldType
+     * @var \jamesiarmes\PhpEws\Type\PathToUnindexedFieldType
      */
     public $FieldURI;
 
@@ -34,7 +34,7 @@ class EWSType_NonEmptyArrayOfPathsToElementType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PathToIndexedFieldType
+     * @var \jamesiarmes\PhpEws\Type\PathToIndexedFieldType
      */
     public $IndexedFieldURI;
 }

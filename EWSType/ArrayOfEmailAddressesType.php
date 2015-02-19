@@ -6,7 +6,7 @@
 /**
  * Specifies an array of all email addresses of an associated persona.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfEmailAddressesType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfEmailAddressesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_EmailAddressType
+     * @var \jamesiarmes\PhpEws\Type\EmailAddressType
      */
     public $Address;
 }

@@ -6,7 +6,7 @@
 /**
  * Represents an array of items.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRealItemsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarItemType
+     * @var \jamesiarmes\PhpEws\Type\CalendarItemType
      */
     public $CalendarItem;
 
@@ -24,7 +24,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ContactItemType
+     * @var \jamesiarmes\PhpEws\Type\ContactItemType
      */
     public $Contact;
 
@@ -33,7 +33,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DistributionListType
+     * @var \jamesiarmes\PhpEws\Type\DistributionListType
      */
     public $DistributionList;
 
@@ -42,7 +42,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemType
+     * @var \jamesiarmes\PhpEws\Type\ItemType
      */
     public $Item;
 
@@ -51,7 +51,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingCancellationMessageType
+     * @var \jamesiarmes\PhpEws\Type\MeetingCancellationMessageType
      */
     public $MeetingCancellation;
 
@@ -60,7 +60,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingMessageType
+     * @var \jamesiarmes\PhpEws\Type\MeetingMessageType
      */
     public $MeetingMessage;
 
@@ -69,7 +69,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingRequestMessageType
+     * @var \jamesiarmes\PhpEws\Type\MeetingRequestMessageType
      */
     public $MeetingRequest;
 
@@ -78,7 +78,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MeetingResponseMessageType
+     * @var \jamesiarmes\PhpEws\Type\MeetingResponseMessageType
      */
     public $MeetingResponse;
 
@@ -87,7 +87,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MessageType
+     * @var \jamesiarmes\PhpEws\Type\MessageType
      */
     public $Message;
 
@@ -96,7 +96,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_PostItemType
+     * @var \jamesiarmes\PhpEws\Type\PostItemType
      */
     public $PostItem;
 
@@ -105,7 +105,7 @@ class EWSType_ArrayOfRealItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TaskType
+     * @var \jamesiarmes\PhpEws\Type\TaskType
      */
     public $Task;
 }

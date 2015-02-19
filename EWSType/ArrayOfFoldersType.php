@@ -6,7 +6,7 @@
 /**
  * Represents an array of folders that are used in folder operations.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfFoldersType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfFoldersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarFolderType
+     * @var \jamesiarmes\PhpEws\Type\CalendarFolderType
      */
     public $CalendarFolder;
 
@@ -24,7 +24,7 @@ class EWSType_ArrayOfFoldersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ContactsFolderType
+     * @var \jamesiarmes\PhpEws\Type\ContactsFolderType
      */
     public $ContactsFolder;
 
@@ -33,7 +33,7 @@ class EWSType_ArrayOfFoldersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FolderType
+     * @var \jamesiarmes\PhpEws\Type\FolderType
      */
     public $Folder;
 
@@ -42,7 +42,7 @@ class EWSType_ArrayOfFoldersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SearchFolderType
+     * @var \jamesiarmes\PhpEws\Type\SearchFolderType
      */
     public $SearchFolder;
 
@@ -51,7 +51,7 @@ class EWSType_ArrayOfFoldersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TasksFolderType
+     * @var \jamesiarmes\PhpEws\Type\TasksFolderType
      */
     public $TasksFolder;
 }

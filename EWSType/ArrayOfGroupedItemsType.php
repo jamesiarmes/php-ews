@@ -7,7 +7,7 @@
  * Represents a collection of groups that are found with the search and
  * aggregation criteria that is identified in the FindItem operation request.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfGroupedItemsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfGroupedItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_GroupedItemsType
+     * @var \jamesiarmes\PhpEws\Type\GroupedItemsType
      */
     public $GroupedItems;
 }

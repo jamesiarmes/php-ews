@@ -6,7 +6,7 @@
 /**
  * Represents a collection of one or more events for a message.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRecipientTrackingEventType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRecipientTrackingEventType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RecipientTrackingEventType
+     * @var \jamesiarmes\PhpEws\Type\RecipientTrackingEventType
      */
     public $RecipientTrackingEvent;
 }

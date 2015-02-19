@@ -6,7 +6,7 @@
 /**
  * Represents a list of one or more tracking properties.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfTrackingPropertiesType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfTrackingPropertiesType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_TrackingPropertyType
+     * @var \jamesiarmes\PhpEws\Type\TrackingPropertyType
      */
     public $TrackingPropertyType;
 }

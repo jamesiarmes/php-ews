@@ -6,7 +6,7 @@
 /**
  * Represents an array of deleted occurrences of a recurring calendar item.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfDeletedOccurrencesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DeletedOccurrenceInfoType
+     * @var \jamesiarmes\PhpEws\Type\DeletedOccurrenceInfoType
      */
     public $DeletedOccurrence;
 }

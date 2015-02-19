@@ -7,7 +7,7 @@
  * Defines an array of delegate users to get or remove from a principal's
  * mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfUserIdType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfUserIdType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_UserIdType
+     * @var \jamesiarmes\PhpEws\Type\UserIdType
      */
     public $UserId;
 }

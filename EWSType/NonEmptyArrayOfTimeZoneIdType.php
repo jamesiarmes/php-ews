@@ -6,7 +6,7 @@
 /**
  * Represents an array of time zone definition identifiers.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfTimeZoneIdType extends EWSType
 {

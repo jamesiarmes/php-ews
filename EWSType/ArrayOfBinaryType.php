@@ -6,7 +6,7 @@
 /**
  * Represents a value that encodes a contact's certificate.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfBinaryType extends EWSType
 {

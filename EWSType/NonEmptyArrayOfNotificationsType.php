@@ -7,7 +7,7 @@
  * Represents an array of information about the subscription and the events that
  * have occurred since the last notification.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfNotificationsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfNotificationsType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NotificationType
+     * @var \jamesiarmes\PhpEws\Type\NotificationType
      */
     public $Notification;
 }

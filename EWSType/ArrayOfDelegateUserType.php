@@ -6,7 +6,7 @@
 /**
  * Contains the identities of delegates to add to or update in a mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfDelegateUserType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfDelegateUserType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_DelegateUserType
+     * @var \jamesiarmes\PhpEws\Type\DelegateUserType
      */
     public $DelegateUser;
 }

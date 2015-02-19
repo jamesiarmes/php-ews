@@ -7,7 +7,7 @@
  * Represents a property bag to store errors that are returned through the Web
  * service.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfArraysOfTrackingPropertiesType extends EWSType
 {

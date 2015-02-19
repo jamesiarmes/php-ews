@@ -7,7 +7,7 @@
  * Represents a collection of all the response objects that are associated with
  * an item in the Exchange store.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AcceptItemType
+     * @var \jamesiarmes\PhpEws\Type\AcceptItemType
      */
     public $AcceptItem;
 
@@ -26,7 +26,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_AcceptSharingInvitationType
+     * @var \jamesiarmes\PhpEws\Type\AcceptSharingInvitationType
      */
     public $AcceptSharingInvitation;
 
@@ -35,7 +35,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CancelCalendarItemType
+     * @var \jamesiarmes\PhpEws\Type\CalendarItemType
      */
     public $CancelCalendarItem;
 
@@ -44,7 +44,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DeclineItemType
+     * @var \jamesiarmes\PhpEws\Type\DeclineItemType
      */
     public $DeclineItem;
 
@@ -53,7 +53,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ForwardItemType
+     * @var \jamesiarmes\PhpEws\Type\ForwardItemType
      */
     public $ForwardItem;
 
@@ -62,7 +62,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PostReplyItemType
+     * @var \jamesiarmes\PhpEws\Type\PostReplyItemType
      */
     public $PostReplyItem;
 
@@ -71,7 +71,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_RemoveItemType
+     * @var \jamesiarmes\PhpEws\Type\RemoveItemType
      */
     public $RemoveItem;
 
@@ -81,7 +81,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ReplyAllToItemType
+     * @var \jamesiarmes\PhpEws\Type\ReplyAllToItemType
      */
     public $ReplyAllToItem;
 
@@ -90,7 +90,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ReplyToItemType
+     * @var \jamesiarmes\PhpEws\Type\ReplyToItemType
      */
     public $ReplyToItem;
 
@@ -99,7 +99,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SuppressReadReceiptType
+     * @var \jamesiarmes\PhpEws\Type\SuppressReadReceiptType
      */
     public $SuppressReadReceipt;
 
@@ -108,7 +108,7 @@ class EWSType_NonEmptyArrayOfResponseObjectsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_TentativelyAcceptItemType
+     * @var \jamesiarmes\PhpEws\Type\TentativelyAcceptItemType
      */
     public $TentativelyAcceptItem;
 }

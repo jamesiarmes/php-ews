@@ -6,7 +6,7 @@
 /**
  * Defines how items are sorted in a FindItem or FindConversation request.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
 {
@@ -20,7 +20,7 @@ class EWSType_NonEmptyArrayOfFieldOrdersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FieldOrderType
+     * @var \jamesiarmes\PhpEws\Type\FieldOrderType
      */
     public $FieldOrder;
 }

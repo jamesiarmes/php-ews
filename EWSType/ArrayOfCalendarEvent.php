@@ -7,7 +7,7 @@
  * Represents a set of unique calendar item occurrences that represent the
  * requested user's availability.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfCalendarEvent extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfCalendarEvent extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_CalendarEvent
+     * @var \jamesiarmes\PhpEws\Type\CalendarEvent
      */
     public $CalendarEvent;
 }

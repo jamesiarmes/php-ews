@@ -6,7 +6,7 @@
 /**
  * Represents an array of invalid subscription IDs.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfSubscriptionIdsType extends EWSType
 {

@@ -6,7 +6,7 @@
 /**
  * Defines the source identifiers to convert.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_AlternateIdType
+     * @var \jamesiarmes\PhpEws\Type\AlternateIdType
      */
     public $AlternateId;
 
@@ -24,7 +24,7 @@ class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_AlternatePublicFolderIdType
+     * @var \jamesiarmes\PhpEws\Type\AlternatePublicFolderIdType
      */
     public $AlternatePublicFolderId;
 
@@ -33,7 +33,7 @@ class EWSType_NonEmptyArrayOfAlternateIdsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_AlternatePublicFolderItemIdType
+     * @var \jamesiarmes\PhpEws\Type\AlternatePublicFolderItemIdType
      */
     public $AlternatePublicFolderItemId;
 }

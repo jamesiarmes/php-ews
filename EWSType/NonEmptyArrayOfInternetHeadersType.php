@@ -7,7 +7,7 @@
  * Represents a collection of some of the Internet message headers that are
  * contained in an item in a mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfInternetHeadersType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfInternetHeadersType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_InternetHeaderType
+     * @var \jamesiarmes\PhpEws\Type\InternetHeaderType
      */
     public $InternetMessageHeader;
 }

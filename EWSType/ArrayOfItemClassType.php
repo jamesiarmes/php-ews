@@ -6,7 +6,7 @@
 /**
  * Represents a list of item classes.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfItemClassType extends EWSType
 {

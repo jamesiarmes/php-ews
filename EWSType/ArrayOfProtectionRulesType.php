@@ -6,7 +6,7 @@
 /**
  * Represents an array of protection rules.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfProtectionRulesType extends EWSType
 {
@@ -19,7 +19,7 @@ class EWSType_ArrayOfProtectionRulesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ProtectionRuleType
+     * @var \jamesiarmes\PhpEws\Type\ProtectionRuleType
      */
     public $Rule;
 }

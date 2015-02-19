@@ -6,7 +6,7 @@
 /**
  * Represents an array of item ids.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfItemIdsType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_NonEmptyArrayOfItemIdsType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ItemIdType
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $ItemId;
 }

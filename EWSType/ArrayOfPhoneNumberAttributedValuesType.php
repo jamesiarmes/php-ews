@@ -7,7 +7,7 @@
  * Represents an array of phone numbers and the identifiers of their source
  * attributions for the associated persona.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfPhoneNumberAttributedValuesType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfPhoneNumberAttributedValuesType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_PhoneNumberAttributedValueType
+     * @var \jamesiarmes\PhpEws\Type\PhoneNumberAttributedValueType
      */
     public $PhoneNumberAttributedValue;
 }

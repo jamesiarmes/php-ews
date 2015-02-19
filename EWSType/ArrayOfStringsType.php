@@ -6,7 +6,7 @@
 /**
  * Represents a collection of strings.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfStringsType extends EWSType
 {

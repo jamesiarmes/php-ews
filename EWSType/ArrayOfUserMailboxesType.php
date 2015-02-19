@@ -6,7 +6,7 @@
 /**
  * Represents an array of mailboxes.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfUserMailboxesType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfUserMailboxesType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_UserMailboxType
+     * @var \jamesiarmes\PhpEws\Type\UserMailboxType
      */
     public $UserMailbox;
 }

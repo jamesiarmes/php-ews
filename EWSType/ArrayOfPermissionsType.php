@@ -6,7 +6,7 @@
 /**
  * Contains the collection of permissions for a folder.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfPermissionsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfPermissionsType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_PermissionType
+     * @var \jamesiarmes\PhpEws\Type\PermissionType
      */
     public $Permission;
 }

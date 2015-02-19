@@ -6,7 +6,7 @@
 /**
  * Represents an array of service configuration response messages.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfServiceConfigurationResponseMessageType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfServiceConfigurationResponseMessageType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ServiceConfigurationResponseMessageType
+     * @var \jamesiarmes\PhpEws\Type\ServiceConfigurationResponseMessageType
      */
     public $ServiceConfigurationResponseMessageType;
 }

@@ -6,7 +6,7 @@
 /**
  * Represents a list of mailboxes to query for availability information.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfMailboxData extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfMailboxData extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_MailboxData
+     * @var \jamesiarmes\PhpEws\Type\MailboxData
      */
     public $MailboxData;
 }

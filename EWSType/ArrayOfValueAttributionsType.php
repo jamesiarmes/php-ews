@@ -6,7 +6,7 @@
 /**
  * Represents an array of attributions for an associated Value element.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfValueAttributionsType extends EWSType
 {

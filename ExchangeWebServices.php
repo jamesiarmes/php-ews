@@ -1,14 +1,16 @@
 <?php
 /**
- * Contains ExchangeWebServices.
+ * Contains \jamesiarmes\PhpEws\Client.
  */
+
+namespace jamesiarmes\PhpEws;
 
 /**
  * Base class of the Exchange Web Services application.
  *
  * @package php-ews\Client
  */
-class ExchangeWebServices
+class Client
 {
     /**
      * Microsoft Exchange 2007
@@ -90,7 +92,7 @@ class ExchangeWebServices
     /**
      * Exchange impersonation
      *
-     * @var EWSType_ExchangeImpersonationType
+     * @var \jamesiarmes\PhpEws\Type\ExchangeImpersonationType
      */
     protected $impersonation;
 
@@ -138,9 +140,9 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the impersonation property.
+     * Sets the impersonation property
      *
-     * @param EWSType_ExchangeImpersonationType $impersonation
+     * @param \jamesiarmes\PhpEws\Type\ExchangeImpersonationType $impersonation
      */
     public function setImpersonation($impersonation)
     {
@@ -150,7 +152,7 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the password property.
+     * Sets the password property
      *
      * @param string $password
      */
@@ -162,7 +164,7 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the server property.
+     * Sets the server property
      *
      * @param string $server
      */
@@ -174,7 +176,7 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the user name property.
+     * Sets the user name property
      *
      * @param string $username
      */
@@ -186,7 +188,7 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the version property.
+     * Sets the version property
      *
      * @param string $version
      */
@@ -198,13 +200,11 @@ class ExchangeWebServices
     }
 
     /**
-     * Adds one or more delegates to a principal's mailbox and sets specific
-     * access permissions.
+     * Function Description
      *
-     * @since Exchange 2007 SP1
+     * @param \jamesiarmes\PhpEws\Type\AddDelegateType $request
      *
-     * @param EWSTYpe_AddDelegateType $request
-     * @return EWSType_AddDelegateResponseMessageType
+     * @return \jamesiarmes\PhpEws\Type\AddDelegateResponseMessageType
      */
     public function AddDelegate($request)
     {
@@ -215,33 +215,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets a one-time or follow up action on all the items in a conversation.
+     * Function Description
      *
-     * This operation allows you to categorize, move, copy, delete, and set the
-     * read state on all items in a conversation. Actions can also be set for
-     * new messages in a conversation.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_ApplyConversationActionType $request
-     * @return EWSType_ApplyConversationActionResponseType
-     */
-    public function ApplyConversationAction($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Converts item and folder identifiers between formats that are accepted by
-     * Microsoft Exchange Server.
-     *
-     * @since Exchange 2007 SP1
-     *
-     * @param EWSType_ConvertIdType $request
-     * @return EWSType_ConvertIdResponseType
+     * @param \jamesiarmes\PhpEws\Type\ConvertIdType $request
+     * @return \jamesiarmes\PhpEws\Type\ConvertIdResponseType
      */
     public function ConvertId($request)
     {
@@ -252,12 +229,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Copies folders in a mailbox.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CopyFolderType $request
-     * @return EWSType_CopyFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\CopyFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\CopyFolderResponseType
      */
     public function CopyFolder($request)
     {
@@ -268,12 +243,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Copies items and puts the items in a different folder.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CopyItemType $request
-     * @return EWSType_CopyItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\CopyItemType $request
+     * @return \jamesiarmes\PhpEws\Type\CopyItemResponseType
      */
     public function CopyItem($request)
     {
@@ -284,13 +257,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Creates either an item or file attachment and attaches it to the
-     * specified item.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CreateAttachmentType $request
-     * @return EWSType_CreateAttachmentResponseType
+     * @param \jamesiarmes\PhpEws\Type\CreateAttachmentType $request
+     * @return \jamesiarmes\PhpEws\Type\CreateAttachmentResponseType
      */
     public function CreateAttachment($request)
     {
@@ -301,13 +271,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Creates folders, calendar folders, contacts folders, tasks folders, and
-     * search folders.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CreateFolderType $request
-     * @return EWSType_CreateFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\CreateFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\CreateFolderResponseType
      */
     public function CreateFolder($request)
     {
@@ -318,12 +285,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Creates items in the Exchange store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CreateItemType $request
-     * @return EWSType_CreateItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\CreateItemType $request
+     * @return \jamesiarmes\PhpEws\Type\CreateItemResponseType
      */
     public function CreateItem($request)
     {
@@ -334,28 +299,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Creates a user configuration object on a folder.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_CreateUserConfigurationType $request
-     * @return EWSType_CreateUserConfigurationResponseType
-     */
-    public function CreateUserConfiguration($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Creates a managed folder in the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_CreateManagedFolderRequestType $request
-     * @return EWSType_CreateManagedFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\CreateManagedFolderRequestType $request
+     * @return \jamesiarmes\PhpEws\Type\CreateManagedFolderResponseType
      */
     public function CreateManagedFolder($request)
     {
@@ -366,13 +313,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Deletes file and item attachments from an existing item in the Exchange
-     * store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_DeleteAttachmentType $request
-     * @return EWSType_DeleteAttachmentResponseType
+     * @param \jamesiarmes\PhpEws\Type\DeleteAttachmentType $request
+     * @return \jamesiarmes\PhpEws\Type\DeleteAttachmentResponseType
      */
     public function DeleteAttachment($request)
     {
@@ -383,12 +327,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Deletes folders from a mailbox.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_DeleteFolderType $request
-     * @return EWSType_DeleteFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\DeleteFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\DeleteFolderResponseType
      */
     public function DeleteFolder($request)
     {
@@ -399,12 +341,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Deletes items in the Exchange store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_DeleteItemType $request
-     * @return EWSType_DeleteItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\DeleteItemType $request
+     * @return \jamesiarmes\PhpEws\Type\DeleteItemResponseType
      */
     public function DeleteItem($request)
     {
@@ -415,64 +355,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Deletes a user configuration object on a folder.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_DeleteUserConfigurationType $request
-     * @return EWSType_DeleteUserConfigurationResponseType
-     */
-    public function DeleteUserConfiguration($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Terminates the telephone call.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_DisconnectPhoneCallType $request
-     * @return EWSType_DisconnectPhoneCallResponseMessageType
-     */
-    public function DisconnectPhoneCall($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Empties folders in a mailbox.
-     *
-     * Optionally, this operation enables you to delete the subfolders of the
-     * specified folder. When a subfolder is deleted, the subfolder and the
-     * messages within the subfolder are deleted.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_EmptyFolderType $request
-     * @return EWSType_EmptyFolderResponseType
-     */
-    public function EmptyFolder($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Exposes the full membership of distribution lists.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_ExpandDLType $request
-     * @return EWSType_ExpandDLResponseType
+     * @param \jamesiarmes\PhpEws\Type\ExpandDLType $request
+     * @return \jamesiarmes\PhpEws\Type\ExpandDLResponseType
      */
     public function ExpandDL($request)
     {
@@ -483,45 +369,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Exports items out of a mailbox.
+     * Function Description
      *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_ExportItemsType $request
-     * @return EWSType_ExportItemsResponseType
-     */
-    public function ExportItems($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Enumerates a list of conversations in a folder.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_FindConversationType $request
-     * @return EWSType_FindConversationResponseMessageType
-     */
-    public function FindConversation($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Uses Exchange Web Services to find subfolders of an identified folder and
-     * returns a set of properties that describe the set of subfolders.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_FindFolderType $request
-     * @return EWSType_FindFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\FindFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\FindFolderResponseType
      */
     public function FindFolder($request)
     {
@@ -532,12 +383,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Identifies items that are located in a specified folder.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_FindItemType $request
-     * @return EWSType_FindItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\FindItemType $request
+     * @return \jamesiarmes\PhpEws\Type\FindItemResponseType
      */
     public function FindItem($request)
     {
@@ -548,28 +397,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Finds messages that meet the specified criteria.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_FindMessageTrackingReportRequestType $request
-     * @return EWSType_FindMessageTrackingReportResponseMessageType
-     */
-    public function FindMessageTrackingReport($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Retrieves existing attachments on items in the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetAttachmentType $request
-     * @return EWSType_GetAttachmentResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetAttachmentType $request
+     * @return \jamesiarmes\PhpEws\Type\GetAttachmentResponseType
      */
     public function GetAttachment($request)
     {
@@ -580,12 +411,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Retrieves the delegate settings for a specified mailbox.
+     * Function Description
      *
-     * @since Exchange 2007 SP1
-     *
-     * @param EWSType_GetDelegateType $request
-     * @return EWSType_GetDelegateResponseMessageType
+     * @param \jamesiarmes\PhpEws\Type\GetDelegateType $request
+     * @return \jamesiarmes\PhpEws\Type\GetDelegateResponseMessageType
      */
     public function GetDelegate($request)
     {
@@ -596,13 +425,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Pulls subscription clients to request notifications from the Client
-     * Access server.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetEventsType $request
-     * @return EWSType_GetEventsResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetEventsType $request
+     * @return \jamesiarmes\PhpEws\Type\GetEventsResponseType
      */
     public function GetEvents($request)
     {
@@ -613,12 +439,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Gets folders from the Exchange store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetFolderType $request
-     * @return EWSType_GetFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\GetFolderResponseType
      */
     public function GetFolder($request)
     {
@@ -629,28 +453,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Retrieve Inbox rules in the identified user's mailbox.
+     * Function Description
      *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_GetInboxRulesRequestType $request
-     * @return EWSType_GetInboxRulesResponseType
-     */
-    public function GetInboxRules($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets items from the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetItemType $request
-     * @return EWSType_GetItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetItemType $request
+     * @return \jamesiarmes\PhpEws\Type\GetItemResponseType
      */
     public function GetItem($request)
     {
@@ -661,109 +467,12 @@ class ExchangeWebServices
     }
 
     /**
-     * Gets the mail tips information for the specified mailbox.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetMailTipsType $request
-     * @return EWSType_GetMailTipsResponseMessageType
-     */
-    public function GetMailTips($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets tracking information about the specified messages.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetMessageTrackingReportRequestType $request
-     * @return EWSType_GetMessageTrackingReportResponseMessageType
-     */
-    public function GetMessageTrackingReport($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
      * Retrieve the timezones supported by the server.
      *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_GetPasswordExpirationDateType $request
-     * @return EWSType_GetPasswordExpirationDateResponseMessageType
-     */
-    public function GetPasswordExpirationDate($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Returns information about the specified telephone call.
-     *
      * @since Exchange 2010
      *
-     * @param EWSType_GetPhoneCallInformationType $request
-     * @return EWSType_GetPhoneCallInformationResponseMessageType
-     */
-    public function GetPhoneCallInformation($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets the room lists that are available within the Exchange organization.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_GetRoomListsType $request
-     * @return EWSType_GetRoomListsResponseMessageType
-     */
-    public function GetRoomLists($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets the rooms within the specified room list.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_GetRoomsType $request
-     * @return EWSType_GetRoomsResponseMessageType
-     */
-    public function GetRooms($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Returns information from time zone definitions that are available on an
-     * Exchange server.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetServerTimeZonesType $request
-     * @return EWSType_GetServerTimeZonesResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetServerTimeZonesType $request
+     * @return \jamesiarmes\PhpEws\Type\GetServerTimeZonesResponseType
      */
     public function GetServerTimeZones($request)
     {
@@ -774,77 +483,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Gets configuration information for the specified type of service.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetServiceConfigurationType $request
-     * @return EWSType_GetServiceConfigurationResponseMessageType
-     */
-    public function GetServiceConfiguration($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets the local folder identifier of a specified shared folder.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetSharingFolderType $request
-     * @return EWSType_GetSharingFolderResponseMessageType
-     */
-    public function GetSharingFolder($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets an opaque authentication token that identifies a sharing invitation.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetSharingMetadataType $request
-     * @return EWSType_GetSharingMetadataResponseMessageType
-     */
-    public function GetSharingMetadata($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Request subscription notifications from the Client Access server.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_GetStreamingEventsType $request
-     * @return EWSType_GetStreamingEventsResponseType
-     */
-    public function GetStreamingEvents($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Provides detailed information about the availability of a set of users,
-     * rooms, and resources within a specified time period.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetUserAvailabilityRequestType $request
-     * @return EWSType_GetUserAvailabilityResponseType
+     * @param \jamesiarmes\PhpEws\Type\GetUserAvailabilityRequestType $request
+     * @return \jamesiarmes\PhpEws\Type\GetUserAvailabilityResponseType
      */
     public function GetUserAvailability($request)
     {
@@ -855,28 +497,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Gets a user configuration object from a folder.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_GetUserConfigurationType $request
-     * @return EWSType_GetUserConfigurationResponseType
-     */
-    public function GetUserConfiguration($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Gets a mailbox user's Out of Office (OOF) settings and messages.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_GetUserOofSettingsRequest $request
-     * @return EWSType_GetUserOofSettingsResponse
+     * @param \jamesiarmes\PhpEws\Type\GetUserOofSettingsRequest $request
+     * @return \jamesiarmes\PhpEws\Type\GetUserOofSettingsResponse
      */
     public function GetUserOofSettings($request)
     {
@@ -887,12 +511,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Moves folders from a specified folder and puts them in another folder.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_MoveFolderType $request
-     * @return EWSType_MoveFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\MoveFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\MoveFolderResponseType
      */
     public function MoveFolder($request)
     {
@@ -903,12 +525,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Moves one or more items to a single destination folder.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_MoveItemType $request
-     * @return EWSType_MoveItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\MoveItemType $request
+     * @return \jamesiarmes\PhpEws\Type\MoveItemResponseType
      */
     public function MoveItem($request)
     {
@@ -919,45 +539,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Initiates an outbound call and plays a message over the telephone.
+     * Function Description
      *
-     * @since Exchange 2010
-     *
-     * @param EWSType_PlayOnPhoneType $request
-     * @return EWSType_PlayOnPhoneResponseMessageType
-     */
-    public function PlayOnPhone($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Refreshes the specified local folder with the latest data from the folder
-     * that is being shared.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_RefreshSharingFolderType $request
-     * @return EWSType_RefreshSharingFolderResponseMessageType
-     */
-    public function RefreshSharingFolder($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Removes one or more delegates from a user's mailbox.
-     *
-     * @since Exchange 2007 SP1
-     *
-     * @param EWSType_RemoveDelegateType $request
-     * @return EWSType_RemoveDelegateResponseMessageType
+     * @param RemoveDelegateType $request
+     * @return \jamesiarmes\PhpEws\Type\RemoveDelegateResponseMessageType
      */
     public function RemoveDelegate($request)
     {
@@ -968,12 +553,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Resolves ambiguous email addresses and display names.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_ResolveNamesType $request
-     * @return EWSType_ResolveNamesResponseType
+     * @param \jamesiarmes\PhpEws\Type\ResolveNamesType $request
+     * @return \jamesiarmes\PhpEws\Type\ResolveNamesResponseType
      */
     public function ResolveNames($request)
     {
@@ -984,12 +567,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Sends e-mail messages that are located in the Exchange store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_SendItemType $request
-     * @return EWSType_SendItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\SendItemType $request
+     * @return \jamesiarmes\PhpEws\Type\SendItemResponseType
      */
     public function SendItem($request)
     {
@@ -1000,12 +581,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets a mailbox user's Out of Office (OOF) settings and message.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_SetUserOofSettingsRequest $request
-     * @return EWSType_SetUserOofSettingsResponse
+     * @param \jamesiarmes\PhpEws\Type\SetUserOofSettingsRequest $request
+     * @return \jamesiarmes\PhpEws\Type\SetUserOofSettingsResponse
      */
     public function SetUserOofSettings($request)
     {
@@ -1016,12 +595,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Subscribes to either push or pull notifications.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_SubscribeType $request
-     * @return EWSType_SubscribeResponseType
+     * @param \jamesiarmes\PhpEws\Type\SubscribeType $request
+     * @return \jamesiarmes\PhpEws\Type\SubscribeResponseType
      */
     public function Subscribe($request)
     {
@@ -1032,13 +609,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Synchronizes folders between the computer that is running Microsoft
-     * Exchange Server and the client.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_SyncFolderHierarchyType $request
-     * @return EWSType_SyncFolderHierarchyResponseType
+     * @param \jamesiarmes\PhpEws\Type\SyncFolderHierarchyType $request
+     * @return \jamesiarmes\PhpEws\Type\SyncFolderHierarchyResponseType
      */
     public function SyncFolderHierarchy($request)
     {
@@ -1049,12 +623,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Synchronizes items between the Exchange server and the client.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_SyncFolderItemsType $request
-     * @return EWSType_SyncFolderItemsResponseType
+     * @param \jamesiarmes\PhpEws\Type\SyncFolderItemsType $request
+     * @return \jamesiarmes\PhpEws\Type\SyncFolderItemsResponseType
      */
     public function SyncFolderItems($request)
     {
@@ -1065,16 +637,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Ends a pull notification subscription.
+     * Function Description
      *
-     * Use this operation rather than letting a subscription timeout.
-     *
-     * This operation is only valid for pull notifications.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_UnsubscribeType $request
-     * @return EWSType_UnsubscribeResponseType
+     * @param \jamesiarmes\PhpEws\Type\UnsubscribeType $request
+     * @return \jamesiarmes\PhpEws\Type\UnsubscribeResponseType
      */
     public function Unsubscribe($request)
     {
@@ -1085,12 +651,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Updates delegate permissions on a principal's mailbox.
+     * Function Description
      *
-     * @since Exchange 2007 SP1
-     *
-     * @param EWSType_UpdateDelegateType $request
-     * @return EWSType_UpdateDelegateResponseMessageType
+     * @param \jamesiarmes\PhpEws\Type\UpdateDelegateType $request
+     * @return \jamesiarmes\PhpEws\Type\UpdateDelegateResponseMessageType
      */
     public function UpdateDelegate($request)
     {
@@ -1101,12 +665,10 @@ class ExchangeWebServices
     }
 
     /**
-     * Modifies properties of an existing item in the Exchange store.
+     * Function Description
      *
-     * @since Exchange 2007
-     *
-     * @param EWSType_UpdateFolderType $request
-     * @return EWSType_UpdateFolderResponseType
+     * @param \jamesiarmes\PhpEws\Type\UpdateFolderType $request
+     * @return \jamesiarmes\PhpEws\Type\UpdateFolderResponseType
      */
     public function UpdateFolder($request)
     {
@@ -1117,63 +679,12 @@ class ExchangeWebServices
     }
 
     /**
-     * Updates the authenticated user's Inbox rules by applying the specified
-     * operations.
+     * Function Description
      *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_UpdateInboxRulesRequestType $request
-     * @return EWSType_UpdateInboxRulesResponseType
-     */
-    public function UpdateInboxRules($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Modifies the properties of an existing item in the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @param EWSType_UpdateItemType $request
-     * @return EWSType_UpdateItemResponseType
+     * @param \jamesiarmes\PhpEws\Type\UpdateItemType $request
+     * @return \jamesiarmes\PhpEws\Type\UpdateItemResponseType
      */
     public function UpdateItem($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Updates a user configuration object on a folder.
-     *
-     * @since Exchange 2010
-     *
-     * @param EWSType_UpdateUserConfigurationType $request
-     * @return EWSType_UpdateUserConfigurationResponseType
-     */
-    public function UpdateUserConfiguration($request)
-    {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
-    }
-
-    /**
-     * Uploads a stream of items into an Exchange mailbox.
-     *
-     * @since Exchange 2010 SP1
-     *
-     * @param EWSType_UploadItemsType $request
-     * @return EWSType_UploadItemsResponseType
-     */
-    public function UploadItems($request)
     {
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);

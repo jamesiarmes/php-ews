@@ -7,7 +7,7 @@
  * Represents a collection of data structures that a client can use to authorize
  * the sharing of its calendar or contact data with other clients.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfEncryptedSharedFolderDataType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfEncryptedSharedFolderDataType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_EncryptedSharedFolderDataType
+     * @var \jamesiarmes\PhpEws\Type\EncryptedSharedFolderDataType
      */
     public $EncryptedSharedFolderData;
 }

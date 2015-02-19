@@ -7,7 +7,7 @@
  * Represents the collection of folders that will be mined to determine the
  * contents of a search folder.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DistinguishedFolderIdType
+     * @var \jamesiarmes\PhpEws\Type\DistinguishedFolderIdType
      */
     public $DistinguishedFolderId;
 
@@ -26,7 +26,7 @@ class EWSType_NonEmptyArrayOfBaseFolderIdsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FolderIdType
+     * @var \jamesiarmes\PhpEws\Type\FolderIdType
      */
     public $FolderId;
 }

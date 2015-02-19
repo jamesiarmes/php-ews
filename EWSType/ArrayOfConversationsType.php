@@ -6,7 +6,7 @@
 /**
  * Represents an array of conversations.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfConversationsType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfConversationsType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ConversationType
+     * @var \jamesiarmes\PhpEws\Type\ConversationType
      */
     public $Conversation;
 }

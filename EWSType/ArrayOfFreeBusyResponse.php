@@ -7,7 +7,7 @@
  * Represents the requested users' availability information and the response
  * status.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfFreeBusyResponse extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfFreeBusyResponse extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FreeBusyResponseType
+     * @var \jamesiarmes\PhpEws\Type\FreeBusyResponseType
      */
     public $FreeBusyResponse;
 }

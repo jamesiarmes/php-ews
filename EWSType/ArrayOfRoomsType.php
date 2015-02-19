@@ -6,7 +6,7 @@
 /**
  * Represents one or more meeting rooms.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRoomsType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfRoomsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RoomType
+     * @var \jamesiarmes\PhpEws\Type\RoomType
      */
     public $Room;
 }

@@ -6,7 +6,7 @@
 /**
  * Represents a list of records that match the search criteria.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfFindMessageTrackingSearchResultType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_ArrayOfFindMessageTrackingSearchResultType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_FindMessageTrackingSearchResultType
+     * @var \jamesiarmes\PhpEws\Type\FindMessageTrackingSearchResultType
      */
     public $MessageTrackingSearchResult;
 }

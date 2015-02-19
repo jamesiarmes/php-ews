@@ -6,7 +6,7 @@
 /**
  * Represents an array of meeting suggestions organized by date.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfSuggestionDayResult extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfSuggestionDayResult extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_SuggestionDayResult
+     * @var \jamesiarmes\PhpEws\Type\SuggestionDayResult
      */
     public $SuggestionDayResult;
 }

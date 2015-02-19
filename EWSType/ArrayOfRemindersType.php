@@ -6,7 +6,7 @@
 /**
  * Represents the reminders returned in the response to a GetReminders request.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRemindersType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfRemindersType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ReminderType
+     * @var \jamesiarmes\PhpEws\Type\ReminderType
      */
     public $Reminder;
 }

@@ -6,7 +6,7 @@
 /**
  * Represents an array of recipients of a message.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfSmtpAddressType extends EWSType
 {

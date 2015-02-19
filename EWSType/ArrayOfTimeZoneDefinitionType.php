@@ -6,7 +6,7 @@
 /**
  * Represents an array of time zone definitions.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfTimeZoneDefinitionType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfTimeZoneDefinitionType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_TimeZoneDefinitionType
+     * @var \jamesiarmes\PhpEws\Type\TimeZoneDefinitionType
      */
     public $TimeZoneDefinition;
 }

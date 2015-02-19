@@ -6,7 +6,7 @@
 /**
  * Represents a collection of values for an extended property.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfPropertyValuesType extends EWSType
 {

@@ -7,7 +7,7 @@
  * Represents an array of recurring calendar item occurrences that have been
  * modified so that they are different than the recurrence master item.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfOccurrenceInfoType extends EWSType
 {
@@ -16,7 +16,7 @@ class EWSType_NonEmptyArrayOfOccurrenceInfoType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_OccurrenceInfoType
+     * @var \jamesiarmes\PhpEws\Type\OccurrenceInfoType
      */
     public $Occurrence;
 }

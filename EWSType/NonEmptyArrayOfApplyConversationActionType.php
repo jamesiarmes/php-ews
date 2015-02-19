@@ -6,7 +6,7 @@
 /**
  * Defines a request to apply actions to items in a conversation.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfApplyConversationActionType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfApplyConversationActionType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ConversationActionType
+     * @var \jamesiarmes\PhpEws\Type\ConversationActionType
      */
     public $ConversationAction;
 }

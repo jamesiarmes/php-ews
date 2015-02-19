@@ -6,7 +6,7 @@
 /**
  * Represents a collection of changes for a folder.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfFolderChangesType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfFolderChangesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FolderChangeType
+     * @var \jamesiarmes\PhpEws\Type\FolderChangeType
      */
     public $FolderChange;
 }

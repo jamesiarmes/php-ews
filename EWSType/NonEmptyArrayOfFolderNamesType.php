@@ -6,7 +6,7 @@
 /**
  * Represents an array of named managed folders to add to a mailbox.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfFolderNamesType extends EWSType
 {

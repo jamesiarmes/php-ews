@@ -6,7 +6,7 @@
 /**
  * Represents a list of mail tips response messages.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfMailTipsResponseMessageType extends EWSType
 {
@@ -15,7 +15,7 @@ class EWSType_ArrayOfMailTipsResponseMessageType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_MailTipsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Type\MailTipsResponseMessageType
      */
     public $MailTipsResponseMessageType;
 }

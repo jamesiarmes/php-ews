@@ -6,7 +6,7 @@
 /**
  * Represents service configurations.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfServiceConfigurationType extends EWSType
 {

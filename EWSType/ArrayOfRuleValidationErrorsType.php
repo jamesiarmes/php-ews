@@ -7,7 +7,7 @@
  * Represents an array of rule validation errors on each rule field that has an
  * error.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfRuleValidationErrorsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfRuleValidationErrorsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RuleValidationErrorType
+     * @var \jamesiarmes\PhpEws\Type\RuleValidationErrorType
      */
     public $Error;
 }

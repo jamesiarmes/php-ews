@@ -7,7 +7,7 @@
  * Represents an array of periods that define the time offset at different
  * stages of a time zone.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_NonEmptyArrayOfPeriodsType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_NonEmptyArrayOfPeriodsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_PeriodType
+     * @var \jamesiarmes\PhpEws\Type\PeriodType
      */
     public $Period;
 }

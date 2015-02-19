@@ -7,7 +7,7 @@
  * Represents an array of names and the identifiers of their source attributions
  * for the associated persona.
  *
- * @package php-ews\Types
+ * @package php-ews\Type
  */
 class EWSType_ArrayOfStringAttributedValuesType extends EWSType
 {
@@ -17,7 +17,7 @@ class EWSType_ArrayOfStringAttributedValuesType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_StringAttributedValueType
+     * @var \jamesiarmes\PhpEws\Type\StringAttributedValueType
      */
     public $StringAttributedValue;
 }
