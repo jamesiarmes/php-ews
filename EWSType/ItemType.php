@@ -18,7 +18,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttachmentsType
+     * @var \jamesiarmes\PEWS\Type\NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
 
@@ -27,7 +27,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $Body;
 
@@ -396,7 +396,7 @@ class EWSType_ItemType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $UniqueBody;
 

@@ -16,7 +16,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_AbsoluteDateTransitionType
+     * @var \jamesiarmes\PEWS\Type\AbsoluteDateTransitionType
      */
     public $AbsoluteDateTransition;
 
@@ -34,7 +34,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RecurringDateTransitionType
+     * @var \jamesiarmes\PEWS\Type\RecurringDateTransitionType
      */
     public $RecurringDateTransition;
 
@@ -43,7 +43,7 @@ class EWSType_ArrayOfTransitionsType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_RecurringDayTransitionType
+     * @var \jamesiarmes\PEWS\Type\RecurringDayTransitionType
      */
     public $RecurringDayTransition;
 }

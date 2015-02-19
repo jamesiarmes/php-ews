@@ -1,14 +1,16 @@
 <?php
 /**
- * Contains EWSType_IntervalRecurrencePatternBaseType.
+ * Contains \jamesiarmes\PEWS\Type\IntervalRecurrencePatternBaseType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Base class for recurrence patterns with an interval.
  *
  * @package php-ews\Types
  */
-abstract class EWSType_IntervalRecurrencePatternBaseType extends EWSType_RecurrencePatternBaseType
+abstract class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
 {
     /**
      * Defines the interval between two consecutive recurring pattern items.

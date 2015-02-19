@@ -1,24 +1,17 @@
 <?php
 /**
- * Contains EWSType_BodyType.
+ * Contains \jamesiarmes\PEWS\Type\BodyType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Specifies the body of an item.
  *
  * @package php-ews\Types
  */
-class EWSType_BodyType extends EWSType
+class BodyType extends String
 {
-    /**
-     * The body of the Exchange Web Services item.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     */
-    public $_;
-
     /**
      * Specifies the type of the body.
      *

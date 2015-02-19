@@ -46,7 +46,7 @@ class EWSType_CreateAttachmentType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfAttachmentsType
+     * @var \jamesiarmes\PEWS\Type\ArrayOfAttachmentsType
      */
     public $Attachments;
 }

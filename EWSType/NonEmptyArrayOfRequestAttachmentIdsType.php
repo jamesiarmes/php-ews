@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfRequestAttachmentIdsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_RequestAttachmentIdType
+     * @var \jamesiarmes\PEWS\Type\RequestAttachmentIdType
      */
     public $AttachmentId;
 }

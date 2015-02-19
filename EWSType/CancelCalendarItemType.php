@@ -29,7 +29,7 @@ class EWSType_CancelCalendarItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $Body;
 
@@ -66,7 +66,7 @@ class EWSType_CancelCalendarItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $NewBodyContent;
 

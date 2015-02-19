@@ -1,7 +1,9 @@
 <?php
 /**
- * Contains EWSType_AbsoluteDateTransitionType.
+ * Contains \jamesiarmes\PEWS\Type\AbsoluteDateTransitionType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Represents a time zone transition that occurs on a specific date and at a
@@ -9,7 +11,7 @@
  *
  * @package php-ews\Types
  */
-class EWSType_AbsoluteDateTransitionType extends EWSType
+class AbsoluteDateTransitionType extends TransitionType
 {
     /**
      * Represents the date and time at which the time zone transition occurs.
@@ -28,7 +30,7 @@ class EWSType_AbsoluteDateTransitionType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_TransitionTargetType
+     * @var \jamesiarmes\PEWS\Type\TransitionTargetType
      */
     public $To;
 }

@@ -75,7 +75,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfAttachmentsType
+     * @var \jamesiarmes\PEWS\Type\ArrayOfAttachmentsType
      */
     public $Attachments;
 
@@ -84,7 +84,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $Body;
 
@@ -788,7 +788,7 @@ class EWSType_CalendarItemType extends EWSType_ItemType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $UniqueBody;
 

@@ -1,7 +1,11 @@
 <?php
 /**
- * Contains EWSType_ArrayOfAttachmentsType.
+ * Contains \jamesiarmes\PEWS\Type\ArrayOfAttachmentsType.
  */
+
+namespace jamesiarmes\PEWS\Type;
+
+use jamesiarmes\PEWS\Type;
 
 /**
  * Contains the items or files that are attached to an item in the Exchange
@@ -9,14 +13,14 @@
  *
  * @package php-ews\Types
  */
-class EWSType_ArrayOfAttachmentsType extends EWSType
+class ArrayOfAttachmentsType extends Type
 {
     /**
      * Represents a file that is attached to an item in the Exchange store.
      *
      * @since Exchange 2007
      *
-     * @var EWSType_FileAttachmentType
+     * @var \jamesiarmes\PEWS\Type\FileAttachmentType
      */
     public $FileAttachment;
 
@@ -25,7 +29,7 @@ class EWSType_ArrayOfAttachmentsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ItemAttachmentType
+     * @var \jamesiarmes\PEWS\Type\ItemAttachmentType
      */
     public $ItemAttachment;
 }

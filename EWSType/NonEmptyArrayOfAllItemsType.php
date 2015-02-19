@@ -15,7 +15,7 @@ class EWSType_NonEmptyArrayOfAllItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AcceptItemType
+     * @var \jamesiarmes\PEWS\Type\AcceptItemType
      */
     public $AcceptItem;
 
@@ -61,7 +61,7 @@ class EWSType_NonEmptyArrayOfAllItemsType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_DeclineItemType
+     * @var \jamesiarmes\PEWS\Type\DeclineItemType
      */
     public $DeclineItem;
 

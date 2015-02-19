@@ -1,14 +1,16 @@
 <?php
 /**
- * Contains EWSType_RequestAttachmentIdType.
+ * Contains \jamesiarmes\PEWS\Type\RequestAttachmentIdType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Identifies a single attachment.
  *
  * @package php-ews\Types
  */
-class EWSType_RequestAttachmentIdType extends EWSType
+class RequestAttachmentIdType extends BaseItemIdType
 {
     /**
      * Specifies the attachment identifier.

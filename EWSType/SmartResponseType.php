@@ -17,7 +17,7 @@ class EWSType_SmartResponseType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $NewBodyContent;
 }

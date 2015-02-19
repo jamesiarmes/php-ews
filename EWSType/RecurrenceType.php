@@ -15,7 +15,7 @@ class EWSType_RecurrenceType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AbsoluteMonthlyRecurrencePatternType
+     * @var \jamesiarmes\PEWS\Type\AbsoluteMonthlyRecurrencePatternType
      */
     public $AbsoluteMonthlyRecurrence;
 
@@ -24,7 +24,7 @@ class EWSType_RecurrenceType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AbsoluteYearlyRecurrencePatternType
+     * @var \jamesiarmes\PEWS\Type\AbsoluteYearlyRecurrencePatternType
      */
     public $AbsoluteYearlyRecurrence;
 

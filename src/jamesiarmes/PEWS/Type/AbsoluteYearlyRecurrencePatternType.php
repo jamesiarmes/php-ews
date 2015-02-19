@@ -1,16 +1,16 @@
 <?php
 /**
- * Contains EWSType_AbsoluteYearlyRecurrencePatternType.
+ * Contains \jamesiarmes\PEWS\Type\AbsoluteYearlyRecurrencePatternType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Represents a yearly recurrence pattern.
  *
  * @package php-ews\Types
- *
- * @todo Extend EWSTYpe_RecurrencePatternBaseType.
  */
-class EWSType_AbsoluteYearlyRecurrencePatternType extends EWSType
+class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
 {
     /**
      * Describes the day in a month on which a recurring item occurs.

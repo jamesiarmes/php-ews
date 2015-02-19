@@ -1,14 +1,18 @@
 <?php
 /**
- * Contains EWSType_WellKnownResponseObjectType.
+ * Contains \jamesiarmes\PEWS\Type\WellKnownResponseObjectType.
  */
+
+namespace jamesiarmes\PEWS\Type;
+
+use jamesiarmes\PEWS\Type;
 
 /**
  * Base class fot meeting request replies.
  *
  * @package php-ews\Types
  */
-abstract class EWSType_WellKnownResponseObjectType extends EWSType
+abstract class WellKnownResponseObjectType extends Type
 {
     /**
      * Contains the item or file that is attached to an item in the Exchange
@@ -16,7 +20,7 @@ abstract class EWSType_WellKnownResponseObjectType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfAttachmentsType
+     * @var \jamesiarmes\PEWS\Type\ArrayOfAttachmentsType
      */
     public $Attachments;
 
@@ -35,7 +39,7 @@ abstract class EWSType_WellKnownResponseObjectType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $Body;
 
@@ -85,6 +89,24 @@ abstract class EWSType_WellKnownResponseObjectType extends EWSType
      * @var \jamesiarmes\PEWS\Enumeration\ItemClassType
      */
     public $ItemClass;
+
+    /**
+     * Identifies the delegate in a delegate access scenario.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_SingleRecipientType
+     */
+    public $ReceivedBy;
+
+    /**
+     * Identifies the principal in a delegate access scenario.
+     *
+     * @since Exchange 2007 SP1
+     *
+     * @var EWSType_SingleRecipientType
+     */
+    public $ReceivedRepresenting;
 
     /**
      * Identifies the item to which the response object refers.

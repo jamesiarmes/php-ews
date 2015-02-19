@@ -1,37 +1,27 @@
 <?php
 /**
- * Contains EWSType_FileAttachmentType.
+ * Contains \jamesiarmes\PEWS\Type\AttachmentType.
  */
 
+namespace jamesiarmes\PEWS\Type;
+
+use jamesiarmes\PEWS\Type;
+
 /**
- * Represents a file that is attached to an item in the Exchange store.
+ * Represents an Exchange attachment.
  *
  * @package php-ews\Types
- *
- * @todo Extend EWSType_AttachmentType.
  */
-class EWSType_FileAttachmentType extends EWSType
+class AttachmentType extends Type
 {
     /**
      * Identifies the file attachment.
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AttachmentIdType
+     * @var \jamesiarmes\PEWS\Type\AttachmentIdType
      */
     public $AttachmentId;
-
-    /**
-     * Contains the Base64-encoded contents of the file attachment.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     *
-     * @todo Consider using an object that takes a file stream and does the
-     * base64 conversion.
-     */
-    public $Content;
 
     /**
      * Represents an identifier for the contents of an attachment. ContentId can
@@ -63,15 +53,6 @@ class EWSType_FileAttachmentType extends EWSType
      * @var string
      */
     public $ContentType;
-
-    /**
-     * Indicates whether the file attachment is a contact picture.
-     *
-     * @since Exchange 2010
-     *
-     * @var boolean
-     */
-    public $IsContactPhoto;
 
     /**
      * Represents whether the attachment appears inline within an item.

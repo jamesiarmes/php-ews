@@ -1,7 +1,9 @@
 <?php
 /**
- * Contains EWSType_TransitionTargetType.
+ * Contains \jamesiarmes\PEWS\Type\TransitionTargetType.
  */
+
+namespace jamesiarmes\PEWS\Type;
 
 /**
  * Specifies the target of the time zone transition.
@@ -10,16 +12,8 @@
  *
  * @package php-ews\Types
  */
-class EWSType_TransitionTargetType extends EWSType
+class TransitionTargetType extends String
 {
-    /**
-     * Unique identifier of the Period or TransitionsGroup that is the target of
-     * the time zone transition.
-     *
-     * @var string
-     */
-    public $_;
-
     /**
      * Indicates whether the time zone transition target is a time zone period
      * or of a group of time zone transitions.

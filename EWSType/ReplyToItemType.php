@@ -27,7 +27,7 @@ class EWSType_ReplyToItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $Body;
 
@@ -73,7 +73,7 @@ class EWSType_ReplyToItemType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_BodyType
+     * @var \jamesiarmes\PEWS\Type\BodyType
      */
     public $NewBodyContent;
 
