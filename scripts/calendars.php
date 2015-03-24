@@ -14,17 +14,13 @@ spl_autoload_register(
 );
 
 $host = 'mail.presence.fean.ch';
-//$password = '!UTY6_c}zwA+';
-//$username = 'bastian';
 
 $password = 'AsrtVU6dA9';
 $username = "presence";
 //
 //
 //$host = 'webmail.swisscom.com';
-//$password = "+BaFe778bt!";
-////$username = 'taafeba2';
-//$username = 'bastian.feder@swisscom.com';
+//$username = 'patrick.zahnd@swisscom.com';
 
 
 //$ews = new ExchangeWebServices($host, $username, $password);
