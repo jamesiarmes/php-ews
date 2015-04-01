@@ -1,21 +1,10 @@
 <?php
-require_once('EWSAutodiscover.php');
-require_once('ExchangeWebServices.php');
-require_once('NTLMSoapClient.php');
-require_once('NTLMSoapClient/Exchange.php');
-require_once('EWS_Exception.php');
-require_once('EWSType.php');
-spl_autoload_register(
-    function ($class) {
-        $class = explode('_', $class);
-        if ($class[0] == 'EWSType')
-            require_once $class[0] . '/' . $class[1] . '.php';
-    }
-);
+
+require_once '../vendor/autoload.php';
 
 $host = 'mail.presence.fean.ch';
 
-$password = 'AsrtVU6dA9';
+$password = '_AsrtVU6dA9_';
 $username = "presence";
 //
 //
@@ -61,8 +50,8 @@ $request->ItemShape->BaseShape = EWSType_DefaultShapeNamesType::ALL_PROPERTIES;
 
 // Define the timeframe to load calendar items
 $request->CalendarView = new EWSType_CalendarViewType();
-$request->CalendarView->StartDate = '2015-02-01T00:00:00+03:00'; // an ISO8601 date e.g. 2012-06-12T15:18:34+03:00
-$request->CalendarView->EndDate = '2015-02-20T00:00:00+03:00'; // an ISO8601 date later than the above
+$request->CalendarView->StartDate = '2015-01-01T00:00:00+03:00'; // an ISO8601 date e.g. 2012-06-12T15:18:34+03:00
+$request->CalendarView->EndDate = '2015-03-01T00:00:00+03:00'; // an ISO8601 date later than the above
 
 // Only look in the "calendars folder"
 $request->ParentFolderIds = new EWSType_NonEmptyArrayOfBaseFolderIdsType();
