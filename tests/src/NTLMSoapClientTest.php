@@ -6,7 +6,7 @@
  * Time: 17:23
  */
 
-namespace jamesiarmes\PEWS\Tesst;
+namespace jamesiarmes\PEWS\Test;
 
 use jamesiarmes\PEWS\NTLMSoapClient;
 use PHPUnit_Framework_TestCase;
