@@ -62,6 +62,8 @@ class NTLMSoapClient extends SoapClient
      */
     protected $validate = false;
 
+    protected $__last_request_headers;
+
     /**
      * Performs a SOAP request
      *
