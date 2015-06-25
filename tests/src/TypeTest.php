@@ -149,6 +149,13 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($control->toXmlObject(), $requestOne->toXmlObject());
         $this->assertEquals($control->toXmlObject(), $requestTwo->toXmlObject());
         $this->assertEquals($control->toXmlObject(), $requestThree->toXmlObject());
+
+        $object = new Type();
+        $object->_value = 'Test';
+        $object = $object->toXmlObject();
+
+        $this->assertEquals('Test', $object->_);
+        $this->assertEquals('Test', (string) $object);
     }
 
     /**

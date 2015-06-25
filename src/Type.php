@@ -50,13 +50,13 @@ class Type
         $properties = get_object_vars($this);
 
         foreach ($properties as $name => $property) {
-            if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
-                continue;
-            }
-
             //I think _value is a more expressive way to set string value, but Soap needs _
             if ($name == "_value") {
                 $name = "_";
+            }
+
+            if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
+                continue;
             }
 
             if ($property instanceof Type) {
