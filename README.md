@@ -10,39 +10,10 @@ The PHP Exchange Web Services library (php-ews) is intended to make communicatio
 
 
 ## Installation
-Clone the project from git into the desired location.
+Require the composer package and use away
 
 ```
-git clone git@github.com:jamesiarmes/php-ews.git php-ews
-```
-
-## Autoloading
-The library is not currently PSR-0 compliant so you will need to include files in one of two ways:
-
-1\. Include each file as you need it. Each data type is contained within its own file and will need to be included individualy. For example:
-
-```php
-require_once 'php-ews/EWSType/CalendarItemType.php';
-require_once 'php-ews/EWSType/BodyType.php';
-```
-
-2\. Use a custom autoload function. For example:
-
-```php
-/**
- * Function to autoload the requested class name.
- * 
- * @param string $class_name Name of the class to be loaded.
- * @return boolean Whether the class was loaded or not.
- */
-function __autoload($class_name)
-{
-    // Start from the base path and determine the location from the class name,
-    $base_path = 'path/to/php-ews;
-    $include_file = $base_path . '/' . str_replace('_', '/', $class_name) . '.php';
-
-    return (file_exists($include_file) ? require_once $include_file : false);
-}
+composer require garethp/php-ews
 ```
 
 ## Usage
@@ -62,6 +33,100 @@ The `ExchangeWebServices` class takes four parameters for its constructor:
 Once you have your `ExchangeWebServices` object, you need to build your request object. The type of object depends on the operation you are calling. If you are using an IDE with code completion it should be able to help you determine the correct classes to use using the provided docblocks.
 
 The request objects are build similar to the XML body of the request. See the resources section below for more information on building the requests.
+
+## Building Request
+There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
+
+```php
+$ews = new ExchangeWebServices($server, $username, $password, ExchangeWebServices::VERSION_2010);
+
+$request = new Type\CreateItemType();
+$request->Items = new Type\ArrayOfTypes();
+
+$start = new DateTime('8:00 AM');
+$end = new DateTime('9:00 AM');
+
+$event = new Type\CalendarItem();
+$event->Start = $start->format('c');
+$event->End = $end->format('c');
+
+$event->Body = new Type\BodyType();
+$event->Body->BodyType = Enumeration\BodyTypeType::HTML;
+$event->Body->_ = 'This is <b>the</b> body';
+
+// Set the item class type (not required).
+$event->ItemClass = new Enumeration\ItemClassType();
+$event->ItemClass->_ = Enumeration\ItemClassType::APPOINTMENT;
+
+// Set the sensativity of the event (defaults to normal).
+$event->Sensitivity = new Enumeration\SensitivityChoicesType();
+$event->Sensitivity->_ = Enumeration\SensitivityChoicesType::NORMAL;
+
+$event->Categories = array('Testing', 'php-ews');
+
+// Set the importance of the event.
+$event->Importance = new Enumeration\ImportanceChoicesType();
+$event->Importance->_ = Enumeration\ImportanceChoicesType::NORMAL;
+
+$request->Items->CalendarItem = $event;
+
+$request->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
+$response = $ews->CreateItem($request);
+```
+
+The second way is a bit less formal, where you can create the objects yourself from Type. This is more useful if you still want to use Objects, but there isn't one provided that you need
+
+```php
+$start = new DateTime('8:00 AM');
+$end = new DateTime('9:00 AM');
+
+$request = new Type();
+$request->Items = new Type();
+$request->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
+
+$event = new Type();
+$event->Start = $start->format('c');
+$event->End = $end->format('c');
+$event->Body = array(
+    'BodyType' => Enumeration\BodyTypeType::HTML,
+    '_value' => 'This is <b>the</b> body'
+);
+$event->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
+$event->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
+$event->Categories = array('Testing', 'php-ews');
+$event->Importance = Enumeration\ImportanceChoicesType::NORMAL;
+
+$request->Items->CalendarItem = $event;
+```
+
+And the final way is to create an array, and have an object built from that array
+
+```php
+$start = new DateTime('8:00 AM');
+$end = new DateTime('9:00 AM');
+
+$request = array(
+    'Items' => array(
+        'CalendarItem' => array(
+            'Start' => $start->format('c'),
+            'End' => $end->format('c'),
+            'Body' => array(
+                'BodyType' => Enumeration\BodyTypeType::HTML,
+                '_value' => 'This is <b>the</b> body'
+            ),
+            'ItemClass' => Enumeration\ItemClassType::APPOINTMENT,
+            'Sensitivity' => Enumeration\SensitivityChoicesType::NORMAL,
+            'Categories' => array('Testing', 'php-ews'),
+            'Importance' => Enumeration\ImportanceChoicesType::NORMAL
+        )
+    ),
+    'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+);
+
+$request = Type::buildFromArray($request);
+$response = $ews->CreateItem($request);
+```
+
 
 ## Resources
 * [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
