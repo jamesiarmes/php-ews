@@ -35,6 +35,20 @@ use SoapClient;
 class NTLMSoapClient extends SoapClient
 {
     /**
+     * Username for authentication on the exchnage server
+     *
+     * @var string
+     */
+    protected $user;
+
+    /**
+     * Password for authentication on the exchnage server
+     *
+     * @var string
+     */
+    protected $password;
+
+    /**
      * cURL resource used to make the SOAP request
      *
      * @var resource
@@ -120,5 +134,15 @@ class NTLMSoapClient extends SoapClient
         $this->validate = $validate;
 
         return true;
+    }
+
+    /**
+     * Returns the response code from the last request
+     *
+     * @return integer
+     */
+    public function getResponseCode()
+    {
+        return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
     }
 }

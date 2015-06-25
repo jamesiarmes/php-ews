@@ -20,20 +20,6 @@ use SoapHeader;
 class Exchange extends NTLMSoapClient
 {
     /**
-     * Username for authentication on the exchnage server
-     *
-     * @var string
-     */
-    protected $user;
-
-    /**
-     * Password for authentication on the exchnage server
-     *
-     * @var string
-     */
-    protected $password;
-
-    /**
      * Constructor
      *
      * @param string $wsdl
@@ -79,15 +65,5 @@ class Exchange extends NTLMSoapClient
         }
 
         parent::__call($name, $args);
-    }
-
-    /**
-     * Returns the response code from the last request
-     *
-     * @return integer
-     */
-    public function getResponseCode()
-    {
-        return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
     }
 }

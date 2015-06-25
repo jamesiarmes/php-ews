@@ -153,9 +153,16 @@ class EWSAutodiscover
     public $last_response_headers;
 
     /**
+     * The result of the most recent curl_exec.
+     *
+     * @var mixed
+     */
+    public $last_response;
+
+    /**
      * The output of curl_info() relating to the most recent cURL request.
      *
-     * @var array
+     * @var mixed
      */
     public $last_info;
 
@@ -299,22 +306,17 @@ class EWSAutodiscover
 
         $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
         $minorversion = base_convert(substr($svbinary, 10, 6), 2, 10);
-        $buildversion = base_convert(substr($svbinary, 17, 15), 2, 10);
 
         if ($majorversion == 8) {
             switch ($minorversion) {
                 case 0:
                     return ExchangeWebServices::VERSION_2007;
-                    break;
                 case 1:
                     return ExchangeWebServices::VERSION_2007_SP1;
-                    break;
                 case 2:
                     return ExchangeWebServices::VERSION_2007_SP2;
-                    break;
                 case 3:
                     return ExchangeWebServices::VERSION_2007_SP3;
-                    break;
                 default:
                     return ExchangeWebServices::VERSION_2007;
             }
@@ -322,13 +324,10 @@ class EWSAutodiscover
             switch ($minorversion) {
                 case 0:
                     return ExchangeWebServices::VERSION_2010;
-                    break;
                 case 1:
                     return ExchangeWebServices::VERSION_2010_SP1;
-                    break;
                 case 2:
                     return ExchangeWebServices::VERSION_2010_SP2;
-                    break;
                 default:
                     return ExchangeWebServices::VERSION_2010;
             }
@@ -491,7 +490,7 @@ class EWSAutodiscover
      * Attempt to retrieve the autodiscover host from an SRV DNS record.
      *
      * @link http://support.microsoft.com/kb/940881
-     * @return self::AUTODISCOVERED_VIA_SRV_RECORD or false
+     * @return EWSAutodiscover::AUTODISCOVERED_VIA_SRV_RECORD|false
      */
     public function trySRVRecord()
     {
@@ -641,13 +640,11 @@ class EWSAutodiscover
                     'redirectUrl' => $response['Account']['redirectUrl']
                 );
                 return false;
-                break;
             case 'redirectAddr':
                 $this->redirect = array(
                     'redirectAddr' => $response['Account']['redirectAddr']
                 );
                 return false;
-                break;
             case 'settings':
             default:
                 $this->discovered = $response;
