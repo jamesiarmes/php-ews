@@ -50,8 +50,8 @@ class Type
         $properties = get_object_vars($this);
 
         foreach ($properties as $name => $property) {
-            if ($property instanceof Type) {
-                $property = $property->toXmlObject();
+            if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
+                continue;
             }
 
             //I think _value is a more expressive way to set string value, but Soap needs _
@@ -59,11 +59,9 @@ class Type
                 $name = "_";
             }
 
-            if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
-                continue;
-            }
-
-            if (is_array($property) && $this->arrayIsAssoc($property)) {
+            if ($property instanceof Type) {
+                $property = $property->toXmlObject();
+            } else if (is_array($property) && $this->arrayIsAssoc($property)) {
                 $property = $this->buildFromArray($property);
             }
 

@@ -149,3 +149,5 @@ If you would like to contribute to the documentation, please feel free to update
 Have you found this library helpful? Why not take a minute to endorse my hard work on [coderwall](http://coderwall.com)! Just click the badge below:
 
 [![Build Status](https://travis-ci.org/Garethp/php-ews.svg?branch=master)](https://magnum.travis-ci.com/garethp/php-ews)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/garethp/php-ews/badges/quality-score.png)](https://scrutinizer-ci.com/g/true/php-ripe/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/garethp/php-ews/badges/coverage.png)](https://scrutinizer-ci.com/g/true/php-ripe/?branch=master)
