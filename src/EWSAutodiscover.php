@@ -490,7 +490,7 @@ class EWSAutodiscover
      * Attempt to retrieve the autodiscover host from an SRV DNS record.
      *
      * @link http://support.microsoft.com/kb/940881
-     * @return EWSAutodiscover::AUTODISCOVERED_VIA_SRV_RECORD|false
+     * @return int|false
      */
     public function trySRVRecord()
     {
