@@ -3,6 +3,7 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/composer.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ruleset.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/Type.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tests/src/TypeTest.php" charset="UTF-8" />
   </component>

@@ -12,7 +12,7 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
     public function getTypeMock()
     {
-        if(!$this->_typeMock) {
+        if (!$this->_typeMock) {
             $object = Mockery::mock('jamesiarmes\PEWS\Type')->makePartial();
             $this->_typeMock = $object;
         }
@@ -88,7 +88,7 @@ class TypeTest extends PHPUnit_Framework_TestCase
     public function toStringProvider()
     {
         return array(
-            array(NULL, ''),
+            array(null, ''),
             array(false, ''),
             array(1, ''),
             array(new \stdClass(), ''),

@@ -111,7 +111,7 @@ class Type
 
     public function __toString()
     {
-        if(!is_string($this->_)) {
+        if (!is_string($this->_)) {
             return '';
         }
 
