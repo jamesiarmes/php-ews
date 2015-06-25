@@ -3,8 +3,10 @@
 namespace jamesiarmes\PEWS\Tesst;
 
 use jamesiarmes\PEWS\Type;
+use jamesiarmes\PEWS\Enumeration;
 use PHPUnit_Framework_TestCase;
 use Mockery;
+use DateTime;
 
 class TypeTest extends PHPUnit_Framework_TestCase
 {
@@ -59,8 +61,94 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
     public function testToXmlObject()
     {
-        $type = $this->getTypeMock();
-        $this->assertInstanceOf('jamesiarmes\PEWS\Type', $type);
+        $start = new DateTime('8:00 AM');
+        $end = new DateTime('9:00 AM');
+
+        /** Creating the control object to test */
+        $control = new Type();
+        $control->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
+        $control->Items = new Type();
+        $control->Items->CalendarItem = new Type();
+        $control->Items->CalendarItem->Start = $start->format('c');
+        $control->Items->CalendarItem->End = $end->format('c');
+        $control->Items->CalendarItem->Body = new Type();
+        $control->Items->CalendarItem->Body->BodyType = Enumeration\BodyTypeType::HTML;
+        $control->Items->CalendarItem->Body->_ = 'This is <b>the</b> body';
+        $control->Items->CalendarItem->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
+        $control->Items->CalendarItem->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
+        $control->Items->CalendarItem->Categories = array('Testing', 'php-ews');
+        $control->Items->CalendarItem->Importance = Enumeration\ImportanceChoicesType::NORMAL;
+
+        /** Creating the first object to test */
+        $requestOne = new Type\CreateItemType();
+        $requestOne->Items = new Type\ArrayOfTypes();
+
+        $eventOne = new Type\CalendarItem();
+        $eventOne->Start = $start->format('c');
+        $eventOne->End = $end->format('c');
+
+        $eventOne->Body = new Type\BodyType();
+        $eventOne->Body->BodyType = Enumeration\BodyTypeType::HTML;
+        $eventOne->Body->_ = 'This is <b>the</b> body';
+
+        $eventOne->ItemClass = new Enumeration\ItemClassType();
+        $eventOne->ItemClass->_ = Enumeration\ItemClassType::APPOINTMENT;
+
+        $eventOne->Sensitivity = new Enumeration\SensitivityChoicesType();
+        $eventOne->Sensitivity->_ = Enumeration\SensitivityChoicesType::NORMAL;
+
+        $eventOne->Categories = array('Testing', 'php-ews');
+
+        $eventOne->Importance = new Enumeration\ImportanceChoicesType();
+        $eventOne->Importance->_ = Enumeration\ImportanceChoicesType::NORMAL;
+
+        $requestOne->Items->CalendarItem = $eventOne;
+
+        $requestOne->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
+
+        /** Creating the second object to test */
+        $requestTwo = new Type();
+        $requestTwo->Items = new Type();
+        $requestTwo->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
+
+        $eventTwo = new Type();
+        $eventTwo->Start = $start->format('c');
+        $eventTwo->End = $end->format('c');
+        $eventTwo->Body = array(
+            'BodyType' => Enumeration\BodyTypeType::HTML,
+            '_value' => 'This is <b>the</b> body'
+        );
+        $eventTwo->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
+        $eventTwo->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
+        $eventTwo->Categories = array('Testing', 'php-ews');
+        $eventTwo->Importance = Enumeration\ImportanceChoicesType::NORMAL;
+
+        $requestTwo->Items->CalendarItem = $eventTwo;
+
+        /** Creating the third object to test */
+        $requestThree = array(
+            'Items' => array(
+                'CalendarItem' => array(
+                    'Start' => $start->format('c'),
+                    'End' => $end->format('c'),
+                    'Body' => array(
+                        'BodyType' => Enumeration\BodyTypeType::HTML,
+                        '_value' => 'This is <b>the</b> body'
+                    ),
+                    'ItemClass' => Enumeration\ItemClassType::APPOINTMENT,
+                    'Sensitivity' => Enumeration\SensitivityChoicesType::NORMAL,
+                    'Categories' => array('Testing', 'php-ews'),
+                    'Importance' => Enumeration\ImportanceChoicesType::NORMAL
+                )
+            ),
+            'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+        );
+
+        $requestThree = Type::buildFromArray($requestThree);
+
+        $this->assertEquals($control->toXmlObject(), $requestOne->toXmlObject());
+        $this->assertEquals($control->toXmlObject(), $requestTwo->toXmlObject());
+        $this->assertEquals($control->toXmlObject(), $requestThree->toXmlObject());
     }
 
     /**
@@ -72,6 +160,34 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $type->_ = $string;
         $this->assertEquals($expected, $type->__toString());
         $this->assertEquals($expected, (string) $type);
+    }
+
+    public function testClone()
+    {
+        $start = new DateTime('8:00 AM');
+        $end = new DateTime('9:00 AM');
+
+        $request = array(
+            'Items' => array(
+                'CalendarItem' => array(
+                    'Start' => $start->format('c'),
+                    'End' => $end->format('c'),
+                    'Body' => array(
+                        'BodyType' => Enumeration\BodyTypeType::HTML,
+                        '_value' => 'This is <b>the</b> body'
+                    ),
+                    'ItemClass' => Enumeration\ItemClassType::APPOINTMENT,
+                    'Sensitivity' => Enumeration\SensitivityChoicesType::NORMAL,
+                    'Categories' => array('Testing', 'php-ews'),
+                    'Importance' => Enumeration\ImportanceChoicesType::NORMAL
+                )
+            ),
+            'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+        );
+
+        $request = Type::buildFromArray($request);
+
+        $this->assertEquals($request, clone $request);
     }
 
     public function arrayAssocProvider()
