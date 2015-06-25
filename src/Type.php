@@ -15,7 +15,7 @@ class Type
     /**
      * @var string
      */
-    public $_ = null;
+    public $_ = "";
 
     public static function buildFromArray($array)
     {
@@ -43,7 +43,7 @@ class Type
     public function toXmlObject()
     {
         $objectToReturn = new self();
-        if ($this->__toString() !== null) {
+        if ($this->__toString() !== "") {
             $objectToReturn->_ = $this->__toString();
         }
 
@@ -111,6 +111,10 @@ class Type
 
     public function __toString()
     {
-        return $this->_;
+        if(!is_string($this->_)) {
+            return '';
+        }
+
+        return (string) $this->_;
     }
 }
