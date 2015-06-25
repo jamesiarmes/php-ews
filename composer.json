@@ -1,4 +1,5 @@
 {
+	"name": "garethp/php-ews",
 	"scripts": {
 		"cs": "./vendor/bin/phpcs --standard=PSR2 -np src/ tests/"
 	},
