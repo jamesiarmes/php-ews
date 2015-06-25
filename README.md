@@ -148,4 +148,4 @@ If you would like to contribute to the documentation, please feel free to update
 ### Other Contributions
 Have you found this library helpful? Why not take a minute to endorse my hard work on [coderwall](http://coderwall.com)! Just click the badge below:
 
-[![](http://api.coderwall.com/jamesiarmes/endorsecount.png)](http://coderwall.com/jamesiarmes)
+[![Build Status](https://magnum.travis-ci.com/garethp/php-ews.svg?branch=master&token=zi3m42Hpfg5LcbkUysgt)](https://magnum.travis-ci.com/garethp/php-ews)
