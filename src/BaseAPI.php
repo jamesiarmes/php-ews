@@ -6,7 +6,8 @@ use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\API\Enumeration;
 
-class BaseAPI {
+class BaseAPI
+{
     private $_client;
 
     public function setClient($client)
@@ -23,7 +24,8 @@ class BaseAPI {
         return $this->_client;
     }
 
-    public function buildClient($server, $username, $password, $version = ExchangeWebServices::VERSION_2010) {
+    public function buildClient($server, $username, $password, $version = ExchangeWebServices::VERSION_2010)
+    {
         $client = new ExchangeWebServices($server, $username, $password, $version);
         $this->setClient($client);
 
@@ -32,7 +34,7 @@ class BaseAPI {
 
     public function createItems($items, $options = array())
     {
-        if(!is_array($items)) {
+        if (!is_array($items)) {
             $items = array($items);
         }
 

@@ -11,12 +11,13 @@ namespace jamesiarmes\PEWS\API\Test;
 use Mockery;
 use PHPUnit_Framework_TestCase;
 
-class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase {
+class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
+{
     private $_mock;
 
     public function getClientMock()
     {
-        if(!isset($_mock)) {
+        if (!isset($_mock)) {
             $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->makePartial();
             $this->_mock = $mock;
         }

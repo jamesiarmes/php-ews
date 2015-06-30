@@ -14,7 +14,7 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function getClientMock()
     {
-        if(!isset($_mock)) {
+        if (!isset($_mock)) {
             $mock = Mockery::mock('jamesiarmes\PEWS\BaseAPI')->shouldDeferMissing();
             $this->_mock = $mock;
         }
@@ -53,8 +53,8 @@ class APITest extends PHPUnit_Framework_TestCase
         );
         $builtArg = Type::buildFromArray($args[0]);
 
-        $ews->shouldReceive('CreateItem')->with(Mockery::on(function($arg) use ($builtArg)
-        {
+        $ews->shouldReceive('CreateItem')->with(Mockery::on(function ($arg) use ($builtArg) {
+        
             return $arg == $builtArg;
         }))->andReturn(true)->once();
         $ews->shouldReceive('CreateItem')->withAnyArgs()->andReturn(false)->once();

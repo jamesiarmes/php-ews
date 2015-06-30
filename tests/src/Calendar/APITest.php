@@ -12,7 +12,7 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function getClientMock()
     {
-        if(!isset($_mock)) {
+        if (!isset($_mock)) {
             $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\API');
             $mock->shouldDeferMissing();
             $mock->shouldAllowMockingMethod('createItems');

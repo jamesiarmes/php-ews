@@ -13,7 +13,8 @@ use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 use Mockery;
 
-class NTLMSoapClientTest extends PHPUnit_Framework_TestCase {
+class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
+{
     public function getClientMock()
     {
         $mock = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient')->makePartial();

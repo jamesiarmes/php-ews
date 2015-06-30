@@ -199,17 +199,19 @@ class ExchangeWebServices
     public function cleanServerUrl($server)
     {
         $url = parse_url($server);
-        if(!isset($url['host']) && isset($url['path'])) {
+        if (!isset($url['host']) && isset($url['path'])) {
             $url['host'] = $url['path'];
             unset($url['path']);
         }
 
         $server = $url['host'];
-        if(isset($url['port']))
+        if (isset($url['port'])) {
             $server .= ':' . $url['port'];
+        }
 
-        if(isset($url['path']))
+        if (isset($url['path'])) {
             $server .= $url['path'];
+        }
 
         $server = rtrim($server, "/");
 

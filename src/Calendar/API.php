@@ -6,7 +6,8 @@ use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\BaseAPI;
 use jamesiarmes\PEWS\API\Enumeration;
 
-class API extends BaseAPI {
+class API extends BaseAPI
+{
     public function createCalendarItems($items)
     {
         $item = array('CalendarItem'=>$items);

@@ -4,7 +4,8 @@ namespace jamesiarmes\PEWS\API\Test;
 use jamesiarmes\PEWS\API\Type\ArrayOfStrings;
 use PHPUnit_Framework_TestCase;
 
-class ArrayOfStringsTest extends PHPUnit_Framework_TestCase {
+class ArrayOfStringsTest extends PHPUnit_Framework_TestCase
+{
     public function testToString()
     {
         $object = new ArrayOfStrings();
