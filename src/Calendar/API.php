@@ -45,9 +45,10 @@ class API extends BaseAPI
      *
      * @param string $start
      * @param string $end
+     * @param array $options
      * @return mixed
      */
-    public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM')
+    public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
         $folder = $this->getCalendarFolder();
         $folderId = $folder->FolderId->Id;
@@ -62,7 +63,7 @@ class API extends BaseAPI
                 'BaseShape' => 'Default'
             ),
             'CalendarView' => array(
-                'MaxEntriesReturned' => 5,
+                'MaxEntriesReturned' => 20,
                 'StartDate' => $start->format('c'),
                 'EndDate' => $end->format('c')
             ),
@@ -72,6 +73,8 @@ class API extends BaseAPI
                 'DistinguishedFolderId' => array('Id'=>'calendar')
             )
         );
+
+        $request = array_merge($request, $options);
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);

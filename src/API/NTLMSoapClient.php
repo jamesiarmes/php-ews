@@ -120,15 +120,16 @@ class NTLMSoapClient extends SoapClient
     }
 
     /**
-     * Sets whether or not to validate ssl certificates
+     * Set validation certificate
      *
-     * @param boolean $validate
+     * @param bool $validate
+     * @return $this
      */
     public function validateCertificate($validate = true)
     {
         $this->validate = $validate;
 
-        return true;
+        return $this;
     }
 
     /**
