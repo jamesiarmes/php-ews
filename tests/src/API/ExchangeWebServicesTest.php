@@ -13,23 +13,18 @@ use PHPUnit_Framework_TestCase;
 
 class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 {
-    private $_mock;
-
     public function getClientMock()
     {
-        if (!isset($_mock)) {
-            $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->makePartial();
-            $this->_mock = $mock;
-        }
+        $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->makePartial();
 
-        return $this->_mock;
+        return $mock;
     }
 
     /**
      *
      * @dataProvider cleanServerUrlProvider
      * @param $input
-     * @param $actual
+     * @param $expected
      */
     public function testCleanServerUrl($input, $expected)
     {
@@ -43,7 +38,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
      *
      * @dataProvider cleanServerUrlProvider
      * @param $input
-     * @param $actual
+     * @param $expected
      */
     public function testServerGetSet($input, $expected)
     {
@@ -68,6 +63,29 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 
         $client->setVersion('test');
         $this->assertEquals('test', $client->getVersion());
+    }
+
+    public function testProcessResponse()
+    {
+        $mockClient = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
+            ->shouldDeferMissing();
+
+        $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
+        $mockClient->shouldReceive('getResponseCode')->andReturn(400)->once();
+
+        $client = $this->getClientMock();
+        $client->setClient($mockClient);
+
+        $this->assertEquals('test', $client->processResponse('test'));
+
+        try {
+            $client->processResponse('test');
+            $this->fail('Expected exception for non-200 response code');
+        }
+        catch(\Exception $e)
+        {
+
+        }
     }
 
     public function cleanServerUrlProvider()
