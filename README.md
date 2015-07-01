@@ -4,6 +4,7 @@ The PHP Exchange Web Services library (php-ews) is intended to make communicatio
 # Dependencies
 * PHP 5.2+
 * cURL with NTLM support (7.23.0+ recommended)
+* Composer
 * Exchange 2007 or 2010*
 
 **Note: Not all operations or request elements are supported on Exchange 2007.*
@@ -17,7 +18,7 @@ composer require garethp/php-ews
 ```
 
 ## Usage
-The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
+The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
 
 ```php
 $ews = new ExchangeWebServices($server, $username, $password, $version);
@@ -127,6 +128,29 @@ $request = Type::buildFromArray($request);
 $response = $ews->CreateItem($request);
 ```
 
+## Simple Library Usage
+There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
+
+```php
+use jamesiarmes\PEWS\Calendar\API;
+
+$api = new API();
+$api->buildClient('server', 'username', 'password');
+
+$firstSync = $api->getListOfChanges();
+$syncState = $firstSync->SyncState;
+
+$start = new DateTime('8:00 AM');
+$end = new DateTime('9:00 AM');
+
+$response = $api->createCalendarItems(array(
+    'Subject' => 'Test',
+    'Start' => $start->format('c'),
+    'End' => $end->format('c')
+));
+
+$changes = $api->getListOfChanges($syncState
+```
 
 ## Resources
 * [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
