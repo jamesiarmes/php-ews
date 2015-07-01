@@ -77,4 +77,16 @@ class API extends BaseAPI
         $response = $this->getClient()->FindItem($request);
         return $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem;
     }
+
+    /**
+     * Get a list of changes on the calendar items
+     *
+     * @param null $syncState
+     * @param array $options
+     * @return mixed
+     */
+    public function getListOfChanges($syncState = NULL, $options = array())
+    {
+        return $this->syncFolderItems('calendar', $syncState, $options);
+    }
 }

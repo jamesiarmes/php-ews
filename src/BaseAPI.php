@@ -107,4 +107,37 @@ class BaseAPI
         $response =  $this->getClient()->GetFolder($request);
         return $response->ResponseMessages->GetFolderResponseMessage->Folders;
     }
+
+    /**
+     * Get a list of sync changes on a folder
+     *
+     * @param $folderId
+     * @param null $syncState
+     * @param array $options
+     * @return mixed
+     */
+    public function syncFolderItems($folderId, $syncState = NULL, $options = array())
+    {
+        $itemShape = 'AllProperties';
+        if($syncState == NULL) {
+            $itemShape = 'IdOnly';
+        }
+
+        $request = array(
+            'ItemShape' => array('BaseShape' => $itemShape),
+            'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'calendar')),
+            'SyncScope' => 'NormalItems',
+            'MaxChangesReturned' => '10'
+        );
+
+        if($syncState != NULL) {
+            $request['syncState'] = 'SyncState';
+        }
+
+        $request = array_merge($request, $options);
+
+        $request = Type::buildFromArray($request);
+        $response = $this->getClient()->SyncFolderItems($request);
+        return $response->ResponseMessages->SyncFolderItemsResponseMessage;
+    }
 }
