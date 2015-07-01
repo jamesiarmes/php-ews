@@ -4,7 +4,6 @@ namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\API\Enumeration;
 
 /**
  * A base class for APIs
@@ -16,14 +15,14 @@ class BaseAPI
 {
     /**
      * Storing the API client
-     * @var \jamesiarmes\PEWS\API\ExchangeWebServices
+     * @var ExchangeWebServices
      */
     private $_client;
 
     /**
      * Set the API client
      *
-     * @param $client
+     * @param ExchangeWebServices $client
      * @return $this
      */
     public function setClient($client)
@@ -87,7 +86,7 @@ class BaseAPI
     /**
      * Get a folder by it's distinguishedId
      *
-     * @param $distinguishedId
+     * @param string $distinguishedId
      * @return mixed
      */
     public function getFolder($distinguishedId)
@@ -104,14 +103,14 @@ class BaseAPI
         );
         $request = Type::buildFromArray($request);
 
-        $response =  $this->getClient()->GetFolder($request);
+        $response = $this->getClient()->GetFolder($request);
         return $response->ResponseMessages->GetFolderResponseMessage->Folders;
     }
 
     /**
      * Get a list of sync changes on a folder
      *
-     * @param $folderId
+     * @param string $folderId
      * @param null $syncState
      * @param array $options
      * @return mixed
@@ -125,7 +124,7 @@ class BaseAPI
 
         $request = array(
             'ItemShape' => array('BaseShape' => $itemShape),
-            'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'calendar')),
+            'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => $folderId)),
             'SyncScope' => 'NormalItems',
             'MaxChangesReturned' => '10'
         );

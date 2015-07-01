@@ -50,13 +50,6 @@ class NTLMSoapClient extends SoapClient
     protected $password;
 
     /**
-     * cURL resource used to make the SOAP request
-     *
-     * @var resource
-     */
-    protected $ch;
-
-    /**
      * Whether or not to validate ssl certificates
      *
      * @var boolean
