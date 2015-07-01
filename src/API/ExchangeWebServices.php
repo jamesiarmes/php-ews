@@ -152,7 +152,7 @@ class ExchangeWebServices
      */
     public function getClient()
     {
-        if(!$this->soap) {
+        if (!$this->soap) {
             $this->initializeClient();
         }
 
