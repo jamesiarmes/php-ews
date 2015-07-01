@@ -6,8 +6,20 @@ use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\BaseAPI;
 use jamesiarmes\PEWS\API\Enumeration;
 
+/**
+ * An API end point for Calendar items
+ *
+ * Class API
+ * @package jamesiarmes\PEWS\Calendar
+ */
 class API extends BaseAPI
 {
+    /**
+     * Create one or more calendar items
+     *
+     * @param $items CalendarItem[]|CalendarItem|Array or more calendar items to create
+     * @return \jamesiarmes\PEWS\API\CreateItemResponseType
+     */
     public function createCalendarItems($items)
     {
         $item = array('CalendarItem'=>$items);
@@ -17,24 +29,24 @@ class API extends BaseAPI
         return $response;
     }
 
+    /**
+     * Get the calendar folder from exchange
+     *
+     * @return mixed
+     */
     public function getCalendarFolder()
     {
-        $request = array(
-            'FolderShape' => array(
-                'BaseShape' => array('_' => 'Default')
-            ),
-            'FolderIds' => array(
-                'DistinguishedFolderId' => array(
-                    'Id' => 'calendar'
-                )
-            )
-        );
-        $request = Type::buildFromArray($request);
-
-        $response =  $this->getClient()->GetFolder($request);
-        return $response->ResponseMessages->GetFolderResponseMessage->Folders->CalendarFolder;
+        $folder = $this->getFolder('calendar');
+        return $folder->CalendarFolder;
     }
 
+    /**
+     * Get a list of calendar items between two dates/times
+     *
+     * @param string $start
+     * @param string $end
+     * @return mixed
+     */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM')
     {
         $folder = $this->getCalendarFolder();
