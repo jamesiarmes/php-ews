@@ -10,12 +10,13 @@ namespace jamesiarmes\PEWS\API\Test;
 
 use Mockery;
 use PHPUnit_Framework_TestCase;
+use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
 
 class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 {
     public function getClientMock()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->makePartial();
+        $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->shouldDeferMissing();
 
         return $mock;
     }
@@ -86,6 +87,44 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         {
 
         }
+    }
+
+    public function testClientInitialisation()
+    {
+        $client = $this->getClientMock();
+        $client->setUsername('testUser');
+        $client->setPassword('testPassword');
+        $client->setVersion('testVersion');
+        $client->setServer('testServer');
+
+        $expected = new Exchange(
+            dirname(__FILE__).'/../../../Resources/wsdl/services.wsdl',
+            array(
+                'user' => 'testUser',
+                'password' => 'testPassword',
+                'version' => 'testVersion',
+                'location' => 'https://testServer/EWS/Exchange.asmx',
+                'impersonation' => NULL,
+                'trace' => '1',
+                'exceptions' => true,
+            )
+        );
+        $this->assertEquals($expected, $client->getClient());
+
+        $client->setClient('test');
+        $this->assertEquals('test', $client->getClient());
+
+        $client->setClient(false);
+        $this->assertEquals($expected, $client->getClient());
+    }
+
+    public function testImpersonation()
+    {
+        $client = $this->getClientMock();
+
+        $this->assertEquals(NULL, $client->getImpersonation());
+        $client->setImpersonation('test');
+        $this->assertEquals('test', $client->getImpersonation());
     }
 
     public function cleanServerUrlProvider()

@@ -131,6 +131,14 @@ class ExchangeWebServices
         $this->setVersion($version);
     }
 
+    /**
+     * @codeCoverageIgnore
+     *
+     * @param $name
+     * @param $arguments
+     * @return EWSType
+     * @throws Exception
+     */
     public function __call($name, $arguments)
     {
         $response = $this->getClient()->__call($name, $arguments);
@@ -167,12 +175,23 @@ class ExchangeWebServices
      * Sets the impersonation property
      *
      * @param EWSType_ExchangeImpersonationType $impersonation
+     * @return $this
      */
     public function setImpersonation($impersonation)
     {
         $this->impersonation = $impersonation;
 
-        return true;
+        return $this;
+    }
+
+    /**
+     * Gets the impersonation property
+     *
+     * @return EWSType_ExchangeImpersonationType
+     */
+    public function getImpersonation()
+    {
+        return $this->impersonation;
     }
 
     /**
@@ -304,7 +323,7 @@ class ExchangeWebServices
             )
         );
 
-        $this->setClient($client);;
+        $this->setClient($client);
         return $this;
     }
 
