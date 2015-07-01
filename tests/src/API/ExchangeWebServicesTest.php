@@ -82,10 +82,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         try {
             $client->processResponse('test');
             $this->fail('Expected exception for non-200 response code');
-        }
-        catch(\Exception $e)
-        {
-
+        } catch (\Exception $e) {
         }
     }
 
@@ -104,7 +101,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
                 'password' => 'testPassword',
                 'version' => 'testVersion',
                 'location' => 'https://testServer/EWS/Exchange.asmx',
-                'impersonation' => NULL,
+                'impersonation' => null,
                 'trace' => '1',
                 'exceptions' => true,
             )
@@ -122,7 +119,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
     {
         $client = $this->getClientMock();
 
-        $this->assertEquals(NULL, $client->getImpersonation());
+        $this->assertEquals(null, $client->getImpersonation());
         $client->setImpersonation('test');
         $this->assertEquals('test', $client->getImpersonation());
     }

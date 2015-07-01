@@ -8,17 +8,57 @@
 
 namespace jamesiarmes\PEWS\API\Test;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
 use jamesiarmes\PEWS\API\NTLMSoapClient;
 use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 use Mockery;
+use GuzzleHttp\Middleware;
 
 class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 {
     public function getClientMock()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient')->makePartial();
+        $mock = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient')->shouldDeferMissing();
         return $mock;
+    }
+
+    public function testGetClient()
+    {
+        $mock = $this->getClientMock();
+
+        $this->assertInstanceOf('GuzzleHttp\Client', $mock->getClient());
+    }
+
+    public function testDoRequest()
+    {
+        $mock = $this->getClientMock();
+
+        $responseQue = new MockHandler([
+            new Response(200),
+            new Response(400)
+        ]);
+
+        $container = [];
+        $history = Middleware::history($container);
+
+        $handler = HandlerStack::create($responseQue);
+        $handler->push($history);
+
+        $client = new Client(['handler' => $handler, 'http_errors' => false]);
+
+        $mock->shouldReceive('getClient')->andReturn($client);
+
+        $mock->__doRequest('testContent', 'testLocation', 'testAction', 'testVersion');
+        $this->assertEquals(200, $mock->getResponseCode());
+
+        $mock->__doRequest('testContent', 'testLocation', 'testAction', 'testVersion');
+        $this->assertEquals(400, $mock->getResponseCode());
+
+        $this->assertEquals('testAction', $container[0]['request']->getHeaders()['SOAPAction'][0]);
     }
 
     public function testGetLastRequestHeaders()
