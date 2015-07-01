@@ -17,19 +17,29 @@ class APITest extends PHPUnit_Framework_TestCase
         return $mock;
     }
 
-
+    /**
+     * Test that get and set clients work properly
+     */
     public function testClientGetSet()
     {
         $client = $this->getClientMock();
+
+        //By default the client should be null
         $this->assertNull($client->getClient());
 
+        //Set client should just let us set anything at this point
         $client->setClient('test');
         $this->assertEquals('test', $client->getClient());
     }
 
+    /**
+     * Test that building the client works
+     */
     public function testBuildClient()
     {
         $client = $this->getClientMock();
+
+        //Create our expected item, get our class to build our item, then compare
         $expected = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
         $client->buildClient('test.com', 'username', 'password');
         $actual = $client->getClient();
@@ -37,41 +47,53 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual);
     }
 
+    /**
+     * Test that the createItems function passes the correct variables to the API Client
+     */
     public function testCreateItems()
     {
+        //Let's mock up our client
         $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
         $ews = Mockery::mock($ews)->shouldDeferMissing();
 
+        //This is the arguments that we will pass in, and check against
         $args = array(
-            array('Items' => array('CalendarItem' => array('Start' => 'Now')), 'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE),
+            array(
+                'Items' => array('CalendarItem' => array('Start' => 'Now')),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+            ),
             array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
         );
+
+        //The function we call automatically builds the argument, so we have to build it as well in order to compare
         $builtArg = Type::buildFromArray($args[0]);
 
         $ews->shouldReceive('CreateItem')->with(Mockery::on(function ($arg) use ($builtArg) {
-
-            return $arg == $builtArg;
+            $this->assertEquals($arg, $builtArg);
+            return true;
         }))->andReturn(true)->once();
-        $ews->shouldReceive('CreateItem')->withAnyArgs()->andReturn(false)->once();
 
         $client = $this->getClientMock();
         $client->setClient($ews);
 
-        $this->assertTrue($client->createItems($args[0]['Items'], $args[1]));
+        $client->createItems($args[0]['Items'], $args[1]);
     }
 
     /**
+     * Test that the syncFolderItems() function passes the correct arguments to it's client
+     *
      * @dataProvider syncFolderItemsProvider
      * @param $input
      */
     public function testSyncFolderItems($input, $expected)
     {
+        //Build our expected items, and our mocked API Client
         $expected = Type::buildFromArray($expected);
         $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
         $ews = Mockery::mock($ews)->shouldDeferMissing();
 
+        //Our function expects a certain format returned, this creates that format
         $trueReturn = Type::buildFromArray(array('ResponseMessages' => array('SyncFolderItemsResponseMessage'=>true)));
-        $falseReturn = Type::buildFromArray(array('ResponseMessages' => array('SyncFolderItemsResponseMessage'=>false)));
 
         $ews->shouldReceive('SyncFolderItems')->with(Mockery::on(function ($arg) use ($expected) {
             $this->assertEquals($expected, $arg);
@@ -126,5 +148,10 @@ class APITest extends PHPUnit_Framework_TestCase
                 'MaxChangesReturned' => '20'
             ))
         );
+    }
+
+    public function tearDown()
+    {
+        Mockery::close();
     }
 }
