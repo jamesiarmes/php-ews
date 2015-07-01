@@ -1,14 +1,18 @@
 {
-	"name": "garethp/php-ews",
-	"scripts": {
-		"cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/"
-	},
-	"autoload": {
-		"psr-4": {"jamesiarmes\\PEWS\\": "src/"}
-	},
-	"require-dev": {
-		"phpunit/phpunit": "~4.7",
-		"squizlabs/php_codesniffer": "~2.3",
-		"mockery/mockery": "~0.9.4"
-	}
+    "name": "garethp/php-ews",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "ext-curl": "*"
+    },
+    "scripts": {
+        "cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/"
+    },
+    "autoload": {
+        "psr-4": {"jamesiarmes\\PEWS\\": "src/"}
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.7",
+        "squizlabs/php_codesniffer": "~2.3",
+        "mockery/mockery": "~0.9.4"
+    }
 }

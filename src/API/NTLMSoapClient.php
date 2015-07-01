@@ -3,6 +3,7 @@
 namespace jamesiarmes\PEWS\API;
 
 use SoapClient;
+use GuzzleHttp;
 
 /**
  * Contains NTLMSoapClient.
@@ -64,6 +65,19 @@ class NTLMSoapClient extends SoapClient
 
     protected $__last_request_headers;
 
+    protected $_responseCode;
+
+    /**
+     * Get the client for making calls
+     *
+     * @return GuzzleHttp\Client
+     */
+    public function getClient()
+    {
+        $client = new GuzzleHttp\Client();
+        return $client;
+    }
+
     /**
      * Performs a SOAP request
      *
@@ -79,39 +93,25 @@ class NTLMSoapClient extends SoapClient
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
         $headers = array(
-            'Method: POST',
-            'Connection: Keep-Alive',
-            'User-Agent: PHP-SOAP-CURL',
-            'Content-Type: text/xml; charset=utf-8',
-            'SOAPAction: "'.$action.'"',
+            'Method' => 'POST',
+            'Connection' => 'Keep-Alive',
+            'User-Agent' => 'PHP-SOAP-CURL',
+            'Content-Type' => 'text/xml; charset=utf-8',
+            'SOAPAction' => $action,
         );
 
+        $client = $this->getClient();
+        $response = $client->post($location, array(
+            'body' => $request,
+            'headers' => $headers,
+            'auth' => [ $this->user, $this->password ],
+            'verify' => $this->validate
+        ));
+
         $this->__last_request_headers = $headers;
-        $this->ch = curl_init($location);
+        $this->_responseCode = $response->getStatusCode();
 
-        curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
-        curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
-        curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($this->ch, CURLOPT_POST, true);
-        curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
-        curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-        curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
-        curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
-
-        $response = curl_exec($this->ch);
-
-        // TODO: Add some real error handling.
-        // If the response if false than there was an error and we should throw
-        // an exception.
-        if ($response === false) {
-            throw new Exception(
-                'Curl error: ' . curl_error($this->ch),
-                curl_errno($this->ch)
-            );
-        }
-
-        return $response;
+        return $response->getBody()->getContents();
     }
 
     /**
@@ -145,6 +145,6 @@ class NTLMSoapClient extends SoapClient
      */
     public function getResponseCode()
     {
-        return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
+        return $this->_responseCode;
     }
 }

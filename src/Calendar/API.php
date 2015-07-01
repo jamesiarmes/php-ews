@@ -35,14 +35,14 @@ class API extends BaseAPI
         return $response->ResponseMessages->GetFolderResponseMessage->Folders->CalendarFolder;
     }
 
-    public function getCalendarItems()
+    public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM')
     {
         $folder = $this->getCalendarFolder();
         $folderId = $folder->FolderId->Id;
         $changeKey = $folder->FolderId->ChangeKey;
 
-        $start = new \DateTime('6:00 AM');
-        $end = new \DateTime('8:00 PM');
+        $start = new \DateTime($start);
+        $end = new \DateTime($end);
 
         $request = array(
             'Traversal' => 'Shallow',
@@ -63,6 +63,6 @@ class API extends BaseAPI
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        var_dump($response->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem);
+        return $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem;
     }
 }
