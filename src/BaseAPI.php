@@ -116,10 +116,10 @@ class BaseAPI
      * @param array $options
      * @return mixed
      */
-    public function syncFolderItems($folderId, $syncState = NULL, $options = array())
+    public function syncFolderItems($folderId, $syncState = null, $options = array())
     {
         $itemShape = 'AllProperties';
-        if($syncState == NULL) {
+        if ($syncState == null) {
             $itemShape = 'IdOnly';
         }
 
@@ -130,7 +130,7 @@ class BaseAPI
             'MaxChangesReturned' => '10'
         );
 
-        if($syncState != NULL) {
+        if ($syncState != null) {
             $request['syncState'] = 'SyncState';
         }
 

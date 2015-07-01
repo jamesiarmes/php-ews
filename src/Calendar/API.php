@@ -85,7 +85,7 @@ class API extends BaseAPI
      * @param array $options
      * @return mixed
      */
-    public function getListOfChanges($syncState = NULL, $options = array())
+    public function getListOfChanges($syncState = null, $options = array())
     {
         return $this->syncFolderItems('calendar', $syncState, $options);
     }
