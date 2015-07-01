@@ -117,13 +117,8 @@ class BaseAPI
      */
     public function syncFolderItems($folderId, $syncState = null, $options = array())
     {
-        $itemShape = 'AllProperties';
-        if ($syncState == null) {
-            $itemShape = 'IdOnly';
-        }
-
         $request = array(
-            'ItemShape' => array('BaseShape' => $itemShape),
+            'ItemShape' => array('BaseShape' => 'AllProperties'),
             'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => $folderId)),
             'SyncScope' => 'NormalItems',
             'MaxChangesReturned' => '10'
@@ -131,6 +126,7 @@ class BaseAPI
 
         if ($syncState != null) {
             $request['syncState'] = $syncState;
+            $request['ItemShape']['BaseShape'] = 'IdOnly';
         }
 
         $request = array_merge($request, $options);
