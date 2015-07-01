@@ -86,7 +86,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClientMock();
         $client->setClient($ews);
 
-        $client->syncFolderItems(...$input);
+        call_user_func_array(array($client, 'syncFolderItems'), $input);
     }
 
     /**
