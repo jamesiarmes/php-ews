@@ -130,7 +130,7 @@ class BaseAPI
         );
 
         if ($syncState != null) {
-            $request['syncState'] = 'SyncState';
+            $request['syncState'] = $syncState;
         }
 
         $request = array_merge($request, $options);
