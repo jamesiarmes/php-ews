@@ -133,8 +133,6 @@ class ExchangeWebServices
 
     public function __call($name, $arguments)
     {
-        $this->initializeSoapClient();
-
         $response = $this->getClient()->__call($name, $arguments);
         return $this->processResponse($response);
     }
@@ -146,7 +144,23 @@ class ExchangeWebServices
      */
     public function getClient()
     {
-        return $this->initializeSoapClient();
+        if(!$this->soap) {
+            $this->initializeClient();
+        }
+
+        return $this->soap;
+    }
+
+    /**
+     * Sets the client
+     *
+     * @param Exchange $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->soap = $client;
+        return $this;
     }
 
     /**
@@ -275,9 +289,9 @@ class ExchangeWebServices
      *
      * @return NTLMSoapClient_Exchange
      */
-    protected function initializeSoapClient()
+    protected function initializeClient()
     {
-        $this->soap = new Exchange(
+        $client = new Exchange(
             dirname(__FILE__).'/../../Resources/wsdl/services.wsdl',
             array(
                 'user' => $this->username,
@@ -290,7 +304,8 @@ class ExchangeWebServices
             )
         );
 
-        return $this->soap;
+        $this->setClient($client);;
+        return $this;
     }
 
     /**
@@ -307,7 +322,7 @@ class ExchangeWebServices
     protected function processResponse($response)
     {
         // If the soap call failed then we need to thow an exception.
-        $code = $this->soap->getResponseCode();
+        $code = $this->getClient()->getResponseCode();
         if ($code != 200) {
             throw new Exception('SOAP client returned status of '.$code, $code);
         }
