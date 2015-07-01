@@ -10,16 +10,11 @@ use jamesiarmes\PEWS\API\Enumeration;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
-    private $_mock;
-
     public function getClientMock()
     {
-        if (!isset($_mock)) {
-            $mock = Mockery::mock('jamesiarmes\PEWS\BaseAPI')->shouldDeferMissing();
-            $this->_mock = $mock;
-        }
-
-        return $this->_mock;
+        $mock = Mockery::mock('jamesiarmes\PEWS\BaseAPI')
+            ->shouldDeferMissing();
+        return $mock;
     }
 
 

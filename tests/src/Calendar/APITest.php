@@ -27,8 +27,8 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $return = new \stdClass();
         $return->CalendarFolder = 'test';
-        $mock->shouldReceive('getFolder')->with(Mockery::on(function($args)
-        {
+        $mock->shouldReceive('getFolder')->with(Mockery::on(function ($args) {
+        
             $this->assertEquals('calendar', $args);
 
             return true;
