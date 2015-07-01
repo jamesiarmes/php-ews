@@ -124,7 +124,7 @@ class APITest extends PHPUnit_Framework_TestCase
             )),
 
             //Test that even when you send a NULL syncState, you can still override the ItemShape
-            array(array('test', NULL, array('MaxChangesReturned'=>20, 'ItemShape' => array('BaseShape' => 'AllProperties'))), array(
+            array(array('test', null, array('MaxChangesReturned'=>20, 'ItemShape' => array('BaseShape' => 'AllProperties'))), array(
                 'ItemShape' => array('BaseShape' => 'AllProperties'),
                 'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'test')),
                 'SyncScope' => 'NormalItems',
