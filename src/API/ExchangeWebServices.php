@@ -13,6 +13,7 @@ use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
  * @package php-ews\Client
  *
  * @method EWSType CreateItem($request)
+ * @method EWSType FindItem($request)
  * @method EWSType GetFolder($request)
  * @method EWSType SyncFolderItems($request)
  */
