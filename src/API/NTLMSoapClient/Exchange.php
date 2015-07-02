@@ -4,8 +4,6 @@ namespace jamesiarmes\PEWS\API\NTLMSoapClient;
 
 use jamesiarmes\PEWS\API\NTLMSoapClient;
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\API\Exception;
-use SoapHeader;
 
 /**
  * Contains NTLMSoapClient_Exchange.

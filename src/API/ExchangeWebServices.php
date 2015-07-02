@@ -12,10 +12,10 @@ use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
  *
  * @package php-ews\Client
  *
- * @method EWSType CreateItem($request)
- * @method EWSType FindItem($request)
- * @method EWSType GetFolder($request)
- * @method EWSType SyncFolderItems($request)
+ * @method Type CreateItem($request)
+ * @method Type FindItem($request)
+ * @method Type GetFolder($request)
+ * @method Type SyncFolderItems($request)
  */
 class ExchangeWebServices
 {
@@ -99,7 +99,7 @@ class ExchangeWebServices
     /**
      * Exchange impersonation
      *
-     * @var EWSType_ExchangeImpersonationType
+     * @var Type
      */
     protected $impersonation;
 
@@ -141,7 +141,7 @@ class ExchangeWebServices
      *
      * @param $name
      * @param $arguments
-     * @return EWSType
+     * @return Type
      * @throws Exception
      */
     public function __call($name, $arguments)
@@ -179,7 +179,7 @@ class ExchangeWebServices
     /**
      * Sets the impersonation property
      *
-     * @param EWSType_ExchangeImpersonationType $impersonation
+     * @param Type $impersonation
      * @return $this
      */
     public function setImpersonation($impersonation)
@@ -192,7 +192,7 @@ class ExchangeWebServices
     /**
      * Gets the impersonation property
      *
-     * @return EWSType_ExchangeImpersonationType
+     * @return Type
      */
     public function getImpersonation()
     {
@@ -203,6 +203,7 @@ class ExchangeWebServices
      * Sets the password property
      *
      * @param string $password
+     * @return $this
      */
     public function setPassword($password)
     {
@@ -268,6 +269,7 @@ class ExchangeWebServices
      * Sets the user name property
      *
      * @param string $username
+     * @return $this
      */
     public function setUsername($username)
     {
@@ -290,6 +292,7 @@ class ExchangeWebServices
      * Sets the version property
      *
      * @param string $version
+     * @return $this
      */
     public function setVersion($version)
     {
@@ -311,17 +314,17 @@ class ExchangeWebServices
     /**
      * Initializes the SoapClient object to make a request
      *
-     * @return NTLMSoapClient_Exchange
+     * @return Exchange
      */
     protected function initializeClient()
     {
         $client = new Exchange(
-            dirname(__FILE__).'/../../Resources/wsdl/services.wsdl',
+            dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
             array(
                 'user' => $this->username,
                 'password' => $this->password,
                 'version' => $this->version,
-                'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+                'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'impersonation' => $this->impersonation,
                 'trace' => '1',
                 'exceptions' => true,
@@ -336,10 +339,9 @@ class ExchangeWebServices
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @throws EWS_Exception
-     *
-     * @param stdClass $response
-     * @return EWSType
+     * @param \stdClass $response
+     * @throws Exception
+     * @return Type
      *
      * @todo Map the response to a real object.
      */
@@ -348,7 +350,7 @@ class ExchangeWebServices
         // If the soap call failed then we need to thow an exception.
         $code = $this->getClient()->getResponseCode();
         if ($code != 200) {
-            throw new Exception('SOAP client returned status of '.$code, $code);
+            throw new Exception('SOAP client returned status of ' . $code, $code);
         }
 
         return $response;

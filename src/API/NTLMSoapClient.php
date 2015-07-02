@@ -33,6 +33,8 @@ use SoapHeader;
  * @author Thomas Rabaix
  *
  * @package php-ews\Auth
+ *
+ * @property array __default_headers
  */
 class NTLMSoapClient extends SoapClient
 {
@@ -65,6 +67,7 @@ class NTLMSoapClient extends SoapClient
      * Constructor
      *
      * @param string $wsdl
+     * @throws Exception
      * @param array $options
      */
     public function __construct($wsdl, $options = array())

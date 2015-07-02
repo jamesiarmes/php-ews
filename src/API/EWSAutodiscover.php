@@ -1,6 +1,8 @@
 <?php
 namespace jamesiarmes\PEWS\API;
 
+use XMLWriter;
+
 /**
  * Contains EWSAutodiscover.
  */
@@ -290,6 +292,7 @@ class EWSAutodiscover
      * Parse the hex ServerVersion value and return a valid
      * ExchangeWebServices::VERSION_* constant.
      *
+     * @param $version_hex
      * @return string|boolean A known version constant, or FALSE if it could not
      * be determined.
      *
