@@ -17,6 +17,7 @@ use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 use Mockery;
 use GuzzleHttp\Middleware;
+use SoapHeader;
 
 class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 {
@@ -67,7 +68,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         $prop = $reflection->getProperty('__last_request_headers');
         $prop->setAccessible(true);
 
-        $client = new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl');
+        $client = new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array('user'=>'user', 'password'=>'password'));
 
         $prop->setValue($client, array('test', 'test2'));
         $this->assertEquals("testntest2\n", $client->__getLastRequestHeaders());
@@ -79,7 +80,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         $prop = $reflection->getProperty('validate');
         $prop->setAccessible(true);
 
-        $client = new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl');
+        $client = new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array('user'=>'user', 'password'=>'password'));
 
         $this->assertFalse($prop->getValue($client));
 
@@ -88,5 +89,64 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 
         $client->validateCertificate(false);
         $this->assertFalse($prop->getValue($client));
+    }
+
+
+    public function testConstructor()
+    {
+        try {
+            new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array());
+
+            $this->fail('No exception was raised');
+        } catch (\Exception $e) {
+        }
+
+        try {
+            new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array('user' => 'testUser'));
+
+            $this->fail('No exception was raised');
+        } catch (\Exception $e) {
+        }
+
+        try {
+            new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array('password' => 'testPassword'));
+
+            $this->fail('No exception was raised');
+        } catch (\Exception $e) {
+        }
+
+        $ntlmClient = new NTLMSoapClient(__DIR__ . '/../../../Resources/wsdl/services.wsdl', array(
+            'user' => 'testUser',
+            'password' => 'testPassword',
+            'version' => 'testVersion',
+            'impersonation' => 'testImpersonation'
+        ));
+
+        $reflection = new ReflectionClass('\jamesiarmes\PEWS\API\NTLMSoapClient\Exchange');
+
+        $username = $reflection->getProperty('user');
+        $username->setAccessible(true);
+
+        $password = $reflection->getProperty('password');
+        $password->setAccessible(true);
+
+//        $headers = $reflection->getProperty('__default_headers');
+//        $headers->setAccessible(true);
+
+        $this->assertEquals('testUser', $username->getValue($ntlmClient));
+        $this->assertEquals('testPassword', $password->getValue($ntlmClient));
+
+        $expected = new SoapHeader(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'RequestServerVersion Version="testVersion"'
+        );
+        $this->assertEquals($expected, $ntlmClient->__default_headers[0]);
+
+        $expected = new SoapHeader(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'ExchangeImpersonation',
+            'testImpersonation'
+        );
+        $this->assertEquals($expected, $ntlmClient->__default_headers[1]);
     }
 }
