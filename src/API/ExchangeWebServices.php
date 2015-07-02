@@ -11,6 +11,10 @@ use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
  * Base class of the Exchange Web Services application.
  *
  * @package php-ews\Client
+ *
+ * @method EWSType CreateItem($request)
+ * @method EWSType GetFolder($request)
+ * @method EWSType SyncFolderItems($request)
  */
 class ExchangeWebServices
 {
