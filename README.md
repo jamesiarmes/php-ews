@@ -98,7 +98,7 @@ $syncState = $changes->SyncState;
 $changesSinceLsatCheck = $api->listChanges($syncState);
 ```
 
-# Building Request
+# Manual Usage
 There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
 
 ```php
