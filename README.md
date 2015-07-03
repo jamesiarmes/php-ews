@@ -51,6 +51,9 @@ $calendar = $api->getCalendar();
 By default the Calendar API will try to use the default Calendar, but you can set it to use any Calendar of yours that you want: As such
 
 ```php
+//Create the Calendar by name
+$calendar = $api->getCalendar('Calendar Name');
+
 //Chooses the default Calendar
 $calendar->pickCalendar();
 $calendar->getCalendarItems();
