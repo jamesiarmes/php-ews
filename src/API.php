@@ -4,6 +4,7 @@ namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\Calendar\Calendar;
 
 /**
  * A base class for APIs
@@ -11,13 +12,28 @@ use jamesiarmes\PEWS\API\Type;
  * Class BaseAPI
  * @package jamesiarmes\PEWS
  */
-class BaseAPI
+class API
 {
     /**
      * Storing the API client
      * @var ExchangeWebServices
      */
     private $_client;
+
+    /**
+     * Get a calendar item
+     *
+     * @param string $name
+     * @return Calendar
+     */
+    public function getCalendar($name='default.calendar')
+    {
+        $calendar = new Calendar();
+        $calendar->setClient($this->getClient());
+        $calendar->pickCalendar($name);
+
+        return $calendar;
+    }
 
     /**
      * Set the API client

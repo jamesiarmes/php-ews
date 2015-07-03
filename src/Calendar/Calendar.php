@@ -3,7 +3,7 @@
 namespace jamesiarmes\PEWS\Calendar;
 
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\BaseAPI;
+use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Enumeration;
 
 /**
@@ -12,14 +12,14 @@ use jamesiarmes\PEWS\API\Enumeration;
  * Class API
  * @package jamesiarmes\PEWS\Calendar
  */
-class API extends BaseAPI
+class Calendar extends API
 {
     protected $_folderId;
 
-    public function pickCalendarToUse($displayName='default.calendar')
+    public function pickCalendar($displayName='default.calendar')
     {
         if($displayName == 'default.calendar') {
-            $folder = $this->getFolderByDistinguishedId('calendar');
+            $folder = $this->getFolderByDistinguishedId('calendar')->CalendarFolder;
         }
         else {
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
