@@ -10,14 +10,14 @@ The PHP Exchange Web Services library (php-ews) is intended to make communicatio
 **Note: Not all operations or request elements are supported on Exchange 2007.*
 
 
-## Installation
+# Installation
 Require the composer package and use away
 
 ```
 composer require garethp/php-ews
 ```
 
-## Usage
+# Usage
 The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
 
 ```php
@@ -35,7 +35,70 @@ Once you have your `ExchangeWebServices` object, you need to build your request 
 
 The request objects are build similar to the XML body of the request. See the resources section below for more information on building the requests.
 
-## Building Request
+# Simple Library Usage
+There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
+
+## Creating the API
+```php
+use jamesiarmes\PEWS\Calendar\API;
+
+$api = new API();
+$api->buildClient('server', 'username', 'password');
+```
+
+## Choosing which calendar to use
+By default the Calendar API will try to use the default Calendar, but you can set it to use any Calendar of yours that you want: As such
+
+```php
+//Chooses the default Calendar
+$api->pickCalendarToUse();
+$api->getCalendarItems();
+
+//Get the items of a second calendar
+$api->pickCalendarToUse('Second Calendar');
+$api->getCalendarItems();
+```
+
+## Creating Calendar Items
+```php
+$start = new DateTime('8:00 AM');
+$end = new DateTime('9:00 AM');
+
+$response = $api->createCalendarItems(array(
+    'Subject' => 'Test',
+    'Start' => $start->format('c'),
+    'End' => $end->format('c')
+));
+```
+
+## Get a list of Calendar Items
+The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
+```php
+//Get all items for today
+$api->getCalendarItems();
+
+//Get all items from midday today
+$api->getCalendarItems('12:00 PM');
+
+//Get all items from 8AM to 5PM
+$api->getCalendarItems('8:00 AM', '5:00 PM')
+
+//Get a list of items in a Date Range
+$api->getCalendarItems('31/05/2015', '31/06/2015');
+```
+
+## Get a list of changes
+```php
+//Get the initial list of Items
+$changes = $api->listChanges();
+
+//We use this to keep track of when we last asked for items
+$syncState = $changes->SyncState;
+
+$changesSinceLsatCheck = $api->listChanges($syncState);
+```
+
+# Building Request
 There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
 
 ```php
@@ -128,75 +191,22 @@ $request = Type::buildFromArray($request);
 $response = $ews->CreateItem($request);
 ```
 
-## Simple Library Usage
-There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
-
-### Creating the API
-```php
-use jamesiarmes\PEWS\Calendar\API;
-
-$api = new API();
-$api->buildClient('server', 'username', 'password');
-```
-
-### Creating Calendar Items
-```php
-$start = new DateTime('8:00 AM');
-$end = new DateTime('9:00 AM');
-
-$response = $api->createCalendarItems(array(
-    'Subject' => 'Test',
-    'Start' => $start->format('c'),
-    'End' => $end->format('c')
-));
-```
-
-### Get a list of Calendar Items
-The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
-```php
-//Get all items for today
-$api->getCalendarItems();
-
-//Get all items from midday today
-$api->getCalendarItems('12:00 PM');
-
-//Get all items from 8AM to 5PM
-$api->getCalendarItems('8:00 AM', '5:00 PM')
-
-//Get a list of items in a Date Range
-$api->getCalendarItems('31/05/2015', '31/06/2015');
-```
-
-### Get a list of changes
-```php
-//Get the initial list of Items
-$changes = $api->listChanges();
-
-//We use this to keep track of when we last asked for items
-$syncState = $changes->SyncState;
-
-$changesSinceLsatCheck = $api->listChanges($syncState);
-```
-
-## Resources
+# Resources
 * [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
 * [Exchange 2007 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=EXCHG.80\).aspx)
 * [Exchange 2010 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=exchg.140\).aspx)
 
-## Support
+# Support
 All questions should use the [issue queue](https://github.com/jamesiarmes/php-ews/issues). This allows the community to contribute to and benefit from questions or issues you may have. Any support requests sent to my email address will be directed here.
 
-## Contributions
+# Contributions
 Contributions are always welcome!
 
-### Contributing Code
+## Contributing Code
 If you would like to contribute code please fork the repository on [github](https://github.com/jamesiarmes/php-ews) and issue a pull request against the master branch. It is recommended that you make any changes to your fork in a separate branch that you would then use for the pull request. If you would like to receive credit for your contribution outside of git, please add your name and email address (optional) to the CONTRIBUTORS.txt file. All contributions should follow the [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) coding standards.
 
-### Contributing Documentation
+## Contributing Documentation
 If you would like to contribute to the documentation, please feel free to update the [wiki](https://github.com/jamesiarmes/php-ews/wiki). I request that you do not make changes to the home page but other pages (including new ones) are fair game. Please leave a descriptive log message for any changes that you make.
-
-### Other Contributions
-Have you found this library helpful? Why not take a minute to endorse my hard work on [coderwall](http://coderwall.com)! Just click the badge below:
 
 [![Build Status](https://travis-ci.org/Garethp/php-ews.svg?branch=master)](https://travis-ci.org/Garethp/php-ews)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/garethp/php-ews/badges/quality-score.png)](https://scrutinizer-ci.com/g/garethp/php-ews/?branch=master)

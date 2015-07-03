@@ -14,6 +14,21 @@ use jamesiarmes\PEWS\API\Enumeration;
  */
 class API extends BaseAPI
 {
+    protected $_folderId;
+
+    public function pickCalendarToUse($displayName='default.calendar')
+    {
+        if($displayName == 'default.calendar') {
+            $folder = $this->getFolderByDistinguishedId('calendar');
+        }
+        else {
+            $folder = $this->getFolderByDisplayName($displayName, 'calendar');
+        }
+
+        $this->_folderId = $folder->FolderId;
+        return $this;
+    }
+
     /**
      * Create one or more calendar items
      *
@@ -22,8 +37,19 @@ class API extends BaseAPI
      */
     public function createCalendarItems($items)
     {
+        //If the item passed in is an object, or if it's an assosiative array waiting to be an object, let's put it in to an array
+        if(!is_array($items) || Type::arrayIsAssoc($items)) {
+            $items = array($items);
+        }
+
+
         $item = array('CalendarItem'=>$items);
-        $options = array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE);
+        $options = array(
+            'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
+            'SavedItemFolderId' => array(
+                'FolderId' => array('Id' => $this->_folderId->Id)
+            )
+        );
         $response = $this->createItems($item, $options);
 
         return $response;
@@ -36,7 +62,7 @@ class API extends BaseAPI
      */
     public function getCalendarFolder()
     {
-        $folder = $this->getFolder('calendar');
+        $folder = $this->getFolderByFolderId($this->_folderId->Id);
         return $folder->CalendarFolder;
     }
 
@@ -50,10 +76,6 @@ class API extends BaseAPI
      */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
-        $folder = $this->getCalendarFolder();
-        $folderId = $folder->FolderId->Id;
-        $changeKey = $folder->FolderId->ChangeKey;
-
         $start = new \DateTime($start);
         $end = new \DateTime($end);
 
@@ -68,9 +90,10 @@ class API extends BaseAPI
                 'EndDate' => $end->format('c')
             ),
             'ParentFolderIds' => array(
-                'Id' => $folderId,
-                'ChangeKey' => $changeKey,
-                'DistinguishedFolderId' => array('Id'=>'calendar')
+                'FolderId' => array(
+                    'Id' => $this->_folderId->Id,
+                    'ChangeKey' => $this->_folderId->ChangeKey
+                )
             )
         );
 
@@ -90,6 +113,6 @@ class API extends BaseAPI
      */
     public function listChanges($syncState = null, $options = array())
     {
-        return $this->listChanges('calendar', $syncState, $options);
+        return parent::listChanges($this->_folderId->Id, $syncState, $options);
     }
 }
