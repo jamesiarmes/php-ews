@@ -82,10 +82,10 @@ class APITest extends PHPUnit_Framework_TestCase
     /**
      * Test that the syncFolderItems() function passes the correct arguments to it's client
      *
-     * @dataProvider syncFolderItemsProvider
+     * @dataProvider listChangesProvider
      * @param $input
      */
-    public function testSyncFolderItems($input, $expected)
+    public function testListChanges($input, $expected)
     {
         //Build our expected items, and our mocked API Client
         $expected = Type::buildFromArray($expected);
@@ -103,7 +103,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClientMock();
         $client->setClient($ews);
 
-        call_user_func_array(array($client, 'syncFolderItems'), $input);
+        call_user_func_array(array($client, 'listChanges'), $input);
     }
 
     /**
@@ -111,7 +111,7 @@ class APITest extends PHPUnit_Framework_TestCase
      *
      * @return array
      */
-    public function syncFolderItemsProvider()
+    public function listChangesProvider()
     {
         return array(
             //Test that default behavior works as expected

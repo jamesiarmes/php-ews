@@ -115,7 +115,7 @@ class BaseAPI
      * @param array $options
      * @return mixed
      */
-    public function syncFolderItems($folderId, $syncState = null, $options = array())
+    public function listChanges($folderId, $syncState = null, $options = array())
     {
         $request = array(
             'ItemShape' => array('BaseShape' => 'IdOnly'),
