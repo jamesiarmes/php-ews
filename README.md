@@ -38,7 +38,7 @@ The request objects are build similar to the XML body of the request. See the re
 # Simple Library Usage
 There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
 
-## Creating the API
+### Creating the API
 ```php
 use jamesiarmes\PEWS\Calendar\API;
 
@@ -46,7 +46,7 @@ $api = new API();
 $api->buildClient('server', 'username', 'password');
 ```
 
-## Choosing which calendar to use
+### Choosing which calendar to use
 By default the Calendar API will try to use the default Calendar, but you can set it to use any Calendar of yours that you want: As such
 
 ```php
@@ -59,7 +59,7 @@ $api->pickCalendarToUse('Second Calendar');
 $api->getCalendarItems();
 ```
 
-## Creating Calendar Items
+### Creating Calendar Items
 ```php
 $start = new DateTime('8:00 AM');
 $end = new DateTime('9:00 AM');
@@ -71,7 +71,7 @@ $response = $api->createCalendarItems(array(
 ));
 ```
 
-## Get a list of Calendar Items
+### Get a list of Calendar Items
 The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
 ```php
 //Get all items for today
@@ -87,7 +87,7 @@ $api->getCalendarItems('8:00 AM', '5:00 PM')
 $api->getCalendarItems('31/05/2015', '31/06/2015');
 ```
 
-## Get a list of changes
+### Get a list of changes
 ```php
 //Get the initial list of Items
 $changes = $api->listChanges();
@@ -202,10 +202,10 @@ All questions should use the [issue queue](https://github.com/jamesiarmes/php-ew
 # Contributions
 Contributions are always welcome!
 
-## Contributing Code
+### Contributing Code
 If you would like to contribute code please fork the repository on [github](https://github.com/jamesiarmes/php-ews) and issue a pull request against the master branch. It is recommended that you make any changes to your fork in a separate branch that you would then use for the pull request. If you would like to receive credit for your contribution outside of git, please add your name and email address (optional) to the CONTRIBUTORS.txt file. All contributions should follow the [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) coding standards.
 
-## Contributing Documentation
+### Contributing Documentation
 If you would like to contribute to the documentation, please feel free to update the [wiki](https://github.com/jamesiarmes/php-ews/wiki). I request that you do not make changes to the home page but other pages (including new ones) are fair game. Please leave a descriptive log message for any changes that you make.
 
 [![Build Status](https://travis-ci.org/Garethp/php-ews.svg?branch=master)](https://travis-ci.org/Garethp/php-ews)
