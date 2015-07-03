@@ -131,15 +131,16 @@ $response = $ews->CreateItem($request);
 ## Simple Library Usage
 There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
 
+### Creating the API
 ```php
 use jamesiarmes\PEWS\Calendar\API;
 
 $api = new API();
 $api->buildClient('server', 'username', 'password');
+```
 
-$firstSync = $api->getListOfChanges();
-$syncState = $firstSync->SyncState;
-
+### Creating Calendar Items
+```php
 $start = new DateTime('8:00 AM');
 $end = new DateTime('9:00 AM');
 
@@ -148,8 +149,33 @@ $response = $api->createCalendarItems(array(
     'Start' => $start->format('c'),
     'End' => $end->format('c')
 ));
+```
 
-$changes = $api->listChanges($syncState);
+### Get a list of Calendar Items
+The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
+```php
+//Get all items for today
+$api->getCalendarItems();
+
+//Get all items from midday today
+$api->getCalendarItems('12:00 PM');
+
+//Get all items from 8AM to 5PM
+$api->getCalendarItems('8:00 AM', '5:00 PM')
+
+//Get a list of items in a Date Range
+$api->getCalendarItems('31/05/2015', '31/06/2015');
+```
+
+### Get a list of changes
+```php
+//Get the initial list of Items
+$changes = $api->listChanges();
+
+//We use this to keep track of when we last asked for items
+$syncState = $changes->SyncState;
+
+$changesSinceLsatCheck = $api->listChanges($syncState);
 ```
 
 ## Resources
