@@ -104,6 +104,9 @@ class Calendar extends API
         if(!isset($items->CalendarItem))
             return array();
 
+        if(!is_array($items->CalendarItem))
+            $items->CalendarItem = array($items->CalendarItem);
+
         return $items->CalendarItem;
     }
 
