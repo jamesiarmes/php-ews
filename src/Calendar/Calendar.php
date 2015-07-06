@@ -106,11 +106,13 @@ class Calendar extends API
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
         $items = $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items;
-        if(!isset($items->CalendarItem))
+        if (!isset($items->CalendarItem)) {
             return array();
+        }
 
-        if(!is_array($items->CalendarItem))
+        if (!is_array($items->CalendarItem)) {
             $items->CalendarItem = array($items->CalendarItem);
+        }
 
         return $items->CalendarItem;
     }
@@ -133,8 +135,7 @@ class Calendar extends API
         $constantsFound = array();
 
         //Loop through all URI's to list them in an array
-        foreach($constants as $constant)
-        {
+        foreach ($constants as $constant) {
             $constantName = explode(":", $constant);
             $name = array_pop($constantName);
             $constantsFound[$name] = $constant;
@@ -165,7 +166,7 @@ class Calendar extends API
         //Send
         $response =  $this->updateItems($request, $options);
         $items = $response->ResponseMessages->UpdateItemResponseMessage->Items;
-        if(!is_array($items)) {
+        if (!is_array($items)) {
             $items = array($items);
         }
 
