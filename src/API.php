@@ -26,7 +26,7 @@ class API
      * @param string $name
      * @return Calendar
      */
-    public function getCalendar($name='default.calendar')
+    public function getCalendar($name = 'default.calendar')
     {
         $calendar = new Calendar();
         $calendar->setClient($this->getClient());
@@ -135,7 +135,7 @@ class API
         ));
     }
 
-    public function getFolderByDisplayName($folderName,  $parentFolder='root', $options=array())
+    public function getFolderByDisplayName($folderName, $parentFolder = 'root', $options = array())
     {
         $request = array(
             'Traversal' => 'Shallow',
@@ -155,15 +155,14 @@ class API
         $folders = $response->ResponseMessages->FindFolderResponseMessage->RootFolder->Folders;
         $types = get_object_vars($folders);
 
-        foreach($types as $type) {
-            if(!is_array($type) && is_object($type) && $type->DisplayName == $folderName) {
+        foreach ($types as $type) {
+            if (!is_array($type) && is_object($type) && $type->DisplayName == $folderName) {
                 return $type;
             }
 
-            if(is_array($type)) {
-                foreach($type as $folder)
-                {
-                    if($folder->DisplayName == $folderName) {
+            if (is_array($type)) {
+                foreach ($type as $folder) {
+                    if ($folder->DisplayName == $folderName) {
                         return $folder;
                     }
                 }
@@ -181,7 +180,7 @@ class API
      * @param array $options
      * @return mixed
      */
-    public function listChanges($folderId, $syncState = null, $options = array())
+    public function listItemChanges($folderId, $syncState = null, $options = array())
     {
         $request = array(
             'ItemShape' => array('BaseShape' => 'IdOnly'),

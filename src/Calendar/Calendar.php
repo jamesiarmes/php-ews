@@ -16,12 +16,11 @@ class Calendar extends API
 {
     protected $_folderId;
 
-    public function pickCalendar($displayName='default.calendar')
+    public function pickCalendar($displayName = 'default.calendar')
     {
-        if($displayName == 'default.calendar') {
+        if ($displayName == 'default.calendar') {
             $folder = $this->getFolderByDistinguishedId('calendar')->CalendarFolder;
-        }
-        else {
+        } else {
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
         }
 
@@ -38,7 +37,7 @@ class Calendar extends API
     public function createCalendarItems($items)
     {
         //If the item passed in is an object, or if it's an assosiative array waiting to be an object, let's put it in to an array
-        if(!is_array($items) || Type::arrayIsAssoc($items)) {
+        if (!is_array($items) || Type::arrayIsAssoc($items)) {
             $items = array($items);
         }
 
@@ -113,6 +112,6 @@ class Calendar extends API
      */
     public function listChanges($syncState = null, $options = array())
     {
-        return parent::listChanges($this->_folderId->Id, $syncState, $options);
+        return parent::listItemChanges($this->_folderId->Id, $syncState, $options);
     }
 }
