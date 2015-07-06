@@ -20,25 +20,12 @@ class APITest extends PHPUnit_Framework_TestCase
         $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\Calendar')
             ->shouldDeferMissing();
 
+        $folderId = new \stdClass();
+        $folderId->Id = 'Folder Id';
+        $folderId->ChangeKey = 'Change Key';
+        $mock->shouldReceive('getFolderId')->andReturn($folderId);
+
         return $mock;
-    }
-
-    /**
-     * Test that the createItems() function passes the correct arguments to it's parent
-     */
-    public function testCreateItems()
-    {
-        $api = $this->getClientMock();
-
-        $args = array(
-            array('CalendarItem' => array('Start' => 'Now')),
-            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
-        );
-
-        $api->shouldReceive('createItems')->withArgs($args)->andReturn(true);
-        $api->shouldReceive('createItems')->withAnyArgs()->andReturn(false);
-
-        $this->assertTrue($api->createCalendarItems($args[0]['CalendarItem']));
     }
 
     public function testListChanges()
@@ -77,10 +64,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
         $ews = Mockery::mock($ews)->shouldDeferMissing();
         $ews->shouldReceive('FindItem')->andReturn($response)->once();
-
-        $api->shouldReceive('getCalendarFolder')->andReturn(Type::buildFromArray(array(
-            'FolderId' => array('Id' => 'Id', 'ChangeKey' => 'Key')
-        )));
 
         $api->setClient($ews);
         $items = call_user_func_array(array($api, 'getCalendarItems'), $arguments);

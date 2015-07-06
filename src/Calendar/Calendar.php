@@ -28,7 +28,7 @@ class Calendar extends API
         return $this;
     }
 
-    protected function getFolderId()
+    public function getFolderId()
     {
         return $this->_folderId;
     }
