@@ -100,7 +100,11 @@ class Calendar extends API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        return $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem;
+        $items = $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items;
+        if(!isset($items->CalendarItem))
+            return array();
+
+        return $items->CalendarItem;
     }
 
     /**
