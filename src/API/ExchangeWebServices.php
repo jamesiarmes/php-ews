@@ -16,6 +16,8 @@ use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
  * @method Type FindItem($request)
  * @method Type GetFolder($request)
  * @method Type SyncFolderItems($request)
+ * @method Type FindFolder($request)
+ * @method Type UpdateItem($request)
  */
 class ExchangeWebServices
 {

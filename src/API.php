@@ -14,11 +14,38 @@ use jamesiarmes\PEWS\Calendar\Calendar;
  */
 class API
 {
+    private $_fieldUris;
+
     /**
      * Storing the API client
      * @var ExchangeWebServices
      */
     private $_client;
+
+    public function getFieldUriByName($fieldName)
+    {
+        if (!$this->_fieldUris) {
+            //So, since we have to pass in URI's of everything we update, we need to fetch them
+            $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
+            $constants = $reflection->getConstants();
+            $constantsFound = array();
+
+            //Loop through all URI's to list them in an array
+            foreach ($constants as $constant) {
+                $constantName = explode(":", $constant);
+                $name = array_pop($constantName);
+                $constantsFound[$name] = $constant;
+            }
+
+            $this->_fieldUris = $constantsFound;
+        }
+
+        if (!isset($this->_fieldUris[$fieldName])) {
+            return false;
+        }
+
+        return $this->_fieldUris[$fieldName];
+    }
 
     /**
      * Get a calendar item

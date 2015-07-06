@@ -129,21 +129,9 @@ class Calendar extends API
     {
         $setItemFields = array();
 
-        //So, since we have to pass in URI's of everything we update, we need to fetch them
-        $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
-        $constants = $reflection->getConstants();
-        $constantsFound = array();
-
-        //Loop through all URI's to list them in an array
-        foreach ($constants as $constant) {
-            $constantName = explode(":", $constant);
-            $name = array_pop($constantName);
-            $constantsFound[$name] = $constant;
-        }
-
         //Add each property to a setItemField
         foreach ($changes as $key => $value) {
-            $fullName = $constantsFound[$key];
+            $fullName = $this->getFieldUriByName($key);
 
             $setItemFields[] = array(
                 'FieldURI' => array('FieldURI' => $fullName),
