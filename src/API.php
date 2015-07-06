@@ -138,8 +138,6 @@ class API
 
         $request = Type::buildFromArray($request);
 
-//        var_dump($request->ItemChanges->ItemChange);exit();
-
         return $this->getClient()->UpdateItem($request);
     }
 
