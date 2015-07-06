@@ -138,7 +138,8 @@ class NTLMSoapClient extends SoapClient
             'body' => $request,
             'headers' => $headers,
             'auth' => [ $this->user, $this->password ],
-            'verify' => $this->validate
+            'verify' => $this->validate,
+            'http_errors' => false
         ));
 
         $this->__last_request_headers = $headers;

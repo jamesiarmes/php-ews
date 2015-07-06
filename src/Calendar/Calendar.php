@@ -28,6 +28,11 @@ class Calendar extends API
         return $this;
     }
 
+    protected function getFolderId()
+    {
+        return $this->_folderId;
+    }
+
     /**
      * Create one or more calendar items
      *
@@ -46,7 +51,7 @@ class Calendar extends API
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
             'SavedItemFolderId' => array(
-                'FolderId' => array('Id' => $this->_folderId->Id)
+                'FolderId' => array('Id' => $this->getFolderId()->Id)
             )
         );
         $response = $this->createItems($item, $options);
@@ -61,7 +66,7 @@ class Calendar extends API
      */
     public function getCalendarFolder()
     {
-        $folder = $this->getFolderByFolderId($this->_folderId->Id);
+        $folder = $this->getFolderByFolderId($this->getFolderId()->Id);
         return $folder->CalendarFolder;
     }
 
@@ -90,8 +95,8 @@ class Calendar extends API
             ),
             'ParentFolderIds' => array(
                 'FolderId' => array(
-                    'Id' => $this->_folderId->Id,
-                    'ChangeKey' => $this->_folderId->ChangeKey
+                    'Id' => $this->getFolderId()->Id,
+                    'ChangeKey' => $this->getFolderId()->ChangeKey
                 )
             )
         );
@@ -111,6 +116,63 @@ class Calendar extends API
     }
 
     /**
+     * Updates a calendar item with changes
+     *
+     * @param $id
+     * @param $changeKey
+     * @param $changes
+     * @return mixed
+     */
+    public function updateCalendarItem($id, $changeKey, $changes)
+    {
+        $setItemFields = array();
+
+        //So, since we have to pass in URI's of everything we update, we need to fetch them
+        $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
+        $constants = $reflection->getConstants();
+        $constantsFound = array();
+
+        //Loop through all URI's to list them in an array
+        foreach($constants as $constant)
+        {
+            $constantName = explode(":", $constant);
+            $name = array_pop($constantName);
+            $constantsFound[$name] = $constant;
+        }
+
+        //Add each property to a setItemField
+        foreach ($changes as $key => $value) {
+            $fullName = $constantsFound[$key];
+
+            $setItemFields[] = array(
+                'FieldURI' => array('FieldURI' => $fullName),
+                'CalendarItem' => array($key => $value)
+            );
+        }
+
+        //Create the request
+        $request = array(
+            'ItemChange' => array(
+                'ItemId' => array('Id' => $id, 'ChangeKey' => $changeKey),
+                'Updates' => array('SetItemField' =>$setItemFields)
+            )
+        );
+
+        $options = array(
+            'SendMeetingInvitationsOrCancellations' => 'SendToNone'
+        );
+
+        //Send
+        $response =  $this->updateItems($request, $options);
+        $items = $response->ResponseMessages->UpdateItemResponseMessage->Items;
+        if(!is_array($items)) {
+            $items = array($items);
+        }
+
+        return $items;
+    }
+
+    /**
      * Get a list of changes on the calendar items
      *
      * @param null $syncState
@@ -119,6 +181,6 @@ class Calendar extends API
      */
     public function listChanges($syncState = null, $options = array())
     {
-        return parent::listItemChanges($this->_folderId->Id, $syncState, $options);
+        return parent::listItemChanges($this->getFolderId()->Id, $syncState, $options);
     }
 }

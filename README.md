@@ -102,6 +102,22 @@ $syncState = $changes->SyncState;
 $changesSinceLsatCheck = $calendar->listChanges($syncState);
 ```
 
+### Update an item
+Updating an item requires an Id and ChangeKey, which you would get from creating an item or looking one up
+
+```php
+$item = $calendar->getCalendarItems()[0];
+
+$itemId = $item->ItemId;
+
+$response = $calendar->updateCalendarItem($itemId->Id, $itemId->ChangeKey, array(
+   'Subject' => 'Testing Update 2',
+    'Start' => $newStart->format('c')
+));
+
+$newItemId = $response[0]->CalendarItem->ItemId;
+```
+
 # Manual Usage
 There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
 

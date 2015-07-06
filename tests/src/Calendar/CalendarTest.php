@@ -17,29 +17,10 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function getClientMock()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\API')
+        $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\Calendar')
             ->shouldDeferMissing();
 
         return $mock;
-    }
-
-    /**
-     * Test that the getCalendarFolder() function calls the right function on it's parent class
-     */
-    public function testGetCalendarFolder()
-    {
-        $mock = $this->getClientMock();
-
-        $return = new \stdClass();
-        $return->CalendarFolder = 'test';
-        $mock->shouldReceive('getFolder')->with(Mockery::on(function ($args) {
-        
-            $this->assertEquals('calendar', $args);
-
-            return true;
-        }))->andReturn($return);
-
-        $mock->getCalendarFolder();
     }
 
     /**

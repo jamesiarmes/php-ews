@@ -99,6 +99,23 @@ class API
         return $response;
     }
 
+    public function updateItems($items, $options = array())
+    {
+        $request = array(
+            'ItemChanges' => $items,
+            'MessageDisposition' => 'SaveOnly',
+            'ConflictResolution' => 'AlwaysOverwrite'
+        );
+
+        $request = array_merge($request, $options);
+
+        $request = Type::buildFromArray($request);
+
+//        var_dump($request->ItemChanges->ItemChange);exit();
+
+        return $this->getClient()->UpdateItem($request);
+    }
+
     public function getFolder($identifier)
     {
         $request = array(

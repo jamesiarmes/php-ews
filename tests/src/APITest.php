@@ -12,7 +12,7 @@ class APITest extends PHPUnit_Framework_TestCase
 {
     public function getClientMock()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\BaseAPI')
+        $mock = Mockery::mock('jamesiarmes\PEWS\API')
             ->shouldDeferMissing();
         return $mock;
     }
@@ -85,7 +85,7 @@ class APITest extends PHPUnit_Framework_TestCase
      * @dataProvider listChangesProvider
      * @param $input
      */
-    public function testListChanges($input, $expected)
+    public function testListItemChanges($input, $expected)
     {
         //Build our expected items, and our mocked API Client
         $expected = Type::buildFromArray($expected);
@@ -103,7 +103,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClientMock();
         $client->setClient($ews);
 
-        call_user_func_array(array($client, 'listChanges'), $input);
+        call_user_func_array(array($client, 'listItemChanges'), $input);
     }
 
     /**
@@ -117,7 +117,7 @@ class APITest extends PHPUnit_Framework_TestCase
             //Test that default behavior works as expected
             array(array('test'), array(
                 'ItemShape' => array('BaseShape' => 'IdOnly'),
-                'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'test')),
+                'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
                 'SyncScope' => 'NormalItems',
                 'MaxChangesReturned' => '10'
             )),
@@ -125,7 +125,7 @@ class APITest extends PHPUnit_Framework_TestCase
             //Test that providing a syncState adds that and allows more properties to be returned
             array(array('test', 'someState'), array(
                 'ItemShape' => array('BaseShape' => 'AllProperties'),
-                'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'test')),
+                'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
                 'SyncScope' => 'NormalItems',
                 'MaxChangesReturned' => '10',
                 'SyncState' => 'someState'
@@ -134,7 +134,7 @@ class APITest extends PHPUnit_Framework_TestCase
             //Test that you can override settings
             array(array('test', 'someState', array('MaxChangesReturned'=>20)), array(
                 'ItemShape' => array('BaseShape' => 'AllProperties'),
-                'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'test')),
+                'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
                 'SyncScope' => 'NormalItems',
                 'MaxChangesReturned' => '20',
                 'SyncState' => 'someState'
@@ -143,7 +143,7 @@ class APITest extends PHPUnit_Framework_TestCase
             //Test that even when you send a NULL syncState, you can still override the ItemShape
             array(array('test', null, array('MaxChangesReturned'=>20, 'ItemShape' => array('BaseShape' => 'AllProperties'))), array(
                 'ItemShape' => array('BaseShape' => 'AllProperties'),
-                'SyncFolderId' => array('DistinguishedFolderId' => array('Id' => 'test')),
+                'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
                 'SyncScope' => 'NormalItems',
                 'MaxChangesReturned' => '20'
             ))
