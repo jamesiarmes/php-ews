@@ -148,7 +148,7 @@ class API
         }
 
         $itemIds = array();
-        foreach($items as $item) {
+        foreach ($items as $item) {
             $item = (array) $item;
             $itemIds[] = array(
                 'Id' => $item['Id'],
