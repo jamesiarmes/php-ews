@@ -17,6 +17,15 @@ class APITest extends PHPUnit_Framework_TestCase
         return $mock;
     }
 
+    public function testGetFieldURIByName()
+    {
+        $mock = $this->getClientMock();
+
+        $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject'));
+        $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start'));
+        $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
+    }
+
     /**
      * Test that get and set clients work properly
      */
