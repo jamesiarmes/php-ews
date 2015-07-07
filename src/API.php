@@ -244,7 +244,7 @@ class API
         $folders = $response->ResponseMessages->FindFolderResponseMessage->RootFolder->Folders;
         $types = get_object_vars($folders);
 
-        foreach ($types as $k=>$type) {
+        foreach ($types as $k => $type) {
             if (!is_array($type)) {
                 $type = array($type);
             }
