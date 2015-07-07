@@ -22,26 +22,31 @@ class API
      */
     private $_client;
 
-    public function getFieldUriByName($fieldName, $preferance=NULL)
+    public function setupFieldUris()
+    {
+        //So, since we have to pass in URI's of everything we update, we need to fetch them
+        $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
+        $constants = $reflection->getConstants();
+        $constantsFound = array();
+
+        //Loop through all URI's to list them in an array
+        foreach ($constants as $constant) {
+            $constantName = explode(":", $constant);
+            $name = array_pop($constantName);
+
+            if (!isset($constantsFound[$name])) {
+                $constantsFound[$name] = array();
+            }
+            $constantsFound[$name][] = $constant;
+        }
+
+        $this->_fieldUris = $constantsFound;
+    }
+
+    public function getFieldUriByName($fieldName, $preferance = null)
     {
         if (!$this->_fieldUris) {
-            //So, since we have to pass in URI's of everything we update, we need to fetch them
-            $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
-            $constants = $reflection->getConstants();
-            $constantsFound = array();
-
-            //Loop through all URI's to list them in an array
-            foreach ($constants as $constant) {
-                $constantName = explode(":", $constant);
-                $name = array_pop($constantName);
-
-                if (!isset($constantsFound[$name])) {
-                    $constantsFound[$name] = array();
-                }
-                $constantsFound[$name][] = $constant;
-            }
-
-            $this->_fieldUris = $constantsFound;
+            $this->setupFieldUris();
         }
 
         if (!isset($this->_fieldUris[$fieldName])) {

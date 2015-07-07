@@ -5,7 +5,8 @@
         "ext-curl": "*"
     },
     "scripts": {
-        "cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/"
+        "cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/",
+        "cbf": "./vendor/bin/phpcbf --standard=ruleset.xml -np src/ tests/"
     },
     "autoload": {
         "psr-4": {"jamesiarmes\\PEWS\\": "src/"}
