@@ -122,7 +122,7 @@ class APITest extends PHPUnit_Framework_TestCase
         );
         $expected = Type::buildFromArray($expected);
 
-        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function($request) use ($expected) {
+        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function ($request) use ($expected) {
             $this->assertEquals($expected, $request);
 
             return true;
