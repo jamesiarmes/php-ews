@@ -34,7 +34,7 @@ class APITest extends PHPUnit_Framework_TestCase
                 'Id' => 'calendar'
             )
         );
-        $client->shouldReceive('getFolder')->with(Mockery::on(function($request) use ($expected) {
+        $client->shouldReceive('getFolder')->with(Mockery::on(function ($request) use ($expected) {
             $this->assertEquals($expected, $request);
 
             return true;
