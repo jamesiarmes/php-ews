@@ -244,13 +244,13 @@ class API
         $folders = $response->ResponseMessages->FindFolderResponseMessage->RootFolder->Folders;
         $types = get_object_vars($folders);
 
-        foreach ($types as $type) {
+        foreach ($types as $k=>$type) {
             if (!is_array($type)) {
                 $type = array($type);
             }
 
             foreach ($type as $folder) {
-                if ($folder->DisplayName == $folderName) {
+                if (is_object($folder) && $folder->DisplayName == $folderName) {
                     return $folder;
                 }
             }
