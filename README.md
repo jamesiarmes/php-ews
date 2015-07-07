@@ -144,6 +144,24 @@ $response = $calendar->updateCalendarItem($itemId->Id, $itemId->ChangeKey, array
 $newItemId = $response[0]->CalendarItem->ItemId;
 ```
 
+You can also update the series of a recurring event, if you have it's Master ID (The ID passed back when you first created the series)
+
+```php
+$response = $calendar->updateCalendarItem($masterItem->Id, $masterItem->ChangeKey, array(
+    'Subject' => 'Test Update 2',
+    'Recurrence' => array(
+        'WeeklyRecurrence' => array(
+            'Interval' => 1,
+            'DaysOfWeek' => 'Wednesday'
+        ),
+        'NumberedRecurrence' => array(
+            'StartDate' => $newStart->format('Y-m-d'),
+            'NumberOfOccurrences' => 3
+        )
+    )
+));
+```
+
 ### Deleting an item
 Deleting an item is easy, and only requires the ItemId and ChangeKey
 
