@@ -105,6 +105,32 @@ class APITest extends PHPUnit_Framework_TestCase
         $client->createItems($args[0]['Items'], $args[1]);
     }
 
+    public function testDeleteItems()
+    {
+        $mock = $this->getClientMock();
+        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
+        $ews = Mockery::mock($ews)->shouldDeferMissing();
+        $mock->setClient($ews);
+
+        $expected = array(
+            'ItemIds' => array(
+                'ItemId' => array(
+                    array('Id' => 'Id', 'ChangeKey' => 'ChangeKey')
+                )
+            ),
+            'DeleteType' => 'MoveToDeletedItems'
+        );
+        $expected = Type::buildFromArray($expected);
+
+        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function($request) use ($expected) {
+            $this->assertEquals($expected, $request);
+
+            return true;
+        }))->andReturn(true);
+
+        $mock->deleteItems(array('Id' => 'Id', 'ChangeKey' => 'ChangeKey'));
+    }
+
     /**
      * Test that the syncFolderItems() function passes the correct arguments to it's client
      *

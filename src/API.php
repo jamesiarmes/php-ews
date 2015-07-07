@@ -162,6 +162,7 @@ class API
         );
 
         $request = array_merge($request, $options);
+        $request = Type::buildFromArray($request);
         return $this->getClient()->DeleteItem($request);
     }
 
