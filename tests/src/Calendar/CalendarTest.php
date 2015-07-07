@@ -70,6 +70,33 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals($firstItemName, $items[0]->Subject);
     }
 
+    public function testUpdateCalendarItem()
+    {
+        $mock = $this->getClientMock();
+        $mock->shouldReceive('updateItems')->andReturn(Type::buildFromArray(array(
+            'ResponseMessages' => array(
+                'UpdateItemResponseMessage' => array(
+                    'Items' => 'SomeItem'
+                )
+            )
+        )));
+
+        $response = $mock->updateCalendarItem('Id', 'ChangeKey', array(
+            'Subject' => 'Something',
+            'Start' => 'Now'
+        ));
+
+        $this->assertEquals(array('SomeItem'), $response);
+    }
+
+    public function testDeleteCalendarItem()
+    {
+        $mock = $this->getClientMock();
+        $mock->shouldReceive('deleteItems')->andReturn(true)->once();
+
+        $this->assertEquals(true, $mock->deleteCalendarItem('ItemId', 'ChangeKey'));
+    }
+
     public function getCalendarItemsProvider()
     {
         $firstItem = array(
