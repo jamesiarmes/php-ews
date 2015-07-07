@@ -141,6 +141,30 @@ class API
         return $this->getClient()->UpdateItem($request);
     }
 
+    public function deleteItems($items, $options = array())
+    {
+        if (!is_array($items) || Type::arrayIsAssoc($items)) {
+            $items = array($items);
+        }
+
+        $itemIds = array();
+        foreach($items as $item) {
+            $item = (array) $item;
+            $itemIds[] = array(
+                'Id' => $item['Id'],
+                'ChangeKey' => $item['ChangeKey']
+            );
+        }
+
+        $request = array(
+            'ItemIds' => array('ItemId' => $itemIds),
+            'DeleteType' => 'MoveToDeletedItems'
+        );
+
+        $request = array_merge($request, $options);
+        return $this->getClient()->DeleteItem($request);
+    }
+
     public function getFolder($identifier)
     {
         $request = array(

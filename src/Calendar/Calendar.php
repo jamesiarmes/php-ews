@@ -161,6 +161,16 @@ class Calendar extends API
         return $items;
     }
 
+    public function deleteCalendarItem($itemId, $changeKey)
+    {
+        return $this->deleteItems(array(
+            'Id' => $itemId,
+            'ChangeKey' => $changeKey
+        ), array(
+            'SendMeetingCancellations' => 'SendToNone'
+        ));
+    }
+
     /**
      * Get a list of changes on the calendar items
      *
