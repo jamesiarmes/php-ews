@@ -14,7 +14,7 @@ use jamesiarmes\PEWS\Calendar\Calendar;
  */
 class API
 {
-    private $_fieldUris;
+    private $_fieldUris = array();
 
     /**
      * Storing the API client
@@ -45,7 +45,7 @@ class API
 
     public function getFieldUriByName($fieldName, $preferance = null)
     {
-        if (!$this->_fieldUris) {
+        if (empty($this->_fieldUris)) {
             $this->setupFieldUris();
         }
 
