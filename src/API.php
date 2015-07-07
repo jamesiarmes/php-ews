@@ -189,7 +189,7 @@ class API
             )
         );
 
-        $request = array_merge($request);
+        $request = array_merge($request, $options);
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindFolder($request);
