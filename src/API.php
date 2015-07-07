@@ -245,15 +245,13 @@ class API
         $types = get_object_vars($folders);
 
         foreach ($types as $type) {
-            if (!is_array($type) && is_object($type) && $type->DisplayName == $folderName) {
-                return $type;
+            if (!is_array($type)) {
+                $type = array($type);
             }
 
-            if (is_array($type)) {
-                foreach ($type as $folder) {
-                    if ($folder->DisplayName == $folderName) {
-                        return $folder;
-                    }
+            foreach ($type as $folder) {
+                if ($folder->DisplayName == $folderName) {
+                    return $folder;
                 }
             }
         }
