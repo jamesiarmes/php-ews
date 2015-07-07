@@ -79,6 +79,28 @@ $response = $calendar->createCalendarItems(array(
 ));
 ```
 
+There are also many other options for creating Calendar Items, including creating a recurring item. [Here](https://msdn.microsoft.com/en-us/library/office/aa564765(v=exchg.150).aspx) is documentation on all the options available for the CalendarItem
+
+```php
+$calendar->createCalendarItems(array(
+   'Start' => $start->format('c'),
+    'End' => $end->format('c'),
+    'Subject' => 'Test',
+    'Recurrence' => array(
+        'WeeklyRecurrence' => array(
+            'Interval' => 1,
+            'DaysOfWeek' => 'Tuesday'
+        ),
+        'NumberedRecurrence' => array(
+            'StartDate' => $start->format('Y-m-d'),
+            'NumberOfOccurrences' => 3
+        )
+    )
+));
+```
+
+To read more about creating recurring series, [look here](https://msdn.microsoft.com/en-us/library/office/dn727654(v=exchg.150).aspx)
+
 ### Get a list of Calendar Items
 The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
 ```php
