@@ -26,6 +26,23 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
     }
 
+    public function testGetFolderByDistinguishedId()
+    {
+        $client = $this->getClientMock();
+        $expected = array(
+            'DistinguishedFolderId' => array(
+                'Id' => 'calendar'
+            )
+        );
+        $client->shouldReceive('getFolder')->with(Mockery::on(function($request) use ($expected) {
+            $this->assertEquals($expected, $request);
+
+            return true;
+        }))->andReturn(true)->once();
+
+        $client->getFolderByDistinguishedId('calendar');
+    }
+
     /**
      * Test that get and set clients work properly
      */
