@@ -122,6 +122,13 @@ $response = $calendar->updateCalendarItem($itemId->Id, $itemId->ChangeKey, array
 $newItemId = $response[0]->CalendarItem->ItemId;
 ```
 
+### Deleting an item
+Deleting an item is easy, and only requires the ItemId and ChangeKey
+
+```php
+$calendar->deleteCalendarItem($itemId, $changeKey);
+```
+
 # Manual Usage
 There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
 
