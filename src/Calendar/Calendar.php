@@ -131,7 +131,7 @@ class Calendar extends API
 
         //Add each property to a setItemField
         foreach ($changes as $key => $value) {
-            $fullName = $this->getFieldUriByName($key);
+            $fullName = $this->getFieldUriByName($key, 'calendar');
 
             $setItemFields[] = array(
                 'FieldURI' => array('FieldURI' => $fullName),

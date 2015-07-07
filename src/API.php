@@ -22,7 +22,7 @@ class API
      */
     private $_client;
 
-    public function getFieldUriByName($fieldName)
+    public function getFieldUriByName($fieldName, $preferance=NULL)
     {
         if (!$this->_fieldUris) {
             //So, since we have to pass in URI's of everything we update, we need to fetch them
@@ -34,7 +34,11 @@ class API
             foreach ($constants as $constant) {
                 $constantName = explode(":", $constant);
                 $name = array_pop($constantName);
-                $constantsFound[$name] = $constant;
+
+                if (!isset($constantsFound[$name])) {
+                    $constantsFound[$name] = array();
+                }
+                $constantsFound[$name][] = $constant;
             }
 
             $this->_fieldUris = $constantsFound;
@@ -44,7 +48,20 @@ class API
             return false;
         }
 
-        return $this->_fieldUris[$fieldName];
+        $constants = $this->_fieldUris[$fieldName];
+
+        if (count($constants) == 1) {
+            return $constants[0];
+        }
+
+        foreach ($constants as $constant) {
+            $parts = explode(":", $constant);
+            if ($parts[0] == $preferance) {
+                return $constant;
+            }
+        }
+
+        return $this->_fieldUris[$fieldName][0];
     }
 
     /**
