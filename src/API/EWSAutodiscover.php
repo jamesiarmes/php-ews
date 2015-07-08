@@ -33,6 +33,7 @@ use XMLWriter;
  * @link https://www.testexchangeconnectivity.com/
  *
  * @package php-ews\AutoDiscovery
+ * @codeCoverageIgnore
  */
 class EWSAutodiscover
 {
