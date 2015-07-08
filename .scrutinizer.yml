@@ -1,4 +1,0 @@
-filter:
-    excluded_paths:
-        - src/API/ExchangeWebServices.php
-        - tests/
