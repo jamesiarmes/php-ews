@@ -356,6 +356,52 @@ class ExchangeWebServices
             throw new Exception('SOAP client returned status of ' . $code, $code);
         }
 
-        return $response;
+        if (empty($response) ||
+            empty($response->ResponseMessages)) {
+                throw new \Exception('No response returned');
+        }
+
+        $responseMessage = $response->ResponseMessages;
+        foreach ($responseMessage as $message) {
+            break;
+        }
+
+        $messages = $message;
+        if (!is_array($messages)) {
+            $messages = array($messages);
+        }
+
+        $returnItems = array();
+
+        foreach ($messages as $message) {
+            if ($message->ResponseClass != "Success") {
+                throw new \Exception($message->MessageText);
+            }
+
+            unset($message->ResponseClass);
+            unset($message->ResponseCode);
+
+            $messageItem = get_object_vars($message);
+            reset($messageItem);
+
+            if (key($messageItem) == null) {
+                $returnItems[] = true;
+                continue;
+            }
+
+            $messageItem = $messageItem[key($messageItem)];
+
+            $messageItem = get_object_vars($messageItem);
+            reset($messageItem);
+            $messageItem = $messageItem[key($messageItem)];
+
+            $returnItems[] = $messageItem;
+        }
+
+        if (count($returnItems) == 1) {
+            $returnItems = $returnItems[0];
+        }
+
+        return $returnItems;
     }
 }

@@ -12,14 +12,14 @@ use jamesiarmes\PEWS\API\Enumeration;
  * Class API
  * @package jamesiarmes\PEWS\Calendar
  */
-class Calendar extends API
+class CalendarAPI extends API
 {
     protected $_folderId;
 
     public function pickCalendar($displayName = 'default.calendar')
     {
         if ($displayName == 'default.calendar') {
-            $folder = $this->getFolderByDistinguishedId('calendar')->CalendarFolder;
+            $folder = $this->getFolderByDistinguishedId('calendar');
         } else {
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
         }
@@ -54,9 +54,14 @@ class Calendar extends API
                 'FolderId' => array('Id' => $this->getFolderId()->Id)
             )
         );
-        $response = $this->createItems($item, $options);
 
-        return $response;
+        $items = $this->createItems($item, $options);
+
+        if (!is_array($items)) {
+            $items = array($items);
+        }
+
+        return $items;
     }
 
     /**
@@ -105,7 +110,7 @@ class Calendar extends API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        $items = $response->ResponseMessages->FindItemResponseMessage->RootFolder->Items;
+        $items = $response;
         if (!isset($items->CalendarItem)) {
             return array();
         }
@@ -151,9 +156,7 @@ class Calendar extends API
             'SendMeetingInvitationsOrCancellations' => 'SendToNone'
         );
 
-        //Send
-        $response =  $this->updateItems($request, $options);
-        $items = $response->ResponseMessages->UpdateItemResponseMessage->Items;
+        $items =  $this->updateItems($request, $options);
         if (!is_array($items)) {
             $items = array($items);
         }

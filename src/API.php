@@ -4,7 +4,7 @@ namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\Calendar\Calendar;
+use jamesiarmes\PEWS\Calendar\CalendarAPI;
 
 /**
  * A base class for APIs
@@ -77,7 +77,7 @@ class API
      */
     public function getCalendar($name = 'default.calendar')
     {
-        $calendar = new Calendar();
+        $calendar = new CalendarAPI();
         $calendar->setClient($this->getClient());
         $calendar->pickCalendar($name);
 
@@ -199,7 +199,7 @@ class API
         $request = Type::buildFromArray($request);
 
         $response = $this->getClient()->GetFolder($request);
-        return $response->ResponseMessages->GetFolderResponseMessage->Folders;
+        return $response;
     }
 
     /**
@@ -239,9 +239,8 @@ class API
         $request = array_merge($request, $options);
 
         $request = Type::buildFromArray($request);
-        $response = $this->getClient()->FindFolder($request);
+        $folders = $this->getClient()->FindFolder($request);
 
-        $folders = $response->ResponseMessages->FindFolderResponseMessage->RootFolder->Folders;
         $types = get_object_vars($folders);
 
         foreach ($types as $k => $type) {
@@ -285,6 +284,6 @@ class API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->SyncFolderItems($request);
-        return $response->ResponseMessages->SyncFolderItemsResponseMessage;
+        return $response;
     }
 }

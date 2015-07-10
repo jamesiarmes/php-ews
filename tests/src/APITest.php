@@ -10,14 +10,6 @@ use jamesiarmes\PEWS\API\Enumeration;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
-    public function getClientMock()
-    {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API')
-            ->shouldDeferMissing();
-
-        return $mock;
-    }
-
     public function testGetFieldURIByName()
     {
         $mock = $this->getClientMock();
@@ -28,6 +20,14 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals('task:Recurrence', $mock->getFieldURIByName('Recurrence', 'task'));
         $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'somePreference'));
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
+    }
+
+    public function getClientMock()
+    {
+        $mock = Mockery::mock('jamesiarmes\PEWS\API')
+            ->shouldDeferMissing();
+
+        return $mock;
     }
 
     public function testGetFolderByDistinguishedId()
@@ -169,7 +169,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $ews = Mockery::mock($ews)->shouldDeferMissing();
 
         //Our function expects a certain format returned, this creates that format
-        $trueReturn = Type::buildFromArray(array('ResponseMessages' => array('SyncFolderItemsResponseMessage' => true)));
+        $trueReturn = Type::buildFromArray(['ResponseMessages' => ['SyncFolderItemsResponseMessage' => true]]);
 
         $ews->shouldReceive('SyncFolderItems')->with(Mockery::on(function ($arg) use ($expected) {
             $this->assertEquals($expected, $arg);
@@ -265,7 +265,8 @@ class APITest extends PHPUnit_Framework_TestCase
         );
 
         $secondResponse = $responseMessageTemplate;
-        $secondResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem'] = $calendarFolder;
+        $secondResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem']
+            = $calendarFolder;
 
         $thirdResponse = $responseMessageTemplate;
         $thirdResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem'] = array(
