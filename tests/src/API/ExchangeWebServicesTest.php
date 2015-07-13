@@ -8,6 +8,7 @@
 
 namespace jamesiarmes\PEWS\API\Test;
 
+use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
 use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
@@ -66,6 +67,24 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('test', $client->getVersion());
     }
 
+    /**
+     * @dataProvider processResponseFailProvider
+     * @expectedException \Exception
+     */
+    public function testProcessResponseFail($input)
+    {
+        $mockClient = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
+            ->shouldDeferMissing();
+
+        $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
+        $mockClient->shouldReceive('getResponseCode')->andReturn(400)->once();
+
+        $client = $this->getClientMock();
+        $client->setClient($mockClient);
+
+        $response = $client->processResponse($input);
+    }
+
     public function testProcessResponse()
     {
         $mockClient = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
@@ -77,13 +96,22 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $client = $this->getClientMock();
         $client->setClient($mockClient);
 
-        $this->assertEquals('test', $client->processResponse('test'));
+        $response = array(
+            'ResponseMessages' => array(
+                'Message' => array(
+                    'ResponseClass' => 'Success',
+                    'SomeItemResponseMessage' => array(
+                        'SomeItem' => array(
+                            'Key' => 'Value'
+                        )
+                    )
+                )
+            )
+        );
 
-        try {
-            $client->processResponse('test');
-            $this->fail('Expected exception for non-200 response code');
-        } catch (\Exception $e) {
-        }
+        $response = json_decode(json_encode($response), false);
+
+        $this->assertEquals('Value', $client->processResponse($response)->Key);
     }
 
     public function testClientInitialisation()
@@ -134,6 +162,25 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
             array('https://test.com/ews/', 'test.com/ews'),
             array('https://test.com:9000/ews', 'test.com:9000/ews'),
             array('https://user:pass@test.com:9000/ews', 'test.com:9000/ews')
+        );
+    }
+
+    public function processResponseFailProvider()
+    {
+        $secondResponse = array(
+            'ResponseMessages' => array(
+                'Message' => array(
+                    'ResponseClass' => 'Error',
+                    'MessageText' => 'Some Text'
+                )
+            )
+        );
+
+        $secondResponse = json_decode(json_encode($secondResponse), false);
+
+        return array(
+            array(false),
+            array($secondResponse)
         );
     }
 }
