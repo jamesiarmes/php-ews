@@ -73,7 +73,7 @@ class API
      * Get a calendar item
      *
      * @param string $name
-     * @return Calendar
+     * @return CalendarAPI
      */
     public function getCalendar($name = 'default.calendar')
     {

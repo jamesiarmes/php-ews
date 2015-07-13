@@ -63,6 +63,21 @@ class NTLMSoapClient extends SoapClient
 
     protected $_responseCode;
 
+    public function __call($name, $args)
+    {
+        if ($name == "DeleteItem") {
+            $header = $this->__default_headers[1];
+            unset($this->__default_headers[1]);
+
+            $return = parent::__call($name, $args);
+            $this->__default_headers[1] = $header;
+
+            return $return;
+        }
+
+        return parent::__call($name, $args);
+    }
+
     /**
      * Constructor
      *
