@@ -247,17 +247,11 @@ class APITest extends PHPUnit_Framework_TestCase
         ));
 
         $responseMessageTemplate = array(
-            'ResponseMessages' => array(
-                'FindFolderResponseMessage' => array(
-                    'RootFolder' => array(
-                        'Folders' => array('FolderItem' => array())
-                    )
-                )
-            )
+                'FolderItem' => array()
         );
 
         $firstResponse = $responseMessageTemplate;
-        $firstResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem'] = array(
+        $firstResponse['FolderItem'] = array(
             Type::buildFromArray(array(
                 'DisplayName' => 'Inbox'
             )),
@@ -265,11 +259,11 @@ class APITest extends PHPUnit_Framework_TestCase
         );
 
         $secondResponse = $responseMessageTemplate;
-        $secondResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem']
+        $secondResponse['FolderItem']
             = $calendarFolder;
 
         $thirdResponse = $responseMessageTemplate;
-        $thirdResponse['ResponseMessages']['FindFolderResponseMessage']['RootFolder']['Folders']['FolderItem'] = array(
+        $thirdResponse['FolderItem'] = array(
             Type::buildFromArray(array(
                 'DisplayName' => 'Inbox'
             ))
