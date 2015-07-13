@@ -119,6 +119,21 @@ class ExchangeWebServices
     protected $version;
 
     /**
+     * The timezone for the client
+     *
+     * @var bool
+     */
+    protected $timezone = false;
+
+    /**
+     * @param boolean $timezone
+     */
+    public function setTimezone($timezone)
+    {
+        $this->timezone = $timezone;
+    }
+
+    /**
      * Constructor for the ExchangeWebServices class
      *
      * @param string $server
@@ -331,6 +346,7 @@ class ExchangeWebServices
                 'impersonation' => $this->impersonation,
                 'trace' => '1',
                 'exceptions' => true,
+                'timezone' => $this->timezone
             )
         );
 

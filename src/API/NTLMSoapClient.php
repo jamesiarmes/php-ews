@@ -98,6 +98,20 @@ class NTLMSoapClient extends SoapClient
             );
         }
 
+        if (!empty($options['timezone'])) {
+            $this->__default_headers[] = new SoapHeader(
+                'http://schemas.microsoft.com/exchange/services/2006/types',
+                'TimeZoneContext',
+                array(
+                    'TimeZoneDefinition' => array(
+                        'Id' => $options['timezone']
+                    )
+                )
+            );
+
+            unset($options['timezone']);
+        }
+
         parent::__construct($wsdl, $options);
     }
 
