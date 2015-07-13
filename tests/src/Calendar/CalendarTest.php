@@ -17,7 +17,7 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function getClientMock()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\Calendar')
+        $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\CalendarAPI')
             ->shouldDeferMissing();
 
         $folderId = new \stdClass();
@@ -67,19 +67,16 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $api->setClient($ews);
         $items = call_user_func_array(array($api, 'getCalendarItems'), $arguments);
+
         $this->assertEquals($firstItemName, $items[0]->Subject);
     }
 
     public function testUpdateCalendarItem()
     {
         $mock = $this->getClientMock();
-        $mock->shouldReceive('updateItems')->andReturn(Type::buildFromArray(array(
-            'ResponseMessages' => array(
-                'UpdateItemResponseMessage' => array(
-                    'Items' => 'SomeItem'
-                )
-            )
-        )));
+        $mock->shouldReceive('updateItems')->andReturn(array(
+            'SomeItem'
+        ));
 
         $response = $mock->updateCalendarItem('Id', 'ChangeKey', array(
             'Subject' => 'Something',
@@ -125,25 +122,17 @@ class APITest extends PHPUnit_Framework_TestCase
         $secondItem['End'] = '2015-07-03T08:00:00Z';
 
         $responseTemplate = Type::buildFromArray(array(
-            'ResponseMessages' => array(
-                'FindItemResponseMessage' => array(
-                    'RootFolder' => array(
-                        'Items' => array(
                             'CalendarItem' => array()
-                        )
-                    )
-                )
-            )
-        ));
+                        ));
 
         $firstResponse = clone $responseTemplate;
-        $firstResponse->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem = array(Type::buildFromArray($firstItem), Type::buildFromArray($secondItem));
+        $firstResponse->CalendarItem = array(Type::buildFromArray($firstItem), Type::buildFromArray($secondItem));
 
         $secondResponse = clone $responseTemplate;
-        $secondResponse->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem = array(Type::buildFromArray($firstItem));
+        $secondResponse->CalendarItem = array(Type::buildFromArray($firstItem));
 
         $thirdResponse = clone $responseTemplate;
-        $thirdResponse->ResponseMessages->FindItemResponseMessage->RootFolder->Items->CalendarItem = array(Type::buildFromArray($secondItem));
+        $thirdResponse->CalendarItem = array(Type::buildFromArray($secondItem));
 
         return array(
             array( array(), $firstResponse, 'Test'),

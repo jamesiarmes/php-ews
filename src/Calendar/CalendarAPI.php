@@ -46,7 +46,6 @@ class CalendarAPI extends API
             $items = array($items);
         }
 
-
         $item = array('CalendarItem'=>$items);
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,

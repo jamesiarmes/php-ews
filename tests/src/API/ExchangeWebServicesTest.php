@@ -15,6 +15,11 @@ use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
 
 class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        Mockery::close();
+    }
+
     public function getClientMock()
     {
         $mock = Mockery::mock('jamesiarmes\PEWS\API\ExchangeWebServices')->shouldDeferMissing();
@@ -77,7 +82,6 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
             ->shouldDeferMissing();
 
         $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
-        $mockClient->shouldReceive('getResponseCode')->andReturn(400)->once();
 
         $client = $this->getClientMock();
         $client->setClient($mockClient);
@@ -91,7 +95,6 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
             ->shouldDeferMissing();
 
         $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
-        $mockClient->shouldReceive('getResponseCode')->andReturn(400)->once();
 
         $client = $this->getClientMock();
         $client->setClient($mockClient);
