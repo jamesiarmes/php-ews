@@ -36,7 +36,12 @@ class APITest extends PHPUnit_Framework_TestCase
     {
         if (self::$mode == 'record') {
             $saveDir = getcwd() . '/Resources/recordings';
-            file_put_contents($saveDir . '/saveState.json', json_encode(self::$callList));
+            $recordings = json_decode(file_get_contents($saveDir . '/saveState.json'), true);
+
+            foreach (self::$callList as $name => $value) {
+                $recordings[$name] = $value;
+            }
+            file_put_contents($saveDir . '/saveState.json', json_encode($recordings));
         }
     }
 
