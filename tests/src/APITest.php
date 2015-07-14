@@ -108,7 +108,7 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function testGetFieldURIByName()
     {
-        $mock = $this->getClientMock();
+        $mock = $this->getClient();
 
         $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject'));
         $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start'));
@@ -116,14 +116,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals('task:Recurrence', $mock->getFieldURIByName('Recurrence', 'task'));
         $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'somePreference'));
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
-    }
-
-    public function getClientMock()
-    {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API')
-            ->shouldDeferMissing();
-
-        return $mock;
     }
 
     public function getClient()
@@ -154,10 +146,10 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testClientGetSet()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //By default the client should be null
-        $this->assertNull($client->getClient());
+        $this->assertInstanceOf('jamesiarmes\PEWS\API\ExchangeWebServices', $client->getClient());
 
         //Set client should just let us set anything at this point
         $client->setClient('test');
@@ -169,7 +161,7 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testBuildClient()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //Create our expected item, get our class to build our item, then compare
         $expected = new ExchangeWebServices('test.com', 'username', 'password',
@@ -208,29 +200,51 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function testDeleteItems()
     {
-        $mock = $this->getClientMock();
-        $ews = new ExchangeWebServices('test.com', 'username', 'password',
-            ['version' => ExchangeWebServices::VERSION_2010]);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
-        $mock->setClient($ews);
+        $start = new \DateTime();
 
-        $expected = array(
-            'ItemIds' => array(
-                'ItemId' => array(
-                    array('Id' => 'Id', 'ChangeKey' => 'ChangeKey')
-                )
+        $client = $this->getClient();
+        //This is the arguments that we will pass in, and check against
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
             ),
-            'DeleteType' => 'MoveToDeletedItems'
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
         );
-        $expected = Type::buildFromArray($expected);
 
-        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function ($request) use ($expected) {
-            $this->assertEquals($expected, $request);
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $this->assertTrue($client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']));
+    }
 
-            return true;
-        }))->andReturn(true);
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage The specified object was not found in the store
+     */
+    public function testDeleteItemsFail()
+    {
+        $client = $this->getClient();
+        $start = new \DateTime();
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+            ),
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
+        );
 
-        $mock->deleteItems(array('Id' => 'Id', 'ChangeKey' => 'ChangeKey'));
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
