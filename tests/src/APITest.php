@@ -20,6 +20,14 @@ class APITest extends PHPUnit_Framework_TestCase
     private static $callList = [];
     private static $mode = 'playback';
 
+    public static function setUpBeforeClass()
+    {
+        $mode = getenv('HttpPlayback');
+        if ($mode !== false) {
+            self::$mode = $mode;
+        }
+    }
+
     public function setUp()
     {
         $this->setUpHttpClient();
