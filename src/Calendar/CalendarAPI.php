@@ -121,6 +121,11 @@ class CalendarAPI extends API
         return $items->CalendarItem;
     }
 
+    public function getCalendarItem($id, $changeKey)
+    {
+        return $this->getItem([ 'Id' => $id, 'ChangeKey' => $changeKey ]);
+    }
+
     /**
      * Updates a calendar item with changes
      *

@@ -265,6 +265,16 @@ class API
         return false;
     }
 
+    public function getItem($itemId)
+    {
+        $request = array(
+            'ItemShape' => array('BaseShape' => 'AllProperties'),
+            'ItemIds' => array('ItemId' => $itemId)
+        );
+
+        return $this->getClient()->GetItem($request);
+    }
+
     /**
      * Get a list of sync changes on a folder
      *
