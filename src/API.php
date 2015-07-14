@@ -22,6 +22,26 @@ class API
      */
     private $_client;
 
+    private $httpClient;
+
+    /**
+     * Set the HttpClient to use
+     *
+     * @param $httpClient
+     * @return $this
+     */
+    public function setHttpClient($httpClient)
+    {
+        $this->httpClient = $httpClient;
+        $client = $this->getClient();
+
+        if ($client != null) {
+            $client->setHttpClient($this->httpClient);
+        }
+
+        return $this;
+    }
+
     public function setupFieldUris()
     {
         //So, since we have to pass in URI's of everything we update, we need to fetch them
@@ -126,6 +146,7 @@ class API
         $client = new ExchangeWebServices($server, $username, $password, $version);
         $client->setTimezone($timezone);
         $this->setClient($client);
+        $this->setHttpClient($this->httpClient);
 
         return $this;
     }

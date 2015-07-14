@@ -61,6 +61,8 @@ class NTLMSoapClient extends SoapClient
 
     protected $__last_request_headers;
 
+    protected $mode = 'record';
+
     protected $_responseCode;
 
     public function __call($name, $args)
@@ -131,14 +133,34 @@ class NTLMSoapClient extends SoapClient
     }
 
     /**
+     * @var GuzzleHttp\Client
+     */
+    private $client;
+
+    /**
      * Get the client for making calls
      *
      * @return GuzzleHttp\Client
      */
-    public function getClient()
+    public function getHttpClient()
     {
-        $client = new GuzzleHttp\Client();
-        return $client;
+        if ($this->client == null) {
+            $this->client = new GuzzleHttp\Client();
+        }
+
+        return $this->client;
+    }
+
+    /**
+     * Sets the client
+     *
+     * @param GuzzleHttp\Client $client
+     * @return $this
+     */
+    public function setHttpClient($client)
+    {
+        $this->client = $client;
+        return $this;
     }
 
     /**
@@ -162,7 +184,7 @@ class NTLMSoapClient extends SoapClient
             'SOAPAction' => $action,
         );
 
-        $client = $this->getClient();
+        $client = $this->getHttpClient();
         $response = $client->post($location, array(
             'body' => $request,
             'headers' => $headers,
