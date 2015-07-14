@@ -118,6 +118,8 @@ class ExchangeWebServices
      */
     protected $version;
 
+    protected $options;
+
     /**
      * The timezone for the client
      *
@@ -139,19 +141,23 @@ class ExchangeWebServices
      * @param string $server
      * @param string $username
      * @param string $password
-     * @param string $version one of the ExchangeWebServices::VERSION_* constants
+     * @param array $options
      */
     public function __construct(
         $server = null,
         $username = null,
         $password = null,
-        $version = self::VERSION_2007
+        $options = [ ]
     ) {
+        $options = array_merge(['version' => self::VERSION_2007], $options);
+
         // Set the object properties.
         $this->setServer($server);
         $this->setUsername($username);
         $this->setPassword($password);
-        $this->setVersion($version);
+        $this->setVersion($options['version']);
+
+        $this->options = $options;
     }
 
     /**
@@ -328,6 +334,7 @@ class ExchangeWebServices
     public function setVersion($version)
     {
         $this->version = $version;
+        $this->options['version'] = $version;
 
         return $this;
     }
@@ -349,21 +356,25 @@ class ExchangeWebServices
      */
     protected function initializeClient()
     {
+        $options = array (
+            'user' => $this->username,
+            'password' => $this->password,
+            'version' => $this->version,
+            'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
+            'impersonation' => $this->impersonation,
+            'trace' => '1',
+            'exceptions' => true
+        );
+
+        $options = array_merge($options, $this->options);
+
         $client = new Exchange(
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
-            array(
-                'user' => $this->username,
-                'password' => $this->password,
-                'version' => $this->version,
-                'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-                'impersonation' => $this->impersonation,
-                'trace' => '1',
-                'exceptions' => true,
-                'timezone' => $this->timezone
-            )
+            $options
         );
 
         $this->setClient($client);
+
         return $this;
     }
 

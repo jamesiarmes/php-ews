@@ -129,6 +129,10 @@ class NTLMSoapClient extends SoapClient
             unset($options['timezone']);
         }
 
+        if (!empty($options['httpClient'])) {
+            $this->setHttpClient($options['httpClient']);
+        }
+
         parent::__construct($wsdl, $options);
     }
 
