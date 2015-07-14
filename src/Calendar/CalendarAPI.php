@@ -90,7 +90,7 @@ class CalendarAPI extends API
         $request = array(
             'Traversal' => 'Shallow',
             'ItemShape' => array(
-                'BaseShape' => 'Default'
+                'BaseShape' => 'AllProperties'
             ),
             'CalendarView' => array(
                 'MaxEntriesReturned' => 20,
