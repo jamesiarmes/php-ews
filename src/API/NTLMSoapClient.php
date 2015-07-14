@@ -65,9 +65,16 @@ class NTLMSoapClient extends SoapClient
 
     protected $_responseCode;
 
+    /**
+     * @TODO: Make this smarter. It should know and search what headers to remove on what actions
+     *
+     * @param string $name
+     * @param string $args
+     * @return mixed
+     */
     public function __call($name, $args)
     {
-        if ($name == "DeleteItem") {
+        if (($name == "DeleteItem" || $name == "SyncFolderItems") && isset($this->__default_headers[1])) {
             $header = $this->__default_headers[1];
             unset($this->__default_headers[1]);
 

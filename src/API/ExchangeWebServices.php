@@ -429,11 +429,13 @@ class ExchangeWebServices
                 continue;
             }
 
-            $messageItem = $messageItem[key($messageItem)];
+            if (count($messageItem) == 1) {
+                $messageItem = $messageItem[key($messageItem)];
 
-            $messageItem = get_object_vars($messageItem);
-            reset($messageItem);
-            $messageItem = $messageItem[key($messageItem)];
+                $messageItem = get_object_vars($messageItem);
+                reset($messageItem);
+                $messageItem = $messageItem[key($messageItem)];
+            }
 
             $returnItems[] = $messageItem;
         }
