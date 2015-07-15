@@ -16,8 +16,6 @@ trait HttpPlayback
 
     protected static $recordLocation;
 
-    protected $container = [];
-
     private static $shutdownRegistered = false;
 
     /**
@@ -25,12 +23,16 @@ trait HttpPlayback
      */
     private static $client;
 
-    public function setPlaybackOptions($options = [ ])
+    public function setPlaybackOptions($options = [])
     {
-        $options = array_merge([ 'mode' => null ], $options);
+        $options = array_merge(['mode' => null, 'recordLocation' => null], $options);
 
         if ($options['mode'] !== null) {
             self::$mode = $options['mode'];
+        }
+
+        if ($options['recordLocation'] !== null) {
+            self::$mode = $options['recordLocation'];
         }
     }
 
@@ -112,7 +114,7 @@ trait HttpPlayback
             return;
         }
 
-        $saveList = [ ];
+        $saveList = [];
         foreach (self::$callList as $item) {
             /** @var Response $response */
             $response = $item['response'];
