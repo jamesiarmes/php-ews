@@ -108,6 +108,12 @@ class NTLMSoapClient extends SoapClient
      */
     public function __construct($wsdl, $options = array())
     {
+        $options = array_merge([
+            'httpPlayback' => [
+                'mode' => null
+            ]
+        ], $options);
+
         // Verify that a user name and password were entered.
         if (empty($options['user']) || empty($options['password'])) {
             throw new Exception('A username and password is required.');
@@ -155,6 +161,10 @@ class NTLMSoapClient extends SoapClient
         if (!self::$shutdownRegistered) {
             register_shutdown_function(array($this, 'endRecord'));
             self::$shutdownRegistered = true;
+        }
+
+        if ($options['httpPlayback']['mode'] != null) {
+            self::$mode = $options['httpPlayback']['mode'];
         }
 
         parent::__construct($wsdl, $options);
