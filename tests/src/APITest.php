@@ -15,95 +15,41 @@ use GuzzleHttp\Handler\MockHandler;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
-    private $httpClient;
-    private $container;
-    private static $callList = [];
     private static $mode = 'playback';
 
-    public function setUp()
+    public static function setUpBeforeClass()
     {
-        $this->setUpHttpClient();
+        $mode = getenv('HttpPlayback');
+        if ($mode !== false) {
+            self::$mode = $mode;
+        }
     }
 
     public function tearDown()
     {
-        $this->storeCalls();
-
         Mockery::close();
     }
 
-    public static function tearDownAfterClass()
+    public function getClient()
     {
-        if (self::$mode == 'record') {
-            $saveDir = getcwd() . '/Resources/recordings';
-            file_put_contents($saveDir . '/saveState.json', json_encode(self::$callList));
-        }
-    }
+        $client = new API();
+        $client->buildClient(
+            'server',
+            'username',
+            'password',
+            [
+                'httpPlayback' => [
+                    'mode' => self::$mode
+                ]
+            ]
+        );
 
-    public function setUpHttpClient()
-    {
-        $handler = HandlerStack::create();
-
-        if (self::$mode == 'record') {
-            $this->container = [];
-            $history = Middleware::history($this->container);
-            $handler->push($history);
-        } elseif (self::$mode == 'playback') {
-            $name = self::class . "::" . $this->getName();
-            $recordings = $this->getRecordings();
-
-            if (isset($recordings[$name])) {
-                $playList = $recordings[$name];
-                $mockedResponses = [];
-                foreach ($playList as $item) {
-                    $mockedResponses[] = new Response($item['statusCode'], $item['headers'], $item['body']);
-                }
-
-                $mockHandler = new MockHandler($mockedResponses);
-                $handler = HandlerStack::create($mockHandler);
-            }
-
-        }
-
-        $httpClient = new \GuzzleHttp\Client(['handler' => $handler]);
-
-        $this->httpClient = $httpClient;
-    }
-
-    public function storeCalls()
-    {
-        if (self::$mode != 'record') {
-            return;
-        }
-
-        $name = self::class . "::" . $this->getName();
-
-        self::$callList[$name] = [];
-        foreach ($this->container as $item) {
-            /** @var Response $response */
-            $response = $item['response'];
-            self::$callList[$name][] = [
-                'statusCode' => $response->getStatusCode(),
-                'headers' => $response->getHeaders(),
-                'body' => $response->getBody()->__toString()
-            ];
-        }
-
-        $this->container = [ ];
-        return $this;
-    }
-
-    public function getRecordings()
-    {
-        $saveDir = getcwd() . '/Resources/recordings';
-        $recordings = file_get_contents($saveDir . '/saveState.json');
-
-        return json_decode($recordings, true);
+        return $client;
     }
 
     public function testGetFieldURIByName()
     {
-        $mock = $this->getClientMock();
+        $mock = $this->getClient();
 
         $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject'));
         $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start'));
@@ -111,29 +57,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals('task:Recurrence', $mock->getFieldURIByName('Recurrence', 'task'));
         $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'somePreference'));
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
-    }
-
-    public function getClientMock()
-    {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API')
-            ->shouldDeferMissing();
-
-        return $mock;
-    }
-
-    public function getClient()
-    {
-        $client = new API();
-        $client->buildClient(
-            'cas2.multrix.com',
-            'Test.User-True@multrix.com',
-            'hLbP9HiGTZUDcVCbZJjtWjYWZgFfmtKLTrRNnVJx9RViRBFpaL',
-            [
-                'httpClient' => $this->httpClient
-            ]
-        );
-
-        return $client;
     }
 
     public function testGetFolderByDistinguishedId()
@@ -149,10 +72,10 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testClientGetSet()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //By default the client should be null
-        $this->assertNull($client->getClient());
+        $this->assertInstanceOf('jamesiarmes\PEWS\API\ExchangeWebServices', $client->getClient());
 
         //Set client should just let us set anything at this point
         $client->setClient('test');
@@ -164,7 +87,7 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testBuildClient()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //Create our expected item, get our class to build our item, then compare
         $expected = new ExchangeWebServices('test.com', 'username', 'password',
@@ -203,29 +126,51 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function testDeleteItems()
     {
-        $mock = $this->getClientMock();
-        $ews = new ExchangeWebServices('test.com', 'username', 'password',
-            ['version' => ExchangeWebServices::VERSION_2010]);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
-        $mock->setClient($ews);
+        $start = new \DateTime();
 
-        $expected = array(
-            'ItemIds' => array(
-                'ItemId' => array(
-                    array('Id' => 'Id', 'ChangeKey' => 'ChangeKey')
-                )
+        $client = $this->getClient();
+        //This is the arguments that we will pass in, and check against
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
             ),
-            'DeleteType' => 'MoveToDeletedItems'
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
         );
-        $expected = Type::buildFromArray($expected);
 
-        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function ($request) use ($expected) {
-            $this->assertEquals($expected, $request);
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $this->assertTrue($client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']));
+    }
 
-            return true;
-        }))->andReturn(true);
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage The specified object was not found in the store
+     */
+    public function testDeleteItemsFail()
+    {
+        $client = $this->getClient();
+        $start = new \DateTime();
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+            ),
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
+        );
 
-        $mock->deleteItems(array('Id' => 'Id', 'ChangeKey' => 'ChangeKey'));
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
