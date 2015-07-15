@@ -5,6 +5,10 @@ namespace jamesiarmes\PEWS\API;
 use SoapClient;
 use GuzzleHttp;
 use SoapHeader;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\Psr7\Response;
 
 /**
  * Contains NTLMSoapClient.
@@ -61,9 +65,17 @@ class NTLMSoapClient extends SoapClient
 
     protected $__last_request_headers;
 
-    protected $mode = 'record';
+    protected static $mode = 'playback';
+
+    protected static $callList = [];
+
+    protected static $recordLocation;
+
+    protected $container = [];
 
     protected $_responseCode;
+
+    private static $shutdownRegistered = false;
 
     /**
      * @TODO: Make this smarter. It should know and search what headers to remove on what actions
@@ -140,13 +152,18 @@ class NTLMSoapClient extends SoapClient
             $this->setHttpClient($options['httpClient']);
         }
 
+        if (!self::$shutdownRegistered) {
+            register_shutdown_function(array($this, 'endRecord'));
+            self::$shutdownRegistered = true;
+        }
+
         parent::__construct($wsdl, $options);
     }
 
     /**
      * @var GuzzleHttp\Client
      */
-    private $client;
+    private static $client;
 
     /**
      * Get the client for making calls
@@ -155,11 +172,30 @@ class NTLMSoapClient extends SoapClient
      */
     public function getHttpClient()
     {
-        if ($this->client == null) {
-            $this->client = new GuzzleHttp\Client();
+        if (self::$client == null) {
+            $handler = HandlerStack::create();
+
+            if (self::$mode == 'record') {
+                $this->container = [];
+                $history = Middleware::history($this->container);
+                $handler->push($history);
+            } elseif (self::$mode == 'playback') {
+                $recordings = $this->getRecordings();
+
+                $playList = $recordings;
+                $mockedResponses = [];
+                foreach ($playList as $item) {
+                    $mockedResponses[] = new Response($item['statusCode'], $item['headers'], $item['body']);
+                }
+
+                $mockHandler = new MockHandler($mockedResponses);
+                $handler = HandlerStack::create($mockHandler);
+            }
+
+            self::$client = new GuzzleHttp\Client(['handler' => $handler]);
         }
 
-        return $this->client;
+        return self::$client;
     }
 
     /**
@@ -171,6 +207,7 @@ class NTLMSoapClient extends SoapClient
     public function setHttpClient($client)
     {
         $this->client = $client;
+
         return $this;
     }
 
@@ -199,7 +236,7 @@ class NTLMSoapClient extends SoapClient
         $response = $client->post($location, array(
             'body' => $request,
             'headers' => $headers,
-            'auth' => [ $this->user, $this->password ],
+            'auth' => [$this->user, $this->password],
             'verify' => $this->validate,
             'http_errors' => false
         ));
@@ -207,7 +244,9 @@ class NTLMSoapClient extends SoapClient
         $this->__last_request_headers = $headers;
         $this->_responseCode = $response->getStatusCode();
 
-        return $response->getBody()->getContents();
+        $this->recordCalls();
+
+        return $response->getBody()->__toString();
     }
 
     /**
@@ -243,5 +282,55 @@ class NTLMSoapClient extends SoapClient
     public function getResponseCode()
     {
         return $this->_responseCode;
+    }
+
+    public function recordCalls()
+    {
+        if (self::$mode != 'record') {
+            return;
+        }
+
+        foreach ($this->container as $item) {
+            /** @var Response $response */
+            $response = $item['response'];
+            self::$callList[] = [
+                'statusCode' => $response->getStatusCode(),
+                'headers' => $response->getHeaders(),
+                'body' => $response->getBody()->__toString()
+            ];
+        }
+
+        $this->container = [];
+    }
+
+    public static function getRecordLocation()
+    {
+        if (!self::$recordLocation) {
+            $dir = __DIR__;
+            $dirPos = strrpos($dir, "src/API");
+            $dir = substr($dir, 0, $dirPos);
+
+            self::$recordLocation = $dir . 'Resources/recordings/saveState.json';
+        }
+
+        return self::$recordLocation;
+    }
+
+    public static function getRecordings()
+    {
+        $saveLocation = self::getRecordLocation();
+        $records = json_decode(file_get_contents($saveLocation), true);
+
+        return $records;
+    }
+
+    public function endRecord()
+    {
+        if (self::$mode != 'record') {
+            return;
+        }
+
+        $saveLocation = self::getRecordLocation();
+        file_put_contents($saveLocation, json_encode(self::$callList));
     }
 }
