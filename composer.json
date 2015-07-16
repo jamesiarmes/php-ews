@@ -11,7 +11,7 @@
     "autoload": {
         "psr-4": {
             "jamesiarmes\\PEWS\\": "src/",
-            "jamesiarmes\\PEWS\\Test": "tests/src"
+            "jamesiarmes\\PEWS\\Test\\": "tests/src"
         }
     },
     "require-dev": {
