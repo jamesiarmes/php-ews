@@ -75,7 +75,7 @@ class API
      * @param string $name
      * @return CalendarAPI
      */
-    public function getCalendar($name = 'default.calendar')
+    public function getCalendar($name = null)
     {
         $calendar = new CalendarAPI();
         $calendar->setClient($this->getClient());

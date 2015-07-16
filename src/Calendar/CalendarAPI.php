@@ -17,9 +17,9 @@ class CalendarAPI extends API
 {
     protected $_folderId;
 
-    public function pickCalendar($displayName = 'default.calendar')
+    public function pickCalendar($displayName = null)
     {
-        if ($displayName == 'default.calendar') {
+        if ($displayName == 'default.calendar' || $displayName == null) {
             $folder = $this->getFolderByDistinguishedId('calendar');
         } else {
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
