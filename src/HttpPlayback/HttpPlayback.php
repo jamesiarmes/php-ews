@@ -47,7 +47,6 @@ trait HttpPlayback
             $handler = HandlerStack::create();
 
             if (self::$mode == 'record') {
-                $this->container = [];
                 $history = Middleware::history(self::$callList);
                 $handler->push($history);
             } elseif (self::$mode == 'playback') {
@@ -77,7 +76,7 @@ trait HttpPlayback
     /**
      * Sets the client
      *
-     * @param GuzzleHttp\Client $client
+     * @param Client $client
      * @return $this
      */
     public function setHttpClient($client)
