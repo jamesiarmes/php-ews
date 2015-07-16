@@ -95,8 +95,12 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
 
         //Create our expected item, get our class to build our item, then compare
-        $expected = new ExchangeWebServices('test.com', 'username', 'password',
-            ['version' => ExchangeWebServices::VERSION_2010]);
+        $expected = new ExchangeWebServices(
+            'test.com',
+            'username',
+            'password',
+            ['version' => ExchangeWebServices::VERSION_2010]
+        );
         $client->buildClient('test.com', 'username', 'password');
         $actual = $client->getClient();
 
