@@ -1,5 +1,3 @@
-.buildpath
-.project
-.settings/
-tests/
-/nbproject/
+/composer.lock
+/vendor
+.idea/
