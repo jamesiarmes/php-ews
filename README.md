@@ -25,7 +25,7 @@ composer require garethp/php-ews
 The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
 
 ```php
-$ews = new ExchangeWebServices($server, $username, $password, $version);
+$ews = new ExchangeWebServices($server, $username, $password, $options = aray());
 ```
 
 The `ExchangeWebServices` class takes four parameters for its constructor:
@@ -33,7 +33,11 @@ The `ExchangeWebServices` class takes four parameters for its constructor:
 * `$server`: The url to the exchange server you wish to connect to, without the protocol. Example: mail.example.com. If you have trouble determing the correct url, you could try using the [`EWSAutodiscover`](https://github.com/jamesiarmes/php-ews/wiki/Autodiscovery) class.
 * `$username`: The user to connect to the server with. This is usually the local portion of the users email address. Example: "user" if the email address is "user@example.com".
 * `$password`: The user's plain-text password.
-* `$version` (optional): The version of the Exchange sever to connect to. Valid values can be found at `ExchangeWebServices::VERSION_*`. Defaults to Exchange 2007.
+* `$options`: (optional): A group of options to be passed in
+* `$options['version']`: The version of the Exchange sever to connect to. Valid values can be found at `ExchangeWebServices::VERSION_*`. Defaults to Exchange 2007.
+* `$options['timezone']`: A timezone to use for operations. This isn't a PHP Timezone, but a Timezone ID as defined by Exchange. Sorry, I don't have a list for them yet
+* `$options['httpClient']`: If you want to inject your own GuzzleClient for the requests
+* `$options['httpPlayback']`: See the Testing Section
 
 Once you have your `ExchangeWebServices` object, you need to build your request object. The type of object depends on the operation you are calling. If you are using an IDE with code completion it should be able to help you determine the correct classes to use using the provided docblocks.
 
@@ -169,6 +173,12 @@ Deleting an item is easy, and only requires the ItemId and ChangeKey
 $calendar->deleteCalendarItem($itemId, $changeKey);
 ```
 
+Or, you can delete all items between two ranges
+
+```php
+$calendar->deleteAllCalendarItems(new DateTime('8:00 AM'), new DateTime('5:00 PM'));
+```
+
 # Manual Usage
 There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
 
@@ -261,6 +271,54 @@ $request = array(
 $request = Type::buildFromArray($request);
 $response = $ews->CreateItem($request);
 ```
+
+# Testing
+Testing is done simply, and easy, wit the use of my own HttpPlayback functionality. The HttpPlayback functionality
+is basically a built in History and MockResponses Middleware for Guzzle. With a flick of an option, you can either run
+all API calls "live" (Without interference), "record" (Live, but saves all the responses in a file) or "playback" (Use
+the record file for responses, never hitting the exchange server). This way you can write your tests with the intention
+to hit live, record the responses, then use those easily. You can even have different phpunit.xml files to switch between
+them, like this library does. Here's some examples of running the different modes:
+
+```php
+$client = new API();
+$client->buildClient(
+    'server',
+    'user',
+    'password',
+    [
+        'httpPlayback' => [
+            'mode' => 'record',
+            'recordLocation' => __ROOT__ . DS . /recordings.json'
+        ]
+    ]
+);
+
+//Do some API calls here
+```
+
+That will then record al lthe responses to the recordings.json file. Likewise, to play back
+
+```php
+$client = new API();
+$client->buildClient(
+    'server',
+    'user',
+    'password',
+    [
+        'httpPlayback' => [
+            'mode' => 'playback',
+            'recordLocation' => __ROOT__ . DS . /recordings.json'
+        ]
+    ]
+);
+
+//Do some API calls here
+```
+
+And then those calls will play back from the recorded files, allowing you to continuously test all of your logic fully
+without touching the live server, while still allowing you to double check that it really works before release by
+changing the mode option.
 
 # Resources
 * [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
