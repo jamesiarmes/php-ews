@@ -15,16 +15,6 @@ use GuzzleHttp\Handler\MockHandler;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
-    private static $mode = 'playback';
-
-    public static function setUpBeforeClass()
-    {
-        $mode = getenv('HttpPlayback');
-        if ($mode !== false) {
-            self::$mode = $mode;
-        }
-    }
-
     public function tearDown()
     {
         Mockery::close();
@@ -32,14 +22,29 @@ class APITest extends PHPUnit_Framework_TestCase
 
     public function getClient()
     {
+        $mode = getenv('HttpPlayback');
+        if ($mode == false) {
+            $mode = 'playback';
+        }
+
+        $auth = [
+            'server' => 'server',
+            'user' => 'user',
+            'password' => 'password'
+        ];
+
+        if (is_file(getcwd() . '/Resources/auth.json')) {
+            $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
+        }
+
         $client = new API();
         $client->buildClient(
-            'server',
-            'username',
-            'password',
+            $auth['server'],
+            $auth['user'],
+            $auth['password'],
             [
                 'httpPlayback' => [
-                    'mode' => self::$mode
+                    'mode' => $mode
                 ]
             ]
         );

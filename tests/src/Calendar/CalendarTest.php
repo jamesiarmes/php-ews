@@ -1,7 +1,8 @@
 <?php
 
-namespace jamesiarmes\PEWS\Calendar\Test;
+namespace jamesiarmes\PEWS\Test\Calendar;
 
+use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
@@ -10,139 +11,118 @@ use jamesiarmes\PEWS\API\ExchangeWebServices;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
-    /**
-     * Get the mock to test with
-     *
-     * @return Mockery\Mock
-     */
-    public function getClientMock()
+    public function setUp()
     {
-        $mock = Mockery::mock('jamesiarmes\PEWS\Calendar\CalendarAPI')
-            ->shouldDeferMissing();
+        $client = $this->getClient();
+        $client->deleteAllCalendarItems('2015-07-01 00:00', '2015-07-01 23:59');
+    }
 
-        $folderId = new \stdClass();
-        $folderId->Id = 'Folder Id';
-        $folderId->ChangeKey = 'Change Key';
-        $mock->shouldReceive('getFolderId')->andReturn($folderId);
+    public function tearDown()
+    {
+        $client = $this->getClient();
+        $client->deleteAllCalendarItems('2015-07-01 00:00', '2015-07-01 23:59');
+    }
 
-        return $mock;
+    public function getClient()
+    {
+        $mode = getenv('HttpPlayback');
+        if ($mode == false) {
+            $mode = 'playback';
+        }
+
+        $auth = [
+            'server' => 'server',
+            'user' => 'user',
+            'password' => 'password'
+        ];
+
+        if (is_file(getcwd() . '/Resources/auth.json')) {
+            $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
+        }
+
+        $client = new API();
+        $client->buildClient(
+            $auth['server'],
+            $auth['user'],
+            $auth['password'],
+            [
+                'httpPlayback' => [
+                    'mode' => $mode
+                ]
+            ]
+        );
+
+        return $client->getCalendar('Test');
     }
 
     public function testListChanges()
     {
-        $response = new \stdClass();
-        $response->SyncState = 'syncStateString';
-        $response->Changes = new \stdClass();
-        $response->Changes->Create = array();
+        $client = $this->getClient();
+        $changes = $client->listChanges();
 
-        $api = $this->getClientMock();
-        $api->shouldReceive('listChanges')->andReturn($response)->once();
-
-        $syncedResponse = $api->listChanges();
-        $this->assertEquals($response, $syncedResponse);
-
-        $response = new \stdClass();
-        $response->SyncState = 'syncStateString';
-        $response->Changes = new \stdClass();
-        $response->Changes->Updates = array();
-        $api->shouldReceive('listChanges')->withAnyArgs()->andReturn($response)->once();
-
-        $syncedResponse = $api->listChanges($syncedResponse->SyncState);
-        $this->assertEquals($response, $syncedResponse);
+        $this->assertArrayHasKey('SyncState', $changes);
+        $this->assertArrayHasKey('Changes', $changes);
     }
 
     /**
      * @param $arguments
      * @param $response
      * @param $firstItemName
-     * @dataProvider getCalendarItemsProvider
      */
-    public function testGetCalendarItems($arguments, $response, $firstItemName)
+    public function testGetCalendarItems()
     {
-        $api = $this->getClientMock();
+        $client = $this->getClient();
+        $items = $client->getCalendarItems('2015-07-01 00:00', '2015-07-01 23:59');
 
-        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
-        $ews->shouldReceive('FindItem')->andReturn($response)->once();
-
-        $api->setClient($ews);
-        $items = call_user_func_array(array($api, 'getCalendarItems'), $arguments);
-
-        $this->assertEquals($firstItemName, $items[0]->Subject);
+        $this->assertTrue(is_array($items));
+        $this->assertCount(0, $items);
     }
 
     public function testUpdateCalendarItem()
     {
-        $mock = $this->getClientMock();
-        $mock->shouldReceive('updateItems')->andReturn(array(
-            'SomeItem'
+        $start = new \DateTime('2015-07-01 8:00 AM');
+        $end = new \DateTime('2015-07-01 9:00 AM');
+
+        $client = $this->getClient();
+
+        $items = $client->createCalendarItems(array(
+            'Subject' => 'Test Update Calendar Item',
+            'Start' => $start->format('c'),
+            'End' => $end->format('c')
         ));
 
-        $response = $mock->updateCalendarItem('Id', 'ChangeKey', array(
-            'Subject' => 'Something',
-            'Start' => 'Now'
+        $item = $items[0];
+
+        $client->updateCalendarItem($item->ItemId->Id, $item->ItemId->ChangeKey, array(
+            'Subject' => 'Test Updated Calendar Item'
         ));
 
-        $this->assertEquals(array('SomeItem'), $response);
+        $item = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $item = $item[0];
+
+        $this->assertEquals('Test Updated Calendar Item', $item->Subject);
     }
 
     public function testDeleteCalendarItem()
     {
-        $mock = $this->getClientMock();
-        $mock->shouldReceive('deleteItems')->andReturn(true)->once();
+        $start = new \DateTime('2015-07-01 8:00 AM');
+        $end = new \DateTime('2015-07-01 9:00 AM');
 
-        $this->assertEquals(true, $mock->deleteCalendarItem('ItemId', 'ChangeKey'));
-    }
+        $client = $this->getClient();
 
-    public function getCalendarItemsProvider()
-    {
-        $firstItem = array(
-            'ItemId' => array(
-                'Id' => 'AAMkADM0NmE2OGUwLTExMjMtNGRmNi1iM2EyLTRlNDAwYjZiY2E4ZQBGAAAAAABCLJ6ML7uRSqaHiDqP2uccBwD2KQU45YsnQIJ9eQMp5SanAAAAXiNtAAD2KQU45YsnQIJ9eQMp5SanAAAAXnYVAAA=',
-                'ChangeKey' => 'DwAAABYAAAD2KQU45YsnQIJ9eQMp5SanAAAAXn8l'
-            ),
-            'Subject' => 'Test',
-            'HasAttachments' => false,
-            'IsAssociated' => false,
-            'Start' => '2015-07-03T06:00:00Z',
-            'End' => '2015-07-03T07:00:00Z',
-            'LegacyFreeBusyStatus' => 'Busy',
-            'CalendarItemType' => 'Single',
-            'Organizer' => array(
-                'Mailbox' => array(
-                    'Name' => 'Test User',
-                    'MailboxType' => 'OneOff'
-                )
-            )
-        );
+        $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $this->assertEmpty($items);
 
-        $secondItem = $firstItem;
-        $secondItem['Subject'] = 'Test 2';
-        $secondItem['Start'] = '2015-07-03T07:00:00Z';
-        $secondItem['End'] = '2015-07-03T08:00:00Z';
+        $items = $client->createCalendarItems(array(
+            'Subject' => 'Test Update Calendar Item',
+            'Start' => $start->format('c'),
+            'End' => $end->format('c')
+        ));
+        $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $this->assertNotEmpty($items);
 
-        $responseTemplate = Type::buildFromArray(array(
-                            'CalendarItem' => array()
-                        ));
-
-        $firstResponse = clone $responseTemplate;
-        $firstResponse->CalendarItem = array(Type::buildFromArray($firstItem), Type::buildFromArray($secondItem));
-
-        $secondResponse = clone $responseTemplate;
-        $secondResponse->CalendarItem = array(Type::buildFromArray($firstItem));
-
-        $thirdResponse = clone $responseTemplate;
-        $thirdResponse->CalendarItem = array(Type::buildFromArray($secondItem));
-
-        return array(
-            array( array(), $firstResponse, 'Test'),
-            array( array('6:00 AM', '9:00 AM'), $secondResponse, 'Test'),
-            array( array('9:00 AM'), $thirdResponse, 'Test 2')
-        );
-    }
-
-    public function tearDown()
-    {
-        Mockery::close();
+        $client->deleteCalendarItem($items[0]->ItemId->Id, $items[0]->ItemId->ChangeKey);
+        $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $this->assertEmpty($items);
     }
 }
