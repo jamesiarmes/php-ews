@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.3.0 - 2015-07-*
+## 0.3.1 - 2015-07-16
+ * Fixed bug where setting recordLocation sets to mode
+
+## 0.3.0 - 2015-07-16
  * Added Changelog
  * Added `deleteItems($items, $options = array())` and `deleteCalendarItem($itemId, $changeKey)`
  * Added `deleteAllCalendarItems($from = '12:00 AM', $to = '11:59 PM');`

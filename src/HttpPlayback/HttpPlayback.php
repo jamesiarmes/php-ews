@@ -32,7 +32,7 @@ trait HttpPlayback
         }
 
         if ($options['recordLocation'] !== null) {
-            self::$mode = $options['recordLocation'];
+            self::$recordLocation = $options['recordLocation'];
         }
     }
 
