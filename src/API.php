@@ -112,21 +112,19 @@ class API
      * @param $server
      * @param $username
      * @param $password
-     * @param string $timezone
-     * @param string $version
+     * @param array $options
      * @return $this
      */
     public function buildClient(
         $server,
         $username,
         $password,
-        $timezone = null,
-        $version = ExchangeWebServices::VERSION_2010
+        $options = [ ]
     ) {
-        $client = new ExchangeWebServices($server, $username, $password, $version);
-        $client->setTimezone($timezone);
-        $this->setClient($client);
+        $options = array_merge(['version' => ExchangeWebServices::VERSION_2010], $options);
 
+        $client = new ExchangeWebServices($server, $username, $password, $options);
+        $this->setClient($client);
         return $this;
     }
 

@@ -5,6 +5,7 @@ namespace jamesiarmes\PEWS\API;
 use SoapClient;
 use GuzzleHttp;
 use SoapHeader;
+use jamesiarmes\PEWS\HttpPlayback\HttpPlayback;
 
 /**
  * Contains NTLMSoapClient.
@@ -38,6 +39,7 @@ use SoapHeader;
  */
 class NTLMSoapClient extends SoapClient
 {
+    use HttpPlayback;
     /**
      * Username for authentication on the exchnage server
      *
@@ -63,9 +65,16 @@ class NTLMSoapClient extends SoapClient
 
     protected $_responseCode;
 
+    /**
+     * @TODO: Make this smarter. It should know and search what headers to remove on what actions
+     *
+     * @param string $name
+     * @param string $args
+     * @return mixed
+     */
     public function __call($name, $args)
     {
-        if ($name == "DeleteItem") {
+        if (($name == "DeleteItem" || $name == "SyncFolderItems") && isset($this->__default_headers[1])) {
             $header = $this->__default_headers[1];
             unset($this->__default_headers[1]);
 
@@ -87,6 +96,12 @@ class NTLMSoapClient extends SoapClient
      */
     public function __construct($wsdl, $options = array())
     {
+        $options = array_merge([
+            'httpPlayback' => [
+                'mode' => null
+            ]
+        ], $options);
+
         // Verify that a user name and password were entered.
         if (empty($options['user']) || empty($options['password'])) {
             throw new Exception('A username and password is required.');
@@ -127,18 +142,13 @@ class NTLMSoapClient extends SoapClient
             unset($options['timezone']);
         }
 
-        parent::__construct($wsdl, $options);
-    }
+        if (!empty($options['httpClient'])) {
+            $this->setHttpClient($options['httpClient']);
+        }
 
-    /**
-     * Get the client for making calls
-     *
-     * @return GuzzleHttp\Client
-     */
-    public function getClient()
-    {
-        $client = new GuzzleHttp\Client();
-        return $client;
+        $this->setPlaybackOptions($options['httpPlayback']);
+
+        parent::__construct($wsdl, $options);
     }
 
     /**
@@ -162,11 +172,11 @@ class NTLMSoapClient extends SoapClient
             'SOAPAction' => $action,
         );
 
-        $client = $this->getClient();
+        $client = $this->getHttpClient();
         $response = $client->post($location, array(
             'body' => $request,
             'headers' => $headers,
-            'auth' => [ $this->user, $this->password ],
+            'auth' => [$this->user, $this->password],
             'verify' => $this->validate,
             'http_errors' => false
         ));
@@ -174,7 +184,7 @@ class NTLMSoapClient extends SoapClient
         $this->__last_request_headers = $headers;
         $this->_responseCode = $response->getStatusCode();
 
-        return $response->getBody()->getContents();
+        return $response->getBody()->__toString();
     }
 
     /**

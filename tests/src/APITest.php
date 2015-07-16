@@ -2,17 +2,59 @@
 
 namespace jamesiarmes\PEWS\Test;
 
+use GuzzleHttp\Psr7\Response;
+use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Enumeration;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
+use GuzzleHttp\Handler\MockHandler;
 
 class APITest extends PHPUnit_Framework_TestCase
 {
+    public function tearDown()
+    {
+        Mockery::close();
+    }
+
+    public function getClient()
+    {
+        $mode = getenv('HttpPlayback');
+        if ($mode == false) {
+            $mode = 'playback';
+        }
+
+        $auth = [
+            'server' => 'server',
+            'user' => 'user',
+            'password' => 'password'
+        ];
+
+        if (is_file(getcwd() . '/Resources/auth.json')) {
+            $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
+        }
+
+        $client = new API();
+        $client->buildClient(
+            $auth['server'],
+            $auth['user'],
+            $auth['password'],
+            [
+                'httpPlayback' => [
+                    'mode' => $mode
+                ]
+            ]
+        );
+
+        return $client;
+    }
+
     public function testGetFieldURIByName()
     {
-        $mock = $this->getClientMock();
+        $mock = $this->getClient();
 
         $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject'));
         $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start'));
@@ -22,29 +64,12 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
     }
 
-    public function getClientMock()
-    {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API')
-            ->shouldDeferMissing();
-
-        return $mock;
-    }
-
     public function testGetFolderByDistinguishedId()
     {
-        $client = $this->getClientMock();
-        $expected = array(
-            'DistinguishedFolderId' => array(
-                'Id' => 'calendar'
-            )
-        );
-        $client->shouldReceive('getFolder')->with(Mockery::on(function ($request) use ($expected) {
-            $this->assertEquals($expected, $request);
+        $client = $this->getClient();
 
-            return true;
-        }))->andReturn(true)->once();
-
-        $client->getFolderByDistinguishedId('calendar');
+        $folder = $client->getFolderByDistinguishedId('calendar');
+        $this->assertEquals('Calendar', $folder->DisplayName);
     }
 
     /**
@@ -52,10 +77,10 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testClientGetSet()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //By default the client should be null
-        $this->assertNull($client->getClient());
+        $this->assertInstanceOf('jamesiarmes\PEWS\API\ExchangeWebServices', $client->getClient());
 
         //Set client should just let us set anything at this point
         $client->setClient('test');
@@ -67,10 +92,15 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testBuildClient()
     {
-        $client = $this->getClientMock();
+        $client = $this->getClient();
 
         //Create our expected item, get our class to build our item, then compare
-        $expected = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
+        $expected = new ExchangeWebServices(
+            'test.com',
+            'username',
+            'password',
+            ['version' => ExchangeWebServices::VERSION_2010]
+        );
         $client->buildClient('test.com', 'username', 'password');
         $actual = $client->getClient();
 
@@ -82,77 +112,88 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testCreateItems()
     {
-        //Let's mock up our client
-        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
+        $start = new \DateTime();
 
         //This is the arguments that we will pass in, and check against
         $args = array(
             array(
-                'Items' => array('CalendarItem' => array('Start' => 'Now')),
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Create Items',
+                        'Start' => $start->format('c')
+                    )
+                ),
                 'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
             ),
             array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
         );
 
-        //The function we call automatically builds the argument, so we have to build it as well in order to compare
-        $builtArg = Type::buildFromArray($args[0]);
-
-        $ews->shouldReceive('CreateItem')->with(Mockery::on(function ($arg) use ($builtArg) {
-            $this->assertEquals($arg, $builtArg);
-
-            return true;
-        }))->andReturn(true)->once();
-
-        $client = $this->getClientMock();
-        $client->setClient($ews);
-
-        $client->createItems($args[0]['Items'], $args[1]);
+        $client = $this->getClient();
+        $response = $client->createItems($args[0]['Items'], $args[1]);
+        $this->assertObjectHasAttribute('ItemId', $response);
     }
 
     public function testDeleteItems()
     {
-        $mock = $this->getClientMock();
-        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
-        $mock->setClient($ews);
+        $start = new \DateTime();
 
-        $expected = array(
-            'ItemIds' => array(
-                'ItemId' => array(
-                    array('Id' => 'Id', 'ChangeKey' => 'ChangeKey')
-                )
+        $client = $this->getClient();
+        //This is the arguments that we will pass in, and check against
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
             ),
-            'DeleteType' => 'MoveToDeletedItems'
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
         );
-        $expected = Type::buildFromArray($expected);
 
-        $ews->shouldReceive('DeleteItem')->with(Mockery::on(function ($request) use ($expected) {
-            $this->assertEquals($expected, $request);
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $this->assertTrue($client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']));
+    }
 
-            return true;
-        }))->andReturn(true);
+    /**
+     * @expectedException \Exception
+     * @expectedExceptionMessage The specified object was not found in the store
+     */
+    public function testDeleteItemsFail()
+    {
+        $client = $this->getClient();
+        $start = new \DateTime();
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Delete Item',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+            ),
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
+        );
 
-        $mock->deleteItems(array('Id' => 'Id', 'ChangeKey' => 'ChangeKey'));
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
+        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
      * @dataProvider getFolderByDisplayNameProvider
      *
-     * @param $name
-     * @param $output
+     * @param $input
      * @param $expected
      */
-    public function testGetFolderByDisplayName($inputs, $output, $expected)
+    public function testGetFolderByDisplayName($input, $expected)
     {
-        $mock = $this->getClientMock();
-        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
-        $mock->setClient($ews);
+        $client = $this->getClient();
+        $folder = $client->getFolderByDisplayName($input);
 
-        $ews->shouldReceive('FindFolder')->andReturn($output);
-
-        $this->assertEquals($expected, call_user_func_array(array($mock, 'getFolderByDisplayName'), $inputs));
+        $this->assertEquals($expected, $folder->DisplayName);
     }
 
     /**
@@ -161,26 +202,14 @@ class APITest extends PHPUnit_Framework_TestCase
      * @dataProvider listChangesProvider
      * @param $input
      */
-    public function testListItemChanges($input, $expected)
+    public function testListItemChanges($folderInput)
     {
-        //Build our expected items, and our mocked API Client
-        $expected = Type::buildFromArray($expected);
-        $ews = new ExchangeWebServices('test.com', 'username', 'password', ExchangeWebServices::VERSION_2010);
-        $ews = Mockery::mock($ews)->shouldDeferMissing();
+        $client = $this->getClient();
+        $folder = call_user_func_array(array($client, 'getFolderByDisplayname'), $folderInput);
 
-        //Our function expects a certain format returned, this creates that format
-        $trueReturn = Type::buildFromArray(['ResponseMessages' => ['SyncFolderItemsResponseMessage' => true]]);
-
-        $ews->shouldReceive('SyncFolderItems')->with(Mockery::on(function ($arg) use ($expected) {
-            $this->assertEquals($expected, $arg);
-
-            return true;
-        }))->andReturn($trueReturn)->once();
-
-        $client = $this->getClientMock();
-        $client->setClient($ews);
-
-        call_user_func_array(array($client, 'listItemChanges'), $input);
+        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->FolderId->Id));
+        $this->assertArrayHasKey('SyncState', $response);
+        $this->assertArrayHasKey('Changes', $response);
     }
 
     /**
@@ -191,93 +220,14 @@ class APITest extends PHPUnit_Framework_TestCase
     public function listChangesProvider()
     {
         return array(
-            //Test that default behavior works as expected
-            array(
-                array('test'),
-                array(
-                    'ItemShape' => array('BaseShape' => 'IdOnly'),
-                    'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
-                    'SyncScope' => 'NormalItems',
-                    'MaxChangesReturned' => '10'
-                )
-            ),
-            //Test that providing a syncState adds that and allows more properties to be returned
-            array(
-                array('test', 'someState'),
-                array(
-                    'ItemShape' => array('BaseShape' => 'AllProperties'),
-                    'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
-                    'SyncScope' => 'NormalItems',
-                    'MaxChangesReturned' => '10',
-                    'SyncState' => 'someState'
-                )
-            ),
-            //Test that you can override settings
-            array(
-                array('test', 'someState', array('MaxChangesReturned' => 20)),
-                array(
-                    'ItemShape' => array('BaseShape' => 'AllProperties'),
-                    'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
-                    'SyncScope' => 'NormalItems',
-                    'MaxChangesReturned' => '20',
-                    'SyncState' => 'someState'
-                )
-            ),
-            //Test that even when you send a NULL syncState, you can still override the ItemShape
-            array(
-                array(
-                    'test',
-                    null,
-                    array('MaxChangesReturned' => 20, 'ItemShape' => array('BaseShape' => 'AllProperties'))
-                ),
-                array(
-                    'ItemShape' => array('BaseShape' => 'AllProperties'),
-                    'SyncFolderId' => array('FolderId' => array('Id' => 'test')),
-                    'SyncScope' => 'NormalItems',
-                    'MaxChangesReturned' => '20'
-                )
-            )
+            array(array('Test', 'calendar'))
         );
     }
 
     public function getFolderByDisplayNameProvider()
     {
-        $calendarFolder = Type::buildFromArray(array(
-            'DisplayName' => 'calendar'
-        ));
-
-        $responseMessageTemplate = array(
-                'FolderItem' => array()
-        );
-
-        $firstResponse = $responseMessageTemplate;
-        $firstResponse['FolderItem'] = array(
-            Type::buildFromArray(array(
-                'DisplayName' => 'Inbox'
-            )),
-            $calendarFolder,
-        );
-
-        $secondResponse = $responseMessageTemplate;
-        $secondResponse['FolderItem']
-            = $calendarFolder;
-
-        $thirdResponse = $responseMessageTemplate;
-        $thirdResponse['FolderItem'] = array(
-            Type::buildFromArray(array(
-                'DisplayName' => 'Inbox'
-            ))
-        );
-
         return array(
-            array( array('calendar'), Type::buildFromArray($firstResponse), $calendarFolder),
-            array( array('calendar'), Type::buildFromArray($secondResponse), $calendarFolder),
-            array( array('calendar'), Type::buildFromArray($thirdResponse), false)
+            array('AllItems', 'AllItems')
         );
-    }
-
-    public function tearDown()
-    {
-        Mockery::close();
     }
 }

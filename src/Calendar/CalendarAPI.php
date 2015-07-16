@@ -99,7 +99,7 @@ class CalendarAPI extends API
                 'BaseShape' => 'AllProperties'
             ),
             'CalendarView' => array(
-                'MaxEntriesReturned' => 20,
+                'MaxEntriesReturned' => 100,
                 'StartDate' => $start->format('c'),
                 'EndDate' => $end->format('c')
             ),
@@ -182,6 +182,14 @@ class CalendarAPI extends API
         ), array(
             'SendMeetingCancellations' => 'SendToNone'
         ));
+    }
+
+    public function deleteAllCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
+    {
+        $items = $this->getCalendarItems($start, $end, $options);
+        foreach ($items as $item) {
+            $this->deleteCalendarItem($item->ItemId->Id, $item->ItemId->ChangeKey);
+        }
     }
 
     /**

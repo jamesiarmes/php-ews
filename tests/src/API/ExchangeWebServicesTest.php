@@ -6,7 +6,7 @@
  * Time: 10:16
  */
 
-namespace jamesiarmes\PEWS\API\Test;
+namespace jamesiarmes\PEWS\Test\API;
 
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
