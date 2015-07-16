@@ -1,5 +1,5 @@
 <?php
-namespace jamesiarmes\PEWS\API\Test;
+namespace jamesiarmes\PEWS\Test\API\Type;
 
 use jamesiarmes\PEWS\API\Type\ArrayOfStrings;
 use PHPUnit_Framework_TestCase;

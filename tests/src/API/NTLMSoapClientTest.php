@@ -6,7 +6,7 @@
  * Time: 17:23
  */
 
-namespace jamesiarmes\PEWS\API\Test;
+namespace jamesiarmes\PEWS\Test\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
@@ -18,6 +18,7 @@ use ReflectionClass;
 use Mockery;
 use GuzzleHttp\Middleware;
 use SoapHeader;
+use jamesiarmes\PEWS\API;
 
 class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 {
@@ -27,11 +28,43 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         return $mock;
     }
 
+    public function getClient()
+    {
+        $mode = getenv('HttpPlayback');
+        if ($mode == false) {
+            $mode = 'playback';
+        }
+
+        $auth = [
+            'server' => 'server',
+            'user' => 'user',
+            'password' => 'password'
+        ];
+
+        if (is_file(getcwd() . '/Resources/auth.json')) {
+            $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
+        }
+
+        $client = new API();
+        $client->buildClient(
+            $auth['server'],
+            $auth['user'],
+            $auth['password'],
+            [
+                'httpPlayback' => [
+                    'mode' => $mode
+                ]
+            ]
+        );
+
+        return $client->getClient()->getClient();
+    }
+
     public function testGetClient()
     {
-        $mock = $this->getClientMock();
+        $mock = $this->getClient();
 
-        $this->assertInstanceOf('GuzzleHttp\Client', $mock->getClient());
+        $this->assertInstanceOf('GuzzleHttp\Client', $mock->getHttpClient());
     }
 
     public function testDoRequest()
@@ -51,7 +84,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 
         $client = new Client(['handler' => $handler, 'http_errors' => false]);
 
-        $mock->shouldReceive('getClient')->andReturn($client);
+        $mock->shouldReceive('getHttpClient')->andReturn($client);
 
         $mock->__doRequest('testContent', 'testLocation', 'testAction', 'testVersion');
         $this->assertEquals(200, $mock->getResponseCode());

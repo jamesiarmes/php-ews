@@ -1,6 +1,6 @@
 <?php
 
-namespace jamesiarmes\PEWS\API\NTLMSoapClient\Test;
+namespace jamesiarmes\PEWS\Test\API\NTLMSoapClient;
 
 use PHPUnit_Framework_TestCase;
 use Mockery;

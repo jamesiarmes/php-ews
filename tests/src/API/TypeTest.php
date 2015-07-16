@@ -1,6 +1,6 @@
 <?php
 
-namespace jamesiarmes\PEWS\API\Test;
+namespace jamesiarmes\PEWS\Test\API;
 
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\API\Enumeration;
