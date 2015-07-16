@@ -5,6 +5,7 @@ namespace jamesiarmes\PEWS\Calendar;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Enumeration;
+use DateTime;
 
 /**
  * An API end point for Calendar items
@@ -77,15 +78,20 @@ class CalendarAPI extends API
     /**
      * Get a list of calendar items between two dates/times
      *
-     * @param string $start
-     * @param string $end
+     * @param string|DateTime $start
+     * @param string|DateTime $end
      * @param array $options
      * @return mixed
      */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
-        $start = new \DateTime($start);
-        $end = new \DateTime($end);
+        if (!($start instanceof DateTime)) {
+            $start = new DateTime($start);
+        }
+
+        if (!($end instanceof DateTime)) {
+            $end = new DateTime($end);
+        }
 
         $request = array(
             'Traversal' => 'Shallow',
