@@ -8,7 +8,6 @@
 
 namespace jamesiarmes\PEWS\API;
 
-
 class ClassMap
 {
     public static function getClassMap()
