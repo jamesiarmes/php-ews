@@ -180,71 +180,9 @@ $calendar->deleteAllCalendarItems(new DateTime('8:00 AM'), new DateTime('5:00 PM
 ```
 
 # Manual Usage
-There are a few ways to build your request, varying on how much code completion you want your IDE to provide. The first way, using types for everything, provides the most code completion, is done as so
-
-```php
-$ews = new ExchangeWebServices($server, $username, $password, ExchangeWebServices::VERSION_2010);
-
-$request = new Type\CreateItemType();
-$request->Items = new Type\ArrayOfTypes();
-
-$start = new DateTime('8:00 AM');
-$end = new DateTime('9:00 AM');
-
-$event = new Type\CalendarItem();
-$event->Start = $start->format('c');
-$event->End = $end->format('c');
-
-$event->Body = new Type\BodyType();
-$event->Body->BodyType = Enumeration\BodyTypeType::HTML;
-$event->Body->_ = 'This is <b>the</b> body';
-
-// Set the item class type (not required).
-$event->ItemClass = new Enumeration\ItemClassType();
-$event->ItemClass->_ = Enumeration\ItemClassType::APPOINTMENT;
-
-// Set the sensativity of the event (defaults to normal).
-$event->Sensitivity = new Enumeration\SensitivityChoicesType();
-$event->Sensitivity->_ = Enumeration\SensitivityChoicesType::NORMAL;
-
-$event->Categories = array('Testing', 'php-ews');
-
-// Set the importance of the event.
-$event->Importance = new Enumeration\ImportanceChoicesType();
-$event->Importance->_ = Enumeration\ImportanceChoicesType::NORMAL;
-
-$request->Items->CalendarItem = $event;
-
-$request->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
-$response = $ews->CreateItem($request);
-```
-
-The second way is a bit less formal, where you can create the objects yourself from Type. This is more useful if you still want to use Objects, but there isn't one provided that you need
-
-```php
-$start = new DateTime('8:00 AM');
-$end = new DateTime('9:00 AM');
-
-$request = new Type();
-$request->Items = new Type();
-$request->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
-
-$event = new Type();
-$event->Start = $start->format('c');
-$event->End = $end->format('c');
-$event->Body = array(
-    'BodyType' => Enumeration\BodyTypeType::HTML,
-    '_value' => 'This is <b>the</b> body'
-);
-$event->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
-$event->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
-$event->Categories = array('Testing', 'php-ews');
-$event->Importance = Enumeration\ImportanceChoicesType::NORMAL;
-
-$request->Items->CalendarItem = $event;
-```
-
-And the final way is to create an array, and have an object built from that array
+While simple library usage is the way to go for what it covers, it doesn't cover everything, in fact it covers rather
+little. If you want to do anything outside of it's scope, go ahead and use `ExchangeWebServices` as a generic SOAP
+client, and refer to the Microsoft documentation on how to build your requests. Here's an example
 
 ```php
 $start = new DateTime('8:00 AM');
