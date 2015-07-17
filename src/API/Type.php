@@ -12,6 +12,33 @@ namespace jamesiarmes\PEWS\API;
  */
 class Type
 {
+    public function __call($name, $arguments)
+    {
+        $callTypeIndex = 3;
+        if (substr($name, 0, 2) == "is") {
+            $callTypeIndex = 2;
+        }
+
+        $callType = substr($name, 0, $callTypeIndex);
+        $propertyName = substr($name, $callTypeIndex);
+
+        $propertyIsSet = property_exists($this, $propertyName);
+
+        if ($callType == "get" && $propertyIsSet) {
+            return $this->$propertyName;
+        }
+
+        if ($callType == "set" && $propertyIsSet) {
+            var_dump($propertyName);
+
+            if (count($arguments) == 1) {
+                $this->$propertyName = $arguments[0];
+            }
+
+            return $this;
+        }
+    }
+
     /**
      * @var string
      */

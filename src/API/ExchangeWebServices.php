@@ -364,7 +364,8 @@ class ExchangeWebServices
             'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
             'impersonation' => $this->impersonation,
             'trace' => '1',
-            'exceptions' => true
+            'exceptions' => true,
+            'classmap' => ClassMap::getClassMap()
         );
 
         $options = array_merge($options, $this->options);
