@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2 - 2015-07-*
+ * Made HttpPlayback to be instanced instead of static (Can make it write to more than one file)
+ * Added Automatic getters and setters for items (Can do $item->getItemId() for example)
+ * Added CalendarItem to the classmap for SoapClient (Getting CalendarItems will return that class now)
+
 ## 0.3.1 - 2015-07-16
  * Fixed bug where setting recordLocation sets to mode
 
