@@ -60,41 +60,6 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 
         return $client->getClient()->getClient();
     }
-//
-//    public function testGetClient()
-//    {
-//        $mock = $this->getClient();
-//
-//        $this->assertInstanceOf('GuzzleHttp\Client', $mock->getHttpClient());
-//    }
-
-//    public function testDoRequest()
-//    {
-//        $mock = $this->getClientMock();
-//
-//        $responseQue = new MockHandler([
-//            new Response(200),
-//            new Response(400)
-//        ]);
-//
-//        $container = [];
-//        $history = Middleware::history($container);
-//
-//        $handler = HandlerStack::create($responseQue);
-//        $handler->push($history);
-//
-//        $client = new Client(['handler' => $handler, 'http_errors' => false]);
-//
-//        $mock->shouldReceive('getHttpClient')->andReturn($client);
-//
-//        $mock->__doRequest('testContent', 'testLocation', 'testAction', 'testVersion');
-//        $this->assertEquals(200, $mock->getResponseCode());
-//
-//        $mock->__doRequest('testContent', 'testLocation', 'testAction', 'testVersion');
-//        $this->assertEquals(400, $mock->getResponseCode());
-//
-//        $this->assertEquals('testAction', $container[0]['request']->getHeaders()['SOAPAction'][0]);
-//    }
 
     public function testGetLastRequestHeaders()
     {
