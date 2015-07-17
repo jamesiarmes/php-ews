@@ -35,6 +35,9 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $item->setTwo('Two Test');
 
         $this->assertEquals('Two Test', $item->getTwo());
+
+        $item->setTwo('Two Test Two', 'Some Random Thing');
+        $this->assertEquals('Two Test', $item->getTwo());
     }
 
     public function testBuildFromArray()
