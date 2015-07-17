@@ -28,13 +28,12 @@ class Type
             return $this->$propertyName;
         }
 
-        if ($callType == "set" && $propertyIsSet) {
-            if (count($arguments) == 1) {
-                $this->$propertyName = $arguments[0];
-            }
-
+        if ($callType == "set" && $propertyIsSet && count($arguments) == 1) {
+            $this->$propertyName = $arguments[0];
             return $this;
         }
+
+        return $this;
     }
 
     /**
