@@ -143,10 +143,6 @@ class NTLMSoapClient extends SoapClient
             unset($options['timezone']);
         }
 
-        if (!empty($options['httpClient'])) {
-            $this->setHttpClient($options['httpClient']);
-        }
-
         $this->httpPlayback = HttpPlayback::getInstance($options['httpPlayback']);
 
         parent::__construct($wsdl, $options);

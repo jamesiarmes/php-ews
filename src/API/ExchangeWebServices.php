@@ -190,19 +190,6 @@ class ExchangeWebServices
     }
 
     /**
-     * Set the HttpClient to use
-     *
-     * @param $client
-     * @return $this
-     */
-    public function setHttpClient($client)
-    {
-        $this->getClient()->setHttpClient($client);
-
-        return $this;
-    }
-
-    /**
      * Sets the client
      *
      * @param Exchange $client
