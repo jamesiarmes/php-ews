@@ -29,8 +29,6 @@ class Type
         }
 
         if ($callType == "set" && $propertyIsSet) {
-            var_dump($propertyName);
-
             if (count($arguments) == 1) {
                 $this->$propertyName = $arguments[0];
             }

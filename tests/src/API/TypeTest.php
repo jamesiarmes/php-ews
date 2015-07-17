@@ -22,6 +22,21 @@ class TypeTest extends PHPUnit_Framework_TestCase
         return $this->_typeMock;
     }
 
+    public function testMagicCall()
+    {
+        $item = Type::buildFromArray(array(
+            'One' => 'One',
+            'Two' => 'Two'
+        ));
+
+        $this->assertEquals('One', $item->getOne());
+        $this->assertEquals('Two', $item->getTwo());
+
+        $item->setTwo('Two Test');
+
+        $this->assertEquals('Two Test', $item->getTwo());
+    }
+
     public function testBuildFromArray()
     {
         $array = array(
