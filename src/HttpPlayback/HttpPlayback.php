@@ -8,31 +8,57 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Client;
 
-trait HttpPlayback
+class HttpPlayback
 {
-    protected static $mode = 'live';
+    protected $mode = 'live';
 
-    protected static $callList = [];
+    protected $callList = [];
 
-    protected static $recordLocation;
+    protected $recordLocation;
 
-    private static $shutdownRegistered = false;
+    protected $recordFileName = 'saveState.json';
+
+    private $shutdownRegistered = false;
+
+    private static $instances = [ ];
 
     /**
      * @var Client
      */
-    private static $client;
+    private $client;
+
+    public static function getInstance($options = [ ])
+    {
+        foreach (self::$instances as $instance) {
+            if ($instance['options'] == $options) {
+                return $instance['instance'];
+            }
+        }
+
+        $instance = new static();
+        $instance->setPlaybackOptions($options);
+        self::$instances[] = [
+            'instance' => $instance,
+            'options' => $options
+        ];
+
+        return $instance;
+    }
 
     public function setPlaybackOptions($options = [])
     {
-        $options = array_merge(['mode' => null, 'recordLocation' => null], $options);
+        $options = array_merge(['mode' => null, 'recordLocation' => null, 'recordFileName' => null], $options);
 
         if ($options['mode'] !== null) {
-            self::$mode = $options['mode'];
+            $this->mode = $options['mode'];
         }
 
         if ($options['recordLocation'] !== null) {
-            self::$recordLocation = $options['recordLocation'];
+            $this->recordLocation = $options['recordLocation'];
+        }
+
+        if ($options['recordFileName'] !== null) {
+            $this->recordFileName = $options['recordFileName'];
         }
     }
 
@@ -43,13 +69,13 @@ trait HttpPlayback
      */
     public function getHttpClient()
     {
-        if (self::$client == null) {
+        if ($this->client == null) {
             $handler = HandlerStack::create();
 
-            if (self::$mode == 'record') {
-                $history = Middleware::history(self::$callList);
+            if ($this->mode == 'record') {
+                $history = Middleware::history($this->callList);
                 $handler->push($history);
-            } elseif (self::$mode == 'playback') {
+            } elseif ($this->mode == 'playback') {
                 $recordings = $this->getRecordings();
 
                 $playList = $recordings;
@@ -62,15 +88,15 @@ trait HttpPlayback
                 $handler = HandlerStack::create($mockHandler);
             }
 
-            self::$client = new Client(['handler' => $handler]);
+            $this->client = new Client(['handler' => $handler]);
 
-            if (!self::$shutdownRegistered) {
+            if (!$this->shutdownRegistered) {
                 register_shutdown_function(array($this, 'endRecord'));
-                self::$shutdownRegistered = true;
+                $this->shutdownRegistered = true;
             }
         }
 
-        return self::$client;
+        return $this->client;
     }
 
     /**
@@ -86,22 +112,29 @@ trait HttpPlayback
         return $this;
     }
 
-    public static function getRecordLocation()
+    public function getRecordLocation()
     {
-        if (!self::$recordLocation) {
+        if (!$this->recordLocation) {
             $dir = __DIR__;
             $dirPos = strrpos($dir, "src/API");
             $dir = substr($dir, 0, $dirPos);
 
-            self::$recordLocation = $dir . 'Resources/recordings/saveState.json';
+            $this->recordLocation = $dir . 'Resources/recordings/';
         }
 
-        return self::$recordLocation;
+        return $this->recordLocation;
     }
 
-    public static function getRecordings()
+    public function getRecordFilePath()
     {
-        $saveLocation = self::getRecordLocation();
+        $path = $this->getRecordLocation() . $this->recordFileName;
+        $path = str_replace("\\", "/", $path);
+        return $path;
+    }
+
+    public function getRecordings()
+    {
+        $saveLocation = $this->getRecordFilePath();
         $records = json_decode(file_get_contents($saveLocation), true);
 
         return $records;
@@ -109,12 +142,12 @@ trait HttpPlayback
 
     public function endRecord()
     {
-        if (self::$mode != 'record') {
+        if ($this->mode != 'record') {
             return;
         }
 
         $saveList = [];
-        foreach (self::$callList as $item) {
+        foreach ($this->callList as $item) {
             /** @var Response $response */
             $response = $item['response'];
             $saveList[] = [
@@ -124,7 +157,12 @@ trait HttpPlayback
             ];
         }
 
-        $saveLocation = self::getRecordLocation();
+        $saveLocation = $this->getRecordFilePath();
+        $folder = pathinfo($saveLocation)['dirname'];
+        if (!is_dir($folder)) {
+            mkdir($folder, 0777, true);
+        }
+
         file_put_contents($saveLocation, json_encode($saveList));
     }
 }

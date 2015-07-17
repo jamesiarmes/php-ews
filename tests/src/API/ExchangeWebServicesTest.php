@@ -8,6 +8,7 @@
 
 namespace jamesiarmes\PEWS\Test\API;
 
+use jamesiarmes\PEWS\API\ClassMap;
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
@@ -135,6 +136,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
                 'impersonation' => null,
                 'trace' => '1',
                 'exceptions' => true,
+                'classmap' => ClassMap::getClassMap()
             )
         );
         $this->assertEquals($expected, $client->getClient());

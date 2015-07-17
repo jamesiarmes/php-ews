@@ -44,7 +44,8 @@ class APITest extends PHPUnit_Framework_TestCase
             $auth['password'],
             [
                 'httpPlayback' => [
-                    'mode' => $mode
+                    'mode' => $mode,
+                    'recordFileName' => self::class . '::' . $this->getName() . '.json'
                 ]
             ]
         );

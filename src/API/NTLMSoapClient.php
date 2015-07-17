@@ -39,7 +39,6 @@ use jamesiarmes\PEWS\HttpPlayback\HttpPlayback;
  */
 class NTLMSoapClient extends SoapClient
 {
-    use HttpPlayback;
     /**
      * Username for authentication on the exchnage server
      *
@@ -60,6 +59,8 @@ class NTLMSoapClient extends SoapClient
      * @var boolean
      */
     protected $validate = false;
+
+    private $httpPlayback;
 
     protected $__last_request_headers;
 
@@ -146,7 +147,7 @@ class NTLMSoapClient extends SoapClient
             $this->setHttpClient($options['httpClient']);
         }
 
-        $this->setPlaybackOptions($options['httpPlayback']);
+        $this->httpPlayback = HttpPlayback::getInstance($options['httpPlayback']);
 
         parent::__construct($wsdl, $options);
     }
@@ -172,7 +173,7 @@ class NTLMSoapClient extends SoapClient
             'SOAPAction' => $action,
         );
 
-        $client = $this->getHttpClient();
+        $client = $this->httpPlayback->getHttpClient();
         $response = $client->post($location, array(
             'body' => $request,
             'headers' => $headers,
