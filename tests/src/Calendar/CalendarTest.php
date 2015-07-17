@@ -55,6 +55,19 @@ class APITest extends PHPUnit_Framework_TestCase
         return $client->getCalendar('Test');
     }
 
+    public function testPickCalendar()
+    {
+        $client = $this->getClient();
+        $testCalendar = $client->getCalendar('Test');
+        $defaultCalendar = $client->getCalendar();
+
+        $testFolder = $client->getFolderByFolderId($testCalendar->getFolderId()->Id);
+        $defaultFolder = $client->getFolderByFolderId($defaultCalendar->getFolderId()->Id);
+
+        $this->assertEquals('Test', $testFolder->DisplayName);
+        $this->assertEquals('Calendar', $defaultFolder->DisplayName);
+    }
+
     public function testListChanges()
     {
         $client = $this->getClient();
@@ -64,11 +77,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('Changes', $changes);
     }
 
-    /**
-     * @param $arguments
-     * @param $response
-     * @param $firstItemName
-     */
     public function testGetCalendarItems()
     {
         $client = $this->getClient();
@@ -76,6 +84,23 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue(is_array($items));
         $this->assertCount(0, $items);
+    }
+
+    public function testGetCalendarItem()
+    {
+        $start = new \DateTime('2015-07-01 8:00');
+        $end = new \DateTime('2015-07-01 9:00');
+
+        $client = $this->getClient();
+        $items = $client->createCalendarItems(array(
+            array('Subject' => 'Test Get Item 1', 'Start' => $start->format('c'), 'End' => $end->format('c')),
+            array('Subject' => 'Test Get Item 2', 'Start' => $start->format('c'), 'End' => $end->format('c'))
+        ));
+
+        $itemId = $items[1]->ItemId;
+
+        $item = $client->getCalendarItem($itemId->Id, $itemId->ChangeKey);
+        $this->assertEquals('Test Get Item 2', $item->Subject);
     }
 
     public function testUpdateCalendarItem()

@@ -65,17 +65,6 @@ class CalendarAPI extends API
     }
 
     /**
-     * Get the calendar folder from exchange
-     *
-     * @return mixed
-     */
-    public function getCalendarFolder()
-    {
-        $folder = $this->getFolderByFolderId($this->getFolderId()->Id);
-        return $folder->CalendarFolder;
-    }
-
-    /**
      * Get a list of calendar items between two dates/times
      *
      * @param string|DateTime $start
@@ -167,6 +156,7 @@ class CalendarAPI extends API
         );
 
         $items =  $this->updateItems($request, $options);
+        $items = $items['Items'];
         if (!is_array($items)) {
             $items = array($items);
         }
