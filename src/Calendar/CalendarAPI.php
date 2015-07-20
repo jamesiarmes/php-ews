@@ -157,8 +157,15 @@ class CalendarAPI extends API
 
         $items =  $this->updateItems($request, $options);
         $items = $items['Items'];
+
         if (!is_array($items)) {
             $items = array($items);
+        }
+
+        foreach ($items as &$item) {
+            if (isset($item->CalendarItem)) {
+                $item = $item->CalendarItem;
+            }
         }
 
         return $items;
