@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.2 - 2015-07-*
+## 0.3.2 - 2015-07-21
  * Made HttpPlayback to be instanced instead of static (Can make it write to more than one file)
  * Added Automatic getters and setters for items (Can do $item->getItemId() for example)
  * Added CalendarItem to the classmap for SoapClient (Getting CalendarItems will return that class now)
