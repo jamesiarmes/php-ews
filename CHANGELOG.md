@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 - 2015-07-22
+ * Added Body to typemap
+ * Added automatic getters and setters (`$calenderItem->getSubject()` for CalendarItem example)
+ * Added automatic casting for Start and End in CalendarItem (`$calendarItem->setStart(new \DateTime())` will work)
+
 ## 0.3.2 - 2015-07-21
  * Made HttpPlayback to be instanced instead of static (Can make it write to more than one file)
  * Added Automatic getters and setters for items (Can do $item->getItemId() for example)
