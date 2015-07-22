@@ -85,11 +85,19 @@ class Type
 
     public static function buildFromArray($array)
     {
-        if (!self::arrayIsAssoc($array)) {
+        if (!is_array($array)) {
             return $array;
         }
 
-        $object = new self();
+        if (!self::arrayIsAssoc($array)) {
+            foreach ($array as $key => $value) {
+                $array[$key] = self::buildFromArray($value);
+            }
+
+            return $array;
+        }
+
+        $object = new static();
         foreach ($array as $key => $value) {
             if (is_array($value)) {
                 $value = self::buildFromArray($value);
