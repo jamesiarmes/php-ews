@@ -41,7 +41,9 @@ class CasterTest extends \PHPUnit_Framework_TestCase
         return array(
             array('2015-07-01', 'DateTime', new \DateTime('2015-07-01')),
             array(new \DateTime('2015-07-01'), 'ExchangeFormat', (new \DateTime('2015-07-01'))->format('c')),
-            array(new \DateTime('2015-07-01'), 'DateTime', new \DateTime('2015-07-01'))
+            array(new \DateTime('2015-07-01'), 'DateTime', new \DateTime('2015-07-01')),
+            array('Hello World', 'ExchangeFormat', 'Hello World'),
+            array('String', 'int', null)
         );
     }
 

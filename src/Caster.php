@@ -14,20 +14,37 @@ class Caster
     public static function cast($value, $type)
     {
         $casts = self::getCasts();
+        $fromType = self::getValueType($value);
+
+        if (!self::shouldCast($value, $type)) {
+            return $value;
+        }
+
+        if (!self::castExists($fromType, $type)) {
+            return null;
+        }
+
+        return $casts[$type][$fromType]($value);
+    }
+
+    public function getValueType($value)
+    {
         $fromType = gettype($value);
         if ($fromType == "object") {
             $fromType = get_class($value);
         }
 
-        if ($fromType == $type || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
-            return $value;
+        return $fromType;
+    }
+
+    public function shouldCast($value, $type)
+    {
+        $fromType = self::getValueType($value);
+        if($fromType == $type || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
+            return false;
         }
 
-        if (!empty($casts[$type][$fromType])) {
-            return $casts[$type][$fromType]($value);
-        }
-
-        return null;
+        return true;
     }
 
     public static function castExists($from, $to)
