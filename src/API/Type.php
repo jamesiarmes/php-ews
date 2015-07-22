@@ -130,7 +130,7 @@ class Type
             } elseif (is_array($property) && $this->arrayIsAssoc($property)) {
                 $property = $this->buildFromArray($property);
             } elseif (is_array($property) && !$this->arrayIsAssoc($property)) {
-                foreach ($property as $key=>$value) {
+                foreach ($property as $key => $value) {
                     if ($value instanceof Type) {
                         $property[$key] = $value->toXmlObject();
                     }

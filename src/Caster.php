@@ -8,7 +8,6 @@
 
 namespace jamesiarmes\PEWS;
 
-
 class Caster
 {
 

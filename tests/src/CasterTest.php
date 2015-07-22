@@ -8,7 +8,6 @@
 
 namespace jamesiarmes\PEWS\Test;
 
-
 use jamesiarmes\PEWS\Caster;
 
 class CasterTest extends \PHPUnit_Framework_TestCase
