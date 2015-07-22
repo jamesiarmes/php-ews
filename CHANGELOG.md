@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.1 - 2015-07-22
+ * Updating Type::buildFromArray
+
 ## 0.4.0 - 2015-07-22
  * Added Body to typemap
  * Added automatic getters and setters (`$calenderItem->getSubject()` for CalendarItem example)
