@@ -5,6 +5,8 @@
 
 namespace jamesiarmes\PEWS\API;
 
+use jamesiarmes\PEWS\Caster;
+
 /**
  * Base class for Exchange Web Service Types.
  *
@@ -22,19 +24,59 @@ class Type
         $callType = substr($name, 0, $callTypeIndex);
         $propertyName = substr($name, $callTypeIndex);
 
-        $propertyIsSet = property_exists($this, $propertyName);
-
-        if ($callType == "get" && $propertyIsSet) {
-            return $this->$propertyName;
+        if ($callType == "get") {
+            return $this->get($propertyName);
         }
 
-        if ($callType == "set" && $propertyIsSet && count($arguments) == 1) {
-            $this->$propertyName = $arguments[0];
-            return $this;
+        if ($callType == "set" && count($arguments) == 1) {
+            return $this->set($propertyName, $arguments[0]);
         }
 
         return $this;
     }
+
+    public function exists($name)
+    {
+        return property_exists($this, $name);
+    }
+
+    public function get($name)
+    {
+        if ($this->exists($name)) {
+            return $this->$name;
+        }
+
+        throw \Exception('Property ' . $name . ' does not exist');
+    }
+
+    public function set($name, $value)
+    {
+        if ($this->exists($name)) {
+            if (isset($this->_typeMap[$name])) {
+                $value = $this->cast($value, $this->_typeMap[$name]);
+            }
+
+            $this->$name = $value;
+        }
+
+        return $this;
+    }
+
+    public function cast($value, $type)
+    {
+        return Caster::cast($value, $type);
+    }
+
+    public function castToExchange($value, $type)
+    {
+        if (Caster::castExists($type, 'ExchangeFormat')) {
+            $value = Caster::cast($value, 'ExchangeFormat');
+        }
+
+        return $value;
+    }
+
+    protected $_typeMap = [ ];
 
     /**
      * @var string
@@ -85,8 +127,16 @@ class Type
 
             if ($property instanceof Type) {
                 $property = $property->toXmlObject();
-            } else if (is_array($property) && $this->arrayIsAssoc($property)) {
+            } elseif (is_array($property) && $this->arrayIsAssoc($property)) {
                 $property = $this->buildFromArray($property);
+            } elseif (is_array($property) && !$this->arrayIsAssoc($property)) {
+                foreach ($property as $key=>$value) {
+                    if ($value instanceof Type) {
+                        $property[$key] = $value->toXmlObject();
+                    }
+                }
+            } elseif (isset($this->_typeMap[$name])) {
+                $property = $this->castToExchange($property, $this->_typeMap[$name]);
             }
 
             $objectToReturn->$name = $property;
