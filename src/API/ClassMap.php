@@ -13,7 +13,8 @@ class ClassMap
     public static function getClassMap()
     {
         return [
-            'CalendarItemType' => '\jamesiarmes\PEWS\API\Type\CalendarItem'
+            'CalendarItemType' => '\jamesiarmes\PEWS\API\Type\CalendarItem',
+            'BodyType' => '\jamesiarmes\PEWS\API\Type\Body'
         ];
     }
 }

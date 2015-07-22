@@ -10,8 +10,17 @@ namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
+/**
+ * Class CalendarItem
+ * @package jamesiarmes\PEWS\API\Type
+ */
 class CalendarItem extends Type
 {
+    protected $_typeMap = [
+        'Start' => 'DateTime',
+        'End' => 'DateTime'
+    ];
+
     /**
      * The item is an exception to a recurring calendar item.
      *
@@ -122,7 +131,7 @@ class CalendarItem extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PEWS\API\Type\BodyType
+     * @var \jamesiarmes\PEWS\API\Type\Body
      */
     public $Body;
 
@@ -826,7 +835,7 @@ class CalendarItem extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PEWS\API\Type\BodyType
+     * @var \jamesiarmes\PEWS\API\Type\Body
      */
     public $UniqueBody;
 

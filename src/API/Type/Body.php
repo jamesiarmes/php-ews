@@ -10,7 +10,7 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * @package php-ews\Types
  */
-class BodyType extends String
+class Body extends String
 {
     /**
      * Specifies the type of the body.

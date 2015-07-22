@@ -105,7 +105,7 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $eventOne->Start = $start->format('c');
         $eventOne->End = $end->format('c');
 
-        $eventOne->Body = new Type\BodyType();
+        $eventOne->Body = new Type\Body();
         $eventOne->Body->BodyType = Enumeration\BodyTypeType::HTML;
         $eventOne->Body->_ = 'This is <b>the</b> body';
 
