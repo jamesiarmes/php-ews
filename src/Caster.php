@@ -27,7 +27,7 @@ class Caster
         return $casts[$type][$fromType]($value);
     }
 
-    public function getValueType($value)
+    public static function getValueType($value)
     {
         $fromType = gettype($value);
         if ($fromType == "object") {
@@ -37,10 +37,10 @@ class Caster
         return $fromType;
     }
 
-    public function shouldCast($value, $type)
+    public static function shouldCast($value, $type)
     {
         $fromType = self::getValueType($value);
-        if($fromType == $type || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
+        if ($fromType == $type || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
             return false;
         }
 
