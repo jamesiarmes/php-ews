@@ -40,6 +40,32 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('Two Test', $item->getTwo());
     }
 
+    /**
+     * @expectedException \Exception
+     */
+    public function testMagicCallFail()
+    {
+        $calendarItem = new Type\CalendarItem();
+        $calendarItem->getSomethingRandom();
+    }
+
+    public function testCast()
+    {
+        $calendarItem = new Type\CalendarItem();
+        $actual = $calendarItem->cast('2015-07-01', 'DateTime');
+
+        $this->assertEquals(new \DateTime('2015-07-01'), $actual);
+    }
+
+    public function testSetCasting()
+    {
+        $calendarItem = new Type\CalendarItem();
+        $dateTime = $calendarItem->setStart('2015-07-01')
+            ->getStart();
+
+        $this->assertEquals(new \DateTime('2015-07-01'), $dateTime);
+    }
+
     public function testBuildFromArray()
     {
         $array = array(
@@ -61,6 +87,15 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $actual = Type::buildFromArray($array);
 
         $this->assertEquals($excepted, $actual);
+
+        $calendarItem = Type\CalendarItem::buildFromArray(array(
+            'Subject' => 'Test'
+        ));
+
+        $calendarControl = new Type\CalendarItem();
+        $calendarControl->setSubject('Test');
+
+        $this->assertEquals($calendarControl, $calendarItem);
     }
 
     /**

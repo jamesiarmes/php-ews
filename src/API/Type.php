@@ -46,7 +46,7 @@ class Type
             return $this->$name;
         }
 
-        throw \Exception('Property ' . $name . ' does not exist');
+        throw new \Exception('Property ' . $name . ' does not exist');
     }
 
     public function set($name, $value)
@@ -76,7 +76,7 @@ class Type
         return $value;
     }
 
-    protected $_typeMap = [ ];
+    protected $_typeMap = [];
 
     /**
      * @var string
@@ -90,13 +90,14 @@ class Type
         }
 
         if (!self::arrayIsAssoc($array)) {
-            foreach ($array as $key => $value) {
-                $array[$key] = self::buildFromArray($value);
-            }
-
-            return $array;
+            return self::buildArrayFromArray($array);
+        } else {
+            return self::buildObjectFromArray($array);
         }
+    }
 
+    protected static function buildObjectFromArray($array)
+    {
         $object = new static();
         foreach ($array as $key => $value) {
             if (is_array($value)) {
@@ -112,6 +113,15 @@ class Type
         }
 
         return $object;
+    }
+
+    public static function buildArrayFromArray($array)
+    {
+        foreach ($array as $key => $value) {
+            $array[$key] = self::buildFromArray($value);
+        }
+
+        return $array;
     }
 
     public function toXmlObject()
@@ -195,6 +205,6 @@ class Type
             return '';
         }
 
-        return (string) $this->_;
+        return (string)$this->_;
     }
 }
