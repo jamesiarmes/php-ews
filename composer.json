@@ -1,0 +1,20 @@
+{
+    "name": "jamesiarmes/php-ews",
+    "description": "PHP Exchange Web Services",
+    "keywords": ["exchange", "outlook", "web services"],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "James Armes",
+            "email": "jamesiarmes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
