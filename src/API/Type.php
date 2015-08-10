@@ -96,7 +96,7 @@ class Type
             $this->$name = array($this->$name);
         }
 
-        $this->$name[] = $value;
+        $this->{$name}[] = $value;
 
         return $this;
     }
