@@ -1,0 +1,53 @@
+<?php
+
+namespace jamesiarmes\PEWS\API\Messages;
+
+/**
+ * Class representing ResolveNamesType
+ *
+ *
+ * XSD Type: ResolveNamesType
+ *
+ * @method ResolveNamesType getReturnFullContactData()
+ * @method ResolveNamesType setReturnFullContactData($returnFullContactData)
+ * @method ResolveNamesType getSearchScope()
+ * @method ResolveNamesType setSearchScope($searchScope)
+ * @method ResolveNamesType getContactDataShape()
+ * @method ResolveNamesType setContactDataShape($contactDataShape)
+ * @method ResolveNamesType getParentFolderIds()
+ * @method ResolveNamesType setParentFolderIds($parentFolderIds)
+ * @method ResolveNamesType getUnresolvedEntry()
+ * @method ResolveNamesType setUnresolvedEntry($unresolvedEntry)
+ */
+class ResolveNamesType extends BaseRequestType
+{
+
+    /**
+     * @property boolean $returnFullContactData
+     */
+    protected $returnFullContactData = null;
+
+    /**
+     * @property string $searchScope
+     */
+    protected $searchScope = null;
+
+    /**
+     * @property string $contactDataShape
+     */
+    protected $contactDataShape = null;
+
+    /**
+     * @property \jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType
+     * $parentFolderIds
+     */
+    protected $parentFolderIds = null;
+
+    /**
+     * @property string $unresolvedEntry
+     */
+    protected $unresolvedEntry = null;
+
+
+}
+

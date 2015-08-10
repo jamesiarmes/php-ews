@@ -1,0 +1,24 @@
+<?php
+
+namespace jamesiarmes\PEWS\API\TypeTest;
+
+/**
+ * Class representing AbsoluteDateTransitionType
+ *
+ *
+ * XSD Type: AbsoluteDateTransitionType
+ *
+ * @method AbsoluteDateTransitionType getDateTime()
+ * @method AbsoluteDateTransitionType setDateTime($dateTime)
+ */
+class AbsoluteDateTransitionType extends TransitionType
+{
+
+    /**
+     * @property \DateTime $dateTime
+     */
+    protected $dateTime = null;
+
+
+}
+

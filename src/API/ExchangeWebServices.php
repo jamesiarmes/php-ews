@@ -386,16 +386,19 @@ class ExchangeWebServices
         }
 
         if (empty($response) ||
-            empty($response->ResponseMessages)) {
+            empty($response->getResponseMessages())) {
                 throw new \Exception('No response returned');
         }
 
-        $responseMessage = $response->ResponseMessages;
+        $responseMessage = $response->getResponseMessages();
+        $foundMessage = null;
         foreach ($responseMessage as $message) {
-            break;
+            if (!empty($message)) {
+                $foundMessage = $message;
+            }
         }
 
-        $messages = $message;
+        $messages = $foundMessage;
         if (!is_array($messages)) {
             $messages = array($messages);
         }

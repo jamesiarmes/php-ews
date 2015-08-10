@@ -1,0 +1,27 @@
+<?php
+
+namespace jamesiarmes\PEWS\API\TypeTest;
+
+use jamesiarmes\PEWS\API\Type;
+
+/**
+ * Class representing TimeZoneContextType
+ *
+ *
+ * XSD Type: TimeZoneContextType
+ *
+ * @method TimeZoneContextType getTimeZoneDefinition()
+ * @method TimeZoneContextType setTimeZoneDefinition($timeZoneDefinition)
+ */
+class TimeZoneContextType extends Type
+{
+
+    /**
+     * @property \jamesiarmes\PEWS\API\TypeTest\TimeZoneDefinitionType
+     * $timeZoneDefinition
+     */
+    protected $timeZoneDefinition = null;
+
+
+}
+
