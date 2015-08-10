@@ -1,0 +1,31 @@
+<?php
+
+namespace jamesiarmes\PEWS\API\Messages;
+
+/**
+ * Class representing GetEventsType
+ *
+ *
+ * XSD Type: GetEventsType
+ *
+ * @method GetEventsType getSubscriptionId()
+ * @method GetEventsType setSubscriptionId($subscriptionId)
+ * @method GetEventsType getWatermark()
+ * @method GetEventsType setWatermark($watermark)
+ */
+class GetEventsType extends BaseRequestType
+{
+
+    /**
+     * @property string $subscriptionId
+     */
+    protected $subscriptionId = null;
+
+    /**
+     * @property string $watermark
+     */
+    protected $watermark = null;
+
+
+}
+

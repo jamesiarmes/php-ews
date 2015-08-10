@@ -1,0 +1,47 @@
+<?php
+
+namespace jamesiarmes\PEWS\API\TypeTest;
+
+use jamesiarmes\PEWS\API\Type;
+
+/**
+ * Class representing OccurrenceInfoType
+ *
+ *
+ * XSD Type: OccurrenceInfoType
+ *
+ * @method OccurrenceInfoType getItemId()
+ * @method OccurrenceInfoType setItemId($itemId)
+ * @method OccurrenceInfoType getStart()
+ * @method OccurrenceInfoType setStart($start)
+ * @method OccurrenceInfoType getEnd()
+ * @method OccurrenceInfoType setEnd($end)
+ * @method OccurrenceInfoType getOriginalStart()
+ * @method OccurrenceInfoType setOriginalStart($originalStart)
+ */
+class OccurrenceInfoType extends Type
+{
+
+    /**
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemIdType $itemId
+     */
+    protected $itemId = null;
+
+    /**
+     * @property \DateTime $start
+     */
+    protected $start = null;
+
+    /**
+     * @property \DateTime $end
+     */
+    protected $end = null;
+
+    /**
+     * @property \DateTime $originalStart
+     */
+    protected $originalStart = null;
+
+
+}
+

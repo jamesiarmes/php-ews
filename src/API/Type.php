@@ -43,6 +43,15 @@ class Type
         return $this;
     }
 
+    public function __set($name, $value)
+    {
+        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
+        $this->$name = $value;
+    }
+
     public function exists($name)
     {
         return property_exists($this, $name);
