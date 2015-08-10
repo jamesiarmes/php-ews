@@ -32,6 +32,10 @@ class Type
             return $this->set($propertyName, $arguments[0]);
         }
 
+        if ($callType == "add" && count($arguments) == 1) {
+            return $this->add($propertyName, $arguments);
+        }
+
         return $this;
     }
 
@@ -42,6 +46,10 @@ class Type
 
     public function get($name)
     {
+        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
         if ($this->exists($name)) {
             return $this->$name;
         }
@@ -51,6 +59,10 @@ class Type
 
     public function set($name, $value)
     {
+        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
         if ($this->exists($name)) {
             if (isset($this->_typeMap[$name])) {
                 $value = $this->cast($value, $this->_typeMap[$name]);
@@ -58,6 +70,33 @@ class Type
 
             $this->$name = $value;
         }
+
+        return $this;
+    }
+
+    public function add($name, $value)
+    {
+        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
+        if (!$this->exists($name)) {
+            return $this;
+        }
+
+        if (isset($this->_typeMap[$name])) {
+            $value = $this->cast($value, $this->_typeMap[$name]);
+        }
+
+        if ($this->$name == null) {
+            $this->$name = array();
+        }
+
+        if (!is_array($this->$name)) {
+            $this->$name = array($this->$name);
+        }
+
+        $this->$name[] = $value;
 
         return $this;
     }
@@ -83,6 +122,10 @@ class Type
      */
     public $_ = "";
 
+    /**
+     * @param $array
+     * @return static
+     */
     public static function buildFromArray($array)
     {
         if (!is_array($array)) {
