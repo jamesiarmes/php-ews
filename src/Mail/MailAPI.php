@@ -19,6 +19,12 @@ class MailAPI extends API
         return $this->folderId;
     }
 
+    /**
+     * Get all mail items in the inbox
+     *
+     * @param array $options
+     * @return Type\Message[]
+     */
     public function getMailItems($options = array())
     {
         $request = array(
