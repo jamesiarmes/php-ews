@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gareth
- * Date: 12-8-15
- * Time: 11:50
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
