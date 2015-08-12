@@ -14,7 +14,8 @@ class ClassMap
     {
         return [
             'CalendarItemType' => '\jamesiarmes\PEWS\API\Type\CalendarItem',
-            'BodyType' => '\jamesiarmes\PEWS\API\Type\Body'
+            'BodyType' => '\jamesiarmes\PEWS\API\Type\Body',
+            'MessageType' => '\jamesiarmes\PEWS\API\Type\Message'
         ];
     }
 }

@@ -36,6 +36,10 @@ class Type
             return $this->add($propertyName, $arguments);
         }
 
+        if ($callType == "is" && count($arguments) == 0) {
+            return $this->is($propertyName);
+        }
+
         return $this;
     }
 
@@ -99,6 +103,20 @@ class Type
         $this->{$name}[] = $value;
 
         return $this;
+    }
+
+    public function is($name)
+    {
+        $nameWithIs = "Is$name";
+        if ($this->exists($nameWithIs)) {
+            $name = $nameWithIs;
+        } elseif ($this->exists(lcfirst($nameWithIs))) {
+            $name = lcfirst($nameWithIs);
+        } elseif ($this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
+        return ($this->exists($name) && (bool) $this->$name);
     }
 
     public function cast($value, $type)
