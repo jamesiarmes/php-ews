@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfResolutionType
@@ -24,7 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfResolutionType getResolution()
  * @method ArrayOfResolutionType setResolution($resolution)
  */
-class ArrayOfResolutionType extends Type
+class ArrayOfResolutionType extends TypeTest
 {
 
     /**

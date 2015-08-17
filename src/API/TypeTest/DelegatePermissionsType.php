@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing DelegatePermissionsType
@@ -29,7 +29,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method DelegatePermissionsType
  * setJournalFolderPermissionLevel($journalFolderPermissionLevel)
  */
-class DelegatePermissionsType extends Type
+class DelegatePermissionsType extends TypeTest
 {
 
     /**

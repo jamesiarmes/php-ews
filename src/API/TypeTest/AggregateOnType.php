@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing AggregateOnType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AggregateOnType getExtendedFieldURI()
  * @method AggregateOnType setExtendedFieldURI($extendedFieldURI)
  */
-class AggregateOnType extends Type
+class AggregateOnType extends TypeTest
 {
 
     /**

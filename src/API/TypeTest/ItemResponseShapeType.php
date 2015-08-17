@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ItemResponseShapeType
@@ -24,7 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ItemResponseShapeType getAdditionalProperties()
  * @method ItemResponseShapeType setAdditionalProperties($additionalProperties)
  */
-class ItemResponseShapeType extends Type
+class ItemResponseShapeType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing InvalidRecipientType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method InvalidRecipientType getMessageText()
  * @method InvalidRecipientType setMessageText($messageText)
  */
-class InvalidRecipientType extends Type
+class InvalidRecipientType extends TypeTest
 {
 
     /**

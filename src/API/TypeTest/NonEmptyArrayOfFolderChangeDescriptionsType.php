@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfFolderChangeDescriptionsType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfFolderChangeDescriptionsType
  * setDeleteFolderField($deleteFolderField)
  */
-class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
+class NonEmptyArrayOfFolderChangeDescriptionsType extends TypeTest
 {
 
     /**

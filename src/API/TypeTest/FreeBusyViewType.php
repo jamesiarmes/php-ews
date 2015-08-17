@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FreeBusyViewType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FreeBusyViewType getWorkingHours()
  * @method FreeBusyViewType setWorkingHours($workingHours)
  */
-class FreeBusyViewType extends Type
+class FreeBusyViewType extends TypeTest
 {
 
     /**

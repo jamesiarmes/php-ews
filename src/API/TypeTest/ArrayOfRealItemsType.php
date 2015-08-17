@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfRealItemsType
@@ -33,7 +33,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfRealItemsType getPostItem()
  * @method ArrayOfRealItemsType setPostItem($postItem)
  */
-class ArrayOfRealItemsType extends Type
+class ArrayOfRealItemsType extends TypeTest
 {
 
     /**

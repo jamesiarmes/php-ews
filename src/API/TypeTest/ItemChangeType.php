@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ItemChangeType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ItemChangeType getUpdates()
  * @method ItemChangeType setUpdates($updates)
  */
-class ItemChangeType extends Type
+class ItemChangeType extends TypeTest
 {
 
     /**

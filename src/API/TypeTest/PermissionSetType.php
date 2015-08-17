@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing PermissionSetType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PermissionSetType getUnknownEntries()
  * @method PermissionSetType setUnknownEntries($unknownEntries)
  */
-class PermissionSetType extends Type
+class PermissionSetType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UserIdType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UserIdType getExternalUserIdentity()
  * @method UserIdType setExternalUserIdentity($externalUserIdentity)
  */
-class UserIdType extends Type
+class UserIdType extends TypeTest
 {
 
     /**

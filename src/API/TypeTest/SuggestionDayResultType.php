@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SuggestionDayResultType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SuggestionDayResultType getSuggestionArray()
  * @method SuggestionDayResultType setSuggestionArray($suggestionArray)
  */
-class SuggestionDayResultType extends Type
+class SuggestionDayResultType extends TypeTest
 {
 
     /**

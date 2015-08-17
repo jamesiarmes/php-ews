@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UserConfigurationDictionaryEntryType
@@ -16,7 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UserConfigurationDictionaryEntryType
  * setDictionaryValue($dictionaryValue)
  */
-class UserConfigurationDictionaryEntryType extends Type
+class UserConfigurationDictionaryEntryType extends TypeTest
 {
 
     /**

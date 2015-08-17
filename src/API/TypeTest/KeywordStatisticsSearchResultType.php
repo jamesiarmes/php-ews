@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing KeywordStatisticsSearchResultType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method KeywordStatisticsSearchResultType getSize()
  * @method KeywordStatisticsSearchResultType setSize($size)
  */
-class KeywordStatisticsSearchResultType extends Type
+class KeywordStatisticsSearchResultType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TransitionType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TransitionType getTo()
  * @method TransitionType setTo($to)
  */
-class TransitionType extends Type
+class TransitionType extends TypeTest
 {
 
     /**

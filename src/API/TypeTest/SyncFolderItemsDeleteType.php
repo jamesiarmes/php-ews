@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderItemsDeleteType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderItemsDeleteType getItemId()
  * @method SyncFolderItemsDeleteType setItemId($itemId)
  */
-class SyncFolderItemsDeleteType extends Type
+class SyncFolderItemsDeleteType extends TypeTest
 {
 
     /**

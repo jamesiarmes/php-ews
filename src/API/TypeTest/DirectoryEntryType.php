@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing DirectoryEntryType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method DirectoryEntryType getId()
  * @method DirectoryEntryType setId($id)
  */
-class DirectoryEntryType extends Type
+class DirectoryEntryType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseFolderType
@@ -29,7 +29,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BaseFolderType getEffectiveRights()
  * @method BaseFolderType setEffectiveRights($effectiveRights)
  */
-class BaseFolderType extends Type
+class BaseFolderType extends TypeTest
 {
 
     /**

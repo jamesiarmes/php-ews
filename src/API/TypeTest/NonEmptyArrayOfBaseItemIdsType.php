@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfBaseItemIdsType
@@ -18,7 +18,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfBaseItemIdsType
  * setRecurringMasterItemId($recurringMasterItemId)
  */
-class NonEmptyArrayOfBaseItemIdsType extends Type
+class NonEmptyArrayOfBaseItemIdsType extends TypeTest
 {
 
     /**

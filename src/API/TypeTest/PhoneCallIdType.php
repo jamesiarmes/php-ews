@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing PhoneCallIdType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PhoneCallIdType getId()
  * @method PhoneCallIdType setId($id)
  */
-class PhoneCallIdType extends Type
+class PhoneCallIdType extends TypeTest
 {
 
     /**

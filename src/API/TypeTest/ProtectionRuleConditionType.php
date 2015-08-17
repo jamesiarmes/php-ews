@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ProtectionRuleConditionType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ProtectionRuleConditionType getTrue()
  * @method ProtectionRuleConditionType setTrue($true)
  */
-class ProtectionRuleConditionType extends Type
+class ProtectionRuleConditionType extends TypeTest
 {
 
     /**

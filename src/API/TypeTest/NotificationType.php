@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NotificationType
@@ -33,7 +33,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NotificationType getFreeBusyChangedEvent()
  * @method NotificationType setFreeBusyChangedEvent($freeBusyChangedEvent)
  */
-class NotificationType extends Type
+class NotificationType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SidAndAttributesType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SidAndAttributesType getSecurityIdentifier()
  * @method SidAndAttributesType setSecurityIdentifier($securityIdentifier)
  */
-class SidAndAttributesType extends Type
+class SidAndAttributesType extends TypeTest
 {
 
     /**

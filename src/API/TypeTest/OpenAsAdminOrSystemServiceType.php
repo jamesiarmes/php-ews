@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing OpenAsAdminOrSystemServiceType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method OpenAsAdminOrSystemServiceType getConnectingSID()
  * @method OpenAsAdminOrSystemServiceType setConnectingSID($connectingSID)
  */
-class OpenAsAdminOrSystemServiceType extends Type
+class OpenAsAdminOrSystemServiceType extends TypeTest
 {
 
     /**

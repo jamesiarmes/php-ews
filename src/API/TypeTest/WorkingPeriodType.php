@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing WorkingPeriodType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method WorkingPeriodType getEndTimeInMinutes()
  * @method WorkingPeriodType setEndTimeInMinutes($endTimeInMinutes)
  */
-class WorkingPeriodType extends Type
+class WorkingPeriodType extends TypeTest
 {
 
     /**

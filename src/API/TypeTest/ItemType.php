@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ItemType
@@ -89,7 +89,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ItemType getStoreEntryId()
  * @method ItemType setStoreEntryId($storeEntryId)
  */
-class ItemType extends Type
+class ItemType extends TypeTest
 {
 
     /**

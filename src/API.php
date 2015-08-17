@@ -250,19 +250,14 @@ class API
         $request = array_merge($request, $options);
 
         $request = Type::buildFromArray($request);
+
+        /** @var \jamesiarmes\PEWS\API\Messages\FindFolderResponseMessageType $folders */
         $folders = $this->getClient()->FindFolder($request);
+        $folders = $folders->getFolders()->getCalendarFolder();
 
-        $types = get_object_vars($folders);
-
-        foreach ($types as $k => $type) {
-            if (!is_array($type)) {
-                $type = array($type);
-            }
-
-            foreach ($type as $folder) {
-                if (is_object($folder) && $folder->DisplayName == $folderName) {
-                    return $folder;
-                }
+        foreach ($folders as $folder) {
+            if ($folder->getDisplayName() == $folderName) {
+                return $folder;
             }
         }
 

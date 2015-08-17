@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing MailTipsType
@@ -33,7 +33,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method MailTipsType getInvalidRecipient()
  * @method MailTipsType setInvalidRecipient($invalidRecipient)
  */
-class MailTipsType extends Type
+class MailTipsType extends TypeTest
 {
 
     /**

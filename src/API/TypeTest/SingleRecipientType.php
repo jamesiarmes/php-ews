@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SingleRecipientType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SingleRecipientType getMailbox()
  * @method SingleRecipientType setMailbox($mailbox)
  */
-class SingleRecipientType extends Type
+class SingleRecipientType extends TypeTest
 {
 
     /**

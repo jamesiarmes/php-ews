@@ -149,6 +149,19 @@ class Type
      */
     public $_ = "";
 
+    public function getNonNullItems()
+    {
+        $items = get_object_vars($this);
+
+        foreach ($items as $key => $item) {
+            if (substr($key, 0, 1) == "_" || $item == null) {
+                unset($items[$key]);
+            }
+        }
+
+        return $items;
+    }
+
     /**
      * @param $array
      * @return static
@@ -208,6 +221,8 @@ class Type
             if ($name == "_value") {
                 $name = "_";
             }
+
+            $name = ucfirst($name);
 
             if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
                 continue;

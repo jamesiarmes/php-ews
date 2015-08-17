@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FolderChangeType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FolderChangeType getUpdates()
  * @method FolderChangeType setUpdates($updates)
  */
-class FolderChangeType extends Type
+class FolderChangeType extends TypeTest
 {
 
     /**

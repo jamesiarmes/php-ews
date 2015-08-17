@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ProtectionRuleType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ProtectionRuleType getAction()
  * @method ProtectionRuleType setAction($action)
  */
-class ProtectionRuleType extends Type
+class ProtectionRuleType extends TypeTest
 {
 
     /**

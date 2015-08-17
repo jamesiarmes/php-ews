@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseFolderIdType
@@ -10,7 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  * Utility type which should never appear in user documents
  * XSD Type: BaseFolderIdType
  */
-class BaseFolderIdType extends Type
+class BaseFolderIdType extends TypeTest
 {
 
 

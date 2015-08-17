@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing SendNotificationResultType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SendNotificationResultType getSubscriptionStatus()
  * @method SendNotificationResultType setSubscriptionStatus($subscriptionStatus)
  */
-class SendNotificationResultType extends Type
+class SendNotificationResultType extends Messages
 {
 
     /**

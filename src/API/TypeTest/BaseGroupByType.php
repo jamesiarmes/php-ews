@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseGroupByType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BaseGroupByType getOrder()
  * @method BaseGroupByType setOrder($order)
  */
-class BaseGroupByType extends Type
+class BaseGroupByType extends TypeTest
 {
 
     /**

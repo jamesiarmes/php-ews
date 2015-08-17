@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ConversationType
@@ -68,7 +68,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ConversationType getGlobalItemIds()
  * @method ConversationType setGlobalItemIds($globalItemIds)
  */
-class ConversationType extends Type
+class ConversationType extends TypeTest
 {
 
     /**

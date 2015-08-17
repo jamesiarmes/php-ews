@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TimeZoneType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TimeZoneType getDaylight()
  * @method TimeZoneType setDaylight($daylight)
  */
-class TimeZoneType extends Type
+class TimeZoneType extends TypeTest
 {
 
     /**

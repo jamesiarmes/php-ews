@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ConnectingSIDType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ConnectingSIDType getSmtpAddress()
  * @method ConnectingSIDType setSmtpAddress($smtpAddress)
  */
-class ConnectingSIDType extends Type
+class ConnectingSIDType extends TypeTest
 {
 
     /**

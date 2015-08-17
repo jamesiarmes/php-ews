@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing MailboxDataType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method MailboxDataType getExcludeConflicts()
  * @method MailboxDataType setExcludeConflicts($excludeConflicts)
  */
-class MailboxDataType extends Type
+class MailboxDataType extends TypeTest
 {
 
     /**

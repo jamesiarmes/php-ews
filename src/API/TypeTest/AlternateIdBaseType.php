@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing AlternateIdBaseType
@@ -14,7 +14,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AlternateIdBaseType getFormat()
  * @method AlternateIdBaseType setFormat($format)
  */
-class AlternateIdBaseType extends Type
+class AlternateIdBaseType extends TypeTest
 {
 
     /**

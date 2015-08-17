@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RecipientTrackingEventType
@@ -35,7 +35,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RecipientTrackingEventType getProperties()
  * @method RecipientTrackingEventType setProperties($properties)
  */
-class RecipientTrackingEventType extends Type
+class RecipientTrackingEventType extends TypeTest
 {
 
     /**

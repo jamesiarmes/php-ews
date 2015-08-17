@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UserMailboxType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UserMailboxType getIsArchive()
  * @method UserMailboxType setIsArchive($isArchive)
  */
-class UserMailboxType extends Type
+class UserMailboxType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing GroupedItemsType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method GroupedItemsType getItems()
  * @method GroupedItemsType setItems($items)
  */
-class GroupedItemsType extends Type
+class GroupedItemsType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ExcludesValueType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ExcludesValueType getValue()
  * @method ExcludesValueType setValue($value)
  */
-class ExcludesValueType extends Type
+class ExcludesValueType extends TypeTest
 {
 
     /**

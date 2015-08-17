@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RestrictionType
@@ -35,7 +35,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RestrictionType getOr()
  * @method RestrictionType setOr($or)
  */
-class RestrictionType extends Type
+class RestrictionType extends TypeTest
 {
 
     /**

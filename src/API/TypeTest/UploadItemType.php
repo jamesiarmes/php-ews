@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UploadItemType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UploadItemType getData()
  * @method UploadItemType setData($data)
  */
-class UploadItemType extends Type
+class UploadItemType extends TypeTest
 {
 
     /**

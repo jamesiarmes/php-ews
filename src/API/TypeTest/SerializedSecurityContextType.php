@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SerializedSecurityContextType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SerializedSecurityContextType getPrimarySmtpAddress()
  * @method SerializedSecurityContextType setPrimarySmtpAddress($primarySmtpAddress)
  */
-class SerializedSecurityContextType extends Type
+class SerializedSecurityContextType extends TypeTest
 {
 
     /**

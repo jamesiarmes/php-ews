@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ConversationActionType
@@ -32,7 +32,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ConversationActionType getDeleteType()
  * @method ConversationActionType setDeleteType($deleteType)
  */
-class ConversationActionType extends Type
+class ConversationActionType extends TypeTest
 {
 
     /**

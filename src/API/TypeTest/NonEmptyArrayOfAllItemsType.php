@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfAllItemsType
@@ -57,7 +57,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfAllItemsType
  * setAcceptSharingInvitation($acceptSharingInvitation)
  */
-class NonEmptyArrayOfAllItemsType extends Type
+class NonEmptyArrayOfAllItemsType extends TypeTest
 {
 
     /**

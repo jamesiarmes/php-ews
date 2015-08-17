@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BasePagingType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BasePagingType getMaxEntriesReturned()
  * @method BasePagingType setMaxEntriesReturned($maxEntriesReturned)
  */
-class BasePagingType extends Type
+class BasePagingType extends TypeTest
 {
 
     /**

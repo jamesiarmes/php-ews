@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfFoldersType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfFoldersType getTasksFolder()
  * @method NonEmptyArrayOfFoldersType setTasksFolder($tasksFolder)
  */
-class NonEmptyArrayOfFoldersType extends Type
+class NonEmptyArrayOfFoldersType extends TypeTest
 {
 
     /**

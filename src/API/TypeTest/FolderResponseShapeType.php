@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FolderResponseShapeType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FolderResponseShapeType getAdditionalProperties()
  * @method FolderResponseShapeType setAdditionalProperties($additionalProperties)
  */
-class FolderResponseShapeType extends Type
+class FolderResponseShapeType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing EncryptedSharedFolderDataType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method EncryptedSharedFolderDataType getData()
  * @method EncryptedSharedFolderDataType setData($data)
  */
-class EncryptedSharedFolderDataType extends Type
+class EncryptedSharedFolderDataType extends TypeTest
 {
 
     /**

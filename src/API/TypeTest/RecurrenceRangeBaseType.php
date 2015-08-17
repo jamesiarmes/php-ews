@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RecurrenceRangeBaseType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RecurrenceRangeBaseType getStartDate()
  * @method RecurrenceRangeBaseType setStartDate($startDate)
  */
-class RecurrenceRangeBaseType extends Type
+class RecurrenceRangeBaseType extends TypeTest
 {
 
     /**
