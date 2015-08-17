@@ -220,8 +220,8 @@ class Type
                         $property[$key] = $value->toXmlObject();
                     }
                 }
-            } elseif (isset($this->_typeMap[$name])) {
-                $property = $this->castToExchange($property, $this->_typeMap[$name]);
+            } elseif (isset($this->_typeMap[lcfirst($name)])) {
+                $property = $this->castToExchange($property, $this->_typeMap[lcfirst($name)]);
             }
 
             $objectToReturn->$name = $property;

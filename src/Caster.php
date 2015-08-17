@@ -40,7 +40,9 @@ class Caster
     public static function shouldCast($value, $type)
     {
         $fromType = self::getValueType($value);
-        if ($fromType == $type || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
+        if ($fromType == $type
+            || (isset(self::getCastMap()[$type]) && $fromType == self::getCastMap()[$type])
+            || ($type == "ExchangeFormat" && gettype($value) !== "object")) {
             return false;
         }
 
@@ -50,7 +52,18 @@ class Caster
     public static function castExists($from, $to)
     {
         $casts = self::getCasts();
+
         return !(empty($casts[$to][$from]));
+    }
+
+    public static function getCastMap()
+    {
+        return [
+            'DateTime' => 'DateTime',
+            'dateTime' => 'DateTime',
+            'date' => 'DateTime',
+            'time' => 'DateTime'
+        ];
     }
 
     private static function getCasts()
@@ -61,38 +74,31 @@ class Caster
                     return new \DateTime($value);
                 }
             ],
-
             'dateTime' => [
                 'string' => function ($value) {
                     return new \DateTime($value);
                 }
             ],
-
             'date' => [
                 'string' => function ($value) {
                     return new \DateTime($value);
                 }
             ],
-
             'time' => [
                 'string' => function ($value) {
                     return new \DateTime($value);
                 }
             ],
-
             'ExchangeFormat' => [
                 'DateTime' => function ($value) {
                     return $value->format('c');
                 },
-
                 'dateTime' => function ($value) {
                     return $value->format('c');
                 },
-
                 'date' => function ($value) {
                     return $value->format('Y-m-d');
                 },
-
                 'time' => function ($value) {
                     return $value->format('H:i:s');
                 }
