@@ -11,12 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FreeBusyViewOptionsType
  *
  * @method FreeBusyViewOptionsType getTimeWindow()
- * @method FreeBusyViewOptionsType setTimeWindow($timeWindow)
+ * @method FreeBusyViewOptionsType setTimeWindow(DurationType $timeWindow)
  * @method FreeBusyViewOptionsType getMergedFreeBusyIntervalInMinutes()
- * @method FreeBusyViewOptionsType
- * setMergedFreeBusyIntervalInMinutes($mergedFreeBusyIntervalInMinutes)
+ * @method FreeBusyViewOptionsType setMergedFreeBusyIntervalInMinutes(integer $mergedFreeBusyIntervalInMinutes)
  * @method FreeBusyViewOptionsType getRequestedView()
- * @method FreeBusyViewOptionsType setRequestedView($requestedView)
+ * @method FreeBusyViewOptionsType setRequestedView(array $requestedView)
  */
 class FreeBusyViewOptionsType extends TypeTest
 {
@@ -32,7 +31,7 @@ class FreeBusyViewOptionsType extends TypeTest
     protected $mergedFreeBusyIntervalInMinutes = null;
 
     /**
-     * @property array $requestedView
+     * @property string[] $requestedView
      */
     protected $requestedView = null;
 

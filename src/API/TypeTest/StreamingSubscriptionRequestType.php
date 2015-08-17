@@ -11,12 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: StreamingSubscriptionRequestType
  *
  * @method StreamingSubscriptionRequestType getSubscribeToAllFolders()
- * @method StreamingSubscriptionRequestType
- * setSubscribeToAllFolders($subscribeToAllFolders)
+ * @method StreamingSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method StreamingSubscriptionRequestType getFolderIds()
- * @method StreamingSubscriptionRequestType setFolderIds($folderIds)
+ * @method StreamingSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
  * @method StreamingSubscriptionRequestType getEventTypes()
- * @method StreamingSubscriptionRequestType setEventTypes($eventTypes)
+ * @method StreamingSubscriptionRequestType setEventTypes(array $eventTypes)
  */
 class StreamingSubscriptionRequestType extends TypeTest
 {
@@ -33,7 +32,7 @@ class StreamingSubscriptionRequestType extends TypeTest
     protected $folderIds = null;
 
     /**
-     * @property array $eventTypes
+     * @property string[] $eventTypes
      */
     protected $eventTypes = null;
 

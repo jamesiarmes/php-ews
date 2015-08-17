@@ -11,20 +11,20 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PermissionSetType
  *
  * @method PermissionSetType getPermissions()
- * @method PermissionSetType setPermissions($permissions)
+ * @method PermissionSetType setPermissions(array $permissions)
  * @method PermissionSetType getUnknownEntries()
- * @method PermissionSetType setUnknownEntries($unknownEntries)
+ * @method PermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class PermissionSetType extends TypeTest
 {
 
     /**
-     * @property array $permissions
+     * @property \jamesiarmes\PEWS\API\TypeTest\PermissionType[] $permissions
      */
     protected $permissions = null;
 
     /**
-     * @property array $unknownEntries
+     * @property string[] $unknownEntries
      */
     protected $unknownEntries = null;
 

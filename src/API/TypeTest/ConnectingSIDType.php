@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ConnectingSIDType
  *
  * @method ConnectingSIDType getPrincipalName()
- * @method ConnectingSIDType setPrincipalName($principalName)
+ * @method ConnectingSIDType setPrincipalName(string $principalName)
  * @method ConnectingSIDType getSID()
- * @method ConnectingSIDType setSID($sID)
+ * @method ConnectingSIDType setSID(string $sID)
  * @method ConnectingSIDType getPrimarySmtpAddress()
- * @method ConnectingSIDType setPrimarySmtpAddress($primarySmtpAddress)
+ * @method ConnectingSIDType setPrimarySmtpAddress(string $primarySmtpAddress)
  * @method ConnectingSIDType getSmtpAddress()
- * @method ConnectingSIDType setSmtpAddress($smtpAddress)
+ * @method ConnectingSIDType setSmtpAddress(string $smtpAddress)
  */
 class ConnectingSIDType extends TypeTest
 {

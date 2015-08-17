@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DirectoryEntryType
  *
  * @method DirectoryEntryType getId()
- * @method DirectoryEntryType setId($id)
+ * @method DirectoryEntryType setId(EmailAddressType $id)
  */
 class DirectoryEntryType extends TypeTest
 {

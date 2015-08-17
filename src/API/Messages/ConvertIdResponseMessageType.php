@@ -10,7 +10,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ConvertIdResponseMessageType
  *
  * @method ConvertIdResponseMessageType getAlternateId()
- * @method ConvertIdResponseMessageType setAlternateId($alternateId)
+ * @method ConvertIdResponseMessageType setAlternateId(\jamesiarmes\PEWS\API\TypeTest\AlternateIdBaseType $alternateId)
  */
 class ConvertIdResponseMessageType extends ResponseMessageType
 {

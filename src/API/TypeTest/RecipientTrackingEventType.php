@@ -11,29 +11,29 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecipientTrackingEventType
  *
  * @method RecipientTrackingEventType getDate()
- * @method RecipientTrackingEventType setDate($date)
+ * @method RecipientTrackingEventType setDate(\DateTime $date)
  * @method RecipientTrackingEventType getRecipient()
- * @method RecipientTrackingEventType setRecipient($recipient)
+ * @method RecipientTrackingEventType setRecipient(EmailAddressType $recipient)
  * @method RecipientTrackingEventType getDeliveryStatus()
- * @method RecipientTrackingEventType setDeliveryStatus($deliveryStatus)
+ * @method RecipientTrackingEventType setDeliveryStatus(string $deliveryStatus)
  * @method RecipientTrackingEventType getEventDescription()
- * @method RecipientTrackingEventType setEventDescription($eventDescription)
+ * @method RecipientTrackingEventType setEventDescription(string $eventDescription)
  * @method RecipientTrackingEventType getEventData()
- * @method RecipientTrackingEventType setEventData($eventData)
+ * @method RecipientTrackingEventType setEventData(array $eventData)
  * @method RecipientTrackingEventType getServer()
- * @method RecipientTrackingEventType setServer($server)
+ * @method RecipientTrackingEventType setServer(string $server)
  * @method RecipientTrackingEventType getInternalId()
- * @method RecipientTrackingEventType setInternalId($internalId)
+ * @method RecipientTrackingEventType setInternalId(integer $internalId)
  * @method RecipientTrackingEventType getBccRecipient()
- * @method RecipientTrackingEventType setBccRecipient($bccRecipient)
+ * @method RecipientTrackingEventType setBccRecipient(boolean $bccRecipient)
  * @method RecipientTrackingEventType getHiddenRecipient()
- * @method RecipientTrackingEventType setHiddenRecipient($hiddenRecipient)
+ * @method RecipientTrackingEventType setHiddenRecipient(boolean $hiddenRecipient)
  * @method RecipientTrackingEventType getUniquePathId()
- * @method RecipientTrackingEventType setUniquePathId($uniquePathId)
+ * @method RecipientTrackingEventType setUniquePathId(string $uniquePathId)
  * @method RecipientTrackingEventType getRootAddress()
- * @method RecipientTrackingEventType setRootAddress($rootAddress)
+ * @method RecipientTrackingEventType setRootAddress(string $rootAddress)
  * @method RecipientTrackingEventType getProperties()
- * @method RecipientTrackingEventType setProperties($properties)
+ * @method RecipientTrackingEventType setProperties(array $properties)
  */
 class RecipientTrackingEventType extends TypeTest
 {
@@ -63,7 +63,7 @@ class RecipientTrackingEventType extends TypeTest
     protected $eventDescription = null;
 
     /**
-     * @property array $eventData
+     * @property string[] $eventData
      */
     protected $eventData = null;
 
@@ -98,7 +98,7 @@ class RecipientTrackingEventType extends TypeTest
     protected $rootAddress = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

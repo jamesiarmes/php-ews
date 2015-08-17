@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: BaseMoveCopyFolderType
  *
  * @method BaseMoveCopyFolderType getToFolderId()
- * @method BaseMoveCopyFolderType setToFolderId($toFolderId)
+ * @method BaseMoveCopyFolderType setToFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $toFolderId)
  * @method BaseMoveCopyFolderType getFolderIds()
- * @method BaseMoveCopyFolderType setFolderIds($folderIds)
+ * @method BaseMoveCopyFolderType setFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class BaseMoveCopyFolderType extends BaseRequestType
 {

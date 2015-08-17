@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetRoomListsResponseMessageType
  *
  * @method GetRoomListsResponseMessageType getRoomLists()
- * @method GetRoomListsResponseMessageType setRoomLists($roomLists)
+ * @method GetRoomListsResponseMessageType setRoomLists(array $roomLists)
  */
 class GetRoomListsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property array $roomLists
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $roomLists
      */
     protected $roomLists = null;
 

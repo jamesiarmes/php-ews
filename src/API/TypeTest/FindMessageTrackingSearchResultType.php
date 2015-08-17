@@ -11,25 +11,23 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FindMessageTrackingSearchResultType
  *
  * @method FindMessageTrackingSearchResultType getSubject()
- * @method FindMessageTrackingSearchResultType setSubject($subject)
+ * @method FindMessageTrackingSearchResultType setSubject(string $subject)
  * @method FindMessageTrackingSearchResultType getSender()
- * @method FindMessageTrackingSearchResultType setSender($sender)
+ * @method FindMessageTrackingSearchResultType setSender(EmailAddressType $sender)
  * @method FindMessageTrackingSearchResultType getPurportedSender()
- * @method FindMessageTrackingSearchResultType setPurportedSender($purportedSender)
+ * @method FindMessageTrackingSearchResultType setPurportedSender(EmailAddressType $purportedSender)
  * @method FindMessageTrackingSearchResultType getRecipients()
- * @method FindMessageTrackingSearchResultType setRecipients($recipients)
+ * @method FindMessageTrackingSearchResultType setRecipients(array $recipients)
  * @method FindMessageTrackingSearchResultType getSubmittedTime()
- * @method FindMessageTrackingSearchResultType setSubmittedTime($submittedTime)
+ * @method FindMessageTrackingSearchResultType setSubmittedTime(\DateTime $submittedTime)
  * @method FindMessageTrackingSearchResultType getMessageTrackingReportId()
- * @method FindMessageTrackingSearchResultType
- * setMessageTrackingReportId($messageTrackingReportId)
+ * @method FindMessageTrackingSearchResultType setMessageTrackingReportId(string $messageTrackingReportId)
  * @method FindMessageTrackingSearchResultType getPreviousHopServer()
- * @method FindMessageTrackingSearchResultType
- * setPreviousHopServer($previousHopServer)
+ * @method FindMessageTrackingSearchResultType setPreviousHopServer(string $previousHopServer)
  * @method FindMessageTrackingSearchResultType getFirstHopServer()
- * @method FindMessageTrackingSearchResultType setFirstHopServer($firstHopServer)
+ * @method FindMessageTrackingSearchResultType setFirstHopServer(string $firstHopServer)
  * @method FindMessageTrackingSearchResultType getProperties()
- * @method FindMessageTrackingSearchResultType setProperties($properties)
+ * @method FindMessageTrackingSearchResultType setProperties(array $properties)
  */
 class FindMessageTrackingSearchResultType extends TypeTest
 {
@@ -50,7 +48,7 @@ class FindMessageTrackingSearchResultType extends TypeTest
     protected $purportedSender = null;
 
     /**
-     * @property array $recipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $recipients
      */
     protected $recipients = null;
 
@@ -79,7 +77,7 @@ class FindMessageTrackingSearchResultType extends TypeTest
     protected $firstHopServer = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: BaseResponseMessageType
  *
  * @method BaseResponseMessageType getResponseMessages()
- * @method BaseResponseMessageType setResponseMessages($responseMessages)
+ * @method BaseResponseMessageType setResponseMessages(ArrayOfResponseMessagesType $responseMessages)
  */
 class BaseResponseMessageType extends Messages
 {

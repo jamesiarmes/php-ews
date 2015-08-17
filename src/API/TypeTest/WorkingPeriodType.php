@@ -11,17 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: WorkingPeriod
  *
  * @method WorkingPeriodType getDayOfWeek()
- * @method WorkingPeriodType setDayOfWeek($dayOfWeek)
+ * @method WorkingPeriodType setDayOfWeek(array $dayOfWeek)
  * @method WorkingPeriodType getStartTimeInMinutes()
- * @method WorkingPeriodType setStartTimeInMinutes($startTimeInMinutes)
+ * @method WorkingPeriodType setStartTimeInMinutes(integer $startTimeInMinutes)
  * @method WorkingPeriodType getEndTimeInMinutes()
- * @method WorkingPeriodType setEndTimeInMinutes($endTimeInMinutes)
+ * @method WorkingPeriodType setEndTimeInMinutes(integer $endTimeInMinutes)
  */
 class WorkingPeriodType extends TypeTest
 {
 
     /**
-     * @property array $dayOfWeek
+     * @property string[] $dayOfWeek
      */
     protected $dayOfWeek = null;
 

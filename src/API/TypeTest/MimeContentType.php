@@ -11,7 +11,7 @@ use \string;
  * XSD Type: MimeContentType
  *
  * @method MimeContentType getCharacterSet()
- * @method MimeContentType setCharacterSet($characterSet)
+ * @method MimeContentType setCharacterSet(string $characterSet)
  */
 class MimeContentType extends string
 {

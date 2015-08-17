@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ExpandDLType
  *
  * @method ExpandDLType getMailbox()
- * @method ExpandDLType setMailbox($mailbox)
+ * @method ExpandDLType setMailbox(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $mailbox)
  */
 class ExpandDLType extends BaseRequestType
 {

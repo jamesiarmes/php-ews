@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FieldOrderType
  *
  * @method FieldOrderType getOrder()
- * @method FieldOrderType setOrder($order)
+ * @method FieldOrderType setOrder(string $order)
  * @method FieldOrderType getFieldURI()
- * @method FieldOrderType setFieldURI($fieldURI)
+ * @method FieldOrderType setFieldURI(array $fieldURI)
  * @method FieldOrderType getIndexedFieldURI()
- * @method FieldOrderType setIndexedFieldURI($indexedFieldURI)
+ * @method FieldOrderType setIndexedFieldURI(array $indexedFieldURI)
  * @method FieldOrderType getExtendedFieldURI()
- * @method FieldOrderType setExtendedFieldURI($extendedFieldURI)
+ * @method FieldOrderType setExtendedFieldURI(array $extendedFieldURI)
  */
 class FieldOrderType extends TypeTest
 {
@@ -28,17 +28,17 @@ class FieldOrderType extends TypeTest
     protected $order = null;
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

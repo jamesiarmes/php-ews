@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SingleRecipientType
  *
  * @method SingleRecipientType getMailbox()
- * @method SingleRecipientType setMailbox($mailbox)
+ * @method SingleRecipientType setMailbox(EmailAddressType $mailbox)
  */
 class SingleRecipientType extends TypeTest
 {

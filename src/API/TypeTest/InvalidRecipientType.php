@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: InvalidRecipientType
  *
  * @method InvalidRecipientType getSmtpAddress()
- * @method InvalidRecipientType setSmtpAddress($smtpAddress)
+ * @method InvalidRecipientType setSmtpAddress(string $smtpAddress)
  * @method InvalidRecipientType getResponseCode()
- * @method InvalidRecipientType setResponseCode($responseCode)
+ * @method InvalidRecipientType setResponseCode(string $responseCode)
  * @method InvalidRecipientType getMessageText()
- * @method InvalidRecipientType setMessageText($messageText)
+ * @method InvalidRecipientType setMessageText(string $messageText)
  */
 class InvalidRecipientType extends TypeTest
 {

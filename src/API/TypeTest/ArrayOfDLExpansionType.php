@@ -11,18 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfDLExpansionType
  *
  * @method ArrayOfDLExpansionType getIndexedPagingOffset()
- * @method ArrayOfDLExpansionType setIndexedPagingOffset($indexedPagingOffset)
+ * @method ArrayOfDLExpansionType setIndexedPagingOffset(integer $indexedPagingOffset)
  * @method ArrayOfDLExpansionType getNumeratorOffset()
- * @method ArrayOfDLExpansionType setNumeratorOffset($numeratorOffset)
+ * @method ArrayOfDLExpansionType setNumeratorOffset(integer $numeratorOffset)
  * @method ArrayOfDLExpansionType getAbsoluteDenominator()
- * @method ArrayOfDLExpansionType setAbsoluteDenominator($absoluteDenominator)
+ * @method ArrayOfDLExpansionType setAbsoluteDenominator(integer $absoluteDenominator)
  * @method ArrayOfDLExpansionType getIncludesLastItemInRange()
- * @method ArrayOfDLExpansionType
- * setIncludesLastItemInRange($includesLastItemInRange)
+ * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method ArrayOfDLExpansionType getTotalItemsInView()
- * @method ArrayOfDLExpansionType setTotalItemsInView($totalItemsInView)
+ * @method ArrayOfDLExpansionType setTotalItemsInView(integer $totalItemsInView)
  * @method ArrayOfDLExpansionType getMailbox()
- * @method ArrayOfDLExpansionType setMailbox($mailbox)
+ * @method ArrayOfDLExpansionType setMailbox(array $mailbox)
  */
 class ArrayOfDLExpansionType extends TypeTest
 {
@@ -53,7 +52,7 @@ class ArrayOfDLExpansionType extends TypeTest
     protected $totalItemsInView = null;
 
     /**
-     * @property array $mailbox
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $mailbox
      */
     protected $mailbox = null;
 

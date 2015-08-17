@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: IndexedPageViewType
  *
  * @method IndexedPageViewType getOffset()
- * @method IndexedPageViewType setOffset($offset)
+ * @method IndexedPageViewType setOffset(integer $offset)
  * @method IndexedPageViewType getBasePoint()
- * @method IndexedPageViewType setBasePoint($basePoint)
+ * @method IndexedPageViewType setBasePoint(string $basePoint)
  */
 class IndexedPageViewType extends BasePagingType
 {

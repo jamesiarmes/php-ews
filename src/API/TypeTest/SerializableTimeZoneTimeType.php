@@ -11,17 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SerializableTimeZoneTime
  *
  * @method SerializableTimeZoneTimeType getBias()
- * @method SerializableTimeZoneTimeType setBias($bias)
+ * @method SerializableTimeZoneTimeType setBias(integer $bias)
  * @method SerializableTimeZoneTimeType getTime()
- * @method SerializableTimeZoneTimeType setTime($time)
+ * @method SerializableTimeZoneTimeType setTime(string $time)
  * @method SerializableTimeZoneTimeType getDayOrder()
- * @method SerializableTimeZoneTimeType setDayOrder($dayOrder)
+ * @method SerializableTimeZoneTimeType setDayOrder(integer $dayOrder)
  * @method SerializableTimeZoneTimeType getMonth()
- * @method SerializableTimeZoneTimeType setMonth($month)
+ * @method SerializableTimeZoneTimeType setMonth(integer $month)
  * @method SerializableTimeZoneTimeType getDayOfWeek()
- * @method SerializableTimeZoneTimeType setDayOfWeek($dayOfWeek)
+ * @method SerializableTimeZoneTimeType setDayOfWeek(string $dayOfWeek)
  * @method SerializableTimeZoneTimeType getYear()
- * @method SerializableTimeZoneTimeType setYear($year)
+ * @method SerializableTimeZoneTimeType setYear(string $year)
  */
 class SerializableTimeZoneTimeType extends TypeTest
 {

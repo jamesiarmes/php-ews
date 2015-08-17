@@ -11,23 +11,23 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RuleType
  *
  * @method RuleType getRuleId()
- * @method RuleType setRuleId($ruleId)
+ * @method RuleType setRuleId(string $ruleId)
  * @method RuleType getDisplayName()
- * @method RuleType setDisplayName($displayName)
+ * @method RuleType setDisplayName(string $displayName)
  * @method RuleType getPriority()
- * @method RuleType setPriority($priority)
+ * @method RuleType setPriority(integer $priority)
  * @method RuleType getIsEnabled()
- * @method RuleType setIsEnabled($isEnabled)
+ * @method RuleType setIsEnabled(boolean $isEnabled)
  * @method RuleType getIsNotSupported()
- * @method RuleType setIsNotSupported($isNotSupported)
+ * @method RuleType setIsNotSupported(boolean $isNotSupported)
  * @method RuleType getIsInError()
- * @method RuleType setIsInError($isInError)
+ * @method RuleType setIsInError(boolean $isInError)
  * @method RuleType getConditions()
- * @method RuleType setConditions($conditions)
+ * @method RuleType setConditions(RulePredicatesType $conditions)
  * @method RuleType getExceptions()
- * @method RuleType setExceptions($exceptions)
+ * @method RuleType setExceptions(RulePredicatesType $exceptions)
  * @method RuleType getActions()
- * @method RuleType setActions($actions)
+ * @method RuleType setActions(RuleActionsType $actions)
  */
 class RuleType extends TypeTest
 {

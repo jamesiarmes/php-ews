@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: EmailAddress
  *
  * @method EmailAddressType getName()
- * @method EmailAddressType setName($name)
+ * @method EmailAddressType setName(string $name)
  * @method EmailAddressType getAddress()
- * @method EmailAddressType setAddress($address)
+ * @method EmailAddressType setAddress(string $address)
  * @method EmailAddressType getRoutingType()
- * @method EmailAddressType setRoutingType($routingType)
+ * @method EmailAddressType setRoutingType(string $routingType)
  */
 class EmailAddressType extends TypeTest
 {

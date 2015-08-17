@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PathToIndexedFieldType
  *
  * @method PathToIndexedFieldType getFieldURI()
- * @method PathToIndexedFieldType setFieldURI($fieldURI)
+ * @method PathToIndexedFieldType setFieldURI(string $fieldURI)
  * @method PathToIndexedFieldType getFieldIndex()
- * @method PathToIndexedFieldType setFieldIndex($fieldIndex)
+ * @method PathToIndexedFieldType setFieldIndex(string $fieldIndex)
  */
 class PathToIndexedFieldType extends BasePathToElementType
 {

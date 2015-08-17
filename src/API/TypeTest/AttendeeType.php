@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AttendeeType
  *
  * @method AttendeeType getMailbox()
- * @method AttendeeType setMailbox($mailbox)
+ * @method AttendeeType setMailbox(EmailAddressType $mailbox)
  * @method AttendeeType getResponseType()
- * @method AttendeeType setResponseType($responseType)
+ * @method AttendeeType setResponseType(string $responseType)
  * @method AttendeeType getLastResponseTime()
- * @method AttendeeType setLastResponseTime($lastResponseTime)
+ * @method AttendeeType setLastResponseTime(\DateTime $lastResponseTime)
  */
 class AttendeeType extends TypeTest
 {

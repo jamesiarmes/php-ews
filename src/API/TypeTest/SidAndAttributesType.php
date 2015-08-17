@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SidAndAttributesType
  *
  * @method SidAndAttributesType getAttributes()
- * @method SidAndAttributesType setAttributes($attributes)
+ * @method SidAndAttributesType setAttributes(integer $attributes)
  * @method SidAndAttributesType getSecurityIdentifier()
- * @method SidAndAttributesType setSecurityIdentifier($securityIdentifier)
+ * @method SidAndAttributesType setSecurityIdentifier(string $securityIdentifier)
  */
 class SidAndAttributesType extends TypeTest
 {

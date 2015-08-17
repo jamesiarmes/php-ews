@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DeleteRuleOperationType
  *
  * @method DeleteRuleOperationType getRuleId()
- * @method DeleteRuleOperationType setRuleId($ruleId)
+ * @method DeleteRuleOperationType setRuleId(string $ruleId)
  */
 class DeleteRuleOperationType extends RuleOperationType
 {

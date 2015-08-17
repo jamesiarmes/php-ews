@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetAttachmentType
  *
  * @method GetAttachmentType getAttachmentShape()
- * @method GetAttachmentType setAttachmentShape($attachmentShape)
+ * @method GetAttachmentType setAttachmentShape(\jamesiarmes\PEWS\API\TypeTest\AttachmentResponseShapeType $attachmentShape)
  * @method GetAttachmentType getAttachmentIds()
- * @method GetAttachmentType setAttachmentIds($attachmentIds)
+ * @method GetAttachmentType setAttachmentIds(array $attachmentIds)
  */
 class GetAttachmentType extends BaseRequestType
 {
@@ -23,7 +23,8 @@ class GetAttachmentType extends BaseRequestType
     protected $attachmentShape = null;
 
     /**
-     * @property array $attachmentIds
+     * @property \jamesiarmes\PEWS\API\TypeTest\RequestAttachmentIdType[]
+     * $attachmentIds
      */
     protected $attachmentIds = null;
 

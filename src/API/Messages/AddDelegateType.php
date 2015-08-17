@@ -9,15 +9,15 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: AddDelegateType
  *
  * @method AddDelegateType getDelegateUsers()
- * @method AddDelegateType setDelegateUsers($delegateUsers)
+ * @method AddDelegateType setDelegateUsers(array $delegateUsers)
  * @method AddDelegateType getDeliverMeetingRequests()
- * @method AddDelegateType setDeliverMeetingRequests($deliverMeetingRequests)
+ * @method AddDelegateType setDeliverMeetingRequests(string $deliverMeetingRequests)
  */
 class AddDelegateType extends BaseDelegateType
 {
 
     /**
-     * @property array $delegateUsers
+     * @property \jamesiarmes\PEWS\API\TypeTest\DelegateUserType[] $delegateUsers
      */
     protected $delegateUsers = null;
 

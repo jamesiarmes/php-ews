@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: DeleteItemType
  *
  * @method DeleteItemType getDeleteType()
- * @method DeleteItemType setDeleteType($deleteType)
+ * @method DeleteItemType setDeleteType(string $deleteType)
  * @method DeleteItemType getSendMeetingCancellations()
- * @method DeleteItemType setSendMeetingCancellations($sendMeetingCancellations)
+ * @method DeleteItemType setSendMeetingCancellations(string $sendMeetingCancellations)
  * @method DeleteItemType getAffectedTaskOccurrences()
- * @method DeleteItemType setAffectedTaskOccurrences($affectedTaskOccurrences)
+ * @method DeleteItemType setAffectedTaskOccurrences(string $affectedTaskOccurrences)
  * @method DeleteItemType getItemIds()
- * @method DeleteItemType setItemIds($itemIds)
+ * @method DeleteItemType setItemIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseItemIdsType $itemIds)
  */
 class DeleteItemType extends BaseRequestType
 {

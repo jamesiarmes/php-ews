@@ -11,21 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarEventDetails
  *
  * @method CalendarEventDetailsType getID()
- * @method CalendarEventDetailsType setID($iD)
+ * @method CalendarEventDetailsType setID(string $iD)
  * @method CalendarEventDetailsType getSubject()
- * @method CalendarEventDetailsType setSubject($subject)
+ * @method CalendarEventDetailsType setSubject(string $subject)
  * @method CalendarEventDetailsType getLocation()
- * @method CalendarEventDetailsType setLocation($location)
+ * @method CalendarEventDetailsType setLocation(string $location)
  * @method CalendarEventDetailsType getIsMeeting()
- * @method CalendarEventDetailsType setIsMeeting($isMeeting)
+ * @method CalendarEventDetailsType setIsMeeting(boolean $isMeeting)
  * @method CalendarEventDetailsType getIsRecurring()
- * @method CalendarEventDetailsType setIsRecurring($isRecurring)
+ * @method CalendarEventDetailsType setIsRecurring(boolean $isRecurring)
  * @method CalendarEventDetailsType getIsException()
- * @method CalendarEventDetailsType setIsException($isException)
+ * @method CalendarEventDetailsType setIsException(boolean $isException)
  * @method CalendarEventDetailsType getIsReminderSet()
- * @method CalendarEventDetailsType setIsReminderSet($isReminderSet)
+ * @method CalendarEventDetailsType setIsReminderSet(boolean $isReminderSet)
  * @method CalendarEventDetailsType getIsPrivate()
- * @method CalendarEventDetailsType setIsPrivate($isPrivate)
+ * @method CalendarEventDetailsType setIsPrivate(boolean $isPrivate)
  */
 class CalendarEventDetailsType extends TypeTest
 {

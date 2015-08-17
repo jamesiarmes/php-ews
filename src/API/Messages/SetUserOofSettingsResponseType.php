@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: SetUserOofSettingsResponse
  *
  * @method SetUserOofSettingsResponseType getResponseMessage()
- * @method SetUserOofSettingsResponseType setResponseMessage($responseMessage)
+ * @method SetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  */
 class SetUserOofSettingsResponseType extends Messages
 {

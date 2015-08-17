@@ -11,14 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SerializedSecurityContextType
  *
  * @method SerializedSecurityContextType getUserSid()
- * @method SerializedSecurityContextType setUserSid($userSid)
+ * @method SerializedSecurityContextType setUserSid(string $userSid)
  * @method SerializedSecurityContextType getGroupSids()
- * @method SerializedSecurityContextType setGroupSids($groupSids)
+ * @method SerializedSecurityContextType setGroupSids(array $groupSids)
  * @method SerializedSecurityContextType getRestrictedGroupSids()
- * @method SerializedSecurityContextType
- * setRestrictedGroupSids($restrictedGroupSids)
+ * @method SerializedSecurityContextType setRestrictedGroupSids(array $restrictedGroupSids)
  * @method SerializedSecurityContextType getPrimarySmtpAddress()
- * @method SerializedSecurityContextType setPrimarySmtpAddress($primarySmtpAddress)
+ * @method SerializedSecurityContextType setPrimarySmtpAddress(string $primarySmtpAddress)
  */
 class SerializedSecurityContextType extends TypeTest
 {
@@ -29,12 +28,13 @@ class SerializedSecurityContextType extends TypeTest
     protected $userSid = null;
 
     /**
-     * @property array $groupSids
+     * @property \jamesiarmes\PEWS\API\TypeTest\SidAndAttributesType[] $groupSids
      */
     protected $groupSids = null;
 
     /**
-     * @property array $restrictedGroupSids
+     * @property \jamesiarmes\PEWS\API\TypeTest\SidAndAttributesType[]
+     * $restrictedGroupSids
      */
     protected $restrictedGroupSids = null;
 

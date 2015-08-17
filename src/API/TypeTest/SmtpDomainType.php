@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SmtpDomain
  *
  * @method SmtpDomainType getName()
- * @method SmtpDomainType setName($name)
+ * @method SmtpDomainType setName(string $name)
  * @method SmtpDomainType getIncludeSubdomains()
- * @method SmtpDomainType setIncludeSubdomains($includeSubdomains)
+ * @method SmtpDomainType setIncludeSubdomains(boolean $includeSubdomains)
  */
 class SmtpDomainType extends TypeTest
 {

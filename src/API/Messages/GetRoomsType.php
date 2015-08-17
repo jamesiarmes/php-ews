@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetRoomsType
  *
  * @method GetRoomsType getRoomList()
- * @method GetRoomsType setRoomList($roomList)
+ * @method GetRoomsType setRoomList(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $roomList)
  */
 class GetRoomsType extends BaseRequestType
 {

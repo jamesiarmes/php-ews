@@ -9,17 +9,17 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindFolderType
  *
  * @method FindFolderType getTraversal()
- * @method FindFolderType setTraversal($traversal)
+ * @method FindFolderType setTraversal(string $traversal)
  * @method FindFolderType getFolderShape()
- * @method FindFolderType setFolderShape($folderShape)
+ * @method FindFolderType setFolderShape(\jamesiarmes\PEWS\API\TypeTest\FolderResponseShapeType $folderShape)
  * @method FindFolderType getIndexedPageFolderView()
- * @method FindFolderType setIndexedPageFolderView($indexedPageFolderView)
+ * @method FindFolderType setIndexedPageFolderView(\jamesiarmes\PEWS\API\TypeTest\IndexedPageViewType $indexedPageFolderView)
  * @method FindFolderType getFractionalPageFolderView()
- * @method FindFolderType setFractionalPageFolderView($fractionalPageFolderView)
+ * @method FindFolderType setFractionalPageFolderView(\jamesiarmes\PEWS\API\TypeTest\FractionalPageViewType $fractionalPageFolderView)
  * @method FindFolderType getRestriction()
- * @method FindFolderType setRestriction($restriction)
+ * @method FindFolderType setRestriction(\jamesiarmes\PEWS\API\TypeTest\RestrictionType $restriction)
  * @method FindFolderType getParentFolderIds()
- * @method FindFolderType setParentFolderIds($parentFolderIds)
+ * @method FindFolderType setParentFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
  */
 class FindFolderType extends BaseRequestType
 {

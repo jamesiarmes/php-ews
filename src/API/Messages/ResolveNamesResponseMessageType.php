@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ResolveNamesResponseMessageType
  *
  * @method ResolveNamesResponseMessageType getResolutionSet()
- * @method ResolveNamesResponseMessageType setResolutionSet($resolutionSet)
+ * @method ResolveNamesResponseMessageType setResolutionSet(\jamesiarmes\PEWS\API\TypeTest\ArrayOfResolutionType $resolutionSet)
  */
 class ResolveNamesResponseMessageType extends ResponseMessageType
 {

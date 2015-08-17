@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: Suggestion
  *
  * @method SuggestionType getMeetingTime()
- * @method SuggestionType setMeetingTime($meetingTime)
+ * @method SuggestionType setMeetingTime(\DateTime $meetingTime)
  * @method SuggestionType getIsWorkTime()
- * @method SuggestionType setIsWorkTime($isWorkTime)
+ * @method SuggestionType setIsWorkTime(boolean $isWorkTime)
  * @method SuggestionType getSuggestionQuality()
- * @method SuggestionType setSuggestionQuality($suggestionQuality)
+ * @method SuggestionType setSuggestionQuality(string $suggestionQuality)
  * @method SuggestionType getAttendeeConflictDataArray()
- * @method SuggestionType setAttendeeConflictDataArray($attendeeConflictDataArray)
+ * @method SuggestionType setAttendeeConflictDataArray(ArrayOfAttendeeConflictDataType $attendeeConflictDataArray)
  */
 class SuggestionType extends TypeTest
 {

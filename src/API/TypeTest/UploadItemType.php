@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UploadItemType
  *
  * @method UploadItemType getCreateAction()
- * @method UploadItemType setCreateAction($createAction)
+ * @method UploadItemType setCreateAction(string $createAction)
  * @method UploadItemType getIsAssociated()
- * @method UploadItemType setIsAssociated($isAssociated)
+ * @method UploadItemType setIsAssociated(boolean $isAssociated)
  * @method UploadItemType getParentFolderId()
- * @method UploadItemType setParentFolderId($parentFolderId)
+ * @method UploadItemType setParentFolderId(FolderIdType $parentFolderId)
  * @method UploadItemType getItemId()
- * @method UploadItemType setItemId($itemId)
+ * @method UploadItemType setItemId(ItemIdType $itemId)
  * @method UploadItemType getData()
- * @method UploadItemType setData($data)
+ * @method UploadItemType setData(mixed $data)
  */
 class UploadItemType extends TypeTest
 {

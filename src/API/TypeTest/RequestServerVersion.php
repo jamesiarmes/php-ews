@@ -8,7 +8,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * Class representing RequestServerVersion
  *
  * @method RequestServerVersion getVersion()
- * @method RequestServerVersion setVersion($version)
+ * @method RequestServerVersion setVersion(string $version)
  */
 class RequestServerVersion extends TypeTest
 {

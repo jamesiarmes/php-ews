@@ -9,14 +9,15 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetServiceConfigurationResponseMessageType
  *
  * @method GetServiceConfigurationResponseMessageType getResponseMessages()
- * @method GetServiceConfigurationResponseMessageType
- * setResponseMessages($responseMessages)
+ * @method GetServiceConfigurationResponseMessageType setResponseMessages(array $responseMessages)
  */
 class GetServiceConfigurationResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property array $responseMessages
+     * @property
+     * \jamesiarmes\PEWS\API\Messages\ServiceConfigurationResponseMessageType[]
+     * $responseMessages
      */
     protected $responseMessages = null;
 

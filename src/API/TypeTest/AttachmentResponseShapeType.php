@@ -11,14 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AttachmentResponseShapeType
  *
  * @method AttachmentResponseShapeType getIncludeMimeContent()
- * @method AttachmentResponseShapeType setIncludeMimeContent($includeMimeContent)
+ * @method AttachmentResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
  * @method AttachmentResponseShapeType getBodyType()
- * @method AttachmentResponseShapeType setBodyType($bodyType)
+ * @method AttachmentResponseShapeType setBodyType(string $bodyType)
  * @method AttachmentResponseShapeType getFilterHtmlContent()
- * @method AttachmentResponseShapeType setFilterHtmlContent($filterHtmlContent)
+ * @method AttachmentResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
  * @method AttachmentResponseShapeType getAdditionalProperties()
- * @method AttachmentResponseShapeType
- * setAdditionalProperties($additionalProperties)
+ * @method AttachmentResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class AttachmentResponseShapeType extends TypeTest
 {

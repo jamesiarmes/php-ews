@@ -9,16 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ServiceConfigurationResponseMessageType
  *
  * @method ServiceConfigurationResponseMessageType getMailTipsConfiguration()
- * @method ServiceConfigurationResponseMessageType
- * setMailTipsConfiguration($mailTipsConfiguration)
- * @method ServiceConfigurationResponseMessageType
- * getUnifiedMessagingConfiguration()
- * @method ServiceConfigurationResponseMessageType
- * setUnifiedMessagingConfiguration($unifiedMessagingConfiguration)
- * @method ServiceConfigurationResponseMessageType
- * getProtectionRulesConfiguration()
- * @method ServiceConfigurationResponseMessageType
- * setProtectionRulesConfiguration($protectionRulesConfiguration)
+ * @method ServiceConfigurationResponseMessageType setMailTipsConfiguration(\jamesiarmes\PEWS\API\TypeTest\MailTipsServiceConfigurationType $mailTipsConfiguration)
+ * @method ServiceConfigurationResponseMessageType getUnifiedMessagingConfiguration()
+ * @method ServiceConfigurationResponseMessageType setUnifiedMessagingConfiguration(\jamesiarmes\PEWS\API\TypeTest\UnifiedMessageServiceConfigurationType $unifiedMessagingConfiguration)
+ * @method ServiceConfigurationResponseMessageType getProtectionRulesConfiguration()
+ * @method ServiceConfigurationResponseMessageType setProtectionRulesConfiguration(\jamesiarmes\PEWS\API\TypeTest\ProtectionRulesServiceConfigurationType $protectionRulesConfiguration)
  */
 class ServiceConfigurationResponseMessageType extends ResponseMessageType
 {

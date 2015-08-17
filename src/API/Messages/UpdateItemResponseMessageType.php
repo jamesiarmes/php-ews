@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateItemResponseMessageType
  *
  * @method UpdateItemResponseMessageType getConflictResults()
- * @method UpdateItemResponseMessageType setConflictResults($conflictResults)
+ * @method UpdateItemResponseMessageType setConflictResults(\jamesiarmes\PEWS\API\TypeTest\ConflictResultsType $conflictResults)
  */
 class UpdateItemResponseMessageType extends ItemInfoResponseMessageType
 {

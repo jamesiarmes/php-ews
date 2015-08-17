@@ -9,13 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UnifiedMessageServiceConfiguration
  *
  * @method UnifiedMessageServiceConfigurationType getUmEnabled()
- * @method UnifiedMessageServiceConfigurationType setUmEnabled($umEnabled)
+ * @method UnifiedMessageServiceConfigurationType setUmEnabled(boolean $umEnabled)
  * @method UnifiedMessageServiceConfigurationType getPlayOnPhoneDialString()
- * @method UnifiedMessageServiceConfigurationType
- * setPlayOnPhoneDialString($playOnPhoneDialString)
+ * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneDialString(string $playOnPhoneDialString)
  * @method UnifiedMessageServiceConfigurationType getPlayOnPhoneEnabled()
- * @method UnifiedMessageServiceConfigurationType
- * setPlayOnPhoneEnabled($playOnPhoneEnabled)
+ * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneEnabled(boolean $playOnPhoneEnabled)
  */
 class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
 {

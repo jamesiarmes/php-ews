@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: AttachmentInfoResponseMessageType
  *
  * @method AttachmentInfoResponseMessageType getAttachments()
- * @method AttachmentInfoResponseMessageType setAttachments($attachments)
+ * @method AttachmentInfoResponseMessageType setAttachments(\jamesiarmes\PEWS\API\TypeTest\ArrayOfAttachmentsType $attachments)
  */
 class AttachmentInfoResponseMessageType extends ResponseMessageType
 {

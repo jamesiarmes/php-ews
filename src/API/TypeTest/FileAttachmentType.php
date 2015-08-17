@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FileAttachmentType
  *
  * @method FileAttachmentType getIsContactPhoto()
- * @method FileAttachmentType setIsContactPhoto($isContactPhoto)
+ * @method FileAttachmentType setIsContactPhoto(boolean $isContactPhoto)
  * @method FileAttachmentType getContent()
- * @method FileAttachmentType setContent($content)
+ * @method FileAttachmentType setContent(mixed $content)
  */
 class FileAttachmentType extends AttachmentType
 {

@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SerializableTimeZone
  *
  * @method SerializableTimeZoneType getBias()
- * @method SerializableTimeZoneType setBias($bias)
+ * @method SerializableTimeZoneType setBias(integer $bias)
  * @method SerializableTimeZoneType getStandardTime()
- * @method SerializableTimeZoneType setStandardTime($standardTime)
+ * @method SerializableTimeZoneType setStandardTime(SerializableTimeZoneTimeType $standardTime)
  * @method SerializableTimeZoneType getDaylightTime()
- * @method SerializableTimeZoneType setDaylightTime($daylightTime)
+ * @method SerializableTimeZoneType setDaylightTime(SerializableTimeZoneTimeType $daylightTime)
  */
 class SerializableTimeZoneType extends TypeTest
 {

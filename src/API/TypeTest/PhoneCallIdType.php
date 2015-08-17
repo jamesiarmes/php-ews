@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PhoneCallIdType
  *
  * @method PhoneCallIdType getId()
- * @method PhoneCallIdType setId($id)
+ * @method PhoneCallIdType setId(string $id)
  */
 class PhoneCallIdType extends TypeTest
 {

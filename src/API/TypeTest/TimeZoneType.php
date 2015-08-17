@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TimeZoneType
  *
  * @method TimeZoneType getTimeZoneName()
- * @method TimeZoneType setTimeZoneName($timeZoneName)
+ * @method TimeZoneType setTimeZoneName(string $timeZoneName)
  * @method TimeZoneType getBaseOffset()
- * @method TimeZoneType setBaseOffset($baseOffset)
+ * @method TimeZoneType setBaseOffset(\DateInterval $baseOffset)
  * @method TimeZoneType getStandard()
- * @method TimeZoneType setStandard($standard)
+ * @method TimeZoneType setStandard(TimeChangeType $standard)
  * @method TimeZoneType getDaylight()
- * @method TimeZoneType setDaylight($daylight)
+ * @method TimeZoneType setDaylight(TimeChangeType $daylight)
  */
 class TimeZoneType extends TypeTest
 {

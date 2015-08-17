@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PathToExceptionFieldType
  *
  * @method PathToExceptionFieldType getFieldURI()
- * @method PathToExceptionFieldType setFieldURI($fieldURI)
+ * @method PathToExceptionFieldType setFieldURI(string $fieldURI)
  */
 class PathToExceptionFieldType extends BasePathToElementType
 {

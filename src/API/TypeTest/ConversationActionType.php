@@ -11,26 +11,25 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ConversationActionType
  *
  * @method ConversationActionType getAction()
- * @method ConversationActionType setAction($action)
+ * @method ConversationActionType setAction(string $action)
  * @method ConversationActionType getConversationId()
- * @method ConversationActionType setConversationId($conversationId)
+ * @method ConversationActionType setConversationId(ItemIdType $conversationId)
  * @method ConversationActionType getContextFolderId()
- * @method ConversationActionType setContextFolderId($contextFolderId)
+ * @method ConversationActionType setContextFolderId(TargetFolderIdType $contextFolderId)
  * @method ConversationActionType getConversationLastSyncTime()
- * @method ConversationActionType
- * setConversationLastSyncTime($conversationLastSyncTime)
+ * @method ConversationActionType setConversationLastSyncTime(\DateTime $conversationLastSyncTime)
  * @method ConversationActionType getProcessRightAway()
- * @method ConversationActionType setProcessRightAway($processRightAway)
+ * @method ConversationActionType setProcessRightAway(boolean $processRightAway)
  * @method ConversationActionType getDestinationFolderId()
- * @method ConversationActionType setDestinationFolderId($destinationFolderId)
+ * @method ConversationActionType setDestinationFolderId(TargetFolderIdType $destinationFolderId)
  * @method ConversationActionType getCategories()
- * @method ConversationActionType setCategories($categories)
+ * @method ConversationActionType setCategories(array $categories)
  * @method ConversationActionType getEnableAlwaysDelete()
- * @method ConversationActionType setEnableAlwaysDelete($enableAlwaysDelete)
+ * @method ConversationActionType setEnableAlwaysDelete(boolean $enableAlwaysDelete)
  * @method ConversationActionType getIsRead()
- * @method ConversationActionType setIsRead($isRead)
+ * @method ConversationActionType setIsRead(boolean $isRead)
  * @method ConversationActionType getDeleteType()
- * @method ConversationActionType setDeleteType($deleteType)
+ * @method ConversationActionType setDeleteType(string $deleteType)
  */
 class ConversationActionType extends TypeTest
 {
@@ -70,7 +69,7 @@ class ConversationActionType extends TypeTest
     protected $destinationFolderId = null;
 
     /**
-     * @property array $categories
+     * @property string[] $categories
      */
     protected $categories = null;
 

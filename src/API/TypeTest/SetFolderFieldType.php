@@ -9,15 +9,15 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SetFolderFieldType
  *
  * @method SetFolderFieldType getFolder()
- * @method SetFolderFieldType setFolder($folder)
+ * @method SetFolderFieldType setFolder(FolderType $folder)
  * @method SetFolderFieldType getCalendarFolder()
- * @method SetFolderFieldType setCalendarFolder($calendarFolder)
+ * @method SetFolderFieldType setCalendarFolder(CalendarFolderType $calendarFolder)
  * @method SetFolderFieldType getContactsFolder()
- * @method SetFolderFieldType setContactsFolder($contactsFolder)
+ * @method SetFolderFieldType setContactsFolder(ContactsFolderType $contactsFolder)
  * @method SetFolderFieldType getSearchFolder()
- * @method SetFolderFieldType setSearchFolder($searchFolder)
+ * @method SetFolderFieldType setSearchFolder(SearchFolderType $searchFolder)
  * @method SetFolderFieldType getTasksFolder()
- * @method SetFolderFieldType setTasksFolder($tasksFolder)
+ * @method SetFolderFieldType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class SetFolderFieldType extends FolderChangeDescriptionType
 {

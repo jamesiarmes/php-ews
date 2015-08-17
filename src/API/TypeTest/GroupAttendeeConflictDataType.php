@@ -9,16 +9,13 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: GroupAttendeeConflictData
  *
  * @method GroupAttendeeConflictDataType getNumberOfMembers()
- * @method GroupAttendeeConflictDataType setNumberOfMembers($numberOfMembers)
+ * @method GroupAttendeeConflictDataType setNumberOfMembers(integer $numberOfMembers)
  * @method GroupAttendeeConflictDataType getNumberOfMembersAvailable()
- * @method GroupAttendeeConflictDataType
- * setNumberOfMembersAvailable($numberOfMembersAvailable)
+ * @method GroupAttendeeConflictDataType setNumberOfMembersAvailable(integer $numberOfMembersAvailable)
  * @method GroupAttendeeConflictDataType getNumberOfMembersWithConflict()
- * @method GroupAttendeeConflictDataType
- * setNumberOfMembersWithConflict($numberOfMembersWithConflict)
+ * @method GroupAttendeeConflictDataType setNumberOfMembersWithConflict(integer $numberOfMembersWithConflict)
  * @method GroupAttendeeConflictDataType getNumberOfMembersWithNoData()
- * @method GroupAttendeeConflictDataType
- * setNumberOfMembersWithNoData($numberOfMembersWithNoData)
+ * @method GroupAttendeeConflictDataType setNumberOfMembersWithNoData(integer $numberOfMembersWithNoData)
  */
 class GroupAttendeeConflictDataType extends AttendeeConflictDataType
 {

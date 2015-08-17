@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ExportItemsResponseMessageType
  *
  * @method ExportItemsResponseMessageType getItemId()
- * @method ExportItemsResponseMessageType setItemId($itemId)
+ * @method ExportItemsResponseMessageType setItemId(\jamesiarmes\PEWS\API\TypeTest\ItemIdType $itemId)
  * @method ExportItemsResponseMessageType getData()
- * @method ExportItemsResponseMessageType setData($data)
+ * @method ExportItemsResponseMessageType setData(mixed $data)
  */
 class ExportItemsResponseMessageType extends ResponseMessageType
 {

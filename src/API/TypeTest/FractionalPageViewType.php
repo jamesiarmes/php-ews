@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FractionalPageViewType
  *
  * @method FractionalPageViewType getNumerator()
- * @method FractionalPageViewType setNumerator($numerator)
+ * @method FractionalPageViewType setNumerator(integer $numerator)
  * @method FractionalPageViewType getDenominator()
- * @method FractionalPageViewType setDenominator($denominator)
+ * @method FractionalPageViewType setDenominator(integer $denominator)
  */
 class FractionalPageViewType extends BasePagingType
 {

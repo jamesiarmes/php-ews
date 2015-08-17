@@ -7,18 +7,17 @@ use jamesiarmes\PEWS\API\TypeTest;
 /**
  * Class representing RuleValidationErrorType
  *
- * Represents a single validation error on a particular rule property value,
- * predicate property value or action property value
+ * Represents a single validation error on a particular rule property value, predicate property value or action property value
  * XSD Type: RuleValidationErrorType
  *
  * @method RuleValidationErrorType getFieldURI()
- * @method RuleValidationErrorType setFieldURI($fieldURI)
+ * @method RuleValidationErrorType setFieldURI(string $fieldURI)
  * @method RuleValidationErrorType getErrorCode()
- * @method RuleValidationErrorType setErrorCode($errorCode)
+ * @method RuleValidationErrorType setErrorCode(string $errorCode)
  * @method RuleValidationErrorType getErrorMessage()
- * @method RuleValidationErrorType setErrorMessage($errorMessage)
+ * @method RuleValidationErrorType setErrorMessage(string $errorMessage)
  * @method RuleValidationErrorType getFieldValue()
- * @method RuleValidationErrorType setFieldValue($fieldValue)
+ * @method RuleValidationErrorType setFieldValue(string $fieldValue)
  */
 class RuleValidationErrorType extends TypeTest
 {

@@ -11,14 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BaseSubscriptionRequestType
  *
  * @method BaseSubscriptionRequestType getSubscribeToAllFolders()
- * @method BaseSubscriptionRequestType
- * setSubscribeToAllFolders($subscribeToAllFolders)
+ * @method BaseSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method BaseSubscriptionRequestType getFolderIds()
- * @method BaseSubscriptionRequestType setFolderIds($folderIds)
+ * @method BaseSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
  * @method BaseSubscriptionRequestType getEventTypes()
- * @method BaseSubscriptionRequestType setEventTypes($eventTypes)
+ * @method BaseSubscriptionRequestType setEventTypes(array $eventTypes)
  * @method BaseSubscriptionRequestType getWatermark()
- * @method BaseSubscriptionRequestType setWatermark($watermark)
+ * @method BaseSubscriptionRequestType setWatermark(string $watermark)
  */
 class BaseSubscriptionRequestType extends TypeTest
 {
@@ -35,7 +34,7 @@ class BaseSubscriptionRequestType extends TypeTest
     protected $folderIds = null;
 
     /**
-     * @property array $eventTypes
+     * @property string[] $eventTypes
      */
     protected $eventTypes = null;
 

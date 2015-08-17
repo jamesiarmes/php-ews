@@ -9,8 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: DeleteUserConfigurationType
  *
  * @method DeleteUserConfigurationType getUserConfigurationName()
- * @method DeleteUserConfigurationType
- * setUserConfigurationName($userConfigurationName)
+ * @method DeleteUserConfigurationType setUserConfigurationName(\jamesiarmes\PEWS\API\TypeTest\UserConfigurationNameType $userConfigurationName)
  */
 class DeleteUserConfigurationType extends BaseRequestType
 {

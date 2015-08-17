@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRuleArgumentType
  *
  * @method ProtectionRuleArgumentType getValue()
- * @method ProtectionRuleArgumentType setValue($value)
+ * @method ProtectionRuleArgumentType setValue(string $value)
  */
 class ProtectionRuleArgumentType extends TypeTest
 {

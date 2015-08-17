@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: Duration
  *
  * @method DurationType getStartTime()
- * @method DurationType setStartTime($startTime)
+ * @method DurationType setStartTime(\DateTime $startTime)
  * @method DurationType getEndTime()
- * @method DurationType setEndTime($endTime)
+ * @method DurationType setEndTime(\DateTime $endTime)
  */
 class DurationType extends TypeTest
 {

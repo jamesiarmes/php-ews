@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DeletedOccurrenceInfoType
  *
  * @method DeletedOccurrenceInfoType getStart()
- * @method DeletedOccurrenceInfoType setStart($start)
+ * @method DeletedOccurrenceInfoType setStart(\DateTime $start)
  */
 class DeletedOccurrenceInfoType extends TypeTest
 {

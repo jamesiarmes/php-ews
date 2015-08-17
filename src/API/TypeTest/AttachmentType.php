@@ -11,21 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AttachmentType
  *
  * @method AttachmentType getAttachmentId()
- * @method AttachmentType setAttachmentId($attachmentId)
+ * @method AttachmentType setAttachmentId(AttachmentIdType $attachmentId)
  * @method AttachmentType getName()
- * @method AttachmentType setName($name)
+ * @method AttachmentType setName(string $name)
  * @method AttachmentType getContentType()
- * @method AttachmentType setContentType($contentType)
+ * @method AttachmentType setContentType(string $contentType)
  * @method AttachmentType getContentId()
- * @method AttachmentType setContentId($contentId)
+ * @method AttachmentType setContentId(string $contentId)
  * @method AttachmentType getContentLocation()
- * @method AttachmentType setContentLocation($contentLocation)
+ * @method AttachmentType setContentLocation(string $contentLocation)
  * @method AttachmentType getSize()
- * @method AttachmentType setSize($size)
+ * @method AttachmentType setSize(integer $size)
  * @method AttachmentType getLastModifiedTime()
- * @method AttachmentType setLastModifiedTime($lastModifiedTime)
+ * @method AttachmentType setLastModifiedTime(\DateTime $lastModifiedTime)
  * @method AttachmentType getIsInline()
- * @method AttachmentType setIsInline($isInline)
+ * @method AttachmentType setIsInline(boolean $isInline)
  */
 class AttachmentType extends TypeTest
 {

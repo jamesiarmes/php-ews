@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: OccurrenceItemIdType
  *
  * @method OccurrenceItemIdType getRecurringMasterId()
- * @method OccurrenceItemIdType setRecurringMasterId($recurringMasterId)
+ * @method OccurrenceItemIdType setRecurringMasterId(string $recurringMasterId)
  * @method OccurrenceItemIdType getChangeKey()
- * @method OccurrenceItemIdType setChangeKey($changeKey)
+ * @method OccurrenceItemIdType setChangeKey(string $changeKey)
  * @method OccurrenceItemIdType getInstanceIndex()
- * @method OccurrenceItemIdType setInstanceIndex($instanceIndex)
+ * @method OccurrenceItemIdType setInstanceIndex(integer $instanceIndex)
  */
 class OccurrenceItemIdType extends BaseItemIdType
 {

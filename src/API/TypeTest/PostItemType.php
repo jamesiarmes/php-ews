@@ -9,21 +9,21 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PostItemType
  *
  * @method PostItemType getConversationIndex()
- * @method PostItemType setConversationIndex($conversationIndex)
+ * @method PostItemType setConversationIndex(mixed $conversationIndex)
  * @method PostItemType getConversationTopic()
- * @method PostItemType setConversationTopic($conversationTopic)
+ * @method PostItemType setConversationTopic(string $conversationTopic)
  * @method PostItemType getFrom()
- * @method PostItemType setFrom($from)
+ * @method PostItemType setFrom(SingleRecipientType $from)
  * @method PostItemType getInternetMessageId()
- * @method PostItemType setInternetMessageId($internetMessageId)
+ * @method PostItemType setInternetMessageId(string $internetMessageId)
  * @method PostItemType getIsRead()
- * @method PostItemType setIsRead($isRead)
+ * @method PostItemType setIsRead(boolean $isRead)
  * @method PostItemType getPostedTime()
- * @method PostItemType setPostedTime($postedTime)
+ * @method PostItemType setPostedTime(\DateTime $postedTime)
  * @method PostItemType getReferences()
- * @method PostItemType setReferences($references)
+ * @method PostItemType setReferences(string $references)
  * @method PostItemType getSender()
- * @method PostItemType setSender($sender)
+ * @method PostItemType setSender(SingleRecipientType $sender)
  */
 class PostItemType extends ItemType
 {

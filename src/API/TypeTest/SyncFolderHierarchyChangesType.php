@@ -11,27 +11,29 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SyncFolderHierarchyChangesType
  *
  * @method SyncFolderHierarchyChangesType getCreate()
- * @method SyncFolderHierarchyChangesType setCreate($create)
+ * @method SyncFolderHierarchyChangesType setCreate(array $create)
  * @method SyncFolderHierarchyChangesType getUpdate()
- * @method SyncFolderHierarchyChangesType setUpdate($update)
+ * @method SyncFolderHierarchyChangesType setUpdate(array $update)
  * @method SyncFolderHierarchyChangesType getDelete()
- * @method SyncFolderHierarchyChangesType setDelete($delete)
+ * @method SyncFolderHierarchyChangesType setDelete(array $delete)
  */
 class SyncFolderHierarchyChangesType extends TypeTest
 {
 
     /**
-     * @property array $create
+     * @property \jamesiarmes\PEWS\API\TypeTest\SyncFolderHierarchyCreateOrUpdateType[]
+     * $create
      */
     protected $create = null;
 
     /**
-     * @property array $update
+     * @property \jamesiarmes\PEWS\API\TypeTest\SyncFolderHierarchyCreateOrUpdateType[]
+     * $update
      */
     protected $update = null;
 
     /**
-     * @property array $delete
+     * @property \jamesiarmes\PEWS\API\TypeTest\SyncFolderHierarchyDeleteType[] $delete
      */
     protected $delete = null;
 

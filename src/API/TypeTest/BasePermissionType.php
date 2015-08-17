@@ -11,21 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BasePermissionType
  *
  * @method BasePermissionType getUserId()
- * @method BasePermissionType setUserId($userId)
+ * @method BasePermissionType setUserId(UserIdType $userId)
  * @method BasePermissionType getCanCreateItems()
- * @method BasePermissionType setCanCreateItems($canCreateItems)
+ * @method BasePermissionType setCanCreateItems(boolean $canCreateItems)
  * @method BasePermissionType getCanCreateSubFolders()
- * @method BasePermissionType setCanCreateSubFolders($canCreateSubFolders)
+ * @method BasePermissionType setCanCreateSubFolders(boolean $canCreateSubFolders)
  * @method BasePermissionType getIsFolderOwner()
- * @method BasePermissionType setIsFolderOwner($isFolderOwner)
+ * @method BasePermissionType setIsFolderOwner(boolean $isFolderOwner)
  * @method BasePermissionType getIsFolderVisible()
- * @method BasePermissionType setIsFolderVisible($isFolderVisible)
+ * @method BasePermissionType setIsFolderVisible(boolean $isFolderVisible)
  * @method BasePermissionType getIsFolderContact()
- * @method BasePermissionType setIsFolderContact($isFolderContact)
+ * @method BasePermissionType setIsFolderContact(boolean $isFolderContact)
  * @method BasePermissionType getEditItems()
- * @method BasePermissionType setEditItems($editItems)
+ * @method BasePermissionType setEditItems(string $editItems)
  * @method BasePermissionType getDeleteItems()
- * @method BasePermissionType setDeleteItems($deleteItems)
+ * @method BasePermissionType setDeleteItems(string $deleteItems)
  */
 class BasePermissionType extends TypeTest
 {

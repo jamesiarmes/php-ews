@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: RemoveDelegateType
  *
  * @method RemoveDelegateType getUserIds()
- * @method RemoveDelegateType setUserIds($userIds)
+ * @method RemoveDelegateType setUserIds(array $userIds)
  */
 class RemoveDelegateType extends BaseDelegateType
 {
 
     /**
-     * @property array $userIds
+     * @property \jamesiarmes\PEWS\API\TypeTest\UserIdType[] $userIds
      */
     protected $userIds = null;
 

@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UnsubscribeType
  *
  * @method UnsubscribeType getSubscriptionId()
- * @method UnsubscribeType setSubscriptionId($subscriptionId)
+ * @method UnsubscribeType setSubscriptionId(string $subscriptionId)
  */
 class UnsubscribeType extends BaseRequestType
 {

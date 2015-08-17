@@ -9,22 +9,19 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetMessageTrackingReportRequestType
  *
  * @method GetMessageTrackingReportRequestType getScope()
- * @method GetMessageTrackingReportRequestType setScope($scope)
+ * @method GetMessageTrackingReportRequestType setScope(string $scope)
  * @method GetMessageTrackingReportRequestType getReportTemplate()
- * @method GetMessageTrackingReportRequestType setReportTemplate($reportTemplate)
+ * @method GetMessageTrackingReportRequestType setReportTemplate(string $reportTemplate)
  * @method GetMessageTrackingReportRequestType getRecipientFilter()
- * @method GetMessageTrackingReportRequestType setRecipientFilter($recipientFilter)
+ * @method GetMessageTrackingReportRequestType setRecipientFilter(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $recipientFilter)
  * @method GetMessageTrackingReportRequestType getMessageTrackingReportId()
- * @method GetMessageTrackingReportRequestType
- * setMessageTrackingReportId($messageTrackingReportId)
+ * @method GetMessageTrackingReportRequestType setMessageTrackingReportId(string $messageTrackingReportId)
  * @method GetMessageTrackingReportRequestType getReturnQueueEvents()
- * @method GetMessageTrackingReportRequestType
- * setReturnQueueEvents($returnQueueEvents)
+ * @method GetMessageTrackingReportRequestType setReturnQueueEvents(boolean $returnQueueEvents)
  * @method GetMessageTrackingReportRequestType getDiagnosticsLevel()
- * @method GetMessageTrackingReportRequestType
- * setDiagnosticsLevel($diagnosticsLevel)
+ * @method GetMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
  * @method GetMessageTrackingReportRequestType getProperties()
- * @method GetMessageTrackingReportRequestType setProperties($properties)
+ * @method GetMessageTrackingReportRequestType setProperties(array $properties)
  */
 class GetMessageTrackingReportRequestType extends BaseRequestType
 {
@@ -60,7 +57,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
     protected $diagnosticsLevel = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

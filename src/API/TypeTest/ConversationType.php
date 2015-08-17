@@ -11,62 +11,61 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ConversationType
  *
  * @method ConversationType getConversationId()
- * @method ConversationType setConversationId($conversationId)
+ * @method ConversationType setConversationId(ItemIdType $conversationId)
  * @method ConversationType getConversationTopic()
- * @method ConversationType setConversationTopic($conversationTopic)
+ * @method ConversationType setConversationTopic(string $conversationTopic)
  * @method ConversationType getUniqueRecipients()
- * @method ConversationType setUniqueRecipients($uniqueRecipients)
+ * @method ConversationType setUniqueRecipients(array $uniqueRecipients)
  * @method ConversationType getGlobalUniqueRecipients()
- * @method ConversationType setGlobalUniqueRecipients($globalUniqueRecipients)
+ * @method ConversationType setGlobalUniqueRecipients(array $globalUniqueRecipients)
  * @method ConversationType getUniqueUnreadSenders()
- * @method ConversationType setUniqueUnreadSenders($uniqueUnreadSenders)
+ * @method ConversationType setUniqueUnreadSenders(array $uniqueUnreadSenders)
  * @method ConversationType getGlobalUniqueUnreadSenders()
- * @method ConversationType
- * setGlobalUniqueUnreadSenders($globalUniqueUnreadSenders)
+ * @method ConversationType setGlobalUniqueUnreadSenders(array $globalUniqueUnreadSenders)
  * @method ConversationType getUniqueSenders()
- * @method ConversationType setUniqueSenders($uniqueSenders)
+ * @method ConversationType setUniqueSenders(array $uniqueSenders)
  * @method ConversationType getGlobalUniqueSenders()
- * @method ConversationType setGlobalUniqueSenders($globalUniqueSenders)
+ * @method ConversationType setGlobalUniqueSenders(array $globalUniqueSenders)
  * @method ConversationType getLastDeliveryTime()
- * @method ConversationType setLastDeliveryTime($lastDeliveryTime)
+ * @method ConversationType setLastDeliveryTime(\DateTime $lastDeliveryTime)
  * @method ConversationType getGlobalLastDeliveryTime()
- * @method ConversationType setGlobalLastDeliveryTime($globalLastDeliveryTime)
+ * @method ConversationType setGlobalLastDeliveryTime(\DateTime $globalLastDeliveryTime)
  * @method ConversationType getCategories()
- * @method ConversationType setCategories($categories)
+ * @method ConversationType setCategories(array $categories)
  * @method ConversationType getGlobalCategories()
- * @method ConversationType setGlobalCategories($globalCategories)
+ * @method ConversationType setGlobalCategories(array $globalCategories)
  * @method ConversationType getFlagStatus()
- * @method ConversationType setFlagStatus($flagStatus)
+ * @method ConversationType setFlagStatus(string $flagStatus)
  * @method ConversationType getGlobalFlagStatus()
- * @method ConversationType setGlobalFlagStatus($globalFlagStatus)
+ * @method ConversationType setGlobalFlagStatus(string $globalFlagStatus)
  * @method ConversationType getHasAttachments()
- * @method ConversationType setHasAttachments($hasAttachments)
+ * @method ConversationType setHasAttachments(boolean $hasAttachments)
  * @method ConversationType getGlobalHasAttachments()
- * @method ConversationType setGlobalHasAttachments($globalHasAttachments)
+ * @method ConversationType setGlobalHasAttachments(boolean $globalHasAttachments)
  * @method ConversationType getMessageCount()
- * @method ConversationType setMessageCount($messageCount)
+ * @method ConversationType setMessageCount(integer $messageCount)
  * @method ConversationType getGlobalMessageCount()
- * @method ConversationType setGlobalMessageCount($globalMessageCount)
+ * @method ConversationType setGlobalMessageCount(integer $globalMessageCount)
  * @method ConversationType getUnreadCount()
- * @method ConversationType setUnreadCount($unreadCount)
+ * @method ConversationType setUnreadCount(integer $unreadCount)
  * @method ConversationType getGlobalUnreadCount()
- * @method ConversationType setGlobalUnreadCount($globalUnreadCount)
+ * @method ConversationType setGlobalUnreadCount(integer $globalUnreadCount)
  * @method ConversationType getSize()
- * @method ConversationType setSize($size)
+ * @method ConversationType setSize(integer $size)
  * @method ConversationType getGlobalSize()
- * @method ConversationType setGlobalSize($globalSize)
+ * @method ConversationType setGlobalSize(integer $globalSize)
  * @method ConversationType getItemClasses()
- * @method ConversationType setItemClasses($itemClasses)
+ * @method ConversationType setItemClasses(array $itemClasses)
  * @method ConversationType getGlobalItemClasses()
- * @method ConversationType setGlobalItemClasses($globalItemClasses)
+ * @method ConversationType setGlobalItemClasses(array $globalItemClasses)
  * @method ConversationType getImportance()
- * @method ConversationType setImportance($importance)
+ * @method ConversationType setImportance(string $importance)
  * @method ConversationType getGlobalImportance()
- * @method ConversationType setGlobalImportance($globalImportance)
+ * @method ConversationType setGlobalImportance(string $globalImportance)
  * @method ConversationType getItemIds()
- * @method ConversationType setItemIds($itemIds)
+ * @method ConversationType setItemIds(NonEmptyArrayOfBaseItemIdsType $itemIds)
  * @method ConversationType getGlobalItemIds()
- * @method ConversationType setGlobalItemIds($globalItemIds)
+ * @method ConversationType setGlobalItemIds(NonEmptyArrayOfBaseItemIdsType $globalItemIds)
  */
 class ConversationType extends TypeTest
 {
@@ -82,32 +81,32 @@ class ConversationType extends TypeTest
     protected $conversationTopic = null;
 
     /**
-     * @property array $uniqueRecipients
+     * @property string[] $uniqueRecipients
      */
     protected $uniqueRecipients = null;
 
     /**
-     * @property array $globalUniqueRecipients
+     * @property string[] $globalUniqueRecipients
      */
     protected $globalUniqueRecipients = null;
 
     /**
-     * @property array $uniqueUnreadSenders
+     * @property string[] $uniqueUnreadSenders
      */
     protected $uniqueUnreadSenders = null;
 
     /**
-     * @property array $globalUniqueUnreadSenders
+     * @property string[] $globalUniqueUnreadSenders
      */
     protected $globalUniqueUnreadSenders = null;
 
     /**
-     * @property array $uniqueSenders
+     * @property string[] $uniqueSenders
      */
     protected $uniqueSenders = null;
 
     /**
-     * @property array $globalUniqueSenders
+     * @property string[] $globalUniqueSenders
      */
     protected $globalUniqueSenders = null;
 
@@ -127,12 +126,12 @@ class ConversationType extends TypeTest
     protected $globalLastDeliveryTime = null;
 
     /**
-     * @property array $categories
+     * @property string[] $categories
      */
     protected $categories = null;
 
     /**
-     * @property array $globalCategories
+     * @property string[] $globalCategories
      */
     protected $globalCategories = null;
 
@@ -187,12 +186,12 @@ class ConversationType extends TypeTest
     protected $globalSize = null;
 
     /**
-     * @property array $itemClasses
+     * @property string[] $itemClasses
      */
     protected $itemClasses = null;
 
     /**
-     * @property array $globalItemClasses
+     * @property string[] $globalItemClasses
      */
     protected $globalItemClasses = null;
 

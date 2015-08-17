@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: GroupedItemsType
  *
  * @method GroupedItemsType getGroupIndex()
- * @method GroupedItemsType setGroupIndex($groupIndex)
+ * @method GroupedItemsType setGroupIndex(string $groupIndex)
  * @method GroupedItemsType getItems()
- * @method GroupedItemsType setItems($items)
+ * @method GroupedItemsType setItems(ArrayOfRealItemsType $items)
  */
 class GroupedItemsType extends TypeTest
 {

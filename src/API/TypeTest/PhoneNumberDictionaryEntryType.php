@@ -11,7 +11,7 @@ use \string;
  * XSD Type: PhoneNumberDictionaryEntryType
  *
  * @method PhoneNumberDictionaryEntryType getKey()
- * @method PhoneNumberDictionaryEntryType setKey($key)
+ * @method PhoneNumberDictionaryEntryType setKey(string $key)
  */
 class PhoneNumberDictionaryEntryType extends string
 {

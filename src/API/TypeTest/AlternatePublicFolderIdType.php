@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AlternatePublicFolderIdType
  *
  * @method AlternatePublicFolderIdType getFolderId()
- * @method AlternatePublicFolderIdType setFolderId($folderId)
+ * @method AlternatePublicFolderIdType setFolderId(string $folderId)
  */
 class AlternatePublicFolderIdType extends AlternateIdBaseType
 {

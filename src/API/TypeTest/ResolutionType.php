@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ResolutionType
  *
  * @method ResolutionType getMailbox()
- * @method ResolutionType setMailbox($mailbox)
+ * @method ResolutionType setMailbox(EmailAddressType $mailbox)
  * @method ResolutionType getContact()
- * @method ResolutionType setContact($contact)
+ * @method ResolutionType setContact(ContactItemType $contact)
  */
 class ResolutionType extends TypeTest
 {

@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BaseNotificationEventType
  *
  * @method BaseNotificationEventType getWatermark()
- * @method BaseNotificationEventType setWatermark($watermark)
+ * @method BaseNotificationEventType setWatermark(string $watermark)
  */
 class BaseNotificationEventType extends TypeTest
 {

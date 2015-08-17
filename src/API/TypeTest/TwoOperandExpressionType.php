@@ -9,29 +9,29 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TwoOperandExpressionType
  *
  * @method TwoOperandExpressionType getFieldURI()
- * @method TwoOperandExpressionType setFieldURI($fieldURI)
+ * @method TwoOperandExpressionType setFieldURI(array $fieldURI)
  * @method TwoOperandExpressionType getIndexedFieldURI()
- * @method TwoOperandExpressionType setIndexedFieldURI($indexedFieldURI)
+ * @method TwoOperandExpressionType setIndexedFieldURI(array $indexedFieldURI)
  * @method TwoOperandExpressionType getExtendedFieldURI()
- * @method TwoOperandExpressionType setExtendedFieldURI($extendedFieldURI)
+ * @method TwoOperandExpressionType setExtendedFieldURI(array $extendedFieldURI)
  * @method TwoOperandExpressionType getFieldURIOrConstant()
- * @method TwoOperandExpressionType setFieldURIOrConstant($fieldURIOrConstant)
+ * @method TwoOperandExpressionType setFieldURIOrConstant(FieldURIOrConstantType $fieldURIOrConstant)
  */
 class TwoOperandExpressionType extends SearchExpressionType
 {
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

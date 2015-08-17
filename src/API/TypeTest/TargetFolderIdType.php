@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TargetFolderIdType
  *
  * @method TargetFolderIdType getFolderId()
- * @method TargetFolderIdType setFolderId($folderId)
+ * @method TargetFolderIdType setFolderId(FolderIdType $folderId)
  * @method TargetFolderIdType getDistinguishedFolderId()
- * @method TargetFolderIdType setDistinguishedFolderId($distinguishedFolderId)
+ * @method TargetFolderIdType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
  */
 class TargetFolderIdType extends TypeTest
 {

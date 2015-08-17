@@ -9,13 +9,14 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: BaseDelegateResponseMessageType
  *
  * @method BaseDelegateResponseMessageType getResponseMessages()
- * @method BaseDelegateResponseMessageType setResponseMessages($responseMessages)
+ * @method BaseDelegateResponseMessageType setResponseMessages(array $responseMessages)
  */
 class BaseDelegateResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property array $responseMessages
+     * @property \jamesiarmes\PEWS\API\Messages\DelegateUserResponseMessageType[]
+     * $responseMessages
      */
     protected $responseMessages = null;
 

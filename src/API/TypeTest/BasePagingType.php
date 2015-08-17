@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BasePagingType
  *
  * @method BasePagingType getMaxEntriesReturned()
- * @method BasePagingType setMaxEntriesReturned($maxEntriesReturned)
+ * @method BasePagingType setMaxEntriesReturned(integer $maxEntriesReturned)
  */
 class BasePagingType extends TypeTest
 {

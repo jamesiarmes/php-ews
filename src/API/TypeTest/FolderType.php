@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FolderType
  *
  * @method FolderType getPermissionSet()
- * @method FolderType setPermissionSet($permissionSet)
+ * @method FolderType setPermissionSet(PermissionSetType $permissionSet)
  * @method FolderType getUnreadCount()
- * @method FolderType setUnreadCount($unreadCount)
+ * @method FolderType setUnreadCount(integer $unreadCount)
  */
 class FolderType extends BaseFolderType
 {

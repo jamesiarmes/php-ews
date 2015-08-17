@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: WorkingHours
  *
  * @method WorkingHoursType getTimeZone()
- * @method WorkingHoursType setTimeZone($timeZone)
+ * @method WorkingHoursType setTimeZone(SerializableTimeZoneType $timeZone)
  * @method WorkingHoursType getWorkingPeriodArray()
- * @method WorkingHoursType setWorkingPeriodArray($workingPeriodArray)
+ * @method WorkingHoursType setWorkingPeriodArray(array $workingPeriodArray)
  */
 class WorkingHoursType extends TypeTest
 {
@@ -24,7 +24,7 @@ class WorkingHoursType extends TypeTest
     protected $timeZone = null;
 
     /**
-     * @property array $workingPeriodArray
+     * @property \jamesiarmes\PEWS\API\TypeTest\WorkingPeriodType[] $workingPeriodArray
      */
     protected $workingPeriodArray = null;
 

@@ -9,29 +9,29 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ExcludesType
  *
  * @method ExcludesType getFieldURI()
- * @method ExcludesType setFieldURI($fieldURI)
+ * @method ExcludesType setFieldURI(array $fieldURI)
  * @method ExcludesType getIndexedFieldURI()
- * @method ExcludesType setIndexedFieldURI($indexedFieldURI)
+ * @method ExcludesType setIndexedFieldURI(array $indexedFieldURI)
  * @method ExcludesType getExtendedFieldURI()
- * @method ExcludesType setExtendedFieldURI($extendedFieldURI)
+ * @method ExcludesType setExtendedFieldURI(array $extendedFieldURI)
  * @method ExcludesType getBitmask()
- * @method ExcludesType setBitmask($bitmask)
+ * @method ExcludesType setBitmask(ExcludesValueType $bitmask)
  */
 class ExcludesType extends SearchExpressionType
 {
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

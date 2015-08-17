@@ -9,15 +9,15 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AppendToFolderFieldType
  *
  * @method AppendToFolderFieldType getFolder()
- * @method AppendToFolderFieldType setFolder($folder)
+ * @method AppendToFolderFieldType setFolder(FolderType $folder)
  * @method AppendToFolderFieldType getCalendarFolder()
- * @method AppendToFolderFieldType setCalendarFolder($calendarFolder)
+ * @method AppendToFolderFieldType setCalendarFolder(CalendarFolderType $calendarFolder)
  * @method AppendToFolderFieldType getContactsFolder()
- * @method AppendToFolderFieldType setContactsFolder($contactsFolder)
+ * @method AppendToFolderFieldType setContactsFolder(ContactsFolderType $contactsFolder)
  * @method AppendToFolderFieldType getSearchFolder()
- * @method AppendToFolderFieldType setSearchFolder($searchFolder)
+ * @method AppendToFolderFieldType setSearchFolder(SearchFolderType $searchFolder)
  * @method AppendToFolderFieldType getTasksFolder()
- * @method AppendToFolderFieldType setTasksFolder($tasksFolder)
+ * @method AppendToFolderFieldType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class AppendToFolderFieldType extends FolderChangeDescriptionType
 {

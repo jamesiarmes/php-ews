@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetSharingFolderType
  *
  * @method GetSharingFolderType getSmtpAddress()
- * @method GetSharingFolderType setSmtpAddress($smtpAddress)
+ * @method GetSharingFolderType setSmtpAddress(string $smtpAddress)
  * @method GetSharingFolderType getDataType()
- * @method GetSharingFolderType setDataType($dataType)
+ * @method GetSharingFolderType setDataType(string $dataType)
  * @method GetSharingFolderType getSharedFolderId()
- * @method GetSharingFolderType setSharedFolderId($sharedFolderId)
+ * @method GetSharingFolderType setSharedFolderId(string $sharedFolderId)
  */
 class GetSharingFolderType extends BaseRequestType
 {

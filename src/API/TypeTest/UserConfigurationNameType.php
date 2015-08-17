@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserConfigurationNameType
  *
  * @method UserConfigurationNameType getName()
- * @method UserConfigurationNameType setName($name)
+ * @method UserConfigurationNameType setName(string $name)
  */
 class UserConfigurationNameType extends TargetFolderIdType
 {

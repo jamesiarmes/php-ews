@@ -11,27 +11,30 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfRuleOperationsType
  *
  * @method ArrayOfRuleOperationsType getCreateRuleOperation()
- * @method ArrayOfRuleOperationsType setCreateRuleOperation($createRuleOperation)
+ * @method ArrayOfRuleOperationsType setCreateRuleOperation(array $createRuleOperation)
  * @method ArrayOfRuleOperationsType getSetRuleOperation()
- * @method ArrayOfRuleOperationsType setSetRuleOperation($setRuleOperation)
+ * @method ArrayOfRuleOperationsType setSetRuleOperation(array $setRuleOperation)
  * @method ArrayOfRuleOperationsType getDeleteRuleOperation()
- * @method ArrayOfRuleOperationsType setDeleteRuleOperation($deleteRuleOperation)
+ * @method ArrayOfRuleOperationsType setDeleteRuleOperation(array $deleteRuleOperation)
  */
 class ArrayOfRuleOperationsType extends TypeTest
 {
 
     /**
-     * @property array $createRuleOperation
+     * @property \jamesiarmes\PEWS\API\TypeTest\CreateRuleOperationType[]
+     * $createRuleOperation
      */
     protected $createRuleOperation = null;
 
     /**
-     * @property array $setRuleOperation
+     * @property \jamesiarmes\PEWS\API\TypeTest\SetRuleOperationType[]
+     * $setRuleOperation
      */
     protected $setRuleOperation = null;
 
     /**
-     * @property array $deleteRuleOperation
+     * @property \jamesiarmes\PEWS\API\TypeTest\DeleteRuleOperationType[]
+     * $deleteRuleOperation
      */
     protected $deleteRuleOperation = null;
 

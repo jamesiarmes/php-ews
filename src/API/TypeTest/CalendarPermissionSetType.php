@@ -11,20 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarPermissionSetType
  *
  * @method CalendarPermissionSetType getCalendarPermissions()
- * @method CalendarPermissionSetType setCalendarPermissions($calendarPermissions)
+ * @method CalendarPermissionSetType setCalendarPermissions(array $calendarPermissions)
  * @method CalendarPermissionSetType getUnknownEntries()
- * @method CalendarPermissionSetType setUnknownEntries($unknownEntries)
+ * @method CalendarPermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class CalendarPermissionSetType extends TypeTest
 {
 
     /**
-     * @property array $calendarPermissions
+     * @property \jamesiarmes\PEWS\API\TypeTest\CalendarPermissionType[]
+     * $calendarPermissions
      */
     protected $calendarPermissions = null;
 
     /**
-     * @property array $unknownEntries
+     * @property string[] $unknownEntries
      */
     protected $unknownEntries = null;
 

@@ -11,7 +11,7 @@ use \string;
  * XSD Type: TransitionTargetType
  *
  * @method TransitionTargetType getKind()
- * @method TransitionTargetType setKind($kind)
+ * @method TransitionTargetType setKind(string $kind)
  */
 class TransitionTargetType extends string
 {

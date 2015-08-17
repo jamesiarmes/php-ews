@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PeriodType
  *
  * @method PeriodType getBias()
- * @method PeriodType setBias($bias)
+ * @method PeriodType setBias(\DateInterval $bias)
  * @method PeriodType getName()
- * @method PeriodType setName($name)
+ * @method PeriodType setName(string $name)
  * @method PeriodType getId()
- * @method PeriodType setId($id)
+ * @method PeriodType setId(string $id)
  */
 class PeriodType extends TypeTest
 {

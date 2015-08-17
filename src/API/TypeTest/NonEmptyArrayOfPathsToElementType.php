@@ -11,27 +11,27 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfPathsToElementType
  *
  * @method NonEmptyArrayOfPathsToElementType getFieldURI()
- * @method NonEmptyArrayOfPathsToElementType setFieldURI($fieldURI)
+ * @method NonEmptyArrayOfPathsToElementType setFieldURI(array $fieldURI)
  * @method NonEmptyArrayOfPathsToElementType getIndexedFieldURI()
- * @method NonEmptyArrayOfPathsToElementType setIndexedFieldURI($indexedFieldURI)
+ * @method NonEmptyArrayOfPathsToElementType setIndexedFieldURI(array $indexedFieldURI)
  * @method NonEmptyArrayOfPathsToElementType getExtendedFieldURI()
- * @method NonEmptyArrayOfPathsToElementType setExtendedFieldURI($extendedFieldURI)
+ * @method NonEmptyArrayOfPathsToElementType setExtendedFieldURI(array $extendedFieldURI)
  */
 class NonEmptyArrayOfPathsToElementType extends TypeTest
 {
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

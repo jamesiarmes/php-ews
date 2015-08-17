@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FolderInfoResponseMessageType
  *
  * @method FolderInfoResponseMessageType getFolders()
- * @method FolderInfoResponseMessageType setFolders($folders)
+ * @method FolderInfoResponseMessageType setFolders(\jamesiarmes\PEWS\API\TypeTest\ArrayOfFoldersType $folders)
  */
 class FolderInfoResponseMessageType extends ResponseMessageType
 {

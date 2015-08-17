@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ConstantValueType
  *
  * @method ConstantValueType getValue()
- * @method ConstantValueType setValue($value)
+ * @method ConstantValueType setValue(string $value)
  */
 class ConstantValueType extends TypeTest
 {

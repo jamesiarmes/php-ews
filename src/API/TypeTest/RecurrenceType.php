@@ -11,23 +11,23 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurrenceType
  *
  * @method RecurrenceType getRelativeYearlyRecurrence()
- * @method RecurrenceType setRelativeYearlyRecurrence($relativeYearlyRecurrence)
+ * @method RecurrenceType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
  * @method RecurrenceType getAbsoluteYearlyRecurrence()
- * @method RecurrenceType setAbsoluteYearlyRecurrence($absoluteYearlyRecurrence)
+ * @method RecurrenceType setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $absoluteYearlyRecurrence)
  * @method RecurrenceType getRelativeMonthlyRecurrence()
- * @method RecurrenceType setRelativeMonthlyRecurrence($relativeMonthlyRecurrence)
+ * @method RecurrenceType setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $relativeMonthlyRecurrence)
  * @method RecurrenceType getAbsoluteMonthlyRecurrence()
- * @method RecurrenceType setAbsoluteMonthlyRecurrence($absoluteMonthlyRecurrence)
+ * @method RecurrenceType setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $absoluteMonthlyRecurrence)
  * @method RecurrenceType getWeeklyRecurrence()
- * @method RecurrenceType setWeeklyRecurrence($weeklyRecurrence)
+ * @method RecurrenceType setWeeklyRecurrence(WeeklyRecurrencePatternType $weeklyRecurrence)
  * @method RecurrenceType getDailyRecurrence()
- * @method RecurrenceType setDailyRecurrence($dailyRecurrence)
+ * @method RecurrenceType setDailyRecurrence(DailyRecurrencePatternType $dailyRecurrence)
  * @method RecurrenceType getNoEndRecurrence()
- * @method RecurrenceType setNoEndRecurrence($noEndRecurrence)
+ * @method RecurrenceType setNoEndRecurrence(NoEndRecurrenceRangeType $noEndRecurrence)
  * @method RecurrenceType getEndDateRecurrence()
- * @method RecurrenceType setEndDateRecurrence($endDateRecurrence)
+ * @method RecurrenceType setEndDateRecurrence(EndDateRecurrenceRangeType $endDateRecurrence)
  * @method RecurrenceType getNumberedRecurrence()
- * @method RecurrenceType setNumberedRecurrence($numberedRecurrence)
+ * @method RecurrenceType setNumberedRecurrence(NumberedRecurrenceRangeType $numberedRecurrence)
  */
 class RecurrenceType extends TypeTest
 {

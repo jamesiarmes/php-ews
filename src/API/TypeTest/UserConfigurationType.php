@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserConfigurationType
  *
  * @method UserConfigurationType getUserConfigurationName()
- * @method UserConfigurationType setUserConfigurationName($userConfigurationName)
+ * @method UserConfigurationType setUserConfigurationName(UserConfigurationNameType $userConfigurationName)
  * @method UserConfigurationType getItemId()
- * @method UserConfigurationType setItemId($itemId)
+ * @method UserConfigurationType setItemId(ItemIdType $itemId)
  * @method UserConfigurationType getDictionary()
- * @method UserConfigurationType setDictionary($dictionary)
+ * @method UserConfigurationType setDictionary(array $dictionary)
  * @method UserConfigurationType getXmlData()
- * @method UserConfigurationType setXmlData($xmlData)
+ * @method UserConfigurationType setXmlData(mixed $xmlData)
  * @method UserConfigurationType getBinaryData()
- * @method UserConfigurationType setBinaryData($binaryData)
+ * @method UserConfigurationType setBinaryData(mixed $binaryData)
  */
 class UserConfigurationType extends TypeTest
 {
@@ -36,7 +36,8 @@ class UserConfigurationType extends TypeTest
     protected $itemId = null;
 
     /**
-     * @property array $dictionary
+     * @property \jamesiarmes\PEWS\API\TypeTest\UserConfigurationDictionaryEntryType[]
+     * $dictionary
      */
     protected $dictionary = null;
 

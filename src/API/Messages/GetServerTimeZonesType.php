@@ -9,10 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetServerTimeZonesType
  *
  * @method GetServerTimeZonesType getReturnFullTimeZoneData()
- * @method GetServerTimeZonesType
- * setReturnFullTimeZoneData($returnFullTimeZoneData)
+ * @method GetServerTimeZonesType setReturnFullTimeZoneData(boolean $returnFullTimeZoneData)
  * @method GetServerTimeZonesType getIds()
- * @method GetServerTimeZonesType setIds($ids)
+ * @method GetServerTimeZonesType setIds(array $ids)
  */
 class GetServerTimeZonesType extends BaseRequestType
 {
@@ -23,7 +22,7 @@ class GetServerTimeZonesType extends BaseRequestType
     protected $returnFullTimeZoneData = null;
 
     /**
-     * @property array $ids
+     * @property string[] $ids
      */
     protected $ids = null;
 

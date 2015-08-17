@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: SendItemType
  *
  * @method SendItemType getSaveItemToFolder()
- * @method SendItemType setSaveItemToFolder($saveItemToFolder)
+ * @method SendItemType setSaveItemToFolder(boolean $saveItemToFolder)
  * @method SendItemType getItemIds()
- * @method SendItemType setItemIds($itemIds)
+ * @method SendItemType setItemIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseItemIdsType $itemIds)
  * @method SendItemType getSavedItemFolderId()
- * @method SendItemType setSavedItemFolderId($savedItemFolderId)
+ * @method SendItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $savedItemFolderId)
  */
 class SendItemType extends BaseRequestType
 {

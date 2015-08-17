@@ -11,18 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FindFolderParentType
  *
  * @method FindFolderParentType getIndexedPagingOffset()
- * @method FindFolderParentType setIndexedPagingOffset($indexedPagingOffset)
+ * @method FindFolderParentType setIndexedPagingOffset(integer $indexedPagingOffset)
  * @method FindFolderParentType getNumeratorOffset()
- * @method FindFolderParentType setNumeratorOffset($numeratorOffset)
+ * @method FindFolderParentType setNumeratorOffset(integer $numeratorOffset)
  * @method FindFolderParentType getAbsoluteDenominator()
- * @method FindFolderParentType setAbsoluteDenominator($absoluteDenominator)
+ * @method FindFolderParentType setAbsoluteDenominator(integer $absoluteDenominator)
  * @method FindFolderParentType getIncludesLastItemInRange()
- * @method FindFolderParentType
- * setIncludesLastItemInRange($includesLastItemInRange)
+ * @method FindFolderParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method FindFolderParentType getTotalItemsInView()
- * @method FindFolderParentType setTotalItemsInView($totalItemsInView)
+ * @method FindFolderParentType setTotalItemsInView(integer $totalItemsInView)
  * @method FindFolderParentType getFolders()
- * @method FindFolderParentType setFolders($folders)
+ * @method FindFolderParentType setFolders(ArrayOfFoldersType $folders)
  */
 class FindFolderParentType extends TypeTest
 {

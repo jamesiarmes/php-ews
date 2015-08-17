@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateFolderType
  *
  * @method UpdateFolderType getFolderChanges()
- * @method UpdateFolderType setFolderChanges($folderChanges)
+ * @method UpdateFolderType setFolderChanges(array $folderChanges)
  */
 class UpdateFolderType extends BaseRequestType
 {
 
     /**
-     * @property array $folderChanges
+     * @property \jamesiarmes\PEWS\API\TypeTest\FolderChangeType[] $folderChanges
      */
     protected $folderChanges = null;
 

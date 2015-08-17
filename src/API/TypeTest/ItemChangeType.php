@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ItemChangeType
  *
  * @method ItemChangeType getItemId()
- * @method ItemChangeType setItemId($itemId)
+ * @method ItemChangeType setItemId(ItemIdType $itemId)
  * @method ItemChangeType getOccurrenceItemId()
- * @method ItemChangeType setOccurrenceItemId($occurrenceItemId)
+ * @method ItemChangeType setOccurrenceItemId(OccurrenceItemIdType $occurrenceItemId)
  * @method ItemChangeType getRecurringMasterItemId()
- * @method ItemChangeType setRecurringMasterItemId($recurringMasterItemId)
+ * @method ItemChangeType setRecurringMasterItemId(RecurringMasterItemIdType $recurringMasterItemId)
  * @method ItemChangeType getUpdates()
- * @method ItemChangeType setUpdates($updates)
+ * @method ItemChangeType setUpdates(NonEmptyArrayOfItemChangeDescriptionsType $updates)
  */
 class ItemChangeType extends TypeTest
 {

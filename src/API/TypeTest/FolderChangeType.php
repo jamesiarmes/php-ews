@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FolderChangeType
  *
  * @method FolderChangeType getFolderId()
- * @method FolderChangeType setFolderId($folderId)
+ * @method FolderChangeType setFolderId(FolderIdType $folderId)
  * @method FolderChangeType getDistinguishedFolderId()
- * @method FolderChangeType setDistinguishedFolderId($distinguishedFolderId)
+ * @method FolderChangeType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
  * @method FolderChangeType getUpdates()
- * @method FolderChangeType setUpdates($updates)
+ * @method FolderChangeType setUpdates(NonEmptyArrayOfFolderChangeDescriptionsType $updates)
  */
 class FolderChangeType extends TypeTest
 {

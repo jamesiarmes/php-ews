@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BaseGroupByType
  *
  * @method BaseGroupByType getOrder()
- * @method BaseGroupByType setOrder($order)
+ * @method BaseGroupByType setOrder(string $order)
  */
 class BaseGroupByType extends TypeTest
 {

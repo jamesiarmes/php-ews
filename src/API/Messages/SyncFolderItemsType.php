@@ -9,17 +9,17 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: SyncFolderItemsType
  *
  * @method SyncFolderItemsType getItemShape()
- * @method SyncFolderItemsType setItemShape($itemShape)
+ * @method SyncFolderItemsType setItemShape(\jamesiarmes\PEWS\API\TypeTest\ItemResponseShapeType $itemShape)
  * @method SyncFolderItemsType getSyncFolderId()
- * @method SyncFolderItemsType setSyncFolderId($syncFolderId)
+ * @method SyncFolderItemsType setSyncFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $syncFolderId)
  * @method SyncFolderItemsType getSyncState()
- * @method SyncFolderItemsType setSyncState($syncState)
+ * @method SyncFolderItemsType setSyncState(string $syncState)
  * @method SyncFolderItemsType getIgnore()
- * @method SyncFolderItemsType setIgnore($ignore)
+ * @method SyncFolderItemsType setIgnore(array $ignore)
  * @method SyncFolderItemsType getMaxChangesReturned()
- * @method SyncFolderItemsType setMaxChangesReturned($maxChangesReturned)
+ * @method SyncFolderItemsType setMaxChangesReturned(integer $maxChangesReturned)
  * @method SyncFolderItemsType getSyncScope()
- * @method SyncFolderItemsType setSyncScope($syncScope)
+ * @method SyncFolderItemsType setSyncScope(string $syncScope)
  */
 class SyncFolderItemsType extends BaseRequestType
 {
@@ -40,7 +40,7 @@ class SyncFolderItemsType extends BaseRequestType
     protected $syncState = null;
 
     /**
-     * @property array $ignore
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemIdType[] $ignore
      */
     protected $ignore = null;
 

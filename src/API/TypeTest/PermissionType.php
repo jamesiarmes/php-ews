@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PermissionType
  *
  * @method PermissionType getReadItems()
- * @method PermissionType setReadItems($readItems)
+ * @method PermissionType setReadItems(string $readItems)
  * @method PermissionType getPermissionLevel()
- * @method PermissionType setPermissionLevel($permissionLevel)
+ * @method PermissionType setPermissionLevel(string $permissionLevel)
  */
 class PermissionType extends BasePermissionType
 {

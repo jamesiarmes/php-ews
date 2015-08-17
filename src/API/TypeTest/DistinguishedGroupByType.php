@@ -10,7 +10,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DistinguishedGroupByType
  *
  * @method DistinguishedGroupByType getStandardGroupBy()
- * @method DistinguishedGroupByType setStandardGroupBy($standardGroupBy)
+ * @method DistinguishedGroupByType setStandardGroupBy(string $standardGroupBy)
  */
 class DistinguishedGroupByType extends BaseGroupByType
 {

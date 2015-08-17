@@ -11,26 +11,25 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ManagedFolderInformationType
  *
  * @method ManagedFolderInformationType getCanDelete()
- * @method ManagedFolderInformationType setCanDelete($canDelete)
+ * @method ManagedFolderInformationType setCanDelete(boolean $canDelete)
  * @method ManagedFolderInformationType getCanRenameOrMove()
- * @method ManagedFolderInformationType setCanRenameOrMove($canRenameOrMove)
+ * @method ManagedFolderInformationType setCanRenameOrMove(boolean $canRenameOrMove)
  * @method ManagedFolderInformationType getMustDisplayComment()
- * @method ManagedFolderInformationType setMustDisplayComment($mustDisplayComment)
+ * @method ManagedFolderInformationType setMustDisplayComment(boolean $mustDisplayComment)
  * @method ManagedFolderInformationType getHasQuota()
- * @method ManagedFolderInformationType setHasQuota($hasQuota)
+ * @method ManagedFolderInformationType setHasQuota(boolean $hasQuota)
  * @method ManagedFolderInformationType getIsManagedFoldersRoot()
- * @method ManagedFolderInformationType
- * setIsManagedFoldersRoot($isManagedFoldersRoot)
+ * @method ManagedFolderInformationType setIsManagedFoldersRoot(boolean $isManagedFoldersRoot)
  * @method ManagedFolderInformationType getManagedFolderId()
- * @method ManagedFolderInformationType setManagedFolderId($managedFolderId)
+ * @method ManagedFolderInformationType setManagedFolderId(string $managedFolderId)
  * @method ManagedFolderInformationType getComment()
- * @method ManagedFolderInformationType setComment($comment)
+ * @method ManagedFolderInformationType setComment(string $comment)
  * @method ManagedFolderInformationType getStorageQuota()
- * @method ManagedFolderInformationType setStorageQuota($storageQuota)
+ * @method ManagedFolderInformationType setStorageQuota(integer $storageQuota)
  * @method ManagedFolderInformationType getFolderSize()
- * @method ManagedFolderInformationType setFolderSize($folderSize)
+ * @method ManagedFolderInformationType setFolderSize(integer $folderSize)
  * @method ManagedFolderInformationType getHomePage()
- * @method ManagedFolderInformationType setHomePage($homePage)
+ * @method ManagedFolderInformationType setHomePage(string $homePage)
  */
 class ManagedFolderInformationType extends TypeTest
 {

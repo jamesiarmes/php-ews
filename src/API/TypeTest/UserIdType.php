@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserIdType
  *
  * @method UserIdType getSID()
- * @method UserIdType setSID($sID)
+ * @method UserIdType setSID(string $sID)
  * @method UserIdType getPrimarySmtpAddress()
- * @method UserIdType setPrimarySmtpAddress($primarySmtpAddress)
+ * @method UserIdType setPrimarySmtpAddress(string $primarySmtpAddress)
  * @method UserIdType getDisplayName()
- * @method UserIdType setDisplayName($displayName)
+ * @method UserIdType setDisplayName(string $displayName)
  * @method UserIdType getDistinguishedUser()
- * @method UserIdType setDistinguishedUser($distinguishedUser)
+ * @method UserIdType setDistinguishedUser(string $distinguishedUser)
  * @method UserIdType getExternalUserIdentity()
- * @method UserIdType setExternalUserIdentity($externalUserIdentity)
+ * @method UserIdType setExternalUserIdentity(string $externalUserIdentity)
  */
 class UserIdType extends TypeTest
 {

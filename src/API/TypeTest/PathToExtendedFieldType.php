@@ -5,28 +5,25 @@ namespace jamesiarmes\PEWS\API\TypeTest;
 /**
  * Class representing PathToExtendedFieldType
  *
- * Represents an extended property. Note that there are only a couple of valid
- * attribute
+ * Represents an extended property. Note that there are only a couple of valid attribute
  *  combinations. Note that all occurances require the PropertyType attribute.
  *
- *  1. (DistinguishedPropertySetId || PropertySetId) + (PropertyName || Property
- * Id)
+ *  1. (DistinguishedPropertySetId || PropertySetId) + (PropertyName || Property Id)
  *  2. PropertyTag
  * XSD Type: PathToExtendedFieldType
  *
  * @method PathToExtendedFieldType getDistinguishedPropertySetId()
- * @method PathToExtendedFieldType
- * setDistinguishedPropertySetId($distinguishedPropertySetId)
+ * @method PathToExtendedFieldType setDistinguishedPropertySetId(string $distinguishedPropertySetId)
  * @method PathToExtendedFieldType getPropertySetId()
- * @method PathToExtendedFieldType setPropertySetId($propertySetId)
+ * @method PathToExtendedFieldType setPropertySetId(string $propertySetId)
  * @method PathToExtendedFieldType getPropertyTag()
- * @method PathToExtendedFieldType setPropertyTag($propertyTag)
+ * @method PathToExtendedFieldType setPropertyTag(integer $propertyTag)
  * @method PathToExtendedFieldType getPropertyName()
- * @method PathToExtendedFieldType setPropertyName($propertyName)
+ * @method PathToExtendedFieldType setPropertyName(string $propertyName)
  * @method PathToExtendedFieldType getPropertyId()
- * @method PathToExtendedFieldType setPropertyId($propertyId)
+ * @method PathToExtendedFieldType setPropertyId(integer $propertyId)
  * @method PathToExtendedFieldType getPropertyType()
- * @method PathToExtendedFieldType setPropertyType($propertyType)
+ * @method PathToExtendedFieldType setPropertyType(string $propertyType)
  */
 class PathToExtendedFieldType extends BasePathToElementType
 {

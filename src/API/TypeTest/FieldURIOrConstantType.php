@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FieldURIOrConstantType
  *
  * @method FieldURIOrConstantType getFieldURI()
- * @method FieldURIOrConstantType setFieldURI($fieldURI)
+ * @method FieldURIOrConstantType setFieldURI(FieldURI $fieldURI)
  * @method FieldURIOrConstantType getIndexedFieldURI()
- * @method FieldURIOrConstantType setIndexedFieldURI($indexedFieldURI)
+ * @method FieldURIOrConstantType setIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
  * @method FieldURIOrConstantType getExtendedFieldURI()
- * @method FieldURIOrConstantType setExtendedFieldURI($extendedFieldURI)
+ * @method FieldURIOrConstantType setExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
  * @method FieldURIOrConstantType getConstant()
- * @method FieldURIOrConstantType setConstant($constant)
+ * @method FieldURIOrConstantType setConstant(ConstantValueType $constant)
  */
 class FieldURIOrConstantType extends TypeTest
 {

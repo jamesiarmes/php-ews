@@ -11,21 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfBaseFolderIdsType
  *
  * @method NonEmptyArrayOfBaseFolderIdsType getFolderId()
- * @method NonEmptyArrayOfBaseFolderIdsType setFolderId($folderId)
+ * @method NonEmptyArrayOfBaseFolderIdsType setFolderId(array $folderId)
  * @method NonEmptyArrayOfBaseFolderIdsType getDistinguishedFolderId()
- * @method NonEmptyArrayOfBaseFolderIdsType
- * setDistinguishedFolderId($distinguishedFolderId)
+ * @method NonEmptyArrayOfBaseFolderIdsType setDistinguishedFolderId(array $distinguishedFolderId)
  */
 class NonEmptyArrayOfBaseFolderIdsType extends TypeTest
 {
 
     /**
-     * @property array $folderId
+     * @property \jamesiarmes\PEWS\API\TypeTest\FolderIdType[] $folderId
      */
     protected $folderId = null;
 
     /**
-     * @property array $distinguishedFolderId
+     * @property \jamesiarmes\PEWS\API\TypeTest\DistinguishedFolderIdType[]
+     * $distinguishedFolderId
      */
     protected $distinguishedFolderId = null;
 

@@ -11,25 +11,21 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SuggestionsViewOptionsType
  *
  * @method SuggestionsViewOptionsType getGoodThreshold()
- * @method SuggestionsViewOptionsType setGoodThreshold($goodThreshold)
+ * @method SuggestionsViewOptionsType setGoodThreshold(integer $goodThreshold)
  * @method SuggestionsViewOptionsType getMaximumResultsByDay()
- * @method SuggestionsViewOptionsType setMaximumResultsByDay($maximumResultsByDay)
+ * @method SuggestionsViewOptionsType setMaximumResultsByDay(integer $maximumResultsByDay)
  * @method SuggestionsViewOptionsType getMaximumNonWorkHourResultsByDay()
- * @method SuggestionsViewOptionsType
- * setMaximumNonWorkHourResultsByDay($maximumNonWorkHourResultsByDay)
+ * @method SuggestionsViewOptionsType setMaximumNonWorkHourResultsByDay(integer $maximumNonWorkHourResultsByDay)
  * @method SuggestionsViewOptionsType getMeetingDurationInMinutes()
- * @method SuggestionsViewOptionsType
- * setMeetingDurationInMinutes($meetingDurationInMinutes)
+ * @method SuggestionsViewOptionsType setMeetingDurationInMinutes(integer $meetingDurationInMinutes)
  * @method SuggestionsViewOptionsType getMinimumSuggestionQuality()
- * @method SuggestionsViewOptionsType
- * setMinimumSuggestionQuality($minimumSuggestionQuality)
+ * @method SuggestionsViewOptionsType setMinimumSuggestionQuality(string $minimumSuggestionQuality)
  * @method SuggestionsViewOptionsType getDetailedSuggestionsWindow()
- * @method SuggestionsViewOptionsType
- * setDetailedSuggestionsWindow($detailedSuggestionsWindow)
+ * @method SuggestionsViewOptionsType setDetailedSuggestionsWindow(DurationType $detailedSuggestionsWindow)
  * @method SuggestionsViewOptionsType getCurrentMeetingTime()
- * @method SuggestionsViewOptionsType setCurrentMeetingTime($currentMeetingTime)
+ * @method SuggestionsViewOptionsType setCurrentMeetingTime(\DateTime $currentMeetingTime)
  * @method SuggestionsViewOptionsType getGlobalObjectId()
- * @method SuggestionsViewOptionsType setGlobalObjectId($globalObjectId)
+ * @method SuggestionsViewOptionsType setGlobalObjectId(string $globalObjectId)
  */
 class SuggestionsViewOptionsType extends TypeTest
 {

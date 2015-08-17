@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetItemType
  *
  * @method GetItemType getItemShape()
- * @method GetItemType setItemShape($itemShape)
+ * @method GetItemType setItemShape(\jamesiarmes\PEWS\API\TypeTest\ItemResponseShapeType $itemShape)
  * @method GetItemType getItemIds()
- * @method GetItemType setItemIds($itemIds)
+ * @method GetItemType setItemIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseItemIdsType $itemIds)
  */
 class GetItemType extends BaseRequestType
 {

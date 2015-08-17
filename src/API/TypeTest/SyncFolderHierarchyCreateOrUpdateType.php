@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SyncFolderHierarchyCreateOrUpdateType
  *
  * @method SyncFolderHierarchyCreateOrUpdateType getFolder()
- * @method SyncFolderHierarchyCreateOrUpdateType setFolder($folder)
+ * @method SyncFolderHierarchyCreateOrUpdateType setFolder(FolderType $folder)
  * @method SyncFolderHierarchyCreateOrUpdateType getCalendarFolder()
- * @method SyncFolderHierarchyCreateOrUpdateType setCalendarFolder($calendarFolder)
+ * @method SyncFolderHierarchyCreateOrUpdateType setCalendarFolder(CalendarFolderType $calendarFolder)
  * @method SyncFolderHierarchyCreateOrUpdateType getContactsFolder()
- * @method SyncFolderHierarchyCreateOrUpdateType setContactsFolder($contactsFolder)
+ * @method SyncFolderHierarchyCreateOrUpdateType setContactsFolder(ContactsFolderType $contactsFolder)
  * @method SyncFolderHierarchyCreateOrUpdateType getSearchFolder()
- * @method SyncFolderHierarchyCreateOrUpdateType setSearchFolder($searchFolder)
+ * @method SyncFolderHierarchyCreateOrUpdateType setSearchFolder(SearchFolderType $searchFolder)
  * @method SyncFolderHierarchyCreateOrUpdateType getTasksFolder()
- * @method SyncFolderHierarchyCreateOrUpdateType setTasksFolder($tasksFolder)
+ * @method SyncFolderHierarchyCreateOrUpdateType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class SyncFolderHierarchyCreateOrUpdateType extends TypeTest
 {

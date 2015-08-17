@@ -11,7 +11,7 @@ use \string;
  * XSD Type: InternetHeaderType
  *
  * @method InternetHeaderType getHeaderName()
- * @method InternetHeaderType setHeaderName($headerName)
+ * @method InternetHeaderType setHeaderName(string $headerName)
  */
 class InternetHeaderType extends string
 {

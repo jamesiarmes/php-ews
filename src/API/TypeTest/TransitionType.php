@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TransitionType
  *
  * @method TransitionType getTo()
- * @method TransitionType setTo($to)
+ * @method TransitionType setTo(TransitionTargetType $to)
  */
 class TransitionType extends TypeTest
 {

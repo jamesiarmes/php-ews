@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AttachmentIdType
  *
  * @method AttachmentIdType getRootItemId()
- * @method AttachmentIdType setRootItemId($rootItemId)
+ * @method AttachmentIdType setRootItemId(string $rootItemId)
  * @method AttachmentIdType getRootItemChangeKey()
- * @method AttachmentIdType setRootItemChangeKey($rootItemChangeKey)
+ * @method AttachmentIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class AttachmentIdType extends RequestAttachmentIdType
 {

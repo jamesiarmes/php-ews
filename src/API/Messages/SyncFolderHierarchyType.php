@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: SyncFolderHierarchyType
  *
  * @method SyncFolderHierarchyType getFolderShape()
- * @method SyncFolderHierarchyType setFolderShape($folderShape)
+ * @method SyncFolderHierarchyType setFolderShape(\jamesiarmes\PEWS\API\TypeTest\FolderResponseShapeType $folderShape)
  * @method SyncFolderHierarchyType getSyncFolderId()
- * @method SyncFolderHierarchyType setSyncFolderId($syncFolderId)
+ * @method SyncFolderHierarchyType setSyncFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $syncFolderId)
  * @method SyncFolderHierarchyType getSyncState()
- * @method SyncFolderHierarchyType setSyncState($syncState)
+ * @method SyncFolderHierarchyType setSyncState(string $syncState)
  */
 class SyncFolderHierarchyType extends BaseRequestType
 {

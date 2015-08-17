@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ExportItemsType
  *
  * @method ExportItemsType getItemIds()
- * @method ExportItemsType setItemIds($itemIds)
+ * @method ExportItemsType setItemIds(array $itemIds)
  */
 class ExportItemsType extends BaseRequestType
 {
 
     /**
-     * @property array $itemIds
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemIdType[] $itemIds
      */
     protected $itemIds = null;
 

@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AbsoluteYearlyRecurrencePatternType
  *
  * @method AbsoluteYearlyRecurrencePatternType getDayOfMonth()
- * @method AbsoluteYearlyRecurrencePatternType setDayOfMonth($dayOfMonth)
+ * @method AbsoluteYearlyRecurrencePatternType setDayOfMonth(integer $dayOfMonth)
  * @method AbsoluteYearlyRecurrencePatternType getMonth()
- * @method AbsoluteYearlyRecurrencePatternType setMonth($month)
+ * @method AbsoluteYearlyRecurrencePatternType setMonth(string $month)
  */
 class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
 {

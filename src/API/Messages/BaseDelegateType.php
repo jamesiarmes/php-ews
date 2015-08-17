@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: BaseDelegateType
  *
  * @method BaseDelegateType getMailbox()
- * @method BaseDelegateType setMailbox($mailbox)
+ * @method BaseDelegateType setMailbox(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $mailbox)
  */
 class BaseDelegateType extends BaseRequestType
 {

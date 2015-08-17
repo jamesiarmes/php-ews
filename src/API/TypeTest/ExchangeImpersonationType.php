@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ExchangeImpersonationType
  *
  * @method ExchangeImpersonationType getConnectingSID()
- * @method ExchangeImpersonationType setConnectingSID($connectingSID)
+ * @method ExchangeImpersonationType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class ExchangeImpersonationType extends TypeTest
 {

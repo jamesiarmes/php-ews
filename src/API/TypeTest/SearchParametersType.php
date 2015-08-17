@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SearchParametersType
  *
  * @method SearchParametersType getTraversal()
- * @method SearchParametersType setTraversal($traversal)
+ * @method SearchParametersType setTraversal(string $traversal)
  * @method SearchParametersType getRestriction()
- * @method SearchParametersType setRestriction($restriction)
+ * @method SearchParametersType setRestriction(RestrictionType $restriction)
  * @method SearchParametersType getBaseFolderIds()
- * @method SearchParametersType setBaseFolderIds($baseFolderIds)
+ * @method SearchParametersType setBaseFolderIds(NonEmptyArrayOfBaseFolderIdsType $baseFolderIds)
  */
 class SearchParametersType extends TypeTest
 {

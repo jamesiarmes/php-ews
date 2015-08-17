@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: ResponseMessageType
  *
  * @method ResponseMessageType getResponseClass()
- * @method ResponseMessageType setResponseClass($responseClass)
+ * @method ResponseMessageType setResponseClass(string $responseClass)
  * @method ResponseMessageType getMessageText()
- * @method ResponseMessageType setMessageText($messageText)
+ * @method ResponseMessageType setMessageText(string $messageText)
  * @method ResponseMessageType getResponseCode()
- * @method ResponseMessageType setResponseCode($responseCode)
+ * @method ResponseMessageType setResponseCode(string $responseCode)
  * @method ResponseMessageType getDescriptiveLinkKey()
- * @method ResponseMessageType setDescriptiveLinkKey($descriptiveLinkKey)
+ * @method ResponseMessageType setDescriptiveLinkKey(integer $descriptiveLinkKey)
  * @method ResponseMessageType getMessageXml()
- * @method ResponseMessageType setMessageXml($messageXml)
+ * @method ResponseMessageType setMessageXml(\jamesiarmes\PEWS\API\Messages\ResponseMessageType\MessageXmlAType $messageXml)
  */
 class ResponseMessageType extends Messages
 {

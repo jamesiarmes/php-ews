@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserConfigurationDictionaryObjectType
  *
  * @method UserConfigurationDictionaryObjectType getType()
- * @method UserConfigurationDictionaryObjectType setType($type)
+ * @method UserConfigurationDictionaryObjectType setType(string $type)
  * @method UserConfigurationDictionaryObjectType getValue()
- * @method UserConfigurationDictionaryObjectType setValue($value)
+ * @method UserConfigurationDictionaryObjectType setValue(array $value)
  */
 class UserConfigurationDictionaryObjectType extends TypeTest
 {
@@ -24,7 +24,7 @@ class UserConfigurationDictionaryObjectType extends TypeTest
     protected $type = null;
 
     /**
-     * @property array $value
+     * @property string[] $value
      */
     protected $value = null;
 

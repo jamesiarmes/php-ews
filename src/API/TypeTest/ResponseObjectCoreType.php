@@ -10,7 +10,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ResponseObjectCoreType
  *
  * @method ResponseObjectCoreType getReferenceItemId()
- * @method ResponseObjectCoreType setReferenceItemId($referenceItemId)
+ * @method ResponseObjectCoreType setReferenceItemId(ItemIdType $referenceItemId)
  */
 class ResponseObjectCoreType extends MessageType
 {

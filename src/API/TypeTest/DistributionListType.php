@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DistributionListType
  *
  * @method DistributionListType getDisplayName()
- * @method DistributionListType setDisplayName($displayName)
+ * @method DistributionListType setDisplayName(string $displayName)
  * @method DistributionListType getFileAs()
- * @method DistributionListType setFileAs($fileAs)
+ * @method DistributionListType setFileAs(string $fileAs)
  * @method DistributionListType getContactSource()
- * @method DistributionListType setContactSource($contactSource)
+ * @method DistributionListType setContactSource(string $contactSource)
  * @method DistributionListType getMembers()
- * @method DistributionListType setMembers($members)
+ * @method DistributionListType setMembers(array $members)
  */
 class DistributionListType extends ItemType
 {
@@ -36,7 +36,7 @@ class DistributionListType extends ItemType
     protected $contactSource = null;
 
     /**
-     * @property array $members
+     * @property \jamesiarmes\PEWS\API\TypeTest\MemberType[] $members
      */
     protected $members = null;
 

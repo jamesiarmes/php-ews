@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: SendNotificationResponseMessageType
  *
  * @method SendNotificationResponseMessageType getNotification()
- * @method SendNotificationResponseMessageType setNotification($notification)
+ * @method SendNotificationResponseMessageType setNotification(\jamesiarmes\PEWS\API\TypeTest\NotificationType $notification)
  */
 class SendNotificationResponseMessageType extends ResponseMessageType
 {

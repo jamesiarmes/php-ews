@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ResponseObjectType
  *
  * @method ResponseObjectType getObjectName()
- * @method ResponseObjectType setObjectName($objectName)
+ * @method ResponseObjectType setObjectName(string $objectName)
  */
 class ResponseObjectType extends ResponseObjectCoreType
 {

@@ -9,14 +9,14 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateInboxRulesResponseType
  *
  * @method UpdateInboxRulesResponseType getRuleOperationErrors()
- * @method UpdateInboxRulesResponseType
- * setRuleOperationErrors($ruleOperationErrors)
+ * @method UpdateInboxRulesResponseType setRuleOperationErrors(array $ruleOperationErrors)
  */
 class UpdateInboxRulesResponseType extends ResponseMessageType
 {
 
     /**
-     * @property array $ruleOperationErrors
+     * @property \jamesiarmes\PEWS\API\TypeTest\RuleOperationErrorType[]
+     * $ruleOperationErrors
      */
     protected $ruleOperationErrors = null;
 

@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRuleType
  *
  * @method ProtectionRuleType getName()
- * @method ProtectionRuleType setName($name)
+ * @method ProtectionRuleType setName(string $name)
  * @method ProtectionRuleType getUserOverridable()
- * @method ProtectionRuleType setUserOverridable($userOverridable)
+ * @method ProtectionRuleType setUserOverridable(boolean $userOverridable)
  * @method ProtectionRuleType getPriority()
- * @method ProtectionRuleType setPriority($priority)
+ * @method ProtectionRuleType setPriority(integer $priority)
  * @method ProtectionRuleType getCondition()
- * @method ProtectionRuleType setCondition($condition)
+ * @method ProtectionRuleType setCondition(ProtectionRuleConditionType $condition)
  * @method ProtectionRuleType getAction()
- * @method ProtectionRuleType setAction($action)
+ * @method ProtectionRuleType setAction(ProtectionRuleActionType $action)
  */
 class ProtectionRuleType extends TypeTest
 {

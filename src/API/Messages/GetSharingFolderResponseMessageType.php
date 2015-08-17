@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetSharingFolderResponseMessageType
  *
  * @method GetSharingFolderResponseMessageType getSharingFolderId()
- * @method GetSharingFolderResponseMessageType setSharingFolderId($sharingFolderId)
+ * @method GetSharingFolderResponseMessageType setSharingFolderId(\jamesiarmes\PEWS\API\TypeTest\FolderIdType $sharingFolderId)
  */
 class GetSharingFolderResponseMessageType extends ResponseMessageType
 {

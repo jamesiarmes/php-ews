@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: OccurrenceInfoType
  *
  * @method OccurrenceInfoType getItemId()
- * @method OccurrenceInfoType setItemId($itemId)
+ * @method OccurrenceInfoType setItemId(ItemIdType $itemId)
  * @method OccurrenceInfoType getStart()
- * @method OccurrenceInfoType setStart($start)
+ * @method OccurrenceInfoType setStart(\DateTime $start)
  * @method OccurrenceInfoType getEnd()
- * @method OccurrenceInfoType setEnd($end)
+ * @method OccurrenceInfoType setEnd(\DateTime $end)
  * @method OccurrenceInfoType getOriginalStart()
- * @method OccurrenceInfoType setOriginalStart($originalStart)
+ * @method OccurrenceInfoType setOriginalStart(\DateTime $originalStart)
  */
 class OccurrenceInfoType extends TypeTest
 {

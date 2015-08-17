@@ -11,7 +11,7 @@ use \string;
  * XSD Type: ImAddressDictionaryEntryType
  *
  * @method ImAddressDictionaryEntryType getKey()
- * @method ImAddressDictionaryEntryType setKey($key)
+ * @method ImAddressDictionaryEntryType setKey(string $key)
  */
 class ImAddressDictionaryEntryType extends string
 {

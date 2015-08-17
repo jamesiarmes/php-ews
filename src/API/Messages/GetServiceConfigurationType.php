@@ -9,10 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetServiceConfigurationType
  *
  * @method GetServiceConfigurationType getActingAs()
- * @method GetServiceConfigurationType setActingAs($actingAs)
+ * @method GetServiceConfigurationType setActingAs(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $actingAs)
  * @method GetServiceConfigurationType getRequestedConfiguration()
- * @method GetServiceConfigurationType
- * setRequestedConfiguration($requestedConfiguration)
+ * @method GetServiceConfigurationType setRequestedConfiguration(array $requestedConfiguration)
  */
 class GetServiceConfigurationType extends BaseRequestType
 {
@@ -23,7 +22,8 @@ class GetServiceConfigurationType extends BaseRequestType
     protected $actingAs = null;
 
     /**
-     * @property array $requestedConfiguration
+     * @property \jamesiarmes\PEWS\API\TypeTest\ServiceConfigurationType[]
+     * $requestedConfiguration
      */
     protected $requestedConfiguration = null;
 

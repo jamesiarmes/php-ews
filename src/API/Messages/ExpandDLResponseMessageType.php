@@ -9,18 +9,17 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ExpandDLResponseMessageType
  *
  * @method ExpandDLResponseMessageType getIndexedPagingOffset()
- * @method ExpandDLResponseMessageType setIndexedPagingOffset($indexedPagingOffset)
+ * @method ExpandDLResponseMessageType setIndexedPagingOffset(integer $indexedPagingOffset)
  * @method ExpandDLResponseMessageType getNumeratorOffset()
- * @method ExpandDLResponseMessageType setNumeratorOffset($numeratorOffset)
+ * @method ExpandDLResponseMessageType setNumeratorOffset(integer $numeratorOffset)
  * @method ExpandDLResponseMessageType getAbsoluteDenominator()
- * @method ExpandDLResponseMessageType setAbsoluteDenominator($absoluteDenominator)
+ * @method ExpandDLResponseMessageType setAbsoluteDenominator(integer $absoluteDenominator)
  * @method ExpandDLResponseMessageType getIncludesLastItemInRange()
- * @method ExpandDLResponseMessageType
- * setIncludesLastItemInRange($includesLastItemInRange)
+ * @method ExpandDLResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method ExpandDLResponseMessageType getTotalItemsInView()
- * @method ExpandDLResponseMessageType setTotalItemsInView($totalItemsInView)
+ * @method ExpandDLResponseMessageType setTotalItemsInView(integer $totalItemsInView)
  * @method ExpandDLResponseMessageType getDLExpansion()
- * @method ExpandDLResponseMessageType setDLExpansion($dLExpansion)
+ * @method ExpandDLResponseMessageType setDLExpansion(\jamesiarmes\PEWS\API\TypeTest\ArrayOfDLExpansionType $dLExpansion)
  */
 class ExpandDLResponseMessageType extends ResponseMessageType
 {

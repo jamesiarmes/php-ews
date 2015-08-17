@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ReplyBody
  *
  * @method ReplyBodyType getLang()
- * @method ReplyBodyType setLang($lang)
+ * @method ReplyBodyType setLang(\jamesiarmes\PEWS\API\TypeTest\ReplyBodyType\LangAType $lang)
  * @method ReplyBodyType getMessage()
- * @method ReplyBodyType setMessage($message)
+ * @method ReplyBodyType setMessage(string $message)
  */
 class ReplyBodyType extends TypeTest
 {

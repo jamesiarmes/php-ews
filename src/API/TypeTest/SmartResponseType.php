@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SmartResponseType
  *
  * @method SmartResponseType getNewBodyContent()
- * @method SmartResponseType setNewBodyContent($newBodyContent)
+ * @method SmartResponseType setNewBodyContent(BodyType $newBodyContent)
  */
 class SmartResponseType extends SmartResponseBaseType
 {

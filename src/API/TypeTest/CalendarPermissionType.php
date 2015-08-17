@@ -9,10 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarPermissionType
  *
  * @method CalendarPermissionType getReadItems()
- * @method CalendarPermissionType setReadItems($readItems)
+ * @method CalendarPermissionType setReadItems(string $readItems)
  * @method CalendarPermissionType getCalendarPermissionLevel()
- * @method CalendarPermissionType
- * setCalendarPermissionLevel($calendarPermissionLevel)
+ * @method CalendarPermissionType setCalendarPermissionLevel(string $calendarPermissionLevel)
  */
 class CalendarPermissionType extends BasePermissionType
 {

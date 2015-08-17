@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: EncryptedSharedFolderDataType
  *
  * @method EncryptedSharedFolderDataType getToken()
- * @method EncryptedSharedFolderDataType setToken($token)
+ * @method EncryptedSharedFolderDataType setToken(EncryptedDataContainerType $token)
  * @method EncryptedSharedFolderDataType getData()
- * @method EncryptedSharedFolderDataType setData($data)
+ * @method EncryptedSharedFolderDataType setData(EncryptedDataContainerType $data)
  */
 class EncryptedSharedFolderDataType extends TypeTest
 {
