@@ -50,9 +50,8 @@ class CalendarAPI extends API
         $item = array('CalendarItem'=>$items);
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
-            'SavedItemFolderId' => array(
-                'FolderId' => array('Id' => $this->getFolderId()->Id)
-            )
+            'SavedItemFolderId' => $this->getFolderIdsArray(),
+            'ParentFolderIds' => $this->getFolderIdsArray()
         );
 
         $items = $this->createItems($item, $options);
@@ -92,12 +91,7 @@ class CalendarAPI extends API
                 'StartDate' => $start->format('c'),
                 'EndDate' => $end->format('c')
             ),
-            'ParentFolderIds' => array(
-                'FolderId' => array(
-                    'Id' => $this->getFolderId()->Id,
-                    'ChangeKey' => $this->getFolderId()->ChangeKey
-                )
-            )
+            'ParentFolderIds' => $this->getFolderIdsArray()
         );
 
         $request = array_merge($request, $options);
@@ -199,5 +193,27 @@ class CalendarAPI extends API
     public function listChanges($syncState = null, $options = array())
     {
         return parent::listItemChanges($this->getFolderId()->Id, $syncState, $options);
+    }
+    /**
+     * Get the folderId array based on impersonation
+     *
+     * @return array
+     */
+    private function getFolderIdsArray(){
+        if ($this->getClient()->getImpersonation() === NULL){
+            return array(
+                'FolderId' => array(
+                    'Id' => $this->getFolderId()->Id,
+                    'ChangeKey' => $this->getFolderId()->ChangeKey
+                )
+            );
+        } else {
+            return array(
+                'DistinguishedFolderId' => array(
+                     'Id' => Enumeration\DistinguishedFolderIdNameType::CALENDAR,
+                     'Mailbox' => array('EmailAddress' => $this->getImpersonation()->ConnectingSID->PrimarySmtpAddress)
+                )
+            );
+        }
     }
 }

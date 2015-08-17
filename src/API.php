@@ -17,6 +17,12 @@ class API
     private $_fieldUris = array();
 
     /**
+     * Storing the impersonation email
+     * @var ExchangeWebServices
+     */
+     private $_email;
+
+    /**
      * Storing the API client
      * @var ExchangeWebServices
      */
@@ -300,5 +306,19 @@ class API
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->SyncFolderItems($request);
         return $response;
+    }
+    public function setImpersonation($email)
+    {
+        $this->_email = $email;
+        $request = array (
+            'ExchangeImpersonation' => array('ConnectingSID' => array('PrimarySmtpAddress' => $email))
+        );
+        $request = Type::buildFromArray($request);
+        $this->getClient()->setImpersonation($request->ExchangeImpersonation);
+        return $this;
+    }
+    public function getImpersonation()
+    {
+      return $this->getClient()->getImpersonation();
     }
 }

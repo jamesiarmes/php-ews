@@ -55,6 +55,16 @@ $api->buildClient('server', 'username', 'password');
 $calendar = $api->getCalendar();
 ```
 
+### IMpersonate another user
+By default the Calendar API will use the user mailbox you authenticated with, but you can set it to impersonate another user. 
+
+*Note: the appropriate permissions are required to make this work on the Exchange server
+
+```php
+//Impersonate another user account
+$calendar = $api->setImpersonation('someemail@yourdomain.com');
+```
+
 ### Choosing which calendar to use
 By default the Calendar API will try to use the default Calendar, but you can set it to use any Calendar of yours that you want: As such
 
