@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: RefreshSharingFolderType
  *
  * @method RefreshSharingFolderType getSharingFolderId()
- * @method RefreshSharingFolderType setSharingFolderId($sharingFolderId)
+ * @method RefreshSharingFolderType setSharingFolderId(\jamesiarmes\PEWS\API\TypeTest\FolderIdType $sharingFolderId)
  */
 class RefreshSharingFolderType extends BaseRequestType
 {

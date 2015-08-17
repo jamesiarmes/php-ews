@@ -9,15 +9,15 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ResolveNamesType
  *
  * @method ResolveNamesType getReturnFullContactData()
- * @method ResolveNamesType setReturnFullContactData($returnFullContactData)
+ * @method ResolveNamesType setReturnFullContactData(boolean $returnFullContactData)
  * @method ResolveNamesType getSearchScope()
- * @method ResolveNamesType setSearchScope($searchScope)
+ * @method ResolveNamesType setSearchScope(string $searchScope)
  * @method ResolveNamesType getContactDataShape()
- * @method ResolveNamesType setContactDataShape($contactDataShape)
+ * @method ResolveNamesType setContactDataShape(string $contactDataShape)
  * @method ResolveNamesType getParentFolderIds()
- * @method ResolveNamesType setParentFolderIds($parentFolderIds)
+ * @method ResolveNamesType setParentFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
  * @method ResolveNamesType getUnresolvedEntry()
- * @method ResolveNamesType setUnresolvedEntry($unresolvedEntry)
+ * @method ResolveNamesType setUnresolvedEntry(string $unresolvedEntry)
  */
 class ResolveNamesType extends BaseRequestType
 {

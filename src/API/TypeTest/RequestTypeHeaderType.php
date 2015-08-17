@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RequestTypeHeader
  *
  * @method RequestTypeHeaderType getRequestType()
- * @method RequestTypeHeaderType setRequestType($requestType)
+ * @method RequestTypeHeaderType setRequestType(string $requestType)
  */
 class RequestTypeHeaderType extends TypeTest
 {

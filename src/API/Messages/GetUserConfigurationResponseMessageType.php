@@ -9,8 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetUserConfigurationResponseMessageType
  *
  * @method GetUserConfigurationResponseMessageType getUserConfiguration()
- * @method GetUserConfigurationResponseMessageType
- * setUserConfiguration($userConfiguration)
+ * @method GetUserConfigurationResponseMessageType setUserConfiguration(\jamesiarmes\PEWS\API\TypeTest\UserConfigurationType $userConfiguration)
  */
 class GetUserConfigurationResponseMessageType extends ResponseMessageType
 {

@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AbsoluteDateTransitionType
  *
  * @method AbsoluteDateTransitionType getDateTime()
- * @method AbsoluteDateTransitionType setDateTime($dateTime)
+ * @method AbsoluteDateTransitionType setDateTime(\DateTime $dateTime)
  */
 class AbsoluteDateTransitionType extends TransitionType
 {

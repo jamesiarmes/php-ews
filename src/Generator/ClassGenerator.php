@@ -8,15 +8,14 @@
 
 namespace jamesiarmes\PEWS\Generator;
 
+use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClassOf;
 use Zend\Code\Generator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
 use Zend\Code\Generator\DocBlockGenerator;
-use ReflectionMethod;
 use Zend\Code\Generator\PropertyGenerator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPProperty;
 use Zend\Code\Generator\DocBlock\Tag\PropertyTag;
 use Doctrine\Common\Inflector\Inflector;
-use Zend\Code\Reflection\DocBlock\Tag\MethodTag;
 
 class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 {
@@ -99,29 +98,10 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $docBlock->setLongDescription($prop->getDoc());
         }
         $tag = new PropertyTag($prop->getName(), 'mixed');
-
-        $type = $prop->getType();
-
-        if ($type && $type instanceof PHPClassOf) {
-            $tt = $type->getArg()->getType();
-            $tag->setTypes($this->getPhpType($tt) . "[]");
-            if ($p = $this->isOneType($tt)) {
-                if (($t = $p->getType())) {
-                    $tag->setTypes($this->getPhpType($t) . "[]");
-                }
-            }
-        } elseif ($type) {
-
-            if ($this->isNativeType($type)) {
-                $tag->setTypes($this->getPhpType($type));
-            } elseif (($p = $this->isOneType($type)) && ($t = $p->getType())) {
-                $tag->setTypes($this->getPhpType($t));
-            } else {
-                $tag->setTypes($this->getPhpType($prop->getType()));
-            }
-        }
+        $tag->setTypes($this->getPropertyType($prop));
         $docBlock->setTag($tag);
 
+        $type = $prop->getType();
         if ($type->type && $this->isTypeMapped($type->type->getName())) {
             if (!$class->hasProperty('_typeMap')) {
                 $generatedProp = new PropertyGenerator('_typeMap');
@@ -170,9 +150,22 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
     protected function handleSetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
     {
         $name = "set" . Inflector::classify($prop->getName());
-        $fullName = "method {$class->getName()} $name(\${$prop->getName()})";
+
+        $type = $this->getPropertyType($prop);
+        $namespace = explode("\\", $type);
+        $namespaceClass = array_pop($namespace);
+        $namespace = implode("\\", $namespace);
+        if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
+            $type = $namespaceClass;
+        }
+        if (substr($type, -2) == "[]") {
+            $type = "array";
+        }
+
+        $fullName = "method {$class->getName()} $name($type \${$prop->getName()})";
 
         $docblock = $generator->getDocBlock();
+        $docblock->setWordWrap(false);
 
         $tag = new Generator\DocBlock\Tag();
         $tag->setName($fullName);
@@ -231,5 +224,31 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         ];
 
         return in_array($class, $classMap);
+    }
+
+    protected function getPropertyType($property)
+    {
+        $type = $property->getType();
+        $returnType = "";
+
+        if ($type && $type instanceof PHPClassOf) {
+            $tt = $type->getArg()->getType();
+            $returnType = $this->getPhpType($tt) . "[]";
+            if ($p = $this->isOneType($tt)) {
+                if (($t = $p->getType())) {
+                    $returnType = $this->getPhpType($t) . "[]";
+                }
+            }
+        } elseif ($type) {
+            if ($this->isNativeType($type)) {
+                $returnType = $this->getPhpType($type);
+            } elseif (($p = $this->isOneType($type)) && ($t = $p->getType())) {
+                $returnType = $this->getPhpType($t);
+            } else {
+                $returnType = $this->getPhpType($property->getType());
+            }
+        }
+
+        return $returnType;
     }
 }

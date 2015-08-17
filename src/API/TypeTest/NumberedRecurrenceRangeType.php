@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NumberedRecurrenceRangeType
  *
  * @method NumberedRecurrenceRangeType getNumberOfOccurrences()
- * @method NumberedRecurrenceRangeType setNumberOfOccurrences($numberOfOccurrences)
+ * @method NumberedRecurrenceRangeType setNumberOfOccurrences(integer $numberOfOccurrences)
  */
 class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
 {

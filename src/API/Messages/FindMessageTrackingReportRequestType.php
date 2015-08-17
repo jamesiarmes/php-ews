@@ -9,34 +9,31 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindMessageTrackingReportRequestType
  *
  * @method FindMessageTrackingReportRequestType getScope()
- * @method FindMessageTrackingReportRequestType setScope($scope)
+ * @method FindMessageTrackingReportRequestType setScope(string $scope)
  * @method FindMessageTrackingReportRequestType getDomain()
- * @method FindMessageTrackingReportRequestType setDomain($domain)
+ * @method FindMessageTrackingReportRequestType setDomain(string $domain)
  * @method FindMessageTrackingReportRequestType getSender()
- * @method FindMessageTrackingReportRequestType setSender($sender)
+ * @method FindMessageTrackingReportRequestType setSender(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $sender)
  * @method FindMessageTrackingReportRequestType getPurportedSender()
- * @method FindMessageTrackingReportRequestType
- * setPurportedSender($purportedSender)
+ * @method FindMessageTrackingReportRequestType setPurportedSender(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $purportedSender)
  * @method FindMessageTrackingReportRequestType getRecipient()
- * @method FindMessageTrackingReportRequestType setRecipient($recipient)
+ * @method FindMessageTrackingReportRequestType setRecipient(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $recipient)
  * @method FindMessageTrackingReportRequestType getSubject()
- * @method FindMessageTrackingReportRequestType setSubject($subject)
+ * @method FindMessageTrackingReportRequestType setSubject(string $subject)
  * @method FindMessageTrackingReportRequestType getStartDateTime()
- * @method FindMessageTrackingReportRequestType setStartDateTime($startDateTime)
+ * @method FindMessageTrackingReportRequestType setStartDateTime(\DateTime $startDateTime)
  * @method FindMessageTrackingReportRequestType getEndDateTime()
- * @method FindMessageTrackingReportRequestType setEndDateTime($endDateTime)
+ * @method FindMessageTrackingReportRequestType setEndDateTime(\DateTime $endDateTime)
  * @method FindMessageTrackingReportRequestType getMessageId()
- * @method FindMessageTrackingReportRequestType setMessageId($messageId)
+ * @method FindMessageTrackingReportRequestType setMessageId(string $messageId)
  * @method FindMessageTrackingReportRequestType getFederatedDeliveryMailbox()
- * @method FindMessageTrackingReportRequestType
- * setFederatedDeliveryMailbox($federatedDeliveryMailbox)
+ * @method FindMessageTrackingReportRequestType setFederatedDeliveryMailbox(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $federatedDeliveryMailbox)
  * @method FindMessageTrackingReportRequestType getDiagnosticsLevel()
- * @method FindMessageTrackingReportRequestType
- * setDiagnosticsLevel($diagnosticsLevel)
+ * @method FindMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
  * @method FindMessageTrackingReportRequestType getServerHint()
- * @method FindMessageTrackingReportRequestType setServerHint($serverHint)
+ * @method FindMessageTrackingReportRequestType setServerHint(string $serverHint)
  * @method FindMessageTrackingReportRequestType getProperties()
- * @method FindMessageTrackingReportRequestType setProperties($properties)
+ * @method FindMessageTrackingReportRequestType setProperties(array $properties)
  */
 class FindMessageTrackingReportRequestType extends BaseRequestType
 {
@@ -108,7 +105,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
     protected $serverHint = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

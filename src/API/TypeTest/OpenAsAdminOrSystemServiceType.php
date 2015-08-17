@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: OpenAsAdminOrSystemServiceType
  *
  * @method OpenAsAdminOrSystemServiceType getLogonType()
- * @method OpenAsAdminOrSystemServiceType setLogonType($logonType)
+ * @method OpenAsAdminOrSystemServiceType setLogonType(string $logonType)
  * @method OpenAsAdminOrSystemServiceType getConnectingSID()
- * @method OpenAsAdminOrSystemServiceType setConnectingSID($connectingSID)
+ * @method OpenAsAdminOrSystemServiceType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class OpenAsAdminOrSystemServiceType extends TypeTest
 {

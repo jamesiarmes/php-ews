@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RequestAttachmentIdType
  *
  * @method RequestAttachmentIdType getId()
- * @method RequestAttachmentIdType setId($id)
+ * @method RequestAttachmentIdType setId(string $id)
  */
 class RequestAttachmentIdType extends BaseItemIdType
 {

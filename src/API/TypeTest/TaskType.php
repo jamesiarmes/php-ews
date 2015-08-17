@@ -9,49 +9,49 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TaskType
  *
  * @method TaskType getActualWork()
- * @method TaskType setActualWork($actualWork)
+ * @method TaskType setActualWork(integer $actualWork)
  * @method TaskType getAssignedTime()
- * @method TaskType setAssignedTime($assignedTime)
+ * @method TaskType setAssignedTime(\DateTime $assignedTime)
  * @method TaskType getBillingInformation()
- * @method TaskType setBillingInformation($billingInformation)
+ * @method TaskType setBillingInformation(string $billingInformation)
  * @method TaskType getChangeCount()
- * @method TaskType setChangeCount($changeCount)
+ * @method TaskType setChangeCount(integer $changeCount)
  * @method TaskType getCompanies()
- * @method TaskType setCompanies($companies)
+ * @method TaskType setCompanies(array $companies)
  * @method TaskType getCompleteDate()
- * @method TaskType setCompleteDate($completeDate)
+ * @method TaskType setCompleteDate(\DateTime $completeDate)
  * @method TaskType getContacts()
- * @method TaskType setContacts($contacts)
+ * @method TaskType setContacts(array $contacts)
  * @method TaskType getDelegationState()
- * @method TaskType setDelegationState($delegationState)
+ * @method TaskType setDelegationState(string $delegationState)
  * @method TaskType getDelegator()
- * @method TaskType setDelegator($delegator)
+ * @method TaskType setDelegator(string $delegator)
  * @method TaskType getDueDate()
- * @method TaskType setDueDate($dueDate)
+ * @method TaskType setDueDate(\DateTime $dueDate)
  * @method TaskType getIsAssignmentEditable()
- * @method TaskType setIsAssignmentEditable($isAssignmentEditable)
+ * @method TaskType setIsAssignmentEditable(integer $isAssignmentEditable)
  * @method TaskType getIsComplete()
- * @method TaskType setIsComplete($isComplete)
+ * @method TaskType setIsComplete(boolean $isComplete)
  * @method TaskType getIsRecurring()
- * @method TaskType setIsRecurring($isRecurring)
+ * @method TaskType setIsRecurring(boolean $isRecurring)
  * @method TaskType getIsTeamTask()
- * @method TaskType setIsTeamTask($isTeamTask)
+ * @method TaskType setIsTeamTask(boolean $isTeamTask)
  * @method TaskType getMileage()
- * @method TaskType setMileage($mileage)
+ * @method TaskType setMileage(string $mileage)
  * @method TaskType getOwner()
- * @method TaskType setOwner($owner)
+ * @method TaskType setOwner(string $owner)
  * @method TaskType getPercentComplete()
- * @method TaskType setPercentComplete($percentComplete)
+ * @method TaskType setPercentComplete(float $percentComplete)
  * @method TaskType getRecurrence()
- * @method TaskType setRecurrence($recurrence)
+ * @method TaskType setRecurrence(TaskRecurrenceType $recurrence)
  * @method TaskType getStartDate()
- * @method TaskType setStartDate($startDate)
+ * @method TaskType setStartDate(\DateTime $startDate)
  * @method TaskType getStatus()
- * @method TaskType setStatus($status)
+ * @method TaskType setStatus(string $status)
  * @method TaskType getStatusDescription()
- * @method TaskType setStatusDescription($statusDescription)
+ * @method TaskType setStatusDescription(string $statusDescription)
  * @method TaskType getTotalWork()
- * @method TaskType setTotalWork($totalWork)
+ * @method TaskType setTotalWork(integer $totalWork)
  */
 class TaskType extends ItemType
 {
@@ -84,7 +84,7 @@ class TaskType extends ItemType
     protected $changeCount = null;
 
     /**
-     * @property array $companies
+     * @property string[] $companies
      */
     protected $companies = null;
 
@@ -94,7 +94,7 @@ class TaskType extends ItemType
     protected $completeDate = null;
 
     /**
-     * @property array $contacts
+     * @property string[] $contacts
      */
     protected $contacts = null;
 

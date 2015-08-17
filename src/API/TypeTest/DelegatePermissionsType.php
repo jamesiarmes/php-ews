@@ -11,23 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DelegatePermissionsType
  *
  * @method DelegatePermissionsType getCalendarFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setCalendarFolderPermissionLevel($calendarFolderPermissionLevel)
+ * @method DelegatePermissionsType setCalendarFolderPermissionLevel(string $calendarFolderPermissionLevel)
  * @method DelegatePermissionsType getTasksFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setTasksFolderPermissionLevel($tasksFolderPermissionLevel)
+ * @method DelegatePermissionsType setTasksFolderPermissionLevel(string $tasksFolderPermissionLevel)
  * @method DelegatePermissionsType getInboxFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setInboxFolderPermissionLevel($inboxFolderPermissionLevel)
+ * @method DelegatePermissionsType setInboxFolderPermissionLevel(string $inboxFolderPermissionLevel)
  * @method DelegatePermissionsType getContactsFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setContactsFolderPermissionLevel($contactsFolderPermissionLevel)
+ * @method DelegatePermissionsType setContactsFolderPermissionLevel(string $contactsFolderPermissionLevel)
  * @method DelegatePermissionsType getNotesFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setNotesFolderPermissionLevel($notesFolderPermissionLevel)
+ * @method DelegatePermissionsType setNotesFolderPermissionLevel(string $notesFolderPermissionLevel)
  * @method DelegatePermissionsType getJournalFolderPermissionLevel()
- * @method DelegatePermissionsType
- * setJournalFolderPermissionLevel($journalFolderPermissionLevel)
+ * @method DelegatePermissionsType setJournalFolderPermissionLevel(string $journalFolderPermissionLevel)
  */
 class DelegatePermissionsType extends TypeTest
 {

@@ -9,15 +9,15 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: WeeklyRecurrencePatternType
  *
  * @method WeeklyRecurrencePatternType getDaysOfWeek()
- * @method WeeklyRecurrencePatternType setDaysOfWeek($daysOfWeek)
+ * @method WeeklyRecurrencePatternType setDaysOfWeek(array $daysOfWeek)
  * @method WeeklyRecurrencePatternType getFirstDayOfWeek()
- * @method WeeklyRecurrencePatternType setFirstDayOfWeek($firstDayOfWeek)
+ * @method WeeklyRecurrencePatternType setFirstDayOfWeek(string $firstDayOfWeek)
  */
 class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {
 
     /**
-     * @property array $daysOfWeek
+     * @property string[] $daysOfWeek
      */
     protected $daysOfWeek = null;
 

@@ -11,18 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfTransitionsType
  *
  * @method ArrayOfTransitionsType getId()
- * @method ArrayOfTransitionsType setId($id)
+ * @method ArrayOfTransitionsType setId(string $id)
  * @method ArrayOfTransitionsType getAbsoluteDateTransition()
- * @method ArrayOfTransitionsType
- * setAbsoluteDateTransition($absoluteDateTransition)
+ * @method ArrayOfTransitionsType setAbsoluteDateTransition(array $absoluteDateTransition)
  * @method ArrayOfTransitionsType getRecurringDayTransition()
- * @method ArrayOfTransitionsType
- * setRecurringDayTransition($recurringDayTransition)
+ * @method ArrayOfTransitionsType setRecurringDayTransition(array $recurringDayTransition)
  * @method ArrayOfTransitionsType getRecurringDateTransition()
- * @method ArrayOfTransitionsType
- * setRecurringDateTransition($recurringDateTransition)
+ * @method ArrayOfTransitionsType setRecurringDateTransition(array $recurringDateTransition)
  * @method ArrayOfTransitionsType getTransition()
- * @method ArrayOfTransitionsType setTransition($transition)
+ * @method ArrayOfTransitionsType setTransition(array $transition)
  */
 class ArrayOfTransitionsType extends TypeTest
 {
@@ -33,22 +30,25 @@ class ArrayOfTransitionsType extends TypeTest
     protected $id = null;
 
     /**
-     * @property array $absoluteDateTransition
+     * @property \jamesiarmes\PEWS\API\TypeTest\AbsoluteDateTransition[]
+     * $absoluteDateTransition
      */
     protected $absoluteDateTransition = null;
 
     /**
-     * @property array $recurringDayTransition
+     * @property \jamesiarmes\PEWS\API\TypeTest\RecurringDayTransition[]
+     * $recurringDayTransition
      */
     protected $recurringDayTransition = null;
 
     /**
-     * @property array $recurringDateTransition
+     * @property \jamesiarmes\PEWS\API\TypeTest\RecurringDateTransition[]
+     * $recurringDateTransition
      */
     protected $recurringDateTransition = null;
 
     /**
-     * @property array $transition
+     * @property \jamesiarmes\PEWS\API\TypeTest\Transition[] $transition
      */
     protected $transition = null;
 

@@ -9,37 +9,37 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MessageType
  *
  * @method MessageType getSender()
- * @method MessageType setSender($sender)
+ * @method MessageType setSender(SingleRecipientType $sender)
  * @method MessageType getToRecipients()
- * @method MessageType setToRecipients($toRecipients)
+ * @method MessageType setToRecipients(array $toRecipients)
  * @method MessageType getCcRecipients()
- * @method MessageType setCcRecipients($ccRecipients)
+ * @method MessageType setCcRecipients(array $ccRecipients)
  * @method MessageType getBccRecipients()
- * @method MessageType setBccRecipients($bccRecipients)
+ * @method MessageType setBccRecipients(array $bccRecipients)
  * @method MessageType getIsReadReceiptRequested()
- * @method MessageType setIsReadReceiptRequested($isReadReceiptRequested)
+ * @method MessageType setIsReadReceiptRequested(boolean $isReadReceiptRequested)
  * @method MessageType getIsDeliveryReceiptRequested()
- * @method MessageType setIsDeliveryReceiptRequested($isDeliveryReceiptRequested)
+ * @method MessageType setIsDeliveryReceiptRequested(boolean $isDeliveryReceiptRequested)
  * @method MessageType getConversationIndex()
- * @method MessageType setConversationIndex($conversationIndex)
+ * @method MessageType setConversationIndex(mixed $conversationIndex)
  * @method MessageType getConversationTopic()
- * @method MessageType setConversationTopic($conversationTopic)
+ * @method MessageType setConversationTopic(string $conversationTopic)
  * @method MessageType getFrom()
- * @method MessageType setFrom($from)
+ * @method MessageType setFrom(SingleRecipientType $from)
  * @method MessageType getInternetMessageId()
- * @method MessageType setInternetMessageId($internetMessageId)
+ * @method MessageType setInternetMessageId(string $internetMessageId)
  * @method MessageType getIsRead()
- * @method MessageType setIsRead($isRead)
+ * @method MessageType setIsRead(boolean $isRead)
  * @method MessageType getIsResponseRequested()
- * @method MessageType setIsResponseRequested($isResponseRequested)
+ * @method MessageType setIsResponseRequested(boolean $isResponseRequested)
  * @method MessageType getReferences()
- * @method MessageType setReferences($references)
+ * @method MessageType setReferences(string $references)
  * @method MessageType getReplyTo()
- * @method MessageType setReplyTo($replyTo)
+ * @method MessageType setReplyTo(array $replyTo)
  * @method MessageType getReceivedBy()
- * @method MessageType setReceivedBy($receivedBy)
+ * @method MessageType setReceivedBy(SingleRecipientType $receivedBy)
  * @method MessageType getReceivedRepresenting()
- * @method MessageType setReceivedRepresenting($receivedRepresenting)
+ * @method MessageType setReceivedRepresenting(SingleRecipientType $receivedRepresenting)
  */
 class MessageType extends ItemType
 {
@@ -50,17 +50,17 @@ class MessageType extends ItemType
     protected $sender = null;
 
     /**
-     * @property array $toRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $toRecipients
      */
     protected $toRecipients = null;
 
     /**
-     * @property array $ccRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $ccRecipients
      */
     protected $ccRecipients = null;
 
     /**
-     * @property array $bccRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $bccRecipients
      */
     protected $bccRecipients = null;
 
@@ -110,7 +110,7 @@ class MessageType extends ItemType
     protected $references = null;
 
     /**
-     * @property array $replyTo
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $replyTo
      */
     protected $replyTo = null;
 

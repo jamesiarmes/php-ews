@@ -11,18 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfResolutionType
  *
  * @method ArrayOfResolutionType getIndexedPagingOffset()
- * @method ArrayOfResolutionType setIndexedPagingOffset($indexedPagingOffset)
+ * @method ArrayOfResolutionType setIndexedPagingOffset(integer $indexedPagingOffset)
  * @method ArrayOfResolutionType getNumeratorOffset()
- * @method ArrayOfResolutionType setNumeratorOffset($numeratorOffset)
+ * @method ArrayOfResolutionType setNumeratorOffset(integer $numeratorOffset)
  * @method ArrayOfResolutionType getAbsoluteDenominator()
- * @method ArrayOfResolutionType setAbsoluteDenominator($absoluteDenominator)
+ * @method ArrayOfResolutionType setAbsoluteDenominator(integer $absoluteDenominator)
  * @method ArrayOfResolutionType getIncludesLastItemInRange()
- * @method ArrayOfResolutionType
- * setIncludesLastItemInRange($includesLastItemInRange)
+ * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method ArrayOfResolutionType getTotalItemsInView()
- * @method ArrayOfResolutionType setTotalItemsInView($totalItemsInView)
+ * @method ArrayOfResolutionType setTotalItemsInView(integer $totalItemsInView)
  * @method ArrayOfResolutionType getResolution()
- * @method ArrayOfResolutionType setResolution($resolution)
+ * @method ArrayOfResolutionType setResolution(array $resolution)
  */
 class ArrayOfResolutionType extends TypeTest
 {
@@ -53,7 +52,7 @@ class ArrayOfResolutionType extends TypeTest
     protected $totalItemsInView = null;
 
     /**
-     * @property array $resolution
+     * @property \jamesiarmes\PEWS\API\TypeTest\ResolutionType[] $resolution
      */
     protected $resolution = null;
 

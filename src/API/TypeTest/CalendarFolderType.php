@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarFolderType
  *
  * @method CalendarFolderType getSharingEffectiveRights()
- * @method CalendarFolderType setSharingEffectiveRights($sharingEffectiveRights)
+ * @method CalendarFolderType setSharingEffectiveRights(string $sharingEffectiveRights)
  * @method CalendarFolderType getPermissionSet()
- * @method CalendarFolderType setPermissionSet($permissionSet)
+ * @method CalendarFolderType setPermissionSet(CalendarPermissionSetType $permissionSet)
  */
 class CalendarFolderType extends BaseFolderType
 {

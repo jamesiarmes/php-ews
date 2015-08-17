@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ConflictResultsType
  *
  * @method ConflictResultsType getCount()
- * @method ConflictResultsType setCount($count)
+ * @method ConflictResultsType setCount(integer $count)
  */
 class ConflictResultsType extends TypeTest
 {

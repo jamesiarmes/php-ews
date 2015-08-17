@@ -9,12 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateInboxRulesRequestType
  *
  * @method UpdateInboxRulesRequestType getMailboxSmtpAddress()
- * @method UpdateInboxRulesRequestType setMailboxSmtpAddress($mailboxSmtpAddress)
+ * @method UpdateInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
  * @method UpdateInboxRulesRequestType getRemoveOutlookRuleBlob()
- * @method UpdateInboxRulesRequestType
- * setRemoveOutlookRuleBlob($removeOutlookRuleBlob)
+ * @method UpdateInboxRulesRequestType setRemoveOutlookRuleBlob(boolean $removeOutlookRuleBlob)
  * @method UpdateInboxRulesRequestType getOperations()
- * @method UpdateInboxRulesRequestType setOperations($operations)
+ * @method UpdateInboxRulesRequestType setOperations(\jamesiarmes\PEWS\API\TypeTest\ArrayOfRuleOperationsType $operations)
  */
 class UpdateInboxRulesRequestType extends BaseRequestType
 {

@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SyncFolderItemsReadFlagType
  *
  * @method SyncFolderItemsReadFlagType getItemId()
- * @method SyncFolderItemsReadFlagType setItemId($itemId)
+ * @method SyncFolderItemsReadFlagType setItemId(ItemIdType $itemId)
  * @method SyncFolderItemsReadFlagType getIsRead()
- * @method SyncFolderItemsReadFlagType setIsRead($isRead)
+ * @method SyncFolderItemsReadFlagType setIsRead(boolean $isRead)
  */
 class SyncFolderItemsReadFlagType extends TypeTest
 {

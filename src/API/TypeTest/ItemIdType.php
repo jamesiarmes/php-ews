@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ItemIdType
  *
  * @method ItemIdType getId()
- * @method ItemIdType setId($id)
+ * @method ItemIdType setId(string $id)
  * @method ItemIdType getChangeKey()
- * @method ItemIdType setChangeKey($changeKey)
+ * @method ItemIdType setChangeKey(string $changeKey)
  */
 class ItemIdType extends BaseItemIdType
 {

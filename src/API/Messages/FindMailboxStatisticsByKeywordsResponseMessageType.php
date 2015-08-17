@@ -8,10 +8,8 @@ namespace jamesiarmes\PEWS\API\Messages;
  * Response message type for the FindMailboxStatisticsByKeywords web method.
  * XSD Type: FindMailboxStatisticsByKeywordsResponseMessageType
  *
- * @method FindMailboxStatisticsByKeywordsResponseMessageType
- * getMailboxStatisticsSearchResult()
- * @method FindMailboxStatisticsByKeywordsResponseMessageType
- * setMailboxStatisticsSearchResult($mailboxStatisticsSearchResult)
+ * @method FindMailboxStatisticsByKeywordsResponseMessageType getMailboxStatisticsSearchResult()
+ * @method FindMailboxStatisticsByKeywordsResponseMessageType setMailboxStatisticsSearchResult(\jamesiarmes\PEWS\API\TypeTest\MailboxStatisticsSearchResultType $mailboxStatisticsSearchResult)
  */
 class FindMailboxStatisticsByKeywordsResponseMessageType extends ResponseMessageType
 {

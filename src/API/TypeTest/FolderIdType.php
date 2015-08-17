@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FolderIdType
  *
  * @method FolderIdType getId()
- * @method FolderIdType setId($id)
+ * @method FolderIdType setId(string $id)
  * @method FolderIdType getChangeKey()
- * @method FolderIdType setChangeKey($changeKey)
+ * @method FolderIdType setChangeKey(string $changeKey)
  */
 class FolderIdType extends BaseFolderIdType
 {

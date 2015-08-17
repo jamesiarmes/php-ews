@@ -11,13 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarEvent
  *
  * @method CalendarEventType getStartTime()
- * @method CalendarEventType setStartTime($startTime)
+ * @method CalendarEventType setStartTime(\DateTime $startTime)
  * @method CalendarEventType getEndTime()
- * @method CalendarEventType setEndTime($endTime)
+ * @method CalendarEventType setEndTime(\DateTime $endTime)
  * @method CalendarEventType getBusyType()
- * @method CalendarEventType setBusyType($busyType)
+ * @method CalendarEventType setBusyType(string $busyType)
  * @method CalendarEventType getCalendarEventDetails()
- * @method CalendarEventType setCalendarEventDetails($calendarEventDetails)
+ * @method CalendarEventType setCalendarEventDetails(CalendarEventDetailsType $calendarEventDetails)
  */
 class CalendarEventType extends TypeTest
 {

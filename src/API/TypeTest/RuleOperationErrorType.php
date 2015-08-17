@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RuleOperationErrorType
  *
  * @method RuleOperationErrorType getOperationIndex()
- * @method RuleOperationErrorType setOperationIndex($operationIndex)
+ * @method RuleOperationErrorType setOperationIndex(integer $operationIndex)
  * @method RuleOperationErrorType getValidationErrors()
- * @method RuleOperationErrorType setValidationErrors($validationErrors)
+ * @method RuleOperationErrorType setValidationErrors(array $validationErrors)
  */
 class RuleOperationErrorType extends TypeTest
 {
@@ -24,7 +24,8 @@ class RuleOperationErrorType extends TypeTest
     protected $operationIndex = null;
 
     /**
-     * @property array $validationErrors
+     * @property \jamesiarmes\PEWS\API\TypeTest\RuleValidationErrorType[]
+     * $validationErrors
      */
     protected $validationErrors = null;
 

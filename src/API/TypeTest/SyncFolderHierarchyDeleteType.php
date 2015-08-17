@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SyncFolderHierarchyDeleteType
  *
  * @method SyncFolderHierarchyDeleteType getFolderId()
- * @method SyncFolderHierarchyDeleteType setFolderId($folderId)
+ * @method SyncFolderHierarchyDeleteType setFolderId(FolderIdType $folderId)
  */
 class SyncFolderHierarchyDeleteType extends TypeTest
 {

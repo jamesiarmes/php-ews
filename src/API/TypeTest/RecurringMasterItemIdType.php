@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurringMasterItemIdType
  *
  * @method RecurringMasterItemIdType getOccurrenceId()
- * @method RecurringMasterItemIdType setOccurrenceId($occurrenceId)
+ * @method RecurringMasterItemIdType setOccurrenceId(string $occurrenceId)
  * @method RecurringMasterItemIdType getChangeKey()
- * @method RecurringMasterItemIdType setChangeKey($changeKey)
+ * @method RecurringMasterItemIdType setChangeKey(string $changeKey)
  */
 class RecurringMasterItemIdType extends BaseItemIdType
 {

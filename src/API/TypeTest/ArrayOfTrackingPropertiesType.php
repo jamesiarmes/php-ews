@@ -11,14 +11,14 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfTrackingPropertiesType
  *
  * @method ArrayOfTrackingPropertiesType getTrackingPropertyType()
- * @method ArrayOfTrackingPropertiesType
- * setTrackingPropertyType($trackingPropertyType)
+ * @method ArrayOfTrackingPropertiesType setTrackingPropertyType(array $trackingPropertyType)
  */
 class ArrayOfTrackingPropertiesType extends TypeTest
 {
 
     /**
-     * @property array $trackingPropertyType
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[]
+     * $trackingPropertyType
      */
     protected $trackingPropertyType = null;
 

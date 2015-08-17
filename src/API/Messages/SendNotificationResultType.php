@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: SendNotificationResultType
  *
  * @method SendNotificationResultType getSubscriptionStatus()
- * @method SendNotificationResultType setSubscriptionStatus($subscriptionStatus)
+ * @method SendNotificationResultType setSubscriptionStatus(string $subscriptionStatus)
  */
 class SendNotificationResultType extends Messages
 {

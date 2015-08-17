@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetPhoneCallInformationType
  *
  * @method GetPhoneCallInformationType getPhoneCallId()
- * @method GetPhoneCallInformationType setPhoneCallId($phoneCallId)
+ * @method GetPhoneCallInformationType setPhoneCallId(\jamesiarmes\PEWS\API\TypeTest\PhoneCallIdType $phoneCallId)
  */
 class GetPhoneCallInformationType extends BaseRequestType
 {

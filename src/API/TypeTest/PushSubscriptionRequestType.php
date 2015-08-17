@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PushSubscriptionRequestType
  *
  * @method PushSubscriptionRequestType getStatusFrequency()
- * @method PushSubscriptionRequestType setStatusFrequency($statusFrequency)
+ * @method PushSubscriptionRequestType setStatusFrequency(integer $statusFrequency)
  * @method PushSubscriptionRequestType getURL()
- * @method PushSubscriptionRequestType setURL($uRL)
+ * @method PushSubscriptionRequestType setURL(string $uRL)
  */
 class PushSubscriptionRequestType extends BaseSubscriptionRequestType
 {

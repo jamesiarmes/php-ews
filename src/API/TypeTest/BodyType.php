@@ -11,7 +11,7 @@ use \string;
  * XSD Type: BodyType
  *
  * @method BodyType getBodyType()
- * @method BodyType setBodyType($bodyType)
+ * @method BodyType setBodyType(string $bodyType)
  */
 class BodyType extends string
 {

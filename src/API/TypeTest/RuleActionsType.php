@@ -11,38 +11,37 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RuleActionsType
  *
  * @method RuleActionsType getAssignCategories()
- * @method RuleActionsType setAssignCategories($assignCategories)
+ * @method RuleActionsType setAssignCategories(array $assignCategories)
  * @method RuleActionsType getCopyToFolder()
- * @method RuleActionsType setCopyToFolder($copyToFolder)
+ * @method RuleActionsType setCopyToFolder(TargetFolderIdType $copyToFolder)
  * @method RuleActionsType getDelete()
- * @method RuleActionsType setDelete($delete)
+ * @method RuleActionsType setDelete(boolean $delete)
  * @method RuleActionsType getForwardAsAttachmentToRecipients()
- * @method RuleActionsType
- * setForwardAsAttachmentToRecipients($forwardAsAttachmentToRecipients)
+ * @method RuleActionsType setForwardAsAttachmentToRecipients(array $forwardAsAttachmentToRecipients)
  * @method RuleActionsType getForwardToRecipients()
- * @method RuleActionsType setForwardToRecipients($forwardToRecipients)
+ * @method RuleActionsType setForwardToRecipients(array $forwardToRecipients)
  * @method RuleActionsType getMarkImportance()
- * @method RuleActionsType setMarkImportance($markImportance)
+ * @method RuleActionsType setMarkImportance(string $markImportance)
  * @method RuleActionsType getMarkAsRead()
- * @method RuleActionsType setMarkAsRead($markAsRead)
+ * @method RuleActionsType setMarkAsRead(boolean $markAsRead)
  * @method RuleActionsType getMoveToFolder()
- * @method RuleActionsType setMoveToFolder($moveToFolder)
+ * @method RuleActionsType setMoveToFolder(TargetFolderIdType $moveToFolder)
  * @method RuleActionsType getPermanentDelete()
- * @method RuleActionsType setPermanentDelete($permanentDelete)
+ * @method RuleActionsType setPermanentDelete(boolean $permanentDelete)
  * @method RuleActionsType getRedirectToRecipients()
- * @method RuleActionsType setRedirectToRecipients($redirectToRecipients)
+ * @method RuleActionsType setRedirectToRecipients(array $redirectToRecipients)
  * @method RuleActionsType getSendSMSAlertToRecipients()
- * @method RuleActionsType setSendSMSAlertToRecipients($sendSMSAlertToRecipients)
+ * @method RuleActionsType setSendSMSAlertToRecipients(array $sendSMSAlertToRecipients)
  * @method RuleActionsType getServerReplyWithMessage()
- * @method RuleActionsType setServerReplyWithMessage($serverReplyWithMessage)
+ * @method RuleActionsType setServerReplyWithMessage(ItemIdType $serverReplyWithMessage)
  * @method RuleActionsType getStopProcessingRules()
- * @method RuleActionsType setStopProcessingRules($stopProcessingRules)
+ * @method RuleActionsType setStopProcessingRules(boolean $stopProcessingRules)
  */
 class RuleActionsType extends TypeTest
 {
 
     /**
-     * @property array $assignCategories
+     * @property string[] $assignCategories
      */
     protected $assignCategories = null;
 
@@ -57,12 +56,13 @@ class RuleActionsType extends TypeTest
     protected $delete = null;
 
     /**
-     * @property array $forwardAsAttachmentToRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[]
+     * $forwardAsAttachmentToRecipients
      */
     protected $forwardAsAttachmentToRecipients = null;
 
     /**
-     * @property array $forwardToRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $forwardToRecipients
      */
     protected $forwardToRecipients = null;
 
@@ -87,12 +87,14 @@ class RuleActionsType extends TypeTest
     protected $permanentDelete = null;
 
     /**
-     * @property array $redirectToRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[]
+     * $redirectToRecipients
      */
     protected $redirectToRecipients = null;
 
     /**
-     * @property array $sendSMSAlertToRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[]
+     * $sendSMSAlertToRecipients
      */
     protected $sendSMSAlertToRecipients = null;
 

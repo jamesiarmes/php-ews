@@ -11,20 +11,20 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfAttachmentsType
  *
  * @method NonEmptyArrayOfAttachmentsType getItemAttachment()
- * @method NonEmptyArrayOfAttachmentsType setItemAttachment($itemAttachment)
+ * @method NonEmptyArrayOfAttachmentsType setItemAttachment(array $itemAttachment)
  * @method NonEmptyArrayOfAttachmentsType getFileAttachment()
- * @method NonEmptyArrayOfAttachmentsType setFileAttachment($fileAttachment)
+ * @method NonEmptyArrayOfAttachmentsType setFileAttachment(array $fileAttachment)
  */
 class NonEmptyArrayOfAttachmentsType extends TypeTest
 {
 
     /**
-     * @property array $itemAttachment
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemAttachmentType[] $itemAttachment
      */
     protected $itemAttachment = null;
 
     /**
-     * @property array $fileAttachment
+     * @property \jamesiarmes\PEWS\API\TypeTest\FileAttachmentType[] $fileAttachment
      */
     protected $fileAttachment = null;
 

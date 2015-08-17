@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetDelegateType
  *
  * @method GetDelegateType getIncludePermissions()
- * @method GetDelegateType setIncludePermissions($includePermissions)
+ * @method GetDelegateType setIncludePermissions(boolean $includePermissions)
  * @method GetDelegateType getUserIds()
- * @method GetDelegateType setUserIds($userIds)
+ * @method GetDelegateType setUserIds(array $userIds)
  */
 class GetDelegateType extends BaseDelegateType
 {
@@ -22,7 +22,7 @@ class GetDelegateType extends BaseDelegateType
     protected $includePermissions = null;
 
     /**
-     * @property array $userIds
+     * @property \jamesiarmes\PEWS\API\TypeTest\UserIdType[] $userIds
      */
     protected $userIds = null;
 

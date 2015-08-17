@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RelativeMonthlyRecurrencePatternType
  *
  * @method RelativeMonthlyRecurrencePatternType getDaysOfWeek()
- * @method RelativeMonthlyRecurrencePatternType setDaysOfWeek($daysOfWeek)
+ * @method RelativeMonthlyRecurrencePatternType setDaysOfWeek(string $daysOfWeek)
  * @method RelativeMonthlyRecurrencePatternType getDayOfWeekIndex()
- * @method RelativeMonthlyRecurrencePatternType setDayOfWeekIndex($dayOfWeekIndex)
+ * @method RelativeMonthlyRecurrencePatternType setDayOfWeekIndex(string $dayOfWeekIndex)
  */
 class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {

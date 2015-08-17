@@ -11,10 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MailboxStatisticsSearchResultType
  *
  * @method MailboxStatisticsSearchResultType getUserMailbox()
- * @method MailboxStatisticsSearchResultType setUserMailbox($userMailbox)
+ * @method MailboxStatisticsSearchResultType setUserMailbox(UserMailboxType $userMailbox)
  * @method MailboxStatisticsSearchResultType getKeywordStatisticsSearchResult()
- * @method MailboxStatisticsSearchResultType
- * setKeywordStatisticsSearchResult($keywordStatisticsSearchResult)
+ * @method MailboxStatisticsSearchResultType setKeywordStatisticsSearchResult(KeywordStatisticsSearchResultType $keywordStatisticsSearchResult)
  */
 class MailboxStatisticsSearchResultType extends TypeTest
 {

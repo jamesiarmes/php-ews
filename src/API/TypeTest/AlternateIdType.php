@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: AlternateIdType
  *
  * @method AlternateIdType getId()
- * @method AlternateIdType setId($id)
+ * @method AlternateIdType setId(string $id)
  * @method AlternateIdType getMailbox()
- * @method AlternateIdType setMailbox($mailbox)
+ * @method AlternateIdType setMailbox(string $mailbox)
  * @method AlternateIdType getIsArchive()
- * @method AlternateIdType setIsArchive($isArchive)
+ * @method AlternateIdType setIsArchive(boolean $isArchive)
  */
 class AlternateIdType extends AlternateIdBaseType
 {

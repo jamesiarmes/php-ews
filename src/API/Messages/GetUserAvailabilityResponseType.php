@@ -11,17 +11,16 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetUserAvailabilityResponseType
  *
  * @method GetUserAvailabilityResponseType getFreeBusyResponseArray()
- * @method GetUserAvailabilityResponseType
- * setFreeBusyResponseArray($freeBusyResponseArray)
+ * @method GetUserAvailabilityResponseType setFreeBusyResponseArray(array $freeBusyResponseArray)
  * @method GetUserAvailabilityResponseType getSuggestionsResponse()
- * @method GetUserAvailabilityResponseType
- * setSuggestionsResponse($suggestionsResponse)
+ * @method GetUserAvailabilityResponseType setSuggestionsResponse(SuggestionsResponseType $suggestionsResponse)
  */
 class GetUserAvailabilityResponseType extends Messages
 {
 
     /**
-     * @property array $freeBusyResponseArray
+     * @property \jamesiarmes\PEWS\API\Messages\FreeBusyResponseType[]
+     * $freeBusyResponseArray
      */
     protected $freeBusyResponseArray = null;
 

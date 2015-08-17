@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRuleActionType
  *
  * @method ProtectionRuleActionType getName()
- * @method ProtectionRuleActionType setName($name)
+ * @method ProtectionRuleActionType setName(string $name)
  * @method ProtectionRuleActionType getArgument()
- * @method ProtectionRuleActionType setArgument($argument)
+ * @method ProtectionRuleActionType setArgument(array $argument)
  */
 class ProtectionRuleActionType extends TypeTest
 {
@@ -24,7 +24,7 @@ class ProtectionRuleActionType extends TypeTest
     protected $name = null;
 
     /**
-     * @property array $argument
+     * @property \jamesiarmes\PEWS\API\TypeTest\ProtectionRuleArgumentType[] $argument
      */
     protected $argument = null;
 

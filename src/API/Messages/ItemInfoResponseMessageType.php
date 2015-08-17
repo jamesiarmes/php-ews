@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ItemInfoResponseMessageType
  *
  * @method ItemInfoResponseMessageType getItems()
- * @method ItemInfoResponseMessageType setItems($items)
+ * @method ItemInfoResponseMessageType setItems(\jamesiarmes\PEWS\API\TypeTest\ArrayOfRealItemsType $items)
  */
 class ItemInfoResponseMessageType extends ResponseMessageType
 {

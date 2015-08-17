@@ -11,30 +11,29 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfFolderChangeDescriptionsType
  *
  * @method NonEmptyArrayOfFolderChangeDescriptionsType getAppendToFolderField()
- * @method NonEmptyArrayOfFolderChangeDescriptionsType
- * setAppendToFolderField($appendToFolderField)
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType setAppendToFolderField(array $appendToFolderField)
  * @method NonEmptyArrayOfFolderChangeDescriptionsType getSetFolderField()
- * @method NonEmptyArrayOfFolderChangeDescriptionsType
- * setSetFolderField($setFolderField)
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType setSetFolderField(array $setFolderField)
  * @method NonEmptyArrayOfFolderChangeDescriptionsType getDeleteFolderField()
- * @method NonEmptyArrayOfFolderChangeDescriptionsType
- * setDeleteFolderField($deleteFolderField)
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType setDeleteFolderField(array $deleteFolderField)
  */
 class NonEmptyArrayOfFolderChangeDescriptionsType extends TypeTest
 {
 
     /**
-     * @property array $appendToFolderField
+     * @property \jamesiarmes\PEWS\API\TypeTest\AppendToFolderFieldType[]
+     * $appendToFolderField
      */
     protected $appendToFolderField = null;
 
     /**
-     * @property array $setFolderField
+     * @property \jamesiarmes\PEWS\API\TypeTest\SetFolderFieldType[] $setFolderField
      */
     protected $setFolderField = null;
 
     /**
-     * @property array $deleteFolderField
+     * @property \jamesiarmes\PEWS\API\TypeTest\DeleteFolderFieldType[]
+     * $deleteFolderField
      */
     protected $deleteFolderField = null;
 

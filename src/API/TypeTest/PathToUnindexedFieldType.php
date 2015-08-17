@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PathToUnindexedFieldType
  *
  * @method PathToUnindexedFieldType getFieldURI()
- * @method PathToUnindexedFieldType setFieldURI($fieldURI)
+ * @method PathToUnindexedFieldType setFieldURI(string $fieldURI)
  */
 class PathToUnindexedFieldType extends BasePathToElementType
 {

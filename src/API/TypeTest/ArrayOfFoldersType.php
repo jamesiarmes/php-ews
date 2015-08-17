@@ -11,41 +11,41 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfFoldersType
  *
  * @method ArrayOfFoldersType getFolder()
- * @method ArrayOfFoldersType setFolder($folder)
+ * @method ArrayOfFoldersType setFolder(array $folder)
  * @method ArrayOfFoldersType getCalendarFolder()
- * @method ArrayOfFoldersType setCalendarFolder($calendarFolder)
+ * @method ArrayOfFoldersType setCalendarFolder(array $calendarFolder)
  * @method ArrayOfFoldersType getContactsFolder()
- * @method ArrayOfFoldersType setContactsFolder($contactsFolder)
+ * @method ArrayOfFoldersType setContactsFolder(array $contactsFolder)
  * @method ArrayOfFoldersType getSearchFolder()
- * @method ArrayOfFoldersType setSearchFolder($searchFolder)
+ * @method ArrayOfFoldersType setSearchFolder(array $searchFolder)
  * @method ArrayOfFoldersType getTasksFolder()
- * @method ArrayOfFoldersType setTasksFolder($tasksFolder)
+ * @method ArrayOfFoldersType setTasksFolder(array $tasksFolder)
  */
 class ArrayOfFoldersType extends TypeTest
 {
 
     /**
-     * @property array $folder
+     * @property \jamesiarmes\PEWS\API\TypeTest\FolderType[] $folder
      */
     protected $folder = null;
 
     /**
-     * @property array $calendarFolder
+     * @property \jamesiarmes\PEWS\API\TypeTest\CalendarFolderType[] $calendarFolder
      */
     protected $calendarFolder = null;
 
     /**
-     * @property array $contactsFolder
+     * @property \jamesiarmes\PEWS\API\TypeTest\ContactsFolderType[] $contactsFolder
      */
     protected $contactsFolder = null;
 
     /**
-     * @property array $searchFolder
+     * @property \jamesiarmes\PEWS\API\TypeTest\SearchFolderType[] $searchFolder
      */
     protected $searchFolder = null;
 
     /**
-     * @property array $tasksFolder
+     * @property \jamesiarmes\PEWS\API\TypeTest\TasksFolderType[] $tasksFolder
      */
     protected $tasksFolder = null;
 

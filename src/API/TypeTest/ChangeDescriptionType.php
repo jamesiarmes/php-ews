@@ -11,27 +11,27 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ChangeDescriptionType
  *
  * @method ChangeDescriptionType getFieldURI()
- * @method ChangeDescriptionType setFieldURI($fieldURI)
+ * @method ChangeDescriptionType setFieldURI(array $fieldURI)
  * @method ChangeDescriptionType getIndexedFieldURI()
- * @method ChangeDescriptionType setIndexedFieldURI($indexedFieldURI)
+ * @method ChangeDescriptionType setIndexedFieldURI(array $indexedFieldURI)
  * @method ChangeDescriptionType getExtendedFieldURI()
- * @method ChangeDescriptionType setExtendedFieldURI($extendedFieldURI)
+ * @method ChangeDescriptionType setExtendedFieldURI(array $extendedFieldURI)
  */
 class ChangeDescriptionType extends TypeTest
 {
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TrackingPropertyType
  *
  * @method TrackingPropertyType getName()
- * @method TrackingPropertyType setName($name)
+ * @method TrackingPropertyType setName(string $name)
  * @method TrackingPropertyType getValue()
- * @method TrackingPropertyType setValue($value)
+ * @method TrackingPropertyType setValue(string $value)
  */
 class TrackingPropertyType extends TypeTest
 {

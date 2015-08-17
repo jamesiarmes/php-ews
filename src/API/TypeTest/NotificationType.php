@@ -11,27 +11,27 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NotificationType
  *
  * @method NotificationType getSubscriptionId()
- * @method NotificationType setSubscriptionId($subscriptionId)
+ * @method NotificationType setSubscriptionId(string $subscriptionId)
  * @method NotificationType getPreviousWatermark()
- * @method NotificationType setPreviousWatermark($previousWatermark)
+ * @method NotificationType setPreviousWatermark(string $previousWatermark)
  * @method NotificationType getMoreEvents()
- * @method NotificationType setMoreEvents($moreEvents)
+ * @method NotificationType setMoreEvents(boolean $moreEvents)
  * @method NotificationType getCopiedEvent()
- * @method NotificationType setCopiedEvent($copiedEvent)
+ * @method NotificationType setCopiedEvent(array $copiedEvent)
  * @method NotificationType getCreatedEvent()
- * @method NotificationType setCreatedEvent($createdEvent)
+ * @method NotificationType setCreatedEvent(array $createdEvent)
  * @method NotificationType getDeletedEvent()
- * @method NotificationType setDeletedEvent($deletedEvent)
+ * @method NotificationType setDeletedEvent(array $deletedEvent)
  * @method NotificationType getModifiedEvent()
- * @method NotificationType setModifiedEvent($modifiedEvent)
+ * @method NotificationType setModifiedEvent(array $modifiedEvent)
  * @method NotificationType getMovedEvent()
- * @method NotificationType setMovedEvent($movedEvent)
+ * @method NotificationType setMovedEvent(array $movedEvent)
  * @method NotificationType getNewMailEvent()
- * @method NotificationType setNewMailEvent($newMailEvent)
+ * @method NotificationType setNewMailEvent(array $newMailEvent)
  * @method NotificationType getStatusEvent()
- * @method NotificationType setStatusEvent($statusEvent)
+ * @method NotificationType setStatusEvent(array $statusEvent)
  * @method NotificationType getFreeBusyChangedEvent()
- * @method NotificationType setFreeBusyChangedEvent($freeBusyChangedEvent)
+ * @method NotificationType setFreeBusyChangedEvent(array $freeBusyChangedEvent)
  */
 class NotificationType extends TypeTest
 {
@@ -52,42 +52,47 @@ class NotificationType extends TypeTest
     protected $moreEvents = null;
 
     /**
-     * @property array $copiedEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\MovedCopiedEventType[] $copiedEvent
      */
     protected $copiedEvent = null;
 
     /**
-     * @property array $createdEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\BaseObjectChangedEventType[]
+     * $createdEvent
      */
     protected $createdEvent = null;
 
     /**
-     * @property array $deletedEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\BaseObjectChangedEventType[]
+     * $deletedEvent
      */
     protected $deletedEvent = null;
 
     /**
-     * @property array $modifiedEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\ModifiedEventType[] $modifiedEvent
      */
     protected $modifiedEvent = null;
 
     /**
-     * @property array $movedEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\MovedCopiedEventType[] $movedEvent
      */
     protected $movedEvent = null;
 
     /**
-     * @property array $newMailEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\BaseObjectChangedEventType[]
+     * $newMailEvent
      */
     protected $newMailEvent = null;
 
     /**
-     * @property array $statusEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\BaseNotificationEventType[]
+     * $statusEvent
      */
     protected $statusEvent = null;
 
     /**
-     * @property array $freeBusyChangedEvent
+     * @property \jamesiarmes\PEWS\API\TypeTest\BaseObjectChangedEventType[]
+     * $freeBusyChangedEvent
      */
     protected $freeBusyChangedEvent = null;
 

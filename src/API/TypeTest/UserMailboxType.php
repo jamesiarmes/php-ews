@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserMailboxType
  *
  * @method UserMailboxType getId()
- * @method UserMailboxType setId($id)
+ * @method UserMailboxType setId(string $id)
  * @method UserMailboxType getIsArchive()
- * @method UserMailboxType setIsArchive($isArchive)
+ * @method UserMailboxType setIsArchive(boolean $isArchive)
  */
 class UserMailboxType extends TypeTest
 {

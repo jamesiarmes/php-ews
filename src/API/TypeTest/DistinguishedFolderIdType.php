@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DistinguishedFolderIdType
  *
  * @method DistinguishedFolderIdType getId()
- * @method DistinguishedFolderIdType setId($id)
+ * @method DistinguishedFolderIdType setId(string $id)
  * @method DistinguishedFolderIdType getChangeKey()
- * @method DistinguishedFolderIdType setChangeKey($changeKey)
+ * @method DistinguishedFolderIdType setChangeKey(string $changeKey)
  * @method DistinguishedFolderIdType getMailbox()
- * @method DistinguishedFolderIdType setMailbox($mailbox)
+ * @method DistinguishedFolderIdType setMailbox(EmailAddressType $mailbox)
  */
 class DistinguishedFolderIdType extends BaseFolderIdType
 {

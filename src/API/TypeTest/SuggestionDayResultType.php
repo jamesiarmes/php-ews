@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SuggestionDayResult
  *
  * @method SuggestionDayResultType getDate()
- * @method SuggestionDayResultType setDate($date)
+ * @method SuggestionDayResultType setDate(\DateTime $date)
  * @method SuggestionDayResultType getDayQuality()
- * @method SuggestionDayResultType setDayQuality($dayQuality)
+ * @method SuggestionDayResultType setDayQuality(string $dayQuality)
  * @method SuggestionDayResultType getSuggestionArray()
- * @method SuggestionDayResultType setSuggestionArray($suggestionArray)
+ * @method SuggestionDayResultType setSuggestionArray(array $suggestionArray)
  */
 class SuggestionDayResultType extends TypeTest
 {
@@ -35,7 +35,7 @@ class SuggestionDayResultType extends TypeTest
     protected $dayQuality = null;
 
     /**
-     * @property array $suggestionArray
+     * @property \jamesiarmes\PEWS\API\TypeTest\SuggestionType[] $suggestionArray
      */
     protected $suggestionArray = null;
 

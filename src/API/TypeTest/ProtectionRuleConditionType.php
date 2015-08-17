@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRuleConditionType
  *
  * @method ProtectionRuleConditionType getAllInternal()
- * @method ProtectionRuleConditionType setAllInternal($allInternal)
+ * @method ProtectionRuleConditionType setAllInternal(string $allInternal)
  * @method ProtectionRuleConditionType getAnd()
- * @method ProtectionRuleConditionType setAnd($and)
+ * @method ProtectionRuleConditionType setAnd(ProtectionRuleAndType $and)
  * @method ProtectionRuleConditionType getRecipientIs()
- * @method ProtectionRuleConditionType setRecipientIs($recipientIs)
+ * @method ProtectionRuleConditionType setRecipientIs(array $recipientIs)
  * @method ProtectionRuleConditionType getSenderDepartments()
- * @method ProtectionRuleConditionType setSenderDepartments($senderDepartments)
+ * @method ProtectionRuleConditionType setSenderDepartments(array $senderDepartments)
  * @method ProtectionRuleConditionType getTrue()
- * @method ProtectionRuleConditionType setTrue($true)
+ * @method ProtectionRuleConditionType setTrue(string $true)
  */
 class ProtectionRuleConditionType extends TypeTest
 {
@@ -35,12 +35,12 @@ class ProtectionRuleConditionType extends TypeTest
     protected $and = null;
 
     /**
-     * @property array $recipientIs
+     * @property string[] $recipientIs
      */
     protected $recipientIs = null;
 
     /**
-     * @property array $senderDepartments
+     * @property string[] $senderDepartments
      */
     protected $senderDepartments = null;
 

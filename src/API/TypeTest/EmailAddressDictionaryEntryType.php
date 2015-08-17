@@ -11,13 +11,13 @@ use \string;
  * XSD Type: EmailAddressDictionaryEntryType
  *
  * @method EmailAddressDictionaryEntryType getKey()
- * @method EmailAddressDictionaryEntryType setKey($key)
+ * @method EmailAddressDictionaryEntryType setKey(string $key)
  * @method EmailAddressDictionaryEntryType getName()
- * @method EmailAddressDictionaryEntryType setName($name)
+ * @method EmailAddressDictionaryEntryType setName(string $name)
  * @method EmailAddressDictionaryEntryType getRoutingType()
- * @method EmailAddressDictionaryEntryType setRoutingType($routingType)
+ * @method EmailAddressDictionaryEntryType setRoutingType(string $routingType)
  * @method EmailAddressDictionaryEntryType getMailboxType()
- * @method EmailAddressDictionaryEntryType setMailboxType($mailboxType)
+ * @method EmailAddressDictionaryEntryType setMailboxType(string $mailboxType)
  */
 class EmailAddressDictionaryEntryType extends string
 {

@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetFolderType
  *
  * @method GetFolderType getFolderShape()
- * @method GetFolderType setFolderShape($folderShape)
+ * @method GetFolderType setFolderShape(\jamesiarmes\PEWS\API\TypeTest\FolderResponseShapeType $folderShape)
  * @method GetFolderType getFolderIds()
- * @method GetFolderType setFolderIds($folderIds)
+ * @method GetFolderType setFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class GetFolderType extends BaseRequestType
 {

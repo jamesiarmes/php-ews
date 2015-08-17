@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: FreeBusyResponseType
  *
  * @method FreeBusyResponseType getResponseMessage()
- * @method FreeBusyResponseType setResponseMessage($responseMessage)
+ * @method FreeBusyResponseType setResponseMessage(ResponseMessageType $responseMessage)
  * @method FreeBusyResponseType getFreeBusyView()
- * @method FreeBusyResponseType setFreeBusyView($freeBusyView)
+ * @method FreeBusyResponseType setFreeBusyView(\jamesiarmes\PEWS\API\TypeTest\FreeBusyViewType $freeBusyView)
  */
 class FreeBusyResponseType extends Messages
 {

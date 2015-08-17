@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SyncFolderItemsDeleteType
  *
  * @method SyncFolderItemsDeleteType getItemId()
- * @method SyncFolderItemsDeleteType setItemId($itemId)
+ * @method SyncFolderItemsDeleteType setItemId(ItemIdType $itemId)
  */
 class SyncFolderItemsDeleteType extends TypeTest
 {

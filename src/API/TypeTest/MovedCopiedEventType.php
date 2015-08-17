@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MovedCopiedEventType
  *
  * @method MovedCopiedEventType getOldFolderId()
- * @method MovedCopiedEventType setOldFolderId($oldFolderId)
+ * @method MovedCopiedEventType setOldFolderId(FolderIdType $oldFolderId)
  * @method MovedCopiedEventType getOldItemId()
- * @method MovedCopiedEventType setOldItemId($oldItemId)
+ * @method MovedCopiedEventType setOldItemId(ItemIdType $oldItemId)
  * @method MovedCopiedEventType getOldParentFolderId()
- * @method MovedCopiedEventType setOldParentFolderId($oldParentFolderId)
+ * @method MovedCopiedEventType setOldParentFolderId(FolderIdType $oldParentFolderId)
  */
 class MovedCopiedEventType extends BaseObjectChangedEventType
 {

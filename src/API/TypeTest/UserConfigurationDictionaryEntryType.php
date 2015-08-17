@@ -11,10 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserConfigurationDictionaryEntryType
  *
  * @method UserConfigurationDictionaryEntryType getDictionaryKey()
- * @method UserConfigurationDictionaryEntryType setDictionaryKey($dictionaryKey)
+ * @method UserConfigurationDictionaryEntryType setDictionaryKey(UserConfigurationDictionaryObjectType $dictionaryKey)
  * @method UserConfigurationDictionaryEntryType getDictionaryValue()
- * @method UserConfigurationDictionaryEntryType
- * setDictionaryValue($dictionaryValue)
+ * @method UserConfigurationDictionaryEntryType setDictionaryValue(UserConfigurationDictionaryObjectType $dictionaryValue)
  */
 class UserConfigurationDictionaryEntryType extends TypeTest
 {

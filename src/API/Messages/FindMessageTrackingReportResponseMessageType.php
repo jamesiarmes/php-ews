@@ -9,30 +9,27 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindMessageTrackingReportResponseMessageType
  *
  * @method FindMessageTrackingReportResponseMessageType getDiagnostics()
- * @method FindMessageTrackingReportResponseMessageType
- * setDiagnostics($diagnostics)
- * @method FindMessageTrackingReportResponseMessageType
- * getMessageTrackingSearchResults()
- * @method FindMessageTrackingReportResponseMessageType
- * setMessageTrackingSearchResults($messageTrackingSearchResults)
+ * @method FindMessageTrackingReportResponseMessageType setDiagnostics(array $diagnostics)
+ * @method FindMessageTrackingReportResponseMessageType getMessageTrackingSearchResults()
+ * @method FindMessageTrackingReportResponseMessageType setMessageTrackingSearchResults(array $messageTrackingSearchResults)
  * @method FindMessageTrackingReportResponseMessageType getExecutedSearchScope()
- * @method FindMessageTrackingReportResponseMessageType
- * setExecutedSearchScope($executedSearchScope)
+ * @method FindMessageTrackingReportResponseMessageType setExecutedSearchScope(string $executedSearchScope)
  * @method FindMessageTrackingReportResponseMessageType getErrors()
- * @method FindMessageTrackingReportResponseMessageType setErrors($errors)
+ * @method FindMessageTrackingReportResponseMessageType setErrors(array $errors)
  * @method FindMessageTrackingReportResponseMessageType getProperties()
- * @method FindMessageTrackingReportResponseMessageType setProperties($properties)
+ * @method FindMessageTrackingReportResponseMessageType setProperties(array $properties)
  */
 class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property array $diagnostics
+     * @property string[] $diagnostics
      */
     protected $diagnostics = null;
 
     /**
-     * @property array $messageTrackingSearchResults
+     * @property \jamesiarmes\PEWS\API\TypeTest\FindMessageTrackingSearchResultType[]
+     * $messageTrackingSearchResults
      */
     protected $messageTrackingSearchResults = null;
 
@@ -42,12 +39,12 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
     protected $executedSearchScope = null;
 
     /**
-     * @property array $errors
+     * @property \jamesiarmes\PEWS\API\TypeTest\ArrayOfTrackingPropertiesType[] $errors
      */
     protected $errors = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

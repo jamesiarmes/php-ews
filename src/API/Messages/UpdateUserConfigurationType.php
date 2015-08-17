@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateUserConfigurationType
  *
  * @method UpdateUserConfigurationType getUserConfiguration()
- * @method UpdateUserConfigurationType setUserConfiguration($userConfiguration)
+ * @method UpdateUserConfigurationType setUserConfiguration(\jamesiarmes\PEWS\API\TypeTest\UserConfigurationType $userConfiguration)
  */
 class UpdateUserConfigurationType extends BaseRequestType
 {

@@ -11,19 +11,19 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FreeBusyView
  *
  * @method FreeBusyViewType getFreeBusyViewType()
- * @method FreeBusyViewType setFreeBusyViewType($freeBusyViewType)
+ * @method FreeBusyViewType setFreeBusyViewType(array $freeBusyViewType)
  * @method FreeBusyViewType getMergedFreeBusy()
- * @method FreeBusyViewType setMergedFreeBusy($mergedFreeBusy)
+ * @method FreeBusyViewType setMergedFreeBusy(string $mergedFreeBusy)
  * @method FreeBusyViewType getCalendarEventArray()
- * @method FreeBusyViewType setCalendarEventArray($calendarEventArray)
+ * @method FreeBusyViewType setCalendarEventArray(array $calendarEventArray)
  * @method FreeBusyViewType getWorkingHours()
- * @method FreeBusyViewType setWorkingHours($workingHours)
+ * @method FreeBusyViewType setWorkingHours(WorkingHoursType $workingHours)
  */
 class FreeBusyViewType extends TypeTest
 {
 
     /**
-     * @property array $freeBusyViewType
+     * @property string[] $freeBusyViewType
      */
     protected $freeBusyViewType = null;
 
@@ -33,7 +33,7 @@ class FreeBusyViewType extends TypeTest
     protected $mergedFreeBusy = null;
 
     /**
-     * @property array $calendarEventArray
+     * @property \jamesiarmes\PEWS\API\TypeTest\CalendarEventType[] $calendarEventArray
      */
     protected $calendarEventArray = null;
 

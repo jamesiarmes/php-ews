@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: EmptyFolderType
  *
  * @method EmptyFolderType getDeleteType()
- * @method EmptyFolderType setDeleteType($deleteType)
+ * @method EmptyFolderType setDeleteType(string $deleteType)
  * @method EmptyFolderType getDeleteSubFolders()
- * @method EmptyFolderType setDeleteSubFolders($deleteSubFolders)
+ * @method EmptyFolderType setDeleteSubFolders(boolean $deleteSubFolders)
  * @method EmptyFolderType getFolderIds()
- * @method EmptyFolderType setFolderIds($folderIds)
+ * @method EmptyFolderType setFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class EmptyFolderType extends BaseRequestType
 {

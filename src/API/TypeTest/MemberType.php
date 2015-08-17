@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MemberType
  *
  * @method MemberType getKey()
- * @method MemberType setKey($key)
+ * @method MemberType setKey(string $key)
  * @method MemberType getMailbox()
- * @method MemberType setMailbox($mailbox)
+ * @method MemberType setMailbox(EmailAddressType $mailbox)
  * @method MemberType getStatus()
- * @method MemberType setStatus($status)
+ * @method MemberType setStatus(string $status)
  */
 class MemberType extends TypeTest
 {

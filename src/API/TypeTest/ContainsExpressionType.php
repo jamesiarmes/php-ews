@@ -9,17 +9,17 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ContainsExpressionType
  *
  * @method ContainsExpressionType getContainmentMode()
- * @method ContainsExpressionType setContainmentMode($containmentMode)
+ * @method ContainsExpressionType setContainmentMode(string $containmentMode)
  * @method ContainsExpressionType getContainmentComparison()
- * @method ContainsExpressionType setContainmentComparison($containmentComparison)
+ * @method ContainsExpressionType setContainmentComparison(string $containmentComparison)
  * @method ContainsExpressionType getFieldURI()
- * @method ContainsExpressionType setFieldURI($fieldURI)
+ * @method ContainsExpressionType setFieldURI(array $fieldURI)
  * @method ContainsExpressionType getIndexedFieldURI()
- * @method ContainsExpressionType setIndexedFieldURI($indexedFieldURI)
+ * @method ContainsExpressionType setIndexedFieldURI(array $indexedFieldURI)
  * @method ContainsExpressionType getExtendedFieldURI()
- * @method ContainsExpressionType setExtendedFieldURI($extendedFieldURI)
+ * @method ContainsExpressionType setExtendedFieldURI(array $extendedFieldURI)
  * @method ContainsExpressionType getConstant()
- * @method ContainsExpressionType setConstant($constant)
+ * @method ContainsExpressionType setConstant(ConstantValueType $constant)
  */
 class ContainsExpressionType extends SearchExpressionType
 {
@@ -35,17 +35,17 @@ class ContainsExpressionType extends SearchExpressionType
     protected $containmentComparison = null;
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

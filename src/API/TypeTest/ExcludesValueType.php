@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ExcludesValueType
  *
  * @method ExcludesValueType getValue()
- * @method ExcludesValueType setValue($value)
+ * @method ExcludesValueType setValue(string $value)
  */
 class ExcludesValueType extends TypeTest
 {

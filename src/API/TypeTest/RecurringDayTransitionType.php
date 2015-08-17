@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurringDayTransitionType
  *
  * @method RecurringDayTransitionType getDayOfWeek()
- * @method RecurringDayTransitionType setDayOfWeek($dayOfWeek)
+ * @method RecurringDayTransitionType setDayOfWeek(string $dayOfWeek)
  * @method RecurringDayTransitionType getOccurrence()
- * @method RecurringDayTransitionType setOccurrence($occurrence)
+ * @method RecurringDayTransitionType setOccurrence(string $occurrence)
  */
 class RecurringDayTransitionType extends RecurringTimeTransitionType
 {

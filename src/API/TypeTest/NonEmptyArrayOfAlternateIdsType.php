@@ -11,29 +11,29 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfAlternateIdsType
  *
  * @method NonEmptyArrayOfAlternateIdsType getAlternateId()
- * @method NonEmptyArrayOfAlternateIdsType setAlternateId($alternateId)
+ * @method NonEmptyArrayOfAlternateIdsType setAlternateId(array $alternateId)
  * @method NonEmptyArrayOfAlternateIdsType getAlternatePublicFolderId()
- * @method NonEmptyArrayOfAlternateIdsType
- * setAlternatePublicFolderId($alternatePublicFolderId)
+ * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderId(array $alternatePublicFolderId)
  * @method NonEmptyArrayOfAlternateIdsType getAlternatePublicFolderItemId()
- * @method NonEmptyArrayOfAlternateIdsType
- * setAlternatePublicFolderItemId($alternatePublicFolderItemId)
+ * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderItemId(array $alternatePublicFolderItemId)
  */
 class NonEmptyArrayOfAlternateIdsType extends TypeTest
 {
 
     /**
-     * @property array $alternateId
+     * @property \jamesiarmes\PEWS\API\TypeTest\AlternateIdType[] $alternateId
      */
     protected $alternateId = null;
 
     /**
-     * @property array $alternatePublicFolderId
+     * @property \jamesiarmes\PEWS\API\TypeTest\AlternatePublicFolderIdType[]
+     * $alternatePublicFolderId
      */
     protected $alternatePublicFolderId = null;
 
     /**
-     * @property array $alternatePublicFolderItemId
+     * @property \jamesiarmes\PEWS\API\TypeTest\AlternatePublicFolderItemIdType[]
+     * $alternatePublicFolderItemId
      */
     protected $alternatePublicFolderItemId = null;
 

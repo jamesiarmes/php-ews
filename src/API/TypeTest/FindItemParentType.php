@@ -11,19 +11,19 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FindItemParentType
  *
  * @method FindItemParentType getIndexedPagingOffset()
- * @method FindItemParentType setIndexedPagingOffset($indexedPagingOffset)
+ * @method FindItemParentType setIndexedPagingOffset(integer $indexedPagingOffset)
  * @method FindItemParentType getNumeratorOffset()
- * @method FindItemParentType setNumeratorOffset($numeratorOffset)
+ * @method FindItemParentType setNumeratorOffset(integer $numeratorOffset)
  * @method FindItemParentType getAbsoluteDenominator()
- * @method FindItemParentType setAbsoluteDenominator($absoluteDenominator)
+ * @method FindItemParentType setAbsoluteDenominator(integer $absoluteDenominator)
  * @method FindItemParentType getIncludesLastItemInRange()
- * @method FindItemParentType setIncludesLastItemInRange($includesLastItemInRange)
+ * @method FindItemParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method FindItemParentType getTotalItemsInView()
- * @method FindItemParentType setTotalItemsInView($totalItemsInView)
+ * @method FindItemParentType setTotalItemsInView(integer $totalItemsInView)
  * @method FindItemParentType getItems()
- * @method FindItemParentType setItems($items)
+ * @method FindItemParentType setItems(ArrayOfRealItemsType $items)
  * @method FindItemParentType getGroups()
- * @method FindItemParentType setGroups($groups)
+ * @method FindItemParentType setGroups(array $groups)
  */
 class FindItemParentType extends TypeTest
 {
@@ -59,7 +59,7 @@ class FindItemParentType extends TypeTest
     protected $items = null;
 
     /**
-     * @property array $groups
+     * @property \jamesiarmes\PEWS\API\TypeTest\GroupedItemsType[] $groups
      */
     protected $groups = null;
 

@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ContactsViewType
  *
  * @method ContactsViewType getInitialName()
- * @method ContactsViewType setInitialName($initialName)
+ * @method ContactsViewType setInitialName(string $initialName)
  * @method ContactsViewType getFinalName()
- * @method ContactsViewType setFinalName($finalName)
+ * @method ContactsViewType setFinalName(string $finalName)
  */
 class ContactsViewType extends BasePagingType
 {

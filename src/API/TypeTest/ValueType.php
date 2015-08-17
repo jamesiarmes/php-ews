@@ -11,7 +11,7 @@ use \string;
  * XSD Type: Value
  *
  * @method ValueType getName()
- * @method ValueType setName($name)
+ * @method ValueType setName(string $name)
  */
 class ValueType extends string
 {

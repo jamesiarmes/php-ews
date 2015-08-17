@@ -8,15 +8,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * Class representing ServerVersionInfo
  *
  * @method ServerVersionInfo getMajorVersion()
- * @method ServerVersionInfo setMajorVersion($majorVersion)
+ * @method ServerVersionInfo setMajorVersion(integer $majorVersion)
  * @method ServerVersionInfo getMinorVersion()
- * @method ServerVersionInfo setMinorVersion($minorVersion)
+ * @method ServerVersionInfo setMinorVersion(integer $minorVersion)
  * @method ServerVersionInfo getMajorBuildNumber()
- * @method ServerVersionInfo setMajorBuildNumber($majorBuildNumber)
+ * @method ServerVersionInfo setMajorBuildNumber(integer $majorBuildNumber)
  * @method ServerVersionInfo getMinorBuildNumber()
- * @method ServerVersionInfo setMinorBuildNumber($minorBuildNumber)
+ * @method ServerVersionInfo setMinorBuildNumber(integer $minorBuildNumber)
  * @method ServerVersionInfo getVersion()
- * @method ServerVersionInfo setVersion($version)
+ * @method ServerVersionInfo setVersion(string $version)
  */
 class ServerVersionInfo extends TypeTest
 {

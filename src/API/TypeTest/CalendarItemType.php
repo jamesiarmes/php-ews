@@ -9,92 +9,91 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarItemType
  *
  * @method CalendarItemType getUID()
- * @method CalendarItemType setUID($uID)
+ * @method CalendarItemType setUID(string $uID)
  * @method CalendarItemType getRecurrenceId()
- * @method CalendarItemType setRecurrenceId($recurrenceId)
+ * @method CalendarItemType setRecurrenceId(\DateTime $recurrenceId)
  * @method CalendarItemType getDateTimeStamp()
- * @method CalendarItemType setDateTimeStamp($dateTimeStamp)
+ * @method CalendarItemType setDateTimeStamp(\DateTime $dateTimeStamp)
  * @method CalendarItemType getStart()
- * @method CalendarItemType setStart($start)
+ * @method CalendarItemType setStart(\DateTime $start)
  * @method CalendarItemType getEnd()
- * @method CalendarItemType setEnd($end)
+ * @method CalendarItemType setEnd(\DateTime $end)
  * @method CalendarItemType getOriginalStart()
- * @method CalendarItemType setOriginalStart($originalStart)
+ * @method CalendarItemType setOriginalStart(\DateTime $originalStart)
  * @method CalendarItemType getIsAllDayEvent()
- * @method CalendarItemType setIsAllDayEvent($isAllDayEvent)
+ * @method CalendarItemType setIsAllDayEvent(boolean $isAllDayEvent)
  * @method CalendarItemType getLegacyFreeBusyStatus()
- * @method CalendarItemType setLegacyFreeBusyStatus($legacyFreeBusyStatus)
+ * @method CalendarItemType setLegacyFreeBusyStatus(string $legacyFreeBusyStatus)
  * @method CalendarItemType getLocation()
- * @method CalendarItemType setLocation($location)
+ * @method CalendarItemType setLocation(string $location)
  * @method CalendarItemType getWhen()
- * @method CalendarItemType setWhen($when)
+ * @method CalendarItemType setWhen(string $when)
  * @method CalendarItemType getIsMeeting()
- * @method CalendarItemType setIsMeeting($isMeeting)
+ * @method CalendarItemType setIsMeeting(boolean $isMeeting)
  * @method CalendarItemType getIsCancelled()
- * @method CalendarItemType setIsCancelled($isCancelled)
+ * @method CalendarItemType setIsCancelled(boolean $isCancelled)
  * @method CalendarItemType getIsRecurring()
- * @method CalendarItemType setIsRecurring($isRecurring)
+ * @method CalendarItemType setIsRecurring(boolean $isRecurring)
  * @method CalendarItemType getMeetingRequestWasSent()
- * @method CalendarItemType setMeetingRequestWasSent($meetingRequestWasSent)
+ * @method CalendarItemType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
  * @method CalendarItemType getIsResponseRequested()
- * @method CalendarItemType setIsResponseRequested($isResponseRequested)
+ * @method CalendarItemType setIsResponseRequested(boolean $isResponseRequested)
  * @method CalendarItemType getCalendarItemType()
- * @method CalendarItemType setCalendarItemType($calendarItemType)
+ * @method CalendarItemType setCalendarItemType(string $calendarItemType)
  * @method CalendarItemType getMyResponseType()
- * @method CalendarItemType setMyResponseType($myResponseType)
+ * @method CalendarItemType setMyResponseType(string $myResponseType)
  * @method CalendarItemType getOrganizer()
- * @method CalendarItemType setOrganizer($organizer)
+ * @method CalendarItemType setOrganizer(SingleRecipientType $organizer)
  * @method CalendarItemType getRequiredAttendees()
- * @method CalendarItemType setRequiredAttendees($requiredAttendees)
+ * @method CalendarItemType setRequiredAttendees(array $requiredAttendees)
  * @method CalendarItemType getOptionalAttendees()
- * @method CalendarItemType setOptionalAttendees($optionalAttendees)
+ * @method CalendarItemType setOptionalAttendees(array $optionalAttendees)
  * @method CalendarItemType getResources()
- * @method CalendarItemType setResources($resources)
+ * @method CalendarItemType setResources(array $resources)
  * @method CalendarItemType getConflictingMeetingCount()
- * @method CalendarItemType setConflictingMeetingCount($conflictingMeetingCount)
+ * @method CalendarItemType setConflictingMeetingCount(integer $conflictingMeetingCount)
  * @method CalendarItemType getAdjacentMeetingCount()
- * @method CalendarItemType setAdjacentMeetingCount($adjacentMeetingCount)
+ * @method CalendarItemType setAdjacentMeetingCount(integer $adjacentMeetingCount)
  * @method CalendarItemType getConflictingMeetings()
- * @method CalendarItemType setConflictingMeetings($conflictingMeetings)
+ * @method CalendarItemType setConflictingMeetings(NonEmptyArrayOfAllItemsType $conflictingMeetings)
  * @method CalendarItemType getAdjacentMeetings()
- * @method CalendarItemType setAdjacentMeetings($adjacentMeetings)
+ * @method CalendarItemType setAdjacentMeetings(NonEmptyArrayOfAllItemsType $adjacentMeetings)
  * @method CalendarItemType getDuration()
- * @method CalendarItemType setDuration($duration)
+ * @method CalendarItemType setDuration(string $duration)
  * @method CalendarItemType getTimeZone()
- * @method CalendarItemType setTimeZone($timeZone)
+ * @method CalendarItemType setTimeZone(string $timeZone)
  * @method CalendarItemType getAppointmentReplyTime()
- * @method CalendarItemType setAppointmentReplyTime($appointmentReplyTime)
+ * @method CalendarItemType setAppointmentReplyTime(\DateTime $appointmentReplyTime)
  * @method CalendarItemType getAppointmentSequenceNumber()
- * @method CalendarItemType
- * setAppointmentSequenceNumber($appointmentSequenceNumber)
+ * @method CalendarItemType setAppointmentSequenceNumber(integer $appointmentSequenceNumber)
  * @method CalendarItemType getAppointmentState()
- * @method CalendarItemType setAppointmentState($appointmentState)
+ * @method CalendarItemType setAppointmentState(integer $appointmentState)
  * @method CalendarItemType getRecurrence()
- * @method CalendarItemType setRecurrence($recurrence)
+ * @method CalendarItemType setRecurrence(RecurrenceType $recurrence)
  * @method CalendarItemType getFirstOccurrence()
- * @method CalendarItemType setFirstOccurrence($firstOccurrence)
+ * @method CalendarItemType setFirstOccurrence(OccurrenceInfoType $firstOccurrence)
  * @method CalendarItemType getLastOccurrence()
- * @method CalendarItemType setLastOccurrence($lastOccurrence)
+ * @method CalendarItemType setLastOccurrence(OccurrenceInfoType $lastOccurrence)
  * @method CalendarItemType getModifiedOccurrences()
- * @method CalendarItemType setModifiedOccurrences($modifiedOccurrences)
+ * @method CalendarItemType setModifiedOccurrences(array $modifiedOccurrences)
  * @method CalendarItemType getDeletedOccurrences()
- * @method CalendarItemType setDeletedOccurrences($deletedOccurrences)
+ * @method CalendarItemType setDeletedOccurrences(array $deletedOccurrences)
  * @method CalendarItemType getMeetingTimeZone()
- * @method CalendarItemType setMeetingTimeZone($meetingTimeZone)
+ * @method CalendarItemType setMeetingTimeZone(TimeZoneType $meetingTimeZone)
  * @method CalendarItemType getStartTimeZone()
- * @method CalendarItemType setStartTimeZone($startTimeZone)
+ * @method CalendarItemType setStartTimeZone(TimeZoneDefinitionType $startTimeZone)
  * @method CalendarItemType getEndTimeZone()
- * @method CalendarItemType setEndTimeZone($endTimeZone)
+ * @method CalendarItemType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
  * @method CalendarItemType getConferenceType()
- * @method CalendarItemType setConferenceType($conferenceType)
+ * @method CalendarItemType setConferenceType(integer $conferenceType)
  * @method CalendarItemType getAllowNewTimeProposal()
- * @method CalendarItemType setAllowNewTimeProposal($allowNewTimeProposal)
+ * @method CalendarItemType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
  * @method CalendarItemType getIsOnlineMeeting()
- * @method CalendarItemType setIsOnlineMeeting($isOnlineMeeting)
+ * @method CalendarItemType setIsOnlineMeeting(boolean $isOnlineMeeting)
  * @method CalendarItemType getMeetingWorkspaceUrl()
- * @method CalendarItemType setMeetingWorkspaceUrl($meetingWorkspaceUrl)
+ * @method CalendarItemType setMeetingWorkspaceUrl(string $meetingWorkspaceUrl)
  * @method CalendarItemType getNetShowUrl()
- * @method CalendarItemType setNetShowUrl($netShowUrl)
+ * @method CalendarItemType setNetShowUrl(string $netShowUrl)
  */
 class CalendarItemType extends ItemType
 {
@@ -199,17 +198,17 @@ class CalendarItemType extends ItemType
     protected $organizer = null;
 
     /**
-     * @property array $requiredAttendees
+     * @property \jamesiarmes\PEWS\API\TypeTest\AttendeeType[] $requiredAttendees
      */
     protected $requiredAttendees = null;
 
     /**
-     * @property array $optionalAttendees
+     * @property \jamesiarmes\PEWS\API\TypeTest\AttendeeType[] $optionalAttendees
      */
     protected $optionalAttendees = null;
 
     /**
-     * @property array $resources
+     * @property \jamesiarmes\PEWS\API\TypeTest\AttendeeType[] $resources
      */
     protected $resources = null;
 
@@ -276,12 +275,14 @@ class CalendarItemType extends ItemType
     protected $lastOccurrence = null;
 
     /**
-     * @property array $modifiedOccurrences
+     * @property \jamesiarmes\PEWS\API\TypeTest\OccurrenceInfoType[]
+     * $modifiedOccurrences
      */
     protected $modifiedOccurrences = null;
 
     /**
-     * @property array $deletedOccurrences
+     * @property \jamesiarmes\PEWS\API\TypeTest\DeletedOccurrenceInfoType[]
+     * $deletedOccurrences
      */
     protected $deletedOccurrences = null;
 

@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: CreateItemType
  *
  * @method CreateItemType getMessageDisposition()
- * @method CreateItemType setMessageDisposition($messageDisposition)
+ * @method CreateItemType setMessageDisposition(string $messageDisposition)
  * @method CreateItemType getSendMeetingInvitations()
- * @method CreateItemType setSendMeetingInvitations($sendMeetingInvitations)
+ * @method CreateItemType setSendMeetingInvitations(string $sendMeetingInvitations)
  * @method CreateItemType getSavedItemFolderId()
- * @method CreateItemType setSavedItemFolderId($savedItemFolderId)
+ * @method CreateItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $savedItemFolderId)
  * @method CreateItemType getItems()
- * @method CreateItemType setItems($items)
+ * @method CreateItemType setItems(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfAllItemsType $items)
  */
 class CreateItemType extends BaseRequestType
 {

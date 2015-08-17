@@ -11,29 +11,28 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfItemChangeDescriptionsType
  *
  * @method NonEmptyArrayOfItemChangeDescriptionsType getAppendToItemField()
- * @method NonEmptyArrayOfItemChangeDescriptionsType
- * setAppendToItemField($appendToItemField)
+ * @method NonEmptyArrayOfItemChangeDescriptionsType setAppendToItemField(array $appendToItemField)
  * @method NonEmptyArrayOfItemChangeDescriptionsType getSetItemField()
- * @method NonEmptyArrayOfItemChangeDescriptionsType setSetItemField($setItemField)
+ * @method NonEmptyArrayOfItemChangeDescriptionsType setSetItemField(array $setItemField)
  * @method NonEmptyArrayOfItemChangeDescriptionsType getDeleteItemField()
- * @method NonEmptyArrayOfItemChangeDescriptionsType
- * setDeleteItemField($deleteItemField)
+ * @method NonEmptyArrayOfItemChangeDescriptionsType setDeleteItemField(array $deleteItemField)
  */
 class NonEmptyArrayOfItemChangeDescriptionsType extends TypeTest
 {
 
     /**
-     * @property array $appendToItemField
+     * @property \jamesiarmes\PEWS\API\TypeTest\AppendToItemFieldType[]
+     * $appendToItemField
      */
     protected $appendToItemField = null;
 
     /**
-     * @property array $setItemField
+     * @property \jamesiarmes\PEWS\API\TypeTest\SetItemFieldType[] $setItemField
      */
     protected $setItemField = null;
 
     /**
-     * @property array $deleteItemField
+     * @property \jamesiarmes\PEWS\API\TypeTest\DeleteItemFieldType[] $deleteItemField
      */
     protected $deleteItemField = null;
 

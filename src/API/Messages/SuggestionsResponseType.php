@@ -11,10 +11,9 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: SuggestionsResponseType
  *
  * @method SuggestionsResponseType getResponseMessage()
- * @method SuggestionsResponseType setResponseMessage($responseMessage)
+ * @method SuggestionsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  * @method SuggestionsResponseType getSuggestionDayResultArray()
- * @method SuggestionsResponseType
- * setSuggestionDayResultArray($suggestionDayResultArray)
+ * @method SuggestionsResponseType setSuggestionDayResultArray(array $suggestionDayResultArray)
  */
 class SuggestionsResponseType extends Messages
 {
@@ -25,7 +24,8 @@ class SuggestionsResponseType extends Messages
     protected $responseMessage = null;
 
     /**
-     * @property array $suggestionDayResultArray
+     * @property \jamesiarmes\PEWS\API\TypeTest\SuggestionDayResultType[]
+     * $suggestionDayResultArray
      */
     protected $suggestionDayResultArray = null;
 

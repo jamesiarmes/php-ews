@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetUserOofSettingsResponse
  *
  * @method GetUserOofSettingsResponseType getResponseMessage()
- * @method GetUserOofSettingsResponseType setResponseMessage($responseMessage)
+ * @method GetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  * @method GetUserOofSettingsResponseType getOofSettings()
- * @method GetUserOofSettingsResponseType setOofSettings($oofSettings)
+ * @method GetUserOofSettingsResponseType setOofSettings(\jamesiarmes\PEWS\API\TypeTest\OofSettings $oofSettings)
  * @method GetUserOofSettingsResponseType getAllowExternalOof()
- * @method GetUserOofSettingsResponseType setAllowExternalOof($allowExternalOof)
+ * @method GetUserOofSettingsResponseType setAllowExternalOof(string $allowExternalOof)
  */
 class GetUserOofSettingsResponseType extends Messages
 {

@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: UserOofSettings
  *
  * @method UserOofSettingsType getOofState()
- * @method UserOofSettingsType setOofState($oofState)
+ * @method UserOofSettingsType setOofState(string $oofState)
  * @method UserOofSettingsType getExternalAudience()
- * @method UserOofSettingsType setExternalAudience($externalAudience)
+ * @method UserOofSettingsType setExternalAudience(string $externalAudience)
  * @method UserOofSettingsType getDuration()
- * @method UserOofSettingsType setDuration($duration)
+ * @method UserOofSettingsType setDuration(DurationType $duration)
  * @method UserOofSettingsType getInternalReply()
- * @method UserOofSettingsType setInternalReply($internalReply)
+ * @method UserOofSettingsType setInternalReply(ReplyBodyType $internalReply)
  * @method UserOofSettingsType getExternalReply()
- * @method UserOofSettingsType setExternalReply($externalReply)
+ * @method UserOofSettingsType setExternalReply(ReplyBodyType $externalReply)
  */
 class UserOofSettingsType extends TypeTest
 {

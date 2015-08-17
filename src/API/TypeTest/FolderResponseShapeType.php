@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: FolderResponseShapeType
  *
  * @method FolderResponseShapeType getBaseShape()
- * @method FolderResponseShapeType setBaseShape($baseShape)
+ * @method FolderResponseShapeType setBaseShape(string $baseShape)
  * @method FolderResponseShapeType getAdditionalProperties()
- * @method FolderResponseShapeType setAdditionalProperties($additionalProperties)
+ * @method FolderResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class FolderResponseShapeType extends TypeTest
 {

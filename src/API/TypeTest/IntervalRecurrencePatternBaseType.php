@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: IntervalRecurrencePatternBaseType
  *
  * @method IntervalRecurrencePatternBaseType getInterval()
- * @method IntervalRecurrencePatternBaseType setInterval($interval)
+ * @method IntervalRecurrencePatternBaseType setInterval(integer $interval)
  */
 class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
 {

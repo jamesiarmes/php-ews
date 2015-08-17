@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetMailTipsType
  *
  * @method GetMailTipsType getSendingAs()
- * @method GetMailTipsType setSendingAs($sendingAs)
+ * @method GetMailTipsType setSendingAs(\jamesiarmes\PEWS\API\TypeTest\EmailAddressType $sendingAs)
  * @method GetMailTipsType getRecipients()
- * @method GetMailTipsType setRecipients($recipients)
+ * @method GetMailTipsType setRecipients(array $recipients)
  * @method GetMailTipsType getMailTipsRequested()
- * @method GetMailTipsType setMailTipsRequested($mailTipsRequested)
+ * @method GetMailTipsType setMailTipsRequested(array $mailTipsRequested)
  */
 class GetMailTipsType extends BaseRequestType
 {
@@ -24,12 +24,12 @@ class GetMailTipsType extends BaseRequestType
     protected $sendingAs = null;
 
     /**
-     * @property array $recipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $recipients
      */
     protected $recipients = null;
 
     /**
-     * @property array $mailTipsRequested
+     * @property string[] $mailTipsRequested
      */
     protected $mailTipsRequested = null;
 

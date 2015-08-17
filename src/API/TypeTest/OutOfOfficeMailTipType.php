@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: OutOfOfficeMailTip
  *
  * @method OutOfOfficeMailTipType getReplyBody()
- * @method OutOfOfficeMailTipType setReplyBody($replyBody)
+ * @method OutOfOfficeMailTipType setReplyBody(ReplyBodyType $replyBody)
  * @method OutOfOfficeMailTipType getDuration()
- * @method OutOfOfficeMailTipType setDuration($duration)
+ * @method OutOfOfficeMailTipType setDuration(DurationType $duration)
  */
 class OutOfOfficeMailTipType extends TypeTest
 {

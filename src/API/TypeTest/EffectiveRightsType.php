@@ -11,19 +11,19 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: EffectiveRightsType
  *
  * @method EffectiveRightsType getCreateAssociated()
- * @method EffectiveRightsType setCreateAssociated($createAssociated)
+ * @method EffectiveRightsType setCreateAssociated(boolean $createAssociated)
  * @method EffectiveRightsType getCreateContents()
- * @method EffectiveRightsType setCreateContents($createContents)
+ * @method EffectiveRightsType setCreateContents(boolean $createContents)
  * @method EffectiveRightsType getCreateHierarchy()
- * @method EffectiveRightsType setCreateHierarchy($createHierarchy)
+ * @method EffectiveRightsType setCreateHierarchy(boolean $createHierarchy)
  * @method EffectiveRightsType getDelete()
- * @method EffectiveRightsType setDelete($delete)
+ * @method EffectiveRightsType setDelete(boolean $delete)
  * @method EffectiveRightsType getModify()
- * @method EffectiveRightsType setModify($modify)
+ * @method EffectiveRightsType setModify(boolean $modify)
  * @method EffectiveRightsType getRead()
- * @method EffectiveRightsType setRead($read)
+ * @method EffectiveRightsType setRead(boolean $read)
  * @method EffectiveRightsType getViewPrivateItems()
- * @method EffectiveRightsType setViewPrivateItems($viewPrivateItems)
+ * @method EffectiveRightsType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class EffectiveRightsType extends TypeTest
 {

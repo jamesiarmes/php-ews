@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: CreateFolderType
  *
  * @method CreateFolderType getParentFolderId()
- * @method CreateFolderType setParentFolderId($parentFolderId)
+ * @method CreateFolderType setParentFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $parentFolderId)
  * @method CreateFolderType getFolders()
- * @method CreateFolderType setFolders($folders)
+ * @method CreateFolderType setFolders(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfFoldersType $folders)
  */
 class CreateFolderType extends BaseRequestType
 {

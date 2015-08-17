@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: CreateAttachmentType
  *
  * @method CreateAttachmentType getParentItemId()
- * @method CreateAttachmentType setParentItemId($parentItemId)
+ * @method CreateAttachmentType setParentItemId(\jamesiarmes\PEWS\API\TypeTest\ItemIdType $parentItemId)
  * @method CreateAttachmentType getAttachments()
- * @method CreateAttachmentType setAttachments($attachments)
+ * @method CreateAttachmentType setAttachments(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfAttachmentsType $attachments)
  */
 class CreateAttachmentType extends BaseRequestType
 {

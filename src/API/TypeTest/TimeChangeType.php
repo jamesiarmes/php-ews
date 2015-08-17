@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TimeChangeType
  *
  * @method TimeChangeType getTimeZoneName()
- * @method TimeChangeType setTimeZoneName($timeZoneName)
+ * @method TimeChangeType setTimeZoneName(string $timeZoneName)
  * @method TimeChangeType getOffset()
- * @method TimeChangeType setOffset($offset)
+ * @method TimeChangeType setOffset(\DateInterval $offset)
  * @method TimeChangeType getRelativeYearlyRecurrence()
- * @method TimeChangeType setRelativeYearlyRecurrence($relativeYearlyRecurrence)
+ * @method TimeChangeType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
  * @method TimeChangeType getAbsoluteDate()
- * @method TimeChangeType setAbsoluteDate($absoluteDate)
+ * @method TimeChangeType setAbsoluteDate(\DateTime $absoluteDate)
  * @method TimeChangeType getTime()
- * @method TimeChangeType setTime($time)
+ * @method TimeChangeType setTime(\DateTime $time)
  */
 class TimeChangeType extends TypeTest
 {

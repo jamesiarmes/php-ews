@@ -11,23 +11,23 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BaseFolderType
  *
  * @method BaseFolderType getFolderId()
- * @method BaseFolderType setFolderId($folderId)
+ * @method BaseFolderType setFolderId(FolderIdType $folderId)
  * @method BaseFolderType getParentFolderId()
- * @method BaseFolderType setParentFolderId($parentFolderId)
+ * @method BaseFolderType setParentFolderId(FolderIdType $parentFolderId)
  * @method BaseFolderType getFolderClass()
- * @method BaseFolderType setFolderClass($folderClass)
+ * @method BaseFolderType setFolderClass(string $folderClass)
  * @method BaseFolderType getDisplayName()
- * @method BaseFolderType setDisplayName($displayName)
+ * @method BaseFolderType setDisplayName(string $displayName)
  * @method BaseFolderType getTotalCount()
- * @method BaseFolderType setTotalCount($totalCount)
+ * @method BaseFolderType setTotalCount(integer $totalCount)
  * @method BaseFolderType getChildFolderCount()
- * @method BaseFolderType setChildFolderCount($childFolderCount)
+ * @method BaseFolderType setChildFolderCount(integer $childFolderCount)
  * @method BaseFolderType getExtendedProperty()
- * @method BaseFolderType setExtendedProperty($extendedProperty)
+ * @method BaseFolderType setExtendedProperty(array $extendedProperty)
  * @method BaseFolderType getManagedFolderInformation()
- * @method BaseFolderType setManagedFolderInformation($managedFolderInformation)
+ * @method BaseFolderType setManagedFolderInformation(ManagedFolderInformationType $managedFolderInformation)
  * @method BaseFolderType getEffectiveRights()
- * @method BaseFolderType setEffectiveRights($effectiveRights)
+ * @method BaseFolderType setEffectiveRights(EffectiveRightsType $effectiveRights)
  */
 class BaseFolderType extends TypeTest
 {
@@ -63,7 +63,8 @@ class BaseFolderType extends TypeTest
     protected $childFolderCount = null;
 
     /**
-     * @property array $extendedProperty
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedPropertyType[]
+     * $extendedProperty
      */
     protected $extendedProperty = null;
 

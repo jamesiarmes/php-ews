@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: BaseObjectChangedEventType
  *
  * @method BaseObjectChangedEventType getTimeStamp()
- * @method BaseObjectChangedEventType setTimeStamp($timeStamp)
+ * @method BaseObjectChangedEventType setTimeStamp(\DateTime $timeStamp)
  * @method BaseObjectChangedEventType getFolderId()
- * @method BaseObjectChangedEventType setFolderId($folderId)
+ * @method BaseObjectChangedEventType setFolderId(FolderIdType $folderId)
  * @method BaseObjectChangedEventType getItemId()
- * @method BaseObjectChangedEventType setItemId($itemId)
+ * @method BaseObjectChangedEventType setItemId(ItemIdType $itemId)
  * @method BaseObjectChangedEventType getParentFolderId()
- * @method BaseObjectChangedEventType setParentFolderId($parentFolderId)
+ * @method BaseObjectChangedEventType setParentFolderId(FolderIdType $parentFolderId)
  */
 class BaseObjectChangedEventType extends BaseNotificationEventType
 {

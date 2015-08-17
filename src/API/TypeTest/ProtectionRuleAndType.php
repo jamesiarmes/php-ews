@@ -11,41 +11,41 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRuleAndType
  *
  * @method ProtectionRuleAndType getAllInternal()
- * @method ProtectionRuleAndType setAllInternal($allInternal)
+ * @method ProtectionRuleAndType setAllInternal(array $allInternal)
  * @method ProtectionRuleAndType getAnd()
- * @method ProtectionRuleAndType setAnd($and)
+ * @method ProtectionRuleAndType setAnd(array $and)
  * @method ProtectionRuleAndType getRecipientIs()
- * @method ProtectionRuleAndType setRecipientIs($recipientIs)
+ * @method ProtectionRuleAndType setRecipientIs(array $recipientIs)
  * @method ProtectionRuleAndType getSenderDepartments()
- * @method ProtectionRuleAndType setSenderDepartments($senderDepartments)
+ * @method ProtectionRuleAndType setSenderDepartments(array $senderDepartments)
  * @method ProtectionRuleAndType getTrue()
- * @method ProtectionRuleAndType setTrue($true)
+ * @method ProtectionRuleAndType setTrue(array $true)
  */
 class ProtectionRuleAndType extends TypeTest
 {
 
     /**
-     * @property array $allInternal
+     * @property string[] $allInternal
      */
     protected $allInternal = null;
 
     /**
-     * @property array $and
+     * @property \jamesiarmes\PEWS\API\TypeTest\ProtectionRuleAndType[] $and
      */
     protected $and = null;
 
     /**
-     * @property array $recipientIs
+     * @property string[] $recipientIs
      */
     protected $recipientIs = null;
 
     /**
-     * @property array $senderDepartments
+     * @property string[] $senderDepartments
      */
     protected $senderDepartments = null;
 
     /**
-     * @property array $true
+     * @property string[] $true
      */
     protected $true = null;
 

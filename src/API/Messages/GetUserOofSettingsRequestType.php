@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetUserOofSettingsRequest
  *
  * @method GetUserOofSettingsRequestType getMailbox()
- * @method GetUserOofSettingsRequestType setMailbox($mailbox)
+ * @method GetUserOofSettingsRequestType setMailbox(\jamesiarmes\PEWS\API\TypeTest\Mailbox $mailbox)
  */
 class GetUserOofSettingsRequestType extends BaseRequestType
 {

@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: IndividualAttendeeConflictData
  *
  * @method IndividualAttendeeConflictDataType getBusyType()
- * @method IndividualAttendeeConflictDataType setBusyType($busyType)
+ * @method IndividualAttendeeConflictDataType setBusyType(string $busyType)
  */
 class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
 {

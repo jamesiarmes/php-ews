@@ -9,92 +9,92 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MultipleOperandBooleanExpressionType
  *
  * @method MultipleOperandBooleanExpressionType getContains()
- * @method MultipleOperandBooleanExpressionType setContains($contains)
+ * @method MultipleOperandBooleanExpressionType setContains(array $contains)
  * @method MultipleOperandBooleanExpressionType getExcludes()
- * @method MultipleOperandBooleanExpressionType setExcludes($excludes)
+ * @method MultipleOperandBooleanExpressionType setExcludes(array $excludes)
  * @method MultipleOperandBooleanExpressionType getExists()
- * @method MultipleOperandBooleanExpressionType setExists($exists)
+ * @method MultipleOperandBooleanExpressionType setExists(array $exists)
  * @method MultipleOperandBooleanExpressionType getIsEqualTo()
- * @method MultipleOperandBooleanExpressionType setIsEqualTo($isEqualTo)
+ * @method MultipleOperandBooleanExpressionType setIsEqualTo(array $isEqualTo)
  * @method MultipleOperandBooleanExpressionType getIsNotEqualTo()
- * @method MultipleOperandBooleanExpressionType setIsNotEqualTo($isNotEqualTo)
+ * @method MultipleOperandBooleanExpressionType setIsNotEqualTo(array $isNotEqualTo)
  * @method MultipleOperandBooleanExpressionType getIsGreaterThan()
- * @method MultipleOperandBooleanExpressionType setIsGreaterThan($isGreaterThan)
+ * @method MultipleOperandBooleanExpressionType setIsGreaterThan(array $isGreaterThan)
  * @method MultipleOperandBooleanExpressionType getIsGreaterThanOrEqualTo()
- * @method MultipleOperandBooleanExpressionType
- * setIsGreaterThanOrEqualTo($isGreaterThanOrEqualTo)
+ * @method MultipleOperandBooleanExpressionType setIsGreaterThanOrEqualTo(array $isGreaterThanOrEqualTo)
  * @method MultipleOperandBooleanExpressionType getIsLessThan()
- * @method MultipleOperandBooleanExpressionType setIsLessThan($isLessThan)
+ * @method MultipleOperandBooleanExpressionType setIsLessThan(array $isLessThan)
  * @method MultipleOperandBooleanExpressionType getIsLessThanOrEqualTo()
- * @method MultipleOperandBooleanExpressionType
- * setIsLessThanOrEqualTo($isLessThanOrEqualTo)
+ * @method MultipleOperandBooleanExpressionType setIsLessThanOrEqualTo(array $isLessThanOrEqualTo)
  * @method MultipleOperandBooleanExpressionType getAnd()
- * @method MultipleOperandBooleanExpressionType setAnd($and)
+ * @method MultipleOperandBooleanExpressionType setAnd(array $and)
  * @method MultipleOperandBooleanExpressionType getNot()
- * @method MultipleOperandBooleanExpressionType setNot($not)
+ * @method MultipleOperandBooleanExpressionType setNot(array $not)
  * @method MultipleOperandBooleanExpressionType getOr()
- * @method MultipleOperandBooleanExpressionType setOr($or)
+ * @method MultipleOperandBooleanExpressionType setOr(array $or)
  */
 class MultipleOperandBooleanExpressionType extends SearchExpressionType
 {
 
     /**
-     * @property array $contains
+     * @property \jamesiarmes\PEWS\API\TypeTest\Contains[] $contains
      */
     protected $contains = null;
 
     /**
-     * @property array $excludes
+     * @property \jamesiarmes\PEWS\API\TypeTest\Excludes[] $excludes
      */
     protected $excludes = null;
 
     /**
-     * @property array $exists
+     * @property \jamesiarmes\PEWS\API\TypeTest\Exists[] $exists
      */
     protected $exists = null;
 
     /**
-     * @property array $isEqualTo
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsEqualTo[] $isEqualTo
      */
     protected $isEqualTo = null;
 
     /**
-     * @property array $isNotEqualTo
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsNotEqualTo[] $isNotEqualTo
      */
     protected $isNotEqualTo = null;
 
     /**
-     * @property array $isGreaterThan
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsGreaterThan[] $isGreaterThan
      */
     protected $isGreaterThan = null;
 
     /**
-     * @property array $isGreaterThanOrEqualTo
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsGreaterThanOrEqualTo[]
+     * $isGreaterThanOrEqualTo
      */
     protected $isGreaterThanOrEqualTo = null;
 
     /**
-     * @property array $isLessThan
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsLessThan[] $isLessThan
      */
     protected $isLessThan = null;
 
     /**
-     * @property array $isLessThanOrEqualTo
+     * @property \jamesiarmes\PEWS\API\TypeTest\IsLessThanOrEqualTo[]
+     * $isLessThanOrEqualTo
      */
     protected $isLessThanOrEqualTo = null;
 
     /**
-     * @property array $and
+     * @property \jamesiarmes\PEWS\API\TypeTest\And[] $and
      */
     protected $and = null;
 
     /**
-     * @property array $not
+     * @property \jamesiarmes\PEWS\API\TypeTest\Not[] $not
      */
     protected $not = null;
 
     /**
-     * @property array $or
+     * @property \jamesiarmes\PEWS\API\TypeTest\Or[] $or
      */
     protected $or = null;
 

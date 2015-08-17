@@ -11,17 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PhysicalAddressDictionaryEntryType
  *
  * @method PhysicalAddressDictionaryEntryType getKey()
- * @method PhysicalAddressDictionaryEntryType setKey($key)
+ * @method PhysicalAddressDictionaryEntryType setKey(string $key)
  * @method PhysicalAddressDictionaryEntryType getStreet()
- * @method PhysicalAddressDictionaryEntryType setStreet($street)
+ * @method PhysicalAddressDictionaryEntryType setStreet(string $street)
  * @method PhysicalAddressDictionaryEntryType getCity()
- * @method PhysicalAddressDictionaryEntryType setCity($city)
+ * @method PhysicalAddressDictionaryEntryType setCity(string $city)
  * @method PhysicalAddressDictionaryEntryType getState()
- * @method PhysicalAddressDictionaryEntryType setState($state)
+ * @method PhysicalAddressDictionaryEntryType setState(string $state)
  * @method PhysicalAddressDictionaryEntryType getCountryOrRegion()
- * @method PhysicalAddressDictionaryEntryType setCountryOrRegion($countryOrRegion)
+ * @method PhysicalAddressDictionaryEntryType setCountryOrRegion(string $countryOrRegion)
  * @method PhysicalAddressDictionaryEntryType getPostalCode()
- * @method PhysicalAddressDictionaryEntryType setPostalCode($postalCode)
+ * @method PhysicalAddressDictionaryEntryType setPostalCode(string $postalCode)
  */
 class PhysicalAddressDictionaryEntryType extends TypeTest
 {

@@ -9,20 +9,17 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MailTipsServiceConfiguration
  *
  * @method MailTipsServiceConfigurationType getMailTipsEnabled()
- * @method MailTipsServiceConfigurationType setMailTipsEnabled($mailTipsEnabled)
+ * @method MailTipsServiceConfigurationType setMailTipsEnabled(boolean $mailTipsEnabled)
  * @method MailTipsServiceConfigurationType getMaxRecipientsPerGetMailTipsRequest()
- * @method MailTipsServiceConfigurationType
- * setMaxRecipientsPerGetMailTipsRequest($maxRecipientsPerGetMailTipsRequest)
+ * @method MailTipsServiceConfigurationType setMaxRecipientsPerGetMailTipsRequest(integer $maxRecipientsPerGetMailTipsRequest)
  * @method MailTipsServiceConfigurationType getMaxMessageSize()
- * @method MailTipsServiceConfigurationType setMaxMessageSize($maxMessageSize)
+ * @method MailTipsServiceConfigurationType setMaxMessageSize(integer $maxMessageSize)
  * @method MailTipsServiceConfigurationType getLargeAudienceThreshold()
- * @method MailTipsServiceConfigurationType
- * setLargeAudienceThreshold($largeAudienceThreshold)
+ * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
  * @method MailTipsServiceConfigurationType getShowExternalRecipientCount()
- * @method MailTipsServiceConfigurationType
- * setShowExternalRecipientCount($showExternalRecipientCount)
+ * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
  * @method MailTipsServiceConfigurationType getInternalDomains()
- * @method MailTipsServiceConfigurationType setInternalDomains($internalDomains)
+ * @method MailTipsServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class MailTipsServiceConfigurationType extends ServiceConfigurationType
 {
@@ -53,7 +50,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
     protected $showExternalRecipientCount = null;
 
     /**
-     * @property array $internalDomains
+     * @property \jamesiarmes\PEWS\API\TypeTest\SmtpDomainType[] $internalDomains
      */
     protected $internalDomains = null;
 

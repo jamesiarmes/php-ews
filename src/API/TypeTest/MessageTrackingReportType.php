@@ -11,20 +11,19 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MessageTrackingReportType
  *
  * @method MessageTrackingReportType getSender()
- * @method MessageTrackingReportType setSender($sender)
+ * @method MessageTrackingReportType setSender(EmailAddressType $sender)
  * @method MessageTrackingReportType getPurportedSender()
- * @method MessageTrackingReportType setPurportedSender($purportedSender)
+ * @method MessageTrackingReportType setPurportedSender(EmailAddressType $purportedSender)
  * @method MessageTrackingReportType getSubject()
- * @method MessageTrackingReportType setSubject($subject)
+ * @method MessageTrackingReportType setSubject(string $subject)
  * @method MessageTrackingReportType getSubmitTime()
- * @method MessageTrackingReportType setSubmitTime($submitTime)
+ * @method MessageTrackingReportType setSubmitTime(\DateTime $submitTime)
  * @method MessageTrackingReportType getOriginalRecipients()
- * @method MessageTrackingReportType setOriginalRecipients($originalRecipients)
+ * @method MessageTrackingReportType setOriginalRecipients(array $originalRecipients)
  * @method MessageTrackingReportType getRecipientTrackingEvents()
- * @method MessageTrackingReportType
- * setRecipientTrackingEvents($recipientTrackingEvents)
+ * @method MessageTrackingReportType setRecipientTrackingEvents(array $recipientTrackingEvents)
  * @method MessageTrackingReportType getProperties()
- * @method MessageTrackingReportType setProperties($properties)
+ * @method MessageTrackingReportType setProperties(array $properties)
  */
 class MessageTrackingReportType extends TypeTest
 {
@@ -54,17 +53,18 @@ class MessageTrackingReportType extends TypeTest
     );
 
     /**
-     * @property array $originalRecipients
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $originalRecipients
      */
     protected $originalRecipients = null;
 
     /**
-     * @property array $recipientTrackingEvents
+     * @property \jamesiarmes\PEWS\API\TypeTest\RecipientTrackingEventType[]
+     * $recipientTrackingEvents
      */
     protected $recipientTrackingEvents = null;
 
     /**
-     * @property array $properties
+     * @property \jamesiarmes\PEWS\API\TypeTest\TrackingPropertyType[] $properties
      */
     protected $properties = null;
 

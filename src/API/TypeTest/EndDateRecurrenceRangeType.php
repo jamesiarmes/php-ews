@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: EndDateRecurrenceRangeType
  *
  * @method EndDateRecurrenceRangeType getEndDate()
- * @method EndDateRecurrenceRangeType setEndDate($endDate)
+ * @method EndDateRecurrenceRangeType setEndDate(\DateTime $endDate)
  */
 class EndDateRecurrenceRangeType extends RecurrenceRangeBaseType
 {

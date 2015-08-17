@@ -11,38 +11,38 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ArrayOfAttendeeConflictData
  *
  * @method ArrayOfAttendeeConflictDataType getUnknownAttendeeConflictData()
- * @method ArrayOfAttendeeConflictDataType
- * setUnknownAttendeeConflictData($unknownAttendeeConflictData)
+ * @method ArrayOfAttendeeConflictDataType setUnknownAttendeeConflictData(array $unknownAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType getIndividualAttendeeConflictData()
- * @method ArrayOfAttendeeConflictDataType
- * setIndividualAttendeeConflictData($individualAttendeeConflictData)
+ * @method ArrayOfAttendeeConflictDataType setIndividualAttendeeConflictData(array $individualAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType getTooBigGroupAttendeeConflictData()
- * @method ArrayOfAttendeeConflictDataType
- * setTooBigGroupAttendeeConflictData($tooBigGroupAttendeeConflictData)
+ * @method ArrayOfAttendeeConflictDataType setTooBigGroupAttendeeConflictData(array $tooBigGroupAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType getGroupAttendeeConflictData()
- * @method ArrayOfAttendeeConflictDataType
- * setGroupAttendeeConflictData($groupAttendeeConflictData)
+ * @method ArrayOfAttendeeConflictDataType setGroupAttendeeConflictData(array $groupAttendeeConflictData)
  */
 class ArrayOfAttendeeConflictDataType extends TypeTest
 {
 
     /**
-     * @property array $unknownAttendeeConflictData
+     * @property \jamesiarmes\PEWS\API\TypeTest\UnknownAttendeeConflictDataType[]
+     * $unknownAttendeeConflictData
      */
     protected $unknownAttendeeConflictData = null;
 
     /**
-     * @property array $individualAttendeeConflictData
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndividualAttendeeConflictDataType[]
+     * $individualAttendeeConflictData
      */
     protected $individualAttendeeConflictData = null;
 
     /**
-     * @property array $tooBigGroupAttendeeConflictData
+     * @property \jamesiarmes\PEWS\API\TypeTest\TooBigGroupAttendeeConflictDataType[]
+     * $tooBigGroupAttendeeConflictData
      */
     protected $tooBigGroupAttendeeConflictData = null;
 
     /**
-     * @property array $groupAttendeeConflictData
+     * @property \jamesiarmes\PEWS\API\TypeTest\GroupAttendeeConflictDataType[]
+     * $groupAttendeeConflictData
      */
     protected $groupAttendeeConflictData = null;
 

@@ -9,12 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: SubscribeType
  *
  * @method SubscribeType getPullSubscriptionRequest()
- * @method SubscribeType setPullSubscriptionRequest($pullSubscriptionRequest)
+ * @method SubscribeType setPullSubscriptionRequest(\jamesiarmes\PEWS\API\TypeTest\PullSubscriptionRequestType $pullSubscriptionRequest)
  * @method SubscribeType getPushSubscriptionRequest()
- * @method SubscribeType setPushSubscriptionRequest($pushSubscriptionRequest)
+ * @method SubscribeType setPushSubscriptionRequest(\jamesiarmes\PEWS\API\TypeTest\PushSubscriptionRequestType $pushSubscriptionRequest)
  * @method SubscribeType getStreamingSubscriptionRequest()
- * @method SubscribeType
- * setStreamingSubscriptionRequest($streamingSubscriptionRequest)
+ * @method SubscribeType setStreamingSubscriptionRequest(\jamesiarmes\PEWS\API\TypeTest\StreamingSubscriptionRequestType $streamingSubscriptionRequest)
  */
 class SubscribeType extends BaseRequestType
 {

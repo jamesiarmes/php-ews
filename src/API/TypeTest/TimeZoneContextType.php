@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TimeZoneContextType
  *
  * @method TimeZoneContextType getTimeZoneDefinition()
- * @method TimeZoneContextType setTimeZoneDefinition($timeZoneDefinition)
+ * @method TimeZoneContextType setTimeZoneDefinition(TimeZoneDefinitionType $timeZoneDefinition)
  */
 class TimeZoneContextType extends TypeTest
 {

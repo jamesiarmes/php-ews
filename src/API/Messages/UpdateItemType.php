@@ -9,16 +9,15 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UpdateItemType
  *
  * @method UpdateItemType getConflictResolution()
- * @method UpdateItemType setConflictResolution($conflictResolution)
+ * @method UpdateItemType setConflictResolution(string $conflictResolution)
  * @method UpdateItemType getMessageDisposition()
- * @method UpdateItemType setMessageDisposition($messageDisposition)
+ * @method UpdateItemType setMessageDisposition(string $messageDisposition)
  * @method UpdateItemType getSendMeetingInvitationsOrCancellations()
- * @method UpdateItemType
- * setSendMeetingInvitationsOrCancellations($sendMeetingInvitationsOrCancellations)
+ * @method UpdateItemType setSendMeetingInvitationsOrCancellations(string $sendMeetingInvitationsOrCancellations)
  * @method UpdateItemType getSavedItemFolderId()
- * @method UpdateItemType setSavedItemFolderId($savedItemFolderId)
+ * @method UpdateItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $savedItemFolderId)
  * @method UpdateItemType getItemChanges()
- * @method UpdateItemType setItemChanges($itemChanges)
+ * @method UpdateItemType setItemChanges(array $itemChanges)
  */
 class UpdateItemType extends BaseRequestType
 {
@@ -44,7 +43,7 @@ class UpdateItemType extends BaseRequestType
     protected $savedItemFolderId = null;
 
     /**
-     * @property array $itemChanges
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemChangeType[] $itemChanges
      */
     protected $itemChanges = null;
 

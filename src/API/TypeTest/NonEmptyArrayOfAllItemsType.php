@@ -11,162 +11,168 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfAllItemsType
  *
  * @method NonEmptyArrayOfAllItemsType getItem()
- * @method NonEmptyArrayOfAllItemsType setItem($item)
+ * @method NonEmptyArrayOfAllItemsType setItem(array $item)
  * @method NonEmptyArrayOfAllItemsType getMessage()
- * @method NonEmptyArrayOfAllItemsType setMessage($message)
+ * @method NonEmptyArrayOfAllItemsType setMessage(array $message)
  * @method NonEmptyArrayOfAllItemsType getCalendarItem()
- * @method NonEmptyArrayOfAllItemsType setCalendarItem($calendarItem)
+ * @method NonEmptyArrayOfAllItemsType setCalendarItem(array $calendarItem)
  * @method NonEmptyArrayOfAllItemsType getContact()
- * @method NonEmptyArrayOfAllItemsType setContact($contact)
+ * @method NonEmptyArrayOfAllItemsType setContact(array $contact)
  * @method NonEmptyArrayOfAllItemsType getDistributionList()
- * @method NonEmptyArrayOfAllItemsType setDistributionList($distributionList)
+ * @method NonEmptyArrayOfAllItemsType setDistributionList(array $distributionList)
  * @method NonEmptyArrayOfAllItemsType getMeetingMessage()
- * @method NonEmptyArrayOfAllItemsType setMeetingMessage($meetingMessage)
+ * @method NonEmptyArrayOfAllItemsType setMeetingMessage(array $meetingMessage)
  * @method NonEmptyArrayOfAllItemsType getMeetingRequest()
- * @method NonEmptyArrayOfAllItemsType setMeetingRequest($meetingRequest)
+ * @method NonEmptyArrayOfAllItemsType setMeetingRequest(array $meetingRequest)
  * @method NonEmptyArrayOfAllItemsType getMeetingResponse()
- * @method NonEmptyArrayOfAllItemsType setMeetingResponse($meetingResponse)
+ * @method NonEmptyArrayOfAllItemsType setMeetingResponse(array $meetingResponse)
  * @method NonEmptyArrayOfAllItemsType getMeetingCancellation()
- * @method NonEmptyArrayOfAllItemsType setMeetingCancellation($meetingCancellation)
+ * @method NonEmptyArrayOfAllItemsType setMeetingCancellation(array $meetingCancellation)
  * @method NonEmptyArrayOfAllItemsType getTask()
- * @method NonEmptyArrayOfAllItemsType setTask($task)
+ * @method NonEmptyArrayOfAllItemsType setTask(array $task)
  * @method NonEmptyArrayOfAllItemsType getPostItem()
- * @method NonEmptyArrayOfAllItemsType setPostItem($postItem)
+ * @method NonEmptyArrayOfAllItemsType setPostItem(array $postItem)
  * @method NonEmptyArrayOfAllItemsType getReplyToItem()
- * @method NonEmptyArrayOfAllItemsType setReplyToItem($replyToItem)
+ * @method NonEmptyArrayOfAllItemsType setReplyToItem(array $replyToItem)
  * @method NonEmptyArrayOfAllItemsType getForwardItem()
- * @method NonEmptyArrayOfAllItemsType setForwardItem($forwardItem)
+ * @method NonEmptyArrayOfAllItemsType setForwardItem(array $forwardItem)
  * @method NonEmptyArrayOfAllItemsType getReplyAllToItem()
- * @method NonEmptyArrayOfAllItemsType setReplyAllToItem($replyAllToItem)
+ * @method NonEmptyArrayOfAllItemsType setReplyAllToItem(array $replyAllToItem)
  * @method NonEmptyArrayOfAllItemsType getAcceptItem()
- * @method NonEmptyArrayOfAllItemsType setAcceptItem($acceptItem)
+ * @method NonEmptyArrayOfAllItemsType setAcceptItem(array $acceptItem)
  * @method NonEmptyArrayOfAllItemsType getTentativelyAcceptItem()
- * @method NonEmptyArrayOfAllItemsType
- * setTentativelyAcceptItem($tentativelyAcceptItem)
+ * @method NonEmptyArrayOfAllItemsType setTentativelyAcceptItem(array $tentativelyAcceptItem)
  * @method NonEmptyArrayOfAllItemsType getDeclineItem()
- * @method NonEmptyArrayOfAllItemsType setDeclineItem($declineItem)
+ * @method NonEmptyArrayOfAllItemsType setDeclineItem(array $declineItem)
  * @method NonEmptyArrayOfAllItemsType getCancelCalendarItem()
- * @method NonEmptyArrayOfAllItemsType setCancelCalendarItem($cancelCalendarItem)
+ * @method NonEmptyArrayOfAllItemsType setCancelCalendarItem(array $cancelCalendarItem)
  * @method NonEmptyArrayOfAllItemsType getRemoveItem()
- * @method NonEmptyArrayOfAllItemsType setRemoveItem($removeItem)
+ * @method NonEmptyArrayOfAllItemsType setRemoveItem(array $removeItem)
  * @method NonEmptyArrayOfAllItemsType getSuppressReadReceipt()
- * @method NonEmptyArrayOfAllItemsType setSuppressReadReceipt($suppressReadReceipt)
+ * @method NonEmptyArrayOfAllItemsType setSuppressReadReceipt(array $suppressReadReceipt)
  * @method NonEmptyArrayOfAllItemsType getPostReplyItem()
- * @method NonEmptyArrayOfAllItemsType setPostReplyItem($postReplyItem)
+ * @method NonEmptyArrayOfAllItemsType setPostReplyItem(array $postReplyItem)
  * @method NonEmptyArrayOfAllItemsType getAcceptSharingInvitation()
- * @method NonEmptyArrayOfAllItemsType
- * setAcceptSharingInvitation($acceptSharingInvitation)
+ * @method NonEmptyArrayOfAllItemsType setAcceptSharingInvitation(array $acceptSharingInvitation)
  */
 class NonEmptyArrayOfAllItemsType extends TypeTest
 {
 
     /**
-     * @property array $item
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemType[] $item
      */
     protected $item = null;
 
     /**
-     * @property array $message
+     * @property \jamesiarmes\PEWS\API\TypeTest\MessageType[] $message
      */
     protected $message = null;
 
     /**
-     * @property array $calendarItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\CalendarItemType[] $calendarItem
      */
     protected $calendarItem = null;
 
     /**
-     * @property array $contact
+     * @property \jamesiarmes\PEWS\API\TypeTest\ContactItemType[] $contact
      */
     protected $contact = null;
 
     /**
-     * @property array $distributionList
+     * @property \jamesiarmes\PEWS\API\TypeTest\DistributionListType[]
+     * $distributionList
      */
     protected $distributionList = null;
 
     /**
-     * @property array $meetingMessage
+     * @property \jamesiarmes\PEWS\API\TypeTest\MeetingMessageType[] $meetingMessage
      */
     protected $meetingMessage = null;
 
     /**
-     * @property array $meetingRequest
+     * @property \jamesiarmes\PEWS\API\TypeTest\MeetingRequestMessageType[]
+     * $meetingRequest
      */
     protected $meetingRequest = null;
 
     /**
-     * @property array $meetingResponse
+     * @property \jamesiarmes\PEWS\API\TypeTest\MeetingResponseMessageType[]
+     * $meetingResponse
      */
     protected $meetingResponse = null;
 
     /**
-     * @property array $meetingCancellation
+     * @property \jamesiarmes\PEWS\API\TypeTest\MeetingCancellationMessageType[]
+     * $meetingCancellation
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property array $task
+     * @property \jamesiarmes\PEWS\API\TypeTest\TaskType[] $task
      */
     protected $task = null;
 
     /**
-     * @property array $postItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\PostItemType[] $postItem
      */
     protected $postItem = null;
 
     /**
-     * @property array $replyToItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\ReplyToItemType[] $replyToItem
      */
     protected $replyToItem = null;
 
     /**
-     * @property array $forwardItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\ForwardItemType[] $forwardItem
      */
     protected $forwardItem = null;
 
     /**
-     * @property array $replyAllToItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\ReplyAllToItemType[] $replyAllToItem
      */
     protected $replyAllToItem = null;
 
     /**
-     * @property array $acceptItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\AcceptItemType[] $acceptItem
      */
     protected $acceptItem = null;
 
     /**
-     * @property array $tentativelyAcceptItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\TentativelyAcceptItemType[]
+     * $tentativelyAcceptItem
      */
     protected $tentativelyAcceptItem = null;
 
     /**
-     * @property array $declineItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\DeclineItemType[] $declineItem
      */
     protected $declineItem = null;
 
     /**
-     * @property array $cancelCalendarItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\CancelCalendarItemType[]
+     * $cancelCalendarItem
      */
     protected $cancelCalendarItem = null;
 
     /**
-     * @property array $removeItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\RemoveItemType[] $removeItem
      */
     protected $removeItem = null;
 
     /**
-     * @property array $suppressReadReceipt
+     * @property \jamesiarmes\PEWS\API\TypeTest\SuppressReadReceiptType[]
+     * $suppressReadReceipt
      */
     protected $suppressReadReceipt = null;
 
     /**
-     * @property array $postReplyItem
+     * @property \jamesiarmes\PEWS\API\TypeTest\PostReplyItemType[] $postReplyItem
      */
     protected $postReplyItem = null;
 
     /**
-     * @property array $acceptSharingInvitation
+     * @property \jamesiarmes\PEWS\API\TypeTest\AcceptSharingInvitationType[]
+     * $acceptSharingInvitation
      */
     protected $acceptSharingInvitation = null;
 

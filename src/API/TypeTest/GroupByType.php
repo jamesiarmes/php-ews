@@ -9,13 +9,13 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: GroupByType
  *
  * @method GroupByType getFieldURI()
- * @method GroupByType setFieldURI($fieldURI)
+ * @method GroupByType setFieldURI(PathToUnindexedFieldType $fieldURI)
  * @method GroupByType getIndexedFieldURI()
- * @method GroupByType setIndexedFieldURI($indexedFieldURI)
+ * @method GroupByType setIndexedFieldURI(PathToIndexedFieldType $indexedFieldURI)
  * @method GroupByType getExtendedFieldURI()
- * @method GroupByType setExtendedFieldURI($extendedFieldURI)
+ * @method GroupByType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
  * @method GroupByType getAggregateOn()
- * @method GroupByType setAggregateOn($aggregateOn)
+ * @method GroupByType setAggregateOn(AggregateOnType $aggregateOn)
  */
 class GroupByType extends BaseGroupByType
 {

@@ -10,9 +10,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: ConvertIdType
  *
  * @method ConvertIdType getDestinationFormat()
- * @method ConvertIdType setDestinationFormat($destinationFormat)
+ * @method ConvertIdType setDestinationFormat(string $destinationFormat)
  * @method ConvertIdType getSourceIds()
- * @method ConvertIdType setSourceIds($sourceIds)
+ * @method ConvertIdType setSourceIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfAlternateIdsType $sourceIds)
  */
 class ConvertIdType extends BaseRequestType
 {

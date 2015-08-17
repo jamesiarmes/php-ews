@@ -9,10 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetInboxRulesResponseType
  *
  * @method GetInboxRulesResponseType getOutlookRuleBlobExists()
- * @method GetInboxRulesResponseType
- * setOutlookRuleBlobExists($outlookRuleBlobExists)
+ * @method GetInboxRulesResponseType setOutlookRuleBlobExists(boolean $outlookRuleBlobExists)
  * @method GetInboxRulesResponseType getInboxRules()
- * @method GetInboxRulesResponseType setInboxRules($inboxRules)
+ * @method GetInboxRulesResponseType setInboxRules(array $inboxRules)
  */
 class GetInboxRulesResponseType extends ResponseMessageType
 {
@@ -23,7 +22,7 @@ class GetInboxRulesResponseType extends ResponseMessageType
     protected $outlookRuleBlobExists = null;
 
     /**
-     * @property array $inboxRules
+     * @property \jamesiarmes\PEWS\API\TypeTest\RuleType[] $inboxRules
      */
     protected $inboxRules = null;
 

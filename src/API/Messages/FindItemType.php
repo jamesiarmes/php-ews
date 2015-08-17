@@ -9,29 +9,29 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindItemType
  *
  * @method FindItemType getTraversal()
- * @method FindItemType setTraversal($traversal)
+ * @method FindItemType setTraversal(string $traversal)
  * @method FindItemType getItemShape()
- * @method FindItemType setItemShape($itemShape)
+ * @method FindItemType setItemShape(\jamesiarmes\PEWS\API\TypeTest\ItemResponseShapeType $itemShape)
  * @method FindItemType getIndexedPageItemView()
- * @method FindItemType setIndexedPageItemView($indexedPageItemView)
+ * @method FindItemType setIndexedPageItemView(\jamesiarmes\PEWS\API\TypeTest\IndexedPageViewType $indexedPageItemView)
  * @method FindItemType getFractionalPageItemView()
- * @method FindItemType setFractionalPageItemView($fractionalPageItemView)
+ * @method FindItemType setFractionalPageItemView(\jamesiarmes\PEWS\API\TypeTest\FractionalPageViewType $fractionalPageItemView)
  * @method FindItemType getCalendarView()
- * @method FindItemType setCalendarView($calendarView)
+ * @method FindItemType setCalendarView(\jamesiarmes\PEWS\API\TypeTest\CalendarViewType $calendarView)
  * @method FindItemType getContactsView()
- * @method FindItemType setContactsView($contactsView)
+ * @method FindItemType setContactsView(\jamesiarmes\PEWS\API\TypeTest\ContactsViewType $contactsView)
  * @method FindItemType getGroupBy()
- * @method FindItemType setGroupBy($groupBy)
+ * @method FindItemType setGroupBy(\jamesiarmes\PEWS\API\TypeTest\GroupByType $groupBy)
  * @method FindItemType getDistinguishedGroupBy()
- * @method FindItemType setDistinguishedGroupBy($distinguishedGroupBy)
+ * @method FindItemType setDistinguishedGroupBy(\jamesiarmes\PEWS\API\TypeTest\DistinguishedGroupByType $distinguishedGroupBy)
  * @method FindItemType getRestriction()
- * @method FindItemType setRestriction($restriction)
+ * @method FindItemType setRestriction(\jamesiarmes\PEWS\API\TypeTest\RestrictionType $restriction)
  * @method FindItemType getSortOrder()
- * @method FindItemType setSortOrder($sortOrder)
+ * @method FindItemType setSortOrder(array $sortOrder)
  * @method FindItemType getParentFolderIds()
- * @method FindItemType setParentFolderIds($parentFolderIds)
+ * @method FindItemType setParentFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
  * @method FindItemType getQueryString()
- * @method FindItemType setQueryString($queryString)
+ * @method FindItemType setQueryString(string $queryString)
  */
 class FindItemType extends BaseRequestType
 {
@@ -85,7 +85,7 @@ class FindItemType extends BaseRequestType
     protected $restriction = null;
 
     /**
-     * @property array $sortOrder
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldOrderType[] $sortOrder
      */
     protected $sortOrder = null;
 

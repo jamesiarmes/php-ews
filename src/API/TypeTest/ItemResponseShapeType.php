@@ -11,18 +11,17 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ItemResponseShapeType
  *
  * @method ItemResponseShapeType getBaseShape()
- * @method ItemResponseShapeType setBaseShape($baseShape)
+ * @method ItemResponseShapeType setBaseShape(string $baseShape)
  * @method ItemResponseShapeType getIncludeMimeContent()
- * @method ItemResponseShapeType setIncludeMimeContent($includeMimeContent)
+ * @method ItemResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
  * @method ItemResponseShapeType getBodyType()
- * @method ItemResponseShapeType setBodyType($bodyType)
+ * @method ItemResponseShapeType setBodyType(string $bodyType)
  * @method ItemResponseShapeType getFilterHtmlContent()
- * @method ItemResponseShapeType setFilterHtmlContent($filterHtmlContent)
+ * @method ItemResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
  * @method ItemResponseShapeType getConvertHtmlCodePageToUTF8()
- * @method ItemResponseShapeType
- * setConvertHtmlCodePageToUTF8($convertHtmlCodePageToUTF8)
+ * @method ItemResponseShapeType setConvertHtmlCodePageToUTF8(boolean $convertHtmlCodePageToUTF8)
  * @method ItemResponseShapeType getAdditionalProperties()
- * @method ItemResponseShapeType setAdditionalProperties($additionalProperties)
+ * @method ItemResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class ItemResponseShapeType extends TypeTest
 {

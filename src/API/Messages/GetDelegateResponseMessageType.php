@@ -9,8 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: GetDelegateResponseMessageType
  *
  * @method GetDelegateResponseMessageType getDeliverMeetingRequests()
- * @method GetDelegateResponseMessageType
- * setDeliverMeetingRequests($deliverMeetingRequests)
+ * @method GetDelegateResponseMessageType setDeliverMeetingRequests(string $deliverMeetingRequests)
  */
 class GetDelegateResponseMessageType extends BaseDelegateResponseMessageType
 {

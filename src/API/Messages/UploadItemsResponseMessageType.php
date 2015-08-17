@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: UploadItemsResponseMessageType
  *
  * @method UploadItemsResponseMessageType getItemId()
- * @method UploadItemsResponseMessageType setItemId($itemId)
+ * @method UploadItemsResponseMessageType setItemId(\jamesiarmes\PEWS\API\TypeTest\ItemIdType $itemId)
  */
 class UploadItemsResponseMessageType extends ResponseMessageType
 {

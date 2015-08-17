@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PullSubscriptionRequestType
  *
  * @method PullSubscriptionRequestType getTimeout()
- * @method PullSubscriptionRequestType setTimeout($timeout)
+ * @method PullSubscriptionRequestType setTimeout(integer $timeout)
  */
 class PullSubscriptionRequestType extends BaseSubscriptionRequestType
 {

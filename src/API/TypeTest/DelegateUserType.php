@@ -11,14 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: DelegateUserType
  *
  * @method DelegateUserType getUserId()
- * @method DelegateUserType setUserId($userId)
+ * @method DelegateUserType setUserId(UserIdType $userId)
  * @method DelegateUserType getDelegatePermissions()
- * @method DelegateUserType setDelegatePermissions($delegatePermissions)
+ * @method DelegateUserType setDelegatePermissions(DelegatePermissionsType $delegatePermissions)
  * @method DelegateUserType getReceiveCopiesOfMeetingMessages()
- * @method DelegateUserType
- * setReceiveCopiesOfMeetingMessages($receiveCopiesOfMeetingMessages)
+ * @method DelegateUserType setReceiveCopiesOfMeetingMessages(boolean $receiveCopiesOfMeetingMessages)
  * @method DelegateUserType getViewPrivateItems()
- * @method DelegateUserType setViewPrivateItems($viewPrivateItems)
+ * @method DelegateUserType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class DelegateUserType extends TypeTest
 {

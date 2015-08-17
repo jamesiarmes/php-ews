@@ -9,89 +9,89 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ContactItemType
  *
  * @method ContactItemType getFileAs()
- * @method ContactItemType setFileAs($fileAs)
+ * @method ContactItemType setFileAs(string $fileAs)
  * @method ContactItemType getFileAsMapping()
- * @method ContactItemType setFileAsMapping($fileAsMapping)
+ * @method ContactItemType setFileAsMapping(string $fileAsMapping)
  * @method ContactItemType getDisplayName()
- * @method ContactItemType setDisplayName($displayName)
+ * @method ContactItemType setDisplayName(string $displayName)
  * @method ContactItemType getGivenName()
- * @method ContactItemType setGivenName($givenName)
+ * @method ContactItemType setGivenName(string $givenName)
  * @method ContactItemType getInitials()
- * @method ContactItemType setInitials($initials)
+ * @method ContactItemType setInitials(string $initials)
  * @method ContactItemType getMiddleName()
- * @method ContactItemType setMiddleName($middleName)
+ * @method ContactItemType setMiddleName(string $middleName)
  * @method ContactItemType getNickname()
- * @method ContactItemType setNickname($nickname)
+ * @method ContactItemType setNickname(string $nickname)
  * @method ContactItemType getCompleteName()
- * @method ContactItemType setCompleteName($completeName)
+ * @method ContactItemType setCompleteName(CompleteNameType $completeName)
  * @method ContactItemType getCompanyName()
- * @method ContactItemType setCompanyName($companyName)
+ * @method ContactItemType setCompanyName(string $companyName)
  * @method ContactItemType getEmailAddresses()
- * @method ContactItemType setEmailAddresses($emailAddresses)
+ * @method ContactItemType setEmailAddresses(array $emailAddresses)
  * @method ContactItemType getPhysicalAddresses()
- * @method ContactItemType setPhysicalAddresses($physicalAddresses)
+ * @method ContactItemType setPhysicalAddresses(array $physicalAddresses)
  * @method ContactItemType getPhoneNumbers()
- * @method ContactItemType setPhoneNumbers($phoneNumbers)
+ * @method ContactItemType setPhoneNumbers(array $phoneNumbers)
  * @method ContactItemType getAssistantName()
- * @method ContactItemType setAssistantName($assistantName)
+ * @method ContactItemType setAssistantName(string $assistantName)
  * @method ContactItemType getBirthday()
- * @method ContactItemType setBirthday($birthday)
+ * @method ContactItemType setBirthday(\DateTime $birthday)
  * @method ContactItemType getBusinessHomePage()
- * @method ContactItemType setBusinessHomePage($businessHomePage)
+ * @method ContactItemType setBusinessHomePage(string $businessHomePage)
  * @method ContactItemType getChildren()
- * @method ContactItemType setChildren($children)
+ * @method ContactItemType setChildren(array $children)
  * @method ContactItemType getCompanies()
- * @method ContactItemType setCompanies($companies)
+ * @method ContactItemType setCompanies(array $companies)
  * @method ContactItemType getContactSource()
- * @method ContactItemType setContactSource($contactSource)
+ * @method ContactItemType setContactSource(string $contactSource)
  * @method ContactItemType getDepartment()
- * @method ContactItemType setDepartment($department)
+ * @method ContactItemType setDepartment(string $department)
  * @method ContactItemType getGeneration()
- * @method ContactItemType setGeneration($generation)
+ * @method ContactItemType setGeneration(string $generation)
  * @method ContactItemType getImAddresses()
- * @method ContactItemType setImAddresses($imAddresses)
+ * @method ContactItemType setImAddresses(array $imAddresses)
  * @method ContactItemType getJobTitle()
- * @method ContactItemType setJobTitle($jobTitle)
+ * @method ContactItemType setJobTitle(string $jobTitle)
  * @method ContactItemType getManager()
- * @method ContactItemType setManager($manager)
+ * @method ContactItemType setManager(string $manager)
  * @method ContactItemType getMileage()
- * @method ContactItemType setMileage($mileage)
+ * @method ContactItemType setMileage(string $mileage)
  * @method ContactItemType getOfficeLocation()
- * @method ContactItemType setOfficeLocation($officeLocation)
+ * @method ContactItemType setOfficeLocation(string $officeLocation)
  * @method ContactItemType getPostalAddressIndex()
- * @method ContactItemType setPostalAddressIndex($postalAddressIndex)
+ * @method ContactItemType setPostalAddressIndex(string $postalAddressIndex)
  * @method ContactItemType getProfession()
- * @method ContactItemType setProfession($profession)
+ * @method ContactItemType setProfession(string $profession)
  * @method ContactItemType getSpouseName()
- * @method ContactItemType setSpouseName($spouseName)
+ * @method ContactItemType setSpouseName(string $spouseName)
  * @method ContactItemType getSurname()
- * @method ContactItemType setSurname($surname)
+ * @method ContactItemType setSurname(string $surname)
  * @method ContactItemType getWeddingAnniversary()
- * @method ContactItemType setWeddingAnniversary($weddingAnniversary)
+ * @method ContactItemType setWeddingAnniversary(\DateTime $weddingAnniversary)
  * @method ContactItemType getHasPicture()
- * @method ContactItemType setHasPicture($hasPicture)
+ * @method ContactItemType setHasPicture(boolean $hasPicture)
  * @method ContactItemType getPhoneticFullName()
- * @method ContactItemType setPhoneticFullName($phoneticFullName)
+ * @method ContactItemType setPhoneticFullName(string $phoneticFullName)
  * @method ContactItemType getPhoneticFirstName()
- * @method ContactItemType setPhoneticFirstName($phoneticFirstName)
+ * @method ContactItemType setPhoneticFirstName(string $phoneticFirstName)
  * @method ContactItemType getPhoneticLastName()
- * @method ContactItemType setPhoneticLastName($phoneticLastName)
+ * @method ContactItemType setPhoneticLastName(string $phoneticLastName)
  * @method ContactItemType getAlias()
- * @method ContactItemType setAlias($alias)
+ * @method ContactItemType setAlias(string $alias)
  * @method ContactItemType getNotes()
- * @method ContactItemType setNotes($notes)
+ * @method ContactItemType setNotes(string $notes)
  * @method ContactItemType getPhoto()
- * @method ContactItemType setPhoto($photo)
+ * @method ContactItemType setPhoto(mixed $photo)
  * @method ContactItemType getUserSMIMECertificate()
- * @method ContactItemType setUserSMIMECertificate($userSMIMECertificate)
+ * @method ContactItemType setUserSMIMECertificate(array $userSMIMECertificate)
  * @method ContactItemType getMSExchangeCertificate()
- * @method ContactItemType setMSExchangeCertificate($mSExchangeCertificate)
+ * @method ContactItemType setMSExchangeCertificate(array $mSExchangeCertificate)
  * @method ContactItemType getDirectoryId()
- * @method ContactItemType setDirectoryId($directoryId)
+ * @method ContactItemType setDirectoryId(string $directoryId)
  * @method ContactItemType getManagerMailbox()
- * @method ContactItemType setManagerMailbox($managerMailbox)
+ * @method ContactItemType setManagerMailbox(SingleRecipientType $managerMailbox)
  * @method ContactItemType getDirectReports()
- * @method ContactItemType setDirectReports($directReports)
+ * @method ContactItemType setDirectReports(array $directReports)
  */
 class ContactItemType extends ItemType
 {
@@ -142,17 +142,20 @@ class ContactItemType extends ItemType
     protected $companyName = null;
 
     /**
-     * @property array $emailAddresses
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressDictionaryEntryType[]
+     * $emailAddresses
      */
     protected $emailAddresses = null;
 
     /**
-     * @property array $physicalAddresses
+     * @property \jamesiarmes\PEWS\API\TypeTest\PhysicalAddressDictionaryEntryType[]
+     * $physicalAddresses
      */
     protected $physicalAddresses = null;
 
     /**
-     * @property array $phoneNumbers
+     * @property \jamesiarmes\PEWS\API\TypeTest\PhoneNumberDictionaryEntryType[]
+     * $phoneNumbers
      */
     protected $phoneNumbers = null;
 
@@ -177,12 +180,12 @@ class ContactItemType extends ItemType
     protected $businessHomePage = null;
 
     /**
-     * @property array $children
+     * @property string[] $children
      */
     protected $children = null;
 
     /**
-     * @property array $companies
+     * @property string[] $companies
      */
     protected $companies = null;
 
@@ -202,7 +205,8 @@ class ContactItemType extends ItemType
     protected $generation = null;
 
     /**
-     * @property array $imAddresses
+     * @property \jamesiarmes\PEWS\API\TypeTest\ImAddressDictionaryEntryType[]
+     * $imAddresses
      */
     protected $imAddresses = null;
 
@@ -287,12 +291,12 @@ class ContactItemType extends ItemType
     protected $photo = null;
 
     /**
-     * @property array $userSMIMECertificate
+     * @property mixed[] $userSMIMECertificate
      */
     protected $userSMIMECertificate = null;
 
     /**
-     * @property array $mSExchangeCertificate
+     * @property mixed[] $mSExchangeCertificate
      */
     protected $mSExchangeCertificate = null;
 
@@ -307,7 +311,7 @@ class ContactItemType extends ItemType
     protected $managerMailbox = null;
 
     /**
-     * @property array $directReports
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $directReports
      */
     protected $directReports = null;
 

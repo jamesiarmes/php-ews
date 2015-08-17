@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: SearchFolderType
  *
  * @method SearchFolderType getSearchParameters()
- * @method SearchFolderType setSearchParameters($searchParameters)
+ * @method SearchFolderType setSearchParameters(SearchParametersType $searchParameters)
  */
 class SearchFolderType extends FolderType
 {

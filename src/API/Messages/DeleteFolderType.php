@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: DeleteFolderType
  *
  * @method DeleteFolderType getDeleteType()
- * @method DeleteFolderType setDeleteType($deleteType)
+ * @method DeleteFolderType setDeleteType(string $deleteType)
  * @method DeleteFolderType getFolderIds()
- * @method DeleteFolderType setFolderIds($folderIds)
+ * @method DeleteFolderType setFolderIds(\jamesiarmes\PEWS\API\TypeTest\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class DeleteFolderType extends BaseRequestType
 {

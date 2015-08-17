@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurrenceRangeBaseType
  *
  * @method RecurrenceRangeBaseType getStartDate()
- * @method RecurrenceRangeBaseType setStartDate($startDate)
+ * @method RecurrenceRangeBaseType setStartDate(\DateTime $startDate)
  */
 class RecurrenceRangeBaseType extends TypeTest
 {

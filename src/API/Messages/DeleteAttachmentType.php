@@ -9,13 +9,14 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: DeleteAttachmentType
  *
  * @method DeleteAttachmentType getAttachmentIds()
- * @method DeleteAttachmentType setAttachmentIds($attachmentIds)
+ * @method DeleteAttachmentType setAttachmentIds(array $attachmentIds)
  */
 class DeleteAttachmentType extends BaseRequestType
 {
 
     /**
-     * @property array $attachmentIds
+     * @property \jamesiarmes\PEWS\API\TypeTest\RequestAttachmentIdType[]
+     * $attachmentIds
      */
     protected $attachmentIds = null;
 

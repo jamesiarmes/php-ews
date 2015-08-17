@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: KeywordStatisticsSearchResultType
  *
  * @method KeywordStatisticsSearchResultType getKeyword()
- * @method KeywordStatisticsSearchResultType setKeyword($keyword)
+ * @method KeywordStatisticsSearchResultType setKeyword(string $keyword)
  * @method KeywordStatisticsSearchResultType getItemHits()
- * @method KeywordStatisticsSearchResultType setItemHits($itemHits)
+ * @method KeywordStatisticsSearchResultType setItemHits(integer $itemHits)
  * @method KeywordStatisticsSearchResultType getSize()
- * @method KeywordStatisticsSearchResultType setSize($size)
+ * @method KeywordStatisticsSearchResultType setSize(integer $size)
  */
 class KeywordStatisticsSearchResultType extends TypeTest
 {

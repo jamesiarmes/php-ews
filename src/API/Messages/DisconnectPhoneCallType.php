@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: DisconnectPhoneCallType
  *
  * @method DisconnectPhoneCallType getPhoneCallId()
- * @method DisconnectPhoneCallType setPhoneCallId($phoneCallId)
+ * @method DisconnectPhoneCallType setPhoneCallId(\jamesiarmes\PEWS\API\TypeTest\PhoneCallIdType $phoneCallId)
  */
 class DisconnectPhoneCallType extends BaseRequestType
 {

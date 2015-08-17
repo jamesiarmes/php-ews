@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RootItemIdType
  *
  * @method RootItemIdType getRootItemId()
- * @method RootItemIdType setRootItemId($rootItemId)
+ * @method RootItemIdType setRootItemId(string $rootItemId)
  * @method RootItemIdType getRootItemChangeKey()
- * @method RootItemIdType setRootItemChangeKey($rootItemChangeKey)
+ * @method RootItemIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class RootItemIdType extends BaseItemIdType
 {

@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: PlayOnPhoneType
  *
  * @method PlayOnPhoneType getItemId()
- * @method PlayOnPhoneType setItemId($itemId)
+ * @method PlayOnPhoneType setItemId(\jamesiarmes\PEWS\API\TypeTest\ItemIdType $itemId)
  * @method PlayOnPhoneType getDialString()
- * @method PlayOnPhoneType setDialString($dialString)
+ * @method PlayOnPhoneType setDialString(string $dialString)
  */
 class PlayOnPhoneType extends BaseRequestType
 {

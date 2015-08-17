@@ -11,11 +11,11 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MailboxData
  *
  * @method MailboxDataType getEmail()
- * @method MailboxDataType setEmail($email)
+ * @method MailboxDataType setEmail(EmailAddressType $email)
  * @method MailboxDataType getAttendeeType()
- * @method MailboxDataType setAttendeeType($attendeeType)
+ * @method MailboxDataType setAttendeeType(string $attendeeType)
  * @method MailboxDataType getExcludeConflicts()
- * @method MailboxDataType setExcludeConflicts($excludeConflicts)
+ * @method MailboxDataType setExcludeConflicts(boolean $excludeConflicts)
  */
 class MailboxDataType extends TypeTest
 {

@@ -9,22 +9,21 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MeetingMessageType
  *
  * @method MeetingMessageType getAssociatedCalendarItemId()
- * @method MeetingMessageType
- * setAssociatedCalendarItemId($associatedCalendarItemId)
+ * @method MeetingMessageType setAssociatedCalendarItemId(ItemIdType $associatedCalendarItemId)
  * @method MeetingMessageType getIsDelegated()
- * @method MeetingMessageType setIsDelegated($isDelegated)
+ * @method MeetingMessageType setIsDelegated(boolean $isDelegated)
  * @method MeetingMessageType getIsOutOfDate()
- * @method MeetingMessageType setIsOutOfDate($isOutOfDate)
+ * @method MeetingMessageType setIsOutOfDate(boolean $isOutOfDate)
  * @method MeetingMessageType getHasBeenProcessed()
- * @method MeetingMessageType setHasBeenProcessed($hasBeenProcessed)
+ * @method MeetingMessageType setHasBeenProcessed(boolean $hasBeenProcessed)
  * @method MeetingMessageType getResponseType()
- * @method MeetingMessageType setResponseType($responseType)
+ * @method MeetingMessageType setResponseType(string $responseType)
  * @method MeetingMessageType getUID()
- * @method MeetingMessageType setUID($uID)
+ * @method MeetingMessageType setUID(string $uID)
  * @method MeetingMessageType getRecurrenceId()
- * @method MeetingMessageType setRecurrenceId($recurrenceId)
+ * @method MeetingMessageType setRecurrenceId(\DateTime $recurrenceId)
  * @method MeetingMessageType getDateTimeStamp()
- * @method MeetingMessageType setDateTimeStamp($dateTimeStamp)
+ * @method MeetingMessageType setDateTimeStamp(\DateTime $dateTimeStamp)
  */
 class MeetingMessageType extends MessageType
 {

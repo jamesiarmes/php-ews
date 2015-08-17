@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PostReplyItemType
  *
  * @method PostReplyItemType getNewBodyContent()
- * @method PostReplyItemType setNewBodyContent($newBodyContent)
+ * @method PostReplyItemType setNewBodyContent(BodyType $newBodyContent)
  */
 class PostReplyItemType extends PostReplyItemBaseType
 {

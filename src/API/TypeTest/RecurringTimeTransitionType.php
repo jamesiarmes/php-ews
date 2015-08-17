@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurringTimeTransitionType
  *
  * @method RecurringTimeTransitionType getTimeOffset()
- * @method RecurringTimeTransitionType setTimeOffset($timeOffset)
+ * @method RecurringTimeTransitionType setTimeOffset(\DateInterval $timeOffset)
  * @method RecurringTimeTransitionType getMonth()
- * @method RecurringTimeTransitionType setMonth($month)
+ * @method RecurringTimeTransitionType setMonth(integer $month)
  */
 class RecurringTimeTransitionType extends TransitionType
 {

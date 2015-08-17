@@ -11,111 +11,109 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RulePredicatesType
  *
  * @method RulePredicatesType getCategories()
- * @method RulePredicatesType setCategories($categories)
+ * @method RulePredicatesType setCategories(array $categories)
  * @method RulePredicatesType getContainsBodyStrings()
- * @method RulePredicatesType setContainsBodyStrings($containsBodyStrings)
+ * @method RulePredicatesType setContainsBodyStrings(array $containsBodyStrings)
  * @method RulePredicatesType getContainsHeaderStrings()
- * @method RulePredicatesType setContainsHeaderStrings($containsHeaderStrings)
+ * @method RulePredicatesType setContainsHeaderStrings(array $containsHeaderStrings)
  * @method RulePredicatesType getContainsRecipientStrings()
- * @method RulePredicatesType
- * setContainsRecipientStrings($containsRecipientStrings)
+ * @method RulePredicatesType setContainsRecipientStrings(array $containsRecipientStrings)
  * @method RulePredicatesType getContainsSenderStrings()
- * @method RulePredicatesType setContainsSenderStrings($containsSenderStrings)
+ * @method RulePredicatesType setContainsSenderStrings(array $containsSenderStrings)
  * @method RulePredicatesType getContainsSubjectOrBodyStrings()
- * @method RulePredicatesType
- * setContainsSubjectOrBodyStrings($containsSubjectOrBodyStrings)
+ * @method RulePredicatesType setContainsSubjectOrBodyStrings(array $containsSubjectOrBodyStrings)
  * @method RulePredicatesType getContainsSubjectStrings()
- * @method RulePredicatesType setContainsSubjectStrings($containsSubjectStrings)
+ * @method RulePredicatesType setContainsSubjectStrings(array $containsSubjectStrings)
  * @method RulePredicatesType getFlaggedForAction()
- * @method RulePredicatesType setFlaggedForAction($flaggedForAction)
+ * @method RulePredicatesType setFlaggedForAction(string $flaggedForAction)
  * @method RulePredicatesType getFromAddresses()
- * @method RulePredicatesType setFromAddresses($fromAddresses)
+ * @method RulePredicatesType setFromAddresses(array $fromAddresses)
  * @method RulePredicatesType getFromConnectedAccounts()
- * @method RulePredicatesType setFromConnectedAccounts($fromConnectedAccounts)
+ * @method RulePredicatesType setFromConnectedAccounts(array $fromConnectedAccounts)
  * @method RulePredicatesType getHasAttachments()
- * @method RulePredicatesType setHasAttachments($hasAttachments)
+ * @method RulePredicatesType setHasAttachments(boolean $hasAttachments)
  * @method RulePredicatesType getImportance()
- * @method RulePredicatesType setImportance($importance)
+ * @method RulePredicatesType setImportance(string $importance)
  * @method RulePredicatesType getIsApprovalRequest()
- * @method RulePredicatesType setIsApprovalRequest($isApprovalRequest)
+ * @method RulePredicatesType setIsApprovalRequest(boolean $isApprovalRequest)
  * @method RulePredicatesType getIsAutomaticForward()
- * @method RulePredicatesType setIsAutomaticForward($isAutomaticForward)
+ * @method RulePredicatesType setIsAutomaticForward(boolean $isAutomaticForward)
  * @method RulePredicatesType getIsAutomaticReply()
- * @method RulePredicatesType setIsAutomaticReply($isAutomaticReply)
+ * @method RulePredicatesType setIsAutomaticReply(boolean $isAutomaticReply)
  * @method RulePredicatesType getIsEncrypted()
- * @method RulePredicatesType setIsEncrypted($isEncrypted)
+ * @method RulePredicatesType setIsEncrypted(boolean $isEncrypted)
  * @method RulePredicatesType getIsMeetingRequest()
- * @method RulePredicatesType setIsMeetingRequest($isMeetingRequest)
+ * @method RulePredicatesType setIsMeetingRequest(boolean $isMeetingRequest)
  * @method RulePredicatesType getIsMeetingResponse()
- * @method RulePredicatesType setIsMeetingResponse($isMeetingResponse)
+ * @method RulePredicatesType setIsMeetingResponse(boolean $isMeetingResponse)
  * @method RulePredicatesType getIsNDR()
- * @method RulePredicatesType setIsNDR($isNDR)
+ * @method RulePredicatesType setIsNDR(boolean $isNDR)
  * @method RulePredicatesType getIsPermissionControlled()
- * @method RulePredicatesType setIsPermissionControlled($isPermissionControlled)
+ * @method RulePredicatesType setIsPermissionControlled(boolean $isPermissionControlled)
  * @method RulePredicatesType getIsReadReceipt()
- * @method RulePredicatesType setIsReadReceipt($isReadReceipt)
+ * @method RulePredicatesType setIsReadReceipt(boolean $isReadReceipt)
  * @method RulePredicatesType getIsSigned()
- * @method RulePredicatesType setIsSigned($isSigned)
+ * @method RulePredicatesType setIsSigned(boolean $isSigned)
  * @method RulePredicatesType getIsVoicemail()
- * @method RulePredicatesType setIsVoicemail($isVoicemail)
+ * @method RulePredicatesType setIsVoicemail(boolean $isVoicemail)
  * @method RulePredicatesType getItemClasses()
- * @method RulePredicatesType setItemClasses($itemClasses)
+ * @method RulePredicatesType setItemClasses(array $itemClasses)
  * @method RulePredicatesType getMessageClassifications()
- * @method RulePredicatesType setMessageClassifications($messageClassifications)
+ * @method RulePredicatesType setMessageClassifications(array $messageClassifications)
  * @method RulePredicatesType getNotSentToMe()
- * @method RulePredicatesType setNotSentToMe($notSentToMe)
+ * @method RulePredicatesType setNotSentToMe(boolean $notSentToMe)
  * @method RulePredicatesType getSentCcMe()
- * @method RulePredicatesType setSentCcMe($sentCcMe)
+ * @method RulePredicatesType setSentCcMe(boolean $sentCcMe)
  * @method RulePredicatesType getSentOnlyToMe()
- * @method RulePredicatesType setSentOnlyToMe($sentOnlyToMe)
+ * @method RulePredicatesType setSentOnlyToMe(boolean $sentOnlyToMe)
  * @method RulePredicatesType getSentToAddresses()
- * @method RulePredicatesType setSentToAddresses($sentToAddresses)
+ * @method RulePredicatesType setSentToAddresses(array $sentToAddresses)
  * @method RulePredicatesType getSentToMe()
- * @method RulePredicatesType setSentToMe($sentToMe)
+ * @method RulePredicatesType setSentToMe(boolean $sentToMe)
  * @method RulePredicatesType getSentToOrCcMe()
- * @method RulePredicatesType setSentToOrCcMe($sentToOrCcMe)
+ * @method RulePredicatesType setSentToOrCcMe(boolean $sentToOrCcMe)
  * @method RulePredicatesType getSensitivity()
- * @method RulePredicatesType setSensitivity($sensitivity)
+ * @method RulePredicatesType setSensitivity(string $sensitivity)
  * @method RulePredicatesType getWithinDateRange()
- * @method RulePredicatesType setWithinDateRange($withinDateRange)
+ * @method RulePredicatesType setWithinDateRange(RulePredicateDateRangeType $withinDateRange)
  * @method RulePredicatesType getWithinSizeRange()
- * @method RulePredicatesType setWithinSizeRange($withinSizeRange)
+ * @method RulePredicatesType setWithinSizeRange(RulePredicateSizeRangeType $withinSizeRange)
  */
 class RulePredicatesType extends TypeTest
 {
 
     /**
-     * @property array $categories
+     * @property string[] $categories
      */
     protected $categories = null;
 
     /**
-     * @property array $containsBodyStrings
+     * @property string[] $containsBodyStrings
      */
     protected $containsBodyStrings = null;
 
     /**
-     * @property array $containsHeaderStrings
+     * @property string[] $containsHeaderStrings
      */
     protected $containsHeaderStrings = null;
 
     /**
-     * @property array $containsRecipientStrings
+     * @property string[] $containsRecipientStrings
      */
     protected $containsRecipientStrings = null;
 
     /**
-     * @property array $containsSenderStrings
+     * @property string[] $containsSenderStrings
      */
     protected $containsSenderStrings = null;
 
     /**
-     * @property array $containsSubjectOrBodyStrings
+     * @property string[] $containsSubjectOrBodyStrings
      */
     protected $containsSubjectOrBodyStrings = null;
 
     /**
-     * @property array $containsSubjectStrings
+     * @property string[] $containsSubjectStrings
      */
     protected $containsSubjectStrings = null;
 
@@ -125,12 +123,12 @@ class RulePredicatesType extends TypeTest
     protected $flaggedForAction = null;
 
     /**
-     * @property array $fromAddresses
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $fromAddresses
      */
     protected $fromAddresses = null;
 
     /**
-     * @property array $fromConnectedAccounts
+     * @property string[] $fromConnectedAccounts
      */
     protected $fromConnectedAccounts = null;
 
@@ -200,12 +198,12 @@ class RulePredicatesType extends TypeTest
     protected $isVoicemail = null;
 
     /**
-     * @property array $itemClasses
+     * @property string[] $itemClasses
      */
     protected $itemClasses = null;
 
     /**
-     * @property array $messageClassifications
+     * @property string[] $messageClassifications
      */
     protected $messageClassifications = null;
 
@@ -225,7 +223,7 @@ class RulePredicatesType extends TypeTest
     protected $sentOnlyToMe = null;
 
     /**
-     * @property array $sentToAddresses
+     * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType[] $sentToAddresses
      */
     protected $sentToAddresses = null;
 

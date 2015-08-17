@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RulePredicateSizeRangeType
  *
  * @method RulePredicateSizeRangeType getMinimumSize()
- * @method RulePredicateSizeRangeType setMinimumSize($minimumSize)
+ * @method RulePredicateSizeRangeType setMinimumSize(integer $minimumSize)
  * @method RulePredicateSizeRangeType getMaximumSize()
- * @method RulePredicateSizeRangeType setMaximumSize($maximumSize)
+ * @method RulePredicateSizeRangeType setMaximumSize(integer $maximumSize)
  */
 class RulePredicateSizeRangeType extends TypeTest
 {

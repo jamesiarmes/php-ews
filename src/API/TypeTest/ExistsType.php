@@ -9,27 +9,27 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ExistsType
  *
  * @method ExistsType getFieldURI()
- * @method ExistsType setFieldURI($fieldURI)
+ * @method ExistsType setFieldURI(array $fieldURI)
  * @method ExistsType getIndexedFieldURI()
- * @method ExistsType setIndexedFieldURI($indexedFieldURI)
+ * @method ExistsType setIndexedFieldURI(array $indexedFieldURI)
  * @method ExistsType getExtendedFieldURI()
- * @method ExistsType setExtendedFieldURI($extendedFieldURI)
+ * @method ExistsType setExtendedFieldURI(array $extendedFieldURI)
  */
 class ExistsType extends SearchExpressionType
 {
 
     /**
-     * @property array $fieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldURI[] $fieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property array $indexedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\IndexedFieldURI[] $indexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property array $extendedFieldURI
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
 

@@ -9,9 +9,9 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CalendarViewType
  *
  * @method CalendarViewType getStartDate()
- * @method CalendarViewType setStartDate($startDate)
+ * @method CalendarViewType setStartDate(\DateTime $startDate)
  * @method CalendarViewType getEndDate()
- * @method CalendarViewType setEndDate($endDate)
+ * @method CalendarViewType setEndDate(\DateTime $endDate)
  */
 class CalendarViewType extends BasePagingType
 {

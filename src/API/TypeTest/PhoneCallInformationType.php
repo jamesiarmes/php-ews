@@ -11,14 +11,13 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PhoneCallInformationType
  *
  * @method PhoneCallInformationType getPhoneCallState()
- * @method PhoneCallInformationType setPhoneCallState($phoneCallState)
+ * @method PhoneCallInformationType setPhoneCallState(string $phoneCallState)
  * @method PhoneCallInformationType getConnectionFailureCause()
- * @method PhoneCallInformationType
- * setConnectionFailureCause($connectionFailureCause)
+ * @method PhoneCallInformationType setConnectionFailureCause(string $connectionFailureCause)
  * @method PhoneCallInformationType getSIPResponseText()
- * @method PhoneCallInformationType setSIPResponseText($sIPResponseText)
+ * @method PhoneCallInformationType setSIPResponseText(string $sIPResponseText)
  * @method PhoneCallInformationType getSIPResponseCode()
- * @method PhoneCallInformationType setSIPResponseCode($sIPResponseCode)
+ * @method PhoneCallInformationType setSIPResponseCode(integer $sIPResponseCode)
  */
 class PhoneCallInformationType extends TypeTest
 {

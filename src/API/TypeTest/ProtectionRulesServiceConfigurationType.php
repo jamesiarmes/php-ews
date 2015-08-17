@@ -9,13 +9,11 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ProtectionRulesServiceConfiguration
  *
  * @method ProtectionRulesServiceConfigurationType getRefreshInterval()
- * @method ProtectionRulesServiceConfigurationType
- * setRefreshInterval($refreshInterval)
+ * @method ProtectionRulesServiceConfigurationType setRefreshInterval(integer $refreshInterval)
  * @method ProtectionRulesServiceConfigurationType getRules()
- * @method ProtectionRulesServiceConfigurationType setRules($rules)
+ * @method ProtectionRulesServiceConfigurationType setRules(array $rules)
  * @method ProtectionRulesServiceConfigurationType getInternalDomains()
- * @method ProtectionRulesServiceConfigurationType
- * setInternalDomains($internalDomains)
+ * @method ProtectionRulesServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
 {
@@ -26,12 +24,12 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
     protected $refreshInterval = null;
 
     /**
-     * @property array $rules
+     * @property \jamesiarmes\PEWS\API\TypeTest\ProtectionRuleType[] $rules
      */
     protected $rules = null;
 
     /**
-     * @property array $internalDomains
+     * @property \jamesiarmes\PEWS\API\TypeTest\SmtpDomainType[] $internalDomains
      */
     protected $internalDomains = null;
 

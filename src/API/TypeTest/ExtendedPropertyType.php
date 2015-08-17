@@ -7,17 +7,16 @@ use jamesiarmes\PEWS\API\TypeTest;
 /**
  * Class representing ExtendedPropertyType
  *
- * Represents an extended property instance (both its path identifier along with
- * its
+ * Represents an extended property instance (both its path identifier along with its
  *  associated value).
  * XSD Type: ExtendedPropertyType
  *
  * @method ExtendedPropertyType getExtendedFieldURI()
- * @method ExtendedPropertyType setExtendedFieldURI($extendedFieldURI)
+ * @method ExtendedPropertyType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
  * @method ExtendedPropertyType getValue()
- * @method ExtendedPropertyType setValue($value)
+ * @method ExtendedPropertyType setValue(string $value)
  * @method ExtendedPropertyType getValues()
- * @method ExtendedPropertyType setValues($values)
+ * @method ExtendedPropertyType setValues(array $values)
  */
 class ExtendedPropertyType extends TypeTest
 {
@@ -34,7 +33,7 @@ class ExtendedPropertyType extends TypeTest
     protected $value = null;
 
     /**
-     * @property array $values
+     * @property string[] $values
      */
     protected $values = null;
 

@@ -11,9 +11,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RulePredicateDateRangeType
  *
  * @method RulePredicateDateRangeType getStartDateTime()
- * @method RulePredicateDateRangeType setStartDateTime($startDateTime)
+ * @method RulePredicateDateRangeType setStartDateTime(\DateTime $startDateTime)
  * @method RulePredicateDateRangeType getEndDateTime()
- * @method RulePredicateDateRangeType setEndDateTime($endDateTime)
+ * @method RulePredicateDateRangeType setEndDateTime(\DateTime $endDateTime)
  */
 class RulePredicateDateRangeType extends TypeTest
 {

@@ -11,15 +11,15 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TimeZoneDefinitionType
  *
  * @method TimeZoneDefinitionType getId()
- * @method TimeZoneDefinitionType setId($id)
+ * @method TimeZoneDefinitionType setId(string $id)
  * @method TimeZoneDefinitionType getName()
- * @method TimeZoneDefinitionType setName($name)
+ * @method TimeZoneDefinitionType setName(string $name)
  * @method TimeZoneDefinitionType getPeriods()
- * @method TimeZoneDefinitionType setPeriods($periods)
+ * @method TimeZoneDefinitionType setPeriods(array $periods)
  * @method TimeZoneDefinitionType getTransitionsGroups()
- * @method TimeZoneDefinitionType setTransitionsGroups($transitionsGroups)
+ * @method TimeZoneDefinitionType setTransitionsGroups(array $transitionsGroups)
  * @method TimeZoneDefinitionType getTransitions()
- * @method TimeZoneDefinitionType setTransitions($transitions)
+ * @method TimeZoneDefinitionType setTransitions(ArrayOfTransitionsType $transitions)
  */
 class TimeZoneDefinitionType extends TypeTest
 {
@@ -35,12 +35,13 @@ class TimeZoneDefinitionType extends TypeTest
     protected $name = null;
 
     /**
-     * @property array $periods
+     * @property \jamesiarmes\PEWS\API\TypeTest\PeriodType[] $periods
      */
     protected $periods = null;
 
     /**
-     * @property array $transitionsGroups
+     * @property \jamesiarmes\PEWS\API\TypeTest\ArrayOfTransitionsType[]
+     * $transitionsGroups
      */
     protected $transitionsGroups = null;
 

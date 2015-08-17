@@ -9,11 +9,11 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindConversationType
  *
  * @method FindConversationType getIndexedPageItemView()
- * @method FindConversationType setIndexedPageItemView($indexedPageItemView)
+ * @method FindConversationType setIndexedPageItemView(\jamesiarmes\PEWS\API\TypeTest\IndexedPageViewType $indexedPageItemView)
  * @method FindConversationType getSortOrder()
- * @method FindConversationType setSortOrder($sortOrder)
+ * @method FindConversationType setSortOrder(array $sortOrder)
  * @method FindConversationType getParentFolderId()
- * @method FindConversationType setParentFolderId($parentFolderId)
+ * @method FindConversationType setParentFolderId(\jamesiarmes\PEWS\API\TypeTest\TargetFolderIdType $parentFolderId)
  */
 class FindConversationType extends BaseRequestType
 {
@@ -25,7 +25,7 @@ class FindConversationType extends BaseRequestType
     protected $indexedPageItemView = null;
 
     /**
-     * @property array $sortOrder
+     * @property \jamesiarmes\PEWS\API\TypeTest\FieldOrderType[] $sortOrder
      */
     protected $sortOrder = null;
 

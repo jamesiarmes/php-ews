@@ -11,28 +11,29 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: NonEmptyArrayOfBaseItemIdsType
  *
  * @method NonEmptyArrayOfBaseItemIdsType getItemId()
- * @method NonEmptyArrayOfBaseItemIdsType setItemId($itemId)
+ * @method NonEmptyArrayOfBaseItemIdsType setItemId(array $itemId)
  * @method NonEmptyArrayOfBaseItemIdsType getOccurrenceItemId()
- * @method NonEmptyArrayOfBaseItemIdsType setOccurrenceItemId($occurrenceItemId)
+ * @method NonEmptyArrayOfBaseItemIdsType setOccurrenceItemId(array $occurrenceItemId)
  * @method NonEmptyArrayOfBaseItemIdsType getRecurringMasterItemId()
- * @method NonEmptyArrayOfBaseItemIdsType
- * setRecurringMasterItemId($recurringMasterItemId)
+ * @method NonEmptyArrayOfBaseItemIdsType setRecurringMasterItemId(array $recurringMasterItemId)
  */
 class NonEmptyArrayOfBaseItemIdsType extends TypeTest
 {
 
     /**
-     * @property array $itemId
+     * @property \jamesiarmes\PEWS\API\TypeTest\ItemIdType[] $itemId
      */
     protected $itemId = null;
 
     /**
-     * @property array $occurrenceItemId
+     * @property \jamesiarmes\PEWS\API\TypeTest\OccurrenceItemIdType[]
+     * $occurrenceItemId
      */
     protected $occurrenceItemId = null;
 
     /**
-     * @property array $recurringMasterItemId
+     * @property \jamesiarmes\PEWS\API\TypeTest\RecurringMasterItemIdType[]
+     * $recurringMasterItemId
      */
     protected $recurringMasterItemId = null;
 

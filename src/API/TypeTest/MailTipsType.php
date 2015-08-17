@@ -11,27 +11,27 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: MailTips
  *
  * @method MailTipsType getRecipientAddress()
- * @method MailTipsType setRecipientAddress($recipientAddress)
+ * @method MailTipsType setRecipientAddress(EmailAddressType $recipientAddress)
  * @method MailTipsType getPendingMailTips()
- * @method MailTipsType setPendingMailTips($pendingMailTips)
+ * @method MailTipsType setPendingMailTips(array $pendingMailTips)
  * @method MailTipsType getOutOfOffice()
- * @method MailTipsType setOutOfOffice($outOfOffice)
+ * @method MailTipsType setOutOfOffice(OutOfOfficeMailTipType $outOfOffice)
  * @method MailTipsType getMailboxFull()
- * @method MailTipsType setMailboxFull($mailboxFull)
+ * @method MailTipsType setMailboxFull(boolean $mailboxFull)
  * @method MailTipsType getCustomMailTip()
- * @method MailTipsType setCustomMailTip($customMailTip)
+ * @method MailTipsType setCustomMailTip(string $customMailTip)
  * @method MailTipsType getTotalMemberCount()
- * @method MailTipsType setTotalMemberCount($totalMemberCount)
+ * @method MailTipsType setTotalMemberCount(integer $totalMemberCount)
  * @method MailTipsType getExternalMemberCount()
- * @method MailTipsType setExternalMemberCount($externalMemberCount)
+ * @method MailTipsType setExternalMemberCount(integer $externalMemberCount)
  * @method MailTipsType getMaxMessageSize()
- * @method MailTipsType setMaxMessageSize($maxMessageSize)
+ * @method MailTipsType setMaxMessageSize(integer $maxMessageSize)
  * @method MailTipsType getDeliveryRestricted()
- * @method MailTipsType setDeliveryRestricted($deliveryRestricted)
+ * @method MailTipsType setDeliveryRestricted(boolean $deliveryRestricted)
  * @method MailTipsType getIsModerated()
- * @method MailTipsType setIsModerated($isModerated)
+ * @method MailTipsType setIsModerated(boolean $isModerated)
  * @method MailTipsType getInvalidRecipient()
- * @method MailTipsType setInvalidRecipient($invalidRecipient)
+ * @method MailTipsType setInvalidRecipient(boolean $invalidRecipient)
  */
 class MailTipsType extends TypeTest
 {
@@ -42,7 +42,7 @@ class MailTipsType extends TypeTest
     protected $recipientAddress = null;
 
     /**
-     * @property array $pendingMailTips
+     * @property string[] $pendingMailTips
      */
     protected $pendingMailTips = null;
 

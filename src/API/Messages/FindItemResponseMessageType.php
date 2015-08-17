@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * XSD Type: FindItemResponseMessageType
  *
  * @method FindItemResponseMessageType getRootFolder()
- * @method FindItemResponseMessageType setRootFolder($rootFolder)
+ * @method FindItemResponseMessageType setRootFolder(\jamesiarmes\PEWS\API\TypeTest\FindItemParentType $rootFolder)
  */
 class FindItemResponseMessageType extends ResponseMessageType
 {

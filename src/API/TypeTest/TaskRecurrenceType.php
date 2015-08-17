@@ -11,35 +11,31 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: TaskRecurrenceType
  *
  * @method TaskRecurrenceType getRelativeYearlyRecurrence()
- * @method TaskRecurrenceType
- * setRelativeYearlyRecurrence($relativeYearlyRecurrence)
+ * @method TaskRecurrenceType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
  * @method TaskRecurrenceType getAbsoluteYearlyRecurrence()
- * @method TaskRecurrenceType
- * setAbsoluteYearlyRecurrence($absoluteYearlyRecurrence)
+ * @method TaskRecurrenceType setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $absoluteYearlyRecurrence)
  * @method TaskRecurrenceType getRelativeMonthlyRecurrence()
- * @method TaskRecurrenceType
- * setRelativeMonthlyRecurrence($relativeMonthlyRecurrence)
+ * @method TaskRecurrenceType setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $relativeMonthlyRecurrence)
  * @method TaskRecurrenceType getAbsoluteMonthlyRecurrence()
- * @method TaskRecurrenceType
- * setAbsoluteMonthlyRecurrence($absoluteMonthlyRecurrence)
+ * @method TaskRecurrenceType setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $absoluteMonthlyRecurrence)
  * @method TaskRecurrenceType getWeeklyRecurrence()
- * @method TaskRecurrenceType setWeeklyRecurrence($weeklyRecurrence)
+ * @method TaskRecurrenceType setWeeklyRecurrence(WeeklyRecurrencePatternType $weeklyRecurrence)
  * @method TaskRecurrenceType getDailyRecurrence()
- * @method TaskRecurrenceType setDailyRecurrence($dailyRecurrence)
+ * @method TaskRecurrenceType setDailyRecurrence(DailyRecurrencePatternType $dailyRecurrence)
  * @method TaskRecurrenceType getDailyRegeneration()
- * @method TaskRecurrenceType setDailyRegeneration($dailyRegeneration)
+ * @method TaskRecurrenceType setDailyRegeneration(DailyRegeneratingPatternType $dailyRegeneration)
  * @method TaskRecurrenceType getWeeklyRegeneration()
- * @method TaskRecurrenceType setWeeklyRegeneration($weeklyRegeneration)
+ * @method TaskRecurrenceType setWeeklyRegeneration(WeeklyRegeneratingPatternType $weeklyRegeneration)
  * @method TaskRecurrenceType getMonthlyRegeneration()
- * @method TaskRecurrenceType setMonthlyRegeneration($monthlyRegeneration)
+ * @method TaskRecurrenceType setMonthlyRegeneration(MonthlyRegeneratingPatternType $monthlyRegeneration)
  * @method TaskRecurrenceType getYearlyRegeneration()
- * @method TaskRecurrenceType setYearlyRegeneration($yearlyRegeneration)
+ * @method TaskRecurrenceType setYearlyRegeneration(YearlyRegeneratingPatternType $yearlyRegeneration)
  * @method TaskRecurrenceType getNoEndRecurrence()
- * @method TaskRecurrenceType setNoEndRecurrence($noEndRecurrence)
+ * @method TaskRecurrenceType setNoEndRecurrence(NoEndRecurrenceRangeType $noEndRecurrence)
  * @method TaskRecurrenceType getEndDateRecurrence()
- * @method TaskRecurrenceType setEndDateRecurrence($endDateRecurrence)
+ * @method TaskRecurrenceType setEndDateRecurrence(EndDateRecurrenceRangeType $endDateRecurrence)
  * @method TaskRecurrenceType getNumberedRecurrence()
- * @method TaskRecurrenceType setNumberedRecurrence($numberedRecurrence)
+ * @method TaskRecurrenceType setNumberedRecurrence(NumberedRecurrenceRangeType $numberedRecurrence)
  */
 class TaskRecurrenceType extends TypeTest
 {

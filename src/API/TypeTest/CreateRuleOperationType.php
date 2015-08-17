@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: CreateRuleOperationType
  *
  * @method CreateRuleOperationType getRule()
- * @method CreateRuleOperationType setRule($rule)
+ * @method CreateRuleOperationType setRule(RuleType $rule)
  */
 class CreateRuleOperationType extends RuleOperationType
 {

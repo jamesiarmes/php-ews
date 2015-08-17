@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: RecurringDateTransitionType
  *
  * @method RecurringDateTransitionType getDay()
- * @method RecurringDateTransitionType setDay($day)
+ * @method RecurringDateTransitionType setDay(integer $day)
  */
 class RecurringDateTransitionType extends RecurringTimeTransitionType
 {

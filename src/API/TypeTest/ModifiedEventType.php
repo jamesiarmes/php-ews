@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ModifiedEventType
  *
  * @method ModifiedEventType getUnreadCount()
- * @method ModifiedEventType setUnreadCount($unreadCount)
+ * @method ModifiedEventType setUnreadCount(integer $unreadCount)
  */
 class ModifiedEventType extends BaseObjectChangedEventType
 {

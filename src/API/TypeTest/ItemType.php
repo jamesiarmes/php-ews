@@ -11,83 +11,83 @@ use jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: ItemType
  *
  * @method ItemType getMimeContent()
- * @method ItemType setMimeContent($mimeContent)
+ * @method ItemType setMimeContent(MimeContentType $mimeContent)
  * @method ItemType getItemId()
- * @method ItemType setItemId($itemId)
+ * @method ItemType setItemId(ItemIdType $itemId)
  * @method ItemType getParentFolderId()
- * @method ItemType setParentFolderId($parentFolderId)
+ * @method ItemType setParentFolderId(FolderIdType $parentFolderId)
  * @method ItemType getItemClass()
- * @method ItemType setItemClass($itemClass)
+ * @method ItemType setItemClass(string $itemClass)
  * @method ItemType getSubject()
- * @method ItemType setSubject($subject)
+ * @method ItemType setSubject(string $subject)
  * @method ItemType getSensitivity()
- * @method ItemType setSensitivity($sensitivity)
+ * @method ItemType setSensitivity(string $sensitivity)
  * @method ItemType getBody()
- * @method ItemType setBody($body)
+ * @method ItemType setBody(BodyType $body)
  * @method ItemType getAttachments()
- * @method ItemType setAttachments($attachments)
+ * @method ItemType setAttachments(NonEmptyArrayOfAttachmentsType $attachments)
  * @method ItemType getDateTimeReceived()
- * @method ItemType setDateTimeReceived($dateTimeReceived)
+ * @method ItemType setDateTimeReceived(\DateTime $dateTimeReceived)
  * @method ItemType getSize()
- * @method ItemType setSize($size)
+ * @method ItemType setSize(integer $size)
  * @method ItemType getCategories()
- * @method ItemType setCategories($categories)
+ * @method ItemType setCategories(array $categories)
  * @method ItemType getImportance()
- * @method ItemType setImportance($importance)
+ * @method ItemType setImportance(string $importance)
  * @method ItemType getInReplyTo()
- * @method ItemType setInReplyTo($inReplyTo)
+ * @method ItemType setInReplyTo(string $inReplyTo)
  * @method ItemType getIsSubmitted()
- * @method ItemType setIsSubmitted($isSubmitted)
+ * @method ItemType setIsSubmitted(boolean $isSubmitted)
  * @method ItemType getIsDraft()
- * @method ItemType setIsDraft($isDraft)
+ * @method ItemType setIsDraft(boolean $isDraft)
  * @method ItemType getIsFromMe()
- * @method ItemType setIsFromMe($isFromMe)
+ * @method ItemType setIsFromMe(boolean $isFromMe)
  * @method ItemType getIsResend()
- * @method ItemType setIsResend($isResend)
+ * @method ItemType setIsResend(boolean $isResend)
  * @method ItemType getIsUnmodified()
- * @method ItemType setIsUnmodified($isUnmodified)
+ * @method ItemType setIsUnmodified(boolean $isUnmodified)
  * @method ItemType getInternetMessageHeaders()
- * @method ItemType setInternetMessageHeaders($internetMessageHeaders)
+ * @method ItemType setInternetMessageHeaders(array $internetMessageHeaders)
  * @method ItemType getDateTimeSent()
- * @method ItemType setDateTimeSent($dateTimeSent)
+ * @method ItemType setDateTimeSent(\DateTime $dateTimeSent)
  * @method ItemType getDateTimeCreated()
- * @method ItemType setDateTimeCreated($dateTimeCreated)
+ * @method ItemType setDateTimeCreated(\DateTime $dateTimeCreated)
  * @method ItemType getResponseObjects()
- * @method ItemType setResponseObjects($responseObjects)
+ * @method ItemType setResponseObjects(NonEmptyArrayOfResponseObjectsType $responseObjects)
  * @method ItemType getReminderDueBy()
- * @method ItemType setReminderDueBy($reminderDueBy)
+ * @method ItemType setReminderDueBy(\DateTime $reminderDueBy)
  * @method ItemType getReminderIsSet()
- * @method ItemType setReminderIsSet($reminderIsSet)
+ * @method ItemType setReminderIsSet(boolean $reminderIsSet)
  * @method ItemType getReminderMinutesBeforeStart()
- * @method ItemType setReminderMinutesBeforeStart($reminderMinutesBeforeStart)
+ * @method ItemType setReminderMinutesBeforeStart(integer $reminderMinutesBeforeStart)
  * @method ItemType getDisplayCc()
- * @method ItemType setDisplayCc($displayCc)
+ * @method ItemType setDisplayCc(string $displayCc)
  * @method ItemType getDisplayTo()
- * @method ItemType setDisplayTo($displayTo)
+ * @method ItemType setDisplayTo(string $displayTo)
  * @method ItemType getHasAttachments()
- * @method ItemType setHasAttachments($hasAttachments)
+ * @method ItemType setHasAttachments(boolean $hasAttachments)
  * @method ItemType getExtendedProperty()
- * @method ItemType setExtendedProperty($extendedProperty)
+ * @method ItemType setExtendedProperty(array $extendedProperty)
  * @method ItemType getCulture()
- * @method ItemType setCulture($culture)
+ * @method ItemType setCulture(string $culture)
  * @method ItemType getEffectiveRights()
- * @method ItemType setEffectiveRights($effectiveRights)
+ * @method ItemType setEffectiveRights(EffectiveRightsType $effectiveRights)
  * @method ItemType getLastModifiedName()
- * @method ItemType setLastModifiedName($lastModifiedName)
+ * @method ItemType setLastModifiedName(string $lastModifiedName)
  * @method ItemType getLastModifiedTime()
- * @method ItemType setLastModifiedTime($lastModifiedTime)
+ * @method ItemType setLastModifiedTime(\DateTime $lastModifiedTime)
  * @method ItemType getIsAssociated()
- * @method ItemType setIsAssociated($isAssociated)
+ * @method ItemType setIsAssociated(boolean $isAssociated)
  * @method ItemType getWebClientReadFormQueryString()
- * @method ItemType setWebClientReadFormQueryString($webClientReadFormQueryString)
+ * @method ItemType setWebClientReadFormQueryString(string $webClientReadFormQueryString)
  * @method ItemType getWebClientEditFormQueryString()
- * @method ItemType setWebClientEditFormQueryString($webClientEditFormQueryString)
+ * @method ItemType setWebClientEditFormQueryString(string $webClientEditFormQueryString)
  * @method ItemType getConversationId()
- * @method ItemType setConversationId($conversationId)
+ * @method ItemType setConversationId(ItemIdType $conversationId)
  * @method ItemType getUniqueBody()
- * @method ItemType setUniqueBody($uniqueBody)
+ * @method ItemType setUniqueBody(BodyType $uniqueBody)
  * @method ItemType getStoreEntryId()
- * @method ItemType setStoreEntryId($storeEntryId)
+ * @method ItemType setStoreEntryId(mixed $storeEntryId)
  */
 class ItemType extends TypeTest
 {
@@ -152,7 +152,7 @@ class ItemType extends TypeTest
     protected $size = null;
 
     /**
-     * @property array $categories
+     * @property string[] $categories
      */
     protected $categories = null;
 
@@ -192,7 +192,8 @@ class ItemType extends TypeTest
     protected $isUnmodified = null;
 
     /**
-     * @property array $internetMessageHeaders
+     * @property \jamesiarmes\PEWS\API\TypeTest\InternetHeaderType[]
+     * $internetMessageHeaders
      */
     protected $internetMessageHeaders = null;
 
@@ -243,7 +244,8 @@ class ItemType extends TypeTest
     protected $hasAttachments = null;
 
     /**
-     * @property array $extendedProperty
+     * @property \jamesiarmes\PEWS\API\TypeTest\ExtendedPropertyType[]
+     * $extendedProperty
      */
     protected $extendedProperty = null;
 
