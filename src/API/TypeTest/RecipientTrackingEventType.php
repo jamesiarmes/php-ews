@@ -43,6 +43,10 @@ class RecipientTrackingEventType extends TypeTest
      */
     protected $date = null;
 
+    protected $_typeMap = array(
+        'date' => 'dateTime',
+    );
+
     /**
      * @property \jamesiarmes\PEWS\API\TypeTest\EmailAddressType $recipient
      */

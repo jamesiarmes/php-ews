@@ -166,6 +166,11 @@ class ContactItemType extends ItemType
      */
     protected $birthday = null;
 
+    protected $_typeMap = array(
+        'birthday' => 'dateTime',
+        'weddingAnniversary' => 'dateTime',
+    );
+
     /**
      * @property string $businessHomePage
      */

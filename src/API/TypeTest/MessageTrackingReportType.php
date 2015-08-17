@@ -49,6 +49,10 @@ class MessageTrackingReportType extends TypeTest
      */
     protected $submitTime = null;
 
+    protected $_typeMap = array(
+        'submitTime' => 'dateTime',
+    );
+
     /**
      * @property array $originalRecipients
      */

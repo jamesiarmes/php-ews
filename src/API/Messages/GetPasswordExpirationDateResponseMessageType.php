@@ -20,6 +20,10 @@ class GetPasswordExpirationDateResponseMessageType extends ResponseMessageType
      */
     protected $passwordExpirationDate = null;
 
+    protected $_typeMap = array(
+        'passwordExpirationDate' => 'dateTime',
+    );
+
 
 }
 

@@ -55,6 +55,10 @@ class ConversationActionType extends TypeTest
      */
     protected $conversationLastSyncTime = null;
 
+    protected $_typeMap = array(
+        'conversationLastSyncTime' => 'dateTime',
+    );
+
     /**
      * @property boolean $processRightAway
      */

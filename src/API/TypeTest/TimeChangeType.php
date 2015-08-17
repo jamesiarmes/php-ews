@@ -45,6 +45,11 @@ class TimeChangeType extends TypeTest
      */
     protected $absoluteDate = null;
 
+    protected $_typeMap = array(
+        'absoluteDate' => 'date',
+        'time' => 'time',
+    );
+
     /**
      * @property \DateTime $time
      */

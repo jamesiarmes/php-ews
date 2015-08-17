@@ -69,6 +69,10 @@ class SuggestionsViewOptionsType extends TypeTest
      */
     protected $currentMeetingTime = null;
 
+    protected $_typeMap = array(
+        'currentMeetingTime' => 'dateTime',
+    );
+
     /**
      * @property string $globalObjectId
      */

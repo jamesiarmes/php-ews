@@ -109,6 +109,15 @@ class CalendarItemType extends ItemType
      */
     protected $recurrenceId = null;
 
+    protected $_typeMap = array(
+        'recurrenceId' => 'dateTime',
+        'dateTimeStamp' => 'dateTime',
+        'start' => 'dateTime',
+        'end' => 'dateTime',
+        'originalStart' => 'dateTime',
+        'appointmentReplyTime' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $dateTimeStamp
      */

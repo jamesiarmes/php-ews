@@ -21,6 +21,11 @@ class CalendarViewType extends BasePagingType
      */
     protected $startDate = null;
 
+    protected $_typeMap = array(
+        'startDate' => 'dateTime',
+        'endDate' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $endDate
      */

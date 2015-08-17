@@ -25,6 +25,10 @@ class SuggestionDayResultType extends TypeTest
      */
     protected $date = null;
 
+    protected $_typeMap = array(
+        'date' => 'dateTime',
+    );
+
     /**
      * @property string $dayQuality
      */

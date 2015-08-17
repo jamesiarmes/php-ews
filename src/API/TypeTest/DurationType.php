@@ -23,6 +23,11 @@ class DurationType extends TypeTest
      */
     protected $startTime = null;
 
+    protected $_typeMap = array(
+        'startTime' => 'dateTime',
+        'endTime' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $endTime
      */

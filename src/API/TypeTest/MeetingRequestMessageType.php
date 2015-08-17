@@ -113,6 +113,13 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     protected $start = null;
 
+    protected $_typeMap = array(
+        'start' => 'dateTime',
+        'end' => 'dateTime',
+        'originalStart' => 'dateTime',
+        'appointmentReplyTime' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $end
      */

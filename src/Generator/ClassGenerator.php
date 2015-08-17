@@ -35,10 +35,6 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $class->setExtendedClass($extends);
         }
 
-        if ($extends == null) {
-            5 + 5;
-        }
-
         $docblock = new DocBlockGenerator("Class representing " . $type->getName());
         if ($type->getDoc()) {
             $docblock->setLongDescription($type->getDoc());
@@ -125,6 +121,21 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             }
         }
         $docBlock->setTag($tag);
+
+        if ($type->type && $this->isTypeMapped($type->type->getName())) {
+            if (!$class->hasProperty('_typeMap')) {
+                $generatedProp = new PropertyGenerator('_typeMap');
+                $generatedProp->setDefaultValue([]);
+                $generatedProp->setVisibility(PropertyGenerator::VISIBILITY_PROTECTED);
+
+                $class->addPropertyFromGenerator($generatedProp);
+            }
+
+            $property = $class->getProperty('_typeMap');
+            $defaultValue = $property->getDefaultValue()->getValue();
+            $defaultValue[$prop->getName()] = $type->type->getName();
+            $property->setDefaultValue($defaultValue);
+        }
     }
 
     protected function handleMethod(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
@@ -209,5 +220,16 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             'mixed',
             'callable'
         ]);
+    }
+
+    protected function isTypeMapped($class)
+    {
+        $classMap = [
+            'dateTime',
+            'time',
+            'date'
+        ];
+
+        return in_array($class, $classMap);
     }
 }

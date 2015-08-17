@@ -58,6 +58,10 @@ class PostItemType extends ItemType
      */
     protected $postedTime = null;
 
+    protected $_typeMap = array(
+        'postedTime' => 'dateTime',
+    );
+
     /**
      * @property string $references
      */

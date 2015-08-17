@@ -59,6 +59,10 @@ class FindMessageTrackingSearchResultType extends TypeTest
      */
     protected $submittedTime = null;
 
+    protected $_typeMap = array(
+        'submittedTime' => 'dateTime',
+    );
+
     /**
      * @property string $messageTrackingReportId
      */

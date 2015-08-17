@@ -32,6 +32,12 @@ class OccurrenceInfoType extends TypeTest
      */
     protected $start = null;
 
+    protected $_typeMap = array(
+        'start' => 'dateTime',
+        'end' => 'dateTime',
+        'originalStart' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $end
      */

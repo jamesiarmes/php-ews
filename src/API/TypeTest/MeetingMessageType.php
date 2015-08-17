@@ -64,6 +64,11 @@ class MeetingMessageType extends MessageType
      */
     protected $recurrenceId = null;
 
+    protected $_typeMap = array(
+        'recurrenceId' => 'dateTime',
+        'dateTimeStamp' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $dateTimeStamp
      */

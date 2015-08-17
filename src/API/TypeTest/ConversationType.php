@@ -116,6 +116,11 @@ class ConversationType extends TypeTest
      */
     protected $lastDeliveryTime = null;
 
+    protected $_typeMap = array(
+        'lastDeliveryTime' => 'dateTime',
+        'globalLastDeliveryTime' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $globalLastDeliveryTime
      */
