@@ -27,6 +27,10 @@ class SuggestionType extends TypeTest
      */
     protected $meetingTime = null;
 
+    protected $_typeMap = array(
+        'meetingTime' => 'dateTime',
+    );
+
     /**
      * @property boolean $isWorkTime
      */

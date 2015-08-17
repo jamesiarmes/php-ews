@@ -66,6 +66,11 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     protected $fromDate = null;
 
+    protected $_typeMap = array(
+        'fromDate' => 'dateTime',
+        'toDate' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $toDate
      */

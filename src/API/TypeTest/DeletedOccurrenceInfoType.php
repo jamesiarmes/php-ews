@@ -21,6 +21,10 @@ class DeletedOccurrenceInfoType extends TypeTest
      */
     protected $start = null;
 
+    protected $_typeMap = array(
+        'start' => 'dateTime',
+    );
+
 
 }
 

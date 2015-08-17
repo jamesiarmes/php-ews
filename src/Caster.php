@@ -62,9 +62,39 @@ class Caster
                 }
             ],
 
+            'dateTime' => [
+                'string' => function ($value) {
+                    return new \DateTime($value);
+                }
+            ],
+
+            'date' => [
+                'string' => function ($value) {
+                    return new \DateTime($value);
+                }
+            ],
+
+            'time' => [
+                'string' => function ($value) {
+                    return new \DateTime($value);
+                }
+            ],
+
             'ExchangeFormat' => [
                 'DateTime' => function ($value) {
                     return $value->format('c');
+                },
+
+                'dateTime' => function ($value) {
+                    return $value->format('c');
+                },
+
+                'date' => function ($value) {
+                    return $value->format('Y-m-d');
+                },
+
+                'time' => function ($value) {
+                    return $value->format('H:i:s');
                 }
             ]
         ];

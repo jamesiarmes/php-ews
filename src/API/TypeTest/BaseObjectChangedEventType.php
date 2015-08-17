@@ -25,6 +25,10 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     protected $timeStamp = null;
 
+    protected $_typeMap = array(
+        'timeStamp' => 'dateTime',
+    );
+
     /**
      * @property \jamesiarmes\PEWS\API\TypeTest\FolderIdType $folderId
      */

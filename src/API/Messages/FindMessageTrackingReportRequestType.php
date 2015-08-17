@@ -76,6 +76,11 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     protected $startDateTime = null;
 
+    protected $_typeMap = array(
+        'startDateTime' => 'dateTime',
+        'endDateTime' => 'dateTime',
+    );
+
     /**
      * @property \DateTime $endDateTime
      */

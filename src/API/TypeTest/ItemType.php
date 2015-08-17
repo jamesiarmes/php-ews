@@ -138,6 +138,14 @@ class ItemType extends TypeTest
      */
     protected $dateTimeReceived = null;
 
+    protected $_typeMap = array(
+        'dateTimeReceived' => 'dateTime',
+        'dateTimeSent' => 'dateTime',
+        'dateTimeCreated' => 'dateTime',
+        'reminderDueBy' => 'dateTime',
+        'lastModifiedTime' => 'dateTime',
+    );
+
     /**
      * @property integer $size
      */

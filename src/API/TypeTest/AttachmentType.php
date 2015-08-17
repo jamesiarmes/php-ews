@@ -65,6 +65,10 @@ class AttachmentType extends TypeTest
      */
     protected $lastModifiedTime = null;
 
+    protected $_typeMap = array(
+        'lastModifiedTime' => 'dateTime',
+    );
+
     /**
      * @property boolean $isInline
      */

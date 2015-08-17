@@ -19,6 +19,10 @@ class AbsoluteDateTransitionType extends TransitionType
      */
     protected $dateTime = null;
 
+    protected $_typeMap = array(
+        'dateTime' => 'dateTime',
+    );
+
 
 }
 

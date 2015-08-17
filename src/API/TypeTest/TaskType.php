@@ -66,6 +66,13 @@ class TaskType extends ItemType
      */
     protected $assignedTime = null;
 
+    protected $_typeMap = array(
+        'assignedTime' => 'dateTime',
+        'completeDate' => 'dateTime',
+        'dueDate' => 'dateTime',
+        'startDate' => 'dateTime',
+    );
+
     /**
      * @property string $billingInformation
      */

@@ -21,6 +21,10 @@ class RecurrenceRangeBaseType extends TypeTest
      */
     protected $startDate = null;
 
+    protected $_typeMap = array(
+        'startDate' => 'date',
+    );
+
 
 }
 

@@ -35,6 +35,10 @@ class AttendeeType extends TypeTest
      */
     protected $lastResponseTime = null;
 
+    protected $_typeMap = array(
+        'lastResponseTime' => 'dateTime',
+    );
+
 
 }
 
