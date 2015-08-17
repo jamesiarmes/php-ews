@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderHierarchyChangesType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderHierarchyChangesType getDelete()
  * @method SyncFolderHierarchyChangesType setDelete($delete)
  */
-class SyncFolderHierarchyChangesType extends Type
+class SyncFolderHierarchyChangesType extends TypeTest
 {
 
     /**

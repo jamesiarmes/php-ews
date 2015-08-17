@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing WorkingHoursType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method WorkingHoursType getWorkingPeriodArray()
  * @method WorkingHoursType setWorkingPeriodArray($workingPeriodArray)
  */
-class WorkingHoursType extends Type
+class WorkingHoursType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RequestTypeHeaderType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RequestTypeHeaderType getRequestType()
  * @method RequestTypeHeaderType setRequestType($requestType)
  */
-class RequestTypeHeaderType extends Type
+class RequestTypeHeaderType extends TypeTest
 {
 
     /**

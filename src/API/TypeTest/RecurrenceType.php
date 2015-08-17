@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RecurrenceType
@@ -29,7 +29,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RecurrenceType getNumberedRecurrence()
  * @method RecurrenceType setNumberedRecurrence($numberedRecurrence)
  */
-class RecurrenceType extends Type
+class RecurrenceType extends TypeTest
 {
 
     /**

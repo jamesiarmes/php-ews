@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing StreamingSubscriptionRequestType
@@ -18,7 +18,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method StreamingSubscriptionRequestType getEventTypes()
  * @method StreamingSubscriptionRequestType setEventTypes($eventTypes)
  */
-class StreamingSubscriptionRequestType extends Type
+class StreamingSubscriptionRequestType extends TypeTest
 {
 
     /**

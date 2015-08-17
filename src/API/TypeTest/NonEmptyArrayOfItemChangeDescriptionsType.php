@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfItemChangeDescriptionsType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfItemChangeDescriptionsType
  * setDeleteItemField($deleteItemField)
  */
-class NonEmptyArrayOfItemChangeDescriptionsType extends Type
+class NonEmptyArrayOfItemChangeDescriptionsType extends TypeTest
 {
 
     /**

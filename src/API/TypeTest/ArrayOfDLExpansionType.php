@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfDLExpansionType
@@ -24,7 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfDLExpansionType getMailbox()
  * @method ArrayOfDLExpansionType setMailbox($mailbox)
  */
-class ArrayOfDLExpansionType extends Type
+class ArrayOfDLExpansionType extends TypeTest
 {
 
     /**

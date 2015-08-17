@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing FreeBusyResponseType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FreeBusyResponseType getFreeBusyView()
  * @method FreeBusyResponseType setFreeBusyView($freeBusyView)
  */
-class FreeBusyResponseType extends Type
+class FreeBusyResponseType extends Messages
 {
 
     /**

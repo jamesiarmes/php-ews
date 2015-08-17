@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing CalendarEventType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method CalendarEventType getCalendarEventDetails()
  * @method CalendarEventType setCalendarEventDetails($calendarEventDetails)
  */
-class CalendarEventType extends Type
+class CalendarEventType extends TypeTest
 {
 
     /**

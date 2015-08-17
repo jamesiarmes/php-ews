@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FindFolderParentType
@@ -24,7 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindFolderParentType getFolders()
  * @method FindFolderParentType setFolders($folders)
  */
-class FindFolderParentType extends Type
+class FindFolderParentType extends TypeTest
 {
 
     /**

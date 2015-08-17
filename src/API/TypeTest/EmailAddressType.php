@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing EmailAddressType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method EmailAddressType getRoutingType()
  * @method EmailAddressType setRoutingType($routingType)
  */
-class EmailAddressType extends Type
+class EmailAddressType extends TypeTest
 {
 
     /**

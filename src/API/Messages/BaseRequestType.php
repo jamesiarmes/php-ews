@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing BaseRequestType
@@ -10,7 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseRequestType
  */
-class BaseRequestType extends Type
+class BaseRequestType extends Messages
 {
 
 

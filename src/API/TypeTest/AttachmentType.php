@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing AttachmentType
@@ -27,7 +27,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AttachmentType getIsInline()
  * @method AttachmentType setIsInline($isInline)
  */
-class AttachmentType extends Type
+class AttachmentType extends TypeTest
 {
 
     /**

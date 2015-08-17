@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TimeZoneDefinitionType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TimeZoneDefinitionType getTransitions()
  * @method TimeZoneDefinitionType setTransitions($transitions)
  */
-class TimeZoneDefinitionType extends Type
+class TimeZoneDefinitionType extends TypeTest
 {
 
     /**

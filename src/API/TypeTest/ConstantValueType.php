@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ConstantValueType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ConstantValueType getValue()
  * @method ConstantValueType setValue($value)
  */
-class ConstantValueType extends Type
+class ConstantValueType extends TypeTest
 {
 
     /**

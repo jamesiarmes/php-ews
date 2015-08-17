@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SmtpDomainType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SmtpDomainType getIncludeSubdomains()
  * @method SmtpDomainType setIncludeSubdomains($includeSubdomains)
  */
-class SmtpDomainType extends Type
+class SmtpDomainType extends TypeTest
 {
 
     /**

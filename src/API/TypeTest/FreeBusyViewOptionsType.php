@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FreeBusyViewOptionsType
@@ -18,7 +18,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FreeBusyViewOptionsType getRequestedView()
  * @method FreeBusyViewOptionsType setRequestedView($requestedView)
  */
-class FreeBusyViewOptionsType extends Type
+class FreeBusyViewOptionsType extends TypeTest
 {
 
     /**

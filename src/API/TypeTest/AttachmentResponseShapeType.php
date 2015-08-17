@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing AttachmentResponseShapeType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AttachmentResponseShapeType
  * setAdditionalProperties($additionalProperties)
  */
-class AttachmentResponseShapeType extends Type
+class AttachmentResponseShapeType extends TypeTest
 {
 
     /**

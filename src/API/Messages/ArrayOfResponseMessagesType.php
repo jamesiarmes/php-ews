@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing ArrayOfResponseMessagesType
@@ -146,7 +146,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfResponseMessagesType
  * setGetPasswordExpirationDateResponse($getPasswordExpirationDateResponse)
  */
-class ArrayOfResponseMessagesType extends Type
+class ArrayOfResponseMessagesType extends Messages
 {
 
     /**

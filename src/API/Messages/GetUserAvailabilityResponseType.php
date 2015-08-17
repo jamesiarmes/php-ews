@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing GetUserAvailabilityResponseType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method GetUserAvailabilityResponseType
  * setSuggestionsResponse($suggestionsResponse)
  */
-class GetUserAvailabilityResponseType extends Type
+class GetUserAvailabilityResponseType extends Messages
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SuggestionType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SuggestionType getAttendeeConflictDataArray()
  * @method SuggestionType setAttendeeConflictDataArray($attendeeConflictDataArray)
  */
-class SuggestionType extends Type
+class SuggestionType extends TypeTest
 {
 
     /**

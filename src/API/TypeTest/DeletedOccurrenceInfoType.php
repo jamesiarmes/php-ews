@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing DeletedOccurrenceInfoType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method DeletedOccurrenceInfoType getStart()
  * @method DeletedOccurrenceInfoType setStart($start)
  */
-class DeletedOccurrenceInfoType extends Type
+class DeletedOccurrenceInfoType extends TypeTest
 {
 
     /**

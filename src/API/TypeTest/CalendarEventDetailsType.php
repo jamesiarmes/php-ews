@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing CalendarEventDetailsType
@@ -27,7 +27,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method CalendarEventDetailsType getIsPrivate()
  * @method CalendarEventDetailsType setIsPrivate($isPrivate)
  */
-class CalendarEventDetailsType extends Type
+class CalendarEventDetailsType extends TypeTest
 {
 
     /**

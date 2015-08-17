@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderItemsReadFlagType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderItemsReadFlagType getIsRead()
  * @method SyncFolderItemsReadFlagType setIsRead($isRead)
  */
-class SyncFolderItemsReadFlagType extends Type
+class SyncFolderItemsReadFlagType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ReplyBodyType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ReplyBodyType getMessage()
  * @method ReplyBodyType setMessage($message)
  */
-class ReplyBodyType extends Type
+class ReplyBodyType extends TypeTest
 {
 
     /**

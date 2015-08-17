@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ConflictResultsType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ConflictResultsType getCount()
  * @method ConflictResultsType setCount($count)
  */
-class ConflictResultsType extends Type
+class ConflictResultsType extends TypeTest
 {
 
     /**

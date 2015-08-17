@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing AttendeeType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AttendeeType getLastResponseTime()
  * @method AttendeeType setLastResponseTime($lastResponseTime)
  */
-class AttendeeType extends Type
+class AttendeeType extends TypeTest
 {
 
     /**

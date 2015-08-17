@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FieldURIOrConstantType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FieldURIOrConstantType getConstant()
  * @method FieldURIOrConstantType setConstant($constant)
  */
-class FieldURIOrConstantType extends Type
+class FieldURIOrConstantType extends TypeTest
 {
 
     /**

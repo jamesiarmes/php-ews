@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BasePermissionType
@@ -27,7 +27,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BasePermissionType getDeleteItems()
  * @method BasePermissionType setDeleteItems($deleteItems)
  */
-class BasePermissionType extends Type
+class BasePermissionType extends TypeTest
 {
 
     /**

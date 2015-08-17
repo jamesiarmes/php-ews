@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing OccurrenceInfoType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method OccurrenceInfoType getOriginalStart()
  * @method OccurrenceInfoType setOriginalStart($originalStart)
  */
-class OccurrenceInfoType extends Type
+class OccurrenceInfoType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfPathsToElementType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfPathsToElementType getExtendedFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setExtendedFieldURI($extendedFieldURI)
  */
-class NonEmptyArrayOfPathsToElementType extends Type
+class NonEmptyArrayOfPathsToElementType extends TypeTest
 {
 
     /**

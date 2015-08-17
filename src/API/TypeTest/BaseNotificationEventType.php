@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseNotificationEventType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BaseNotificationEventType getWatermark()
  * @method BaseNotificationEventType setWatermark($watermark)
  */
-class BaseNotificationEventType extends Type
+class BaseNotificationEventType extends TypeTest
 {
 
     /**

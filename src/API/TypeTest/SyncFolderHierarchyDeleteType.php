@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderHierarchyDeleteType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderHierarchyDeleteType getFolderId()
  * @method SyncFolderHierarchyDeleteType setFolderId($folderId)
  */
-class SyncFolderHierarchyDeleteType extends Type
+class SyncFolderHierarchyDeleteType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UserOofSettingsType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UserOofSettingsType getExternalReply()
  * @method UserOofSettingsType setExternalReply($externalReply)
  */
-class UserOofSettingsType extends Type
+class UserOofSettingsType extends TypeTest
 {
 
     /**

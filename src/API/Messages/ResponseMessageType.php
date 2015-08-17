@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing ResponseMessageType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ResponseMessageType getMessageXml()
  * @method ResponseMessageType setMessageXml($messageXml)
  */
-class ResponseMessageType extends Type
+class ResponseMessageType extends Messages
 {
 
     /**

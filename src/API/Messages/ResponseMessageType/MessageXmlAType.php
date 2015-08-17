@@ -2,12 +2,12 @@
 
 namespace jamesiarmes\PEWS\API\Messages\ResponseMessageType;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages\ResponseMessageType;
 
 /**
  * Class representing MessageXmlAType
  */
-class MessageXmlAType extends Type
+class MessageXmlAType extends ResponseMessageType
 {
 
 

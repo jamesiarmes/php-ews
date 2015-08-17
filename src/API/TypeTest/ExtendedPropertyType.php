@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ExtendedPropertyType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ExtendedPropertyType getValues()
  * @method ExtendedPropertyType setValues($values)
  */
-class ExtendedPropertyType extends Type
+class ExtendedPropertyType extends TypeTest
 {
 
     /**

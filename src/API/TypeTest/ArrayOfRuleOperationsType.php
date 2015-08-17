@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfRuleOperationsType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfRuleOperationsType getDeleteRuleOperation()
  * @method ArrayOfRuleOperationsType setDeleteRuleOperation($deleteRuleOperation)
  */
-class ArrayOfRuleOperationsType extends Type
+class ArrayOfRuleOperationsType extends TypeTest
 {
 
     /**

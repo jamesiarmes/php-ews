@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseEmailAddressType
@@ -10,7 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseEmailAddressType
  */
-class BaseEmailAddressType extends Type
+class BaseEmailAddressType extends TypeTest
 {
 
 

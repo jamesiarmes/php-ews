@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing DelegateUserType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method DelegateUserType getViewPrivateItems()
  * @method DelegateUserType setViewPrivateItems($viewPrivateItems)
  */
-class DelegateUserType extends Type
+class DelegateUserType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing CompleteNameType
@@ -31,7 +31,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method CompleteNameType getYomiLastName()
  * @method CompleteNameType setYomiLastName($yomiLastName)
  */
-class CompleteNameType extends Type
+class CompleteNameType extends TypeTest
 {
 
     /**

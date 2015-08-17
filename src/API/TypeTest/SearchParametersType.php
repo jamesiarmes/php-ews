@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SearchParametersType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SearchParametersType getBaseFolderIds()
  * @method SearchParametersType setBaseFolderIds($baseFolderIds)
  */
-class SearchParametersType extends Type
+class SearchParametersType extends TypeTest
 {
 
     /**

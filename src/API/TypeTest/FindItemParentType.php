@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FindItemParentType
@@ -25,7 +25,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindItemParentType getGroups()
  * @method FindItemParentType setGroups($groups)
  */
-class FindItemParentType extends Type
+class FindItemParentType extends TypeTest
 {
 
     /**

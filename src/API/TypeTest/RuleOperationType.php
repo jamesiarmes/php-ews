@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RuleOperationType
@@ -10,7 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  * Represents a rule operation to be performed
  * XSD Type: RuleOperationType
  */
-class RuleOperationType extends Type
+class RuleOperationType extends TypeTest
 {
 
 

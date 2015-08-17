@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing OutOfOfficeMailTipType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method OutOfOfficeMailTipType getDuration()
  * @method OutOfOfficeMailTipType setDuration($duration)
  */
-class OutOfOfficeMailTipType extends Type
+class OutOfOfficeMailTipType extends TypeTest
 {
 
     /**

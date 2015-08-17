@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing EffectiveRightsType
@@ -25,7 +25,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method EffectiveRightsType getViewPrivateItems()
  * @method EffectiveRightsType setViewPrivateItems($viewPrivateItems)
  */
-class EffectiveRightsType extends Type
+class EffectiveRightsType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RuleType
@@ -29,7 +29,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RuleType getActions()
  * @method RuleType setActions($actions)
  */
-class RuleType extends Type
+class RuleType extends TypeTest
 {
 
     /**

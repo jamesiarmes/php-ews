@@ -25,7 +25,7 @@ class CalendarAPI extends API
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
         }
 
-        $this->_folderId = $folder->FolderId;
+        $this->_folderId = $folder->getFolderId();
         return $this;
     }
 
@@ -51,7 +51,7 @@ class CalendarAPI extends API
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
             'SavedItemFolderId' => array(
-                'FolderId' => array('Id' => $this->getFolderId()->Id)
+                'FolderId' => array('Id' => $this->getFolderId()->getId())
             )
         );
 
@@ -94,8 +94,8 @@ class CalendarAPI extends API
             ),
             'ParentFolderIds' => array(
                 'FolderId' => array(
-                    'Id' => $this->getFolderId()->Id,
-                    'ChangeKey' => $this->getFolderId()->ChangeKey
+                    'Id' => $this->getFolderId()->getId(),
+                    'ChangeKey' => $this->getFolderId()->getChangeKey()
                 )
             )
         );
@@ -104,16 +104,16 @@ class CalendarAPI extends API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        $items = $response;
-        if (!isset($items->CalendarItem)) {
+        $items = $response->getItems()->getCalendarItem();
+        if ($items == null) {
             return array();
         }
 
-        if (!is_array($items->CalendarItem)) {
-            $items->CalendarItem = array($items->CalendarItem);
+        if (!is_array($items)) {
+            $items = array($items);
         }
 
-        return $items->CalendarItem;
+        return $items;
     }
 
     public function getCalendarItem($id, $changeKey)
@@ -185,7 +185,7 @@ class CalendarAPI extends API
     {
         $items = $this->getCalendarItems($start, $end, $options);
         foreach ($items as $item) {
-            $this->deleteCalendarItem($item->ItemId->Id, $item->ItemId->ChangeKey);
+            $this->deleteCalendarItem($item->getItemId()->getId(), $item->getItemId()->getChangeKey());
         }
     }
 

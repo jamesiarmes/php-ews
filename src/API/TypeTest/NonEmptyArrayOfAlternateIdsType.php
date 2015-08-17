@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfAlternateIdsType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfAlternateIdsType
  * setAlternatePublicFolderItemId($alternatePublicFolderItemId)
  */
-class NonEmptyArrayOfAlternateIdsType extends Type
+class NonEmptyArrayOfAlternateIdsType extends TypeTest
 {
 
     /**

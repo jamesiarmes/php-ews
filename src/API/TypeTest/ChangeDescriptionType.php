@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ChangeDescriptionType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ChangeDescriptionType getExtendedFieldURI()
  * @method ChangeDescriptionType setExtendedFieldURI($extendedFieldURI)
  */
-class ChangeDescriptionType extends Type
+class ChangeDescriptionType extends TypeTest
 {
 
     /**

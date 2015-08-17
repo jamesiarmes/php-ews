@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing UserConfigurationType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method UserConfigurationType getBinaryData()
  * @method UserConfigurationType setBinaryData($binaryData)
  */
-class UserConfigurationType extends Type
+class UserConfigurationType extends TypeTest
 {
 
     /**

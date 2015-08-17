@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing MailboxStatisticsSearchResultType
@@ -16,7 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method MailboxStatisticsSearchResultType
  * setKeywordStatisticsSearchResult($keywordStatisticsSearchResult)
  */
-class MailboxStatisticsSearchResultType extends Type
+class MailboxStatisticsSearchResultType extends TypeTest
 {
 
     /**

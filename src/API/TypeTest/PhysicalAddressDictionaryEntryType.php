@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing PhysicalAddressDictionaryEntryType
@@ -23,7 +23,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PhysicalAddressDictionaryEntryType getPostalCode()
  * @method PhysicalAddressDictionaryEntryType setPostalCode($postalCode)
  */
-class PhysicalAddressDictionaryEntryType extends Type
+class PhysicalAddressDictionaryEntryType extends TypeTest
 {
 
     /**

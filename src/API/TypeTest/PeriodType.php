@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing PeriodType
@@ -17,7 +17,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PeriodType getId()
  * @method PeriodType setId($id)
  */
-class PeriodType extends Type
+class PeriodType extends TypeTest
 {
 
     /**

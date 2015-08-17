@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing PhoneCallInformationType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PhoneCallInformationType getSIPResponseCode()
  * @method PhoneCallInformationType setSIPResponseCode($sIPResponseCode)
  */
-class PhoneCallInformationType extends Type
+class PhoneCallInformationType extends TypeTest
 {
 
     /**

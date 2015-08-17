@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfAttendeeConflictDataType
@@ -23,7 +23,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfAttendeeConflictDataType
  * setGroupAttendeeConflictData($groupAttendeeConflictData)
  */
-class ArrayOfAttendeeConflictDataType extends Type
+class ArrayOfAttendeeConflictDataType extends TypeTest
 {
 
     /**

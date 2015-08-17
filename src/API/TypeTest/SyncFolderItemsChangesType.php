@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderItemsChangesType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderItemsChangesType getReadFlagChange()
  * @method SyncFolderItemsChangesType setReadFlagChange($readFlagChange)
  */
-class SyncFolderItemsChangesType extends Type
+class SyncFolderItemsChangesType extends TypeTest
 {
 
     /**

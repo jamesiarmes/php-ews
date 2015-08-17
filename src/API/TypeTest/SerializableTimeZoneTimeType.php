@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SerializableTimeZoneTimeType
@@ -23,7 +23,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SerializableTimeZoneTimeType getYear()
  * @method SerializableTimeZoneTimeType setYear($year)
  */
-class SerializableTimeZoneTimeType extends Type
+class SerializableTimeZoneTimeType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FindMessageTrackingSearchResultType
@@ -31,7 +31,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindMessageTrackingSearchResultType getProperties()
  * @method FindMessageTrackingSearchResultType setProperties($properties)
  */
-class FindMessageTrackingSearchResultType extends Type
+class FindMessageTrackingSearchResultType extends TypeTest
 {
 
     /**

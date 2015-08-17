@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TimeChangeType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TimeChangeType getTime()
  * @method TimeChangeType setTime($time)
  */
-class TimeChangeType extends Type
+class TimeChangeType extends TypeTest
 {
 
     /**

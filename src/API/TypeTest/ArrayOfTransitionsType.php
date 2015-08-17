@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfTransitionsType
@@ -24,7 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfTransitionsType getTransition()
  * @method ArrayOfTransitionsType setTransition($transition)
  */
-class ArrayOfTransitionsType extends Type
+class ArrayOfTransitionsType extends TypeTest
 {
 
     /**

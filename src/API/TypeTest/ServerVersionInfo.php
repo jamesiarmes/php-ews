@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ServerVersionInfo
@@ -18,7 +18,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ServerVersionInfo getVersion()
  * @method ServerVersionInfo setVersion($version)
  */
-class ServerVersionInfo extends Type
+class ServerVersionInfo extends TypeTest
 {
 
     /**

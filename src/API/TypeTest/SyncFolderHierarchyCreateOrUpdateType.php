@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderHierarchyCreateOrUpdateType
@@ -21,7 +21,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderHierarchyCreateOrUpdateType getTasksFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setTasksFolder($tasksFolder)
  */
-class SyncFolderHierarchyCreateOrUpdateType extends Type
+class SyncFolderHierarchyCreateOrUpdateType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing SetUserOofSettingsResponseType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SetUserOofSettingsResponseType getResponseMessage()
  * @method SetUserOofSettingsResponseType setResponseMessage($responseMessage)
  */
-class SetUserOofSettingsResponseType extends Type
+class SetUserOofSettingsResponseType extends Messages
 {
 
     /**

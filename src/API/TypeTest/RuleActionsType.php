@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RuleActionsType
@@ -38,7 +38,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RuleActionsType getStopProcessingRules()
  * @method RuleActionsType setStopProcessingRules($stopProcessingRules)
  */
-class RuleActionsType extends Type
+class RuleActionsType extends TypeTest
 {
 
     /**

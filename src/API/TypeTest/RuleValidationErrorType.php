@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RuleValidationErrorType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RuleValidationErrorType getFieldValue()
  * @method RuleValidationErrorType setFieldValue($fieldValue)
  */
-class RuleValidationErrorType extends Type
+class RuleValidationErrorType extends TypeTest
 {
 
     /**

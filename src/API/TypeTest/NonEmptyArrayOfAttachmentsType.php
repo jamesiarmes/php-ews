@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfAttachmentsType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfAttachmentsType getFileAttachment()
  * @method NonEmptyArrayOfAttachmentsType setFileAttachment($fileAttachment)
  */
-class NonEmptyArrayOfAttachmentsType extends Type
+class NonEmptyArrayOfAttachmentsType extends TypeTest
 {
 
     /**

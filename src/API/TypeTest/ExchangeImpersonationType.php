@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ExchangeImpersonationType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ExchangeImpersonationType getConnectingSID()
  * @method ExchangeImpersonationType setConnectingSID($connectingSID)
  */
-class ExchangeImpersonationType extends Type
+class ExchangeImpersonationType extends TypeTest
 {
 
     /**

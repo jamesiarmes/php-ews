@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TaskRecurrenceType
@@ -41,7 +41,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TaskRecurrenceType getNumberedRecurrence()
  * @method TaskRecurrenceType setNumberedRecurrence($numberedRecurrence)
  */
-class TaskRecurrenceType extends Type
+class TaskRecurrenceType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ArrayOfTrackingPropertiesType
@@ -14,7 +14,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfTrackingPropertiesType
  * setTrackingPropertyType($trackingPropertyType)
  */
-class ArrayOfTrackingPropertiesType extends Type
+class ArrayOfTrackingPropertiesType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing EncryptedDataContainerType
@@ -10,7 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EncryptedDataContainerType
  */
-class EncryptedDataContainerType extends Type
+class EncryptedDataContainerType extends TypeTest
 {
 
 

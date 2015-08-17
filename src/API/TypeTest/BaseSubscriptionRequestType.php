@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseSubscriptionRequestType
@@ -20,7 +20,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BaseSubscriptionRequestType getWatermark()
  * @method BaseSubscriptionRequestType setWatermark($watermark)
  */
-class BaseSubscriptionRequestType extends Type
+class BaseSubscriptionRequestType extends TypeTest
 {
 
     /**

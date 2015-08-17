@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ResolutionType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ResolutionType getContact()
  * @method ResolutionType setContact($contact)
  */
-class ResolutionType extends Type
+class ResolutionType extends TypeTest
 {
 
     /**

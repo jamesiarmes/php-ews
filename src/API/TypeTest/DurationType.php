@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing DurationType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method DurationType getEndTime()
  * @method DurationType setEndTime($endTime)
  */
-class DurationType extends Type
+class DurationType extends TypeTest
 {
 
     /**

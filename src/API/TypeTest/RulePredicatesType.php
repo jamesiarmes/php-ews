@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RulePredicatesType
@@ -81,7 +81,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RulePredicatesType getWithinSizeRange()
  * @method RulePredicatesType setWithinSizeRange($withinSizeRange)
  */
-class RulePredicatesType extends Type
+class RulePredicatesType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing TargetFolderIdType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method TargetFolderIdType getDistinguishedFolderId()
  * @method TargetFolderIdType setDistinguishedFolderId($distinguishedFolderId)
  */
-class TargetFolderIdType extends Type
+class TargetFolderIdType extends TypeTest
 {
 
     /**

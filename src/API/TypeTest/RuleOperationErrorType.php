@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RuleOperationErrorType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RuleOperationErrorType getValidationErrors()
  * @method RuleOperationErrorType setValidationErrors($validationErrors)
  */
-class RuleOperationErrorType extends Type
+class RuleOperationErrorType extends TypeTest
 {
 
     /**

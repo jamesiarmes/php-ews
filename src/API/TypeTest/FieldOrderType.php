@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing FieldOrderType
@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FieldOrderType getExtendedFieldURI()
  * @method FieldOrderType setExtendedFieldURI($extendedFieldURI)
  */
-class FieldOrderType extends Type
+class FieldOrderType extends TypeTest
 {
 
     /**

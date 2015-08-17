@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ManagedFolderInformationType
@@ -32,7 +32,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ManagedFolderInformationType getHomePage()
  * @method ManagedFolderInformationType setHomePage($homePage)
  */
-class ManagedFolderInformationType extends Type
+class ManagedFolderInformationType extends TypeTest
 {
 
     /**

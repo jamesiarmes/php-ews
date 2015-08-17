@@ -22,12 +22,21 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 {
     public function generate(Generator\ClassGenerator $class, PHPClass $type)
     {
-        if (!($extends = $type->getExtends())) {
+        if (!($extends = $type->getExtends()) && class_exists($type->getNamespace())) {
+            $extendNamespace = $type->getNamespace();
+            $extendNamespace = explode('\\', $extendNamespace);
+            $extendClass = array_pop($extendNamespace);
+            $extendNamespace = implode('\\', $extendNamespace);
+
             $extends = new PHPClass();
-            $extends->setName('Type');
-            $extends->setNamespace('jamesiarmes\PEWS\API');
+            $extends->setName($extendClass);
+            $extends->setNamespace($extendNamespace);
 
             $class->setExtendedClass($extends);
+        }
+
+        if ($extends == null) {
+            5 + 5;
         }
 
         $docblock = new DocBlockGenerator("Class representing " . $type->getName());

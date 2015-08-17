@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing NonEmptyArrayOfBaseFolderIdsType
@@ -16,7 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NonEmptyArrayOfBaseFolderIdsType
  * setDistinguishedFolderId($distinguishedFolderId)
  */
-class NonEmptyArrayOfBaseFolderIdsType extends Type
+class NonEmptyArrayOfBaseFolderIdsType extends TypeTest
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing SuggestionsResponseType
@@ -16,7 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SuggestionsResponseType
  * setSuggestionDayResultArray($suggestionDayResultArray)
  */
-class SuggestionsResponseType extends Type
+class SuggestionsResponseType extends Messages
 {
 
     /**

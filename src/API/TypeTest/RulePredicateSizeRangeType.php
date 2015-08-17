@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RulePredicateSizeRangeType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RulePredicateSizeRangeType getMaximumSize()
  * @method RulePredicateSizeRangeType setMaximumSize($maximumSize)
  */
-class RulePredicateSizeRangeType extends Type
+class RulePredicateSizeRangeType extends TypeTest
 {
 
     /**

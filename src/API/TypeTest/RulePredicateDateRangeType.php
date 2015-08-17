@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing RulePredicateDateRangeType
@@ -15,7 +15,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method RulePredicateDateRangeType getEndDateTime()
  * @method RulePredicateDateRangeType setEndDateTime($endDateTime)
  */
-class RulePredicateDateRangeType extends Type
+class RulePredicateDateRangeType extends TypeTest
 {
 
     /**

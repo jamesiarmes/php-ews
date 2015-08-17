@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\Messages;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Messages;
 
 /**
  * Class representing BaseResponseMessageType
@@ -13,7 +13,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method BaseResponseMessageType getResponseMessages()
  * @method BaseResponseMessageType setResponseMessages($responseMessages)
  */
-class BaseResponseMessageType extends Type
+class BaseResponseMessageType extends Messages
 {
 
     /**

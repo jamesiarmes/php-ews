@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing SyncFolderItemsCreateOrUpdateType
@@ -34,7 +34,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method SyncFolderItemsCreateOrUpdateType getPostItem()
  * @method SyncFolderItemsCreateOrUpdateType setPostItem($postItem)
  */
-class SyncFolderItemsCreateOrUpdateType extends Type
+class SyncFolderItemsCreateOrUpdateType extends TypeTest
 {
 
     /**

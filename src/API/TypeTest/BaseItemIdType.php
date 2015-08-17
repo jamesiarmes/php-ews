@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing BaseItemIdType
@@ -11,7 +11,7 @@ use jamesiarmes\PEWS\API\Type;
  * calls
  * XSD Type: BaseItemIdType
  */
-class BaseItemIdType extends Type
+class BaseItemIdType extends TypeTest
 {
 
 
