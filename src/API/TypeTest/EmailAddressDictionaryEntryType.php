@@ -2,8 +2,6 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \string;
-
 /**
  * Class representing EmailAddressDictionaryEntryType
  *
@@ -19,7 +17,7 @@ use \string;
  * @method EmailAddressDictionaryEntryType getMailboxType()
  * @method EmailAddressDictionaryEntryType setMailboxType(string $mailboxType)
  */
-class EmailAddressDictionaryEntryType extends string
+class EmailAddressDictionaryEntryType extends String
 {
 
     /**

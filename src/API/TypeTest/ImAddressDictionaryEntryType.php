@@ -2,8 +2,6 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \string;
-
 /**
  * Class representing ImAddressDictionaryEntryType
  *
@@ -13,7 +11,7 @@ use \string;
  * @method ImAddressDictionaryEntryType getKey()
  * @method ImAddressDictionaryEntryType setKey(string $key)
  */
-class ImAddressDictionaryEntryType extends string
+class ImAddressDictionaryEntryType extends String
 {
 
     /**
