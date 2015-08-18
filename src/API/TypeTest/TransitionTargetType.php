@@ -2,8 +2,6 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \string;
-
 /**
  * Class representing TransitionTargetType
  *
@@ -13,7 +11,7 @@ use \string;
  * @method TransitionTargetType getKind()
  * @method TransitionTargetType setKind(string $kind)
  */
-class TransitionTargetType extends string
+class TransitionTargetType extends String
 {
 
     /**

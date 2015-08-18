@@ -2,8 +2,6 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \string;
-
 /**
  * Class representing ValueType
  *
@@ -13,7 +11,7 @@ use \string;
  * @method ValueType getName()
  * @method ValueType setName(string $name)
  */
-class ValueType extends string
+class ValueType extends String
 {
 
     /**

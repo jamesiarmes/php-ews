@@ -34,6 +34,13 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $class->setExtendedClass($extends);
         }
 
+        if ($extends->getName() == "string"
+            && $extends->getNamespace() == ""
+            && class_exists($type->getNamespace() . '\\String')) {
+            $extends->setName('String');
+            $extends->setNamespace($type->getNamespace());
+        }
+
         $docblock = new DocBlockGenerator("Class representing " . $type->getName());
         if ($type->getDoc()) {
             $docblock->setLongDescription($type->getDoc());
@@ -42,6 +49,9 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $class->setName($type->getName());
         $class->setDocblock($docblock);
 
+        if ($extends->getName() == "string") {
+            5 + 5;
+        }
 
         $class->setExtendedClass($extends->getName());
 
@@ -87,7 +97,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
         $class->addPropertyFromGenerator($generatedProp);
 
-        if ($prop->getType() && (! $prop->getType()->getNamespace() && $prop->getType()->getName() == "array")) {
+        if ($prop->getType() && (!$prop->getType()->getNamespace() && $prop->getType()->getName() == "array")) {
             // $generatedProp->setDefaultValue(array(), PropertyValueGenerator::TYPE_AUTO, PropertyValueGenerator::OUTPUT_SINGLE_LINE);
         }
 
@@ -144,6 +154,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $tag->setName($fullName);
 
         $docblock->setTag($tag);
+
         return;
     }
 
@@ -171,6 +182,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $tag->setName($fullName);
 
         $docblock->setTag($tag);
+
         return;
     }
 
@@ -192,18 +204,20 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
     protected function getPhpType(PHPClass $class)
     {
-        if (! $class->getNamespace()) {
+        if (!$class->getNamespace()) {
             if ($this->isNativeType($class)) {
                 return $class->getName();
             }
+
             return "\\" . $class->getName();
         }
+
         return "\\" . $class->getFullName();
     }
 
     protected function isNativeType(PHPClass $class)
     {
-        return ! $class->getNamespace() && in_array($class->getName(), [
+        return !$class->getNamespace() && in_array($class->getName(), [
             'string',
             'int',
             'float',

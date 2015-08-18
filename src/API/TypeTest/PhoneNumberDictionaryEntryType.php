@@ -2,8 +2,6 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \string;
-
 /**
  * Class representing PhoneNumberDictionaryEntryType
  *
@@ -13,7 +11,7 @@ use \string;
  * @method PhoneNumberDictionaryEntryType getKey()
  * @method PhoneNumberDictionaryEntryType setKey(string $key)
  */
-class PhoneNumberDictionaryEntryType extends string
+class PhoneNumberDictionaryEntryType extends String
 {
 
     /**
