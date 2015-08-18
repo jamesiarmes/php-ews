@@ -49,10 +49,6 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $class->setName($type->getName());
         $class->setDocblock($docblock);
 
-        if ($extends->getName() == "string") {
-            5 + 5;
-        }
-
         $class->setExtendedClass($extends->getName());
 
         if ($extends->getNamespace() != $type->getNamespace()) {
