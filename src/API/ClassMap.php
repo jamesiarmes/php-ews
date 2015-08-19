@@ -15,7 +15,11 @@ class ClassMap
         return [
             'CalendarItemType' => '\jamesiarmes\PEWS\API\Type\CalendarItem',
             'BodyType' => '\jamesiarmes\PEWS\API\Type\Body',
-            'MessageType' => '\jamesiarmes\PEWS\API\Type\Message'
+            'MessageType' => '\jamesiarmes\PEWS\API\Type\Message',
+            'ParentFolderIds' => '\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType',
+            'Mailbox' => '\jamesiarmes\PEWS\API\Type\MailboxData',
+            'EmailAddress' => '\jamesiarmes\PEWS\API\Type\EmailAddressType',
+            'DistinguishedFolderId' => '\jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType'
         ];
     }
 }
