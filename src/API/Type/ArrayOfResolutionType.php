@@ -55,7 +55,4 @@ class ArrayOfResolutionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ResolutionType[] $resolution
      */
     protected $resolution = null;
-
-
 }
-

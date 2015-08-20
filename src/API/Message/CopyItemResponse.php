@@ -10,4 +10,3 @@ class CopyItemResponse extends CopyItemResponseType
 
 
 }
-

@@ -10,4 +10,3 @@ class GetUserOofSettingsRequest extends GetUserOofSettingsRequestType
 
 
 }
-

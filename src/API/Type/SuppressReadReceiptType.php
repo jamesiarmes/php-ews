@@ -13,4 +13,3 @@ class SuppressReadReceiptType extends ReferenceItemResponseType
 
 
 }
-

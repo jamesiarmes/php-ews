@@ -18,7 +18,4 @@ class GetDelegateResponseMessageType extends BaseDelegateResponseMessageType
      * @property string $deliverMeetingRequests
      */
     protected $deliverMeetingRequests = null;
-
-
 }
-

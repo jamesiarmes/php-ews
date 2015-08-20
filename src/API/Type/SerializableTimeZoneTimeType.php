@@ -55,7 +55,4 @@ class SerializableTimeZoneTimeType extends Type
      * @property string $year
      */
     protected $year = null;
-
-
 }
-

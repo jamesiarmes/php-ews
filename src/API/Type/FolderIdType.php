@@ -25,7 +25,4 @@ class FolderIdType extends BaseFolderIdType
      * @property string $changeKey
      */
     protected $changeKey = null;
-
-
 }
-

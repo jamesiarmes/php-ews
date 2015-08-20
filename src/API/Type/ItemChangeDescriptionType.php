@@ -13,4 +13,3 @@ class ItemChangeDescriptionType extends ChangeDescriptionType
 
 
 }
-

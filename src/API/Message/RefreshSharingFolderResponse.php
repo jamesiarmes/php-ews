@@ -10,4 +10,3 @@ class RefreshSharingFolderResponse extends RefreshSharingFolderResponseMessageTy
 
 
 }
-

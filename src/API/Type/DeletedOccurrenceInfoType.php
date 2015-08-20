@@ -24,7 +24,4 @@ class DeletedOccurrenceInfoType extends Type
     protected $_typeMap = array(
         'start' => 'dateTime',
     );
-
-
 }
-

@@ -18,7 +18,4 @@ class GetUserConfigurationResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\UserConfigurationType $userConfiguration
      */
     protected $userConfiguration = null;
-
-
 }
-

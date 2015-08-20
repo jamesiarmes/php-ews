@@ -32,7 +32,4 @@ class BaseMoveCopyItemType extends BaseRequestType
      * @property boolean $returnNewItemIds
      */
     protected $returnNewItemIds = null;
-
-
 }
-

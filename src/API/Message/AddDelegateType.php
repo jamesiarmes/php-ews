@@ -25,7 +25,4 @@ class AddDelegateType extends BaseDelegateType
      * @property string $deliverMeetingRequests
      */
     protected $deliverMeetingRequests = null;
-
-
 }
-

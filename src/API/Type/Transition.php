@@ -10,4 +10,3 @@ class Transition extends TransitionType
 
 
 }
-

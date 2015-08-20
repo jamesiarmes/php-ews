@@ -34,7 +34,4 @@ class EmailAddressType extends Type
      * @property string $routingType
      */
     protected $routingType = null;
-
-
 }
-

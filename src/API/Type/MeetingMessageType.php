@@ -72,7 +72,4 @@ class MeetingMessageType extends MessageType
      * @property \DateTime $dateTimeStamp
      */
     protected $dateTimeStamp = null;
-
-
 }
-

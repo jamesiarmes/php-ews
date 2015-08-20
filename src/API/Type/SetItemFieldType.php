@@ -89,7 +89,4 @@ class SetItemFieldType extends ItemChangeDescriptionType
      * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
      */
     protected $postItem = null;
-
-
 }
-

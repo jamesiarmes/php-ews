@@ -18,7 +18,4 @@ class GetEventsResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\NotificationType $notification
      */
     protected $notification = null;
-
-
 }
-

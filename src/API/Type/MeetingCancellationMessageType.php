@@ -13,4 +13,3 @@ class MeetingCancellationMessageType extends MeetingMessageType
 
 
 }
-

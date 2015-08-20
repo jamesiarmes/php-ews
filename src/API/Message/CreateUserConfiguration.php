@@ -10,4 +10,3 @@ class CreateUserConfiguration extends CreateUserConfigurationType
 
 
 }
-

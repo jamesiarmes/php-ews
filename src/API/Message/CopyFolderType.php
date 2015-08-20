@@ -13,4 +13,3 @@ class CopyFolderType extends BaseMoveCopyFolderType
 
 
 }
-

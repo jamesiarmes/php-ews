@@ -55,7 +55,4 @@ class FindFolderType extends BaseRequestType
      * $parentFolderIds
      */
     protected $parentFolderIds = null;
-
-
 }
-

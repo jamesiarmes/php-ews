@@ -251,7 +251,4 @@ class RulePredicatesType extends Type
      * @property \jamesiarmes\PEWS\API\Type\RulePredicateSizeRangeType $withinSizeRange
      */
     protected $withinSizeRange = null;
-
-
 }
-

@@ -39,7 +39,4 @@ class DistributionListType extends ItemType
      * @property \jamesiarmes\PEWS\API\Type\MemberType[] $members
      */
     protected $members = null;
-
-
 }
-

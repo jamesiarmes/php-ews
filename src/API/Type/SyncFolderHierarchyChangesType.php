@@ -36,7 +36,4 @@ class SyncFolderHierarchyChangesType extends Type
      * @property \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyDeleteType[] $delete
      */
     protected $delete = null;
-
-
 }
-

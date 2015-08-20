@@ -28,7 +28,4 @@ class NonEmptyArrayOfBaseFolderIdsType extends Type
      * $distinguishedFolderId
      */
     protected $distinguishedFolderId = null;
-
-
 }
-

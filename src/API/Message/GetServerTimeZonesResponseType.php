@@ -13,4 +13,3 @@ class GetServerTimeZonesResponseType extends BaseResponseMessageType
 
 
 }
-

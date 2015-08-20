@@ -10,4 +10,3 @@ class ResolveNamesResponse extends ResolveNamesResponseType
 
 
 }
-

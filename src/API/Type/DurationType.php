@@ -32,7 +32,4 @@ class DurationType extends Type
      * @property \DateTime $endTime
      */
     protected $endTime = null;
-
-
 }
-

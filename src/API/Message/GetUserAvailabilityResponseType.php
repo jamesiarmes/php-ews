@@ -29,7 +29,4 @@ class GetUserAvailabilityResponseType extends Message
      * $suggestionsResponse
      */
     protected $suggestionsResponse = null;
-
-
 }
-

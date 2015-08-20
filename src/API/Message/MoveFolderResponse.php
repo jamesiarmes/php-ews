@@ -10,4 +10,3 @@ class MoveFolderResponse extends MoveFolderResponseType
 
 
 }
-

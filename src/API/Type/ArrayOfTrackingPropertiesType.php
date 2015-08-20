@@ -21,7 +21,4 @@ class ArrayOfTrackingPropertiesType extends Type
      * $trackingPropertyType
      */
     protected $trackingPropertyType = null;
-
-
 }
-

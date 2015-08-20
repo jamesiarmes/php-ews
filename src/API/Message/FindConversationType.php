@@ -32,7 +32,4 @@ class FindConversationType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $parentFolderId
      */
     protected $parentFolderId = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class TimeZone extends SerializableTimeZoneType
 
 
 }
-

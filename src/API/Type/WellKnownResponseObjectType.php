@@ -13,4 +13,3 @@ class WellKnownResponseObjectType extends ResponseObjectType
 
 
 }
-

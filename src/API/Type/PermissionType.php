@@ -25,7 +25,4 @@ class PermissionType extends BasePermissionType
      * @property string $permissionLevel
      */
     protected $permissionLevel = null;
-
-
 }
-

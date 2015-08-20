@@ -26,7 +26,4 @@ class ConvertIdType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAlternateIdsType $sourceIds
      */
     protected $sourceIds = null;
-
-
 }
-

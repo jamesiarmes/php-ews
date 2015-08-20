@@ -10,4 +10,3 @@ class FindMailboxStatisticsByKeywordsResponse extends FindMailboxStatisticsByKey
 
 
 }
-

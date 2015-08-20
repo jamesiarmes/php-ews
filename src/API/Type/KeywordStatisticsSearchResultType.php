@@ -34,7 +34,4 @@ class KeywordStatisticsSearchResultType extends Type
      * @property integer $size
      */
     protected $size = null;
-
-
 }
-

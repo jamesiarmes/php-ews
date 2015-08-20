@@ -10,4 +10,3 @@ class GetEventsResponse extends GetEventsResponseType
 
 
 }
-

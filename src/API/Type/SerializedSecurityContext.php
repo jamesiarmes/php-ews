@@ -10,4 +10,3 @@ class SerializedSecurityContext extends SerializedSecurityContextType
 
 
 }
-

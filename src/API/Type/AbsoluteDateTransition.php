@@ -10,4 +10,3 @@ class AbsoluteDateTransition extends AbsoluteDateTransitionType
 
 
 }
-

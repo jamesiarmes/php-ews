@@ -18,7 +18,4 @@ class DelegateUserResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\DelegateUserType $delegateUser
      */
     protected $delegateUser = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class GetPasswordExpirationDate extends GetPasswordExpirationDateType
 
 
 }
-

@@ -10,4 +10,3 @@ class SharingSecurity extends EncryptedDataContainerType
 
 
 }
-

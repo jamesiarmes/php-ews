@@ -10,4 +10,3 @@ class GetAttachmentResponse extends GetAttachmentResponseType
 
 
 }
-

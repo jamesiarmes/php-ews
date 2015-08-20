@@ -35,7 +35,4 @@ class ServiceConfigurationResponseMessageType extends ResponseMessageType
      * $protectionRulesConfiguration
      */
     protected $protectionRulesConfiguration = null;
-
-
 }
-

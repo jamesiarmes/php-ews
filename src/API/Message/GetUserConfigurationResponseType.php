@@ -13,4 +13,3 @@ class GetUserConfigurationResponseType extends BaseResponseMessageType
 
 
 }
-

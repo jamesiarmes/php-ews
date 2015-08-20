@@ -15,4 +15,3 @@ class BaseEmailAddressType extends Type
 
 
 }
-

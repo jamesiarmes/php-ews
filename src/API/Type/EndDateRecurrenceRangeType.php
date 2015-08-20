@@ -22,7 +22,4 @@ class EndDateRecurrenceRangeType extends RecurrenceRangeBaseType
     protected $_typeMap = array(
         'endDate' => 'date',
     );
-
-
 }
-

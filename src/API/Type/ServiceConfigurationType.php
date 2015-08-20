@@ -15,4 +15,3 @@ class ServiceConfigurationType extends Type
 
 
 }
-

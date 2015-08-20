@@ -35,7 +35,4 @@ class SubscribeType extends BaseRequestType
      * $streamingSubscriptionRequest
      */
     protected $streamingSubscriptionRequest = null;
-
-
 }
-

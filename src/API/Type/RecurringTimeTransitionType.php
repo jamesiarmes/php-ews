@@ -25,7 +25,4 @@ class RecurringTimeTransitionType extends TransitionType
      * @property integer $month
      */
     protected $month = null;
-
-
 }
-

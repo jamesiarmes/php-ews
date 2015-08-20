@@ -27,7 +27,4 @@ class ReplyBodyType extends Type
      * @property string $message
      */
     protected $message = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class FindMessageTrackingReport extends FindMessageTrackingReportRequestType
 
 
 }
-

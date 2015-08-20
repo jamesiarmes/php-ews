@@ -20,7 +20,4 @@ class ConflictResultsType extends Type
      * @property integer $count
      */
     protected $count = null;
-
-
 }
-

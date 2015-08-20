@@ -13,4 +13,3 @@ class PostReplyItemBaseType extends ResponseObjectType
 
 
 }
-

@@ -18,7 +18,4 @@ class RequestAttachmentIdType extends BaseItemIdType
      * @property string $id
      */
     protected $id = null;
-
-
 }
-

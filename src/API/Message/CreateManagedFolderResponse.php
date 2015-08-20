@@ -10,4 +10,3 @@ class CreateManagedFolderResponse extends CreateManagedFolderResponseType
 
 
 }
-

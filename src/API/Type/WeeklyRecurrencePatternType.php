@@ -25,7 +25,4 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      * @property string $firstDayOfWeek
      */
     protected $firstDayOfWeek = null;
-
-
 }
-

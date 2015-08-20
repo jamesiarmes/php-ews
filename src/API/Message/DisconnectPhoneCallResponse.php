@@ -10,4 +10,3 @@ class DisconnectPhoneCallResponse extends DisconnectPhoneCallResponseMessageType
 
 
 }
-

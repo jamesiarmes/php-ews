@@ -29,7 +29,4 @@ class UserConfigurationDictionaryEntryType extends Type
      * $dictionaryValue
      */
     protected $dictionaryValue = null;
-
-
 }
-

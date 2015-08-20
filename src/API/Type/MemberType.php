@@ -34,7 +34,4 @@ class MemberType extends Type
      * @property string $status
      */
     protected $status = null;
-
-
 }
-

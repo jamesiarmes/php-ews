@@ -34,7 +34,4 @@ class StreamingSubscriptionRequestType extends Type
      * @property string[] $eventTypes
      */
     protected $eventTypes = null;
-
-
 }
-

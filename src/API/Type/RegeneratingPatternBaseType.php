@@ -13,4 +13,3 @@ class RegeneratingPatternBaseType extends IntervalRecurrencePatternBaseType
 
 
 }
-

@@ -10,4 +10,3 @@ class Mailbox extends EmailAddressType
 
 
 }
-

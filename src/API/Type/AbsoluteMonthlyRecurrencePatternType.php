@@ -18,7 +18,4 @@ class AbsoluteMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      * @property integer $dayOfMonth
      */
     protected $dayOfMonth = null;
-
-
 }
-

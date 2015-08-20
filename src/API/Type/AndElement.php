@@ -10,4 +10,3 @@ class AndElement extends AndType
 
 
 }
-

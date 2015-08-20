@@ -27,7 +27,4 @@ class OutOfOfficeMailTipType extends Type
      * @property \jamesiarmes\PEWS\API\Type\DurationType $duration
      */
     protected $duration = null;
-
-
 }
-

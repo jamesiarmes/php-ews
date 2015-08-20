@@ -442,7 +442,4 @@ class ClassMap
     {
         return self::$classMap;
     }
-
-
 }
-

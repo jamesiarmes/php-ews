@@ -41,7 +41,4 @@ class BaseSubscriptionRequestType extends Type
      * @property string $watermark
      */
     protected $watermark = null;
-
-
 }
-

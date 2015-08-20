@@ -10,4 +10,3 @@ class UpdateInboxRules extends UpdateInboxRulesRequestType
 
 
 }
-

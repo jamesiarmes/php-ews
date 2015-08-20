@@ -91,7 +91,4 @@ class SyncFolderItemsCreateOrUpdateType extends Type
      * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
      */
     protected $postItem = null;
-
-
 }
-

@@ -15,4 +15,3 @@ class SearchExpressionType extends Type
 
 
 }
-

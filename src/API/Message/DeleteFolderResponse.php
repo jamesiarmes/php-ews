@@ -10,4 +10,3 @@ class DeleteFolderResponse extends DeleteFolderResponseType
 
 
 }
-

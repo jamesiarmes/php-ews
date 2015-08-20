@@ -13,4 +13,3 @@ class ReplyAllToItemType extends SmartResponseType
 
 
 }
-

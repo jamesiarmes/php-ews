@@ -18,7 +18,4 @@ class DeleteRuleOperationType extends RuleOperationType
      * @property string $ruleId
      */
     protected $ruleId = null;
-
-
 }
-

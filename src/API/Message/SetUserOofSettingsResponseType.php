@@ -20,7 +20,4 @@ class SetUserOofSettingsResponseType extends Message
      * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType $responseMessage
      */
     protected $responseMessage = null;
-
-
 }
-

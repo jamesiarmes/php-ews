@@ -10,4 +10,3 @@ class FreeBusyViewOptions extends FreeBusyViewOptionsType
 
 
 }
-

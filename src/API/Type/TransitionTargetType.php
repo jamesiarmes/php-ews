@@ -20,7 +20,4 @@ class TransitionTargetType extends Type
      * @property string $kind
      */
     protected $kind = null;
-
-
 }
-

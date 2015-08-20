@@ -13,4 +13,3 @@ class DeleteItemFieldType extends ItemChangeDescriptionType
 
 
 }
-

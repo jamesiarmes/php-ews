@@ -91,7 +91,4 @@ class NotificationType extends Type
      * $freeBusyChangedEvent
      */
     protected $freeBusyChangedEvent = null;
-
-
 }
-

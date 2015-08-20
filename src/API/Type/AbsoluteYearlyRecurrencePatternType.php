@@ -25,7 +25,4 @@ class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
      * @property string $month
      */
     protected $month = null;
-
-
 }
-

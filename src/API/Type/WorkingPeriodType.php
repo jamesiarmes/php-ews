@@ -34,7 +34,4 @@ class WorkingPeriodType extends Type
      * @property integer $endTimeInMinutes
      */
     protected $endTimeInMinutes = null;
-
-
 }
-

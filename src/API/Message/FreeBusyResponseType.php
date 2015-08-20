@@ -27,7 +27,4 @@ class FreeBusyResponseType extends Message
      * @property \jamesiarmes\PEWS\API\Type\FreeBusyViewType $freeBusyView
      */
     protected $freeBusyView = null;
-
-
 }
-

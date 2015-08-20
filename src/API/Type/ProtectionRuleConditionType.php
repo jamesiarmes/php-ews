@@ -48,7 +48,4 @@ class ProtectionRuleConditionType extends Type
      * @property string $true
      */
     protected $true = null;
-
-
 }
-

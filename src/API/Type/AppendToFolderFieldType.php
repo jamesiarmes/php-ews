@@ -46,7 +46,4 @@ class AppendToFolderFieldType extends FolderChangeDescriptionType
      * @property \jamesiarmes\PEWS\API\Type\TasksFolderType $tasksFolder
      */
     protected $tasksFolder = null;
-
-
 }
-

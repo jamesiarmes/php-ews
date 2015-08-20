@@ -10,4 +10,3 @@ class GetMessageTrackingReportResponse extends GetMessageTrackingReportResponseM
 
 
 }
-

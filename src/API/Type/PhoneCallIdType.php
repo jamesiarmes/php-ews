@@ -20,7 +20,4 @@ class PhoneCallIdType extends Type
      * @property string $id
      */
     protected $id = null;
-
-
 }
-

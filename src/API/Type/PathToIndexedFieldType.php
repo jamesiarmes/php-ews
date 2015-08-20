@@ -25,7 +25,4 @@ class PathToIndexedFieldType extends BasePathToElementType
      * @property string $fieldIndex
      */
     protected $fieldIndex = null;
-
-
 }
-

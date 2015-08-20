@@ -53,7 +53,4 @@ class SyncFolderItemsType extends BaseRequestType
      * @property string $syncScope
      */
     protected $syncScope = null;
-
-
 }
-

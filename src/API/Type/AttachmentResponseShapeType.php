@@ -42,7 +42,4 @@ class AttachmentResponseShapeType extends Type
      * $additionalProperties
      */
     protected $additionalProperties = null;
-
-
 }
-

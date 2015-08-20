@@ -18,7 +18,4 @@ class GetRoomsResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\RoomType[] $rooms
      */
     protected $rooms = null;
-
-
 }
-

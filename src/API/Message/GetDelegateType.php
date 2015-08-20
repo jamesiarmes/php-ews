@@ -25,7 +25,4 @@ class GetDelegateType extends BaseDelegateType
      * @property \jamesiarmes\PEWS\API\Type\UserIdType[] $userIds
      */
     protected $userIds = null;
-
-
 }
-

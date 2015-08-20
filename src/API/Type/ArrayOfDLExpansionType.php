@@ -55,7 +55,4 @@ class ArrayOfDLExpansionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $mailbox
      */
     protected $mailbox = null;
-
-
 }
-

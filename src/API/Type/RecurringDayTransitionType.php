@@ -25,7 +25,4 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      * @property string $occurrence
      */
     protected $occurrence = null;
-
-
 }
-

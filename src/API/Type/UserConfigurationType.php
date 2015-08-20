@@ -50,7 +50,4 @@ class UserConfigurationType extends Type
      * @property string $binaryData
      */
     protected $binaryData = null;
-
-
 }
-

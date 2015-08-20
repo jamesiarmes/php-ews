@@ -18,7 +18,4 @@ class PlayOnPhoneResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId
      */
     protected $phoneCallId = null;
-
-
 }
-

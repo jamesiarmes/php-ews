@@ -41,7 +41,4 @@ class TimeZoneType extends Type
      * @property \jamesiarmes\PEWS\API\Type\TimeChangeType $daylight
      */
     protected $daylight = null;
-
-
 }
-

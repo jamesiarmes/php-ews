@@ -13,4 +13,3 @@ class ApplyConversationActionResponseType extends BaseResponseMessageType
 
 
 }
-

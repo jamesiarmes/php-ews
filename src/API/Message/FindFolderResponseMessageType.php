@@ -18,7 +18,4 @@ class FindFolderResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\FindFolderParentType $rootFolder
      */
     protected $rootFolder = null;
-
-
 }
-

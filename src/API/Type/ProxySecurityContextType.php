@@ -15,4 +15,3 @@ class ProxySecurityContextType extends Type
 
 
 }
-

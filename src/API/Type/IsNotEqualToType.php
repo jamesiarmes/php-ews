@@ -13,4 +13,3 @@ class IsNotEqualToType extends TwoOperandExpressionType
 
 
 }
-

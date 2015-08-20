@@ -34,7 +34,4 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\DeleteItemFieldType[] $deleteItemField
      */
     protected $deleteItemField = null;
-
-
 }
-

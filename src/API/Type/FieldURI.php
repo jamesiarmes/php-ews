@@ -10,4 +10,3 @@ class FieldURI extends PathToUnindexedFieldType
 
 
 }
-

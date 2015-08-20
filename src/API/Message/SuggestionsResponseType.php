@@ -28,7 +28,4 @@ class SuggestionsResponseType extends Message
      * $suggestionDayResultArray
      */
     protected $suggestionDayResultArray = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class FindItem extends FindItemType
 
 
 }
-

@@ -15,4 +15,3 @@ class RecurrencePatternBaseType extends Type
 
 
 }
-

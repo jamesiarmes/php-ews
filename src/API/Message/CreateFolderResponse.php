@@ -10,4 +10,3 @@ class CreateFolderResponse extends CreateFolderResponseType
 
 
 }
-

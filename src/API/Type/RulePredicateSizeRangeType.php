@@ -27,7 +27,4 @@ class RulePredicateSizeRangeType extends Type
      * @property integer $maximumSize
      */
     protected $maximumSize = null;
-
-
 }
-

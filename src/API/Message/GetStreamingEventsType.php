@@ -25,7 +25,4 @@ class GetStreamingEventsType extends BaseRequestType
      * @property integer $connectionTimeout
      */
     protected $connectionTimeout = null;
-
-
 }
-

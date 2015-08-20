@@ -13,4 +13,3 @@ class MeetingResponseMessageType extends MeetingMessageType
 
 
 }
-

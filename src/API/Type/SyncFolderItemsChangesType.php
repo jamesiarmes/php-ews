@@ -42,7 +42,4 @@ class SyncFolderItemsChangesType extends Type
      * $readFlagChange
      */
     protected $readFlagChange = null;
-
-
 }
-

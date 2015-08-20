@@ -10,4 +10,3 @@ class GetAttachment extends GetAttachmentType
 
 
 }
-

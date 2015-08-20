@@ -20,7 +20,4 @@ class AlternateIdBaseType extends Type
      * @property string $format
      */
     protected $format = null;
-
-
 }
-

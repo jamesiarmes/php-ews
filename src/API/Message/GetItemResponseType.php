@@ -13,4 +13,3 @@ class GetItemResponseType extends BaseResponseMessageType
 
 
 }
-

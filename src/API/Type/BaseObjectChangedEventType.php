@@ -43,7 +43,4 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      * @property \jamesiarmes\PEWS\API\Type\FolderIdType $parentFolderId
      */
     protected $parentFolderId = null;
-
-
 }
-

@@ -48,7 +48,4 @@ class UploadItemType extends Type
      * @property string $data
      */
     protected $data = null;
-
-
 }
-

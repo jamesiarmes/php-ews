@@ -18,7 +18,4 @@ class UpdateFolderType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\FolderChangeType[] $folderChanges
      */
     protected $folderChanges = null;
-
-
 }
-

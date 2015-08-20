@@ -17,7 +17,4 @@ class RequestServerVersion extends Type
      * @property string $version
      */
     protected $version = null;
-
-
 }
-

@@ -35,7 +35,4 @@ class ExtendedPropertyType extends Type
      * @property string[] $values
      */
     protected $values = null;
-
-
 }
-

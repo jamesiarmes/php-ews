@@ -56,7 +56,4 @@ class ItemResponseShapeType extends Type
      * $additionalProperties
      */
     protected $additionalProperties = null;
-
-
 }
-

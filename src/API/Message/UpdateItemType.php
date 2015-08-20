@@ -46,7 +46,4 @@ class UpdateItemType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\ItemChangeType[] $itemChanges
      */
     protected $itemChanges = null;
-
-
 }
-

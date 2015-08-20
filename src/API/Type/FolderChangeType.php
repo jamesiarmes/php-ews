@@ -36,7 +36,4 @@ class FolderChangeType extends Type
      * $updates
      */
     protected $updates = null;
-
-
 }
-

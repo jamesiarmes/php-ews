@@ -41,7 +41,4 @@ class FieldURIOrConstantType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ConstantValueType $constant
      */
     protected $constant = null;
-
-
 }
-

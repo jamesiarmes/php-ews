@@ -21,7 +21,4 @@ class BaseResponseMessageType extends Message
      * $responseMessages
      */
     protected $responseMessages = null;
-
-
 }
-

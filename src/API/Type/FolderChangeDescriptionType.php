@@ -13,4 +13,3 @@ class FolderChangeDescriptionType extends ChangeDescriptionType
 
 
 }
-

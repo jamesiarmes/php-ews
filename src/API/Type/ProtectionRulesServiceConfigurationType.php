@@ -32,7 +32,4 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
      * @property \jamesiarmes\PEWS\API\Type\SmtpDomainType[] $internalDomains
      */
     protected $internalDomains = null;
-
-
 }
-

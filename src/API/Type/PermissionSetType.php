@@ -27,7 +27,4 @@ class PermissionSetType extends Type
      * @property string[] $unknownEntries
      */
     protected $unknownEntries = null;
-
-
 }
-

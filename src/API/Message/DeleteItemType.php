@@ -39,7 +39,4 @@ class DeleteItemType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds
      */
     protected $itemIds = null;
-
-
 }
-

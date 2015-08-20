@@ -27,7 +27,4 @@ class EncryptedSharedFolderDataType extends Type
      * @property \jamesiarmes\PEWS\API\Type\EncryptedDataContainerType $data
      */
     protected $data = null;
-
-
 }
-

@@ -48,7 +48,4 @@ class NonEmptyArrayOfFoldersType extends Type
      * @property \jamesiarmes\PEWS\API\Type\TasksFolderType[] $tasksFolder
      */
     protected $tasksFolder = null;
-
-
 }
-

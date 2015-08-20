@@ -55,7 +55,4 @@ class PhysicalAddressDictionaryEntryType extends Type
      * @property string $postalCode
      */
     protected $postalCode = null;
-
-
 }
-

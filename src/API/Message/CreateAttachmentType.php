@@ -25,7 +25,4 @@ class CreateAttachmentType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType $attachments
      */
     protected $attachments = null;
-
-
 }
-

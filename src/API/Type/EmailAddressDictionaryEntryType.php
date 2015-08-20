@@ -41,7 +41,4 @@ class EmailAddressDictionaryEntryType extends Type
      * @property string $mailboxType
      */
     protected $mailboxType = null;
-
-
 }
-

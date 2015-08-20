@@ -16,7 +16,4 @@ class DateTimePrecisionType extends Type
     const SECONDS = 'SECONDS';
 
     const MILLISECONDS = 'MILLISECONDS';
-
-
 }
-

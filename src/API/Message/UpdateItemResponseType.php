@@ -13,4 +13,3 @@ class UpdateItemResponseType extends BaseResponseMessageType
 
 
 }
-

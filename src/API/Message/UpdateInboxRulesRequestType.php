@@ -32,7 +32,4 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType $operations
      */
     protected $operations = null;
-
-
 }
-

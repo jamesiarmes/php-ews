@@ -18,7 +18,4 @@ class FindConversationResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ConversationType[] $conversations
      */
     protected $conversations = null;
-
-
 }
-

@@ -96,7 +96,4 @@ class NotType extends SearchExpressionType
      * @property \jamesiarmes\PEWS\API\Type\OrElement[] $or
      */
     protected $or = null;
-
-
 }
-

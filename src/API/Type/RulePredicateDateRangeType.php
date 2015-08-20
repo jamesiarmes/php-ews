@@ -32,7 +32,4 @@ class RulePredicateDateRangeType extends Type
      * @property \DateTime $endDateTime
      */
     protected $endDateTime = null;
-
-
 }
-

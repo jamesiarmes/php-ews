@@ -10,4 +10,3 @@ class GetRoomLists extends GetRoomListsType
 
 
 }
-

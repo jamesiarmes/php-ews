@@ -98,7 +98,4 @@ class FindItemType extends BaseRequestType
      * @property string $queryString
      */
     protected $queryString = null;
-
-
 }
-

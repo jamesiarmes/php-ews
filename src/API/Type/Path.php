@@ -10,4 +10,3 @@ class Path extends BasePathToElementType
 
 
 }
-

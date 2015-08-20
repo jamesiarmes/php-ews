@@ -13,4 +13,3 @@ class CreateManagedFolderResponseType extends BaseResponseMessageType
 
 
 }
-

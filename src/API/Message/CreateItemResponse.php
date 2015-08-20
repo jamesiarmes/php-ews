@@ -10,4 +10,3 @@ class CreateItemResponse extends CreateItemResponseType
 
 
 }
-

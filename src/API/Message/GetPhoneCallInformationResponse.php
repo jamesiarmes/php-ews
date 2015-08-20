@@ -10,4 +10,3 @@ class GetPhoneCallInformationResponse extends GetPhoneCallInformationResponseMes
 
 
 }
-

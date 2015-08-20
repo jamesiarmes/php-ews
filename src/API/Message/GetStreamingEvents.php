@@ -10,4 +10,3 @@ class GetStreamingEvents extends GetStreamingEventsType
 
 
 }
-

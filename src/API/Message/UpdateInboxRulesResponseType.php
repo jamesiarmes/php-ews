@@ -19,7 +19,4 @@ class UpdateInboxRulesResponseType extends ResponseMessageType
      * $ruleOperationErrors
      */
     protected $ruleOperationErrors = null;
-
-
 }
-

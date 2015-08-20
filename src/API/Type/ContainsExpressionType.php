@@ -53,7 +53,4 @@ class ContainsExpressionType extends SearchExpressionType
      * @property \jamesiarmes\PEWS\API\Type\ConstantValueType $constant
      */
     protected $constant = null;
-
-
 }
-

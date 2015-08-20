@@ -10,4 +10,3 @@ class CreateAttachment extends CreateAttachmentType
 
 
 }
-

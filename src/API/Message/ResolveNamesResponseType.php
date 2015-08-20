@@ -13,4 +13,3 @@ class ResolveNamesResponseType extends BaseResponseMessageType
 
 
 }
-

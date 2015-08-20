@@ -13,4 +13,3 @@ class SendItemResponseType extends BaseResponseMessageType
 
 
 }
-

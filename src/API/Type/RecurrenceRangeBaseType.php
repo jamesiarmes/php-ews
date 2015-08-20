@@ -24,7 +24,4 @@ class RecurrenceRangeBaseType extends Type
     protected $_typeMap = array(
         'startDate' => 'date',
     );
-
-
 }
-

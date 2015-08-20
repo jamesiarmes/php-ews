@@ -313,7 +313,4 @@ class ContactItemType extends ItemType
      * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $directReports
      */
     protected $directReports = null;
-
-
 }
-

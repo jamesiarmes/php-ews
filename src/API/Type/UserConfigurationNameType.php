@@ -18,7 +18,4 @@ class UserConfigurationNameType extends TargetFolderIdType
      * @property string $name
      */
     protected $name = null;
-
-
 }
-

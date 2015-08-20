@@ -10,4 +10,3 @@ class FindItemResponse extends FindItemResponseType
 
 
 }
-

@@ -18,7 +18,4 @@ class SearchFolderType extends FolderType
      * @property \jamesiarmes\PEWS\API\Type\SearchParametersType $searchParameters
      */
     protected $searchParameters = null;
-
-
 }
-

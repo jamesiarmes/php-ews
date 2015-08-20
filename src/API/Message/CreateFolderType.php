@@ -25,7 +25,4 @@ class CreateFolderType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFoldersType $folders
      */
     protected $folders = null;
-
-
 }
-

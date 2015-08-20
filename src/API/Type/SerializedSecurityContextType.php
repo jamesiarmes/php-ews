@@ -41,7 +41,4 @@ class SerializedSecurityContextType extends Type
      * @property string $primarySmtpAddress
      */
     protected $primarySmtpAddress = null;
-
-
 }
-

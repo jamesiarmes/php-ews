@@ -27,7 +27,4 @@ class NonEmptyArrayOfAttachmentsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\FileAttachmentType[] $fileAttachment
      */
     protected $fileAttachment = null;
-
-
 }
-

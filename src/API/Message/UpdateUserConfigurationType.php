@@ -18,7 +18,4 @@ class UpdateUserConfigurationType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\UserConfigurationType $userConfiguration
      */
     protected $userConfiguration = null;
-
-
 }
-

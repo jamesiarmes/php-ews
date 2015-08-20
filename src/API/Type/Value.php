@@ -10,4 +10,3 @@ class Value extends ValueType
 
 
 }
-

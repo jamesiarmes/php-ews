@@ -13,4 +13,3 @@ class IsGreaterThanType extends TwoOperandExpressionType
 
 
 }
-

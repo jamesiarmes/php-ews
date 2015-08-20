@@ -173,7 +173,4 @@ class NonEmptyArrayOfAllItemsType extends Type
      * $acceptSharingInvitation
      */
     protected $acceptSharingInvitation = null;
-
-
 }
-

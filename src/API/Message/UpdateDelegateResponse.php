@@ -10,4 +10,3 @@ class UpdateDelegateResponse extends UpdateDelegateResponseMessageType
 
 
 }
-

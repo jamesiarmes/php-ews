@@ -13,4 +13,3 @@ class MoveItemResponseType extends BaseResponseMessageType
 
 
 }
-

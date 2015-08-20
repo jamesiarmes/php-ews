@@ -10,4 +10,3 @@ class SyncFolderHierarchyResponse extends SyncFolderHierarchyResponseType
 
 
 }
-

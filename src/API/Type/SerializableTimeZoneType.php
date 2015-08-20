@@ -34,7 +34,4 @@ class SerializableTimeZoneType extends Type
      * @property \jamesiarmes\PEWS\API\Type\SerializableTimeZoneTimeType $daylightTime
      */
     protected $daylightTime = null;
-
-
 }
-

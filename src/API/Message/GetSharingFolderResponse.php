@@ -10,4 +10,3 @@ class GetSharingFolderResponse extends GetSharingFolderResponseMessageType
 
 
 }
-

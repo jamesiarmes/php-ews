@@ -55,7 +55,4 @@ class FindFolderParentType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType $folders
      */
     protected $folders = null;
-
-
 }
-

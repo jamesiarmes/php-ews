@@ -10,4 +10,3 @@ class DeleteAttachmentResponse extends DeleteAttachmentResponseType
 
 
 }
-

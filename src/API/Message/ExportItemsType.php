@@ -18,7 +18,4 @@ class ExportItemsType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\ItemIdType[] $itemIds
      */
     protected $itemIds = null;
-
-
 }
-

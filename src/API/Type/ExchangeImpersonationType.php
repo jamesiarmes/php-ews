@@ -20,7 +20,4 @@ class ExchangeImpersonationType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ConnectingSIDType $connectingSID
      */
     protected $connectingSID = null;
-
-
 }
-

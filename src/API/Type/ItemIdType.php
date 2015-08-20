@@ -25,7 +25,4 @@ class ItemIdType extends BaseItemIdType
      * @property string $changeKey
      */
     protected $changeKey = null;
-
-
 }
-

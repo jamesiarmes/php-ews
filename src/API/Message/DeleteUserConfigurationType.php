@@ -19,7 +19,4 @@ class DeleteUserConfigurationType extends BaseRequestType
      * $userConfigurationName
      */
     protected $userConfigurationName = null;
-
-
 }
-

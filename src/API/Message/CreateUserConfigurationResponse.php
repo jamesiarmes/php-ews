@@ -10,4 +10,3 @@ class CreateUserConfigurationResponse extends CreateUserConfigurationResponseTyp
 
 
 }
-

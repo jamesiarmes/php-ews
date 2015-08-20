@@ -54,7 +54,4 @@ class TimeChangeType extends Type
      * @property \DateTime $time
      */
     protected $time = null;
-
-
 }
-

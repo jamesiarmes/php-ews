@@ -10,4 +10,3 @@ class CreateAttachmentResponse extends CreateAttachmentResponseType
 
 
 }
-

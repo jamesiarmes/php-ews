@@ -18,7 +18,4 @@ class GetInboxRulesRequestType extends BaseRequestType
      * @property string $mailboxSmtpAddress
      */
     protected $mailboxSmtpAddress = null;
-
-
 }
-

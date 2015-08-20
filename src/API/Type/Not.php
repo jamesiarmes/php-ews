@@ -10,4 +10,3 @@ class Not extends NotType
 
 
 }
-

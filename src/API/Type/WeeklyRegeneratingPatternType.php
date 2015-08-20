@@ -13,4 +13,3 @@ class WeeklyRegeneratingPatternType extends RegeneratingPatternBaseType
 
 
 }
-

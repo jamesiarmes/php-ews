@@ -13,4 +13,3 @@ class ForwardItemType extends SmartResponseType
 
 
 }
-

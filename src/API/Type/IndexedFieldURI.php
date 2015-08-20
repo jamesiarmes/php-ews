@@ -10,4 +10,3 @@ class IndexedFieldURI extends PathToIndexedFieldType
 
 
 }
-

@@ -20,7 +20,4 @@ class ProtectionRuleArgumentType extends Type
      * @property string $value
      */
     protected $value = null;
-
-
 }
-

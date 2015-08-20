@@ -47,7 +47,4 @@ class CalendarEventType extends Type
      * $calendarEventDetails
      */
     protected $calendarEventDetails = null;
-
-
 }
-

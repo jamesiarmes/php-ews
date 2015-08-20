@@ -10,4 +10,3 @@ class GetItemResponse extends GetItemResponseType
 
 
 }
-

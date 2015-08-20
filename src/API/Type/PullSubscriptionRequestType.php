@@ -18,7 +18,4 @@ class PullSubscriptionRequestType extends BaseSubscriptionRequestType
      * @property integer $timeout
      */
     protected $timeout = null;
-
-
 }
-

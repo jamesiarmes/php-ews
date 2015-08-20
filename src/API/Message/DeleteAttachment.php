@@ -10,4 +10,3 @@ class DeleteAttachment extends DeleteAttachmentType
 
 
 }
-

@@ -27,7 +27,4 @@ class WorkingHoursType extends Type
      * @property \jamesiarmes\PEWS\API\Type\WorkingPeriodType[] $workingPeriodArray
      */
     protected $workingPeriodArray = null;
-
-
 }
-

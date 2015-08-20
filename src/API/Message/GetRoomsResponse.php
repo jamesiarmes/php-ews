@@ -10,4 +10,3 @@ class GetRoomsResponse extends GetRoomsResponseMessageType
 
 
 }
-

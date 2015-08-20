@@ -13,4 +13,3 @@ class DeclineItemType extends WellKnownResponseObjectType
 
 
 }
-

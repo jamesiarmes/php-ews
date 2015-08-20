@@ -20,7 +20,4 @@ class MimeContentType extends Type
      * @property string $characterSet
      */
     protected $characterSet = null;
-
-
 }
-

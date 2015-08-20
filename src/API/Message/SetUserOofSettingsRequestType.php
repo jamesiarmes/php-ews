@@ -25,7 +25,4 @@ class SetUserOofSettingsRequestType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\UserOofSettings $userOofSettings
      */
     protected $userOofSettings = null;
-
-
 }
-

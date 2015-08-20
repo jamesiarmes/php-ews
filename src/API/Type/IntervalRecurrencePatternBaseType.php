@@ -18,7 +18,4 @@ class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
      * @property integer $interval
      */
     protected $interval = null;
-
-
 }
-

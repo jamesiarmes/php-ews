@@ -13,4 +13,3 @@ class SubscribeResponseType extends BaseResponseMessageType
 
 
 }
-

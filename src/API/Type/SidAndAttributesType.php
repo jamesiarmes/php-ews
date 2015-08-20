@@ -27,7 +27,4 @@ class SidAndAttributesType extends Type
      * @property string $securityIdentifier
      */
     protected $securityIdentifier = null;
-
-
 }
-

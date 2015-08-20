@@ -34,7 +34,4 @@ class PeriodType extends Type
      * @property string $id
      */
     protected $id = null;
-
-
 }
-

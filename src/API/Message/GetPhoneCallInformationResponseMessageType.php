@@ -19,7 +19,4 @@ class GetPhoneCallInformationResponseMessageType extends ResponseMessageType
      * $phoneCallInformation
      */
     protected $phoneCallInformation = null;
-
-
 }
-

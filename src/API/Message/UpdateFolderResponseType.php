@@ -13,4 +13,3 @@ class UpdateFolderResponseType extends BaseResponseMessageType
 
 
 }
-

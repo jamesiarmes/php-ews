@@ -10,4 +10,3 @@ class Unsubscribe extends UnsubscribeType
 
 
 }
-

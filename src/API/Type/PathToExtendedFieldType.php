@@ -57,7 +57,4 @@ class PathToExtendedFieldType extends BasePathToElementType
      * @property string $propertyType
      */
     protected $propertyType = null;
-
-
 }
-

@@ -20,7 +20,4 @@ class ValueType extends Type
      * @property string $name
      */
     protected $name = null;
-
-
 }
-

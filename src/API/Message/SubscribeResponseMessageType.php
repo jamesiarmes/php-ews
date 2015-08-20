@@ -25,7 +25,4 @@ class SubscribeResponseMessageType extends ResponseMessageType
      * @property string $watermark
      */
     protected $watermark = null;
-
-
 }
-

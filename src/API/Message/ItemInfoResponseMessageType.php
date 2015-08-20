@@ -18,7 +18,4 @@ class ItemInfoResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items
      */
     protected $items = null;
-
-
 }
-

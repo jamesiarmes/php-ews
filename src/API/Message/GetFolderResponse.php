@@ -10,4 +10,3 @@ class GetFolderResponse extends GetFolderResponseType
 
 
 }
-

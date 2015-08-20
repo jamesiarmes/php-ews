@@ -10,4 +10,3 @@ class EmptyFolderResponse extends EmptyFolderResponseType
 
 
 }
-

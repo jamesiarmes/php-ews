@@ -38,7 +38,4 @@ class SuggestionDayResultType extends Type
      * @property \jamesiarmes\PEWS\API\Type\SuggestionType[] $suggestionArray
      */
     protected $suggestionArray = null;
-
-
 }
-

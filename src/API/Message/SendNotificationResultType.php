@@ -20,7 +20,4 @@ class SendNotificationResultType extends Message
      * @property string $subscriptionStatus
      */
     protected $subscriptionStatus = null;
-
-
 }
-

@@ -94,7 +94,4 @@ class NonEmptyArrayOfResponseObjectsType extends Type
      * $acceptSharingInvitation
      */
     protected $acceptSharingInvitation = null;
-
-
 }
-

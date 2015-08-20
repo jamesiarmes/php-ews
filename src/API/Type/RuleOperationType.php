@@ -15,4 +15,3 @@ class RuleOperationType extends Type
 
 
 }
-

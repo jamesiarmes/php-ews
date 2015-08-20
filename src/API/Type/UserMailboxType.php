@@ -27,7 +27,4 @@ class UserMailboxType extends Type
      * @property boolean $isArchive
      */
     protected $isArchive = null;
-
-
 }
-

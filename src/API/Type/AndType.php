@@ -13,4 +13,3 @@ class AndType extends MultipleOperandBooleanExpressionType
 
 
 }
-

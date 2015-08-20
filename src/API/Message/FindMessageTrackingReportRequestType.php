@@ -107,7 +107,4 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
      */
     protected $properties = null;
-
-
 }
-

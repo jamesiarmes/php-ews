@@ -10,4 +10,3 @@ class RemoveDelegateResponse extends RemoveDelegateResponseMessageType
 
 
 }
-

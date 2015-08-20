@@ -172,7 +172,4 @@ class TaskType extends ItemType
      * @property integer $totalWork
      */
     protected $totalWork = null;
-
-
 }
-

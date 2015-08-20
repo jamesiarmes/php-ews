@@ -32,7 +32,4 @@ class AlternateIdType extends AlternateIdBaseType
      * @property boolean $isArchive
      */
     protected $isArchive = null;
-
-
 }
-

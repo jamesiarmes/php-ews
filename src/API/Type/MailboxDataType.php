@@ -34,7 +34,4 @@ class MailboxDataType extends Type
      * @property boolean $excludeConflicts
      */
     protected $excludeConflicts = null;
-
-
 }
-

@@ -13,4 +13,3 @@ class GetRoomListsType extends BaseRequestType
 
 
 }
-

@@ -71,7 +71,4 @@ class PostItemType extends ItemType
      * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $sender
      */
     protected $sender = null;
-
-
 }
-

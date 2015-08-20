@@ -324,7 +324,4 @@ class CalendarItemType extends ItemType
      * @property string $netShowUrl
      */
     protected $netShowUrl = null;
-
-
 }
-

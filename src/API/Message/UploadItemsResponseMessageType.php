@@ -18,7 +18,4 @@ class UploadItemsResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
      */
     protected $itemId = null;
-
-
 }
-

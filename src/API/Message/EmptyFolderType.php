@@ -32,7 +32,4 @@ class EmptyFolderType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
      */
     protected $folderIds = null;
-
-
 }
-

@@ -26,7 +26,4 @@ class GetServiceConfigurationType extends BaseRequestType
      * $requestedConfiguration
      */
     protected $requestedConfiguration = null;
-
-
 }
-

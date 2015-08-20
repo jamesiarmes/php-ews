@@ -22,7 +22,4 @@ class AbsoluteDateTransitionType extends TransitionType
     protected $_typeMap = array(
         'dateTime' => 'dateTime',
     );
-
-
 }
-

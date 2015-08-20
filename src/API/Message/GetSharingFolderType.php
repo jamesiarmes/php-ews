@@ -32,7 +32,4 @@ class GetSharingFolderType extends BaseRequestType
      * @property string $sharedFolderId
      */
     protected $sharedFolderId = null;
-
-
 }
-

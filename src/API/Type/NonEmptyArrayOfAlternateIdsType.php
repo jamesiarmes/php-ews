@@ -36,7 +36,4 @@ class NonEmptyArrayOfAlternateIdsType extends Type
      * $alternatePublicFolderItemId
      */
     protected $alternatePublicFolderItemId = null;
-
-
 }
-

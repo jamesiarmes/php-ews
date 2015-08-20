@@ -35,7 +35,4 @@ class SearchParametersType extends Type
      * $baseFolderIds
      */
     protected $baseFolderIds = null;
-
-
 }
-

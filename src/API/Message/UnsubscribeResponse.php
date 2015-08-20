@@ -10,4 +10,3 @@ class UnsubscribeResponse extends UnsubscribeResponseType
 
 
 }
-

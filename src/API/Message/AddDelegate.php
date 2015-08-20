@@ -10,4 +10,3 @@ class AddDelegate extends AddDelegateType
 
 
 }
-

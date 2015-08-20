@@ -10,4 +10,3 @@ class ExtendedFieldURI extends PathToExtendedFieldType
 
 
 }
-
