@@ -6,7 +6,8 @@
     },
     "scripts": {
         "cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/",
-        "cbf": "./vendor/bin/phpcbf --standard=ruleset.xml -np src/ tests/"
+        "cbf": "./vendor/bin/phpcbf --standard=ruleset.xml -np src/ tests/",
+        "generate": "./vendor/bin/xsd2php convert:php 'Resources/wsdl/types.xsd' --ns-map='http://schemas.microsoft.com/exchange/services/2006/types;/Gareth/Types/' --ns-dest='Gareth/Types/;Gareth/Namespace/Types/' --naming-strategy=short"
     },
     "autoload": {
         "psr-4": {
@@ -18,6 +19,7 @@
         "phpunit/phpunit": "~4.7",
         "squizlabs/php_codesniffer": "~2.3",
         "mockery/mockery": "~0.9.4",
-        "goetas/xsd2php": "2.*@dev"
+        "goetas/xsd2php":"2.*@dev",
+        "goetas/xsd-reader":"2.*@dev"
     }
 }

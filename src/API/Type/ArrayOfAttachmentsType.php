@@ -1,35 +1,30 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
 /**
- * Contains the items or files that are attached to an item in the Exchange
- * store.
+ * Class representing ArrayOfAttachmentsType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: ArrayOfAttachmentsType
+ *
+ * @method ArrayOfAttachmentsType getItemAttachment()
+ * @method ArrayOfAttachmentsType setItemAttachment(array $itemAttachment)
+ * @method ArrayOfAttachmentsType getFileAttachment()
+ * @method ArrayOfAttachmentsType setFileAttachment(array $fileAttachment)
  */
 class ArrayOfAttachmentsType extends Type
 {
-    /**
-     * Represents a file that is attached to an item in the Exchange store.
-     *
-     * @since Exchange 2007
-     *
-     * @var \jamesiarmes\PEWS\API\Type\FileAttachmentType
-     */
-    public $FileAttachment;
 
     /**
-     * Represents an Exchange item that is attached to another Exchange item.
-     *
-     * @since Exchange 2007
-     *
-     * @var \jamesiarmes\PEWS\API\Type\ItemAttachmentType
+     * @property \jamesiarmes\PEWS\API\Type\ItemAttachmentType[] $itemAttachment
      */
-    public $ItemAttachment;
+    protected $itemAttachment = null;
+
+    /**
+     * @property \jamesiarmes\PEWS\API\Type\FileAttachmentType[] $fileAttachment
+     */
+    protected $fileAttachment = null;
 }

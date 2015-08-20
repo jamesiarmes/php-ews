@@ -1,26 +1,23 @@
 <?php
-/**
- * Contains EWSType_ExchangeImpersonationType.
- */
-/**
- * Represents the account to impersonate within a request.
- *
- * @package php-ews\Types
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
+/**
+ * Class representing ExchangeImpersonationType
+ *
+ *
+ * XSD Type: ExchangeImpersonationType
+ *
+ * @method ExchangeImpersonationType getConnectingSID()
+ * @method ExchangeImpersonationType setConnectingSID(ConnectingSIDType $connectingSID)
+ */
 class ExchangeImpersonationType extends Type
 {
+
     /**
-     * Represents an account to impersonate when you are using the
-     * ExchangeImpersonation SOAP header.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_ConnectingSIDType
+     * @property \jamesiarmes\PEWS\API\Type\ConnectingSIDType $connectingSID
      */
-     public $ConnectingSID;
+    protected $connectingSID = null;
 }

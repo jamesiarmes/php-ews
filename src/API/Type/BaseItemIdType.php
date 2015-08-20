@@ -1,18 +1,18 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\BaseItemIdType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
-use \jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Type;
 
 /**
- * Base type for item identifiers.
+ * Class representing BaseItemIdType
  *
- * @package php-ews\Type
+ * Abstract base type for item identifiers. Should never be used in web service
+ * calls
+ * XSD Type: BaseItemIdType
  */
-abstract class BaseItemIdType extends Type
+class BaseItemIdType extends Type
 {
+
 
 }

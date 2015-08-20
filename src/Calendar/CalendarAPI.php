@@ -25,7 +25,7 @@ class CalendarAPI extends API
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
         }
 
-        $this->_folderId = $folder->FolderId;
+        $this->_folderId = $folder->getFolderId();
         return $this;
     }
 
@@ -50,8 +50,9 @@ class CalendarAPI extends API
         $item = array('CalendarItem'=>$items);
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
-            'SavedItemFolderId' => $this->getFolderIdsArray(),
-            'ParentFolderIds' => $this->getFolderIdsArray()
+            'SavedItemFolderId' => array(
+                'FolderId' => array('Id' => $this->getFolderId()->getId())
+            )
         );
 
         $items = $this->createItems($item, $options);
@@ -91,23 +92,28 @@ class CalendarAPI extends API
                 'StartDate' => $start->format('c'),
                 'EndDate' => $end->format('c')
             ),
-            'ParentFolderIds' => $this->getFolderIdsArray()
+            'ParentFolderIds' => array(
+                'FolderId' => array(
+                    'Id' => $this->getFolderId()->getId(),
+                    'ChangeKey' => $this->getFolderId()->getChangeKey()
+                )
+            )
         );
 
         $request = array_merge($request, $options);
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        $items = $response;
-        if (!isset($items->CalendarItem)) {
+        $items = $response->getItems()->getCalendarItem();
+        if ($items == null) {
             return array();
         }
 
-        if (!is_array($items->CalendarItem)) {
-            $items->CalendarItem = array($items->CalendarItem);
+        if (!is_array($items)) {
+            $items = array($items);
         }
 
-        return $items->CalendarItem;
+        return $items;
     }
 
     public function getCalendarItem($id, $changeKey)
@@ -150,16 +156,10 @@ class CalendarAPI extends API
         );
 
         $items =  $this->updateItems($request, $options);
-        $items = $items['Items'];
+        $items = $items->getCalendarItem();
 
         if (!is_array($items)) {
             $items = array($items);
-        }
-
-        foreach ($items as &$item) {
-            if (isset($item->CalendarItem)) {
-                $item = $item->CalendarItem;
-            }
         }
 
         return $items;
@@ -179,7 +179,7 @@ class CalendarAPI extends API
     {
         $items = $this->getCalendarItems($start, $end, $options);
         foreach ($items as $item) {
-            $this->deleteCalendarItem($item->ItemId->Id, $item->ItemId->ChangeKey);
+            $this->deleteCalendarItem($item->getItemId()->getId(), $item->getItemId()->getChangeKey());
         }
     }
 
@@ -193,27 +193,5 @@ class CalendarAPI extends API
     public function listChanges($syncState = null, $options = array())
     {
         return parent::listItemChanges($this->getFolderId()->Id, $syncState, $options);
-    }
-    /**
-     * Get the folderId array based on impersonation
-     *
-     * @return array
-     */
-    private function getFolderIdsArray(){
-        if ($this->getClient()->getImpersonation() === NULL){
-            return array(
-                'FolderId' => array(
-                    'Id' => $this->getFolderId()->Id,
-                    'ChangeKey' => $this->getFolderId()->ChangeKey
-                )
-            );
-        } else {
-            return array(
-                'DistinguishedFolderId' => array(
-                     'Id' => Enumeration\DistinguishedFolderIdNameType::CALENDAR,
-                     'Mailbox' => array('EmailAddress' => $this->getImpersonation()->ConnectingSID->PrimarySmtpAddress)
-                )
-            );
-        }
     }
 }

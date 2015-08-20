@@ -1,33 +1,28 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\RecurringDayTransitionType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents a time zone transition that occurs on the same day each year.
+ * Class representing RecurringDayTransitionType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: RecurringDayTransitionType
+ *
+ * @method RecurringDayTransitionType getDayOfWeek()
+ * @method RecurringDayTransitionType setDayOfWeek(string $dayOfWeek)
+ * @method RecurringDayTransitionType getOccurrence()
+ * @method RecurringDayTransitionType setOccurrence(string $occurrence)
  */
 class RecurringDayTransitionType extends RecurringTimeTransitionType
 {
-    /**
-     * The day of the week on which the time zone transition occurs.
-     *
-     * @since Exchange 2010
-     *
-     * @var \jamesiarmes\PEWS\API\Enumeration\DayOfWeekType
-     */
-    public $DayOfWeek;
 
     /**
-     * The occurrence of the day of the week in the month that the time zone
-     * transition occurs.
-     *
-     * @since Exchange 2010
-     *
-     * @var \jamesiarmes\PEWS\API\Enumeration\Occurrence
+     * @property string $dayOfWeek
      */
-    public $Occurrence;
+    protected $dayOfWeek = null;
+
+    /**
+     * @property string $occurrence
+     */
+    protected $occurrence = null;
 }

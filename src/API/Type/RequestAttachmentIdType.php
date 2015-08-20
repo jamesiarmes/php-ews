@@ -1,23 +1,21 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Identifies a single attachment.
+ * Class representing RequestAttachmentIdType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: RequestAttachmentIdType
+ *
+ * @method RequestAttachmentIdType getId()
+ * @method RequestAttachmentIdType setId(string $id)
  */
 class RequestAttachmentIdType extends BaseItemIdType
 {
+
     /**
-     * Specifies the attachment identifier.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $id
      */
-    public $Id;
+    protected $id = null;
 }

@@ -1,16 +1,15 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\TentativelyAcceptItemType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents a Tentative reply to a meeting request.
+ * Class representing TentativelyAcceptItemType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: TentativelyAcceptItemType
  */
 class TentativelyAcceptItemType extends WellKnownResponseObjectType
 {
+
 
 }

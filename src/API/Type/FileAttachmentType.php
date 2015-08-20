@@ -1,36 +1,28 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\FileAttachmentType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents a file that is attached to an item in the Exchange store.
+ * Class representing FileAttachmentType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: FileAttachmentType
+ *
+ * @method FileAttachmentType getIsContactPhoto()
+ * @method FileAttachmentType setIsContactPhoto(boolean $isContactPhoto)
+ * @method FileAttachmentType getContent()
+ * @method FileAttachmentType setContent(string $content)
  */
 class FileAttachmentType extends AttachmentType
 {
 
     /**
-     * Contains the Base64-encoded contents of the file attachment.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     *
-     * @todo Consider using an object that takes a file stream and does the
-     * base64 conversion.
+     * @property boolean $isContactPhoto
      */
-    public $Content;
+    protected $isContactPhoto = null;
 
     /**
-     * Indicates whether the file attachment is a contact picture.
-     *
-     * @since Exchange 2010
-     *
-     * @var boolean
+     * @property string $content
      */
-    public $IsContactPhoto;
+    protected $content = null;
 }

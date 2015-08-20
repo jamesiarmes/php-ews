@@ -6,6 +6,7 @@
 namespace jamesiarmes\PEWS\API;
 
 use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
+use jamesiarmes\PEWS\API\Message;
 
 /**
  * Base class of the Exchange Web Services application.
@@ -371,11 +372,10 @@ class ExchangeWebServices
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @param \stdClass $response
+     * @param \jamesiarmes\PEWS\API\Message\BaseResponseMessageType $response
+     * @return \jamesiarmes\PEWS\API\Message\ArrayOfResponseMessageType|\jamesiarmes\PEWS\API\Message\ResponseMessageType
      * @throws Exception
-     * @return Type
-     *
-     * @todo Map the response to a real object.
+     * @throws \Exception
      */
     protected function processResponse($response)
     {
@@ -386,53 +386,41 @@ class ExchangeWebServices
         }
 
         if (empty($response) ||
-            empty($response->ResponseMessages)) {
+            empty($response->getNonNullResponseMessages())) {
                 throw new \Exception('No response returned');
         }
 
-        $responseMessage = $response->ResponseMessages;
-        foreach ($responseMessage as $message) {
-            break;
-        }
+        $response = $response->getResponseMessages();
+        $response = $this->drillDownResponseLevels($response);
 
-        $messages = $message;
-        if (!is_array($messages)) {
-            $messages = array($messages);
-        }
+        return $response;
+    }
 
-        $returnItems = array();
+    /**
+     * @param $response Type
+     */
+    public function drillDownResponseLevels($response)
+    {
+        $items = $response->getNonNullItems();
 
-        foreach ($messages as $message) {
-            if ($message->ResponseClass != "Success") {
-                throw new \Exception($message->MessageText);
+        if ($response instanceof Message\ResponseMessageType) {
+            if ($response->getResponseClass() !== "Success") {
+                throw new \Exception($response->getMessageText());
             }
 
-            unset($message->ResponseClass);
-            unset($message->ResponseCode);
-
-            $messageItem = get_object_vars($message);
-            reset($messageItem);
-
-            if (key($messageItem) == null) {
-                $returnItems[] = true;
-                continue;
-            }
-
-            if (count($messageItem) == 1) {
-                $messageItem = $messageItem[key($messageItem)];
-
-                $messageItem = get_object_vars($messageItem);
-                reset($messageItem);
-                $messageItem = $messageItem[key($messageItem)];
-            }
-
-            $returnItems[] = $messageItem;
+            unset($items['responseClass']);
+            unset($items['responseCode']);
         }
 
-        if (count($returnItems) == 1) {
-            $returnItems = $returnItems[0];
+        if (count($items) == 1) {
+            reset($items);
+            $key = key($items);
+            $methodName = "get$key";
+            $response = $response->$methodName();
+
+            $response = $this->drillDownResponseLevels($response);
         }
 
-        return $returnItems;
+        return $response;
     }
 }

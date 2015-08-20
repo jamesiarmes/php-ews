@@ -1,33 +1,28 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\RecurringTimeTransitionType;
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Base class for recurring time transitions.
+ * Class representing RecurringTimeTransitionType
  *
- * @package php-ews\Type
+ *
+ * XSD Type: RecurringTimeTransitionType
+ *
+ * @method RecurringTimeTransitionType getTimeOffset()
+ * @method RecurringTimeTransitionType setTimeOffset(\DateInterval $timeOffset)
+ * @method RecurringTimeTransitionType getMonth()
+ * @method RecurringTimeTransitionType setMonth(integer $month)
  */
-abstract class RecurringTimeTransitionType extends TransitionType
+class RecurringTimeTransitionType extends TransitionType
 {
-    /**
-     * The month in which the time transition occurs.
-     *
-     * @since Exchange 2010
-     *
-     * @var integer
-     */
-    public $Month;
 
     /**
-     * The duration offset from Coordinated Universal Time (UTC) for the time
-     * transition.
-     *
-     * @since Exchange 2010
-     *
-     * @var string
+     * @property \DateInterval $timeOffset
      */
-    public $TimeOffset;
+    protected $timeOffset = null;
+
+    /**
+     * @property integer $month
+     */
+    protected $month = null;
 }

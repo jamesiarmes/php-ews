@@ -1,34 +1,28 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\AttachmentIdType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Identifies an item or file attachment.
+ * Class representing AttachmentIdType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: AttachmentIdType
+ *
+ * @method AttachmentIdType getRootItemId()
+ * @method AttachmentIdType setRootItemId(string $rootItemId)
+ * @method AttachmentIdType getRootItemChangeKey()
+ * @method AttachmentIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class AttachmentIdType extends RequestAttachmentIdType
 {
-    /**
-     * Identifies the unique identifier of the root store item to which the
-     * attachment is attached.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     */
-    public $RootItemChangeKey;
 
     /**
-     * Identifies the change key of the root store item to which the attachment
-     * is attached.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $rootItemId
      */
-    public $RootItemId;
+    protected $rootItemId = null;
+
+    /**
+     * @property string $rootItemChangeKey
+     */
+    protected $rootItemChangeKey = null;
 }

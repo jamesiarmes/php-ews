@@ -1,16 +1,15 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\DeclineItemType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents a Decline reply to a meeting request.
+ * Class representing DeclineItemType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: DeclineItemType
  */
 class DeclineItemType extends WellKnownResponseObjectType
 {
+
 
 }

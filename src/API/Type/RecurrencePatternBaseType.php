@@ -1,18 +1,17 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\RecurrencePatternBaseType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
-use \jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Type;
 
 /**
- * Base class for recurrence patterns.
+ * Class representing RecurrencePatternBaseType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: RecurrencePatternBaseType
  */
-abstract class RecurrencePatternBaseType extends Type
+class RecurrencePatternBaseType extends Type
 {
+
 
 }

@@ -43,6 +43,15 @@ class Type
         return $this;
     }
 
+    public function __set($name, $value)
+    {
+        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
+            $name = lcfirst($name);
+        }
+
+        $this->$name = $value;
+    }
+
     public function exists($name)
     {
         return property_exists($this, $name);
@@ -140,6 +149,19 @@ class Type
      */
     public $_ = "";
 
+    public function getNonNullItems()
+    {
+        $items = get_object_vars($this);
+
+        foreach ($items as $key => $item) {
+            if (substr($key, 0, 1) == "_" || $item == null) {
+                unset($items[$key]);
+            }
+        }
+
+        return $items;
+    }
+
     /**
      * @param $array
      * @return static
@@ -200,6 +222,8 @@ class Type
                 $name = "_";
             }
 
+            $name = ucfirst($name);
+
             if ($property === null || (substr($name, 0, 1) == "_" && $name != "_")) {
                 continue;
             }
@@ -214,8 +238,8 @@ class Type
                         $property[$key] = $value->toXmlObject();
                     }
                 }
-            } elseif (isset($this->_typeMap[$name])) {
-                $property = $this->castToExchange($property, $this->_typeMap[$name]);
+            } elseif (isset($this->_typeMap[lcfirst($name)])) {
+                $property = $this->castToExchange($property, $this->_typeMap[lcfirst($name)]);
             }
 
             $objectToReturn->$name = $property;
