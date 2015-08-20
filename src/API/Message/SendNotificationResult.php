@@ -10,4 +10,3 @@ class SendNotificationResult extends SendNotificationResultType
 
 
 }
-

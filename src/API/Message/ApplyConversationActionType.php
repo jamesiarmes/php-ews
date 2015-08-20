@@ -19,7 +19,4 @@ class ApplyConversationActionType extends BaseRequestType
      * $conversationActions
      */
     protected $conversationActions = null;
-
-
 }
-

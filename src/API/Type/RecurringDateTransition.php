@@ -10,4 +10,3 @@ class RecurringDateTransition extends RecurringDateTransitionType
 
 
 }
-

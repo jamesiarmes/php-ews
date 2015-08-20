@@ -25,7 +25,4 @@ class GetInboxRulesResponseType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\RuleType[] $inboxRules
      */
     protected $inboxRules = null;
-
-
 }
-

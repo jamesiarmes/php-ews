@@ -45,7 +45,4 @@ class ServerVersionInfo extends Type
      * @property string $version
      */
     protected $version = null;
-
-
 }
-

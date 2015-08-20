@@ -18,7 +18,4 @@ class DeleteAttachmentResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\RootItemIdType $rootItemId
      */
     protected $rootItemId = null;
-
-
 }
-

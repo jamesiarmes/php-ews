@@ -32,7 +32,4 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyChangesType $changes
      */
     protected $changes = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class IsNotEqualTo extends IsNotEqualToType
 
 
 }
-

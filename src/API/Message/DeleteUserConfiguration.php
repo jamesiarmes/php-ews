@@ -10,4 +10,3 @@ class DeleteUserConfiguration extends DeleteUserConfigurationType
 
 
 }
-

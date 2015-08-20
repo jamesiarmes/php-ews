@@ -48,7 +48,4 @@ class UserIdType extends Type
      * @property string $externalUserIdentity
      */
     protected $externalUserIdentity = null;
-
-
 }
-

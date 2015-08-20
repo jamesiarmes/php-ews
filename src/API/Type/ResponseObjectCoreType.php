@@ -19,7 +19,4 @@ class ResponseObjectCoreType extends MessageType
      * @property \jamesiarmes\PEWS\API\Type\ItemIdType $referenceItemId
      */
     protected $referenceItemId = null;
-
-
 }
-

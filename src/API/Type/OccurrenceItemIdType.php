@@ -32,7 +32,4 @@ class OccurrenceItemIdType extends BaseItemIdType
      * @property integer $instanceIndex
      */
     protected $instanceIndex = null;
-
-
 }
-

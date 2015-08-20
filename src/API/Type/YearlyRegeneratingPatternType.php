@@ -13,4 +13,3 @@ class YearlyRegeneratingPatternType extends RegeneratingPatternBaseType
 
 
 }
-

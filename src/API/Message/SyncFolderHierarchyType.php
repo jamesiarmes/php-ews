@@ -32,7 +32,4 @@ class SyncFolderHierarchyType extends BaseRequestType
      * @property string $syncState
      */
     protected $syncState = null;
-
-
 }
-

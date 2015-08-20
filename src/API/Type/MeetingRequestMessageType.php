@@ -308,7 +308,4 @@ class MeetingRequestMessageType extends MeetingMessageType
      * @property string $netShowUrl
      */
     protected $netShowUrl = null;
-
-
 }
-

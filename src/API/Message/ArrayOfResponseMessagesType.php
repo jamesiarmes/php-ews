@@ -377,7 +377,4 @@ class ArrayOfResponseMessagesType extends Message
      * $getPasswordExpirationDateResponse
      */
     protected $getPasswordExpirationDateResponse = null;
-
-
 }
-

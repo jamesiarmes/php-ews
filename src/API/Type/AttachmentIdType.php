@@ -25,7 +25,4 @@ class AttachmentIdType extends RequestAttachmentIdType
      * @property string $rootItemChangeKey
      */
     protected $rootItemChangeKey = null;
-
-
 }
-

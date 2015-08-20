@@ -10,4 +10,3 @@ class GetServiceConfiguration extends GetServiceConfigurationType
 
 
 }
-

@@ -18,7 +18,4 @@ class UnsubscribeType extends BaseRequestType
      * @property string $subscriptionId
      */
     protected $subscriptionId = null;
-
-
 }
-

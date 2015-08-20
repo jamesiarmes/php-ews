@@ -83,7 +83,4 @@ class ManagedFolderInformationType extends Type
      * @property string $homePage
      */
     protected $homePage = null;
-
-
 }
-

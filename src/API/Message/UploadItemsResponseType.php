@@ -13,4 +13,3 @@ class UploadItemsResponseType extends BaseResponseMessageType
 
 
 }
-

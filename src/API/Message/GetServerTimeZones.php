@@ -10,4 +10,3 @@ class GetServerTimeZones extends GetServerTimeZonesType
 
 
 }
-

@@ -35,7 +35,4 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
      * $recurringMasterItemId
      */
     protected $recurringMasterItemId = null;
-
-
 }
-

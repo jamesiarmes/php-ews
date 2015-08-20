@@ -10,4 +10,3 @@ class CopyFolderResponse extends CopyFolderResponseType
 
 
 }
-

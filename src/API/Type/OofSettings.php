@@ -10,4 +10,3 @@ class OofSettings extends UserOofSettingsType
 
 
 }
-

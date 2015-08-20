@@ -13,4 +13,3 @@ class DeleteUserConfigurationResponseType extends BaseResponseMessageType
 
 
 }
-

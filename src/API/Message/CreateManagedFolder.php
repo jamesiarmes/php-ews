@@ -10,4 +10,3 @@ class CreateManagedFolder extends CreateManagedFolderRequestType
 
 
 }
-

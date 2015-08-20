@@ -10,4 +10,3 @@ class CopyItem extends CopyItemType
 
 
 }
-

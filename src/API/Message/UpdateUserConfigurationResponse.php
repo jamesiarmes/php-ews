@@ -10,4 +10,3 @@ class UpdateUserConfigurationResponse extends UpdateUserConfigurationResponseTyp
 
 
 }
-

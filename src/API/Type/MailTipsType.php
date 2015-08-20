@@ -90,7 +90,4 @@ class MailTipsType extends Type
      * @property boolean $invalidRecipient
      */
     protected $invalidRecipient = null;
-
-
 }
-

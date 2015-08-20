@@ -13,4 +13,3 @@ class RoomType extends DirectoryEntryType
 
 
 }
-

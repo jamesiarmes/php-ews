@@ -27,7 +27,4 @@ class SmtpDomainType extends Type
      * @property boolean $includeSubdomains
      */
     protected $includeSubdomains = null;
-
-
 }
-

@@ -18,7 +18,4 @@ class ResolveNamesResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfResolutionType $resolutionSet
      */
     protected $resolutionSet = null;
-
-
 }
-

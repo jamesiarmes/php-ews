@@ -13,4 +13,3 @@ class DeleteFolderResponseType extends BaseResponseMessageType
 
 
 }
-

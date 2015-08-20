@@ -35,7 +35,4 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\DeleteFolderFieldType[] $deleteFolderField
      */
     protected $deleteFolderField = null;
-
-
 }
-

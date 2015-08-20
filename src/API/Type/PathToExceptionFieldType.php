@@ -18,7 +18,4 @@ class PathToExceptionFieldType extends BasePathToElementType
      * @property string $fieldURI
      */
     protected $fieldURI = null;
-
-
 }
-

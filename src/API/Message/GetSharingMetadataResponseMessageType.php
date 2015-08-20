@@ -26,7 +26,4 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\InvalidRecipientType[] $invalidRecipients
      */
     protected $invalidRecipients = null;
-
-
 }
-

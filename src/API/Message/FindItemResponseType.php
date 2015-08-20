@@ -13,4 +13,3 @@ class FindItemResponseType extends BaseResponseMessageType
 
 
 }
-

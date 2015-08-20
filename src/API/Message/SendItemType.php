@@ -32,7 +32,4 @@ class SendItemType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId
      */
     protected $savedItemFolderId = null;
-
-
 }
-

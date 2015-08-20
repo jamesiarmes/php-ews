@@ -19,7 +19,4 @@ class FindMailboxStatisticsByKeywordsResponseMessageType extends ResponseMessage
      * $mailboxStatisticsSearchResult
      */
     protected $mailboxStatisticsSearchResult = null;
-
-
 }
-

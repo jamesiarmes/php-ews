@@ -40,7 +40,4 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
      */
     protected $properties = null;
-
-
 }
-

@@ -76,7 +76,4 @@ class RuleType extends Type
      * @property \jamesiarmes\PEWS\API\Type\RuleActionsType $actions
      */
     protected $actions = null;
-
-
 }
-

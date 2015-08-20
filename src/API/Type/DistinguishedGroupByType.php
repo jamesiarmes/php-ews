@@ -19,7 +19,4 @@ class DistinguishedGroupByType extends BaseGroupByType
      * @property string $standardGroupBy
      */
     protected $standardGroupBy = null;
-
-
 }
-

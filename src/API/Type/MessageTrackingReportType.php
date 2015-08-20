@@ -67,7 +67,4 @@ class MessageTrackingReportType extends Type
      * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
      */
     protected $properties = null;
-
-
 }
-

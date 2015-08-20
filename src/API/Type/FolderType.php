@@ -25,7 +25,4 @@ class FolderType extends BaseFolderType
      * @property integer $unreadCount
      */
     protected $unreadCount = null;
-
-
 }
-

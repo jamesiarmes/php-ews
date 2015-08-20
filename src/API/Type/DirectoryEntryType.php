@@ -20,7 +20,4 @@ class DirectoryEntryType extends Type
      * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $id
      */
     protected $id = null;
-
-
 }
-

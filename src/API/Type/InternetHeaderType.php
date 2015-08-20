@@ -20,7 +20,4 @@ class InternetHeaderType extends Type
      * @property string $headerName
      */
     protected $headerName = null;
-
-
 }
-

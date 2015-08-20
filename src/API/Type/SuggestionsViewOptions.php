@@ -10,4 +10,3 @@ class SuggestionsViewOptions extends SuggestionsViewOptionsType
 
 
 }
-

@@ -38,7 +38,4 @@ class AttendeeType extends Type
     protected $_typeMap = array(
         'lastResponseTime' => 'dateTime',
     );
-
-
 }
-

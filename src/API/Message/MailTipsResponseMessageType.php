@@ -18,7 +18,4 @@ class MailTipsResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\MailTipsType $mailTips
      */
     protected $mailTips = null;
-
-
 }
-

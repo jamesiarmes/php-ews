@@ -34,7 +34,4 @@ class ChangeDescriptionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
-
-
 }
-

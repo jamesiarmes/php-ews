@@ -115,7 +115,4 @@ class TaskRecurrenceType extends Type
      * $numberedRecurrence
      */
     protected $numberedRecurrence = null;
-
-
 }
-

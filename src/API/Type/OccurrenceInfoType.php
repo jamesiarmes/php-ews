@@ -47,7 +47,4 @@ class OccurrenceInfoType extends Type
      * @property \DateTime $originalStart
      */
     protected $originalStart = null;
-
-
 }
-

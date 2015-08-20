@@ -19,7 +19,4 @@ class GetMailTipsResponseMessageType extends ResponseMessageType
      * $responseMessages
      */
     protected $responseMessages = null;
-
-
 }
-

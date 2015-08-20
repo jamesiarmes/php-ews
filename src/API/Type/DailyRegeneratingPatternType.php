@@ -13,4 +13,3 @@ class DailyRegeneratingPatternType extends RegeneratingPatternBaseType
 
 
 }
-

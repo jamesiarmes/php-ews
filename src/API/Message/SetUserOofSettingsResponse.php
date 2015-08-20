@@ -10,4 +10,3 @@ class SetUserOofSettingsResponse extends SetUserOofSettingsResponseType
 
 
 }
-

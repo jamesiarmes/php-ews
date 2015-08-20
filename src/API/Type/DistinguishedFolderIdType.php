@@ -32,7 +32,4 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
      */
     protected $mailbox = null;
-
-
 }
-

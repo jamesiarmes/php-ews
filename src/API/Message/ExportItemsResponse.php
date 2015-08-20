@@ -10,4 +10,3 @@ class ExportItemsResponse extends ExportItemsResponseType
 
 
 }
-

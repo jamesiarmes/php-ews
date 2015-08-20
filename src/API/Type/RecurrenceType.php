@@ -83,7 +83,4 @@ class RecurrenceType extends Type
      * $numberedRecurrence
      */
     protected $numberedRecurrence = null;
-
-
 }
-

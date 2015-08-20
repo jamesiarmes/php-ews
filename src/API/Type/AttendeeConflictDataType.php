@@ -15,4 +15,3 @@ class AttendeeConflictDataType extends Type
 
 
 }
-

@@ -25,7 +25,4 @@ class FractionalPageViewType extends BasePagingType
      * @property integer $denominator
      */
     protected $denominator = null;
-
-
 }
-

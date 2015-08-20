@@ -32,7 +32,4 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      * @property string $connectionStatus
      */
     protected $connectionStatus = null;
-
-
 }
-

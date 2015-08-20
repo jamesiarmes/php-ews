@@ -48,7 +48,4 @@ class UserOofSettingsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ReplyBodyType $externalReply
      */
     protected $externalReply = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class GetSharingFolder extends GetSharingFolderType
 
 
 }
-

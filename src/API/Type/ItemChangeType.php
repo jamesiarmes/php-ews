@@ -43,7 +43,4 @@ class ItemChangeType extends Type
      * $updates
      */
     protected $updates = null;
-
-
 }
-

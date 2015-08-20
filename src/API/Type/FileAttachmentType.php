@@ -25,7 +25,4 @@ class FileAttachmentType extends AttachmentType
      * @property string $content
      */
     protected $content = null;
-
-
 }
-

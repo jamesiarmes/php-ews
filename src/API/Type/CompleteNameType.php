@@ -83,7 +83,4 @@ class CompleteNameType extends Type
      * @property string $yomiLastName
      */
     protected $yomiLastName = null;
-
-
 }
-

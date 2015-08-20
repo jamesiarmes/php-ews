@@ -10,4 +10,3 @@ class FindFolderResponse extends FindFolderResponseType
 
 
 }
-

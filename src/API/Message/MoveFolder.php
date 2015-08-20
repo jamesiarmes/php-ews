@@ -10,4 +10,3 @@ class MoveFolder extends MoveFolderType
 
 
 }
-

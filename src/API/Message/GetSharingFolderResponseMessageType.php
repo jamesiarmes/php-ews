@@ -18,7 +18,4 @@ class GetSharingFolderResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\FolderIdType $sharingFolderId
      */
     protected $sharingFolderId = null;
-
-
 }
-

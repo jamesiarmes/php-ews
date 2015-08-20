@@ -25,7 +25,4 @@ class ExportItemsResponseMessageType extends ResponseMessageType
      * @property string $data
      */
     protected $data = null;
-
-
 }
-

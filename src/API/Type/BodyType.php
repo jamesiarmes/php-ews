@@ -20,7 +20,4 @@ class BodyType extends Type
      * @property string $bodyType
      */
     protected $bodyType = null;
-
-
 }
-

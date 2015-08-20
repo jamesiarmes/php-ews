@@ -87,7 +87,4 @@ class ConversationActionType extends Type
      * @property string $deleteType
      */
     protected $deleteType = null;
-
-
 }
-

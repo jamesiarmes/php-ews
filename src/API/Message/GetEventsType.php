@@ -25,7 +25,4 @@ class GetEventsType extends BaseRequestType
      * @property string $watermark
      */
     protected $watermark = null;
-
-
 }
-

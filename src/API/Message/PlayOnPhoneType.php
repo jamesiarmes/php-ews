@@ -25,7 +25,4 @@ class PlayOnPhoneType extends BaseRequestType
      * @property string $dialString
      */
     protected $dialString = null;
-
-
 }
-

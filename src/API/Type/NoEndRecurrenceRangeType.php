@@ -13,4 +13,3 @@ class NoEndRecurrenceRangeType extends RecurrenceRangeBaseType
 
 
 }
-

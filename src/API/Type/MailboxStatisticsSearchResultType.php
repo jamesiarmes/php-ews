@@ -28,7 +28,4 @@ class MailboxStatisticsSearchResultType extends Type
      * $keywordStatisticsSearchResult
      */
     protected $keywordStatisticsSearchResult = null;
-
-
 }
-

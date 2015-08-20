@@ -13,4 +13,3 @@ class GetStreamingEventsResponseType extends BaseResponseMessageType
 
 
 }
-

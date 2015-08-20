@@ -25,7 +25,4 @@ class RecurringMasterItemIdType extends BaseItemIdType
      * @property string $changeKey
      */
     protected $changeKey = null;
-
-
 }
-

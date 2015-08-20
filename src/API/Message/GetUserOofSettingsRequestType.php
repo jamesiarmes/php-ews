@@ -18,7 +18,4 @@ class GetUserOofSettingsRequestType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\Mailbox $mailbox
      */
     protected $mailbox = null;
-
-
 }
-

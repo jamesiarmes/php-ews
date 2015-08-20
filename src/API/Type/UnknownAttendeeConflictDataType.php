@@ -13,4 +13,3 @@ class UnknownAttendeeConflictDataType extends AttendeeConflictDataType
 
 
 }
-

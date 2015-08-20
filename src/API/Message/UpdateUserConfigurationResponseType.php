@@ -13,4 +13,3 @@ class UpdateUserConfigurationResponseType extends BaseResponseMessageType
 
 
 }
-

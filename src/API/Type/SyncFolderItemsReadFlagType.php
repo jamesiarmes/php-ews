@@ -27,7 +27,4 @@ class SyncFolderItemsReadFlagType extends Type
      * @property boolean $isRead
      */
     protected $isRead = null;
-
-
 }
-

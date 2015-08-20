@@ -13,4 +13,3 @@ class AcceptSharingInvitationType extends ReferenceItemResponseType
 
 
 }
-

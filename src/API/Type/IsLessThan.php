@@ -10,4 +10,3 @@ class IsLessThan extends IsLessThanType
 
 
 }
-

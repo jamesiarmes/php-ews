@@ -10,4 +10,3 @@ class ExceptionFieldURI extends PathToExceptionFieldType
 
 
 }
-

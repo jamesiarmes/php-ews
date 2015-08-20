@@ -106,7 +106,4 @@ class RuleActionsType extends Type
      * @property boolean $stopProcessingRules
      */
     protected $stopProcessingRules = null;
-
-
 }
-

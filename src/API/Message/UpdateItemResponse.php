@@ -10,4 +10,3 @@ class UpdateItemResponse extends UpdateItemResponseType
 
 
 }
-

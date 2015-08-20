@@ -13,4 +13,3 @@ class TooBigGroupAttendeeConflictDataType extends AttendeeConflictDataType
 
 
 }
-

@@ -18,7 +18,4 @@ class ModifiedEventType extends BaseObjectChangedEventType
      * @property integer $unreadCount
      */
     protected $unreadCount = null;
-
-
 }
-

@@ -39,7 +39,4 @@ class CreateItemType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType $items
      */
     protected $items = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class GetSharingMetadataResponse extends GetSharingMetadataResponseMessageType
 
 
 }
-

@@ -27,7 +27,4 @@ class ResolutionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ContactItemType $contact
      */
     protected $contact = null;
-
-
 }
-

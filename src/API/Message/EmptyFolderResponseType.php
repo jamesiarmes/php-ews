@@ -13,4 +13,3 @@ class EmptyFolderResponseType extends BaseResponseMessageType
 
 
 }
-

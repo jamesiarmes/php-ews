@@ -10,4 +10,3 @@ class FindConversation extends FindConversationType
 
 
 }
-

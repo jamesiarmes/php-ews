@@ -10,4 +10,3 @@ class GetUserAvailabilityResponse extends GetUserAvailabilityResponseType
 
 
 }
-

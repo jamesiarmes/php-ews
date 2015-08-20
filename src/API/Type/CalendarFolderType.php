@@ -25,7 +25,4 @@ class CalendarFolderType extends BaseFolderType
      * @property \jamesiarmes\PEWS\API\Type\CalendarPermissionSetType $permissionSet
      */
     protected $permissionSet = null;
-
-
 }
-

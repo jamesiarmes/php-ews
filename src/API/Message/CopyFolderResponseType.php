@@ -13,4 +13,3 @@ class CopyFolderResponseType extends BaseResponseMessageType
 
 
 }
-

@@ -10,4 +10,3 @@ class MoveItemResponse extends MoveItemResponseType
 
 
 }
-

@@ -18,7 +18,4 @@ class UpdateItemResponseMessageType extends ItemInfoResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ConflictResultsType $conflictResults
      */
     protected $conflictResults = null;
-
-
 }
-

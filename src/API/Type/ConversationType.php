@@ -215,7 +215,4 @@ class ConversationType extends Type
      * $globalItemIds
      */
     protected $globalItemIds = null;
-
-
 }
-

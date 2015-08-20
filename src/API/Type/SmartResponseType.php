@@ -18,7 +18,4 @@ class SmartResponseType extends SmartResponseBaseType
      * @property \jamesiarmes\PEWS\API\Type\BodyType $newBodyContent
      */
     protected $newBodyContent = null;
-
-
 }
-

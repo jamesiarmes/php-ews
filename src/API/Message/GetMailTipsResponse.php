@@ -10,4 +10,3 @@ class GetMailTipsResponse extends GetMailTipsResponseMessageType
 
 
 }
-

@@ -25,7 +25,4 @@ class ContactsFolderType extends BaseFolderType
      * @property \jamesiarmes\PEWS\API\Type\PermissionSetType $permissionSet
      */
     protected $permissionSet = null;
-
-
 }
-

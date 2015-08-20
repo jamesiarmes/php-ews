@@ -47,7 +47,4 @@ class ResolveNamesType extends BaseRequestType
      * @property string $unresolvedEntry
      */
     protected $unresolvedEntry = null;
-
-
 }
-

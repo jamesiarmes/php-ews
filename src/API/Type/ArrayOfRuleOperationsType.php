@@ -36,7 +36,4 @@ class ArrayOfRuleOperationsType extends Type
      * $deleteRuleOperation
      */
     protected $deleteRuleOperation = null;
-
-
 }
-

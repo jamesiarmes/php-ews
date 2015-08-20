@@ -19,7 +19,4 @@ class GetServerTimeZonesResponseMessageType extends ResponseMessageType
      * $timeZoneDefinitions
      */
     protected $timeZoneDefinitions = null;
-
-
 }
-

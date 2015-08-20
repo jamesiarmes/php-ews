@@ -62,7 +62,4 @@ class FindItemParentType extends Type
      * @property \jamesiarmes\PEWS\API\Type\GroupedItemsType[] $groups
      */
     protected $groups = null;
-
-
 }
-

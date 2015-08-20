@@ -41,7 +41,4 @@ class ConnectingSIDType extends Type
      * @property string $smtpAddress
      */
     protected $smtpAddress = null;
-
-
 }
-

@@ -18,7 +18,4 @@ class AttachmentInfoResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType $attachments
      */
     protected $attachments = null;
-
-
 }
-

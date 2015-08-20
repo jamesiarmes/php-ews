@@ -13,4 +13,3 @@ class UnsubscribeResponseType extends BaseResponseMessageType
 
 
 }
-

@@ -13,4 +13,3 @@ class TentativelyAcceptItemType extends WellKnownResponseObjectType
 
 
 }
-

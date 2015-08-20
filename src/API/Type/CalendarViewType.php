@@ -30,7 +30,4 @@ class CalendarViewType extends BasePagingType
      * @property \DateTime $endDate
      */
     protected $endDate = null;
-
-
 }
-

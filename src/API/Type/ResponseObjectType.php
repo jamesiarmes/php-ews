@@ -21,7 +21,4 @@ class ResponseObjectType extends ResponseObjectCoreType
      * @property string $objectName
      */
     protected $objectName = null;
-
-
 }
-

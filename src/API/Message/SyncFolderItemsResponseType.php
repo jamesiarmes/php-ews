@@ -13,4 +13,3 @@ class SyncFolderItemsResponseType extends BaseResponseMessageType
 
 
 }
-

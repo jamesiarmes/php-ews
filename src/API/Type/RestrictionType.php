@@ -98,7 +98,4 @@ class RestrictionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\OrElement[] $or
      */
     protected $or = null;
-
-
 }
-

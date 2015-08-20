@@ -26,7 +26,4 @@ class GetAttachmentType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType[] $attachmentIds
      */
     protected $attachmentIds = null;
-
-
 }
-

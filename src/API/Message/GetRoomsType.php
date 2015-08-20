@@ -18,7 +18,4 @@ class GetRoomsType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $roomList
      */
     protected $roomList = null;
-
-
 }
-

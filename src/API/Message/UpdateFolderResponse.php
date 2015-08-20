@@ -10,4 +10,3 @@ class UpdateFolderResponse extends UpdateFolderResponseType
 
 
 }
-

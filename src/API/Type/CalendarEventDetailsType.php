@@ -69,7 +69,4 @@ class CalendarEventDetailsType extends Type
      * @property boolean $isPrivate
      */
     protected $isPrivate = null;
-
-
 }
-

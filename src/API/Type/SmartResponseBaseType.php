@@ -13,4 +13,3 @@ class SmartResponseBaseType extends ResponseObjectType
 
 
 }
-

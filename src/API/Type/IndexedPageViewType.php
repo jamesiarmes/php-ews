@@ -25,7 +25,4 @@ class IndexedPageViewType extends BasePagingType
      * @property string $basePoint
      */
     protected $basePoint = null;
-
-
 }
-

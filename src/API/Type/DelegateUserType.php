@@ -42,7 +42,4 @@ class DelegateUserType extends Type
      * @property boolean $viewPrivateItems
      */
     protected $viewPrivateItems = null;
-
-
 }
-

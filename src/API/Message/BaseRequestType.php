@@ -15,4 +15,3 @@ class BaseRequestType extends Message
 
 
 }
-

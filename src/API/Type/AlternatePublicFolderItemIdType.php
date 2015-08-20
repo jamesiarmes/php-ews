@@ -18,7 +18,4 @@ class AlternatePublicFolderItemIdType extends AlternatePublicFolderIdType
      * @property string $itemId
      */
     protected $itemId = null;
-
-
 }
-

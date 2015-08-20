@@ -13,4 +13,3 @@ class MoveItemType extends BaseMoveCopyItemType
 
 
 }
-

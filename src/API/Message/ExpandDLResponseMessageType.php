@@ -53,7 +53,4 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfDLExpansionType $dLExpansion
      */
     protected $dLExpansion = null;
-
-
 }
-

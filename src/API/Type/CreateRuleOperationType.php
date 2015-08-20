@@ -18,7 +18,4 @@ class CreateRuleOperationType extends RuleOperationType
      * @property \jamesiarmes\PEWS\API\Type\RuleType $rule
      */
     protected $rule = null;
-
-
 }
-

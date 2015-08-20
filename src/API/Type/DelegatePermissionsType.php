@@ -55,7 +55,4 @@ class DelegatePermissionsType extends Type
      * @property string $journalFolderPermissionLevel
      */
     protected $journalFolderPermissionLevel = null;
-
-
 }
-

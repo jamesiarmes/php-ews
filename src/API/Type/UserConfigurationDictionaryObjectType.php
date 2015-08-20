@@ -27,7 +27,4 @@ class UserConfigurationDictionaryObjectType extends Type
      * @property string[] $value
      */
     protected $value = null;
-
-
 }
-

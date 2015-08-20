@@ -51,7 +51,4 @@ class ArrayOfTransitionsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\Transition[] $transition
      */
     protected $transition = null;
-
-
 }
-

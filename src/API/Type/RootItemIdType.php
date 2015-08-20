@@ -25,7 +25,4 @@ class RootItemIdType extends BaseItemIdType
      * @property string $rootItemChangeKey
      */
     protected $rootItemChangeKey = null;
-
-
 }
-

@@ -77,7 +77,4 @@ class BaseFolderType extends Type
      * @property \jamesiarmes\PEWS\API\Type\EffectiveRightsType $effectiveRights
      */
     protected $effectiveRights = null;
-
-
 }
-

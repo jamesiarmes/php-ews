@@ -18,7 +18,4 @@ class DeleteAttachmentType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType[] $attachmentIds
      */
     protected $attachmentIds = null;
-
-
 }
-

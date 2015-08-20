@@ -93,7 +93,4 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      * @property boolean $includeUnsearchableItems
      */
     protected $includeUnsearchableItems = null;
-
-
 }
-

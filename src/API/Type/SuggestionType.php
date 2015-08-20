@@ -46,7 +46,4 @@ class SuggestionType extends Type
      * $attendeeConflictDataArray
      */
     protected $attendeeConflictDataArray = null;
-
-
 }
-

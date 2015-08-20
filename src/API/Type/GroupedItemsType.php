@@ -27,7 +27,4 @@ class GroupedItemsType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items
      */
     protected $items = null;
-
-
 }
-

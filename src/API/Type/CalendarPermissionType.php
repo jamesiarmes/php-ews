@@ -25,7 +25,4 @@ class CalendarPermissionType extends BasePermissionType
      * @property string $calendarPermissionLevel
      */
     protected $calendarPermissionLevel = null;
-
-
 }
-

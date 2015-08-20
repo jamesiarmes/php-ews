@@ -13,4 +13,3 @@ class RefreshSharingFolderResponseMessageType extends ResponseMessageType
 
 
 }
-

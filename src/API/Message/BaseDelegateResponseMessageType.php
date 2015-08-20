@@ -19,7 +19,4 @@ class BaseDelegateResponseMessageType extends ResponseMessageType
      * $responseMessages
      */
     protected $responseMessages = null;
-
-
 }
-

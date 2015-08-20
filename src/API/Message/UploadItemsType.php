@@ -18,7 +18,4 @@ class UploadItemsType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\UploadItemType[] $items
      */
     protected $items = null;
-
-
 }
-

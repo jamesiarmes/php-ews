@@ -10,4 +10,3 @@ class ResolveNames extends ResolveNamesType
 
 
 }
-

@@ -10,4 +10,3 @@ class GetServiceConfigurationResponse extends GetServiceConfigurationResponseMes
 
 
 }
-

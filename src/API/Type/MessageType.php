@@ -123,7 +123,4 @@ class MessageType extends ItemType
      * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $receivedRepresenting
      */
     protected $receivedRepresenting = null;
-
-
 }
-

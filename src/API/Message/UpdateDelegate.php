@@ -10,4 +10,3 @@ class UpdateDelegate extends UpdateDelegateType
 
 
 }
-

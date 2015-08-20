@@ -13,4 +13,3 @@ class ConvertIdResponseType extends BaseResponseMessageType
 
 
 }
-

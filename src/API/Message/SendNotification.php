@@ -10,4 +10,3 @@ class SendNotification extends SendNotificationResponseType
 
 
 }
-

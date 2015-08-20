@@ -34,7 +34,4 @@ class InvalidRecipientType extends Type
      * @property string $messageText
      */
     protected $messageText = null;
-
-
 }
-

@@ -18,7 +18,4 @@ class PostReplyItemType extends PostReplyItemBaseType
      * @property \jamesiarmes\PEWS\API\Type\BodyType $newBodyContent
      */
     protected $newBodyContent = null;
-
-
 }
-

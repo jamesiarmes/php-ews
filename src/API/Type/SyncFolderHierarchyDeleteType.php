@@ -20,7 +20,4 @@ class SyncFolderHierarchyDeleteType extends Type
      * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
      */
     protected $folderId = null;
-
-
 }
-

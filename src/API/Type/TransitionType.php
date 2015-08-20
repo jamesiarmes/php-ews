@@ -20,7 +20,4 @@ class TransitionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\TransitionTargetType $to
      */
     protected $to = null;
-
-
 }
-

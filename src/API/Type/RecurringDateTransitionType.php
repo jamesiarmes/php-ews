@@ -18,7 +18,4 @@ class RecurringDateTransitionType extends RecurringTimeTransitionType
      * @property integer $day
      */
     protected $day = null;
-
-
 }
-

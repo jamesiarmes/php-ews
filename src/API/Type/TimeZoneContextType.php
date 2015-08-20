@@ -20,7 +20,4 @@ class TimeZoneContextType extends Type
      * @property \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType $timeZoneDefinition
      */
     protected $timeZoneDefinition = null;
-
-
 }
-

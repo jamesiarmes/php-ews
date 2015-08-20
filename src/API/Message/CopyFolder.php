@@ -10,4 +10,3 @@ class CopyFolder extends CopyFolderType
 
 
 }
-

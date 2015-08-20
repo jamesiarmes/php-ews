@@ -18,7 +18,4 @@ class RefreshSharingFolderType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\FolderIdType $sharingFolderId
      */
     protected $sharingFolderId = null;
-
-
 }
-

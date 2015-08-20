@@ -32,7 +32,4 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType $changes
      */
     protected $changes = null;
-
-
 }
-

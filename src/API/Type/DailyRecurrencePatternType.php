@@ -13,4 +13,3 @@ class DailyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 
 
 }
-

@@ -10,4 +10,3 @@ class SyncFolderItems extends SyncFolderItemsType
 
 
 }
-

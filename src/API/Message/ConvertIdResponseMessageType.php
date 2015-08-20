@@ -19,7 +19,4 @@ class ConvertIdResponseMessageType extends ResponseMessageType
      * @property \jamesiarmes\PEWS\API\Type\AlternateIdBaseType $alternateId
      */
     protected $alternateId = null;
-
-
 }
-

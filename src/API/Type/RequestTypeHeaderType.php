@@ -20,7 +20,4 @@ class RequestTypeHeaderType extends Type
      * @property string $requestType
      */
     protected $requestType = null;
-
-
 }
-

@@ -49,7 +49,4 @@ class ResponseMessageType extends Message
      * $messageXml
      */
     protected $messageXml = null;
-
-
 }
-

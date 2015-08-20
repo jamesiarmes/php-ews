@@ -25,7 +25,4 @@ class PushSubscriptionRequestType extends BaseSubscriptionRequestType
      * @property string $uRL
      */
     protected $uRL = null;
-
-
 }
-

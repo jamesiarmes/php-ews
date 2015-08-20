@@ -10,4 +10,3 @@ class FindConversationResponse extends FindConversationResponseMessageType
 
 
 }
-

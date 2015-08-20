@@ -69,7 +69,4 @@ class BasePermissionType extends Type
      * @property string $deleteItems
      */
     protected $deleteItems = null;
-
-
 }
-

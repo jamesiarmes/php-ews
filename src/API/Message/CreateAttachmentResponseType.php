@@ -13,4 +13,3 @@ class CreateAttachmentResponseType extends BaseResponseMessageType
 
 
 }
-

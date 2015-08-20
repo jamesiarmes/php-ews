@@ -10,4 +10,3 @@ class SyncFolderItemsResponse extends SyncFolderItemsResponseType
 
 
 }
-

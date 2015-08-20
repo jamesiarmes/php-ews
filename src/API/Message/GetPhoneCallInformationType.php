@@ -18,7 +18,4 @@ class GetPhoneCallInformationType extends BaseRequestType
      * @property \jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId
      */
     protected $phoneCallId = null;
-
-
 }
-

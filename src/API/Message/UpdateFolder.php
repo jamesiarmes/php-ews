@@ -10,4 +10,3 @@ class UpdateFolder extends UpdateFolderType
 
 
 }
-

@@ -41,7 +41,4 @@ class RuleValidationErrorType extends Type
      * @property string $fieldValue
      */
     protected $fieldValue = null;
-
-
 }
-

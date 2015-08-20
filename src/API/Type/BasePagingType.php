@@ -20,7 +20,4 @@ class BasePagingType extends Type
      * @property integer $maxEntriesReturned
      */
     protected $maxEntriesReturned = null;
-
-
 }
-

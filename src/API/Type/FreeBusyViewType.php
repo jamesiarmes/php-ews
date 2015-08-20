@@ -41,7 +41,4 @@ class FreeBusyViewType extends Type
      * @property \jamesiarmes\PEWS\API\Type\WorkingHoursType $workingHours
      */
     protected $workingHours = null;
-
-
 }
-

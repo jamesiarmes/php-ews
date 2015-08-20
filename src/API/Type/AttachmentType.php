@@ -73,7 +73,4 @@ class AttachmentType extends Type
      * @property boolean $isInline
      */
     protected $isInline = null;
-
-
 }
-

@@ -18,7 +18,4 @@ class PathToUnindexedFieldType extends BasePathToElementType
      * @property string $fieldURI
      */
     protected $fieldURI = null;
-
-
 }
-

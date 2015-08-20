@@ -34,7 +34,4 @@ class GetUserOofSettingsResponseType extends Message
      * @property string $allowExternalOof
      */
     protected $allowExternalOof = null;
-
-
 }
-

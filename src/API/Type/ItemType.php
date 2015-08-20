@@ -296,7 +296,4 @@ class ItemType extends Type
      * @property string $storeEntryId
      */
     protected $storeEntryId = null;
-
-
 }
-

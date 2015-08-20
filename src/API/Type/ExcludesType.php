@@ -39,7 +39,4 @@ class ExcludesType extends SearchExpressionType
      * @property \jamesiarmes\PEWS\API\Type\ExcludesValueType $bitmask
      */
     protected $bitmask = null;
-
-
 }
-

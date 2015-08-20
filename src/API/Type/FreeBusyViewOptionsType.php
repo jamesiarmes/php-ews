@@ -34,7 +34,4 @@ class FreeBusyViewOptionsType extends Type
      * @property string[] $requestedView
      */
     protected $requestedView = null;
-
-
 }
-

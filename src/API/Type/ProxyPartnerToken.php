@@ -10,4 +10,3 @@ class ProxyPartnerToken extends ProxySecurityContextType
 
 
 }
-

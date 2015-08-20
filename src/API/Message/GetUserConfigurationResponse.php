@@ -10,4 +10,3 @@ class GetUserConfigurationResponse extends GetUserConfigurationResponseType
 
 
 }
-

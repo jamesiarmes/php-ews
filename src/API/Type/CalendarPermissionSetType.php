@@ -28,7 +28,4 @@ class CalendarPermissionSetType extends Type
      * @property string[] $unknownEntries
      */
     protected $unknownEntries = null;
-
-
 }
-

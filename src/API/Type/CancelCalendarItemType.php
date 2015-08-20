@@ -13,4 +13,3 @@ class CancelCalendarItemType extends SmartResponseType
 
 
 }
-

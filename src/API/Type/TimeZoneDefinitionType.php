@@ -48,7 +48,4 @@ class TimeZoneDefinitionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ArrayOfTransitionsType $transitions
      */
     protected $transitions = null;
-
-
 }
-

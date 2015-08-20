@@ -40,7 +40,4 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      * $suggestionsViewOptions
      */
     protected $suggestionsViewOptions = null;
-
-
 }
-

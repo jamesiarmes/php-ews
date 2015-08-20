@@ -32,7 +32,4 @@ class MovedCopiedEventType extends BaseObjectChangedEventType
      * @property \jamesiarmes\PEWS\API\Type\FolderIdType $oldParentFolderId
      */
     protected $oldParentFolderId = null;
-
-
 }
-

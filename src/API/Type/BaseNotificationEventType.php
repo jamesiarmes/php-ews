@@ -20,7 +20,4 @@ class BaseNotificationEventType extends Type
      * @property string $watermark
      */
     protected $watermark = null;
-
-
 }
-

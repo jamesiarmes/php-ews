@@ -10,4 +10,3 @@ class OrElement extends OrType
 
 
 }
-

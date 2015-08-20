@@ -10,4 +10,3 @@ class GetPhoneCallInformation extends GetPhoneCallInformationType
 
 
 }
-

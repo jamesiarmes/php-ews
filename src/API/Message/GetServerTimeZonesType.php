@@ -25,7 +25,4 @@ class GetServerTimeZonesType extends BaseRequestType
      * @property string[] $ids
      */
     protected $ids = null;
-
-
 }
-

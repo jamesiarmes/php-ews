@@ -25,7 +25,4 @@ class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      * @property string $dayOfWeekIndex
      */
     protected $dayOfWeekIndex = null;
-
-
 }
-

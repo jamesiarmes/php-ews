@@ -39,7 +39,4 @@ class GroupByType extends BaseGroupByType
      * @property \jamesiarmes\PEWS\API\Type\AggregateOnType $aggregateOn
      */
     protected $aggregateOn = null;
-
-
 }
-

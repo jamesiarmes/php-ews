@@ -10,4 +10,3 @@ class GetInboxRulesResponse extends GetInboxRulesResponseType
 
 
 }
-

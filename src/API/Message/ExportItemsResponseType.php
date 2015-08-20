@@ -13,4 +13,3 @@ class ExportItemsResponseType extends BaseResponseMessageType
 
 
 }
-

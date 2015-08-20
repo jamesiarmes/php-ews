@@ -28,7 +28,4 @@ class FolderResponseShapeType extends Type
      * $additionalProperties
      */
     protected $additionalProperties = null;
-
-
 }
-

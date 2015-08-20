@@ -10,4 +10,3 @@ class ExchangeImpersonation extends ExchangeImpersonationType
 
 
 }
-

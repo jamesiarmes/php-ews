@@ -42,7 +42,4 @@ class AggregateOnType extends Type
      * @property \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType $extendedFieldURI
      */
     protected $extendedFieldURI = null;
-
-
 }
-

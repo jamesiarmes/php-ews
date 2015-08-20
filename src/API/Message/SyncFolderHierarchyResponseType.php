@@ -13,4 +13,3 @@ class SyncFolderHierarchyResponseType extends BaseResponseMessageType
 
 
 }
-

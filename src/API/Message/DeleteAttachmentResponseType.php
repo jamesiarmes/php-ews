@@ -13,4 +13,3 @@ class DeleteAttachmentResponseType extends BaseResponseMessageType
 
 
 }
-

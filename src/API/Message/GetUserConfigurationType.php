@@ -26,7 +26,4 @@ class GetUserConfigurationType extends BaseRequestType
      * @property string[] $userConfigurationProperties
      */
     protected $userConfigurationProperties = null;
-
-
 }
-

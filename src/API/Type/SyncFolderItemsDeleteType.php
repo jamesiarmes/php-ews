@@ -20,7 +20,4 @@ class SyncFolderItemsDeleteType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
      */
     protected $itemId = null;
-
-
 }
-

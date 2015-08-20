@@ -18,7 +18,4 @@ class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
      * @property string $busyType
      */
     protected $busyType = null;
-
-
 }
-

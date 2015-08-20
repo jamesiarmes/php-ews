@@ -32,7 +32,4 @@ class ExistsType extends SearchExpressionType
      * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
      */
     protected $extendedFieldURI = null;
-
-
 }
-

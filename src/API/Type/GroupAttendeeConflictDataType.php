@@ -39,7 +39,4 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      * @property integer $numberOfMembersWithNoData
      */
     protected $numberOfMembersWithNoData = null;
-
-
 }
-

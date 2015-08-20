@@ -27,7 +27,4 @@ class ProtectionRuleActionType extends Type
      * @property \jamesiarmes\PEWS\API\Type\ProtectionRuleArgumentType[] $argument
      */
     protected $argument = null;
-
-
 }
-

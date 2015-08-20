@@ -18,7 +18,4 @@ class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
      * @property integer $numberOfOccurrences
      */
     protected $numberOfOccurrences = null;
-
-
 }
-

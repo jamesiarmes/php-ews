@@ -10,4 +10,3 @@ class UploadItemsResponse extends UploadItemsResponseType
 
 
 }
-

@@ -32,7 +32,4 @@ class GetMailTipsType extends BaseRequestType
      * @property string[] $mailTipsRequested
      */
     protected $mailTipsRequested = null;
-
-
 }
-

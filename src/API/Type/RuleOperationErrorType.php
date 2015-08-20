@@ -27,7 +27,4 @@ class RuleOperationErrorType extends Type
      * @property \jamesiarmes\PEWS\API\Type\RuleValidationErrorType[] $validationErrors
      */
     protected $validationErrors = null;
-
-
 }
-

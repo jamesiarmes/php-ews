@@ -20,7 +20,4 @@ class BaseGroupByType extends Type
      * @property string $order
      */
     protected $order = null;
-
-
 }
-

@@ -10,4 +10,3 @@ class SubscribeResponse extends SubscribeResponseType
 
 
 }
-

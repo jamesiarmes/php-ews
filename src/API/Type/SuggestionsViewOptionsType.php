@@ -73,7 +73,4 @@ class SuggestionsViewOptionsType extends Type
      * @property string $globalObjectId
      */
     protected $globalObjectId = null;
-
-
 }
-

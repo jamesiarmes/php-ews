@@ -13,4 +13,3 @@ class ExpandDLResponseType extends BaseResponseMessageType
 
 
 }
-

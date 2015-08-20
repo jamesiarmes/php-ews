@@ -13,4 +13,3 @@ class MoveFolderResponseType extends BaseResponseMessageType
 
 
 }
-

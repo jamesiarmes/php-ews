@@ -10,4 +10,3 @@ class RefreshSharingFolder extends RefreshSharingFolderType
 
 
 }
-

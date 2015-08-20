@@ -13,4 +13,3 @@ class OrType extends MultipleOperandBooleanExpressionType
 
 
 }
-

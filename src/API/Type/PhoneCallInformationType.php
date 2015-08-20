@@ -41,7 +41,4 @@ class PhoneCallInformationType extends Type
      * @property integer $sIPResponseCode
      */
     protected $sIPResponseCode = null;
-
-
 }
-

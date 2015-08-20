@@ -39,7 +39,4 @@ class TwoOperandExpressionType extends SearchExpressionType
      * @property \jamesiarmes\PEWS\API\Type\FieldURIOrConstantType $fieldURIOrConstant
      */
     protected $fieldURIOrConstant = null;
-
-
 }
-

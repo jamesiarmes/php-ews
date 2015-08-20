@@ -20,7 +20,4 @@ class PhoneNumberDictionaryEntryType extends Type
      * @property string $key
      */
     protected $key = null;
-
-
 }
-

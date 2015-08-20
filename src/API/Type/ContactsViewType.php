@@ -25,7 +25,4 @@ class ContactsViewType extends BasePagingType
      * @property string $finalName
      */
     protected $finalName = null;
-
-
 }
-

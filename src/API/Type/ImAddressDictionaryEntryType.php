@@ -20,7 +20,4 @@ class ImAddressDictionaryEntryType extends Type
      * @property string $key
      */
     protected $key = null;
-
-
 }
-

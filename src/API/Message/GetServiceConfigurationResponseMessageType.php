@@ -20,7 +20,4 @@ class GetServiceConfigurationResponseMessageType extends ResponseMessageType
      * $responseMessages
      */
     protected $responseMessages = null;
-
-
 }
-

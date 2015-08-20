@@ -32,7 +32,4 @@ class GetSharingMetadataType extends BaseRequestType
      * @property string[] $recipients
      */
     protected $recipients = null;
-
-
 }
-

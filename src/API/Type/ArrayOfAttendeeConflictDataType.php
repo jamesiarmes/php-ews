@@ -45,7 +45,4 @@ class ArrayOfAttendeeConflictDataType extends Type
      * $groupAttendeeConflictData
      */
     protected $groupAttendeeConflictData = null;
-
-
 }
-

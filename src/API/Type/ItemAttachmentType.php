@@ -82,7 +82,4 @@ class ItemAttachmentType extends AttachmentType
      * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
      */
     protected $postItem = null;
-
-
 }
-
