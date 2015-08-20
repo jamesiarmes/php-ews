@@ -401,7 +401,11 @@ class ExchangeWebServices
      */
     public function drillDownResponseLevels($response)
     {
-        $items = $response->getNonNullItems();
+        if ($response instanceof Type) {
+            $items = $response->getNonNullItems();
+        } elseif (is_array($response)) {
+            $items = $response;
+        }
 
         if ($response instanceof Message\ResponseMessageType) {
             if ($response->getResponseClass() !== "Success") {
@@ -419,6 +423,11 @@ class ExchangeWebServices
             $response = $response->$methodName();
 
             $response = $this->drillDownResponseLevels($response);
+        } elseif (is_array($items) && isset($items[1]) && $items[1] instanceof Message\ResponseMessageType) {
+            $response = array();
+            foreach ($items as $responseItem) {
+                $response[] = $this->drillDownResponseLevels($responseItem);
+            }
         }
 
         return $response;

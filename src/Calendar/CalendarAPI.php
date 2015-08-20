@@ -192,6 +192,6 @@ class CalendarAPI extends API
      */
     public function listChanges($syncState = null, $options = array())
     {
-        return parent::listItemChanges($this->getFolderId()->Id, $syncState, $options);
+        return parent::listItemChanges($this->getFolderId()->getId(), $syncState, $options);
     }
 }

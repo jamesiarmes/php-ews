@@ -62,11 +62,11 @@ class APITest extends PHPUnit_Framework_TestCase
         $testCalendar = $client->getCalendar('Test');
         $defaultCalendar = $client->getCalendar();
 
-        $testFolder = $client->getFolderByFolderId($testCalendar->getFolderId()->Id);
-        $defaultFolder = $client->getFolderByFolderId($defaultCalendar->getFolderId()->Id);
+        $testFolder = $client->getFolderByFolderId($testCalendar->getFolderId()->getId());
+        $defaultFolder = $client->getFolderByFolderId($defaultCalendar->getFolderId()->getId());
 
-        $this->assertEquals('Test', $testFolder->DisplayName);
-        $this->assertEquals('Calendar', $defaultFolder->DisplayName);
+        $this->assertEquals('Test', $testFolder->getDisplayName());
+        $this->assertEquals('Calendar', $defaultFolder->getDisplayName());
     }
 
     public function testListChanges()
@@ -74,8 +74,8 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $changes = $client->listChanges();
 
-        $this->assertArrayHasKey('SyncState', $changes);
-        $this->assertArrayHasKey('Changes', $changes);
+        $this->assertNotNull($changes->getSyncState());
+        $this->assertNotNull($changes->getChanges());
     }
 
     public function testGetCalendarItems()
@@ -98,10 +98,10 @@ class APITest extends PHPUnit_Framework_TestCase
             array('Subject' => 'Test Get Item 2', 'Start' => $start->format('c'), 'End' => $end->format('c'))
         ));
 
-        $itemId = $items[1]->ItemId;
+        $itemId = $items[1];
 
-        $item = $client->getCalendarItem($itemId->Id, $itemId->ChangeKey);
-        $this->assertEquals('Test Get Item 2', $item->Subject);
+        $item = $client->getCalendarItem($itemId->getId(), $itemId->getChangeKey());
+        $this->assertEquals('Test Get Item 2', $item->getSubject());
     }
 
     public function testUpdateCalendarItem()
@@ -119,14 +119,14 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $item = $items[0];
 
-        $client->updateCalendarItem($item->ItemId->Id, $item->ItemId->ChangeKey, array(
+        $client->updateCalendarItem($item->getId(), $item->getChangeKey(), array(
             'Subject' => 'Test Updated Calendar Item'
         ));
 
         $item = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $item = $item[0];
 
-        $this->assertEquals('Test Updated Calendar Item', $item->Subject);
+        $this->assertEquals('Test Updated Calendar Item', $item->getSubject());
     }
 
     public function testDeleteCalendarItem()
@@ -147,7 +147,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $this->assertNotEmpty($items);
 
-        $client->deleteCalendarItem($items[0]->ItemId->Id, $items[0]->ItemId->ChangeKey);
+        $client->deleteCalendarItem($items[0]->getItemId()->getId(), $items[0]->getItemId()->getChangeKey());
         $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $this->assertEmpty($items);
     }
