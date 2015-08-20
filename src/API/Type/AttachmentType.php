@@ -1,96 +1,79 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\AttachmentType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents an Exchange attachment.
+ * Class representing AttachmentType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: AttachmentType
+ *
+ * @method AttachmentType getAttachmentId()
+ * @method AttachmentType setAttachmentId(AttachmentIdType $attachmentId)
+ * @method AttachmentType getName()
+ * @method AttachmentType setName(string $name)
+ * @method AttachmentType getContentType()
+ * @method AttachmentType setContentType(string $contentType)
+ * @method AttachmentType getContentId()
+ * @method AttachmentType setContentId(string $contentId)
+ * @method AttachmentType getContentLocation()
+ * @method AttachmentType setContentLocation(string $contentLocation)
+ * @method AttachmentType getSize()
+ * @method AttachmentType setSize(integer $size)
+ * @method AttachmentType getLastModifiedTime()
+ * @method AttachmentType setLastModifiedTime(\DateTime $lastModifiedTime)
+ * @method AttachmentType getIsInline()
+ * @method AttachmentType setIsInline(boolean $isInline)
  */
 class AttachmentType extends Type
 {
-    /**
-     * Identifies the file attachment.
-     *
-     * @since Exchange 2007
-     *
-     * @var \jamesiarmes\PEWS\API\Type\AttachmentIdType
-     */
-    public $AttachmentId;
 
     /**
-     * Represents an identifier for the contents of an attachment. ContentId can
-     * be set to any string value. Applications can use ContentId to implement
-     * their own identification mechanisms.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property \jamesiarmes\PEWS\API\Type\AttachmentIdType $attachmentId
      */
-    public $ContentId;
+    protected $attachmentId = null;
 
     /**
-     * Contains the Uniform Resource Identifier (URI) that corresponds to the
-     * location of the content of the attachment.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $name
      */
-    public $ContentLocation;
+    protected $name = null;
 
     /**
-     * Describes the Multipurpose Internet Mail Extensions (MIME) type of the
-     * attachment content.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $contentType
      */
-    public $ContentType;
+    protected $contentType = null;
 
     /**
-     * Represents whether the attachment appears inline within an item.
-     *
-     * @since Exchange 2010
-     *
-     * @var boolean
+     * @property string $contentId
      */
-    public $IsInline;
+    protected $contentId = null;
 
     /**
-     * Represents when the file attachment was last modified.
-     *
-     * @since Exchange 2010
-     *
-     * @var string
-     *
-     * @todo Make a DateTime object.
+     * @property string $contentLocation
      */
-    public $LastModifiedTime;
+    protected $contentLocation = null;
 
     /**
-     * Represents the name of the attachment.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property integer $size
      */
-    public $Name;
+    protected $size = null;
 
     /**
-     * Represents the size in bytes of the file attachment.
-     *
-     * This property is read-only.
-     *
-     * @since Exchange 2007
-     *
-     * @var integer
+     * @property \DateTime $lastModifiedTime
      */
-    public $Size;
+    protected $lastModifiedTime = null;
+
+    protected $_typeMap = array(
+        'lastModifiedTime' => 'dateTime',
+    );
+
+    /**
+     * @property boolean $isInline
+     */
+    protected $isInline = null;
+
+
 }
+

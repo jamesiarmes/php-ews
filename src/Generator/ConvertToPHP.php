@@ -2,6 +2,7 @@
 
 namespace jamesiarmes\PEWS\Generator;
 
+use jamesiarmes\PEWS\API\ClassMap;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -31,26 +32,48 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
         parent::configure();
 
         $this->setDefinition(array(
-            new InputArgument('src', InputArgument::OPTIONAL | InputArgument::IS_ARRAY,
+            new InputArgument(
+                'src',
+                InputArgument::OPTIONAL | InputArgument::IS_ARRAY,
                 'Where is located your XSD definitions',
-                array(__DIR__ . '/../../Resources/wsdl/types.xsd',
-                    __DIR__ . '/../../Resources/wsdl/messages.xsd')),
-            new InputOption('ns-map', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
-                'How to map XML namespaces to PHP namespaces? Syntax: <info>XML-namespace;PHP-namespace</info>',
                 array(
-                    'http://schemas.microsoft.com/exchange/services/2006/types;/jamesiarmes/PEWS/API/TypeTest/',
-                    'http://schemas.microsoft.com/exchange/services/2006/messages;/jamesiarmes/PEWS/API/Messages/'
-                )),
-            new InputOption('ns-dest', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
-                'Where place the generated files? Syntax: <info>PHP-namespace;destination-directory</info>',
-                array(
-                    'jamesiarmes/PEWS/API/TypeTest/;' . __DIR__ . '/../API/TypeTest',
-                    'jamesiarmes/PEWS/API/Messages/;' . __DIR__ . '/../API/Messages'
-                )),
-            new InputOption('alias-map', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
-                'How to map XML namespaces into existing PHP classes? Syntax: <info>XML-namespace;XML-type;PHP-type</info>. '),
-            new InputOption('naming-strategy', null, InputOption::VALUE_OPTIONAL,
-                'The naming strategy for classes. short|long', 'short')
+                    __DIR__ . '/../../Resources/wsdl/types.xsd',
+                    __DIR__ . '/../../Resources/wsdl/messages.xsd'
+                )
+            ),
+                new InputOption(
+                    'ns-map',
+                    null,
+                    InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
+                    'How to map XML namespaces to PHP namespaces? Syntax: <info>XML-namespace;PHP-namespace</info>',
+                    array(
+                    'http://schemas.microsoft.com/exchange/services/2006/types;/jamesiarmes/PEWS/API/Type/',
+                    'http://schemas.microsoft.com/exchange/services/2006/messages;/jamesiarmes/PEWS/API/Message/'
+                    )
+                ),
+                new InputOption(
+                    'ns-dest',
+                    null,
+                    InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
+                    'Where place the generated files? Syntax: <info>PHP-namespace;destination-directory</info>',
+                    array(
+                    'jamesiarmes/PEWS/API/Type/;' . __DIR__ . '/../API/Type',
+                    'jamesiarmes/PEWS/API/Message/;' . __DIR__ . '/../API/Message'
+                    )
+                ),
+                new InputOption(
+                    'alias-map',
+                    null,
+                    InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY,
+                    'How to map XML namespaces into existing PHP classes? Syntax: <info>XML-namespace;XML-type;PHP-type</info>. '
+                ),
+                new InputOption(
+                    'naming-strategy',
+                    null,
+                    InputOption::VALUE_OPTIONAL,
+                    'The naming strategy for classes. short|long',
+                    'short'
+                )
         ));
     }
 
@@ -65,15 +88,21 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
         $pathGenerator = new Psr4PathGenerator($targets);
         $progress = $this->getHelperSet()->get('progress');
 
-        $converter->addAliasMap('http://schemas.microsoft.com/exchange/services/2006/types', 'Or', function($type) use ($schemas)
-        {
-            return "OrElement";
-        });
+        $converter->addAliasMap(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'Or',
+            function ($type) use ($schemas) {
+                return "OrElement";
+            }
+        );
 
-        $converter->addAliasMap('http://schemas.microsoft.com/exchange/services/2006/types', 'And', function($type) use ($schemas)
-        {
-            return "AndElement";
-        });
+        $converter->addAliasMap(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'And',
+            function ($type) use ($schemas) {
+                return "AndElement";
+            }
+        );
 
         $items = $converter->convert($schemas);
         $progress->start($output, count($items));
@@ -112,11 +141,14 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             }
         }
 
-        $classMapFile = __DIR__ . '/../../Resources/classMap.php';
-        file_put_contents($classMapFile, '<?php
+        $mappingClassReflection = new ClassReflection(ClassMap::class);
+        $mappingClass = Generator\ClassGenerator::fromReflection($mappingClassReflection);
+        $mappingClass->getProperty('classMap')->setDefaultValue($classMap);
 
-return ' . var_export($classMap, true) . ';
-');
+        $fileGen = new FileGenerator();
+        $fileGen->setFilename($mappingClassReflection->getFileName());
+        $fileGen->setClass($mappingClass);
+        $fileGen->write();
 
         $progress->finish();
     }

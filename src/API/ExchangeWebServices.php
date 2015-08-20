@@ -6,7 +6,7 @@
 namespace jamesiarmes\PEWS\API;
 
 use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
-use jamesiarmes\PEWS\API\Messages;
+use jamesiarmes\PEWS\API\Message;
 
 /**
  * Base class of the Exchange Web Services application.
@@ -372,8 +372,8 @@ class ExchangeWebServices
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @param \jamesiarmes\PEWS\API\Messages\BaseResponseMessageType $response
-     * @return \jamesiarmes\PEWS\API\Messages\ArrayOfResponseMessagesType|\jamesiarmes\PEWS\API\Messages\ResponseMessageType
+     * @param \jamesiarmes\PEWS\API\Message\BaseResponseMessageType $response
+     * @return \jamesiarmes\PEWS\API\Message\ArrayOfResponseMessageType|\jamesiarmes\PEWS\API\Message\ResponseMessageType
      * @throws Exception
      * @throws \Exception
      */
@@ -403,7 +403,7 @@ class ExchangeWebServices
     {
         $items = $response->getNonNullItems();
 
-        if ($response instanceof \jamesiarmes\PEWS\API\Messages\ResponseMessageType) {
+        if ($response instanceof Message\ResponseMessageType) {
             if ($response->getResponseClass() !== "Success") {
                 throw new \Exception($response->getMessageText());
             }
