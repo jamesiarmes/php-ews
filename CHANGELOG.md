@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 - TBD
+ * Massive Breaking Change
+ * Some basic mail fetching functions
+ * Easy to use examples
+ * Objects for everything. All Auto-Generated
+
 ## 0.4.1 - 2015-07-22
  * Updating Type::buildFromArray
 

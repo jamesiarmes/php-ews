@@ -5,6 +5,10 @@
 
 The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.
 
+# Breaking Change
+Please note that version 0.5.0 (Unreleased yet) will have objects auto generated for everything, with different outputs
+for the existing functions. This release is not backwards compatible, but shouldn't be too hard to migrate to.
+
 # Dependencies
 * PHP 5.2+
 * cURL with NTLM support (7.23.0+ recommended)
@@ -44,150 +48,9 @@ Once you have your `ExchangeWebServices` object, you need to build your request 
 The request objects are build similar to the XML body of the request. See the resources section below for more information on building the requests.
 
 # Simple Library Usage
-There's work in progress to simplify some operations so that you don't have to create the requests yourself. Examples are as such
-
-### Creating the API
-```php
-use jamesiarmes\PEWS\API;
-
-$api = new API();
-$api->buildClient('server', 'username', 'password');
-$calendar = $api->getCalendar();
-```
-
-### IMpersonate another user
-By default the Calendar API will use the user mailbox you authenticated with, but you can set it to impersonate another user. 
-
-*Note: the appropriate permissions are required to make this work on the Exchange server
-
-```php
-//Impersonate another user account
-$calendar = $api->setImpersonation('someemail@yourdomain.com');
-```
-
-### Choosing which calendar to use
-By default the Calendar API will try to use the default Calendar, but you can set it to use any Calendar of yours that you want: As such
-
-```php
-//Create the Calendar by name
-$calendar = $api->getCalendar('Calendar Name');
-
-//Chooses the default Calendar
-$calendar->pickCalendar();
-$calendar->getCalendarItems();
-
-//Get the items of a second calendar
-$calendar->pickCalendar('Second Calendar');
-$calendar->getCalendarItems();
-```
-
-### Creating Calendar Items
-```php
-$start = new DateTime('8:00 AM');
-$end = new DateTime('9:00 AM');
-
-$response = $calendar->createCalendarItems(array(
-    'Subject' => 'Test',
-    'Start' => $start->format('c'),
-    'End' => $end->format('c')
-));
-```
-
-There are also many other options for creating Calendar Items, including creating a recurring item. [Here](https://msdn.microsoft.com/en-us/library/office/aa564765(v=exchg.150).aspx) is documentation on all the options available for the CalendarItem
-
-```php
-$calendar->createCalendarItems(array(
-   'Start' => $start->format('c'),
-    'End' => $end->format('c'),
-    'Subject' => 'Test',
-    'Recurrence' => array(
-        'WeeklyRecurrence' => array(
-            'Interval' => 1,
-            'DaysOfWeek' => 'Tuesday'
-        ),
-        'NumberedRecurrence' => array(
-            'StartDate' => $start->format('Y-m-d'),
-            'NumberOfOccurrences' => 3
-        )
-    )
-));
-```
-
-To read more about creating recurring series, [look here](https://msdn.microsoft.com/en-us/library/office/dn727654(v=exchg.150).aspx)
-
-### Get a list of Calendar Items
-The getCalendarItems function accepts the first two variables as $start and $end, strings that will be passed in to a new DateTime() object
-```php
-//Get all items for today
-$calendar->getCalendarItems();
-
-//Get all items from midday today
-$calendar->getCalendarItems('12:00 PM');
-
-//Get all items from 8AM to 5PM
-$calendar->getCalendarItems('8:00 AM', '5:00 PM')
-
-//Get a list of items in a Date Range
-$calendar->getCalendarItems('31/05/2015', '31/06/2015');
-```
-
-### Get a list of changes
-```php
-//Get the initial list of Items
-$changes = $calendar->listChanges();
-
-//We use this to keep track of when we last asked for items
-$syncState = $changes->SyncState;
-
-$changesSinceLsatCheck = $calendar->listChanges($syncState);
-```
-
-### Update an item
-Updating an item requires an Id and ChangeKey, which you would get from creating an item or looking one up
-
-```php
-$item = $calendar->getCalendarItems()[0];
-
-$itemId = $item->ItemId;
-
-$response = $calendar->updateCalendarItem($itemId->Id, $itemId->ChangeKey, array(
-   'Subject' => 'Testing Update 2',
-    'Start' => $newStart->format('c')
-));
-
-$newItemId = $response[0]->CalendarItem->ItemId;
-```
-
-You can also update the series of a recurring event, if you have it's Master ID (The ID passed back when you first created the series)
-
-```php
-$response = $calendar->updateCalendarItem($masterItem->Id, $masterItem->ChangeKey, array(
-    'Subject' => 'Test Update 2',
-    'Recurrence' => array(
-        'WeeklyRecurrence' => array(
-            'Interval' => 1,
-            'DaysOfWeek' => 'Wednesday'
-        ),
-        'NumberedRecurrence' => array(
-            'StartDate' => $newStart->format('Y-m-d'),
-            'NumberOfOccurrences' => 3
-        )
-    )
-));
-```
-
-### Deleting an item
-Deleting an item is easy, and only requires the ItemId and ChangeKey
-
-```php
-$calendar->deleteCalendarItem($itemId, $changeKey);
-```
-
-Or, you can delete all items between two ranges
-
-```php
-$calendar->deleteAllCalendarItems(new DateTime('8:00 AM'), new DateTime('5:00 PM'));
-```
+There's work in progress to simplify some operations so that you don't have to create the requests yourself.
+Examples are located [here](examples/) to browse in small snippets. If you have more examples you want to add, just make
+a PR for it. If you would like to request an example, file a Github issue, and I'll try to create it if I know how
 
 # Manual Usage
 While simple library usage is the way to go for what it covers, it doesn't cover everything, in fact it covers rather
