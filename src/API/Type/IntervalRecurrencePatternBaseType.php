@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: IntervalRecurrencePatternBaseType
  *
- * @method IntervalRecurrencePatternBaseType getInterval()
+ * @method integer getInterval()
  * @method IntervalRecurrencePatternBaseType setInterval(integer $interval)
  */
 class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
 {
 
     /**
-     * @property integer $interval
+     * @var integer
      */
     protected $interval = null;
 }

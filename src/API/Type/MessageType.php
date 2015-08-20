@@ -8,119 +8,119 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MessageType
  *
- * @method MessageType getSender()
+ * @method SingleRecipientType getSender()
  * @method MessageType setSender(SingleRecipientType $sender)
- * @method MessageType getToRecipients()
+ * @method array getToRecipients()
  * @method MessageType setToRecipients(array $toRecipients)
- * @method MessageType getCcRecipients()
+ * @method array getCcRecipients()
  * @method MessageType setCcRecipients(array $ccRecipients)
- * @method MessageType getBccRecipients()
+ * @method array getBccRecipients()
  * @method MessageType setBccRecipients(array $bccRecipients)
- * @method MessageType getIsReadReceiptRequested()
+ * @method boolean getIsReadReceiptRequested()
  * @method MessageType setIsReadReceiptRequested(boolean $isReadReceiptRequested)
- * @method MessageType getIsDeliveryReceiptRequested()
+ * @method boolean getIsDeliveryReceiptRequested()
  * @method MessageType setIsDeliveryReceiptRequested(boolean $isDeliveryReceiptRequested)
- * @method MessageType getConversationIndex()
+ * @method string getConversationIndex()
  * @method MessageType setConversationIndex(string $conversationIndex)
- * @method MessageType getConversationTopic()
+ * @method string getConversationTopic()
  * @method MessageType setConversationTopic(string $conversationTopic)
- * @method MessageType getFrom()
+ * @method SingleRecipientType getFrom()
  * @method MessageType setFrom(SingleRecipientType $from)
- * @method MessageType getInternetMessageId()
+ * @method string getInternetMessageId()
  * @method MessageType setInternetMessageId(string $internetMessageId)
- * @method MessageType getIsRead()
+ * @method boolean getIsRead()
  * @method MessageType setIsRead(boolean $isRead)
- * @method MessageType getIsResponseRequested()
+ * @method boolean getIsResponseRequested()
  * @method MessageType setIsResponseRequested(boolean $isResponseRequested)
- * @method MessageType getReferences()
+ * @method string getReferences()
  * @method MessageType setReferences(string $references)
- * @method MessageType getReplyTo()
+ * @method array getReplyTo()
  * @method MessageType setReplyTo(array $replyTo)
- * @method MessageType getReceivedBy()
+ * @method SingleRecipientType getReceivedBy()
  * @method MessageType setReceivedBy(SingleRecipientType $receivedBy)
- * @method MessageType getReceivedRepresenting()
+ * @method SingleRecipientType getReceivedRepresenting()
  * @method MessageType setReceivedRepresenting(SingleRecipientType $receivedRepresenting)
  */
 class MessageType extends ItemType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $sender
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $sender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $toRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $toRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $ccRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $ccRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $bccRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $bccRecipients = null;
 
     /**
-     * @property boolean $isReadReceiptRequested
+     * @var boolean
      */
     protected $isReadReceiptRequested = null;
 
     /**
-     * @property boolean $isDeliveryReceiptRequested
+     * @var boolean
      */
     protected $isDeliveryReceiptRequested = null;
 
     /**
-     * @property string $conversationIndex
+     * @var string
      */
     protected $conversationIndex = null;
 
     /**
-     * @property string $conversationTopic
+     * @var string
      */
     protected $conversationTopic = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $from
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $from = null;
 
     /**
-     * @property string $internetMessageId
+     * @var string
      */
     protected $internetMessageId = null;
 
     /**
-     * @property boolean $isRead
+     * @var boolean
      */
     protected $isRead = null;
 
     /**
-     * @property boolean $isResponseRequested
+     * @var boolean
      */
     protected $isResponseRequested = null;
 
     /**
-     * @property string $references
+     * @var string
      */
     protected $references = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $replyTo
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $replyTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $receivedBy
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $receivedBy = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $receivedRepresenting
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $receivedRepresenting = null;
 }

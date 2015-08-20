@@ -10,16 +10,16 @@ use jamesiarmes\PEWS\API\Type;
  * Date range type used for the WithinDateRange rule predicate.
  * XSD Type: RulePredicateDateRangeType
  *
- * @method RulePredicateDateRangeType getStartDateTime()
+ * @method \DateTime getStartDateTime()
  * @method RulePredicateDateRangeType setStartDateTime(\DateTime $startDateTime)
- * @method RulePredicateDateRangeType getEndDateTime()
+ * @method \DateTime getEndDateTime()
  * @method RulePredicateDateRangeType setEndDateTime(\DateTime $endDateTime)
  */
 class RulePredicateDateRangeType extends Type
 {
 
     /**
-     * @property \DateTime $startDateTime
+     * @var \DateTime
      */
     protected $startDateTime = null;
 
@@ -29,7 +29,7 @@ class RulePredicateDateRangeType extends Type
     );
 
     /**
-     * @property \DateTime $endDateTime
+     * @var \DateTime
      */
     protected $endDateTime = null;
 }

@@ -7,42 +7,42 @@ use jamesiarmes\PEWS\API\Type;
 /**
  * Class representing ServerVersionInfo
  *
- * @method ServerVersionInfo getMajorVersion()
+ * @method integer getMajorVersion()
  * @method ServerVersionInfo setMajorVersion(integer $majorVersion)
- * @method ServerVersionInfo getMinorVersion()
+ * @method integer getMinorVersion()
  * @method ServerVersionInfo setMinorVersion(integer $minorVersion)
- * @method ServerVersionInfo getMajorBuildNumber()
+ * @method integer getMajorBuildNumber()
  * @method ServerVersionInfo setMajorBuildNumber(integer $majorBuildNumber)
- * @method ServerVersionInfo getMinorBuildNumber()
+ * @method integer getMinorBuildNumber()
  * @method ServerVersionInfo setMinorBuildNumber(integer $minorBuildNumber)
- * @method ServerVersionInfo getVersion()
+ * @method string getVersion()
  * @method ServerVersionInfo setVersion(string $version)
  */
 class ServerVersionInfo extends Type
 {
 
     /**
-     * @property integer $majorVersion
+     * @var integer
      */
     protected $majorVersion = null;
 
     /**
-     * @property integer $minorVersion
+     * @var integer
      */
     protected $minorVersion = null;
 
     /**
-     * @property integer $majorBuildNumber
+     * @var integer
      */
     protected $majorBuildNumber = null;
 
     /**
-     * @property integer $minorBuildNumber
+     * @var integer
      */
     protected $minorBuildNumber = null;
 
     /**
-     * @property string $version
+     * @var string
      */
     protected $version = null;
 }

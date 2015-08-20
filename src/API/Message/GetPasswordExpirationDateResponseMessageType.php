@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetPasswordExpirationDateResponseMessageType
  *
- * @method GetPasswordExpirationDateResponseMessageType getPasswordExpirationDate()
+ * @method \DateTime getPasswordExpirationDate()
  * @method GetPasswordExpirationDateResponseMessageType setPasswordExpirationDate(\DateTime $passwordExpirationDate)
  */
 class GetPasswordExpirationDateResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \DateTime $passwordExpirationDate
+     * @var \DateTime
      */
     protected $passwordExpirationDate = null;
 

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PathToUnindexedFieldType
  *
- * @method PathToUnindexedFieldType getFieldURI()
+ * @method string getFieldURI()
  * @method PathToUnindexedFieldType setFieldURI(string $fieldURI)
  */
 class PathToUnindexedFieldType extends BasePathToElementType
 {
 
     /**
-     * @property string $fieldURI
+     * @var string
      */
     protected $fieldURI = null;
 }

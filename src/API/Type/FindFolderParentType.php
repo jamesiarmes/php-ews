@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FindFolderParentType
  *
- * @method FindFolderParentType getIndexedPagingOffset()
+ * @method integer getIndexedPagingOffset()
  * @method FindFolderParentType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method FindFolderParentType getNumeratorOffset()
+ * @method integer getNumeratorOffset()
  * @method FindFolderParentType setNumeratorOffset(integer $numeratorOffset)
- * @method FindFolderParentType getAbsoluteDenominator()
+ * @method integer getAbsoluteDenominator()
  * @method FindFolderParentType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method FindFolderParentType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method FindFolderParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method FindFolderParentType getTotalItemsInView()
+ * @method integer getTotalItemsInView()
  * @method FindFolderParentType setTotalItemsInView(integer $totalItemsInView)
- * @method FindFolderParentType getFolders()
+ * @method ArrayOfFoldersType getFolders()
  * @method FindFolderParentType setFolders(ArrayOfFoldersType $folders)
  */
 class FindFolderParentType extends Type
 {
 
     /**
-     * @property integer $indexedPagingOffset
+     * @var integer
      */
     protected $indexedPagingOffset = null;
 
     /**
-     * @property integer $numeratorOffset
+     * @var integer
      */
     protected $numeratorOffset = null;
 
     /**
-     * @property integer $absoluteDenominator
+     * @var integer
      */
     protected $absoluteDenominator = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property integer $totalItemsInView
+     * @var integer
      */
     protected $totalItemsInView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType $folders
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType
      */
     protected $folders = null;
 }

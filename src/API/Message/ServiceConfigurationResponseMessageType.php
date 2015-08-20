@@ -8,31 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ServiceConfigurationResponseMessageType
  *
- * @method ServiceConfigurationResponseMessageType getMailTipsConfiguration()
+ * @method \jamesiarmes\PEWS\API\Type\MailTipsServiceConfigurationType getMailTipsConfiguration()
  * @method ServiceConfigurationResponseMessageType setMailTipsConfiguration(\jamesiarmes\PEWS\API\Type\MailTipsServiceConfigurationType $mailTipsConfiguration)
- * @method ServiceConfigurationResponseMessageType getUnifiedMessagingConfiguration()
+ * @method \jamesiarmes\PEWS\API\Type\UnifiedMessageServiceConfigurationType getUnifiedMessagingConfiguration()
  * @method ServiceConfigurationResponseMessageType setUnifiedMessagingConfiguration(\jamesiarmes\PEWS\API\Type\UnifiedMessageServiceConfigurationType $unifiedMessagingConfiguration)
- * @method ServiceConfigurationResponseMessageType getProtectionRulesConfiguration()
+ * @method \jamesiarmes\PEWS\API\Type\ProtectionRulesServiceConfigurationType getProtectionRulesConfiguration()
  * @method ServiceConfigurationResponseMessageType setProtectionRulesConfiguration(\jamesiarmes\PEWS\API\Type\ProtectionRulesServiceConfigurationType $protectionRulesConfiguration)
  */
 class ServiceConfigurationResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MailTipsServiceConfigurationType
-     * $mailTipsConfiguration
+     * @var \jamesiarmes\PEWS\API\Type\MailTipsServiceConfigurationType
      */
     protected $mailTipsConfiguration = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UnifiedMessageServiceConfigurationType
-     * $unifiedMessagingConfiguration
+     * @var \jamesiarmes\PEWS\API\Type\UnifiedMessageServiceConfigurationType
      */
     protected $unifiedMessagingConfiguration = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ProtectionRulesServiceConfigurationType
-     * $protectionRulesConfiguration
+     * @var \jamesiarmes\PEWS\API\Type\ProtectionRulesServiceConfigurationType
      */
     protected $protectionRulesConfiguration = null;
 }

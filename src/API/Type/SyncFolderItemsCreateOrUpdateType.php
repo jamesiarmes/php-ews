@@ -10,85 +10,84 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderItemsCreateOrUpdateType
  *
- * @method SyncFolderItemsCreateOrUpdateType getItem()
+ * @method ItemType getItem()
  * @method SyncFolderItemsCreateOrUpdateType setItem(ItemType $item)
- * @method SyncFolderItemsCreateOrUpdateType getMessage()
+ * @method MessageType getMessage()
  * @method SyncFolderItemsCreateOrUpdateType setMessage(MessageType $message)
- * @method SyncFolderItemsCreateOrUpdateType getCalendarItem()
+ * @method CalendarItemType getCalendarItem()
  * @method SyncFolderItemsCreateOrUpdateType setCalendarItem(CalendarItemType $calendarItem)
- * @method SyncFolderItemsCreateOrUpdateType getContact()
+ * @method ContactItemType getContact()
  * @method SyncFolderItemsCreateOrUpdateType setContact(ContactItemType $contact)
- * @method SyncFolderItemsCreateOrUpdateType getDistributionList()
+ * @method DistributionListType getDistributionList()
  * @method SyncFolderItemsCreateOrUpdateType setDistributionList(DistributionListType $distributionList)
- * @method SyncFolderItemsCreateOrUpdateType getMeetingMessage()
+ * @method MeetingMessageType getMeetingMessage()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method SyncFolderItemsCreateOrUpdateType getMeetingRequest()
+ * @method MeetingRequestMessageType getMeetingRequest()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method SyncFolderItemsCreateOrUpdateType getMeetingResponse()
+ * @method MeetingResponseMessageType getMeetingResponse()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method SyncFolderItemsCreateOrUpdateType getMeetingCancellation()
+ * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method SyncFolderItemsCreateOrUpdateType getTask()
+ * @method TaskType getTask()
  * @method SyncFolderItemsCreateOrUpdateType setTask(TaskType $task)
- * @method SyncFolderItemsCreateOrUpdateType getPostItem()
+ * @method PostItemType getPostItem()
  * @method SyncFolderItemsCreateOrUpdateType setPostItem(PostItemType $postItem)
  */
 class SyncFolderItemsCreateOrUpdateType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemType $item
+     * @var \jamesiarmes\PEWS\API\Type\ItemType
      */
     protected $item = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageType $message
+     * @var \jamesiarmes\PEWS\API\Type\MessageType
      */
     protected $message = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarItemType $calendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CalendarItemType
      */
     protected $calendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType
      */
     protected $contact = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistributionListType $distributionList
+     * @var \jamesiarmes\PEWS\API\Type\DistributionListType
      */
     protected $distributionList = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingMessageType $meetingMessage
+     * @var \jamesiarmes\PEWS\API\Type\MeetingMessageType
      */
     protected $meetingMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType $meetingRequest
+     * @var \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType
      */
     protected $meetingRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType $meetingResponse
+     * @var \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType
      */
     protected $meetingResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
-     * $meetingCancellation
+     * @var \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskType $task
+     * @var \jamesiarmes\PEWS\API\Type\TaskType
      */
     protected $task = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
+     * @var \jamesiarmes\PEWS\API\Type\PostItemType
      */
     protected $postItem = null;
 }

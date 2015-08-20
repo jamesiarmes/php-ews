@@ -8,49 +8,49 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ExpandDLResponseMessageType
  *
- * @method ExpandDLResponseMessageType getIndexedPagingOffset()
+ * @method integer getIndexedPagingOffset()
  * @method ExpandDLResponseMessageType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method ExpandDLResponseMessageType getNumeratorOffset()
+ * @method integer getNumeratorOffset()
  * @method ExpandDLResponseMessageType setNumeratorOffset(integer $numeratorOffset)
- * @method ExpandDLResponseMessageType getAbsoluteDenominator()
+ * @method integer getAbsoluteDenominator()
  * @method ExpandDLResponseMessageType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method ExpandDLResponseMessageType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method ExpandDLResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method ExpandDLResponseMessageType getTotalItemsInView()
+ * @method integer getTotalItemsInView()
  * @method ExpandDLResponseMessageType setTotalItemsInView(integer $totalItemsInView)
- * @method ExpandDLResponseMessageType getDLExpansion()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfDLExpansionType getDLExpansion()
  * @method ExpandDLResponseMessageType setDLExpansion(\jamesiarmes\PEWS\API\Type\ArrayOfDLExpansionType $dLExpansion)
  */
 class ExpandDLResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property integer $indexedPagingOffset
+     * @var integer
      */
     protected $indexedPagingOffset = null;
 
     /**
-     * @property integer $numeratorOffset
+     * @var integer
      */
     protected $numeratorOffset = null;
 
     /**
-     * @property integer $absoluteDenominator
+     * @var integer
      */
     protected $absoluteDenominator = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property integer $totalItemsInView
+     * @var integer
      */
     protected $totalItemsInView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfDLExpansionType $dLExpansion
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfDLExpansionType
      */
     protected $dLExpansion = null;
 }

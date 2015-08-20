@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  * User Mailbox.
  * XSD Type: UserMailboxType
  *
- * @method UserMailboxType getId()
+ * @method string getId()
  * @method UserMailboxType setId(string $id)
- * @method UserMailboxType getIsArchive()
+ * @method boolean getIsArchive()
  * @method UserMailboxType setIsArchive(boolean $isArchive)
  */
 class UserMailboxType extends Type
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property boolean $isArchive
+     * @var boolean
      */
     protected $isArchive = null;
 }

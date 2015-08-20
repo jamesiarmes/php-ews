@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurringDateTransitionType
  *
- * @method RecurringDateTransitionType getDay()
+ * @method integer getDay()
  * @method RecurringDateTransitionType setDay(integer $day)
  */
 class RecurringDateTransitionType extends RecurringTimeTransitionType
 {
 
     /**
-     * @property integer $day
+     * @var integer
      */
     protected $day = null;
 }

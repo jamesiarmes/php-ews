@@ -8,85 +8,84 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AppendToItemFieldType
  *
- * @method AppendToItemFieldType getItem()
+ * @method ItemType getItem()
  * @method AppendToItemFieldType setItem(ItemType $item)
- * @method AppendToItemFieldType getMessage()
+ * @method MessageType getMessage()
  * @method AppendToItemFieldType setMessage(MessageType $message)
- * @method AppendToItemFieldType getCalendarItem()
+ * @method CalendarItemType getCalendarItem()
  * @method AppendToItemFieldType setCalendarItem(CalendarItemType $calendarItem)
- * @method AppendToItemFieldType getContact()
+ * @method ContactItemType getContact()
  * @method AppendToItemFieldType setContact(ContactItemType $contact)
- * @method AppendToItemFieldType getDistributionList()
+ * @method DistributionListType getDistributionList()
  * @method AppendToItemFieldType setDistributionList(DistributionListType $distributionList)
- * @method AppendToItemFieldType getMeetingMessage()
+ * @method MeetingMessageType getMeetingMessage()
  * @method AppendToItemFieldType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method AppendToItemFieldType getMeetingRequest()
+ * @method MeetingRequestMessageType getMeetingRequest()
  * @method AppendToItemFieldType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method AppendToItemFieldType getMeetingResponse()
+ * @method MeetingResponseMessageType getMeetingResponse()
  * @method AppendToItemFieldType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method AppendToItemFieldType getMeetingCancellation()
+ * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method AppendToItemFieldType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method AppendToItemFieldType getTask()
+ * @method TaskType getTask()
  * @method AppendToItemFieldType setTask(TaskType $task)
- * @method AppendToItemFieldType getPostItem()
+ * @method PostItemType getPostItem()
  * @method AppendToItemFieldType setPostItem(PostItemType $postItem)
  */
 class AppendToItemFieldType extends ItemChangeDescriptionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemType $item
+     * @var \jamesiarmes\PEWS\API\Type\ItemType
      */
     protected $item = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageType $message
+     * @var \jamesiarmes\PEWS\API\Type\MessageType
      */
     protected $message = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarItemType $calendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CalendarItemType
      */
     protected $calendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType
      */
     protected $contact = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistributionListType $distributionList
+     * @var \jamesiarmes\PEWS\API\Type\DistributionListType
      */
     protected $distributionList = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingMessageType $meetingMessage
+     * @var \jamesiarmes\PEWS\API\Type\MeetingMessageType
      */
     protected $meetingMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType $meetingRequest
+     * @var \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType
      */
     protected $meetingRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType $meetingResponse
+     * @var \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType
      */
     protected $meetingResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
-     * $meetingCancellation
+     * @var \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskType $task
+     * @var \jamesiarmes\PEWS\API\Type\TaskType
      */
     protected $task = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
+     * @var \jamesiarmes\PEWS\API\Type\PostItemType
      */
     protected $postItem = null;
 }

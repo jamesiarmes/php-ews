@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SendNotificationResponseMessageType
  *
- * @method SendNotificationResponseMessageType getNotification()
+ * @method \jamesiarmes\PEWS\API\Type\NotificationType getNotification()
  * @method SendNotificationResponseMessageType setNotification(\jamesiarmes\PEWS\API\Type\NotificationType $notification)
  */
 class SendNotificationResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NotificationType $notification
+     * @var \jamesiarmes\PEWS\API\Type\NotificationType
      */
     protected $notification = null;
 }

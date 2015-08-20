@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ResolutionType
  *
- * @method ResolutionType getMailbox()
+ * @method EmailAddressType getMailbox()
  * @method ResolutionType setMailbox(EmailAddressType $mailbox)
- * @method ResolutionType getContact()
+ * @method ContactItemType getContact()
  * @method ResolutionType setContact(ContactItemType $contact)
  */
 class ResolutionType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType
      */
     protected $contact = null;
 }

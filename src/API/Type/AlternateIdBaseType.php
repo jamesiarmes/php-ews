@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  * Surfaces alternate representations of an item or folder id. No change key is included.
  * XSD Type: AlternateIdBaseType
  *
- * @method AlternateIdBaseType getFormat()
+ * @method string getFormat()
  * @method AlternateIdBaseType setFormat(string $format)
  */
 class AlternateIdBaseType extends Type
 {
 
     /**
-     * @property string $format
+     * @var string
      */
     protected $format = null;
 }

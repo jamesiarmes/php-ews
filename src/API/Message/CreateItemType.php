@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: CreateItemType
  *
- * @method CreateItemType getMessageDisposition()
+ * @method string getMessageDisposition()
  * @method CreateItemType setMessageDisposition(string $messageDisposition)
- * @method CreateItemType getSendMeetingInvitations()
+ * @method string getSendMeetingInvitations()
  * @method CreateItemType setSendMeetingInvitations(string $sendMeetingInvitations)
- * @method CreateItemType getSavedItemFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method CreateItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId)
- * @method CreateItemType getItems()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType getItems()
  * @method CreateItemType setItems(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType $items)
  */
 class CreateItemType extends BaseRequestType
 {
 
     /**
-     * @property string $messageDisposition
+     * @var string
      */
     protected $messageDisposition = null;
 
     /**
-     * @property string $sendMeetingInvitations
+     * @var string
      */
     protected $sendMeetingInvitations = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $savedItemFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType $items
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType
      */
     protected $items = null;
 }

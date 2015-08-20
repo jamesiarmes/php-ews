@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ItemInfoResponseMessageType
  *
- * @method ItemInfoResponseMessageType getItems()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType getItems()
  * @method ItemInfoResponseMessageType setItems(\jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items)
  */
 class ItemInfoResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType
      */
     protected $items = null;
 }

@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ExistsType
  *
- * @method ExistsType getFieldURI()
+ * @method array getFieldURI()
  * @method ExistsType setFieldURI(array $fieldURI)
- * @method ExistsType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method ExistsType setIndexedFieldURI(array $indexedFieldURI)
- * @method ExistsType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method ExistsType setExtendedFieldURI(array $extendedFieldURI)
  */
 class ExistsType extends SearchExpressionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 }

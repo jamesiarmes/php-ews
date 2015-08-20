@@ -8,51 +8,49 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindFolderType
  *
- * @method FindFolderType getTraversal()
+ * @method string getTraversal()
  * @method FindFolderType setTraversal(string $traversal)
- * @method FindFolderType getFolderShape()
+ * @method \jamesiarmes\PEWS\API\Type\FolderResponseShapeType getFolderShape()
  * @method FindFolderType setFolderShape(\jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape)
- * @method FindFolderType getIndexedPageFolderView()
+ * @method \jamesiarmes\PEWS\API\Type\IndexedPageViewType getIndexedPageFolderView()
  * @method FindFolderType setIndexedPageFolderView(\jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageFolderView)
- * @method FindFolderType getFractionalPageFolderView()
+ * @method \jamesiarmes\PEWS\API\Type\FractionalPageViewType getFractionalPageFolderView()
  * @method FindFolderType setFractionalPageFolderView(\jamesiarmes\PEWS\API\Type\FractionalPageViewType $fractionalPageFolderView)
- * @method FindFolderType getRestriction()
+ * @method \jamesiarmes\PEWS\API\Type\RestrictionType getRestriction()
  * @method FindFolderType setRestriction(\jamesiarmes\PEWS\API\Type\RestrictionType $restriction)
- * @method FindFolderType getParentFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method FindFolderType setParentFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
  */
 class FindFolderType extends BaseRequestType
 {
 
     /**
-     * @property string $traversal
+     * @var string
      */
     protected $traversal = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape
+     * @var \jamesiarmes\PEWS\API\Type\FolderResponseShapeType
      */
     protected $folderShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageFolderView
+     * @var \jamesiarmes\PEWS\API\Type\IndexedPageViewType
      */
     protected $indexedPageFolderView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FractionalPageViewType
-     * $fractionalPageFolderView
+     * @var \jamesiarmes\PEWS\API\Type\FractionalPageViewType
      */
     protected $fractionalPageFolderView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RestrictionType $restriction
+     * @var \jamesiarmes\PEWS\API\Type\RestrictionType
      */
     protected $restriction = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
-     * $parentFolderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $parentFolderIds = null;
 }

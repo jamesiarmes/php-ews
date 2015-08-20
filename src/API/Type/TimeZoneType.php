@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TimeZoneType
  *
- * @method TimeZoneType getTimeZoneName()
+ * @method string getTimeZoneName()
  * @method TimeZoneType setTimeZoneName(string $timeZoneName)
- * @method TimeZoneType getBaseOffset()
+ * @method \DateInterval getBaseOffset()
  * @method TimeZoneType setBaseOffset(\DateInterval $baseOffset)
- * @method TimeZoneType getStandard()
+ * @method TimeChangeType getStandard()
  * @method TimeZoneType setStandard(TimeChangeType $standard)
- * @method TimeZoneType getDaylight()
+ * @method TimeChangeType getDaylight()
  * @method TimeZoneType setDaylight(TimeChangeType $daylight)
  */
 class TimeZoneType extends Type
 {
 
     /**
-     * @property string $timeZoneName
+     * @var string
      */
     protected $timeZoneName = null;
 
     /**
-     * @property \DateInterval $baseOffset
+     * @var \DateInterval
      */
     protected $baseOffset = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeChangeType $standard
+     * @var \jamesiarmes\PEWS\API\Type\TimeChangeType
      */
     protected $standard = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeChangeType $daylight
+     * @var \jamesiarmes\PEWS\API\Type\TimeChangeType
      */
     protected $daylight = null;
 }

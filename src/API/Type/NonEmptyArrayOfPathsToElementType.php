@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfPathsToElementType
  *
- * @method NonEmptyArrayOfPathsToElementType getFieldURI()
+ * @method array getFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setFieldURI(array $fieldURI)
- * @method NonEmptyArrayOfPathsToElementType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setIndexedFieldURI(array $indexedFieldURI)
- * @method NonEmptyArrayOfPathsToElementType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setExtendedFieldURI(array $extendedFieldURI)
  */
 class NonEmptyArrayOfPathsToElementType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 }

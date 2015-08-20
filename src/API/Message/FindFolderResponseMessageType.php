@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindFolderResponseMessageType
  *
- * @method FindFolderResponseMessageType getRootFolder()
+ * @method \jamesiarmes\PEWS\API\Type\FindFolderParentType getRootFolder()
  * @method FindFolderResponseMessageType setRootFolder(\jamesiarmes\PEWS\API\Type\FindFolderParentType $rootFolder)
  */
 class FindFolderResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FindFolderParentType $rootFolder
+     * @var \jamesiarmes\PEWS\API\Type\FindFolderParentType
      */
     protected $rootFolder = null;
 }

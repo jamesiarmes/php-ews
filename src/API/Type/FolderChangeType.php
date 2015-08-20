@@ -10,30 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FolderChangeType
  *
- * @method FolderChangeType getFolderId()
+ * @method FolderIdType getFolderId()
  * @method FolderChangeType setFolderId(FolderIdType $folderId)
- * @method FolderChangeType getDistinguishedFolderId()
+ * @method DistinguishedFolderIdType getDistinguishedFolderId()
  * @method FolderChangeType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
- * @method FolderChangeType getUpdates()
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType getUpdates()
  * @method FolderChangeType setUpdates(NonEmptyArrayOfFolderChangeDescriptionsType $updates)
  */
 class FolderChangeType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $folderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType
-     * $distinguishedFolderId
+     * @var \jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType
      */
     protected $distinguishedFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFolderChangeDescriptionsType
-     * $updates
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFolderChangeDescriptionsType
      */
     protected $updates = null;
 }

@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurringTimeTransitionType
  *
- * @method RecurringTimeTransitionType getTimeOffset()
+ * @method \DateInterval getTimeOffset()
  * @method RecurringTimeTransitionType setTimeOffset(\DateInterval $timeOffset)
- * @method RecurringTimeTransitionType getMonth()
+ * @method integer getMonth()
  * @method RecurringTimeTransitionType setMonth(integer $month)
  */
 class RecurringTimeTransitionType extends TransitionType
 {
 
     /**
-     * @property \DateInterval $timeOffset
+     * @var \DateInterval
      */
     protected $timeOffset = null;
 
     /**
-     * @property integer $month
+     * @var integer
      */
     protected $month = null;
 }

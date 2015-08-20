@@ -8,49 +8,49 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ContainsExpressionType
  *
- * @method ContainsExpressionType getContainmentMode()
+ * @method string getContainmentMode()
  * @method ContainsExpressionType setContainmentMode(string $containmentMode)
- * @method ContainsExpressionType getContainmentComparison()
+ * @method string getContainmentComparison()
  * @method ContainsExpressionType setContainmentComparison(string $containmentComparison)
- * @method ContainsExpressionType getFieldURI()
+ * @method array getFieldURI()
  * @method ContainsExpressionType setFieldURI(array $fieldURI)
- * @method ContainsExpressionType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method ContainsExpressionType setIndexedFieldURI(array $indexedFieldURI)
- * @method ContainsExpressionType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method ContainsExpressionType setExtendedFieldURI(array $extendedFieldURI)
- * @method ContainsExpressionType getConstant()
+ * @method ConstantValueType getConstant()
  * @method ContainsExpressionType setConstant(ConstantValueType $constant)
  */
 class ContainsExpressionType extends SearchExpressionType
 {
 
     /**
-     * @property string $containmentMode
+     * @var string
      */
     protected $containmentMode = null;
 
     /**
-     * @property string $containmentComparison
+     * @var string
      */
     protected $containmentComparison = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConstantValueType $constant
+     * @var \jamesiarmes\PEWS\API\Type\ConstantValueType
      */
     protected $constant = null;
 }

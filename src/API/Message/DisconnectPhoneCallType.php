@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: DisconnectPhoneCallType
  *
- * @method DisconnectPhoneCallType getPhoneCallId()
+ * @method \jamesiarmes\PEWS\API\Type\PhoneCallIdType getPhoneCallId()
  * @method DisconnectPhoneCallType setPhoneCallId(\jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId)
  */
 class DisconnectPhoneCallType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId
+     * @var \jamesiarmes\PEWS\API\Type\PhoneCallIdType
      */
     protected $phoneCallId = null;
 }

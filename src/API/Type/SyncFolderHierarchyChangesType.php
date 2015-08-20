@@ -10,30 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderHierarchyChangesType
  *
- * @method SyncFolderHierarchyChangesType getCreate()
+ * @method array getCreate()
  * @method SyncFolderHierarchyChangesType setCreate(array $create)
- * @method SyncFolderHierarchyChangesType getUpdate()
+ * @method array getUpdate()
  * @method SyncFolderHierarchyChangesType setUpdate(array $update)
- * @method SyncFolderHierarchyChangesType getDelete()
+ * @method array getDelete()
  * @method SyncFolderHierarchyChangesType setDelete(array $delete)
  */
 class SyncFolderHierarchyChangesType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyCreateOrUpdateType[]
-     * $create
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyCreateOrUpdateType[]
      */
     protected $create = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyCreateOrUpdateType[]
-     * $update
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyCreateOrUpdateType[]
      */
     protected $update = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyDeleteType[] $delete
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyDeleteType[]
      */
     protected $delete = null;
 }

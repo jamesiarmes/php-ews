@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetPasswordExpirationDateType
  *
- * @method GetPasswordExpirationDateType getMailboxSmtpAddress()
+ * @method string getMailboxSmtpAddress()
  * @method GetPasswordExpirationDateType setMailboxSmtpAddress(string $mailboxSmtpAddress)
  */
 class GetPasswordExpirationDateType extends BaseRequestType
 {
 
     /**
-     * @property string $mailboxSmtpAddress
+     * @var string
      */
     protected $mailboxSmtpAddress = null;
 }

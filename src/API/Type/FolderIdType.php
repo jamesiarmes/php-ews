@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  * Identifier for a fully resolved folder
  * XSD Type: FolderIdType
  *
- * @method FolderIdType getId()
+ * @method string getId()
  * @method FolderIdType setId(string $id)
- * @method FolderIdType getChangeKey()
+ * @method string getChangeKey()
  * @method FolderIdType setChangeKey(string $changeKey)
  */
 class FolderIdType extends BaseFolderIdType
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property string $changeKey
+     * @var string
      */
     protected $changeKey = null;
 }

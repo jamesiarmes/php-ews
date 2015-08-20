@@ -82,40 +82,12 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $mockClient = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
             ->shouldDeferMissing();
 
-        $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
+        $mockClient->shouldReceive('getResponseCode')->andReturn(300)->once();
 
         $client = $this->getClientMock();
         $client->setClient($mockClient);
 
         $response = $client->processResponse($input);
-    }
-
-    public function testProcessResponse()
-    {
-        $mockClient = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
-            ->shouldDeferMissing();
-
-        $mockClient->shouldReceive('getResponseCode')->andReturn(200)->once();
-
-        $client = $this->getClientMock();
-        $client->setClient($mockClient);
-
-        $response = array(
-            'ResponseMessages' => array(
-                'Message' => array(
-                    'ResponseClass' => 'Success',
-                    'SomeItemResponseMessage' => array(
-                        'SomeItem' => array(
-                            'Key' => 'Value'
-                        )
-                    )
-                )
-            )
-        );
-
-        $response = json_decode(json_encode($response), false);
-
-        $this->assertEquals('Value', $client->processResponse($response)->Key);
     }
 
     public function testClientInitialisation()

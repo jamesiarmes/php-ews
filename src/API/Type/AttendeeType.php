@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AttendeeType
  *
- * @method AttendeeType getMailbox()
+ * @method EmailAddressType getMailbox()
  * @method AttendeeType setMailbox(EmailAddressType $mailbox)
- * @method AttendeeType getResponseType()
+ * @method string getResponseType()
  * @method AttendeeType setResponseType(string $responseType)
- * @method AttendeeType getLastResponseTime()
+ * @method \DateTime getLastResponseTime()
  * @method AttendeeType setLastResponseTime(\DateTime $lastResponseTime)
  */
 class AttendeeType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 
     /**
-     * @property string $responseType
+     * @var string
      */
     protected $responseType = null;
 
     /**
-     * @property \DateTime $lastResponseTime
+     * @var \DateTime
      */
     protected $lastResponseTime = null;
 

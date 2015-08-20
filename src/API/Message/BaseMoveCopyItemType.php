@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: BaseMoveCopyItemType
  *
- * @method BaseMoveCopyItemType getToFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getToFolderId()
  * @method BaseMoveCopyItemType setToFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $toFolderId)
- * @method BaseMoveCopyItemType getItemIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method BaseMoveCopyItemType setItemIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method BaseMoveCopyItemType getReturnNewItemIds()
+ * @method boolean getReturnNewItemIds()
  * @method BaseMoveCopyItemType setReturnNewItemIds(boolean $returnNewItemIds)
  */
 class BaseMoveCopyItemType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $toFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $toFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $itemIds = null;
 
     /**
-     * @property boolean $returnNewItemIds
+     * @var boolean
      */
     protected $returnNewItemIds = null;
 }

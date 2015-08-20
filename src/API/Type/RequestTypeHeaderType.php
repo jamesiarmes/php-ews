@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RequestTypeHeader
  *
- * @method RequestTypeHeaderType getRequestType()
+ * @method string getRequestType()
  * @method RequestTypeHeaderType setRequestType(string $requestType)
  */
 class RequestTypeHeaderType extends Type
 {
 
     /**
-     * @property string $requestType
+     * @var string
      */
     protected $requestType = null;
 }

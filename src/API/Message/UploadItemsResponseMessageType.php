@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UploadItemsResponseMessageType
  *
- * @method UploadItemsResponseMessageType getItemId()
+ * @method \jamesiarmes\PEWS\API\Type\ItemIdType getItemId()
  * @method UploadItemsResponseMessageType setItemId(\jamesiarmes\PEWS\API\Type\ItemIdType $itemId)
  */
 class UploadItemsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 }

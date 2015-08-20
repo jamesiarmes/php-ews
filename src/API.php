@@ -182,6 +182,9 @@ class API
 
         $itemIds = array();
         foreach ($items as $item) {
+            if ($item instanceof Type\ItemIdType) {
+                $item = $item->toArray();
+            }
             $item = (array) $item;
             $itemIds[] = array(
                 'Id' => $item['Id'],
@@ -196,7 +199,10 @@ class API
 
         $request = array_merge($request, $options);
         $request = Type::buildFromArray($request);
-        return $this->getClient()->DeleteItem($request);
+        $this->getClient()->DeleteItem($request);
+
+        //If the delete fails, an Exception will be thrown in processResponse before it gets here
+        return true;
     }
 
     public function getFolder($identifier)
@@ -251,7 +257,7 @@ class API
 
         $request = Type::buildFromArray($request);
 
-        /** @var \jamesiarmes\PEWS\API\Messages\FindFolderResponseMessageType $folders */
+        /** @var \jamesiarmes\PEWS\API\Message\FindFolderResponseMessageType $folders */
         $folders = $this->getClient()->FindFolder($request);
         $folders = $folders->getFolders()->getCalendarFolder();
 
@@ -314,6 +320,6 @@ class API
     }
     public function getImpersonation()
     {
-      return $this->getClient()->getImpersonation();
+        return $this->getClient()->getImpersonation();
     }
 }

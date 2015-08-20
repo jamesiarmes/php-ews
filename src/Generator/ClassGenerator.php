@@ -9,6 +9,7 @@
 namespace jamesiarmes\PEWS\Generator;
 
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClassOf;
+use phpDocumentor\Reflection\DocBlock\Tag\VarTag;
 use Zend\Code\Generator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
 use Zend\Code\Generator\DocBlockGenerator;
@@ -118,8 +119,8 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         if ($prop->getDoc()) {
             $docBlock->setLongDescription($prop->getDoc());
         }
-        $tag = new PropertyTag($prop->getName(), 'mixed');
-        $tag->setTypes($this->getPropertyType($prop));
+        $tag = new Generator\DocBlock\Tag();
+        $tag->setName("@var {$this->getPropertyType($prop)}");
         $docBlock->setTag($tag);
 
         $type = $prop->getType();
@@ -156,8 +157,19 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
     protected function handleGetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
     {
+        $type = $this->getPropertyType($prop);
+        $namespace = explode("\\", $type);
+        $namespaceClass = array_pop($namespace);
+        $namespace = implode("\\", $namespace);
+        if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
+            $type = $namespaceClass;
+        }
+        if (substr($type, -2) == "[]") {
+            $type = "array";
+        }
+
         $name = "get" . Inflector::classify($prop->getName());
-        $fullName = "method {$class->getName()} $name()";
+        $fullName = "method $type $name()";
 
         $docblock = $generator->getDocBlock();
 

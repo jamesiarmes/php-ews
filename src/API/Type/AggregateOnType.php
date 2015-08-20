@@ -11,35 +11,35 @@ use jamesiarmes\PEWS\API\Type;
  *  field in determining which item will represent the group.
  * XSD Type: AggregateOnType
  *
- * @method AggregateOnType getAggregate()
+ * @method string getAggregate()
  * @method AggregateOnType setAggregate(string $aggregate)
- * @method AggregateOnType getFieldURI()
+ * @method PathToUnindexedFieldType getFieldURI()
  * @method AggregateOnType setFieldURI(PathToUnindexedFieldType $fieldURI)
- * @method AggregateOnType getIndexedFieldURI()
+ * @method PathToIndexedFieldType getIndexedFieldURI()
  * @method AggregateOnType setIndexedFieldURI(PathToIndexedFieldType $indexedFieldURI)
- * @method AggregateOnType getExtendedFieldURI()
+ * @method PathToExtendedFieldType getExtendedFieldURI()
  * @method AggregateOnType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
  */
 class AggregateOnType extends Type
 {
 
     /**
-     * @property string $aggregate
+     * @var string
      */
     protected $aggregate = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToUnindexedFieldType $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToUnindexedFieldType
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToIndexedFieldType $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToIndexedFieldType
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType
      */
     protected $extendedFieldURI = null;
 }

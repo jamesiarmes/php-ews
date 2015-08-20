@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Type;
  * Represents an alternate mailbox folder or item Id.
  * XSD Type: AlternateIdType
  *
- * @method AlternateIdType getId()
+ * @method string getId()
  * @method AlternateIdType setId(string $id)
- * @method AlternateIdType getMailbox()
+ * @method string getMailbox()
  * @method AlternateIdType setMailbox(string $mailbox)
- * @method AlternateIdType getIsArchive()
+ * @method boolean getIsArchive()
  * @method AlternateIdType setIsArchive(boolean $isArchive)
  */
 class AlternateIdType extends AlternateIdBaseType
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property string $mailbox
+     * @var string
      */
     protected $mailbox = null;
 
     /**
-     * @property boolean $isArchive
+     * @var boolean
      */
     protected $isArchive = null;
 }

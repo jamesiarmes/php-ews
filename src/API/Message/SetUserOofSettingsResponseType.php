@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SetUserOofSettingsResponse
  *
- * @method SetUserOofSettingsResponseType getResponseMessage()
+ * @method ResponseMessageType getResponseMessage()
  * @method SetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  */
 class SetUserOofSettingsResponseType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType $responseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType
      */
     protected $responseMessage = null;
 }

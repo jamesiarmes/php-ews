@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FractionalPageViewType
  *
- * @method FractionalPageViewType getNumerator()
+ * @method integer getNumerator()
  * @method FractionalPageViewType setNumerator(integer $numerator)
- * @method FractionalPageViewType getDenominator()
+ * @method integer getDenominator()
  * @method FractionalPageViewType setDenominator(integer $denominator)
  */
 class FractionalPageViewType extends BasePagingType
 {
 
     /**
-     * @property integer $numerator
+     * @var integer
      */
     protected $numerator = null;
 
     /**
-     * @property integer $denominator
+     * @var integer
      */
     protected $denominator = null;
 }

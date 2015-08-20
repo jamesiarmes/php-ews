@@ -10,30 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  * A non-empty array of alternate Ids.
  * XSD Type: NonEmptyArrayOfAlternateIdsType
  *
- * @method NonEmptyArrayOfAlternateIdsType getAlternateId()
+ * @method array getAlternateId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternateId(array $alternateId)
- * @method NonEmptyArrayOfAlternateIdsType getAlternatePublicFolderId()
+ * @method array getAlternatePublicFolderId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderId(array $alternatePublicFolderId)
- * @method NonEmptyArrayOfAlternateIdsType getAlternatePublicFolderItemId()
+ * @method array getAlternatePublicFolderItemId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderItemId(array $alternatePublicFolderItemId)
  */
 class NonEmptyArrayOfAlternateIdsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AlternateIdType[] $alternateId
+     * @var \jamesiarmes\PEWS\API\Type\AlternateIdType[]
      */
     protected $alternateId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AlternatePublicFolderIdType[]
-     * $alternatePublicFolderId
+     * @var \jamesiarmes\PEWS\API\Type\AlternatePublicFolderIdType[]
      */
     protected $alternatePublicFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AlternatePublicFolderItemIdType[]
-     * $alternatePublicFolderItemId
+     * @var \jamesiarmes\PEWS\API\Type\AlternatePublicFolderItemIdType[]
      */
     protected $alternatePublicFolderItemId = null;
 }

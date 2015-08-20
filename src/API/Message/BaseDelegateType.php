@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: BaseDelegateType
  *
- * @method BaseDelegateType getMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getMailbox()
  * @method BaseDelegateType setMailbox(\jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox)
  */
 class BaseDelegateType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 }

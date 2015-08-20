@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UpdateItemResponseMessageType
  *
- * @method UpdateItemResponseMessageType getConflictResults()
+ * @method \jamesiarmes\PEWS\API\Type\ConflictResultsType getConflictResults()
  * @method UpdateItemResponseMessageType setConflictResults(\jamesiarmes\PEWS\API\Type\ConflictResultsType $conflictResults)
  */
 class UpdateItemResponseMessageType extends ItemInfoResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConflictResultsType $conflictResults
+     * @var \jamesiarmes\PEWS\API\Type\ConflictResultsType
      */
     protected $conflictResults = null;
 }

@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  * Keyword statistics search result.
  * XSD Type: KeywordStatisticsSearchResultType
  *
- * @method KeywordStatisticsSearchResultType getKeyword()
+ * @method string getKeyword()
  * @method KeywordStatisticsSearchResultType setKeyword(string $keyword)
- * @method KeywordStatisticsSearchResultType getItemHits()
+ * @method integer getItemHits()
  * @method KeywordStatisticsSearchResultType setItemHits(integer $itemHits)
- * @method KeywordStatisticsSearchResultType getSize()
+ * @method integer getSize()
  * @method KeywordStatisticsSearchResultType setSize(integer $size)
  */
 class KeywordStatisticsSearchResultType extends Type
 {
 
     /**
-     * @property string $keyword
+     * @var string
      */
     protected $keyword = null;
 
     /**
-     * @property integer $itemHits
+     * @var integer
      */
     protected $itemHits = null;
 
     /**
-     * @property integer $size
+     * @var integer
      */
     protected $size = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FolderInfoResponseMessageType
  *
- * @method FolderInfoResponseMessageType getFolders()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType getFolders()
  * @method FolderInfoResponseMessageType setFolders(\jamesiarmes\PEWS\API\Type\ArrayOfFoldersType $folders)
  */
 class FolderInfoResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType $folders
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfFoldersType
      */
     protected $folders = null;
 }

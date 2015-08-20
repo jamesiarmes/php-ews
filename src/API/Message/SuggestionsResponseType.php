@@ -10,22 +10,21 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SuggestionsResponseType
  *
- * @method SuggestionsResponseType getResponseMessage()
+ * @method ResponseMessageType getResponseMessage()
  * @method SuggestionsResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method SuggestionsResponseType getSuggestionDayResultArray()
+ * @method array getSuggestionDayResultArray()
  * @method SuggestionsResponseType setSuggestionDayResultArray(array $suggestionDayResultArray)
  */
 class SuggestionsResponseType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType $responseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType
      */
     protected $responseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SuggestionDayResultType[]
-     * $suggestionDayResultArray
+     * @var \jamesiarmes\PEWS\API\Type\SuggestionDayResultType[]
      */
     protected $suggestionDayResultArray = null;
 }

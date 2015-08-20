@@ -10,167 +10,161 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfAllItemsType
  *
- * @method NonEmptyArrayOfAllItemsType getItem()
+ * @method array getItem()
  * @method NonEmptyArrayOfAllItemsType setItem(array $item)
- * @method NonEmptyArrayOfAllItemsType getMessage()
+ * @method array getMessage()
  * @method NonEmptyArrayOfAllItemsType setMessage(array $message)
- * @method NonEmptyArrayOfAllItemsType getCalendarItem()
+ * @method array getCalendarItem()
  * @method NonEmptyArrayOfAllItemsType setCalendarItem(array $calendarItem)
- * @method NonEmptyArrayOfAllItemsType getContact()
+ * @method array getContact()
  * @method NonEmptyArrayOfAllItemsType setContact(array $contact)
- * @method NonEmptyArrayOfAllItemsType getDistributionList()
+ * @method array getDistributionList()
  * @method NonEmptyArrayOfAllItemsType setDistributionList(array $distributionList)
- * @method NonEmptyArrayOfAllItemsType getMeetingMessage()
+ * @method array getMeetingMessage()
  * @method NonEmptyArrayOfAllItemsType setMeetingMessage(array $meetingMessage)
- * @method NonEmptyArrayOfAllItemsType getMeetingRequest()
+ * @method array getMeetingRequest()
  * @method NonEmptyArrayOfAllItemsType setMeetingRequest(array $meetingRequest)
- * @method NonEmptyArrayOfAllItemsType getMeetingResponse()
+ * @method array getMeetingResponse()
  * @method NonEmptyArrayOfAllItemsType setMeetingResponse(array $meetingResponse)
- * @method NonEmptyArrayOfAllItemsType getMeetingCancellation()
+ * @method array getMeetingCancellation()
  * @method NonEmptyArrayOfAllItemsType setMeetingCancellation(array $meetingCancellation)
- * @method NonEmptyArrayOfAllItemsType getTask()
+ * @method array getTask()
  * @method NonEmptyArrayOfAllItemsType setTask(array $task)
- * @method NonEmptyArrayOfAllItemsType getPostItem()
+ * @method array getPostItem()
  * @method NonEmptyArrayOfAllItemsType setPostItem(array $postItem)
- * @method NonEmptyArrayOfAllItemsType getReplyToItem()
+ * @method array getReplyToItem()
  * @method NonEmptyArrayOfAllItemsType setReplyToItem(array $replyToItem)
- * @method NonEmptyArrayOfAllItemsType getForwardItem()
+ * @method array getForwardItem()
  * @method NonEmptyArrayOfAllItemsType setForwardItem(array $forwardItem)
- * @method NonEmptyArrayOfAllItemsType getReplyAllToItem()
+ * @method array getReplyAllToItem()
  * @method NonEmptyArrayOfAllItemsType setReplyAllToItem(array $replyAllToItem)
- * @method NonEmptyArrayOfAllItemsType getAcceptItem()
+ * @method array getAcceptItem()
  * @method NonEmptyArrayOfAllItemsType setAcceptItem(array $acceptItem)
- * @method NonEmptyArrayOfAllItemsType getTentativelyAcceptItem()
+ * @method array getTentativelyAcceptItem()
  * @method NonEmptyArrayOfAllItemsType setTentativelyAcceptItem(array $tentativelyAcceptItem)
- * @method NonEmptyArrayOfAllItemsType getDeclineItem()
+ * @method array getDeclineItem()
  * @method NonEmptyArrayOfAllItemsType setDeclineItem(array $declineItem)
- * @method NonEmptyArrayOfAllItemsType getCancelCalendarItem()
+ * @method array getCancelCalendarItem()
  * @method NonEmptyArrayOfAllItemsType setCancelCalendarItem(array $cancelCalendarItem)
- * @method NonEmptyArrayOfAllItemsType getRemoveItem()
+ * @method array getRemoveItem()
  * @method NonEmptyArrayOfAllItemsType setRemoveItem(array $removeItem)
- * @method NonEmptyArrayOfAllItemsType getSuppressReadReceipt()
+ * @method array getSuppressReadReceipt()
  * @method NonEmptyArrayOfAllItemsType setSuppressReadReceipt(array $suppressReadReceipt)
- * @method NonEmptyArrayOfAllItemsType getPostReplyItem()
+ * @method array getPostReplyItem()
  * @method NonEmptyArrayOfAllItemsType setPostReplyItem(array $postReplyItem)
- * @method NonEmptyArrayOfAllItemsType getAcceptSharingInvitation()
+ * @method array getAcceptSharingInvitation()
  * @method NonEmptyArrayOfAllItemsType setAcceptSharingInvitation(array $acceptSharingInvitation)
  */
 class NonEmptyArrayOfAllItemsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemType[] $item
+     * @var \jamesiarmes\PEWS\API\Type\ItemType[]
      */
     protected $item = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageType[] $message
+     * @var \jamesiarmes\PEWS\API\Type\MessageType[]
      */
     protected $message = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarItemType[] $calendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CalendarItemType[]
      */
     protected $calendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType[] $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType[]
      */
     protected $contact = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistributionListType[] $distributionList
+     * @var \jamesiarmes\PEWS\API\Type\DistributionListType[]
      */
     protected $distributionList = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingMessageType[] $meetingMessage
+     * @var \jamesiarmes\PEWS\API\Type\MeetingMessageType[]
      */
     protected $meetingMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType[] $meetingRequest
+     * @var \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType[]
      */
     protected $meetingRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType[]
-     * $meetingResponse
+     * @var \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType[]
      */
     protected $meetingResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType[]
-     * $meetingCancellation
+     * @var \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType[]
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskType[] $task
+     * @var \jamesiarmes\PEWS\API\Type\TaskType[]
      */
     protected $task = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostItemType[] $postItem
+     * @var \jamesiarmes\PEWS\API\Type\PostItemType[]
      */
     protected $postItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyToItemType[] $replyToItem
+     * @var \jamesiarmes\PEWS\API\Type\ReplyToItemType[]
      */
     protected $replyToItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ForwardItemType[] $forwardItem
+     * @var \jamesiarmes\PEWS\API\Type\ForwardItemType[]
      */
     protected $forwardItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyAllToItemType[] $replyAllToItem
+     * @var \jamesiarmes\PEWS\API\Type\ReplyAllToItemType[]
      */
     protected $replyAllToItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AcceptItemType[] $acceptItem
+     * @var \jamesiarmes\PEWS\API\Type\AcceptItemType[]
      */
     protected $acceptItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TentativelyAcceptItemType[]
-     * $tentativelyAcceptItem
+     * @var \jamesiarmes\PEWS\API\Type\TentativelyAcceptItemType[]
      */
     protected $tentativelyAcceptItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DeclineItemType[] $declineItem
+     * @var \jamesiarmes\PEWS\API\Type\DeclineItemType[]
      */
     protected $declineItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CancelCalendarItemType[]
-     * $cancelCalendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CancelCalendarItemType[]
      */
     protected $cancelCalendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RemoveItemType[] $removeItem
+     * @var \jamesiarmes\PEWS\API\Type\RemoveItemType[]
      */
     protected $removeItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SuppressReadReceiptType[]
-     * $suppressReadReceipt
+     * @var \jamesiarmes\PEWS\API\Type\SuppressReadReceiptType[]
      */
     protected $suppressReadReceipt = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostReplyItemType[] $postReplyItem
+     * @var \jamesiarmes\PEWS\API\Type\PostReplyItemType[]
      */
     protected $postReplyItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AcceptSharingInvitationType[]
-     * $acceptSharingInvitation
+     * @var \jamesiarmes\PEWS\API\Type\AcceptSharingInvitationType[]
      */
     protected $acceptSharingInvitation = null;
 }

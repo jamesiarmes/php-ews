@@ -9,14 +9,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *  Should not appear in client code
  * XSD Type: ResponseObjectCoreType
  *
- * @method ResponseObjectCoreType getReferenceItemId()
+ * @method ItemIdType getReferenceItemId()
  * @method ResponseObjectCoreType setReferenceItemId(ItemIdType $referenceItemId)
  */
 class ResponseObjectCoreType extends MessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $referenceItemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $referenceItemId = null;
 }

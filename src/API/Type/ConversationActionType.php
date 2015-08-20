@@ -10,47 +10,47 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ConversationActionType
  *
- * @method ConversationActionType getAction()
+ * @method string getAction()
  * @method ConversationActionType setAction(string $action)
- * @method ConversationActionType getConversationId()
+ * @method ItemIdType getConversationId()
  * @method ConversationActionType setConversationId(ItemIdType $conversationId)
- * @method ConversationActionType getContextFolderId()
+ * @method TargetFolderIdType getContextFolderId()
  * @method ConversationActionType setContextFolderId(TargetFolderIdType $contextFolderId)
- * @method ConversationActionType getConversationLastSyncTime()
+ * @method \DateTime getConversationLastSyncTime()
  * @method ConversationActionType setConversationLastSyncTime(\DateTime $conversationLastSyncTime)
- * @method ConversationActionType getProcessRightAway()
+ * @method boolean getProcessRightAway()
  * @method ConversationActionType setProcessRightAway(boolean $processRightAway)
- * @method ConversationActionType getDestinationFolderId()
+ * @method TargetFolderIdType getDestinationFolderId()
  * @method ConversationActionType setDestinationFolderId(TargetFolderIdType $destinationFolderId)
- * @method ConversationActionType getCategories()
+ * @method array getCategories()
  * @method ConversationActionType setCategories(array $categories)
- * @method ConversationActionType getEnableAlwaysDelete()
+ * @method boolean getEnableAlwaysDelete()
  * @method ConversationActionType setEnableAlwaysDelete(boolean $enableAlwaysDelete)
- * @method ConversationActionType getIsRead()
+ * @method boolean getIsRead()
  * @method ConversationActionType setIsRead(boolean $isRead)
- * @method ConversationActionType getDeleteType()
+ * @method string getDeleteType()
  * @method ConversationActionType setDeleteType(string $deleteType)
  */
 class ConversationActionType extends Type
 {
 
     /**
-     * @property string $action
+     * @var string
      */
     protected $action = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $conversationId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $conversationId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $contextFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $contextFolderId = null;
 
     /**
-     * @property \DateTime $conversationLastSyncTime
+     * @var \DateTime
      */
     protected $conversationLastSyncTime = null;
 
@@ -59,32 +59,32 @@ class ConversationActionType extends Type
     );
 
     /**
-     * @property boolean $processRightAway
+     * @var boolean
      */
     protected $processRightAway = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $destinationFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $destinationFolderId = null;
 
     /**
-     * @property string[] $categories
+     * @var string[]
      */
     protected $categories = null;
 
     /**
-     * @property boolean $enableAlwaysDelete
+     * @var boolean
      */
     protected $enableAlwaysDelete = null;
 
     /**
-     * @property boolean $isRead
+     * @var boolean
      */
     protected $isRead = null;
 
     /**
-     * @property string $deleteType
+     * @var string
      */
     protected $deleteType = null;
 }

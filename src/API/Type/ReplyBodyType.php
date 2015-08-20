@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ReplyBody
  *
- * @method ReplyBodyType getLang()
+ * @method \jamesiarmes\PEWS\API\Type\ReplyBodyType\LangAType getLang()
  * @method ReplyBodyType setLang(\jamesiarmes\PEWS\API\Type\ReplyBodyType\LangAType $lang)
- * @method ReplyBodyType getMessage()
+ * @method string getMessage()
  * @method ReplyBodyType setMessage(string $message)
  */
 class ReplyBodyType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyBodyType\LangAType $lang
+     * @var \jamesiarmes\PEWS\API\Type\ReplyBodyType\LangAType
      */
     protected $lang = null;
 
     /**
-     * @property string $message
+     * @var string
      */
     protected $message = null;
 }

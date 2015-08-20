@@ -10,85 +10,84 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NotificationType
  *
- * @method NotificationType getSubscriptionId()
+ * @method string getSubscriptionId()
  * @method NotificationType setSubscriptionId(string $subscriptionId)
- * @method NotificationType getPreviousWatermark()
+ * @method string getPreviousWatermark()
  * @method NotificationType setPreviousWatermark(string $previousWatermark)
- * @method NotificationType getMoreEvents()
+ * @method boolean getMoreEvents()
  * @method NotificationType setMoreEvents(boolean $moreEvents)
- * @method NotificationType getCopiedEvent()
+ * @method array getCopiedEvent()
  * @method NotificationType setCopiedEvent(array $copiedEvent)
- * @method NotificationType getCreatedEvent()
+ * @method array getCreatedEvent()
  * @method NotificationType setCreatedEvent(array $createdEvent)
- * @method NotificationType getDeletedEvent()
+ * @method array getDeletedEvent()
  * @method NotificationType setDeletedEvent(array $deletedEvent)
- * @method NotificationType getModifiedEvent()
+ * @method array getModifiedEvent()
  * @method NotificationType setModifiedEvent(array $modifiedEvent)
- * @method NotificationType getMovedEvent()
+ * @method array getMovedEvent()
  * @method NotificationType setMovedEvent(array $movedEvent)
- * @method NotificationType getNewMailEvent()
+ * @method array getNewMailEvent()
  * @method NotificationType setNewMailEvent(array $newMailEvent)
- * @method NotificationType getStatusEvent()
+ * @method array getStatusEvent()
  * @method NotificationType setStatusEvent(array $statusEvent)
- * @method NotificationType getFreeBusyChangedEvent()
+ * @method array getFreeBusyChangedEvent()
  * @method NotificationType setFreeBusyChangedEvent(array $freeBusyChangedEvent)
  */
 class NotificationType extends Type
 {
 
     /**
-     * @property string $subscriptionId
+     * @var string
      */
     protected $subscriptionId = null;
 
     /**
-     * @property string $previousWatermark
+     * @var string
      */
     protected $previousWatermark = null;
 
     /**
-     * @property boolean $moreEvents
+     * @var boolean
      */
     protected $moreEvents = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MovedCopiedEventType[] $copiedEvent
+     * @var \jamesiarmes\PEWS\API\Type\MovedCopiedEventType[]
      */
     protected $copiedEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[] $createdEvent
+     * @var \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[]
      */
     protected $createdEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[] $deletedEvent
+     * @var \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[]
      */
     protected $deletedEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ModifiedEventType[] $modifiedEvent
+     * @var \jamesiarmes\PEWS\API\Type\ModifiedEventType[]
      */
     protected $modifiedEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MovedCopiedEventType[] $movedEvent
+     * @var \jamesiarmes\PEWS\API\Type\MovedCopiedEventType[]
      */
     protected $movedEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[] $newMailEvent
+     * @var \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[]
      */
     protected $newMailEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BaseNotificationEventType[] $statusEvent
+     * @var \jamesiarmes\PEWS\API\Type\BaseNotificationEventType[]
      */
     protected $statusEvent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[]
-     * $freeBusyChangedEvent
+     * @var \jamesiarmes\PEWS\API\Type\BaseObjectChangedEventType[]
      */
     protected $freeBusyChangedEvent = null;
 }

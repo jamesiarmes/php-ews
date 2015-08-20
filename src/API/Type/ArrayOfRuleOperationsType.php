@@ -10,30 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  * Represents an array of rule operations to be performed
  * XSD Type: ArrayOfRuleOperationsType
  *
- * @method ArrayOfRuleOperationsType getCreateRuleOperation()
+ * @method array getCreateRuleOperation()
  * @method ArrayOfRuleOperationsType setCreateRuleOperation(array $createRuleOperation)
- * @method ArrayOfRuleOperationsType getSetRuleOperation()
+ * @method array getSetRuleOperation()
  * @method ArrayOfRuleOperationsType setSetRuleOperation(array $setRuleOperation)
- * @method ArrayOfRuleOperationsType getDeleteRuleOperation()
+ * @method array getDeleteRuleOperation()
  * @method ArrayOfRuleOperationsType setDeleteRuleOperation(array $deleteRuleOperation)
  */
 class ArrayOfRuleOperationsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CreateRuleOperationType[]
-     * $createRuleOperation
+     * @var \jamesiarmes\PEWS\API\Type\CreateRuleOperationType[]
      */
     protected $createRuleOperation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SetRuleOperationType[] $setRuleOperation
+     * @var \jamesiarmes\PEWS\API\Type\SetRuleOperationType[]
      */
     protected $setRuleOperation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DeleteRuleOperationType[]
-     * $deleteRuleOperation
+     * @var \jamesiarmes\PEWS\API\Type\DeleteRuleOperationType[]
      */
     protected $deleteRuleOperation = null;
 }

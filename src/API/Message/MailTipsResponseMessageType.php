@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: MailTipsResponseMessageType
  *
- * @method MailTipsResponseMessageType getMailTips()
+ * @method \jamesiarmes\PEWS\API\Type\MailTipsType getMailTips()
  * @method MailTipsResponseMessageType setMailTips(\jamesiarmes\PEWS\API\Type\MailTipsType $mailTips)
  */
 class MailTipsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MailTipsType $mailTips
+     * @var \jamesiarmes\PEWS\API\Type\MailTipsType
      */
     protected $mailTips = null;
 }

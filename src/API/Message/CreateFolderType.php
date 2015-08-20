@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: CreateFolderType
  *
- * @method CreateFolderType getParentFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getParentFolderId()
  * @method CreateFolderType setParentFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $parentFolderId)
- * @method CreateFolderType getFolders()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFoldersType getFolders()
  * @method CreateFolderType setFolders(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFoldersType $folders)
  */
 class CreateFolderType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $parentFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFoldersType $folders
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfFoldersType
      */
     protected $folders = null;
 }

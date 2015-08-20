@@ -8,22 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetAttachmentType
  *
- * @method GetAttachmentType getAttachmentShape()
+ * @method \jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType getAttachmentShape()
  * @method GetAttachmentType setAttachmentShape(\jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType $attachmentShape)
- * @method GetAttachmentType getAttachmentIds()
+ * @method array getAttachmentIds()
  * @method GetAttachmentType setAttachmentIds(array $attachmentIds)
  */
 class GetAttachmentType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType
-     * $attachmentShape
+     * @var \jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType
      */
     protected $attachmentShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType[] $attachmentIds
+     * @var \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType[]
      */
     protected $attachmentIds = null;
 }

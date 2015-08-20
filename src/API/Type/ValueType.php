@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: Value
  *
- * @method ValueType getName()
+ * @method string getName()
  * @method ValueType setName(string $name)
  */
 class ValueType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 }

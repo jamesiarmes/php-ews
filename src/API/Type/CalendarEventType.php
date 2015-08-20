@@ -10,20 +10,20 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CalendarEvent
  *
- * @method CalendarEventType getStartTime()
+ * @method \DateTime getStartTime()
  * @method CalendarEventType setStartTime(\DateTime $startTime)
- * @method CalendarEventType getEndTime()
+ * @method \DateTime getEndTime()
  * @method CalendarEventType setEndTime(\DateTime $endTime)
- * @method CalendarEventType getBusyType()
+ * @method string getBusyType()
  * @method CalendarEventType setBusyType(string $busyType)
- * @method CalendarEventType getCalendarEventDetails()
+ * @method CalendarEventDetailsType getCalendarEventDetails()
  * @method CalendarEventType setCalendarEventDetails(CalendarEventDetailsType $calendarEventDetails)
  */
 class CalendarEventType extends Type
 {
 
     /**
-     * @property \DateTime $startTime
+     * @var \DateTime
      */
     protected $startTime = null;
 
@@ -33,18 +33,17 @@ class CalendarEventType extends Type
     );
 
     /**
-     * @property \DateTime $endTime
+     * @var \DateTime
      */
     protected $endTime = null;
 
     /**
-     * @property string $busyType
+     * @var string
      */
     protected $busyType = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarEventDetailsType
-     * $calendarEventDetails
+     * @var \jamesiarmes\PEWS\API\Type\CalendarEventDetailsType
      */
     protected $calendarEventDetails = null;
 }

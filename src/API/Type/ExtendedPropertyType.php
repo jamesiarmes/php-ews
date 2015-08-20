@@ -11,28 +11,28 @@ use jamesiarmes\PEWS\API\Type;
  *  associated value).
  * XSD Type: ExtendedPropertyType
  *
- * @method ExtendedPropertyType getExtendedFieldURI()
+ * @method PathToExtendedFieldType getExtendedFieldURI()
  * @method ExtendedPropertyType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
- * @method ExtendedPropertyType getValue()
+ * @method string getValue()
  * @method ExtendedPropertyType setValue(string $value)
- * @method ExtendedPropertyType getValues()
+ * @method array getValues()
  * @method ExtendedPropertyType setValues(array $values)
  */
 class ExtendedPropertyType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property string $value
+     * @var string
      */
     protected $value = null;
 
     /**
-     * @property string[] $values
+     * @var string[]
      */
     protected $values = null;
 }

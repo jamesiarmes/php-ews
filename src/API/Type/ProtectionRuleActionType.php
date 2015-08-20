@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ProtectionRuleActionType
  *
- * @method ProtectionRuleActionType getName()
+ * @method string getName()
  * @method ProtectionRuleActionType setName(string $name)
- * @method ProtectionRuleActionType getArgument()
+ * @method array getArgument()
  * @method ProtectionRuleActionType setArgument(array $argument)
  */
 class ProtectionRuleActionType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ProtectionRuleArgumentType[] $argument
+     * @var \jamesiarmes\PEWS\API\Type\ProtectionRuleArgumentType[]
      */
     protected $argument = null;
 }

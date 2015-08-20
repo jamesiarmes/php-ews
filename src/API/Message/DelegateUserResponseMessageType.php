@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: DelegateUserResponseMessageType
  *
- * @method DelegateUserResponseMessageType getDelegateUser()
+ * @method \jamesiarmes\PEWS\API\Type\DelegateUserType getDelegateUser()
  * @method DelegateUserResponseMessageType setDelegateUser(\jamesiarmes\PEWS\API\Type\DelegateUserType $delegateUser)
  */
 class DelegateUserResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DelegateUserType $delegateUser
+     * @var \jamesiarmes\PEWS\API\Type\DelegateUserType
      */
     protected $delegateUser = null;
 }

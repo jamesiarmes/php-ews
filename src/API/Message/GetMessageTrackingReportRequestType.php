@@ -8,56 +8,56 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetMessageTrackingReportRequestType
  *
- * @method GetMessageTrackingReportRequestType getScope()
+ * @method string getScope()
  * @method GetMessageTrackingReportRequestType setScope(string $scope)
- * @method GetMessageTrackingReportRequestType getReportTemplate()
+ * @method string getReportTemplate()
  * @method GetMessageTrackingReportRequestType setReportTemplate(string $reportTemplate)
- * @method GetMessageTrackingReportRequestType getRecipientFilter()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getRecipientFilter()
  * @method GetMessageTrackingReportRequestType setRecipientFilter(\jamesiarmes\PEWS\API\Type\EmailAddressType $recipientFilter)
- * @method GetMessageTrackingReportRequestType getMessageTrackingReportId()
+ * @method string getMessageTrackingReportId()
  * @method GetMessageTrackingReportRequestType setMessageTrackingReportId(string $messageTrackingReportId)
- * @method GetMessageTrackingReportRequestType getReturnQueueEvents()
+ * @method boolean getReturnQueueEvents()
  * @method GetMessageTrackingReportRequestType setReturnQueueEvents(boolean $returnQueueEvents)
- * @method GetMessageTrackingReportRequestType getDiagnosticsLevel()
+ * @method string getDiagnosticsLevel()
  * @method GetMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
- * @method GetMessageTrackingReportRequestType getProperties()
+ * @method array getProperties()
  * @method GetMessageTrackingReportRequestType setProperties(array $properties)
  */
 class GetMessageTrackingReportRequestType extends BaseRequestType
 {
 
     /**
-     * @property string $scope
+     * @var string
      */
     protected $scope = null;
 
     /**
-     * @property string $reportTemplate
+     * @var string
      */
     protected $reportTemplate = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $recipientFilter
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $recipientFilter = null;
 
     /**
-     * @property string $messageTrackingReportId
+     * @var string
      */
     protected $messageTrackingReportId = null;
 
     /**
-     * @property boolean $returnQueueEvents
+     * @var boolean
      */
     protected $returnQueueEvents = null;
 
     /**
-     * @property string $diagnosticsLevel
+     * @var string
      */
     protected $diagnosticsLevel = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

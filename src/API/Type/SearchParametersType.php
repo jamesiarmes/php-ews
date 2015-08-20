@@ -10,29 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SearchParametersType
  *
- * @method SearchParametersType getTraversal()
+ * @method string getTraversal()
  * @method SearchParametersType setTraversal(string $traversal)
- * @method SearchParametersType getRestriction()
+ * @method RestrictionType getRestriction()
  * @method SearchParametersType setRestriction(RestrictionType $restriction)
- * @method SearchParametersType getBaseFolderIds()
+ * @method NonEmptyArrayOfBaseFolderIdsType getBaseFolderIds()
  * @method SearchParametersType setBaseFolderIds(NonEmptyArrayOfBaseFolderIdsType $baseFolderIds)
  */
 class SearchParametersType extends Type
 {
 
     /**
-     * @property string $traversal
+     * @var string
      */
     protected $traversal = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RestrictionType $restriction
+     * @var \jamesiarmes\PEWS\API\Type\RestrictionType
      */
     protected $restriction = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
-     * $baseFolderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $baseFolderIds = null;
 }

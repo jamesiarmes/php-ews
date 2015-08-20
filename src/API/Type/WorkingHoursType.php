@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: WorkingHours
  *
- * @method WorkingHoursType getTimeZone()
+ * @method SerializableTimeZoneType getTimeZone()
  * @method WorkingHoursType setTimeZone(SerializableTimeZoneType $timeZone)
- * @method WorkingHoursType getWorkingPeriodArray()
+ * @method array getWorkingPeriodArray()
  * @method WorkingHoursType setWorkingPeriodArray(array $workingPeriodArray)
  */
 class WorkingHoursType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SerializableTimeZoneType $timeZone
+     * @var \jamesiarmes\PEWS\API\Type\SerializableTimeZoneType
      */
     protected $timeZone = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\WorkingPeriodType[] $workingPeriodArray
+     * @var \jamesiarmes\PEWS\API\Type\WorkingPeriodType[]
      */
     protected $workingPeriodArray = null;
 }

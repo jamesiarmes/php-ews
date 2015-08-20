@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ExchangeImpersonationType
  *
- * @method ExchangeImpersonationType getConnectingSID()
+ * @method ConnectingSIDType getConnectingSID()
  * @method ExchangeImpersonationType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class ExchangeImpersonationType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConnectingSIDType $connectingSID
+     * @var \jamesiarmes\PEWS\API\Type\ConnectingSIDType
      */
     protected $connectingSID = null;
 }

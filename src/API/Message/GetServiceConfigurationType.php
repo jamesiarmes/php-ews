@@ -8,22 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetServiceConfigurationType
  *
- * @method GetServiceConfigurationType getActingAs()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getActingAs()
  * @method GetServiceConfigurationType setActingAs(\jamesiarmes\PEWS\API\Type\EmailAddressType $actingAs)
- * @method GetServiceConfigurationType getRequestedConfiguration()
+ * @method array getRequestedConfiguration()
  * @method GetServiceConfigurationType setRequestedConfiguration(array $requestedConfiguration)
  */
 class GetServiceConfigurationType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $actingAs
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $actingAs = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ServiceConfigurationType[]
-     * $requestedConfiguration
+     * @var \jamesiarmes\PEWS\API\Type\ServiceConfigurationType[]
      */
     protected $requestedConfiguration = null;
 }

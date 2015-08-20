@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetFolderType
  *
- * @method GetFolderType getFolderShape()
+ * @method \jamesiarmes\PEWS\API\Type\FolderResponseShapeType getFolderShape()
  * @method GetFolderType setFolderShape(\jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape)
- * @method GetFolderType getFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method GetFolderType setFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class GetFolderType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape
+     * @var \jamesiarmes\PEWS\API\Type\FolderResponseShapeType
      */
     protected $folderShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
 }

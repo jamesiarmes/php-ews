@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: OpenAsAdminOrSystemServiceType
  *
- * @method OpenAsAdminOrSystemServiceType getLogonType()
+ * @method string getLogonType()
  * @method OpenAsAdminOrSystemServiceType setLogonType(string $logonType)
- * @method OpenAsAdminOrSystemServiceType getConnectingSID()
+ * @method ConnectingSIDType getConnectingSID()
  * @method OpenAsAdminOrSystemServiceType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class OpenAsAdminOrSystemServiceType extends Type
 {
 
     /**
-     * @property string $logonType
+     * @var string
      */
     protected $logonType = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConnectingSIDType $connectingSID
+     * @var \jamesiarmes\PEWS\API\Type\ConnectingSIDType
      */
     protected $connectingSID = null;
 }

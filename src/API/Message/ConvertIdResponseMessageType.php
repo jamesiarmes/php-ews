@@ -9,14 +9,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *  that the AlternateId element will be missing in the case of an error.
  * XSD Type: ConvertIdResponseMessageType
  *
- * @method ConvertIdResponseMessageType getAlternateId()
+ * @method \jamesiarmes\PEWS\API\Type\AlternateIdBaseType getAlternateId()
  * @method ConvertIdResponseMessageType setAlternateId(\jamesiarmes\PEWS\API\Type\AlternateIdBaseType $alternateId)
  */
 class ConvertIdResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AlternateIdBaseType $alternateId
+     * @var \jamesiarmes\PEWS\API\Type\AlternateIdBaseType
      */
     protected $alternateId = null;
 }

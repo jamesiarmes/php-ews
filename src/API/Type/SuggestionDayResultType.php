@@ -10,18 +10,18 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SuggestionDayResult
  *
- * @method SuggestionDayResultType getDate()
+ * @method \DateTime getDate()
  * @method SuggestionDayResultType setDate(\DateTime $date)
- * @method SuggestionDayResultType getDayQuality()
+ * @method string getDayQuality()
  * @method SuggestionDayResultType setDayQuality(string $dayQuality)
- * @method SuggestionDayResultType getSuggestionArray()
+ * @method array getSuggestionArray()
  * @method SuggestionDayResultType setSuggestionArray(array $suggestionArray)
  */
 class SuggestionDayResultType extends Type
 {
 
     /**
-     * @property \DateTime $date
+     * @var \DateTime
      */
     protected $date = null;
 
@@ -30,12 +30,12 @@ class SuggestionDayResultType extends Type
     );
 
     /**
-     * @property string $dayQuality
+     * @var string
      */
     protected $dayQuality = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SuggestionType[] $suggestionArray
+     * @var \jamesiarmes\PEWS\API\Type\SuggestionType[]
      */
     protected $suggestionArray = null;
 }

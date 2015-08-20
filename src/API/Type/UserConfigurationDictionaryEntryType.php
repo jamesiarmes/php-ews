@@ -10,23 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UserConfigurationDictionaryEntryType
  *
- * @method UserConfigurationDictionaryEntryType getDictionaryKey()
+ * @method UserConfigurationDictionaryObjectType getDictionaryKey()
  * @method UserConfigurationDictionaryEntryType setDictionaryKey(UserConfigurationDictionaryObjectType $dictionaryKey)
- * @method UserConfigurationDictionaryEntryType getDictionaryValue()
+ * @method UserConfigurationDictionaryObjectType getDictionaryValue()
  * @method UserConfigurationDictionaryEntryType setDictionaryValue(UserConfigurationDictionaryObjectType $dictionaryValue)
  */
 class UserConfigurationDictionaryEntryType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryObjectType
-     * $dictionaryKey
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryObjectType
      */
     protected $dictionaryKey = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryObjectType
-     * $dictionaryValue
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryObjectType
      */
     protected $dictionaryValue = null;
 }

@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PhoneNumberDictionaryEntryType
  *
- * @method PhoneNumberDictionaryEntryType getKey()
+ * @method string getKey()
  * @method PhoneNumberDictionaryEntryType setKey(string $key)
  */
 class PhoneNumberDictionaryEntryType extends Type
 {
 
     /**
-     * @property string $key
+     * @var string
      */
     protected $key = null;
 }

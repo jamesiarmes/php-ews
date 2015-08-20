@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PhysicalAddressDictionaryEntryType
  *
- * @method PhysicalAddressDictionaryEntryType getKey()
+ * @method string getKey()
  * @method PhysicalAddressDictionaryEntryType setKey(string $key)
- * @method PhysicalAddressDictionaryEntryType getStreet()
+ * @method string getStreet()
  * @method PhysicalAddressDictionaryEntryType setStreet(string $street)
- * @method PhysicalAddressDictionaryEntryType getCity()
+ * @method string getCity()
  * @method PhysicalAddressDictionaryEntryType setCity(string $city)
- * @method PhysicalAddressDictionaryEntryType getState()
+ * @method string getState()
  * @method PhysicalAddressDictionaryEntryType setState(string $state)
- * @method PhysicalAddressDictionaryEntryType getCountryOrRegion()
+ * @method string getCountryOrRegion()
  * @method PhysicalAddressDictionaryEntryType setCountryOrRegion(string $countryOrRegion)
- * @method PhysicalAddressDictionaryEntryType getPostalCode()
+ * @method string getPostalCode()
  * @method PhysicalAddressDictionaryEntryType setPostalCode(string $postalCode)
  */
 class PhysicalAddressDictionaryEntryType extends Type
 {
 
     /**
-     * @property string $key
+     * @var string
      */
     protected $key = null;
 
     /**
-     * @property string $street
+     * @var string
      */
     protected $street = null;
 
     /**
-     * @property string $city
+     * @var string
      */
     protected $city = null;
 
     /**
-     * @property string $state
+     * @var string
      */
     protected $state = null;
 
     /**
-     * @property string $countryOrRegion
+     * @var string
      */
     protected $countryOrRegion = null;
 
     /**
-     * @property string $postalCode
+     * @var string
      */
     protected $postalCode = null;
 }

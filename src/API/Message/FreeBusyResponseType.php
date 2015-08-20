@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FreeBusyResponseType
  *
- * @method FreeBusyResponseType getResponseMessage()
+ * @method ResponseMessageType getResponseMessage()
  * @method FreeBusyResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method FreeBusyResponseType getFreeBusyView()
+ * @method \jamesiarmes\PEWS\API\Type\FreeBusyViewType getFreeBusyView()
  * @method FreeBusyResponseType setFreeBusyView(\jamesiarmes\PEWS\API\Type\FreeBusyViewType $freeBusyView)
  */
 class FreeBusyResponseType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType $responseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType
      */
     protected $responseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FreeBusyViewType $freeBusyView
+     * @var \jamesiarmes\PEWS\API\Type\FreeBusyViewType
      */
     protected $freeBusyView = null;
 }

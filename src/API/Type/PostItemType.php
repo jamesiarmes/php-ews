@@ -8,53 +8,53 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PostItemType
  *
- * @method PostItemType getConversationIndex()
+ * @method string getConversationIndex()
  * @method PostItemType setConversationIndex(string $conversationIndex)
- * @method PostItemType getConversationTopic()
+ * @method string getConversationTopic()
  * @method PostItemType setConversationTopic(string $conversationTopic)
- * @method PostItemType getFrom()
+ * @method SingleRecipientType getFrom()
  * @method PostItemType setFrom(SingleRecipientType $from)
- * @method PostItemType getInternetMessageId()
+ * @method string getInternetMessageId()
  * @method PostItemType setInternetMessageId(string $internetMessageId)
- * @method PostItemType getIsRead()
+ * @method boolean getIsRead()
  * @method PostItemType setIsRead(boolean $isRead)
- * @method PostItemType getPostedTime()
+ * @method \DateTime getPostedTime()
  * @method PostItemType setPostedTime(\DateTime $postedTime)
- * @method PostItemType getReferences()
+ * @method string getReferences()
  * @method PostItemType setReferences(string $references)
- * @method PostItemType getSender()
+ * @method SingleRecipientType getSender()
  * @method PostItemType setSender(SingleRecipientType $sender)
  */
 class PostItemType extends ItemType
 {
 
     /**
-     * @property string $conversationIndex
+     * @var string
      */
     protected $conversationIndex = null;
 
     /**
-     * @property string $conversationTopic
+     * @var string
      */
     protected $conversationTopic = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $from
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $from = null;
 
     /**
-     * @property string $internetMessageId
+     * @var string
      */
     protected $internetMessageId = null;
 
     /**
-     * @property boolean $isRead
+     * @var boolean
      */
     protected $isRead = null;
 
     /**
-     * @property \DateTime $postedTime
+     * @var \DateTime
      */
     protected $postedTime = null;
 
@@ -63,12 +63,12 @@ class PostItemType extends ItemType
     );
 
     /**
-     * @property string $references
+     * @var string
      */
     protected $references = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $sender
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $sender = null;
 }

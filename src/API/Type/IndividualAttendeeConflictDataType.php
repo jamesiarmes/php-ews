@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: IndividualAttendeeConflictData
  *
- * @method IndividualAttendeeConflictDataType getBusyType()
+ * @method string getBusyType()
  * @method IndividualAttendeeConflictDataType setBusyType(string $busyType)
  */
 class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
 {
 
     /**
-     * @property string $busyType
+     * @var string
      */
     protected $busyType = null;
 }

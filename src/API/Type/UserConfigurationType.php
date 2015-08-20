@@ -10,44 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UserConfigurationType
  *
- * @method UserConfigurationType getUserConfigurationName()
+ * @method UserConfigurationNameType getUserConfigurationName()
  * @method UserConfigurationType setUserConfigurationName(UserConfigurationNameType $userConfigurationName)
- * @method UserConfigurationType getItemId()
+ * @method ItemIdType getItemId()
  * @method UserConfigurationType setItemId(ItemIdType $itemId)
- * @method UserConfigurationType getDictionary()
+ * @method array getDictionary()
  * @method UserConfigurationType setDictionary(array $dictionary)
- * @method UserConfigurationType getXmlData()
+ * @method string getXmlData()
  * @method UserConfigurationType setXmlData(string $xmlData)
- * @method UserConfigurationType getBinaryData()
+ * @method string getBinaryData()
  * @method UserConfigurationType setBinaryData(string $binaryData)
  */
 class UserConfigurationType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationNameType
-     * $userConfigurationName
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationNameType
      */
     protected $userConfigurationName = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryEntryType[]
-     * $dictionary
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationDictionaryEntryType[]
      */
     protected $dictionary = null;
 
     /**
-     * @property string $xmlData
+     * @var string
      */
     protected $xmlData = null;
 
     /**
-     * @property string $binaryData
+     * @var string
      */
     protected $binaryData = null;
 }

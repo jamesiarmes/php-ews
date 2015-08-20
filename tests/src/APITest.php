@@ -70,7 +70,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
 
         $folder = $client->getFolderByDistinguishedId('calendar');
-        $this->assertEquals('Calendar', $folder->DisplayName);
+        $this->assertEquals('Calendar', $folder->getDisplayName());
     }
 
     /**
@@ -131,7 +131,7 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $client = $this->getClient();
         $response = $client->createItems($args[0]['Items'], $args[1]);
-        $this->assertObjectHasAttribute('ItemId', $response);
+        $this->assertNotNull($response->getId());
     }
 
     public function testDeleteItems()
@@ -154,7 +154,7 @@ class APITest extends PHPUnit_Framework_TestCase
         );
 
         $item = $client->createItems($args[0]['Items'], $args[1]);
-        $this->assertTrue($client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']));
+        $this->assertTrue($client->deleteItems($item, ['SendMeetingCancellations' => 'SendToNone']));
     }
 
     /**

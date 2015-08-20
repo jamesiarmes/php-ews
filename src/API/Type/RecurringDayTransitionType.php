@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurringDayTransitionType
  *
- * @method RecurringDayTransitionType getDayOfWeek()
+ * @method string getDayOfWeek()
  * @method RecurringDayTransitionType setDayOfWeek(string $dayOfWeek)
- * @method RecurringDayTransitionType getOccurrence()
+ * @method string getOccurrence()
  * @method RecurringDayTransitionType setOccurrence(string $occurrence)
  */
 class RecurringDayTransitionType extends RecurringTimeTransitionType
 {
 
     /**
-     * @property string $dayOfWeek
+     * @var string
      */
     protected $dayOfWeek = null;
 
     /**
-     * @property string $occurrence
+     * @var string
      */
     protected $occurrence = null;
 }

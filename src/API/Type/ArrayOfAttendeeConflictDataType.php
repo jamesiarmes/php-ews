@@ -10,39 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfAttendeeConflictData
  *
- * @method ArrayOfAttendeeConflictDataType getUnknownAttendeeConflictData()
+ * @method array getUnknownAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setUnknownAttendeeConflictData(array $unknownAttendeeConflictData)
- * @method ArrayOfAttendeeConflictDataType getIndividualAttendeeConflictData()
+ * @method array getIndividualAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setIndividualAttendeeConflictData(array $individualAttendeeConflictData)
- * @method ArrayOfAttendeeConflictDataType getTooBigGroupAttendeeConflictData()
+ * @method array getTooBigGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setTooBigGroupAttendeeConflictData(array $tooBigGroupAttendeeConflictData)
- * @method ArrayOfAttendeeConflictDataType getGroupAttendeeConflictData()
+ * @method array getGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setGroupAttendeeConflictData(array $groupAttendeeConflictData)
  */
 class ArrayOfAttendeeConflictDataType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UnknownAttendeeConflictDataType[]
-     * $unknownAttendeeConflictData
+     * @var \jamesiarmes\PEWS\API\Type\UnknownAttendeeConflictDataType[]
      */
     protected $unknownAttendeeConflictData = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndividualAttendeeConflictDataType[]
-     * $individualAttendeeConflictData
+     * @var \jamesiarmes\PEWS\API\Type\IndividualAttendeeConflictDataType[]
      */
     protected $individualAttendeeConflictData = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TooBigGroupAttendeeConflictDataType[]
-     * $tooBigGroupAttendeeConflictData
+     * @var \jamesiarmes\PEWS\API\Type\TooBigGroupAttendeeConflictDataType[]
      */
     protected $tooBigGroupAttendeeConflictData = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\GroupAttendeeConflictDataType[]
-     * $groupAttendeeConflictData
+     * @var \jamesiarmes\PEWS\API\Type\GroupAttendeeConflictDataType[]
      */
     protected $groupAttendeeConflictData = null;
 }

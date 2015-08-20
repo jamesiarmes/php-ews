@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetInboxRulesRequestType
  *
- * @method GetInboxRulesRequestType getMailboxSmtpAddress()
+ * @method string getMailboxSmtpAddress()
  * @method GetInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
  */
 class GetInboxRulesRequestType extends BaseRequestType
 {
 
     /**
-     * @property string $mailboxSmtpAddress
+     * @var string
      */
     protected $mailboxSmtpAddress = null;
 }

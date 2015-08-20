@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SmartResponseType
  *
- * @method SmartResponseType getNewBodyContent()
+ * @method BodyType getNewBodyContent()
  * @method SmartResponseType setNewBodyContent(BodyType $newBodyContent)
  */
 class SmartResponseType extends SmartResponseBaseType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BodyType $newBodyContent
+     * @var \jamesiarmes\PEWS\API\Type\BodyType
      */
     protected $newBodyContent = null;
 }

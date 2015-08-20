@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: EmptyFolderType
  *
- * @method EmptyFolderType getDeleteType()
+ * @method string getDeleteType()
  * @method EmptyFolderType setDeleteType(string $deleteType)
- * @method EmptyFolderType getDeleteSubFolders()
+ * @method boolean getDeleteSubFolders()
  * @method EmptyFolderType setDeleteSubFolders(boolean $deleteSubFolders)
- * @method EmptyFolderType getFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method EmptyFolderType setFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class EmptyFolderType extends BaseRequestType
 {
 
     /**
-     * @property string $deleteType
+     * @var string
      */
     protected $deleteType = null;
 
     /**
-     * @property boolean $deleteSubFolders
+     * @var boolean
      */
     protected $deleteSubFolders = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
 }

@@ -8,104 +8,104 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MeetingRequestMessageType
  *
- * @method MeetingRequestMessageType getMeetingRequestType()
+ * @method string getMeetingRequestType()
  * @method MeetingRequestMessageType setMeetingRequestType(string $meetingRequestType)
- * @method MeetingRequestMessageType getIntendedFreeBusyStatus()
+ * @method string getIntendedFreeBusyStatus()
  * @method MeetingRequestMessageType setIntendedFreeBusyStatus(string $intendedFreeBusyStatus)
- * @method MeetingRequestMessageType getStart()
+ * @method \DateTime getStart()
  * @method MeetingRequestMessageType setStart(\DateTime $start)
- * @method MeetingRequestMessageType getEnd()
+ * @method \DateTime getEnd()
  * @method MeetingRequestMessageType setEnd(\DateTime $end)
- * @method MeetingRequestMessageType getOriginalStart()
+ * @method \DateTime getOriginalStart()
  * @method MeetingRequestMessageType setOriginalStart(\DateTime $originalStart)
- * @method MeetingRequestMessageType getIsAllDayEvent()
+ * @method boolean getIsAllDayEvent()
  * @method MeetingRequestMessageType setIsAllDayEvent(boolean $isAllDayEvent)
- * @method MeetingRequestMessageType getLegacyFreeBusyStatus()
+ * @method string getLegacyFreeBusyStatus()
  * @method MeetingRequestMessageType setLegacyFreeBusyStatus(string $legacyFreeBusyStatus)
- * @method MeetingRequestMessageType getLocation()
+ * @method string getLocation()
  * @method MeetingRequestMessageType setLocation(string $location)
- * @method MeetingRequestMessageType getWhen()
+ * @method string getWhen()
  * @method MeetingRequestMessageType setWhen(string $when)
- * @method MeetingRequestMessageType getIsMeeting()
+ * @method boolean getIsMeeting()
  * @method MeetingRequestMessageType setIsMeeting(boolean $isMeeting)
- * @method MeetingRequestMessageType getIsCancelled()
+ * @method boolean getIsCancelled()
  * @method MeetingRequestMessageType setIsCancelled(boolean $isCancelled)
- * @method MeetingRequestMessageType getIsRecurring()
+ * @method boolean getIsRecurring()
  * @method MeetingRequestMessageType setIsRecurring(boolean $isRecurring)
- * @method MeetingRequestMessageType getMeetingRequestWasSent()
+ * @method boolean getMeetingRequestWasSent()
  * @method MeetingRequestMessageType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
- * @method MeetingRequestMessageType getCalendarItemType()
+ * @method string getCalendarItemType()
  * @method MeetingRequestMessageType setCalendarItemType(string $calendarItemType)
- * @method MeetingRequestMessageType getMyResponseType()
+ * @method string getMyResponseType()
  * @method MeetingRequestMessageType setMyResponseType(string $myResponseType)
- * @method MeetingRequestMessageType getOrganizer()
+ * @method SingleRecipientType getOrganizer()
  * @method MeetingRequestMessageType setOrganizer(SingleRecipientType $organizer)
- * @method MeetingRequestMessageType getRequiredAttendees()
+ * @method array getRequiredAttendees()
  * @method MeetingRequestMessageType setRequiredAttendees(array $requiredAttendees)
- * @method MeetingRequestMessageType getOptionalAttendees()
+ * @method array getOptionalAttendees()
  * @method MeetingRequestMessageType setOptionalAttendees(array $optionalAttendees)
- * @method MeetingRequestMessageType getResources()
+ * @method array getResources()
  * @method MeetingRequestMessageType setResources(array $resources)
- * @method MeetingRequestMessageType getConflictingMeetingCount()
+ * @method integer getConflictingMeetingCount()
  * @method MeetingRequestMessageType setConflictingMeetingCount(integer $conflictingMeetingCount)
- * @method MeetingRequestMessageType getAdjacentMeetingCount()
+ * @method integer getAdjacentMeetingCount()
  * @method MeetingRequestMessageType setAdjacentMeetingCount(integer $adjacentMeetingCount)
- * @method MeetingRequestMessageType getConflictingMeetings()
+ * @method NonEmptyArrayOfAllItemsType getConflictingMeetings()
  * @method MeetingRequestMessageType setConflictingMeetings(NonEmptyArrayOfAllItemsType $conflictingMeetings)
- * @method MeetingRequestMessageType getAdjacentMeetings()
+ * @method NonEmptyArrayOfAllItemsType getAdjacentMeetings()
  * @method MeetingRequestMessageType setAdjacentMeetings(NonEmptyArrayOfAllItemsType $adjacentMeetings)
- * @method MeetingRequestMessageType getDuration()
+ * @method string getDuration()
  * @method MeetingRequestMessageType setDuration(string $duration)
- * @method MeetingRequestMessageType getTimeZone()
+ * @method string getTimeZone()
  * @method MeetingRequestMessageType setTimeZone(string $timeZone)
- * @method MeetingRequestMessageType getAppointmentReplyTime()
+ * @method \DateTime getAppointmentReplyTime()
  * @method MeetingRequestMessageType setAppointmentReplyTime(\DateTime $appointmentReplyTime)
- * @method MeetingRequestMessageType getAppointmentSequenceNumber()
+ * @method integer getAppointmentSequenceNumber()
  * @method MeetingRequestMessageType setAppointmentSequenceNumber(integer $appointmentSequenceNumber)
- * @method MeetingRequestMessageType getAppointmentState()
+ * @method integer getAppointmentState()
  * @method MeetingRequestMessageType setAppointmentState(integer $appointmentState)
- * @method MeetingRequestMessageType getRecurrence()
+ * @method RecurrenceType getRecurrence()
  * @method MeetingRequestMessageType setRecurrence(RecurrenceType $recurrence)
- * @method MeetingRequestMessageType getFirstOccurrence()
+ * @method OccurrenceInfoType getFirstOccurrence()
  * @method MeetingRequestMessageType setFirstOccurrence(OccurrenceInfoType $firstOccurrence)
- * @method MeetingRequestMessageType getLastOccurrence()
+ * @method OccurrenceInfoType getLastOccurrence()
  * @method MeetingRequestMessageType setLastOccurrence(OccurrenceInfoType $lastOccurrence)
- * @method MeetingRequestMessageType getModifiedOccurrences()
+ * @method array getModifiedOccurrences()
  * @method MeetingRequestMessageType setModifiedOccurrences(array $modifiedOccurrences)
- * @method MeetingRequestMessageType getDeletedOccurrences()
+ * @method array getDeletedOccurrences()
  * @method MeetingRequestMessageType setDeletedOccurrences(array $deletedOccurrences)
- * @method MeetingRequestMessageType getMeetingTimeZone()
+ * @method TimeZoneType getMeetingTimeZone()
  * @method MeetingRequestMessageType setMeetingTimeZone(TimeZoneType $meetingTimeZone)
- * @method MeetingRequestMessageType getStartTimeZone()
+ * @method TimeZoneDefinitionType getStartTimeZone()
  * @method MeetingRequestMessageType setStartTimeZone(TimeZoneDefinitionType $startTimeZone)
- * @method MeetingRequestMessageType getEndTimeZone()
+ * @method TimeZoneDefinitionType getEndTimeZone()
  * @method MeetingRequestMessageType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
- * @method MeetingRequestMessageType getConferenceType()
+ * @method integer getConferenceType()
  * @method MeetingRequestMessageType setConferenceType(integer $conferenceType)
- * @method MeetingRequestMessageType getAllowNewTimeProposal()
+ * @method boolean getAllowNewTimeProposal()
  * @method MeetingRequestMessageType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
- * @method MeetingRequestMessageType getIsOnlineMeeting()
+ * @method boolean getIsOnlineMeeting()
  * @method MeetingRequestMessageType setIsOnlineMeeting(boolean $isOnlineMeeting)
- * @method MeetingRequestMessageType getMeetingWorkspaceUrl()
+ * @method string getMeetingWorkspaceUrl()
  * @method MeetingRequestMessageType setMeetingWorkspaceUrl(string $meetingWorkspaceUrl)
- * @method MeetingRequestMessageType getNetShowUrl()
+ * @method string getNetShowUrl()
  * @method MeetingRequestMessageType setNetShowUrl(string $netShowUrl)
  */
 class MeetingRequestMessageType extends MeetingMessageType
 {
 
     /**
-     * @property string $meetingRequestType
+     * @var string
      */
     protected $meetingRequestType = null;
 
     /**
-     * @property string $intendedFreeBusyStatus
+     * @var string
      */
     protected $intendedFreeBusyStatus = null;
 
     /**
-     * @property \DateTime $start
+     * @var \DateTime
      */
     protected $start = null;
 
@@ -117,195 +117,192 @@ class MeetingRequestMessageType extends MeetingMessageType
     );
 
     /**
-     * @property \DateTime $end
+     * @var \DateTime
      */
     protected $end = null;
 
     /**
-     * @property \DateTime $originalStart
+     * @var \DateTime
      */
     protected $originalStart = null;
 
     /**
-     * @property boolean $isAllDayEvent
+     * @var boolean
      */
     protected $isAllDayEvent = null;
 
     /**
-     * @property string $legacyFreeBusyStatus
+     * @var string
      */
     protected $legacyFreeBusyStatus = null;
 
     /**
-     * @property string $location
+     * @var string
      */
     protected $location = null;
 
     /**
-     * @property string $when
+     * @var string
      */
     protected $when = null;
 
     /**
-     * @property boolean $isMeeting
+     * @var boolean
      */
     protected $isMeeting = null;
 
     /**
-     * @property boolean $isCancelled
+     * @var boolean
      */
     protected $isCancelled = null;
 
     /**
-     * @property boolean $isRecurring
+     * @var boolean
      */
     protected $isRecurring = null;
 
     /**
-     * @property boolean $meetingRequestWasSent
+     * @var boolean
      */
     protected $meetingRequestWasSent = null;
 
     /**
-     * @property string $calendarItemType
+     * @var string
      */
     protected $calendarItemType = null;
 
     /**
-     * @property string $myResponseType
+     * @var string
      */
     protected $myResponseType = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $organizer
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $organizer = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AttendeeType[] $requiredAttendees
+     * @var \jamesiarmes\PEWS\API\Type\AttendeeType[]
      */
     protected $requiredAttendees = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AttendeeType[] $optionalAttendees
+     * @var \jamesiarmes\PEWS\API\Type\AttendeeType[]
      */
     protected $optionalAttendees = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AttendeeType[] $resources
+     * @var \jamesiarmes\PEWS\API\Type\AttendeeType[]
      */
     protected $resources = null;
 
     /**
-     * @property integer $conflictingMeetingCount
+     * @var integer
      */
     protected $conflictingMeetingCount = null;
 
     /**
-     * @property integer $adjacentMeetingCount
+     * @var integer
      */
     protected $adjacentMeetingCount = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType
-     * $conflictingMeetings
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType
      */
     protected $conflictingMeetings = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType
-     * $adjacentMeetings
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAllItemsType
      */
     protected $adjacentMeetings = null;
 
     /**
-     * @property string $duration
+     * @var string
      */
     protected $duration = null;
 
     /**
-     * @property string $timeZone
+     * @var string
      */
     protected $timeZone = null;
 
     /**
-     * @property \DateTime $appointmentReplyTime
+     * @var \DateTime
      */
     protected $appointmentReplyTime = null;
 
     /**
-     * @property integer $appointmentSequenceNumber
+     * @var integer
      */
     protected $appointmentSequenceNumber = null;
 
     /**
-     * @property integer $appointmentState
+     * @var integer
      */
     protected $appointmentState = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RecurrenceType $recurrence
+     * @var \jamesiarmes\PEWS\API\Type\RecurrenceType
      */
     protected $recurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OccurrenceInfoType $firstOccurrence
+     * @var \jamesiarmes\PEWS\API\Type\OccurrenceInfoType
      */
     protected $firstOccurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OccurrenceInfoType $lastOccurrence
+     * @var \jamesiarmes\PEWS\API\Type\OccurrenceInfoType
      */
     protected $lastOccurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OccurrenceInfoType[] $modifiedOccurrences
+     * @var \jamesiarmes\PEWS\API\Type\OccurrenceInfoType[]
      */
     protected $modifiedOccurrences = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DeletedOccurrenceInfoType[]
-     * $deletedOccurrences
+     * @var \jamesiarmes\PEWS\API\Type\DeletedOccurrenceInfoType[]
      */
     protected $deletedOccurrences = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZoneType $meetingTimeZone
+     * @var \jamesiarmes\PEWS\API\Type\TimeZoneType
      */
     protected $meetingTimeZone = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType $startTimeZone
+     * @var \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType
      */
     protected $startTimeZone = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType $endTimeZone
+     * @var \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType
      */
     protected $endTimeZone = null;
 
     /**
-     * @property integer $conferenceType
+     * @var integer
      */
     protected $conferenceType = null;
 
     /**
-     * @property boolean $allowNewTimeProposal
+     * @var boolean
      */
     protected $allowNewTimeProposal = null;
 
     /**
-     * @property boolean $isOnlineMeeting
+     * @var boolean
      */
     protected $isOnlineMeeting = null;
 
     /**
-     * @property string $meetingWorkspaceUrl
+     * @var string
      */
     protected $meetingWorkspaceUrl = null;
 
     /**
-     * @property string $netShowUrl
+     * @var string
      */
     protected $netShowUrl = null;
 }

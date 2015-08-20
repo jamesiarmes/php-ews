@@ -8,22 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserConfigurationType
  *
- * @method GetUserConfigurationType getUserConfigurationName()
+ * @method \jamesiarmes\PEWS\API\Type\UserConfigurationNameType getUserConfigurationName()
  * @method GetUserConfigurationType setUserConfigurationName(\jamesiarmes\PEWS\API\Type\UserConfigurationNameType $userConfigurationName)
- * @method GetUserConfigurationType getUserConfigurationProperties()
+ * @method array getUserConfigurationProperties()
  * @method GetUserConfigurationType setUserConfigurationProperties(array $userConfigurationProperties)
  */
 class GetUserConfigurationType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationNameType
-     * $userConfigurationName
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationNameType
      */
     protected $userConfigurationName = null;
 
     /**
-     * @property string[] $userConfigurationProperties
+     * @var string[]
      */
     protected $userConfigurationProperties = null;
 }

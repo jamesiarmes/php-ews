@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FieldURIOrConstantType
  *
- * @method FieldURIOrConstantType getFieldURI()
+ * @method FieldURI getFieldURI()
  * @method FieldURIOrConstantType setFieldURI(FieldURI $fieldURI)
- * @method FieldURIOrConstantType getIndexedFieldURI()
+ * @method IndexedFieldURI getIndexedFieldURI()
  * @method FieldURIOrConstantType setIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
- * @method FieldURIOrConstantType getExtendedFieldURI()
+ * @method ExtendedFieldURI getExtendedFieldURI()
  * @method FieldURIOrConstantType setExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
- * @method FieldURIOrConstantType getConstant()
+ * @method ConstantValueType getConstant()
  * @method FieldURIOrConstantType setConstant(ConstantValueType $constant)
  */
 class FieldURIOrConstantType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConstantValueType $constant
+     * @var \jamesiarmes\PEWS\API\Type\ConstantValueType
      */
     protected $constant = null;
 }

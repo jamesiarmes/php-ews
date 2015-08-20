@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TransitionType
  *
- * @method TransitionType getTo()
+ * @method TransitionTargetType getTo()
  * @method TransitionType setTo(TransitionTargetType $to)
  */
 class TransitionType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TransitionTargetType $to
+     * @var \jamesiarmes\PEWS\API\Type\TransitionTargetType
      */
     protected $to = null;
 }

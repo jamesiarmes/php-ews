@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: GroupAttendeeConflictData
  *
- * @method GroupAttendeeConflictDataType getNumberOfMembers()
+ * @method integer getNumberOfMembers()
  * @method GroupAttendeeConflictDataType setNumberOfMembers(integer $numberOfMembers)
- * @method GroupAttendeeConflictDataType getNumberOfMembersAvailable()
+ * @method integer getNumberOfMembersAvailable()
  * @method GroupAttendeeConflictDataType setNumberOfMembersAvailable(integer $numberOfMembersAvailable)
- * @method GroupAttendeeConflictDataType getNumberOfMembersWithConflict()
+ * @method integer getNumberOfMembersWithConflict()
  * @method GroupAttendeeConflictDataType setNumberOfMembersWithConflict(integer $numberOfMembersWithConflict)
- * @method GroupAttendeeConflictDataType getNumberOfMembersWithNoData()
+ * @method integer getNumberOfMembersWithNoData()
  * @method GroupAttendeeConflictDataType setNumberOfMembersWithNoData(integer $numberOfMembersWithNoData)
  */
 class GroupAttendeeConflictDataType extends AttendeeConflictDataType
 {
 
     /**
-     * @property integer $numberOfMembers
+     * @var integer
      */
     protected $numberOfMembers = null;
 
     /**
-     * @property integer $numberOfMembersAvailable
+     * @var integer
      */
     protected $numberOfMembersAvailable = null;
 
     /**
-     * @property integer $numberOfMembersWithConflict
+     * @var integer
      */
     protected $numberOfMembersWithConflict = null;
 
     /**
-     * @property integer $numberOfMembersWithNoData
+     * @var integer
      */
     protected $numberOfMembersWithNoData = null;
 }

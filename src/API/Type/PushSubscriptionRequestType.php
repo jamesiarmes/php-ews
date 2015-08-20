@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PushSubscriptionRequestType
  *
- * @method PushSubscriptionRequestType getStatusFrequency()
+ * @method integer getStatusFrequency()
  * @method PushSubscriptionRequestType setStatusFrequency(integer $statusFrequency)
- * @method PushSubscriptionRequestType getURL()
+ * @method string getURL()
  * @method PushSubscriptionRequestType setURL(string $uRL)
  */
 class PushSubscriptionRequestType extends BaseSubscriptionRequestType
 {
 
     /**
-     * @property integer $statusFrequency
+     * @var integer
      */
     protected $statusFrequency = null;
 
     /**
-     * @property string $uRL
+     * @var string
      */
     protected $uRL = null;
 }

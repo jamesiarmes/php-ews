@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ExcludesType
  *
- * @method ExcludesType getFieldURI()
+ * @method array getFieldURI()
  * @method ExcludesType setFieldURI(array $fieldURI)
- * @method ExcludesType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method ExcludesType setIndexedFieldURI(array $indexedFieldURI)
- * @method ExcludesType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method ExcludesType setExtendedFieldURI(array $extendedFieldURI)
- * @method ExcludesType getBitmask()
+ * @method ExcludesValueType getBitmask()
  * @method ExcludesType setBitmask(ExcludesValueType $bitmask)
  */
 class ExcludesType extends SearchExpressionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExcludesValueType $bitmask
+     * @var \jamesiarmes\PEWS\API\Type\ExcludesValueType
      */
     protected $bitmask = null;
 }

@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SendNotificationResultType
  *
- * @method SendNotificationResultType getSubscriptionStatus()
+ * @method string getSubscriptionStatus()
  * @method SendNotificationResultType setSubscriptionStatus(string $subscriptionStatus)
  */
 class SendNotificationResultType extends Message
 {
 
     /**
-     * @property string $subscriptionStatus
+     * @var string
      */
     protected $subscriptionStatus = null;
 }

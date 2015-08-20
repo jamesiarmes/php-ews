@@ -7,14 +7,14 @@ use jamesiarmes\PEWS\API\Type;
 /**
  * Class representing RequestServerVersion
  *
- * @method RequestServerVersion getVersion()
+ * @method string getVersion()
  * @method RequestServerVersion setVersion(string $version)
  */
 class RequestServerVersion extends Type
 {
 
     /**
-     * @property string $version
+     * @var string
      */
     protected $version = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserOofSettingsRequest
  *
- * @method GetUserOofSettingsRequestType getMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\Mailbox getMailbox()
  * @method GetUserOofSettingsRequestType setMailbox(\jamesiarmes\PEWS\API\Type\Mailbox $mailbox)
  */
 class GetUserOofSettingsRequestType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Mailbox $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\Mailbox
      */
     protected $mailbox = null;
 }

@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: IndexedPageViewType
  *
- * @method IndexedPageViewType getOffset()
+ * @method integer getOffset()
  * @method IndexedPageViewType setOffset(integer $offset)
- * @method IndexedPageViewType getBasePoint()
+ * @method string getBasePoint()
  * @method IndexedPageViewType setBasePoint(string $basePoint)
  */
 class IndexedPageViewType extends BasePagingType
 {
 
     /**
-     * @property integer $offset
+     * @var integer
      */
     protected $offset = null;
 
     /**
-     * @property string $basePoint
+     * @var string
      */
     protected $basePoint = null;
 }

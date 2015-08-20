@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PhoneCallIdType
  *
- * @method PhoneCallIdType getId()
+ * @method string getId()
  * @method PhoneCallIdType setId(string $id)
  */
 class PhoneCallIdType extends Type
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 }

@@ -10,36 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderItemsChangesType
  *
- * @method SyncFolderItemsChangesType getCreate()
+ * @method array getCreate()
  * @method SyncFolderItemsChangesType setCreate(array $create)
- * @method SyncFolderItemsChangesType getUpdate()
+ * @method array getUpdate()
  * @method SyncFolderItemsChangesType setUpdate(array $update)
- * @method SyncFolderItemsChangesType getDelete()
+ * @method array getDelete()
  * @method SyncFolderItemsChangesType setDelete(array $delete)
- * @method SyncFolderItemsChangesType getReadFlagChange()
+ * @method array getReadFlagChange()
  * @method SyncFolderItemsChangesType setReadFlagChange(array $readFlagChange)
  */
 class SyncFolderItemsChangesType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsCreateOrUpdateType[] $create
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderItemsCreateOrUpdateType[]
      */
     protected $create = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsCreateOrUpdateType[] $update
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderItemsCreateOrUpdateType[]
      */
     protected $update = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsDeleteType[] $delete
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderItemsDeleteType[]
      */
     protected $delete = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsReadFlagType[]
-     * $readFlagChange
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderItemsReadFlagType[]
      */
     protected $readFlagChange = null;
 }

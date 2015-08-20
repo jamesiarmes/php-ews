@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SubscribeResponseMessageType
  *
- * @method SubscribeResponseMessageType getSubscriptionId()
+ * @method string getSubscriptionId()
  * @method SubscribeResponseMessageType setSubscriptionId(string $subscriptionId)
- * @method SubscribeResponseMessageType getWatermark()
+ * @method string getWatermark()
  * @method SubscribeResponseMessageType setWatermark(string $watermark)
  */
 class SubscribeResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property string $subscriptionId
+     * @var string
      */
     protected $subscriptionId = null;
 
     /**
-     * @property string $watermark
+     * @var string
      */
     protected $watermark = null;
 }

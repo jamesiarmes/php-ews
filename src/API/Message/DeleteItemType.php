@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: DeleteItemType
  *
- * @method DeleteItemType getDeleteType()
+ * @method string getDeleteType()
  * @method DeleteItemType setDeleteType(string $deleteType)
- * @method DeleteItemType getSendMeetingCancellations()
+ * @method string getSendMeetingCancellations()
  * @method DeleteItemType setSendMeetingCancellations(string $sendMeetingCancellations)
- * @method DeleteItemType getAffectedTaskOccurrences()
+ * @method string getAffectedTaskOccurrences()
  * @method DeleteItemType setAffectedTaskOccurrences(string $affectedTaskOccurrences)
- * @method DeleteItemType getItemIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method DeleteItemType setItemIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
  */
 class DeleteItemType extends BaseRequestType
 {
 
     /**
-     * @property string $deleteType
+     * @var string
      */
     protected $deleteType = null;
 
     /**
-     * @property string $sendMeetingCancellations
+     * @var string
      */
     protected $sendMeetingCancellations = null;
 
     /**
-     * @property string $affectedTaskOccurrences
+     * @var string
      */
     protected $affectedTaskOccurrences = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $itemIds = null;
 }

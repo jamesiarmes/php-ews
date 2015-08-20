@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FieldOrderType
  *
- * @method FieldOrderType getOrder()
+ * @method string getOrder()
  * @method FieldOrderType setOrder(string $order)
- * @method FieldOrderType getFieldURI()
+ * @method array getFieldURI()
  * @method FieldOrderType setFieldURI(array $fieldURI)
- * @method FieldOrderType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method FieldOrderType setIndexedFieldURI(array $indexedFieldURI)
- * @method FieldOrderType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method FieldOrderType setExtendedFieldURI(array $extendedFieldURI)
  */
 class FieldOrderType extends Type
 {
 
     /**
-     * @property string $order
+     * @var string
      */
     protected $order = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 }

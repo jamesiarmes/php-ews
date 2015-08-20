@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: DeleteAttachmentResponseMessageType
  *
- * @method DeleteAttachmentResponseMessageType getRootItemId()
+ * @method \jamesiarmes\PEWS\API\Type\RootItemIdType getRootItemId()
  * @method DeleteAttachmentResponseMessageType setRootItemId(\jamesiarmes\PEWS\API\Type\RootItemIdType $rootItemId)
  */
 class DeleteAttachmentResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RootItemIdType $rootItemId
+     * @var \jamesiarmes\PEWS\API\Type\RootItemIdType
      */
     protected $rootItemId = null;
 }

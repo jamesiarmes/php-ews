@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PathToIndexedFieldType
  *
- * @method PathToIndexedFieldType getFieldURI()
+ * @method string getFieldURI()
  * @method PathToIndexedFieldType setFieldURI(string $fieldURI)
- * @method PathToIndexedFieldType getFieldIndex()
+ * @method string getFieldIndex()
  * @method PathToIndexedFieldType setFieldIndex(string $fieldIndex)
  */
 class PathToIndexedFieldType extends BasePathToElementType
 {
 
     /**
-     * @property string $fieldURI
+     * @var string
      */
     protected $fieldURI = null;
 
     /**
-     * @property string $fieldIndex
+     * @var string
      */
     protected $fieldIndex = null;
 }

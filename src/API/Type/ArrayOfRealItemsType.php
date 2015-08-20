@@ -10,86 +10,84 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfRealItemsType
  *
- * @method ArrayOfRealItemsType getItem()
+ * @method array getItem()
  * @method ArrayOfRealItemsType setItem(array $item)
- * @method ArrayOfRealItemsType getMessage()
+ * @method array getMessage()
  * @method ArrayOfRealItemsType setMessage(array $message)
- * @method ArrayOfRealItemsType getCalendarItem()
+ * @method array getCalendarItem()
  * @method ArrayOfRealItemsType setCalendarItem(array $calendarItem)
- * @method ArrayOfRealItemsType getContact()
+ * @method array getContact()
  * @method ArrayOfRealItemsType setContact(array $contact)
- * @method ArrayOfRealItemsType getDistributionList()
+ * @method array getDistributionList()
  * @method ArrayOfRealItemsType setDistributionList(array $distributionList)
- * @method ArrayOfRealItemsType getMeetingMessage()
+ * @method array getMeetingMessage()
  * @method ArrayOfRealItemsType setMeetingMessage(array $meetingMessage)
- * @method ArrayOfRealItemsType getMeetingRequest()
+ * @method array getMeetingRequest()
  * @method ArrayOfRealItemsType setMeetingRequest(array $meetingRequest)
- * @method ArrayOfRealItemsType getMeetingResponse()
+ * @method array getMeetingResponse()
  * @method ArrayOfRealItemsType setMeetingResponse(array $meetingResponse)
- * @method ArrayOfRealItemsType getMeetingCancellation()
+ * @method array getMeetingCancellation()
  * @method ArrayOfRealItemsType setMeetingCancellation(array $meetingCancellation)
- * @method ArrayOfRealItemsType getTask()
+ * @method array getTask()
  * @method ArrayOfRealItemsType setTask(array $task)
- * @method ArrayOfRealItemsType getPostItem()
+ * @method array getPostItem()
  * @method ArrayOfRealItemsType setPostItem(array $postItem)
  */
 class ArrayOfRealItemsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemType[] $item
+     * @var \jamesiarmes\PEWS\API\Type\ItemType[]
      */
     protected $item = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageType[] $message
+     * @var \jamesiarmes\PEWS\API\Type\MessageType[]
      */
     protected $message = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarItemType[] $calendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CalendarItemType[]
      */
     protected $calendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType[] $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType[]
      */
     protected $contact = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistributionListType[] $distributionList
+     * @var \jamesiarmes\PEWS\API\Type\DistributionListType[]
      */
     protected $distributionList = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingMessageType[] $meetingMessage
+     * @var \jamesiarmes\PEWS\API\Type\MeetingMessageType[]
      */
     protected $meetingMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType[] $meetingRequest
+     * @var \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType[]
      */
     protected $meetingRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType[]
-     * $meetingResponse
+     * @var \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType[]
      */
     protected $meetingResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType[]
-     * $meetingCancellation
+     * @var \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType[]
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskType[] $task
+     * @var \jamesiarmes\PEWS\API\Type\TaskType[]
      */
     protected $task = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostItemType[] $postItem
+     * @var \jamesiarmes\PEWS\API\Type\PostItemType[]
      */
     protected $postItem = null;
 }

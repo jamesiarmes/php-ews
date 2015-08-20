@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: CreateManagedFolderRequestType
  *
- * @method CreateManagedFolderRequestType getFolderNames()
+ * @method array getFolderNames()
  * @method CreateManagedFolderRequestType setFolderNames(array $folderNames)
- * @method CreateManagedFolderRequestType getMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getMailbox()
  * @method CreateManagedFolderRequestType setMailbox(\jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox)
  */
 class CreateManagedFolderRequestType extends BaseRequestType
 {
 
     /**
-     * @property string[] $folderNames
+     * @var string[]
      */
     protected $folderNames = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 }

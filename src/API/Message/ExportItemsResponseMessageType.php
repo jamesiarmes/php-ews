@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ExportItemsResponseMessageType
  *
- * @method ExportItemsResponseMessageType getItemId()
+ * @method \jamesiarmes\PEWS\API\Type\ItemIdType getItemId()
  * @method ExportItemsResponseMessageType setItemId(\jamesiarmes\PEWS\API\Type\ItemIdType $itemId)
- * @method ExportItemsResponseMessageType getData()
+ * @method string getData()
  * @method ExportItemsResponseMessageType setData(string $data)
  */
 class ExportItemsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property string $data
+     * @var string
      */
     protected $data = null;
 }

@@ -10,41 +10,41 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MessageTrackingReportType
  *
- * @method MessageTrackingReportType getSender()
+ * @method EmailAddressType getSender()
  * @method MessageTrackingReportType setSender(EmailAddressType $sender)
- * @method MessageTrackingReportType getPurportedSender()
+ * @method EmailAddressType getPurportedSender()
  * @method MessageTrackingReportType setPurportedSender(EmailAddressType $purportedSender)
- * @method MessageTrackingReportType getSubject()
+ * @method string getSubject()
  * @method MessageTrackingReportType setSubject(string $subject)
- * @method MessageTrackingReportType getSubmitTime()
+ * @method \DateTime getSubmitTime()
  * @method MessageTrackingReportType setSubmitTime(\DateTime $submitTime)
- * @method MessageTrackingReportType getOriginalRecipients()
+ * @method array getOriginalRecipients()
  * @method MessageTrackingReportType setOriginalRecipients(array $originalRecipients)
- * @method MessageTrackingReportType getRecipientTrackingEvents()
+ * @method array getRecipientTrackingEvents()
  * @method MessageTrackingReportType setRecipientTrackingEvents(array $recipientTrackingEvents)
- * @method MessageTrackingReportType getProperties()
+ * @method array getProperties()
  * @method MessageTrackingReportType setProperties(array $properties)
  */
 class MessageTrackingReportType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $sender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $sender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $purportedSender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $purportedSender = null;
 
     /**
-     * @property string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @property \DateTime $submitTime
+     * @var \DateTime
      */
     protected $submitTime = null;
 
@@ -53,18 +53,17 @@ class MessageTrackingReportType extends Type
     );
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $originalRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $originalRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RecipientTrackingEventType[]
-     * $recipientTrackingEvents
+     * @var \jamesiarmes\PEWS\API\Type\RecipientTrackingEventType[]
      */
     protected $recipientTrackingEvents = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

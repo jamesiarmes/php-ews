@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ImAddressDictionaryEntryType
  *
- * @method ImAddressDictionaryEntryType getKey()
+ * @method string getKey()
  * @method ImAddressDictionaryEntryType setKey(string $key)
  */
 class ImAddressDictionaryEntryType extends Type
 {
 
     /**
-     * @property string $key
+     * @var string
      */
     protected $key = null;
 }

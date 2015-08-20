@@ -10,38 +10,37 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TimeChangeType
  *
- * @method TimeChangeType getTimeZoneName()
+ * @method string getTimeZoneName()
  * @method TimeChangeType setTimeZoneName(string $timeZoneName)
- * @method TimeChangeType getOffset()
+ * @method \DateInterval getOffset()
  * @method TimeChangeType setOffset(\DateInterval $offset)
- * @method TimeChangeType getRelativeYearlyRecurrence()
+ * @method RelativeYearlyRecurrencePatternType getRelativeYearlyRecurrence()
  * @method TimeChangeType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
- * @method TimeChangeType getAbsoluteDate()
+ * @method \DateTime getAbsoluteDate()
  * @method TimeChangeType setAbsoluteDate(\DateTime $absoluteDate)
- * @method TimeChangeType getTime()
+ * @method \DateTime getTime()
  * @method TimeChangeType setTime(\DateTime $time)
  */
 class TimeChangeType extends Type
 {
 
     /**
-     * @property string $timeZoneName
+     * @var string
      */
     protected $timeZoneName = null;
 
     /**
-     * @property \DateInterval $offset
+     * @var \DateInterval
      */
     protected $offset = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RelativeYearlyRecurrencePatternType
-     * $relativeYearlyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\RelativeYearlyRecurrencePatternType
      */
     protected $relativeYearlyRecurrence = null;
 
     /**
-     * @property \DateTime $absoluteDate
+     * @var \DateTime
      */
     protected $absoluteDate = null;
 
@@ -51,7 +50,7 @@ class TimeChangeType extends Type
     );
 
     /**
-     * @property \DateTime $time
+     * @var \DateTime
      */
     protected $time = null;
 }

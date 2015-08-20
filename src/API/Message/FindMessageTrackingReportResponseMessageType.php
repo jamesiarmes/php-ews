@@ -8,43 +8,42 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindMessageTrackingReportResponseMessageType
  *
- * @method FindMessageTrackingReportResponseMessageType getDiagnostics()
+ * @method array getDiagnostics()
  * @method FindMessageTrackingReportResponseMessageType setDiagnostics(array $diagnostics)
- * @method FindMessageTrackingReportResponseMessageType getMessageTrackingSearchResults()
+ * @method array getMessageTrackingSearchResults()
  * @method FindMessageTrackingReportResponseMessageType setMessageTrackingSearchResults(array $messageTrackingSearchResults)
- * @method FindMessageTrackingReportResponseMessageType getExecutedSearchScope()
+ * @method string getExecutedSearchScope()
  * @method FindMessageTrackingReportResponseMessageType setExecutedSearchScope(string $executedSearchScope)
- * @method FindMessageTrackingReportResponseMessageType getErrors()
+ * @method array getErrors()
  * @method FindMessageTrackingReportResponseMessageType setErrors(array $errors)
- * @method FindMessageTrackingReportResponseMessageType getProperties()
+ * @method array getProperties()
  * @method FindMessageTrackingReportResponseMessageType setProperties(array $properties)
  */
 class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property string[] $diagnostics
+     * @var string[]
      */
     protected $diagnostics = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FindMessageTrackingSearchResultType[]
-     * $messageTrackingSearchResults
+     * @var \jamesiarmes\PEWS\API\Type\FindMessageTrackingSearchResultType[]
      */
     protected $messageTrackingSearchResults = null;
 
     /**
-     * @property string $executedSearchScope
+     * @var string
      */
     protected $executedSearchScope = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType[] $errors
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType[]
      */
     protected $errors = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

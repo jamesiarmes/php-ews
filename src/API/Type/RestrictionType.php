@@ -10,92 +10,91 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RestrictionType
  *
- * @method RestrictionType getContains()
+ * @method array getContains()
  * @method RestrictionType setContains(array $contains)
- * @method RestrictionType getExcludes()
+ * @method array getExcludes()
  * @method RestrictionType setExcludes(array $excludes)
- * @method RestrictionType getExists()
+ * @method array getExists()
  * @method RestrictionType setExists(array $exists)
- * @method RestrictionType getIsEqualTo()
+ * @method array getIsEqualTo()
  * @method RestrictionType setIsEqualTo(array $isEqualTo)
- * @method RestrictionType getIsNotEqualTo()
+ * @method array getIsNotEqualTo()
  * @method RestrictionType setIsNotEqualTo(array $isNotEqualTo)
- * @method RestrictionType getIsGreaterThan()
+ * @method array getIsGreaterThan()
  * @method RestrictionType setIsGreaterThan(array $isGreaterThan)
- * @method RestrictionType getIsGreaterThanOrEqualTo()
+ * @method array getIsGreaterThanOrEqualTo()
  * @method RestrictionType setIsGreaterThanOrEqualTo(array $isGreaterThanOrEqualTo)
- * @method RestrictionType getIsLessThan()
+ * @method array getIsLessThan()
  * @method RestrictionType setIsLessThan(array $isLessThan)
- * @method RestrictionType getIsLessThanOrEqualTo()
+ * @method array getIsLessThanOrEqualTo()
  * @method RestrictionType setIsLessThanOrEqualTo(array $isLessThanOrEqualTo)
- * @method RestrictionType getAnd()
+ * @method array getAnd()
  * @method RestrictionType setAnd(array $and)
- * @method RestrictionType getNot()
+ * @method array getNot()
  * @method RestrictionType setNot(array $not)
- * @method RestrictionType getOr()
+ * @method array getOr()
  * @method RestrictionType setOr(array $or)
  */
 class RestrictionType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Contains[] $contains
+     * @var \jamesiarmes\PEWS\API\Type\Contains[]
      */
     protected $contains = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Excludes[] $excludes
+     * @var \jamesiarmes\PEWS\API\Type\Excludes[]
      */
     protected $excludes = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Exists[] $exists
+     * @var \jamesiarmes\PEWS\API\Type\Exists[]
      */
     protected $exists = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsEqualTo[] $isEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsEqualTo[]
      */
     protected $isEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsNotEqualTo[] $isNotEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsNotEqualTo[]
      */
     protected $isNotEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsGreaterThan[] $isGreaterThan
+     * @var \jamesiarmes\PEWS\API\Type\IsGreaterThan[]
      */
     protected $isGreaterThan = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsGreaterThanOrEqualTo[]
-     * $isGreaterThanOrEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsGreaterThanOrEqualTo[]
      */
     protected $isGreaterThanOrEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsLessThan[] $isLessThan
+     * @var \jamesiarmes\PEWS\API\Type\IsLessThan[]
      */
     protected $isLessThan = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsLessThanOrEqualTo[] $isLessThanOrEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsLessThanOrEqualTo[]
      */
     protected $isLessThanOrEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AndElement[] $and
+     * @var \jamesiarmes\PEWS\API\Type\AndElement[]
      */
     protected $and = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Not[] $not
+     * @var \jamesiarmes\PEWS\API\Type\Not[]
      */
     protected $not = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OrElement[] $or
+     * @var \jamesiarmes\PEWS\API\Type\OrElement[]
      */
     protected $or = null;
 }

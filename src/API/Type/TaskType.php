@@ -8,61 +8,61 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TaskType
  *
- * @method TaskType getActualWork()
+ * @method integer getActualWork()
  * @method TaskType setActualWork(integer $actualWork)
- * @method TaskType getAssignedTime()
+ * @method \DateTime getAssignedTime()
  * @method TaskType setAssignedTime(\DateTime $assignedTime)
- * @method TaskType getBillingInformation()
+ * @method string getBillingInformation()
  * @method TaskType setBillingInformation(string $billingInformation)
- * @method TaskType getChangeCount()
+ * @method integer getChangeCount()
  * @method TaskType setChangeCount(integer $changeCount)
- * @method TaskType getCompanies()
+ * @method array getCompanies()
  * @method TaskType setCompanies(array $companies)
- * @method TaskType getCompleteDate()
+ * @method \DateTime getCompleteDate()
  * @method TaskType setCompleteDate(\DateTime $completeDate)
- * @method TaskType getContacts()
+ * @method array getContacts()
  * @method TaskType setContacts(array $contacts)
- * @method TaskType getDelegationState()
+ * @method string getDelegationState()
  * @method TaskType setDelegationState(string $delegationState)
- * @method TaskType getDelegator()
+ * @method string getDelegator()
  * @method TaskType setDelegator(string $delegator)
- * @method TaskType getDueDate()
+ * @method \DateTime getDueDate()
  * @method TaskType setDueDate(\DateTime $dueDate)
- * @method TaskType getIsAssignmentEditable()
+ * @method integer getIsAssignmentEditable()
  * @method TaskType setIsAssignmentEditable(integer $isAssignmentEditable)
- * @method TaskType getIsComplete()
+ * @method boolean getIsComplete()
  * @method TaskType setIsComplete(boolean $isComplete)
- * @method TaskType getIsRecurring()
+ * @method boolean getIsRecurring()
  * @method TaskType setIsRecurring(boolean $isRecurring)
- * @method TaskType getIsTeamTask()
+ * @method boolean getIsTeamTask()
  * @method TaskType setIsTeamTask(boolean $isTeamTask)
- * @method TaskType getMileage()
+ * @method string getMileage()
  * @method TaskType setMileage(string $mileage)
- * @method TaskType getOwner()
+ * @method string getOwner()
  * @method TaskType setOwner(string $owner)
- * @method TaskType getPercentComplete()
+ * @method float getPercentComplete()
  * @method TaskType setPercentComplete(float $percentComplete)
- * @method TaskType getRecurrence()
+ * @method TaskRecurrenceType getRecurrence()
  * @method TaskType setRecurrence(TaskRecurrenceType $recurrence)
- * @method TaskType getStartDate()
+ * @method \DateTime getStartDate()
  * @method TaskType setStartDate(\DateTime $startDate)
- * @method TaskType getStatus()
+ * @method string getStatus()
  * @method TaskType setStatus(string $status)
- * @method TaskType getStatusDescription()
+ * @method string getStatusDescription()
  * @method TaskType setStatusDescription(string $statusDescription)
- * @method TaskType getTotalWork()
+ * @method integer getTotalWork()
  * @method TaskType setTotalWork(integer $totalWork)
  */
 class TaskType extends ItemType
 {
 
     /**
-     * @property integer $actualWork
+     * @var integer
      */
     protected $actualWork = null;
 
     /**
-     * @property \DateTime $assignedTime
+     * @var \DateTime
      */
     protected $assignedTime = null;
 
@@ -74,102 +74,102 @@ class TaskType extends ItemType
     );
 
     /**
-     * @property string $billingInformation
+     * @var string
      */
     protected $billingInformation = null;
 
     /**
-     * @property integer $changeCount
+     * @var integer
      */
     protected $changeCount = null;
 
     /**
-     * @property string[] $companies
+     * @var string[]
      */
     protected $companies = null;
 
     /**
-     * @property \DateTime $completeDate
+     * @var \DateTime
      */
     protected $completeDate = null;
 
     /**
-     * @property string[] $contacts
+     * @var string[]
      */
     protected $contacts = null;
 
     /**
-     * @property string $delegationState
+     * @var string
      */
     protected $delegationState = null;
 
     /**
-     * @property string $delegator
+     * @var string
      */
     protected $delegator = null;
 
     /**
-     * @property \DateTime $dueDate
+     * @var \DateTime
      */
     protected $dueDate = null;
 
     /**
-     * @property integer $isAssignmentEditable
+     * @var integer
      */
     protected $isAssignmentEditable = null;
 
     /**
-     * @property boolean $isComplete
+     * @var boolean
      */
     protected $isComplete = null;
 
     /**
-     * @property boolean $isRecurring
+     * @var boolean
      */
     protected $isRecurring = null;
 
     /**
-     * @property boolean $isTeamTask
+     * @var boolean
      */
     protected $isTeamTask = null;
 
     /**
-     * @property string $mileage
+     * @var string
      */
     protected $mileage = null;
 
     /**
-     * @property string $owner
+     * @var string
      */
     protected $owner = null;
 
     /**
-     * @property float $percentComplete
+     * @var float
      */
     protected $percentComplete = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskRecurrenceType $recurrence
+     * @var \jamesiarmes\PEWS\API\Type\TaskRecurrenceType
      */
     protected $recurrence = null;
 
     /**
-     * @property \DateTime $startDate
+     * @var \DateTime
      */
     protected $startDate = null;
 
     /**
-     * @property string $status
+     * @var string
      */
     protected $status = null;
 
     /**
-     * @property string $statusDescription
+     * @var string
      */
     protected $statusDescription = null;
 
     /**
-     * @property integer $totalWork
+     * @var integer
      */
     protected $totalWork = null;
 }

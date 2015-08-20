@@ -12,49 +12,49 @@ namespace jamesiarmes\PEWS\API\Type;
  *  2. PropertyTag
  * XSD Type: PathToExtendedFieldType
  *
- * @method PathToExtendedFieldType getDistinguishedPropertySetId()
+ * @method string getDistinguishedPropertySetId()
  * @method PathToExtendedFieldType setDistinguishedPropertySetId(string $distinguishedPropertySetId)
- * @method PathToExtendedFieldType getPropertySetId()
+ * @method string getPropertySetId()
  * @method PathToExtendedFieldType setPropertySetId(string $propertySetId)
- * @method PathToExtendedFieldType getPropertyTag()
+ * @method integer getPropertyTag()
  * @method PathToExtendedFieldType setPropertyTag(integer $propertyTag)
- * @method PathToExtendedFieldType getPropertyName()
+ * @method string getPropertyName()
  * @method PathToExtendedFieldType setPropertyName(string $propertyName)
- * @method PathToExtendedFieldType getPropertyId()
+ * @method integer getPropertyId()
  * @method PathToExtendedFieldType setPropertyId(integer $propertyId)
- * @method PathToExtendedFieldType getPropertyType()
+ * @method string getPropertyType()
  * @method PathToExtendedFieldType setPropertyType(string $propertyType)
  */
 class PathToExtendedFieldType extends BasePathToElementType
 {
 
     /**
-     * @property string $distinguishedPropertySetId
+     * @var string
      */
     protected $distinguishedPropertySetId = null;
 
     /**
-     * @property string $propertySetId
+     * @var string
      */
     protected $propertySetId = null;
 
     /**
-     * @property integer $propertyTag
+     * @var integer
      */
     protected $propertyTag = null;
 
     /**
-     * @property string $propertyName
+     * @var string
      */
     protected $propertyName = null;
 
     /**
-     * @property integer $propertyId
+     * @var integer
      */
     protected $propertyId = null;
 
     /**
-     * @property string $propertyType
+     * @var string
      */
     protected $propertyType = null;
 }

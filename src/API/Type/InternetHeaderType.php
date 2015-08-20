@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: InternetHeaderType
  *
- * @method InternetHeaderType getHeaderName()
+ * @method string getHeaderName()
  * @method InternetHeaderType setHeaderName(string $headerName)
  */
 class InternetHeaderType extends Type
 {
 
     /**
-     * @property string $headerName
+     * @var string
      */
     protected $headerName = null;
 }

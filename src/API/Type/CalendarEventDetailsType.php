@@ -10,63 +10,63 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CalendarEventDetails
  *
- * @method CalendarEventDetailsType getID()
+ * @method string getID()
  * @method CalendarEventDetailsType setID(string $iD)
- * @method CalendarEventDetailsType getSubject()
+ * @method string getSubject()
  * @method CalendarEventDetailsType setSubject(string $subject)
- * @method CalendarEventDetailsType getLocation()
+ * @method string getLocation()
  * @method CalendarEventDetailsType setLocation(string $location)
- * @method CalendarEventDetailsType getIsMeeting()
+ * @method boolean getIsMeeting()
  * @method CalendarEventDetailsType setIsMeeting(boolean $isMeeting)
- * @method CalendarEventDetailsType getIsRecurring()
+ * @method boolean getIsRecurring()
  * @method CalendarEventDetailsType setIsRecurring(boolean $isRecurring)
- * @method CalendarEventDetailsType getIsException()
+ * @method boolean getIsException()
  * @method CalendarEventDetailsType setIsException(boolean $isException)
- * @method CalendarEventDetailsType getIsReminderSet()
+ * @method boolean getIsReminderSet()
  * @method CalendarEventDetailsType setIsReminderSet(boolean $isReminderSet)
- * @method CalendarEventDetailsType getIsPrivate()
+ * @method boolean getIsPrivate()
  * @method CalendarEventDetailsType setIsPrivate(boolean $isPrivate)
  */
 class CalendarEventDetailsType extends Type
 {
 
     /**
-     * @property string $iD
+     * @var string
      */
     protected $iD = null;
 
     /**
-     * @property string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @property string $location
+     * @var string
      */
     protected $location = null;
 
     /**
-     * @property boolean $isMeeting
+     * @var boolean
      */
     protected $isMeeting = null;
 
     /**
-     * @property boolean $isRecurring
+     * @var boolean
      */
     protected $isRecurring = null;
 
     /**
-     * @property boolean $isException
+     * @var boolean
      */
     protected $isException = null;
 
     /**
-     * @property boolean $isReminderSet
+     * @var boolean
      */
     protected $isReminderSet = null;
 
     /**
-     * @property boolean $isPrivate
+     * @var boolean
      */
     protected $isPrivate = null;
 }

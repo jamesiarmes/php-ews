@@ -10,20 +10,20 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: Suggestion
  *
- * @method SuggestionType getMeetingTime()
+ * @method \DateTime getMeetingTime()
  * @method SuggestionType setMeetingTime(\DateTime $meetingTime)
- * @method SuggestionType getIsWorkTime()
+ * @method boolean getIsWorkTime()
  * @method SuggestionType setIsWorkTime(boolean $isWorkTime)
- * @method SuggestionType getSuggestionQuality()
+ * @method string getSuggestionQuality()
  * @method SuggestionType setSuggestionQuality(string $suggestionQuality)
- * @method SuggestionType getAttendeeConflictDataArray()
+ * @method ArrayOfAttendeeConflictDataType getAttendeeConflictDataArray()
  * @method SuggestionType setAttendeeConflictDataArray(ArrayOfAttendeeConflictDataType $attendeeConflictDataArray)
  */
 class SuggestionType extends Type
 {
 
     /**
-     * @property \DateTime $meetingTime
+     * @var \DateTime
      */
     protected $meetingTime = null;
 
@@ -32,18 +32,17 @@ class SuggestionType extends Type
     );
 
     /**
-     * @property boolean $isWorkTime
+     * @var boolean
      */
     protected $isWorkTime = null;
 
     /**
-     * @property string $suggestionQuality
+     * @var string
      */
     protected $suggestionQuality = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfAttendeeConflictDataType
-     * $attendeeConflictDataArray
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfAttendeeConflictDataType
      */
     protected $attendeeConflictDataArray = null;
 }

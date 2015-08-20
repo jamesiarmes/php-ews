@@ -8,68 +8,68 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindMessageTrackingReportRequestType
  *
- * @method FindMessageTrackingReportRequestType getScope()
+ * @method string getScope()
  * @method FindMessageTrackingReportRequestType setScope(string $scope)
- * @method FindMessageTrackingReportRequestType getDomain()
+ * @method string getDomain()
  * @method FindMessageTrackingReportRequestType setDomain(string $domain)
- * @method FindMessageTrackingReportRequestType getSender()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getSender()
  * @method FindMessageTrackingReportRequestType setSender(\jamesiarmes\PEWS\API\Type\EmailAddressType $sender)
- * @method FindMessageTrackingReportRequestType getPurportedSender()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getPurportedSender()
  * @method FindMessageTrackingReportRequestType setPurportedSender(\jamesiarmes\PEWS\API\Type\EmailAddressType $purportedSender)
- * @method FindMessageTrackingReportRequestType getRecipient()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getRecipient()
  * @method FindMessageTrackingReportRequestType setRecipient(\jamesiarmes\PEWS\API\Type\EmailAddressType $recipient)
- * @method FindMessageTrackingReportRequestType getSubject()
+ * @method string getSubject()
  * @method FindMessageTrackingReportRequestType setSubject(string $subject)
- * @method FindMessageTrackingReportRequestType getStartDateTime()
+ * @method \DateTime getStartDateTime()
  * @method FindMessageTrackingReportRequestType setStartDateTime(\DateTime $startDateTime)
- * @method FindMessageTrackingReportRequestType getEndDateTime()
+ * @method \DateTime getEndDateTime()
  * @method FindMessageTrackingReportRequestType setEndDateTime(\DateTime $endDateTime)
- * @method FindMessageTrackingReportRequestType getMessageId()
+ * @method string getMessageId()
  * @method FindMessageTrackingReportRequestType setMessageId(string $messageId)
- * @method FindMessageTrackingReportRequestType getFederatedDeliveryMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getFederatedDeliveryMailbox()
  * @method FindMessageTrackingReportRequestType setFederatedDeliveryMailbox(\jamesiarmes\PEWS\API\Type\EmailAddressType $federatedDeliveryMailbox)
- * @method FindMessageTrackingReportRequestType getDiagnosticsLevel()
+ * @method string getDiagnosticsLevel()
  * @method FindMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
- * @method FindMessageTrackingReportRequestType getServerHint()
+ * @method string getServerHint()
  * @method FindMessageTrackingReportRequestType setServerHint(string $serverHint)
- * @method FindMessageTrackingReportRequestType getProperties()
+ * @method array getProperties()
  * @method FindMessageTrackingReportRequestType setProperties(array $properties)
  */
 class FindMessageTrackingReportRequestType extends BaseRequestType
 {
 
     /**
-     * @property string $scope
+     * @var string
      */
     protected $scope = null;
 
     /**
-     * @property string $domain
+     * @var string
      */
     protected $domain = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $sender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $sender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $purportedSender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $purportedSender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $recipient
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $recipient = null;
 
     /**
-     * @property string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @property \DateTime $startDateTime
+     * @var \DateTime
      */
     protected $startDateTime = null;
 
@@ -79,32 +79,32 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
     );
 
     /**
-     * @property \DateTime $endDateTime
+     * @var \DateTime
      */
     protected $endDateTime = null;
 
     /**
-     * @property string $messageId
+     * @var string
      */
     protected $messageId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $federatedDeliveryMailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $federatedDeliveryMailbox = null;
 
     /**
-     * @property string $diagnosticsLevel
+     * @var string
      */
     protected $diagnosticsLevel = null;
 
     /**
-     * @property string $serverHint
+     * @var string
      */
     protected $serverHint = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

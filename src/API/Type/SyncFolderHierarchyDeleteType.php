@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderHierarchyDeleteType
  *
- * @method SyncFolderHierarchyDeleteType getFolderId()
+ * @method FolderIdType getFolderId()
  * @method SyncFolderHierarchyDeleteType setFolderId(FolderIdType $folderId)
  */
 class SyncFolderHierarchyDeleteType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $folderId = null;
 }

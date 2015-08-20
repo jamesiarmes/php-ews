@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: StreamingSubscriptionRequestType
  *
- * @method StreamingSubscriptionRequestType getSubscribeToAllFolders()
+ * @method boolean getSubscribeToAllFolders()
  * @method StreamingSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
- * @method StreamingSubscriptionRequestType getFolderIds()
+ * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method StreamingSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
- * @method StreamingSubscriptionRequestType getEventTypes()
+ * @method array getEventTypes()
  * @method StreamingSubscriptionRequestType setEventTypes(array $eventTypes)
  */
 class StreamingSubscriptionRequestType extends Type
 {
 
     /**
-     * @property boolean $subscribeToAllFolders
+     * @var boolean
      */
     protected $subscribeToAllFolders = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
 
     /**
-     * @property string[] $eventTypes
+     * @var string[]
      */
     protected $eventTypes = null;
 }

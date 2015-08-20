@@ -8,85 +8,84 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SetItemFieldType
  *
- * @method SetItemFieldType getItem()
+ * @method ItemType getItem()
  * @method SetItemFieldType setItem(ItemType $item)
- * @method SetItemFieldType getMessage()
+ * @method MessageType getMessage()
  * @method SetItemFieldType setMessage(MessageType $message)
- * @method SetItemFieldType getCalendarItem()
+ * @method CalendarItemType getCalendarItem()
  * @method SetItemFieldType setCalendarItem(CalendarItemType $calendarItem)
- * @method SetItemFieldType getContact()
+ * @method ContactItemType getContact()
  * @method SetItemFieldType setContact(ContactItemType $contact)
- * @method SetItemFieldType getDistributionList()
+ * @method DistributionListType getDistributionList()
  * @method SetItemFieldType setDistributionList(DistributionListType $distributionList)
- * @method SetItemFieldType getMeetingMessage()
+ * @method MeetingMessageType getMeetingMessage()
  * @method SetItemFieldType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method SetItemFieldType getMeetingRequest()
+ * @method MeetingRequestMessageType getMeetingRequest()
  * @method SetItemFieldType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method SetItemFieldType getMeetingResponse()
+ * @method MeetingResponseMessageType getMeetingResponse()
  * @method SetItemFieldType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method SetItemFieldType getMeetingCancellation()
+ * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method SetItemFieldType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method SetItemFieldType getTask()
+ * @method TaskType getTask()
  * @method SetItemFieldType setTask(TaskType $task)
- * @method SetItemFieldType getPostItem()
+ * @method PostItemType getPostItem()
  * @method SetItemFieldType setPostItem(PostItemType $postItem)
  */
 class SetItemFieldType extends ItemChangeDescriptionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemType $item
+     * @var \jamesiarmes\PEWS\API\Type\ItemType
      */
     protected $item = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageType $message
+     * @var \jamesiarmes\PEWS\API\Type\MessageType
      */
     protected $message = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarItemType $calendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CalendarItemType
      */
     protected $calendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactItemType $contact
+     * @var \jamesiarmes\PEWS\API\Type\ContactItemType
      */
     protected $contact = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistributionListType $distributionList
+     * @var \jamesiarmes\PEWS\API\Type\DistributionListType
      */
     protected $distributionList = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingMessageType $meetingMessage
+     * @var \jamesiarmes\PEWS\API\Type\MeetingMessageType
      */
     protected $meetingMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType $meetingRequest
+     * @var \jamesiarmes\PEWS\API\Type\MeetingRequestMessageType
      */
     protected $meetingRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType $meetingResponse
+     * @var \jamesiarmes\PEWS\API\Type\MeetingResponseMessageType
      */
     protected $meetingResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
-     * $meetingCancellation
+     * @var \jamesiarmes\PEWS\API\Type\MeetingCancellationMessageType
      */
     protected $meetingCancellation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TaskType $task
+     * @var \jamesiarmes\PEWS\API\Type\TaskType
      */
     protected $task = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostItemType $postItem
+     * @var \jamesiarmes\PEWS\API\Type\PostItemType
      */
     protected $postItem = null;
 }

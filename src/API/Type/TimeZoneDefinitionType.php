@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TimeZoneDefinitionType
  *
- * @method TimeZoneDefinitionType getId()
+ * @method string getId()
  * @method TimeZoneDefinitionType setId(string $id)
- * @method TimeZoneDefinitionType getName()
+ * @method string getName()
  * @method TimeZoneDefinitionType setName(string $name)
- * @method TimeZoneDefinitionType getPeriods()
+ * @method array getPeriods()
  * @method TimeZoneDefinitionType setPeriods(array $periods)
- * @method TimeZoneDefinitionType getTransitionsGroups()
+ * @method array getTransitionsGroups()
  * @method TimeZoneDefinitionType setTransitionsGroups(array $transitionsGroups)
- * @method TimeZoneDefinitionType getTransitions()
+ * @method ArrayOfTransitionsType getTransitions()
  * @method TimeZoneDefinitionType setTransitions(ArrayOfTransitionsType $transitions)
  */
 class TimeZoneDefinitionType extends Type
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PeriodType[] $periods
+     * @var \jamesiarmes\PEWS\API\Type\PeriodType[]
      */
     protected $periods = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfTransitionsType[] $transitionsGroups
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfTransitionsType[]
      */
     protected $transitionsGroups = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfTransitionsType $transitions
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfTransitionsType
      */
     protected $transitions = null;
 }

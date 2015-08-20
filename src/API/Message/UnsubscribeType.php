@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UnsubscribeType
  *
- * @method UnsubscribeType getSubscriptionId()
+ * @method string getSubscriptionId()
  * @method UnsubscribeType setSubscriptionId(string $subscriptionId)
  */
 class UnsubscribeType extends BaseRequestType
 {
 
     /**
-     * @property string $subscriptionId
+     * @var string
      */
     protected $subscriptionId = null;
 }

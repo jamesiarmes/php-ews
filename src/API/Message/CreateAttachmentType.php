@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: CreateAttachmentType
  *
- * @method CreateAttachmentType getParentItemId()
+ * @method \jamesiarmes\PEWS\API\Type\ItemIdType getParentItemId()
  * @method CreateAttachmentType setParentItemId(\jamesiarmes\PEWS\API\Type\ItemIdType $parentItemId)
- * @method CreateAttachmentType getAttachments()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType getAttachments()
  * @method CreateAttachmentType setAttachments(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType $attachments)
  */
 class CreateAttachmentType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $parentItemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $parentItemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType $attachments
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType
      */
     protected $attachments = null;
 }

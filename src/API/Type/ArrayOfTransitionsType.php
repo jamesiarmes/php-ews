@@ -10,45 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfTransitionsType
  *
- * @method ArrayOfTransitionsType getId()
+ * @method string getId()
  * @method ArrayOfTransitionsType setId(string $id)
- * @method ArrayOfTransitionsType getAbsoluteDateTransition()
+ * @method array getAbsoluteDateTransition()
  * @method ArrayOfTransitionsType setAbsoluteDateTransition(array $absoluteDateTransition)
- * @method ArrayOfTransitionsType getRecurringDayTransition()
+ * @method array getRecurringDayTransition()
  * @method ArrayOfTransitionsType setRecurringDayTransition(array $recurringDayTransition)
- * @method ArrayOfTransitionsType getRecurringDateTransition()
+ * @method array getRecurringDateTransition()
  * @method ArrayOfTransitionsType setRecurringDateTransition(array $recurringDateTransition)
- * @method ArrayOfTransitionsType getTransition()
+ * @method array getTransition()
  * @method ArrayOfTransitionsType setTransition(array $transition)
  */
 class ArrayOfTransitionsType extends Type
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AbsoluteDateTransition[]
-     * $absoluteDateTransition
+     * @var \jamesiarmes\PEWS\API\Type\AbsoluteDateTransition[]
      */
     protected $absoluteDateTransition = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RecurringDayTransition[]
-     * $recurringDayTransition
+     * @var \jamesiarmes\PEWS\API\Type\RecurringDayTransition[]
      */
     protected $recurringDayTransition = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RecurringDateTransition[]
-     * $recurringDateTransition
+     * @var \jamesiarmes\PEWS\API\Type\RecurringDateTransition[]
      */
     protected $recurringDateTransition = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Transition[] $transition
+     * @var \jamesiarmes\PEWS\API\Type\Transition[]
      */
     protected $transition = null;
 }

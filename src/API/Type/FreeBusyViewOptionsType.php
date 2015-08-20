@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FreeBusyViewOptionsType
  *
- * @method FreeBusyViewOptionsType getTimeWindow()
+ * @method DurationType getTimeWindow()
  * @method FreeBusyViewOptionsType setTimeWindow(DurationType $timeWindow)
- * @method FreeBusyViewOptionsType getMergedFreeBusyIntervalInMinutes()
+ * @method integer getMergedFreeBusyIntervalInMinutes()
  * @method FreeBusyViewOptionsType setMergedFreeBusyIntervalInMinutes(integer $mergedFreeBusyIntervalInMinutes)
- * @method FreeBusyViewOptionsType getRequestedView()
+ * @method array getRequestedView()
  * @method FreeBusyViewOptionsType setRequestedView(array $requestedView)
  */
 class FreeBusyViewOptionsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DurationType $timeWindow
+     * @var \jamesiarmes\PEWS\API\Type\DurationType
      */
     protected $timeWindow = null;
 
     /**
-     * @property integer $mergedFreeBusyIntervalInMinutes
+     * @var integer
      */
     protected $mergedFreeBusyIntervalInMinutes = null;
 
     /**
-     * @property string[] $requestedView
+     * @var string[]
      */
     protected $requestedView = null;
 }

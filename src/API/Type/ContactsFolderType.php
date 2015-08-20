@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ContactsFolderType
  *
- * @method ContactsFolderType getSharingEffectiveRights()
+ * @method string getSharingEffectiveRights()
  * @method ContactsFolderType setSharingEffectiveRights(string $sharingEffectiveRights)
- * @method ContactsFolderType getPermissionSet()
+ * @method PermissionSetType getPermissionSet()
  * @method ContactsFolderType setPermissionSet(PermissionSetType $permissionSet)
  */
 class ContactsFolderType extends BaseFolderType
 {
 
     /**
-     * @property string $sharingEffectiveRights
+     * @var string
      */
     protected $sharingEffectiveRights = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PermissionSetType $permissionSet
+     * @var \jamesiarmes\PEWS\API\Type\PermissionSetType
      */
     protected $permissionSet = null;
 }

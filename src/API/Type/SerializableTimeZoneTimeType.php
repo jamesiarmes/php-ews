@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SerializableTimeZoneTime
  *
- * @method SerializableTimeZoneTimeType getBias()
+ * @method integer getBias()
  * @method SerializableTimeZoneTimeType setBias(integer $bias)
- * @method SerializableTimeZoneTimeType getTime()
+ * @method string getTime()
  * @method SerializableTimeZoneTimeType setTime(string $time)
- * @method SerializableTimeZoneTimeType getDayOrder()
+ * @method integer getDayOrder()
  * @method SerializableTimeZoneTimeType setDayOrder(integer $dayOrder)
- * @method SerializableTimeZoneTimeType getMonth()
+ * @method integer getMonth()
  * @method SerializableTimeZoneTimeType setMonth(integer $month)
- * @method SerializableTimeZoneTimeType getDayOfWeek()
+ * @method string getDayOfWeek()
  * @method SerializableTimeZoneTimeType setDayOfWeek(string $dayOfWeek)
- * @method SerializableTimeZoneTimeType getYear()
+ * @method string getYear()
  * @method SerializableTimeZoneTimeType setYear(string $year)
  */
 class SerializableTimeZoneTimeType extends Type
 {
 
     /**
-     * @property integer $bias
+     * @var integer
      */
     protected $bias = null;
 
     /**
-     * @property string $time
+     * @var string
      */
     protected $time = null;
 
     /**
-     * @property integer $dayOrder
+     * @var integer
      */
     protected $dayOrder = null;
 
     /**
-     * @property integer $month
+     * @var integer
      */
     protected $month = null;
 
     /**
-     * @property string $dayOfWeek
+     * @var string
      */
     protected $dayOfWeek = null;
 
     /**
-     * @property string $year
+     * @var string
      */
     protected $year = null;
 }

@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TrackingPropertyType
  *
- * @method TrackingPropertyType getName()
+ * @method string getName()
  * @method TrackingPropertyType setName(string $name)
- * @method TrackingPropertyType getValue()
+ * @method string getValue()
  * @method TrackingPropertyType setValue(string $value)
  */
 class TrackingPropertyType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property string $value
+     * @var string
      */
     protected $value = null;
 }

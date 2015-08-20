@@ -10,58 +10,58 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AttachmentType
  *
- * @method AttachmentType getAttachmentId()
+ * @method AttachmentIdType getAttachmentId()
  * @method AttachmentType setAttachmentId(AttachmentIdType $attachmentId)
- * @method AttachmentType getName()
+ * @method string getName()
  * @method AttachmentType setName(string $name)
- * @method AttachmentType getContentType()
+ * @method string getContentType()
  * @method AttachmentType setContentType(string $contentType)
- * @method AttachmentType getContentId()
+ * @method string getContentId()
  * @method AttachmentType setContentId(string $contentId)
- * @method AttachmentType getContentLocation()
+ * @method string getContentLocation()
  * @method AttachmentType setContentLocation(string $contentLocation)
- * @method AttachmentType getSize()
+ * @method integer getSize()
  * @method AttachmentType setSize(integer $size)
- * @method AttachmentType getLastModifiedTime()
+ * @method \DateTime getLastModifiedTime()
  * @method AttachmentType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method AttachmentType getIsInline()
+ * @method boolean getIsInline()
  * @method AttachmentType setIsInline(boolean $isInline)
  */
 class AttachmentType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AttachmentIdType $attachmentId
+     * @var \jamesiarmes\PEWS\API\Type\AttachmentIdType
      */
     protected $attachmentId = null;
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property string $contentType
+     * @var string
      */
     protected $contentType = null;
 
     /**
-     * @property string $contentId
+     * @var string
      */
     protected $contentId = null;
 
     /**
-     * @property string $contentLocation
+     * @var string
      */
     protected $contentLocation = null;
 
     /**
-     * @property integer $size
+     * @var integer
      */
     protected $size = null;
 
     /**
-     * @property \DateTime $lastModifiedTime
+     * @var \DateTime
      */
     protected $lastModifiedTime = null;
 
@@ -70,7 +70,7 @@ class AttachmentType extends Type
     );
 
     /**
-     * @property boolean $isInline
+     * @var boolean
      */
     protected $isInline = null;
 }

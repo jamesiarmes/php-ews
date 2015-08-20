@@ -10,58 +10,58 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SuggestionsViewOptionsType
  *
- * @method SuggestionsViewOptionsType getGoodThreshold()
+ * @method integer getGoodThreshold()
  * @method SuggestionsViewOptionsType setGoodThreshold(integer $goodThreshold)
- * @method SuggestionsViewOptionsType getMaximumResultsByDay()
+ * @method integer getMaximumResultsByDay()
  * @method SuggestionsViewOptionsType setMaximumResultsByDay(integer $maximumResultsByDay)
- * @method SuggestionsViewOptionsType getMaximumNonWorkHourResultsByDay()
+ * @method integer getMaximumNonWorkHourResultsByDay()
  * @method SuggestionsViewOptionsType setMaximumNonWorkHourResultsByDay(integer $maximumNonWorkHourResultsByDay)
- * @method SuggestionsViewOptionsType getMeetingDurationInMinutes()
+ * @method integer getMeetingDurationInMinutes()
  * @method SuggestionsViewOptionsType setMeetingDurationInMinutes(integer $meetingDurationInMinutes)
- * @method SuggestionsViewOptionsType getMinimumSuggestionQuality()
+ * @method string getMinimumSuggestionQuality()
  * @method SuggestionsViewOptionsType setMinimumSuggestionQuality(string $minimumSuggestionQuality)
- * @method SuggestionsViewOptionsType getDetailedSuggestionsWindow()
+ * @method DurationType getDetailedSuggestionsWindow()
  * @method SuggestionsViewOptionsType setDetailedSuggestionsWindow(DurationType $detailedSuggestionsWindow)
- * @method SuggestionsViewOptionsType getCurrentMeetingTime()
+ * @method \DateTime getCurrentMeetingTime()
  * @method SuggestionsViewOptionsType setCurrentMeetingTime(\DateTime $currentMeetingTime)
- * @method SuggestionsViewOptionsType getGlobalObjectId()
+ * @method string getGlobalObjectId()
  * @method SuggestionsViewOptionsType setGlobalObjectId(string $globalObjectId)
  */
 class SuggestionsViewOptionsType extends Type
 {
 
     /**
-     * @property integer $goodThreshold
+     * @var integer
      */
     protected $goodThreshold = null;
 
     /**
-     * @property integer $maximumResultsByDay
+     * @var integer
      */
     protected $maximumResultsByDay = null;
 
     /**
-     * @property integer $maximumNonWorkHourResultsByDay
+     * @var integer
      */
     protected $maximumNonWorkHourResultsByDay = null;
 
     /**
-     * @property integer $meetingDurationInMinutes
+     * @var integer
      */
     protected $meetingDurationInMinutes = null;
 
     /**
-     * @property string $minimumSuggestionQuality
+     * @var string
      */
     protected $minimumSuggestionQuality = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DurationType $detailedSuggestionsWindow
+     * @var \jamesiarmes\PEWS\API\Type\DurationType
      */
     protected $detailedSuggestionsWindow = null;
 
     /**
-     * @property \DateTime $currentMeetingTime
+     * @var \DateTime
      */
     protected $currentMeetingTime = null;
 
@@ -70,7 +70,7 @@ class SuggestionsViewOptionsType extends Type
     );
 
     /**
-     * @property string $globalObjectId
+     * @var string
      */
     protected $globalObjectId = null;
 }

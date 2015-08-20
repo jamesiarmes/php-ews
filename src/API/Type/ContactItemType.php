@@ -8,164 +8,161 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ContactItemType
  *
- * @method ContactItemType getFileAs()
+ * @method string getFileAs()
  * @method ContactItemType setFileAs(string $fileAs)
- * @method ContactItemType getFileAsMapping()
+ * @method string getFileAsMapping()
  * @method ContactItemType setFileAsMapping(string $fileAsMapping)
- * @method ContactItemType getDisplayName()
+ * @method string getDisplayName()
  * @method ContactItemType setDisplayName(string $displayName)
- * @method ContactItemType getGivenName()
+ * @method string getGivenName()
  * @method ContactItemType setGivenName(string $givenName)
- * @method ContactItemType getInitials()
+ * @method string getInitials()
  * @method ContactItemType setInitials(string $initials)
- * @method ContactItemType getMiddleName()
+ * @method string getMiddleName()
  * @method ContactItemType setMiddleName(string $middleName)
- * @method ContactItemType getNickname()
+ * @method string getNickname()
  * @method ContactItemType setNickname(string $nickname)
- * @method ContactItemType getCompleteName()
+ * @method CompleteNameType getCompleteName()
  * @method ContactItemType setCompleteName(CompleteNameType $completeName)
- * @method ContactItemType getCompanyName()
+ * @method string getCompanyName()
  * @method ContactItemType setCompanyName(string $companyName)
- * @method ContactItemType getEmailAddresses()
+ * @method array getEmailAddresses()
  * @method ContactItemType setEmailAddresses(array $emailAddresses)
- * @method ContactItemType getPhysicalAddresses()
+ * @method array getPhysicalAddresses()
  * @method ContactItemType setPhysicalAddresses(array $physicalAddresses)
- * @method ContactItemType getPhoneNumbers()
+ * @method array getPhoneNumbers()
  * @method ContactItemType setPhoneNumbers(array $phoneNumbers)
- * @method ContactItemType getAssistantName()
+ * @method string getAssistantName()
  * @method ContactItemType setAssistantName(string $assistantName)
- * @method ContactItemType getBirthday()
+ * @method \DateTime getBirthday()
  * @method ContactItemType setBirthday(\DateTime $birthday)
- * @method ContactItemType getBusinessHomePage()
+ * @method string getBusinessHomePage()
  * @method ContactItemType setBusinessHomePage(string $businessHomePage)
- * @method ContactItemType getChildren()
+ * @method array getChildren()
  * @method ContactItemType setChildren(array $children)
- * @method ContactItemType getCompanies()
+ * @method array getCompanies()
  * @method ContactItemType setCompanies(array $companies)
- * @method ContactItemType getContactSource()
+ * @method string getContactSource()
  * @method ContactItemType setContactSource(string $contactSource)
- * @method ContactItemType getDepartment()
+ * @method string getDepartment()
  * @method ContactItemType setDepartment(string $department)
- * @method ContactItemType getGeneration()
+ * @method string getGeneration()
  * @method ContactItemType setGeneration(string $generation)
- * @method ContactItemType getImAddresses()
+ * @method array getImAddresses()
  * @method ContactItemType setImAddresses(array $imAddresses)
- * @method ContactItemType getJobTitle()
+ * @method string getJobTitle()
  * @method ContactItemType setJobTitle(string $jobTitle)
- * @method ContactItemType getManager()
+ * @method string getManager()
  * @method ContactItemType setManager(string $manager)
- * @method ContactItemType getMileage()
+ * @method string getMileage()
  * @method ContactItemType setMileage(string $mileage)
- * @method ContactItemType getOfficeLocation()
+ * @method string getOfficeLocation()
  * @method ContactItemType setOfficeLocation(string $officeLocation)
- * @method ContactItemType getPostalAddressIndex()
+ * @method string getPostalAddressIndex()
  * @method ContactItemType setPostalAddressIndex(string $postalAddressIndex)
- * @method ContactItemType getProfession()
+ * @method string getProfession()
  * @method ContactItemType setProfession(string $profession)
- * @method ContactItemType getSpouseName()
+ * @method string getSpouseName()
  * @method ContactItemType setSpouseName(string $spouseName)
- * @method ContactItemType getSurname()
+ * @method string getSurname()
  * @method ContactItemType setSurname(string $surname)
- * @method ContactItemType getWeddingAnniversary()
+ * @method \DateTime getWeddingAnniversary()
  * @method ContactItemType setWeddingAnniversary(\DateTime $weddingAnniversary)
- * @method ContactItemType getHasPicture()
+ * @method boolean getHasPicture()
  * @method ContactItemType setHasPicture(boolean $hasPicture)
- * @method ContactItemType getPhoneticFullName()
+ * @method string getPhoneticFullName()
  * @method ContactItemType setPhoneticFullName(string $phoneticFullName)
- * @method ContactItemType getPhoneticFirstName()
+ * @method string getPhoneticFirstName()
  * @method ContactItemType setPhoneticFirstName(string $phoneticFirstName)
- * @method ContactItemType getPhoneticLastName()
+ * @method string getPhoneticLastName()
  * @method ContactItemType setPhoneticLastName(string $phoneticLastName)
- * @method ContactItemType getAlias()
+ * @method string getAlias()
  * @method ContactItemType setAlias(string $alias)
- * @method ContactItemType getNotes()
+ * @method string getNotes()
  * @method ContactItemType setNotes(string $notes)
- * @method ContactItemType getPhoto()
+ * @method string getPhoto()
  * @method ContactItemType setPhoto(string $photo)
- * @method ContactItemType getUserSMIMECertificate()
+ * @method array getUserSMIMECertificate()
  * @method ContactItemType setUserSMIMECertificate(array $userSMIMECertificate)
- * @method ContactItemType getMSExchangeCertificate()
+ * @method array getMSExchangeCertificate()
  * @method ContactItemType setMSExchangeCertificate(array $mSExchangeCertificate)
- * @method ContactItemType getDirectoryId()
+ * @method string getDirectoryId()
  * @method ContactItemType setDirectoryId(string $directoryId)
- * @method ContactItemType getManagerMailbox()
+ * @method SingleRecipientType getManagerMailbox()
  * @method ContactItemType setManagerMailbox(SingleRecipientType $managerMailbox)
- * @method ContactItemType getDirectReports()
+ * @method array getDirectReports()
  * @method ContactItemType setDirectReports(array $directReports)
  */
 class ContactItemType extends ItemType
 {
 
     /**
-     * @property string $fileAs
+     * @var string
      */
     protected $fileAs = null;
 
     /**
-     * @property string $fileAsMapping
+     * @var string
      */
     protected $fileAsMapping = null;
 
     /**
-     * @property string $displayName
+     * @var string
      */
     protected $displayName = null;
 
     /**
-     * @property string $givenName
+     * @var string
      */
     protected $givenName = null;
 
     /**
-     * @property string $initials
+     * @var string
      */
     protected $initials = null;
 
     /**
-     * @property string $middleName
+     * @var string
      */
     protected $middleName = null;
 
     /**
-     * @property string $nickname
+     * @var string
      */
     protected $nickname = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CompleteNameType $completeName
+     * @var \jamesiarmes\PEWS\API\Type\CompleteNameType
      */
     protected $completeName = null;
 
     /**
-     * @property string $companyName
+     * @var string
      */
     protected $companyName = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressDictionaryEntryType[]
-     * $emailAddresses
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressDictionaryEntryType[]
      */
     protected $emailAddresses = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PhysicalAddressDictionaryEntryType[]
-     * $physicalAddresses
+     * @var \jamesiarmes\PEWS\API\Type\PhysicalAddressDictionaryEntryType[]
      */
     protected $physicalAddresses = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PhoneNumberDictionaryEntryType[]
-     * $phoneNumbers
+     * @var \jamesiarmes\PEWS\API\Type\PhoneNumberDictionaryEntryType[]
      */
     protected $phoneNumbers = null;
 
     /**
-     * @property string $assistantName
+     * @var string
      */
     protected $assistantName = null;
 
     /**
-     * @property \DateTime $birthday
+     * @var \DateTime
      */
     protected $birthday = null;
 
@@ -175,142 +172,142 @@ class ContactItemType extends ItemType
     );
 
     /**
-     * @property string $businessHomePage
+     * @var string
      */
     protected $businessHomePage = null;
 
     /**
-     * @property string[] $children
+     * @var string[]
      */
     protected $children = null;
 
     /**
-     * @property string[] $companies
+     * @var string[]
      */
     protected $companies = null;
 
     /**
-     * @property string $contactSource
+     * @var string
      */
     protected $contactSource = null;
 
     /**
-     * @property string $department
+     * @var string
      */
     protected $department = null;
 
     /**
-     * @property string $generation
+     * @var string
      */
     protected $generation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ImAddressDictionaryEntryType[] $imAddresses
+     * @var \jamesiarmes\PEWS\API\Type\ImAddressDictionaryEntryType[]
      */
     protected $imAddresses = null;
 
     /**
-     * @property string $jobTitle
+     * @var string
      */
     protected $jobTitle = null;
 
     /**
-     * @property string $manager
+     * @var string
      */
     protected $manager = null;
 
     /**
-     * @property string $mileage
+     * @var string
      */
     protected $mileage = null;
 
     /**
-     * @property string $officeLocation
+     * @var string
      */
     protected $officeLocation = null;
 
     /**
-     * @property string $postalAddressIndex
+     * @var string
      */
     protected $postalAddressIndex = null;
 
     /**
-     * @property string $profession
+     * @var string
      */
     protected $profession = null;
 
     /**
-     * @property string $spouseName
+     * @var string
      */
     protected $spouseName = null;
 
     /**
-     * @property string $surname
+     * @var string
      */
     protected $surname = null;
 
     /**
-     * @property \DateTime $weddingAnniversary
+     * @var \DateTime
      */
     protected $weddingAnniversary = null;
 
     /**
-     * @property boolean $hasPicture
+     * @var boolean
      */
     protected $hasPicture = null;
 
     /**
-     * @property string $phoneticFullName
+     * @var string
      */
     protected $phoneticFullName = null;
 
     /**
-     * @property string $phoneticFirstName
+     * @var string
      */
     protected $phoneticFirstName = null;
 
     /**
-     * @property string $phoneticLastName
+     * @var string
      */
     protected $phoneticLastName = null;
 
     /**
-     * @property string $alias
+     * @var string
      */
     protected $alias = null;
 
     /**
-     * @property string $notes
+     * @var string
      */
     protected $notes = null;
 
     /**
-     * @property string $photo
+     * @var string
      */
     protected $photo = null;
 
     /**
-     * @property string[] $userSMIMECertificate
+     * @var string[]
      */
     protected $userSMIMECertificate = null;
 
     /**
-     * @property string[] $mSExchangeCertificate
+     * @var string[]
      */
     protected $mSExchangeCertificate = null;
 
     /**
-     * @property string $directoryId
+     * @var string
      */
     protected $directoryId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SingleRecipientType $managerMailbox
+     * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $managerMailbox = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $directReports
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $directReports = null;
 }

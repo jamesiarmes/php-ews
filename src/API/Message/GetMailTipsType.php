@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetMailTipsType
  *
- * @method GetMailTipsType getSendingAs()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getSendingAs()
  * @method GetMailTipsType setSendingAs(\jamesiarmes\PEWS\API\Type\EmailAddressType $sendingAs)
- * @method GetMailTipsType getRecipients()
+ * @method array getRecipients()
  * @method GetMailTipsType setRecipients(array $recipients)
- * @method GetMailTipsType getMailTipsRequested()
+ * @method array getMailTipsRequested()
  * @method GetMailTipsType setMailTipsRequested(array $mailTipsRequested)
  */
 class GetMailTipsType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $sendingAs
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $sendingAs = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $recipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $recipients = null;
 
     /**
-     * @property string[] $mailTipsRequested
+     * @var string[]
      */
     protected $mailTipsRequested = null;
 }

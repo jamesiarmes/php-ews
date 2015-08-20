@@ -10,16 +10,16 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: Duration
  *
- * @method DurationType getStartTime()
+ * @method \DateTime getStartTime()
  * @method DurationType setStartTime(\DateTime $startTime)
- * @method DurationType getEndTime()
+ * @method \DateTime getEndTime()
  * @method DurationType setEndTime(\DateTime $endTime)
  */
 class DurationType extends Type
 {
 
     /**
-     * @property \DateTime $startTime
+     * @var \DateTime
      */
     protected $startTime = null;
 
@@ -29,7 +29,7 @@ class DurationType extends Type
     );
 
     /**
-     * @property \DateTime $endTime
+     * @var \DateTime
      */
     protected $endTime = null;
 }

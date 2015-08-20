@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AttachmentIdType
  *
- * @method AttachmentIdType getRootItemId()
+ * @method string getRootItemId()
  * @method AttachmentIdType setRootItemId(string $rootItemId)
- * @method AttachmentIdType getRootItemChangeKey()
+ * @method string getRootItemChangeKey()
  * @method AttachmentIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class AttachmentIdType extends RequestAttachmentIdType
 {
 
     /**
-     * @property string $rootItemId
+     * @var string
      */
     protected $rootItemId = null;
 
     /**
-     * @property string $rootItemChangeKey
+     * @var string
      */
     protected $rootItemChangeKey = null;
 }

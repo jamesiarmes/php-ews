@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: GroupedItemsType
  *
- * @method GroupedItemsType getGroupIndex()
+ * @method string getGroupIndex()
  * @method GroupedItemsType setGroupIndex(string $groupIndex)
- * @method GroupedItemsType getItems()
+ * @method ArrayOfRealItemsType getItems()
  * @method GroupedItemsType setItems(ArrayOfRealItemsType $items)
  */
 class GroupedItemsType extends Type
 {
 
     /**
-     * @property string $groupIndex
+     * @var string
      */
     protected $groupIndex = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType
      */
     protected $items = null;
 }

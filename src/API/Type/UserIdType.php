@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UserIdType
  *
- * @method UserIdType getSID()
+ * @method string getSID()
  * @method UserIdType setSID(string $sID)
- * @method UserIdType getPrimarySmtpAddress()
+ * @method string getPrimarySmtpAddress()
  * @method UserIdType setPrimarySmtpAddress(string $primarySmtpAddress)
- * @method UserIdType getDisplayName()
+ * @method string getDisplayName()
  * @method UserIdType setDisplayName(string $displayName)
- * @method UserIdType getDistinguishedUser()
+ * @method string getDistinguishedUser()
  * @method UserIdType setDistinguishedUser(string $distinguishedUser)
- * @method UserIdType getExternalUserIdentity()
+ * @method string getExternalUserIdentity()
  * @method UserIdType setExternalUserIdentity(string $externalUserIdentity)
  */
 class UserIdType extends Type
 {
 
     /**
-     * @property string $sID
+     * @var string
      */
     protected $sID = null;
 
     /**
-     * @property string $primarySmtpAddress
+     * @var string
      */
     protected $primarySmtpAddress = null;
 
     /**
-     * @property string $displayName
+     * @var string
      */
     protected $displayName = null;
 
     /**
-     * @property string $distinguishedUser
+     * @var string
      */
     protected $distinguishedUser = null;
 
     /**
-     * @property string $externalUserIdentity
+     * @var string
      */
     protected $externalUserIdentity = null;
 }

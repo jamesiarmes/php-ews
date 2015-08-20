@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MovedCopiedEventType
  *
- * @method MovedCopiedEventType getOldFolderId()
+ * @method FolderIdType getOldFolderId()
  * @method MovedCopiedEventType setOldFolderId(FolderIdType $oldFolderId)
- * @method MovedCopiedEventType getOldItemId()
+ * @method ItemIdType getOldItemId()
  * @method MovedCopiedEventType setOldItemId(ItemIdType $oldItemId)
- * @method MovedCopiedEventType getOldParentFolderId()
+ * @method FolderIdType getOldParentFolderId()
  * @method MovedCopiedEventType setOldParentFolderId(FolderIdType $oldParentFolderId)
  */
 class MovedCopiedEventType extends BaseObjectChangedEventType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $oldFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $oldFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $oldItemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $oldItemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $oldParentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $oldParentFolderId = null;
 }
