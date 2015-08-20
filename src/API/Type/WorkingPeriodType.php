@@ -10,7 +10,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: WorkingPeriod
  *
- * @method array getDayOfWeek()
+ * @method WorkingPeriodType addDayOfWeek(string $dayOfWeek)
+ * @method string[] getDayOfWeek()
  * @method WorkingPeriodType setDayOfWeek(array $dayOfWeek)
  * @method integer getStartTimeInMinutes()
  * @method WorkingPeriodType setStartTimeInMinutes(integer $startTimeInMinutes)

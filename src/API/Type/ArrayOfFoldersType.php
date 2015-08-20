@@ -10,15 +10,20 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfFoldersType
  *
- * @method array getFolder()
+ * @method ArrayOfFoldersType addFolder(FolderType $folder)
+ * @method FolderType[] getFolder()
  * @method ArrayOfFoldersType setFolder(array $folder)
- * @method array getCalendarFolder()
+ * @method ArrayOfFoldersType addCalendarFolder(CalendarFolderType $calendarFolder)
+ * @method CalendarFolderType[] getCalendarFolder()
  * @method ArrayOfFoldersType setCalendarFolder(array $calendarFolder)
- * @method array getContactsFolder()
+ * @method ArrayOfFoldersType addContactsFolder(ContactsFolderType $contactsFolder)
+ * @method ContactsFolderType[] getContactsFolder()
  * @method ArrayOfFoldersType setContactsFolder(array $contactsFolder)
- * @method array getSearchFolder()
+ * @method ArrayOfFoldersType addSearchFolder(SearchFolderType $searchFolder)
+ * @method SearchFolderType[] getSearchFolder()
  * @method ArrayOfFoldersType setSearchFolder(array $searchFolder)
- * @method array getTasksFolder()
+ * @method ArrayOfFoldersType addTasksFolder(TasksFolderType $tasksFolder)
+ * @method TasksFolderType[] getTasksFolder()
  * @method ArrayOfFoldersType setTasksFolder(array $tasksFolder)
  */
 class ArrayOfFoldersType extends Type

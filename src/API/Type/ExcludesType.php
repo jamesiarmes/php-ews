@@ -8,11 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ExcludesType
  *
- * @method array getFieldURI()
+ * @method ExcludesType addFieldURI(FieldURI $fieldURI)
+ * @method FieldURI[] getFieldURI()
  * @method ExcludesType setFieldURI(array $fieldURI)
- * @method array getIndexedFieldURI()
+ * @method ExcludesType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
+ * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method ExcludesType setIndexedFieldURI(array $indexedFieldURI)
- * @method array getExtendedFieldURI()
+ * @method ExcludesType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
+ * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method ExcludesType setExtendedFieldURI(array $extendedFieldURI)
  * @method ExcludesValueType getBitmask()
  * @method ExcludesType setBitmask(ExcludesValueType $bitmask)

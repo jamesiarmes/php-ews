@@ -10,7 +10,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method \jamesiarmes\PEWS\API\Type\UserConfigurationNameType getUserConfigurationName()
  * @method GetUserConfigurationType setUserConfigurationName(\jamesiarmes\PEWS\API\Type\UserConfigurationNameType $userConfigurationName)
- * @method array getUserConfigurationProperties()
+ * @method GetUserConfigurationType addUserConfigurationProperties(string $userConfigurationProperties)
+ * @method string[] getUserConfigurationProperties()
  * @method GetUserConfigurationType setUserConfigurationProperties(array $userConfigurationProperties)
  */
 class GetUserConfigurationType extends BaseRequestType

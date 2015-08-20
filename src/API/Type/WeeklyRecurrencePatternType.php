@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: WeeklyRecurrencePatternType
  *
- * @method array getDaysOfWeek()
+ * @method WeeklyRecurrencePatternType addDaysOfWeek(string $daysOfWeek)
+ * @method string[] getDaysOfWeek()
  * @method WeeklyRecurrencePatternType setDaysOfWeek(array $daysOfWeek)
  * @method string getFirstDayOfWeek()
  * @method WeeklyRecurrencePatternType setFirstDayOfWeek(string $firstDayOfWeek)

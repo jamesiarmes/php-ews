@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfBaseItemIdsType
  *
- * @method array getItemId()
+ * @method NonEmptyArrayOfBaseItemIdsType addItemId(ItemIdType $itemId)
+ * @method ItemIdType[] getItemId()
  * @method NonEmptyArrayOfBaseItemIdsType setItemId(array $itemId)
- * @method array getOccurrenceItemId()
+ * @method NonEmptyArrayOfBaseItemIdsType addOccurrenceItemId(OccurrenceItemIdType $occurrenceItemId)
+ * @method OccurrenceItemIdType[] getOccurrenceItemId()
  * @method NonEmptyArrayOfBaseItemIdsType setOccurrenceItemId(array $occurrenceItemId)
- * @method array getRecurringMasterItemId()
+ * @method NonEmptyArrayOfBaseItemIdsType addRecurringMasterItemId(RecurringMasterItemIdType $recurringMasterItemId)
+ * @method RecurringMasterItemIdType[] getRecurringMasterItemId()
  * @method NonEmptyArrayOfBaseItemIdsType setRecurringMasterItemId(array $recurringMasterItemId)
  */
 class NonEmptyArrayOfBaseItemIdsType extends Type

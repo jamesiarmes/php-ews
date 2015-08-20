@@ -152,7 +152,30 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
     protected function handleAdder(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
     {
+        $name = "add" . Inflector::classify($prop->getName());
 
+        $type = $this->getPropertyType($prop);
+        $namespace = explode("\\", $type);
+        $namespaceClass = array_pop($namespace);
+        $namespace = implode("\\", $namespace);
+        if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
+            $type = $namespaceClass;
+        }
+        if (substr($type, -2) == "[]") {
+            $type = substr($type, 0, strlen($type) - 2);
+        }
+
+        $fullName = "method {$class->getName()} $name($type \${$prop->getName()})";
+
+        $docblock = $generator->getDocBlock();
+        $docblock->setWordWrap(false);
+
+        $tag = new Generator\DocBlock\Tag();
+        $tag->setName($fullName);
+
+        $docblock->setTag($tag);
+
+        return;
     }
 
     protected function handleGetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
@@ -163,9 +186,6 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $namespace = implode("\\", $namespace);
         if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
             $type = $namespaceClass;
-        }
-        if (substr($type, -2) == "[]") {
-            $type = "array";
         }
 
         $name = "get" . Inflector::classify($prop->getName());

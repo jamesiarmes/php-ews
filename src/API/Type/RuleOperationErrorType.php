@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method integer getOperationIndex()
  * @method RuleOperationErrorType setOperationIndex(integer $operationIndex)
- * @method array getValidationErrors()
+ * @method RuleOperationErrorType addValidationErrors(RuleValidationErrorType $validationErrors)
+ * @method RuleValidationErrorType[] getValidationErrors()
  * @method RuleOperationErrorType setValidationErrors(array $validationErrors)
  */
 class RuleOperationErrorType extends Type

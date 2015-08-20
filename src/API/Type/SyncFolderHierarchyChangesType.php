@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderHierarchyChangesType
  *
- * @method array getCreate()
+ * @method SyncFolderHierarchyChangesType addCreate(SyncFolderHierarchyCreateOrUpdateType $create)
+ * @method SyncFolderHierarchyCreateOrUpdateType[] getCreate()
  * @method SyncFolderHierarchyChangesType setCreate(array $create)
- * @method array getUpdate()
+ * @method SyncFolderHierarchyChangesType addUpdate(SyncFolderHierarchyCreateOrUpdateType $update)
+ * @method SyncFolderHierarchyCreateOrUpdateType[] getUpdate()
  * @method SyncFolderHierarchyChangesType setUpdate(array $update)
- * @method array getDelete()
+ * @method SyncFolderHierarchyChangesType addDelete(SyncFolderHierarchyDeleteType $delete)
+ * @method SyncFolderHierarchyDeleteType[] getDelete()
  * @method SyncFolderHierarchyChangesType setDelete(array $delete)
  */
 class SyncFolderHierarchyChangesType extends Type

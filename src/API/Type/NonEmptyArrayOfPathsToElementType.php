@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfPathsToElementType
  *
- * @method array getFieldURI()
+ * @method NonEmptyArrayOfPathsToElementType addFieldURI(FieldURI $fieldURI)
+ * @method FieldURI[] getFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setFieldURI(array $fieldURI)
- * @method array getIndexedFieldURI()
+ * @method NonEmptyArrayOfPathsToElementType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
+ * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setIndexedFieldURI(array $indexedFieldURI)
- * @method array getExtendedFieldURI()
+ * @method NonEmptyArrayOfPathsToElementType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
+ * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method NonEmptyArrayOfPathsToElementType setExtendedFieldURI(array $extendedFieldURI)
  */
 class NonEmptyArrayOfPathsToElementType extends Type

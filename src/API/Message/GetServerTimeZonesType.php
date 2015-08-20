@@ -10,7 +10,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method boolean getReturnFullTimeZoneData()
  * @method GetServerTimeZonesType setReturnFullTimeZoneData(boolean $returnFullTimeZoneData)
- * @method array getIds()
+ * @method GetServerTimeZonesType addIds(string $ids)
+ * @method string[] getIds()
  * @method GetServerTimeZonesType setIds(array $ids)
  */
 class GetServerTimeZonesType extends BaseRequestType

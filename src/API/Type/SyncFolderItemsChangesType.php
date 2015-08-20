@@ -10,13 +10,17 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderItemsChangesType
  *
- * @method array getCreate()
+ * @method SyncFolderItemsChangesType addCreate(SyncFolderItemsCreateOrUpdateType $create)
+ * @method SyncFolderItemsCreateOrUpdateType[] getCreate()
  * @method SyncFolderItemsChangesType setCreate(array $create)
- * @method array getUpdate()
+ * @method SyncFolderItemsChangesType addUpdate(SyncFolderItemsCreateOrUpdateType $update)
+ * @method SyncFolderItemsCreateOrUpdateType[] getUpdate()
  * @method SyncFolderItemsChangesType setUpdate(array $update)
- * @method array getDelete()
+ * @method SyncFolderItemsChangesType addDelete(SyncFolderItemsDeleteType $delete)
+ * @method SyncFolderItemsDeleteType[] getDelete()
  * @method SyncFolderItemsChangesType setDelete(array $delete)
- * @method array getReadFlagChange()
+ * @method SyncFolderItemsChangesType addReadFlagChange(SyncFolderItemsReadFlagType $readFlagChange)
+ * @method SyncFolderItemsReadFlagType[] getReadFlagChange()
  * @method SyncFolderItemsChangesType setReadFlagChange(array $readFlagChange)
  */
 class SyncFolderItemsChangesType extends Type

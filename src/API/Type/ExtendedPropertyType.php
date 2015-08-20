@@ -15,7 +15,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method ExtendedPropertyType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
  * @method string getValue()
  * @method ExtendedPropertyType setValue(string $value)
- * @method array getValues()
+ * @method ExtendedPropertyType addValues(string $values)
+ * @method string[] getValues()
  * @method ExtendedPropertyType setValues(array $values)
  */
 class ExtendedPropertyType extends Type

@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfItemChangeDescriptionsType
  *
- * @method array getAppendToItemField()
+ * @method NonEmptyArrayOfItemChangeDescriptionsType addAppendToItemField(AppendToItemFieldType $appendToItemField)
+ * @method AppendToItemFieldType[] getAppendToItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setAppendToItemField(array $appendToItemField)
- * @method array getSetItemField()
+ * @method NonEmptyArrayOfItemChangeDescriptionsType addSetItemField(SetItemFieldType $setItemField)
+ * @method SetItemFieldType[] getSetItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setSetItemField(array $setItemField)
- * @method array getDeleteItemField()
+ * @method NonEmptyArrayOfItemChangeDescriptionsType addDeleteItemField(DeleteItemFieldType $deleteItemField)
+ * @method DeleteItemFieldType[] getDeleteItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setDeleteItemField(array $deleteItemField)
  */
 class NonEmptyArrayOfItemChangeDescriptionsType extends Type

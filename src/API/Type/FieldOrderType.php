@@ -12,11 +12,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getOrder()
  * @method FieldOrderType setOrder(string $order)
- * @method array getFieldURI()
+ * @method FieldOrderType addFieldURI(FieldURI $fieldURI)
+ * @method FieldURI[] getFieldURI()
  * @method FieldOrderType setFieldURI(array $fieldURI)
- * @method array getIndexedFieldURI()
+ * @method FieldOrderType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
+ * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method FieldOrderType setIndexedFieldURI(array $indexedFieldURI)
- * @method array getExtendedFieldURI()
+ * @method FieldOrderType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
+ * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method FieldOrderType setExtendedFieldURI(array $extendedFieldURI)
  */
 class FieldOrderType extends Type

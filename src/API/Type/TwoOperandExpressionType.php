@@ -8,11 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TwoOperandExpressionType
  *
- * @method array getFieldURI()
+ * @method TwoOperandExpressionType addFieldURI(FieldURI $fieldURI)
+ * @method FieldURI[] getFieldURI()
  * @method TwoOperandExpressionType setFieldURI(array $fieldURI)
- * @method array getIndexedFieldURI()
+ * @method TwoOperandExpressionType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
+ * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method TwoOperandExpressionType setIndexedFieldURI(array $indexedFieldURI)
- * @method array getExtendedFieldURI()
+ * @method TwoOperandExpressionType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
+ * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method TwoOperandExpressionType setExtendedFieldURI(array $extendedFieldURI)
  * @method FieldURIOrConstantType getFieldURIOrConstant()
  * @method TwoOperandExpressionType setFieldURIOrConstant(FieldURIOrConstantType $fieldURIOrConstant)

@@ -14,7 +14,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method FreeBusyViewOptionsType setTimeWindow(DurationType $timeWindow)
  * @method integer getMergedFreeBusyIntervalInMinutes()
  * @method FreeBusyViewOptionsType setMergedFreeBusyIntervalInMinutes(integer $mergedFreeBusyIntervalInMinutes)
- * @method array getRequestedView()
+ * @method FreeBusyViewOptionsType addRequestedView(string $requestedView)
+ * @method string[] getRequestedView()
  * @method FreeBusyViewOptionsType setRequestedView(array $requestedView)
  */
 class FreeBusyViewOptionsType extends Type

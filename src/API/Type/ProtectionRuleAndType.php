@@ -10,15 +10,20 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ProtectionRuleAndType
  *
- * @method array getAllInternal()
+ * @method ProtectionRuleAndType addAllInternal(string $allInternal)
+ * @method string[] getAllInternal()
  * @method ProtectionRuleAndType setAllInternal(array $allInternal)
- * @method array getAnd()
+ * @method ProtectionRuleAndType addAnd(ProtectionRuleAndType $and)
+ * @method ProtectionRuleAndType[] getAnd()
  * @method ProtectionRuleAndType setAnd(array $and)
- * @method array getRecipientIs()
+ * @method ProtectionRuleAndType addRecipientIs(string $recipientIs)
+ * @method string[] getRecipientIs()
  * @method ProtectionRuleAndType setRecipientIs(array $recipientIs)
- * @method array getSenderDepartments()
+ * @method ProtectionRuleAndType addSenderDepartments(string $senderDepartments)
+ * @method string[] getSenderDepartments()
  * @method ProtectionRuleAndType setSenderDepartments(array $senderDepartments)
- * @method array getTrue()
+ * @method ProtectionRuleAndType addTrue(string $true)
+ * @method string[] getTrue()
  * @method ProtectionRuleAndType setTrue(array $true)
  */
 class ProtectionRuleAndType extends Type

@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UploadItemsType
  *
- * @method array getItems()
+ * @method UploadItemsType addItems(\jamesiarmes\PEWS\API\Type\UploadItemType $items)
+ * @method \jamesiarmes\PEWS\API\Type\UploadItemType[] getItems()
  * @method UploadItemsType setItems(array $items)
  */
 class UploadItemsType extends BaseRequestType

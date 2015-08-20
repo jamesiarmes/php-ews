@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UpdateDelegateType
  *
- * @method array getDelegateUsers()
+ * @method UpdateDelegateType addDelegateUsers(\jamesiarmes\PEWS\API\Type\DelegateUserType $delegateUsers)
+ * @method \jamesiarmes\PEWS\API\Type\DelegateUserType[] getDelegateUsers()
  * @method UpdateDelegateType setDelegateUsers(array $delegateUsers)
  * @method string getDeliverMeetingRequests()
  * @method UpdateDelegateType setDeliverMeetingRequests(string $deliverMeetingRequests)

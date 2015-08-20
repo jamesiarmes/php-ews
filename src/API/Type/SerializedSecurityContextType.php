@@ -12,9 +12,11 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getUserSid()
  * @method SerializedSecurityContextType setUserSid(string $userSid)
- * @method array getGroupSids()
+ * @method SerializedSecurityContextType addGroupSids(SidAndAttributesType $groupSids)
+ * @method SidAndAttributesType[] getGroupSids()
  * @method SerializedSecurityContextType setGroupSids(array $groupSids)
- * @method array getRestrictedGroupSids()
+ * @method SerializedSecurityContextType addRestrictedGroupSids(SidAndAttributesType $restrictedGroupSids)
+ * @method SidAndAttributesType[] getRestrictedGroupSids()
  * @method SerializedSecurityContextType setRestrictedGroupSids(array $restrictedGroupSids)
  * @method string getPrimarySmtpAddress()
  * @method SerializedSecurityContextType setPrimarySmtpAddress(string $primarySmtpAddress)

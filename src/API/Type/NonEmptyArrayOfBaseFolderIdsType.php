@@ -10,9 +10,11 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfBaseFolderIdsType
  *
- * @method array getFolderId()
+ * @method NonEmptyArrayOfBaseFolderIdsType addFolderId(FolderIdType $folderId)
+ * @method FolderIdType[] getFolderId()
  * @method NonEmptyArrayOfBaseFolderIdsType setFolderId(array $folderId)
- * @method array getDistinguishedFolderId()
+ * @method NonEmptyArrayOfBaseFolderIdsType addDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
+ * @method DistinguishedFolderIdType[] getDistinguishedFolderId()
  * @method NonEmptyArrayOfBaseFolderIdsType setDistinguishedFolderId(array $distinguishedFolderId)
  */
 class NonEmptyArrayOfBaseFolderIdsType extends Type

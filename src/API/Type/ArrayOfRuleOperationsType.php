@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  * Represents an array of rule operations to be performed
  * XSD Type: ArrayOfRuleOperationsType
  *
- * @method array getCreateRuleOperation()
+ * @method ArrayOfRuleOperationsType addCreateRuleOperation(CreateRuleOperationType $createRuleOperation)
+ * @method CreateRuleOperationType[] getCreateRuleOperation()
  * @method ArrayOfRuleOperationsType setCreateRuleOperation(array $createRuleOperation)
- * @method array getSetRuleOperation()
+ * @method ArrayOfRuleOperationsType addSetRuleOperation(SetRuleOperationType $setRuleOperation)
+ * @method SetRuleOperationType[] getSetRuleOperation()
  * @method ArrayOfRuleOperationsType setSetRuleOperation(array $setRuleOperation)
- * @method array getDeleteRuleOperation()
+ * @method ArrayOfRuleOperationsType addDeleteRuleOperation(DeleteRuleOperationType $deleteRuleOperation)
+ * @method DeleteRuleOperationType[] getDeleteRuleOperation()
  * @method ArrayOfRuleOperationsType setDeleteRuleOperation(array $deleteRuleOperation)
  */
 class ArrayOfRuleOperationsType extends Type

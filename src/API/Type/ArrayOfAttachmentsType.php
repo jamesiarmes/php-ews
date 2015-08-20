@@ -10,9 +10,11 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfAttachmentsType
  *
- * @method array getItemAttachment()
+ * @method ArrayOfAttachmentsType addItemAttachment(ItemAttachmentType $itemAttachment)
+ * @method ItemAttachmentType[] getItemAttachment()
  * @method ArrayOfAttachmentsType setItemAttachment(array $itemAttachment)
- * @method array getFileAttachment()
+ * @method ArrayOfAttachmentsType addFileAttachment(FileAttachmentType $fileAttachment)
+ * @method FileAttachmentType[] getFileAttachment()
  * @method ArrayOfAttachmentsType setFileAttachment(array $fileAttachment)
  */
 class ArrayOfAttachmentsType extends Type

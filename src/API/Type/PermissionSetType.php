@@ -10,9 +10,11 @@ use jamesiarmes\PEWS\API\Type;
  * The set of permissions on a folder
  * XSD Type: PermissionSetType
  *
- * @method array getPermissions()
+ * @method PermissionSetType addPermissions(PermissionType $permissions)
+ * @method PermissionType[] getPermissions()
  * @method PermissionSetType setPermissions(array $permissions)
- * @method array getUnknownEntries()
+ * @method PermissionSetType addUnknownEntries(string $unknownEntries)
+ * @method string[] getUnknownEntries()
  * @method PermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class PermissionSetType extends Type

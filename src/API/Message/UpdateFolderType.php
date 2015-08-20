@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UpdateFolderType
  *
- * @method array getFolderChanges()
+ * @method UpdateFolderType addFolderChanges(\jamesiarmes\PEWS\API\Type\FolderChangeType $folderChanges)
+ * @method \jamesiarmes\PEWS\API\Type\FolderChangeType[] getFolderChanges()
  * @method UpdateFolderType setFolderChanges(array $folderChanges)
  */
 class UpdateFolderType extends BaseRequestType

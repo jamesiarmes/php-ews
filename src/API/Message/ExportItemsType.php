@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ExportItemsType
  *
- * @method array getItemIds()
+ * @method ExportItemsType addItemIds(\jamesiarmes\PEWS\API\Type\ItemIdType $itemIds)
+ * @method \jamesiarmes\PEWS\API\Type\ItemIdType[] getItemIds()
  * @method ExportItemsType setItemIds(array $itemIds)
  */
 class ExportItemsType extends BaseRequestType

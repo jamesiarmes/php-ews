@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getName()
  * @method ProtectionRuleActionType setName(string $name)
- * @method array getArgument()
+ * @method ProtectionRuleActionType addArgument(ProtectionRuleArgumentType $argument)
+ * @method ProtectionRuleArgumentType[] getArgument()
  * @method ProtectionRuleActionType setArgument(array $argument)
  */
 class ProtectionRuleActionType extends Type

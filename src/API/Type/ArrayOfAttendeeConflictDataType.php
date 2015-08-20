@@ -10,13 +10,17 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfAttendeeConflictData
  *
- * @method array getUnknownAttendeeConflictData()
+ * @method ArrayOfAttendeeConflictDataType addUnknownAttendeeConflictData(UnknownAttendeeConflictDataType $unknownAttendeeConflictData)
+ * @method UnknownAttendeeConflictDataType[] getUnknownAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setUnknownAttendeeConflictData(array $unknownAttendeeConflictData)
- * @method array getIndividualAttendeeConflictData()
+ * @method ArrayOfAttendeeConflictDataType addIndividualAttendeeConflictData(IndividualAttendeeConflictDataType $individualAttendeeConflictData)
+ * @method IndividualAttendeeConflictDataType[] getIndividualAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setIndividualAttendeeConflictData(array $individualAttendeeConflictData)
- * @method array getTooBigGroupAttendeeConflictData()
+ * @method ArrayOfAttendeeConflictDataType addTooBigGroupAttendeeConflictData(TooBigGroupAttendeeConflictDataType $tooBigGroupAttendeeConflictData)
+ * @method TooBigGroupAttendeeConflictDataType[] getTooBigGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setTooBigGroupAttendeeConflictData(array $tooBigGroupAttendeeConflictData)
- * @method array getGroupAttendeeConflictData()
+ * @method ArrayOfAttendeeConflictDataType addGroupAttendeeConflictData(GroupAttendeeConflictDataType $groupAttendeeConflictData)
+ * @method GroupAttendeeConflictDataType[] getGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setGroupAttendeeConflictData(array $groupAttendeeConflictData)
  */
 class ArrayOfAttendeeConflictDataType extends Type

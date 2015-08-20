@@ -10,9 +10,11 @@ use jamesiarmes\PEWS\API\Type;
  * The set of permissions on a folder
  * XSD Type: CalendarPermissionSetType
  *
- * @method array getCalendarPermissions()
+ * @method CalendarPermissionSetType addCalendarPermissions(CalendarPermissionType $calendarPermissions)
+ * @method CalendarPermissionType[] getCalendarPermissions()
  * @method CalendarPermissionSetType setCalendarPermissions(array $calendarPermissions)
- * @method array getUnknownEntries()
+ * @method CalendarPermissionSetType addUnknownEntries(string $unknownEntries)
+ * @method string[] getUnknownEntries()
  * @method CalendarPermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class CalendarPermissionSetType extends Type

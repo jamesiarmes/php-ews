@@ -18,7 +18,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method RecipientTrackingEventType setDeliveryStatus(string $deliveryStatus)
  * @method string getEventDescription()
  * @method RecipientTrackingEventType setEventDescription(string $eventDescription)
- * @method array getEventData()
+ * @method RecipientTrackingEventType addEventData(string $eventData)
+ * @method string[] getEventData()
  * @method RecipientTrackingEventType setEventData(array $eventData)
  * @method string getServer()
  * @method RecipientTrackingEventType setServer(string $server)
@@ -32,7 +33,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method RecipientTrackingEventType setUniquePathId(string $uniquePathId)
  * @method string getRootAddress()
  * @method RecipientTrackingEventType setRootAddress(string $rootAddress)
- * @method array getProperties()
+ * @method RecipientTrackingEventType addProperties(TrackingPropertyType $properties)
+ * @method TrackingPropertyType[] getProperties()
  * @method RecipientTrackingEventType setProperties(array $properties)
  */
 class RecipientTrackingEventType extends Type

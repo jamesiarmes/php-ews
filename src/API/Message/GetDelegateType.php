@@ -10,7 +10,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method boolean getIncludePermissions()
  * @method GetDelegateType setIncludePermissions(boolean $includePermissions)
- * @method array getUserIds()
+ * @method GetDelegateType addUserIds(\jamesiarmes\PEWS\API\Type\UserIdType $userIds)
+ * @method \jamesiarmes\PEWS\API\Type\UserIdType[] getUserIds()
  * @method GetDelegateType setUserIds(array $userIds)
  */
 class GetDelegateType extends BaseDelegateType

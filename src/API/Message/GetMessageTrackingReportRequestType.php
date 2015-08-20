@@ -20,7 +20,8 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method GetMessageTrackingReportRequestType setReturnQueueEvents(boolean $returnQueueEvents)
  * @method string getDiagnosticsLevel()
  * @method GetMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
- * @method array getProperties()
+ * @method GetMessageTrackingReportRequestType addProperties(\jamesiarmes\PEWS\API\Type\TrackingPropertyType $properties)
+ * @method \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] getProperties()
  * @method GetMessageTrackingReportRequestType setProperties(array $properties)
  */
 class GetMessageTrackingReportRequestType extends BaseRequestType

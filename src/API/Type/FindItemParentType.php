@@ -22,7 +22,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindItemParentType setTotalItemsInView(integer $totalItemsInView)
  * @method ArrayOfRealItemsType getItems()
  * @method FindItemParentType setItems(ArrayOfRealItemsType $items)
- * @method array getGroups()
+ * @method FindItemParentType addGroups(GroupedItemsType $groups)
+ * @method GroupedItemsType[] getGroups()
  * @method FindItemParentType setGroups(array $groups)
  */
 class FindItemParentType extends Type

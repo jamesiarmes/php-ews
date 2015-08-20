@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method SerializableTimeZoneType getTimeZone()
  * @method WorkingHoursType setTimeZone(SerializableTimeZoneType $timeZone)
- * @method array getWorkingPeriodArray()
+ * @method WorkingHoursType addWorkingPeriodArray(WorkingPeriodType $workingPeriodArray)
+ * @method WorkingPeriodType[] getWorkingPeriodArray()
  * @method WorkingHoursType setWorkingPeriodArray(array $workingPeriodArray)
  */
 class WorkingHoursType extends Type

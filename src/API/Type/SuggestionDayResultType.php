@@ -14,7 +14,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method SuggestionDayResultType setDate(\DateTime $date)
  * @method string getDayQuality()
  * @method SuggestionDayResultType setDayQuality(string $dayQuality)
- * @method array getSuggestionArray()
+ * @method SuggestionDayResultType addSuggestionArray(SuggestionType $suggestionArray)
+ * @method SuggestionType[] getSuggestionArray()
  * @method SuggestionDayResultType setSuggestionArray(array $suggestionArray)
  */
 class SuggestionDayResultType extends Type

@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetStreamingEventsType
  *
- * @method array getSubscriptionIds()
+ * @method GetStreamingEventsType addSubscriptionIds(string $subscriptionIds)
+ * @method string[] getSubscriptionIds()
  * @method GetStreamingEventsType setSubscriptionIds(array $subscriptionIds)
  * @method integer getConnectionTimeout()
  * @method GetStreamingEventsType setConnectionTimeout(integer $connectionTimeout)

@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ApplyConversationActionType
  *
- * @method array getConversationActions()
+ * @method ApplyConversationActionType addConversationActions(\jamesiarmes\PEWS\API\Type\ConversationActionType $conversationActions)
+ * @method \jamesiarmes\PEWS\API\Type\ConversationActionType[] getConversationActions()
  * @method ApplyConversationActionType setConversationActions(array $conversationActions)
  */
 class ApplyConversationActionType extends BaseRequestType

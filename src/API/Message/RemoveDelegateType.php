@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: RemoveDelegateType
  *
- * @method array getUserIds()
+ * @method RemoveDelegateType addUserIds(\jamesiarmes\PEWS\API\Type\UserIdType $userIds)
+ * @method \jamesiarmes\PEWS\API\Type\UserIdType[] getUserIds()
  * @method RemoveDelegateType setUserIds(array $userIds)
  */
 class RemoveDelegateType extends BaseDelegateType

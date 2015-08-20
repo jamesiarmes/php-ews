@@ -10,11 +10,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method \jamesiarmes\PEWS\API\Type\MessageTrackingReportType getMessageTrackingReport()
  * @method GetMessageTrackingReportResponseMessageType setMessageTrackingReport(\jamesiarmes\PEWS\API\Type\MessageTrackingReportType $messageTrackingReport)
- * @method array getDiagnostics()
+ * @method GetMessageTrackingReportResponseMessageType addDiagnostics(string $diagnostics)
+ * @method string[] getDiagnostics()
  * @method GetMessageTrackingReportResponseMessageType setDiagnostics(array $diagnostics)
- * @method array getErrors()
+ * @method GetMessageTrackingReportResponseMessageType addErrors(\jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType $errors)
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType[] getErrors()
  * @method GetMessageTrackingReportResponseMessageType setErrors(array $errors)
- * @method array getProperties()
+ * @method GetMessageTrackingReportResponseMessageType addProperties(\jamesiarmes\PEWS\API\Type\TrackingPropertyType $properties)
+ * @method \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] getProperties()
  * @method GetMessageTrackingReportResponseMessageType setProperties(array $properties)
  */
 class GetMessageTrackingReportResponseMessageType extends ResponseMessageType

@@ -20,7 +20,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
  * @method ArrayOfDLExpansionType setTotalItemsInView(integer $totalItemsInView)
- * @method array getMailbox()
+ * @method ArrayOfDLExpansionType addMailbox(EmailAddressType $mailbox)
+ * @method EmailAddressType[] getMailbox()
  * @method ArrayOfDLExpansionType setMailbox(array $mailbox)
  */
 class ArrayOfDLExpansionType extends Type

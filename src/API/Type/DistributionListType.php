@@ -14,7 +14,8 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method DistributionListType setFileAs(string $fileAs)
  * @method string getContactSource()
  * @method DistributionListType setContactSource(string $contactSource)
- * @method array getMembers()
+ * @method DistributionListType addMembers(MemberType $members)
+ * @method MemberType[] getMembers()
  * @method DistributionListType setMembers(array $members)
  */
 class DistributionListType extends ItemType

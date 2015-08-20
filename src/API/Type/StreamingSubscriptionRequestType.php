@@ -14,7 +14,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method StreamingSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method StreamingSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
- * @method array getEventTypes()
+ * @method StreamingSubscriptionRequestType addEventTypes(string $eventTypes)
+ * @method string[] getEventTypes()
  * @method StreamingSubscriptionRequestType setEventTypes(array $eventTypes)
  */
 class StreamingSubscriptionRequestType extends Type

@@ -18,7 +18,8 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
  * @method boolean getShowExternalRecipientCount()
  * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
- * @method array getInternalDomains()
+ * @method MailTipsServiceConfigurationType addInternalDomains(SmtpDomainType $internalDomains)
+ * @method SmtpDomainType[] getInternalDomains()
  * @method MailTipsServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class MailTipsServiceConfigurationType extends ServiceConfigurationType

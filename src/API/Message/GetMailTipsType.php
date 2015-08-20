@@ -10,9 +10,11 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getSendingAs()
  * @method GetMailTipsType setSendingAs(\jamesiarmes\PEWS\API\Type\EmailAddressType $sendingAs)
- * @method array getRecipients()
+ * @method GetMailTipsType addRecipients(\jamesiarmes\PEWS\API\Type\EmailAddressType $recipients)
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType[] getRecipients()
  * @method GetMailTipsType setRecipients(array $recipients)
- * @method array getMailTipsRequested()
+ * @method GetMailTipsType addMailTipsRequested(string $mailTipsRequested)
+ * @method string[] getMailTipsRequested()
  * @method GetMailTipsType setMailTipsRequested(array $mailTipsRequested)
  */
 class GetMailTipsType extends BaseRequestType

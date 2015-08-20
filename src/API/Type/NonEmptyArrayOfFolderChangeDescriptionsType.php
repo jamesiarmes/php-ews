@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfFolderChangeDescriptionsType
  *
- * @method array getAppendToFolderField()
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType addAppendToFolderField(AppendToFolderFieldType $appendToFolderField)
+ * @method AppendToFolderFieldType[] getAppendToFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setAppendToFolderField(array $appendToFolderField)
- * @method array getSetFolderField()
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType addSetFolderField(SetFolderFieldType $setFolderField)
+ * @method SetFolderFieldType[] getSetFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setSetFolderField(array $setFolderField)
- * @method array getDeleteFolderField()
+ * @method NonEmptyArrayOfFolderChangeDescriptionsType addDeleteFolderField(DeleteFolderFieldType $deleteFolderField)
+ * @method DeleteFolderFieldType[] getDeleteFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setDeleteFolderField(array $deleteFolderField)
  */
 class NonEmptyArrayOfFolderChangeDescriptionsType extends Type

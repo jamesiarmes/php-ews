@@ -10,7 +10,8 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserAvailabilityResponseType
  *
- * @method array getFreeBusyResponseArray()
+ * @method GetUserAvailabilityResponseType addFreeBusyResponseArray(FreeBusyResponseType $freeBusyResponseArray)
+ * @method FreeBusyResponseType[] getFreeBusyResponseArray()
  * @method GetUserAvailabilityResponseType setFreeBusyResponseArray(array $freeBusyResponseArray)
  * @method SuggestionsResponseType getSuggestionsResponse()
  * @method GetUserAvailabilityResponseType setSuggestionsResponse(SuggestionsResponseType $suggestionsResponse)

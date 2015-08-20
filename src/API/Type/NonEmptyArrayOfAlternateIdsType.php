@@ -10,11 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  * A non-empty array of alternate Ids.
  * XSD Type: NonEmptyArrayOfAlternateIdsType
  *
- * @method array getAlternateId()
+ * @method NonEmptyArrayOfAlternateIdsType addAlternateId(AlternateIdType $alternateId)
+ * @method AlternateIdType[] getAlternateId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternateId(array $alternateId)
- * @method array getAlternatePublicFolderId()
+ * @method NonEmptyArrayOfAlternateIdsType addAlternatePublicFolderId(AlternatePublicFolderIdType $alternatePublicFolderId)
+ * @method AlternatePublicFolderIdType[] getAlternatePublicFolderId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderId(array $alternatePublicFolderId)
- * @method array getAlternatePublicFolderItemId()
+ * @method NonEmptyArrayOfAlternateIdsType addAlternatePublicFolderItemId(AlternatePublicFolderItemIdType $alternatePublicFolderItemId)
+ * @method AlternatePublicFolderItemIdType[] getAlternatePublicFolderItemId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderItemId(array $alternatePublicFolderItemId)
  */
 class NonEmptyArrayOfAlternateIdsType extends Type

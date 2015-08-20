@@ -16,7 +16,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindMessageTrackingSearchResultType setSender(EmailAddressType $sender)
  * @method EmailAddressType getPurportedSender()
  * @method FindMessageTrackingSearchResultType setPurportedSender(EmailAddressType $purportedSender)
- * @method array getRecipients()
+ * @method FindMessageTrackingSearchResultType addRecipients(EmailAddressType $recipients)
+ * @method EmailAddressType[] getRecipients()
  * @method FindMessageTrackingSearchResultType setRecipients(array $recipients)
  * @method \DateTime getSubmittedTime()
  * @method FindMessageTrackingSearchResultType setSubmittedTime(\DateTime $submittedTime)
@@ -26,7 +27,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindMessageTrackingSearchResultType setPreviousHopServer(string $previousHopServer)
  * @method string getFirstHopServer()
  * @method FindMessageTrackingSearchResultType setFirstHopServer(string $firstHopServer)
- * @method array getProperties()
+ * @method FindMessageTrackingSearchResultType addProperties(TrackingPropertyType $properties)
+ * @method TrackingPropertyType[] getProperties()
  * @method FindMessageTrackingSearchResultType setProperties(array $properties)
  */
 class FindMessageTrackingSearchResultType extends Type

@@ -16,7 +16,8 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method UpdateItemType setSendMeetingInvitationsOrCancellations(string $sendMeetingInvitationsOrCancellations)
  * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method UpdateItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId)
- * @method array getItemChanges()
+ * @method UpdateItemType addItemChanges(\jamesiarmes\PEWS\API\Type\ItemChangeType $itemChanges)
+ * @method \jamesiarmes\PEWS\API\Type\ItemChangeType[] getItemChanges()
  * @method UpdateItemType setItemChanges(array $itemChanges)
  */
 class UpdateItemType extends BaseRequestType

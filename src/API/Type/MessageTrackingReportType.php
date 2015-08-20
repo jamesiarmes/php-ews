@@ -18,11 +18,14 @@ use jamesiarmes\PEWS\API\Type;
  * @method MessageTrackingReportType setSubject(string $subject)
  * @method \DateTime getSubmitTime()
  * @method MessageTrackingReportType setSubmitTime(\DateTime $submitTime)
- * @method array getOriginalRecipients()
+ * @method MessageTrackingReportType addOriginalRecipients(EmailAddressType $originalRecipients)
+ * @method EmailAddressType[] getOriginalRecipients()
  * @method MessageTrackingReportType setOriginalRecipients(array $originalRecipients)
- * @method array getRecipientTrackingEvents()
+ * @method MessageTrackingReportType addRecipientTrackingEvents(RecipientTrackingEventType $recipientTrackingEvents)
+ * @method RecipientTrackingEventType[] getRecipientTrackingEvents()
  * @method MessageTrackingReportType setRecipientTrackingEvents(array $recipientTrackingEvents)
- * @method array getProperties()
+ * @method MessageTrackingReportType addProperties(TrackingPropertyType $properties)
+ * @method TrackingPropertyType[] getProperties()
  * @method MessageTrackingReportType setProperties(array $properties)
  */
 class MessageTrackingReportType extends Type

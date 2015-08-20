@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Message;
  *
  * @method ResponseMessageType getResponseMessage()
  * @method SuggestionsResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method array getSuggestionDayResultArray()
+ * @method SuggestionsResponseType addSuggestionDayResultArray(\jamesiarmes\PEWS\API\Type\SuggestionDayResultType $suggestionDayResultArray)
+ * @method \jamesiarmes\PEWS\API\Type\SuggestionDayResultType[] getSuggestionDayResultArray()
  * @method SuggestionsResponseType setSuggestionDayResultArray(array $suggestionDayResultArray)
  */
 class SuggestionsResponseType extends Message

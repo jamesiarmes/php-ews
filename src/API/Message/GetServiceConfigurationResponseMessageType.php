@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetServiceConfigurationResponseMessageType
  *
- * @method array getResponseMessages()
+ * @method GetServiceConfigurationResponseMessageType addResponseMessages(ServiceConfigurationResponseMessageType $responseMessages)
+ * @method ServiceConfigurationResponseMessageType[] getResponseMessages()
  * @method GetServiceConfigurationResponseMessageType setResponseMessages(array $responseMessages)
  */
 class GetServiceConfigurationResponseMessageType extends ResponseMessageType

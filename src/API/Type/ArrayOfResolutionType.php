@@ -20,7 +20,8 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
  * @method ArrayOfResolutionType setTotalItemsInView(integer $totalItemsInView)
- * @method array getResolution()
+ * @method ArrayOfResolutionType addResolution(ResolutionType $resolution)
+ * @method ResolutionType[] getResolution()
  * @method ArrayOfResolutionType setResolution(array $resolution)
  */
 class ArrayOfResolutionType extends Type

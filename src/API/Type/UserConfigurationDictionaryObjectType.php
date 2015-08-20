@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getType()
  * @method UserConfigurationDictionaryObjectType setType(string $type)
- * @method array getValue()
+ * @method UserConfigurationDictionaryObjectType addValue(string $value)
+ * @method string[] getValue()
  * @method UserConfigurationDictionaryObjectType setValue(array $value)
  */
 class UserConfigurationDictionaryObjectType extends Type

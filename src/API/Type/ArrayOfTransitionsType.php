@@ -12,13 +12,17 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getId()
  * @method ArrayOfTransitionsType setId(string $id)
- * @method array getAbsoluteDateTransition()
+ * @method ArrayOfTransitionsType addAbsoluteDateTransition(AbsoluteDateTransition $absoluteDateTransition)
+ * @method AbsoluteDateTransition[] getAbsoluteDateTransition()
  * @method ArrayOfTransitionsType setAbsoluteDateTransition(array $absoluteDateTransition)
- * @method array getRecurringDayTransition()
+ * @method ArrayOfTransitionsType addRecurringDayTransition(RecurringDayTransition $recurringDayTransition)
+ * @method RecurringDayTransition[] getRecurringDayTransition()
  * @method ArrayOfTransitionsType setRecurringDayTransition(array $recurringDayTransition)
- * @method array getRecurringDateTransition()
+ * @method ArrayOfTransitionsType addRecurringDateTransition(RecurringDateTransition $recurringDateTransition)
+ * @method RecurringDateTransition[] getRecurringDateTransition()
  * @method ArrayOfTransitionsType setRecurringDateTransition(array $recurringDateTransition)
- * @method array getTransition()
+ * @method ArrayOfTransitionsType addTransition(Transition $transition)
+ * @method Transition[] getTransition()
  * @method ArrayOfTransitionsType setTransition(array $transition)
  */
 class ArrayOfTransitionsType extends Type

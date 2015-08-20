@@ -8,7 +8,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetMailTipsResponseMessageType
  *
- * @method array getResponseMessages()
+ * @method GetMailTipsResponseMessageType addResponseMessages(MailTipsResponseMessageType $responseMessages)
+ * @method MailTipsResponseMessageType[] getResponseMessages()
  * @method GetMailTipsResponseMessageType setResponseMessages(array $responseMessages)
  */
 class GetMailTipsResponseMessageType extends ResponseMessageType

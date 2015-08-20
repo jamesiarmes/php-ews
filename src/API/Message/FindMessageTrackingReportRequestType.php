@@ -32,7 +32,8 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method FindMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
  * @method string getServerHint()
  * @method FindMessageTrackingReportRequestType setServerHint(string $serverHint)
- * @method array getProperties()
+ * @method FindMessageTrackingReportRequestType addProperties(\jamesiarmes\PEWS\API\Type\TrackingPropertyType $properties)
+ * @method \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] getProperties()
  * @method FindMessageTrackingReportRequestType setProperties(array $properties)
  */
 class FindMessageTrackingReportRequestType extends BaseRequestType

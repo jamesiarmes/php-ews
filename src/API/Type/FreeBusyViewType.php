@@ -10,11 +10,13 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FreeBusyView
  *
- * @method array getFreeBusyViewType()
+ * @method FreeBusyViewType addFreeBusyViewType(string $freeBusyViewType)
+ * @method string[] getFreeBusyViewType()
  * @method FreeBusyViewType setFreeBusyViewType(array $freeBusyViewType)
  * @method string getMergedFreeBusy()
  * @method FreeBusyViewType setMergedFreeBusy(string $mergedFreeBusy)
- * @method array getCalendarEventArray()
+ * @method FreeBusyViewType addCalendarEventArray(CalendarEventType $calendarEventArray)
+ * @method CalendarEventType[] getCalendarEventArray()
  * @method FreeBusyViewType setCalendarEventArray(array $calendarEventArray)
  * @method WorkingHoursType getWorkingHours()
  * @method FreeBusyViewType setWorkingHours(WorkingHoursType $workingHours)

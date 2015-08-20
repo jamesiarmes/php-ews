@@ -12,7 +12,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method EmailAddressType getRecipientAddress()
  * @method MailTipsType setRecipientAddress(EmailAddressType $recipientAddress)
- * @method array getPendingMailTips()
+ * @method MailTipsType addPendingMailTips(string $pendingMailTips)
+ * @method string[] getPendingMailTips()
  * @method MailTipsType setPendingMailTips(array $pendingMailTips)
  * @method OutOfOfficeMailTipType getOutOfOffice()
  * @method MailTipsType setOutOfOffice(OutOfOfficeMailTipType $outOfOffice)

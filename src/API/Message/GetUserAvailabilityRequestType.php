@@ -10,7 +10,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method \jamesiarmes\PEWS\API\Type\TimeZone getTimeZone()
  * @method GetUserAvailabilityRequestType setTimeZone(\jamesiarmes\PEWS\API\Type\TimeZone $timeZone)
- * @method array getMailboxDataArray()
+ * @method GetUserAvailabilityRequestType addMailboxDataArray(\jamesiarmes\PEWS\API\Type\MailboxDataType $mailboxDataArray)
+ * @method \jamesiarmes\PEWS\API\Type\MailboxDataType[] getMailboxDataArray()
  * @method GetUserAvailabilityRequestType setMailboxDataArray(array $mailboxDataArray)
  * @method \jamesiarmes\PEWS\API\Type\FreeBusyViewOptions getFreeBusyViewOptions()
  * @method GetUserAvailabilityRequestType setFreeBusyViewOptions(\jamesiarmes\PEWS\API\Type\FreeBusyViewOptions $freeBusyViewOptions)

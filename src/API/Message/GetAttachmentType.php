@@ -10,7 +10,8 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method \jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType getAttachmentShape()
  * @method GetAttachmentType setAttachmentShape(\jamesiarmes\PEWS\API\Type\AttachmentResponseShapeType $attachmentShape)
- * @method array getAttachmentIds()
+ * @method GetAttachmentType addAttachmentIds(\jamesiarmes\PEWS\API\Type\RequestAttachmentIdType $attachmentIds)
+ * @method \jamesiarmes\PEWS\API\Type\RequestAttachmentIdType[] getAttachmentIds()
  * @method GetAttachmentType setAttachmentIds(array $attachmentIds)
  */
 class GetAttachmentType extends BaseRequestType

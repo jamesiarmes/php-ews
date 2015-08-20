@@ -10,7 +10,8 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfTrackingPropertiesType
  *
- * @method array getTrackingPropertyType()
+ * @method ArrayOfTrackingPropertiesType addTrackingPropertyType(TrackingPropertyType $trackingPropertyType)
+ * @method TrackingPropertyType[] getTrackingPropertyType()
  * @method ArrayOfTrackingPropertiesType setTrackingPropertyType(array $trackingPropertyType)
  */
 class ArrayOfTrackingPropertiesType extends Type
