@@ -1,16 +1,16 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\AcceptItemType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents an Accept reply to a meeting request.
+ * Class representing AcceptItemType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: AcceptItemType
  */
 class AcceptItemType extends WellKnownResponseObjectType
 {
 
+
 }
+

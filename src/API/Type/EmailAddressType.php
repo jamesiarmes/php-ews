@@ -1,58 +1,40 @@
 <?php
-/**
- * Contains EWSType_EmailAddressType.
- */
-/**
- * Represents an e-mail address.
- *
- * @package php-ews\Types
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
+/**
+ * Class representing EmailAddressType
+ *
+ *
+ * XSD Type: EmailAddress
+ *
+ * @method EmailAddressType getName()
+ * @method EmailAddressType setName(string $name)
+ * @method EmailAddressType getAddress()
+ * @method EmailAddressType setAddress(string $address)
+ * @method EmailAddressType getRoutingType()
+ * @method EmailAddressType setRoutingType(string $routingType)
+ */
 class EmailAddressType extends Type
 {
+
     /**
-     * The e-mail address that is represented.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $name
      */
-    public $EmailAddress;
+    protected $name = null;
+
     /**
-     * Specifies the item identifier for the e-mail address.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_ItemIdType
+     * @property string $address
      */
-    public $ItemId;
+    protected $address = null;
+
     /**
-     * Specifies the type of mailbox.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_MailboxTypeType
+     * @property string $routingType
      */
-    public $MailboxType;
-    /**
-     * Specifies the name of the mailbox that is associated with the e-mail
-     * address.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     */
-    public $Name;
-    /**
-     * Specifies the type of routing for the e-mail address.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_RoutingTypeType
-     */
-    public $RoutingType;
+    protected $routingType = null;
+
+
 }
+

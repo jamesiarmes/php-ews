@@ -1,23 +1,24 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\IntervalRecurrencePatternBaseType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 /**
- * Base class for recurrence patterns with an interval.
+ * Class representing IntervalRecurrencePatternBaseType
  *
- * @package php-ews\Types
+ *
+ * XSD Type: IntervalRecurrencePatternBaseType
+ *
+ * @method IntervalRecurrencePatternBaseType getInterval()
+ * @method IntervalRecurrencePatternBaseType setInterval(integer $interval)
  */
-abstract class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
+class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
 {
+
     /**
-     * Defines the interval between two consecutive recurring pattern items.
-     *
-     * @since Exchange 2007
-     *
-     * @var integer
+     * @property integer $interval
      */
-    public $Interval;
+    protected $interval = null;
+
+
 }
+

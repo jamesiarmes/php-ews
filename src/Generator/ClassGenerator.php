@@ -39,11 +39,9 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             && class_exists($type->getNamespace() . '\\String')) {
             $extends->setName('String');
             $extends->setNamespace($type->getNamespace());
-        }
-        elseif ($extends->getName() == "string"
+        } elseif ($extends->getName() == "string"
             && $extends->getNamespace() == ""
-            && class_exists(($type->getNamespace())))
-        {
+            && class_exists(($type->getNamespace()))) {
             $extendNamespace = $type->getNamespace();
             $extendNamespace = explode('\\', $extendNamespace);
             $extendClass = array_pop($extendNamespace);
@@ -110,8 +108,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
         if (!$class->hasProperty($prop->getName())) {
             $class->addPropertyFromGenerator($generatedProp);
-        }
-        else {
+        } else {
             $generatedProp = $class->getProperty($prop->getName());
         }
 

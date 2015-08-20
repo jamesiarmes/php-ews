@@ -1,35 +1,34 @@
 <?php
-/**
- * Contains EWSType_NonEmptyArrayOfBaseFolderIdsType.
- */
-/**
- * Represents the collection of folders that will be mined to determine the
- * contents of a search folder.
- *
- * @package php-ews\Types
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
+/**
+ * Class representing NonEmptyArrayOfBaseFolderIdsType
+ *
+ *
+ * XSD Type: NonEmptyArrayOfBaseFolderIdsType
+ *
+ * @method NonEmptyArrayOfBaseFolderIdsType getFolderId()
+ * @method NonEmptyArrayOfBaseFolderIdsType setFolderId(array $folderId)
+ * @method NonEmptyArrayOfBaseFolderIdsType getDistinguishedFolderId()
+ * @method NonEmptyArrayOfBaseFolderIdsType setDistinguishedFolderId(array $distinguishedFolderId)
+ */
 class NonEmptyArrayOfBaseFolderIdsType extends Type
 {
+
     /**
-     * Identifies MicrosoftExchange Server 2007 folders that can be referenced
-     * by name.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_DistinguishedFolderIdType
+     * @property \jamesiarmes\PEWS\API\Type\FolderIdType[] $folderId
      */
-    public $DistinguishedFolderId;
+    protected $folderId = null;
+
     /**
-     * Contains the identifier and change key of a folder.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_FolderIdType
+     * @property \jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType[]
+     * $distinguishedFolderId
      */
-    public $FolderId;
+    protected $distinguishedFolderId = null;
+
+
 }
+

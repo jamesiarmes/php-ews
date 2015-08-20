@@ -1,49 +1,38 @@
 <?php
-/**
- * Contains EWSType_DistinguishedFolderIdType.
- */
-/**
- * Identifies folders that can be referenced by name.
- *
- * @package php-ews\Types
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
-use jamesiarmes\PEWS\API\Type;
-
-class DistinguishedFolderIdType extends Type
+/**
+ * Class representing DistinguishedFolderIdType
+ *
+ * Identifier for a distinguished folder
+ * XSD Type: DistinguishedFolderIdType
+ *
+ * @method DistinguishedFolderIdType getId()
+ * @method DistinguishedFolderIdType setId(string $id)
+ * @method DistinguishedFolderIdType getChangeKey()
+ * @method DistinguishedFolderIdType setChangeKey(string $changeKey)
+ * @method DistinguishedFolderIdType getMailbox()
+ * @method DistinguishedFolderIdType setMailbox(EmailAddressType $mailbox)
+ */
+class DistinguishedFolderIdType extends BaseFolderIdType
 {
+
     /**
-     * Contains a string that identifies a version of a folder that is
-     * identified by the Id attribute.
-     *
-     * This attribute is optional. Use this attribute to make sure that the
-     * correct version of a folder is used.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
+     * @property string $id
      */
-    public $ChangeKey;
+    protected $id = null;
+
     /**
-     * Identifies a default folder.
-     *
-     * This attribute is required.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_DistinguishedFolderIdNameType
+     * @property string $changeKey
      */
-    public $Id;
+    protected $changeKey = null;
+
     /**
-     * Identifies a primary SMTP address.
-     *
-     * Proxy addresses are not allowed.
-     *
-     * @since Exchange 2007
-     *
-     * @var EWSType_EmailAddressType
+     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
      */
-    public $Mailbox;
+    protected $mailbox = null;
+
+
 }
+

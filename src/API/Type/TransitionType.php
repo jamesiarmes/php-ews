@@ -1,28 +1,26 @@
 <?php
-/**
- * Contains \jamesiarmes\PEWS\API\Type\TransitionType.
- */
 
 namespace jamesiarmes\PEWS\API\Type;
 
 use jamesiarmes\PEWS\API\Type;
 
 /**
- * Represents a time zone transition.
+ * Class representing TransitionType
  *
- * @package php-ews\Types
  *
- * @todo Alter RecurringDateTransitionType to extend this class.
+ * XSD Type: TransitionType
+ *
+ * @method TransitionType getTo()
+ * @method TransitionType setTo(TransitionTargetType $to)
  */
 class TransitionType extends Type
 {
+
     /**
-     * Specifies the Period or TransitionsGroup that is the target of the time
-     * zone transition.
-     *
-     * @since Exchange 2010
-     *
-     * @var \jamesiarmes\PEWS\API\Type\TransitionTargetType
+     * @property \jamesiarmes\PEWS\API\Type\TransitionTargetType $to
      */
-    public $To;
+    protected $to = null;
+
+
 }
+
