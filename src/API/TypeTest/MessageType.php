@@ -21,7 +21,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method MessageType getIsDeliveryReceiptRequested()
  * @method MessageType setIsDeliveryReceiptRequested(boolean $isDeliveryReceiptRequested)
  * @method MessageType getConversationIndex()
- * @method MessageType setConversationIndex(mixed $conversationIndex)
+ * @method MessageType setConversationIndex(string $conversationIndex)
  * @method MessageType getConversationTopic()
  * @method MessageType setConversationTopic(string $conversationTopic)
  * @method MessageType getFrom()
@@ -75,7 +75,7 @@ class MessageType extends ItemType
     protected $isDeliveryReceiptRequested = null;
 
     /**
-     * @property mixed $conversationIndex
+     * @property string $conversationIndex
      */
     protected $conversationIndex = null;
 

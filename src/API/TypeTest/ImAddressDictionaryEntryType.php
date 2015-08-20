@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing ImAddressDictionaryEntryType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method ImAddressDictionaryEntryType getKey()
  * @method ImAddressDictionaryEntryType setKey(string $key)
  */
-class ImAddressDictionaryEntryType extends String
+class ImAddressDictionaryEntryType extends TypeTest
 {
 
     /**

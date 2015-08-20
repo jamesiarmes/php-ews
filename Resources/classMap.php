@@ -220,7 +220,7 @@ return array (
   'CreateRuleOperationType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\CreateRuleOperationType',
   'DailyRecurrencePatternType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DailyRecurrencePatternType',
   'DailyRegeneratingPatternType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DailyRegeneratingPatternType',
-  'DateTimePrecisionType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DateTimePrecision',
+  'DateTimePrecisionType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DateTimePrecisionType',
   'DeclineItemType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DeclineItemType',
   'DelegatePermissionsType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DelegatePermissionsType',
   'DelegateUserType' => '\\jamesiarmes\\PEWS\\API\\TypeTest\\DelegateUserType',

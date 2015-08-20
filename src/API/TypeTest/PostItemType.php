@@ -9,7 +9,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * XSD Type: PostItemType
  *
  * @method PostItemType getConversationIndex()
- * @method PostItemType setConversationIndex(mixed $conversationIndex)
+ * @method PostItemType setConversationIndex(string $conversationIndex)
  * @method PostItemType getConversationTopic()
  * @method PostItemType setConversationTopic(string $conversationTopic)
  * @method PostItemType getFrom()
@@ -29,7 +29,7 @@ class PostItemType extends ItemType
 {
 
     /**
-     * @property mixed $conversationIndex
+     * @property string $conversationIndex
      */
     protected $conversationIndex = null;
 

@@ -40,6 +40,21 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $extends->setName('String');
             $extends->setNamespace($type->getNamespace());
         }
+        elseif ($extends->getName() == "string"
+            && $extends->getNamespace() == ""
+            && class_exists(($type->getNamespace())))
+        {
+            $extendNamespace = $type->getNamespace();
+            $extendNamespace = explode('\\', $extendNamespace);
+            $extendClass = array_pop($extendNamespace);
+            $extendNamespace = implode('\\', $extendNamespace);
+
+            $extends = new PHPClass();
+            $extends->setName($extendClass);
+            $extends->setNamespace($extendNamespace);
+
+            $class->setExtendedClass($extends);
+        }
 
         $docblock = new DocBlockGenerator("Class representing " . $type->getName());
         if ($type->getDoc()) {
@@ -68,6 +83,8 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 
     protected function handleBody(Generator\ClassGenerator $class, PHPClass $type)
     {
+        $this->handleEnumeration($class, $type);
+
         foreach ($type->getProperties() as $prop) {
             if ($prop->getName() !== '__value') {
                 $this->handleProperty($class, $prop);
@@ -91,10 +108,11 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $generatedProp = new PropertyGenerator($prop->getName());
         $generatedProp->setVisibility(PropertyGenerator::VISIBILITY_PROTECTED);
 
-        $class->addPropertyFromGenerator($generatedProp);
-
-        if ($prop->getType() && (!$prop->getType()->getNamespace() && $prop->getType()->getName() == "array")) {
-            // $generatedProp->setDefaultValue(array(), PropertyValueGenerator::TYPE_AUTO, PropertyValueGenerator::OUTPUT_SINGLE_LINE);
+        if (!$class->hasProperty($prop->getName())) {
+            $class->addPropertyFromGenerator($generatedProp);
+        }
+        else {
+            $generatedProp = $class->getProperty($prop->getName());
         }
 
         $docBlock = new DocBlockGenerator();
@@ -180,6 +198,22 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $docblock->setTag($tag);
 
         return;
+    }
+
+    protected function handleEnumeration(Generator\ClassGenerator $class, PHPClass $type)
+    {
+        if ($type->getChecks('__value') && isset($type->getChecks('__value')['enumeration'])) {
+            $enums = $type->getChecks('__value')['enumeration'];
+
+            foreach ($enums as $enum) {
+                $name = strtoupper($enum['value']);
+                $value = strtoupper($enum['value']);
+
+                if (!$class->hasConstant($name)) {
+                    $class->addConstant($name, $value);
+                }
+            }
+        }
     }
 
     protected function isOneType(PHPClass $type, $onlyParent = false)

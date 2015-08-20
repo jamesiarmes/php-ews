@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing ValueType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method ValueType getName()
  * @method ValueType setName(string $name)
  */
-class ValueType extends String
+class ValueType extends TypeTest
 {
 
     /**

@@ -19,7 +19,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * @method UploadItemType getItemId()
  * @method UploadItemType setItemId(ItemIdType $itemId)
  * @method UploadItemType getData()
- * @method UploadItemType setData(mixed $data)
+ * @method UploadItemType setData(string $data)
  */
 class UploadItemType extends TypeTest
 {
@@ -45,7 +45,7 @@ class UploadItemType extends TypeTest
     protected $itemId = null;
 
     /**
-     * @property mixed $data
+     * @property string $data
      */
     protected $data = null;
 

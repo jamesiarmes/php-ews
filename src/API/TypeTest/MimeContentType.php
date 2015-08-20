@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing MimeContentType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method MimeContentType getCharacterSet()
  * @method MimeContentType setCharacterSet(string $characterSet)
  */
-class MimeContentType extends String
+class MimeContentType extends TypeTest
 {
 
     /**

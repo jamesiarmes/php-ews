@@ -8,6 +8,10 @@ namespace jamesiarmes\PEWS\API\TypeTest;
 class DateTimePrecision extends DateTimePrecisionType
 {
 
+    const SECONDS = 'SECONDS';
+
+    const MILLISECONDS = 'MILLISECONDS';
+
 
 }
 

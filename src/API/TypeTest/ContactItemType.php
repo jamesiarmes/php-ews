@@ -81,7 +81,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method ContactItemType getNotes()
  * @method ContactItemType setNotes(string $notes)
  * @method ContactItemType getPhoto()
- * @method ContactItemType setPhoto(mixed $photo)
+ * @method ContactItemType setPhoto(string $photo)
  * @method ContactItemType getUserSMIMECertificate()
  * @method ContactItemType setUserSMIMECertificate(array $userSMIMECertificate)
  * @method ContactItemType getMSExchangeCertificate()
@@ -286,17 +286,17 @@ class ContactItemType extends ItemType
     protected $notes = null;
 
     /**
-     * @property mixed $photo
+     * @property string $photo
      */
     protected $photo = null;
 
     /**
-     * @property mixed[] $userSMIMECertificate
+     * @property string[] $userSMIMECertificate
      */
     protected $userSMIMECertificate = null;
 
     /**
-     * @property mixed[] $mSExchangeCertificate
+     * @property string[] $mSExchangeCertificate
      */
     protected $mSExchangeCertificate = null;
 

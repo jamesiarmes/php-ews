@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing BodyType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method BodyType getBodyType()
  * @method BodyType setBodyType(string $bodyType)
  */
-class BodyType extends String
+class BodyType extends TypeTest
 {
 
     /**

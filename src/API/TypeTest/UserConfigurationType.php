@@ -17,9 +17,9 @@ use jamesiarmes\PEWS\API\TypeTest;
  * @method UserConfigurationType getDictionary()
  * @method UserConfigurationType setDictionary(array $dictionary)
  * @method UserConfigurationType getXmlData()
- * @method UserConfigurationType setXmlData(mixed $xmlData)
+ * @method UserConfigurationType setXmlData(string $xmlData)
  * @method UserConfigurationType getBinaryData()
- * @method UserConfigurationType setBinaryData(mixed $binaryData)
+ * @method UserConfigurationType setBinaryData(string $binaryData)
  */
 class UserConfigurationType extends TypeTest
 {
@@ -42,12 +42,12 @@ class UserConfigurationType extends TypeTest
     protected $dictionary = null;
 
     /**
-     * @property mixed $xmlData
+     * @property string $xmlData
      */
     protected $xmlData = null;
 
     /**
-     * @property mixed $binaryData
+     * @property string $binaryData
      */
     protected $binaryData = null;
 

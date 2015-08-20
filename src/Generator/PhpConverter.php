@@ -56,6 +56,10 @@ class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
         {
             return "mixed";
         });
+        $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "base64Binary", function (Type $type)
+        {
+            return "string";
+        });
     }
 
     private $classes = [];
@@ -161,6 +165,10 @@ class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
             $class->setDoc($element->getDoc());
             $class->type = $element->getType();
 
+            if ($alias = $this->getTypeAlias($element)) {
+                $class->setName($alias);
+            }
+
             if (! isset($this->namespaces[$schema->getTargetNamespace()])) {
                 throw new Exception(sprintf("Can't find a PHP namespace to '%s' namespace", $schema->getTargetNamespace()));
             }
@@ -235,7 +243,7 @@ class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
 
             $this->visitTypeBase($class, $type);
 
-            if ($type instanceof SimpleType){
+            if ($type instanceof SimpleType && $type->getName() != "DateTimePrecisionType"){
                 $this->classes[spl_object_hash($type)]["skip"] = true;
                 return $class;
             }
