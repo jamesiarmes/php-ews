@@ -15,8 +15,17 @@ use DateTime;
  */
 class CalendarAPI extends API
 {
-    protected $_folderId;
+    /**
+     * @var Type\FolderIdType
+     */
+    protected $folderId;
 
+    /**
+     * Pick a Calendar based on it's name
+     *
+     * @param string|null $displayName
+     * @return $this
+     */
     public function pickCalendar($displayName = null)
     {
         if ($displayName == 'default.calendar' || $displayName == null) {
@@ -25,24 +34,28 @@ class CalendarAPI extends API
             $folder = $this->getFolderByDisplayName($displayName, 'calendar');
         }
 
-        $this->_folderId = $folder->getFolderId();
+        $this->folderId = $folder->getFolderId();
         return $this;
     }
 
+    /**
+     * @return Type\FolderIdType
+     */
     public function getFolderId()
     {
-        return $this->_folderId;
+        return $this->folderId;
     }
 
     /**
      * Create one or more calendar items
      *
      * @param $items CalendarItem[]|CalendarItem|Array or more calendar items to create
-     * @return \jamesiarmes\PEWS\API\CreateItemResponseType
+     * @return Type\ItemIdType[]
      */
     public function createCalendarItems($items)
     {
-        //If the item passed in is an object, or if it's an assosiative array waiting to be an object, let's put it in to an array
+        //If the item passed in is an object, or if it's an associative]
+        // array waiting to be an object, let's put it in to an array
         if (!is_array($items) || Type::arrayIsAssoc($items)) {
             $items = array($items);
         }
@@ -70,7 +83,7 @@ class CalendarAPI extends API
      * @param string|DateTime $start
      * @param string|DateTime $end
      * @param array $options
-     * @return mixed
+     * @return Type\CalendarItemType[]
      */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
@@ -116,6 +129,11 @@ class CalendarAPI extends API
         return $items;
     }
 
+    /**
+     * @param $id
+     * @param $changeKey
+     * @return Type\CalendarItemType
+     */
     public function getCalendarItem($id, $changeKey)
     {
         return $this->getItem([ 'Id' => $id, 'ChangeKey' => $changeKey ]);
@@ -127,7 +145,7 @@ class CalendarAPI extends API
      * @param $id
      * @param $changeKey
      * @param $changes
-     * @return mixed
+     * @return Type\CalendarItemType[]
      */
     public function updateCalendarItem($id, $changeKey, $changes)
     {
@@ -165,6 +183,11 @@ class CalendarAPI extends API
         return $items;
     }
 
+    /**
+     * @param $itemId
+     * @param $changeKey
+     * @return bool
+     */
     public function deleteCalendarItem($itemId, $changeKey)
     {
         return $this->deleteItems(array(
@@ -175,6 +198,11 @@ class CalendarAPI extends API
         ));
     }
 
+    /**
+     * @param string $start
+     * @param string $end
+     * @param array $options
+     */
     public function deleteAllCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
         $items = $this->getCalendarItems($start, $end, $options);

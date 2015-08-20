@@ -16,7 +16,7 @@ $api = new API();
 $api->buildClient('server', 'username', 'password');
 
 //Get the folder to save the event to
-$folderId = $api->getFolderByDistinguishedId('calendar');
+$folder = $api->getFolderByDistinguishedId('calendar');
 
 //Create our event
 $item = array('CalendarItem'=>array(
@@ -28,7 +28,7 @@ $item = array('CalendarItem'=>array(
 $options = array(
     'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
     'SavedItemFolderId' => array(
-        'FolderId' => array('Id' => $folderId->Id)
+        'FolderId' => array('Id' => $folder->getFolderId()->getId())
     )
 );
 

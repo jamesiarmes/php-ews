@@ -205,6 +205,10 @@ class API
         return true;
     }
 
+    /**
+     * @param $identifier
+     * @return Type\BaseFolderType
+     */
     public function getFolder($identifier)
     {
         $request = array(
@@ -223,7 +227,7 @@ class API
      * Get a folder by it's distinguishedId
      *
      * @param string $distinguishedId
-     * @return mixed
+     * @return Type\BaseFolderType
      */
     public function getFolderByDistinguishedId($distinguishedId)
     {
@@ -234,6 +238,10 @@ class API
         ));
     }
 
+    /**
+     * @param $folderId
+     * @return Type\BaseFolderType
+     */
     public function getFolderByFolderId($folderId)
     {
         return $this->getFolder(array(
@@ -241,6 +249,12 @@ class API
         ));
     }
 
+    /**
+     * @param $folderName
+     * @param string $parentFolder
+     * @param array $options
+     * @return bool|Type\BaseFolderType
+     */
     public function getFolderByDisplayName($folderName, $parentFolder = 'root', $options = array())
     {
         $request = array(

@@ -9,19 +9,21 @@ $calendar = $api->getCalendar();
 //Get our item to update
 $item = $calendar->getCalendarItems()[0];
 
-$itemId = $item->ItemId;
+$itemId = $item->getItemId();
+
+$newStart = new \DateTime('9:00');
 
 //Let's send off the request to update
-$response = $calendar->updateCalendarItem($itemId->Id, $itemId->ChangeKey, array(
+$updateItems = $calendar->updateCalendarItem($itemId->getId(), $itemId->getChangeKey(), array(
     'Subject' => 'Testing Update 2',
     'Start' => $newStart->format('c')
 ));
 
-$newItemId = $response[0]->CalendarItem->ItemId;
+$newItemId = $updateItems[0]->getItemId();
 
 //You can also update the series of a recurring event,
 // if you have it's Master ID (The ID passed back when you first created the series)
-$response = $calendar->updateCalendarItem($masterItem->Id, $masterItem->ChangeKey, array(
+$response = $calendar->updateCalendarItem($masterItem->getId(), $masterItem->getChangeKey(), array(
     'Subject' => 'Test Update 2',
     'Recurrence' => array(
         'WeeklyRecurrence' => array(

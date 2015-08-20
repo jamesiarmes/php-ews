@@ -10,7 +10,7 @@ $calendar = $api->getCalendar();
 $changes = $calendar->listChanges();
 
 //We use this to keep track of when we last asked for items
-$syncState = $changes->SyncState;
+$syncState = $changes->getSyncState();
 
 //Get a list of changes since we last asked for them
 $changesSinceLsatCheck = $calendar->listChanges($syncState);
