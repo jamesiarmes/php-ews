@@ -25,4 +25,9 @@ class FolderIdType extends BaseFolderIdType
      * @var string
      */
     protected $changeKey = null;
+
+    public function toArray()
+    {
+        return [ 'Id' => $this->id, 'ChangeKey' => $this->changeKey ];
+    }
 }

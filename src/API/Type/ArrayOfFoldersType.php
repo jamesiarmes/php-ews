@@ -48,4 +48,30 @@ class ArrayOfFoldersType extends Type
      * @var \jamesiarmes\PEWS\API\Type\TasksFolderType[]
      */
     protected $tasksFolder = null;
+
+    public function getAllFolders()
+    {
+        $folders = array();
+        if ($this->folder !== null) {
+            $folders = array_merge($folders, $this->folder);
+        }
+
+        if ($this->calendarFolder !== null) {
+            $folders = array_merge($folders, $this->calendarFolder);
+        }
+
+        if ($this->contactsFolder !== null) {
+            $folders = array_merge($folders, $this->contactsFolder);
+        }
+
+        if ($this->searchFolder !== null) {
+            $folders = array_merge($folders, $this->searchFolder);
+        }
+
+        if ($this->tasksFolder !== null) {
+            $folders = array_merge($folders, $this->tasksFolder);
+        }
+
+        return $folders;
+    }
 }

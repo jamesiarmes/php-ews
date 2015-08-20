@@ -179,8 +179,8 @@ class APITest extends PHPUnit_Framework_TestCase
         );
 
         $item = $client->createItems($args[0]['Items'], $args[1]);
-        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
-        $client->deleteItems($item->ItemId, ['SendMeetingCancellations' => 'SendToNone']);
+        $client->deleteItems($item->toArray(), ['SendMeetingCancellations' => 'SendToNone']);
+        $client->deleteItems($item->toArray(), ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
@@ -194,7 +194,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $folder = $client->getFolderByDisplayName($input);
 
-        $this->assertEquals($expected, $folder->DisplayName);
+        $this->assertEquals($expected, $folder->getDisplayName());
     }
 
     /**
@@ -208,9 +208,9 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $folder = call_user_func_array(array($client, 'getFolderByDisplayname'), $folderInput);
 
-        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->FolderId->Id));
-        $this->assertArrayHasKey('SyncState', $response);
-        $this->assertArrayHasKey('Changes', $response);
+        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->getFolderId()->getId()));
+        $this->assertNotNull($response->getSyncState());
+        $this->assertNotNull($response->getChanges());
     }
 
     /**

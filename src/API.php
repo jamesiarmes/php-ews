@@ -259,9 +259,9 @@ class API
 
         /** @var \jamesiarmes\PEWS\API\Message\FindFolderResponseMessageType $folders */
         $folders = $this->getClient()->FindFolder($request);
-        $folders = $folders->getFolders()->getCalendarFolder();
+        $folders = $folders->getFolders();
 
-        foreach ($folders as $folder) {
+        foreach ($folders->getAllFolders() as $folder) {
             if ($folder->getDisplayName() == $folderName) {
                 return $folder;
             }
