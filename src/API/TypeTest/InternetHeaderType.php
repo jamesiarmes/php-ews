@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing InternetHeaderType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method InternetHeaderType getHeaderName()
  * @method InternetHeaderType setHeaderName(string $headerName)
  */
-class InternetHeaderType extends String
+class InternetHeaderType extends TypeTest
 {
 
     /**

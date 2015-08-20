@@ -11,7 +11,7 @@ namespace jamesiarmes\PEWS\API\Messages;
  * @method ExportItemsResponseMessageType getItemId()
  * @method ExportItemsResponseMessageType setItemId(\jamesiarmes\PEWS\API\TypeTest\ItemIdType $itemId)
  * @method ExportItemsResponseMessageType getData()
- * @method ExportItemsResponseMessageType setData(mixed $data)
+ * @method ExportItemsResponseMessageType setData(string $data)
  */
 class ExportItemsResponseMessageType extends ResponseMessageType
 {
@@ -22,7 +22,7 @@ class ExportItemsResponseMessageType extends ResponseMessageType
     protected $itemId = null;
 
     /**
-     * @property mixed $data
+     * @property string $data
      */
     protected $data = null;
 

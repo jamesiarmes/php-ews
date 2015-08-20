@@ -87,7 +87,7 @@ use jamesiarmes\PEWS\API\TypeTest;
  * @method ItemType getUniqueBody()
  * @method ItemType setUniqueBody(BodyType $uniqueBody)
  * @method ItemType getStoreEntryId()
- * @method ItemType setStoreEntryId(mixed $storeEntryId)
+ * @method ItemType setStoreEntryId(string $storeEntryId)
  */
 class ItemType extends TypeTest
 {
@@ -295,7 +295,7 @@ class ItemType extends TypeTest
     protected $uniqueBody = null;
 
     /**
-     * @property mixed $storeEntryId
+     * @property string $storeEntryId
      */
     protected $storeEntryId = null;
 

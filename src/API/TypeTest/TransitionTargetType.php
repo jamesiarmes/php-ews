@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing TransitionTargetType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method TransitionTargetType getKind()
  * @method TransitionTargetType setKind(string $kind)
  */
-class TransitionTargetType extends String
+class TransitionTargetType extends TypeTest
 {
 
     /**

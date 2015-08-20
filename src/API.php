@@ -171,7 +171,7 @@ class API
 
         $request = Type::buildFromArray($request);
 
-        return $this->getClient()->UpdateItem($request);
+        return $this->getClient()->UpdateItem($request)->getItems();
     }
 
     public function deleteItems($items, $options = array())

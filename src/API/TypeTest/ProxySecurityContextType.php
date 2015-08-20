@@ -2,7 +2,7 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
-use \Base64BinaryType;
+use jamesiarmes\PEWS\API\TypeTest;
 
 /**
  * Class representing ProxySecurityContextType
@@ -10,7 +10,7 @@ use \Base64BinaryType;
  *
  * XSD Type: ProxySecurityContextType
  */
-class ProxySecurityContextType extends Base64BinaryType
+class ProxySecurityContextType extends TypeTest
 {
 
 

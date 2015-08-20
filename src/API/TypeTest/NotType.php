@@ -84,7 +84,7 @@ class NotType extends SearchExpressionType
     protected $isLessThanOrEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\TypeTest\And[] $and
+     * @property \jamesiarmes\PEWS\API\TypeTest\AndElement[] $and
      */
     protected $and = null;
 
@@ -94,7 +94,7 @@ class NotType extends SearchExpressionType
     protected $not = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\TypeTest\Or[] $or
+     * @property \jamesiarmes\PEWS\API\TypeTest\OrElement[] $or
      */
     protected $or = null;
 

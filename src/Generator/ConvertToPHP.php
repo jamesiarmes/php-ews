@@ -10,6 +10,9 @@ use Goetas\Xsd\XsdToPhp\AbstractConverter;
 use Symfony\Component\Console\Output\OutputInterface;
 use Zend\Code\Generator\FileGenerator;
 use Goetas\Xsd\XsdToPhp\Naming\NamingStrategy;
+use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
+use Zend\Code\Generator;
+use Zend\Code\Reflection\ClassReflection;
 
 /**
  * Created by PhpStorm.
@@ -62,11 +65,23 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
         $pathGenerator = new Psr4PathGenerator($targets);
         $progress = $this->getHelperSet()->get('progress');
 
+        $converter->addAliasMap('http://schemas.microsoft.com/exchange/services/2006/types', 'Or', function($type) use ($schemas)
+        {
+            return "OrElement";
+        });
+
+        $converter->addAliasMap('http://schemas.microsoft.com/exchange/services/2006/types', 'And', function($type) use ($schemas)
+        {
+            return "AndElement";
+        });
+
         $items = $converter->convert($schemas);
         $progress->start($output, count($items));
         $classMap = [];
 
         foreach ($items as $item) {
+            /** @var PHPClass $item */
+
             $progress->advance(1, true);
             $output->write(" Creating <info>" . $output->getFormatter()->escape($item->getFullName()) . "</info>... ");
             $path = $pathGenerator->getPath($item);
@@ -74,6 +89,12 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             $fileGen = new FileGenerator();
             $fileGen->setFilename($path);
             $classGen = new \Zend\Code\Generator\ClassGenerator();
+
+            $itemClass = $item->getNamespace() . '\\' . $item->getName();
+            if (class_exists($itemClass)) {
+                $existingClass = Generator\ClassGenerator::fromReflection(new ClassReflection($itemClass));
+                $classGen = $existingClass;
+            }
 
             if ($generator->generate($classGen, $item)) {
                 $fileGen->setClass($classGen);

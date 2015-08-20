@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS\API\TypeTest;
 
+use jamesiarmes\PEWS\API\TypeTest;
+
 /**
  * Class representing PhoneNumberDictionaryEntryType
  *
@@ -11,7 +13,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method PhoneNumberDictionaryEntryType getKey()
  * @method PhoneNumberDictionaryEntryType setKey(string $key)
  */
-class PhoneNumberDictionaryEntryType extends String
+class PhoneNumberDictionaryEntryType extends TypeTest
 {
 
     /**

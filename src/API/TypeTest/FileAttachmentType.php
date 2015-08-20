@@ -11,7 +11,7 @@ namespace jamesiarmes\PEWS\API\TypeTest;
  * @method FileAttachmentType getIsContactPhoto()
  * @method FileAttachmentType setIsContactPhoto(boolean $isContactPhoto)
  * @method FileAttachmentType getContent()
- * @method FileAttachmentType setContent(mixed $content)
+ * @method FileAttachmentType setContent(string $content)
  */
 class FileAttachmentType extends AttachmentType
 {
@@ -22,7 +22,7 @@ class FileAttachmentType extends AttachmentType
     protected $isContactPhoto = null;
 
     /**
-     * @property mixed $content
+     * @property string $content
      */
     protected $content = null;
 
