@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PostReplyItemType
  *
- * @method PostReplyItemType getNewBodyContent()
+ * @method BodyType getNewBodyContent()
  * @method PostReplyItemType setNewBodyContent(BodyType $newBodyContent)
  */
 class PostReplyItemType extends PostReplyItemBaseType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BodyType $newBodyContent
+     * @var \jamesiarmes\PEWS\API\Type\BodyType
      */
     protected $newBodyContent = null;
 }

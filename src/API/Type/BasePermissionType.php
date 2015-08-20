@@ -10,63 +10,63 @@ use jamesiarmes\PEWS\API\Type;
  * A permission on a folder
  * XSD Type: BasePermissionType
  *
- * @method BasePermissionType getUserId()
+ * @method UserIdType getUserId()
  * @method BasePermissionType setUserId(UserIdType $userId)
- * @method BasePermissionType getCanCreateItems()
+ * @method boolean getCanCreateItems()
  * @method BasePermissionType setCanCreateItems(boolean $canCreateItems)
- * @method BasePermissionType getCanCreateSubFolders()
+ * @method boolean getCanCreateSubFolders()
  * @method BasePermissionType setCanCreateSubFolders(boolean $canCreateSubFolders)
- * @method BasePermissionType getIsFolderOwner()
+ * @method boolean getIsFolderOwner()
  * @method BasePermissionType setIsFolderOwner(boolean $isFolderOwner)
- * @method BasePermissionType getIsFolderVisible()
+ * @method boolean getIsFolderVisible()
  * @method BasePermissionType setIsFolderVisible(boolean $isFolderVisible)
- * @method BasePermissionType getIsFolderContact()
+ * @method boolean getIsFolderContact()
  * @method BasePermissionType setIsFolderContact(boolean $isFolderContact)
- * @method BasePermissionType getEditItems()
+ * @method string getEditItems()
  * @method BasePermissionType setEditItems(string $editItems)
- * @method BasePermissionType getDeleteItems()
+ * @method string getDeleteItems()
  * @method BasePermissionType setDeleteItems(string $deleteItems)
  */
 class BasePermissionType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserIdType $userId
+     * @var \jamesiarmes\PEWS\API\Type\UserIdType
      */
     protected $userId = null;
 
     /**
-     * @property boolean $canCreateItems
+     * @var boolean
      */
     protected $canCreateItems = null;
 
     /**
-     * @property boolean $canCreateSubFolders
+     * @var boolean
      */
     protected $canCreateSubFolders = null;
 
     /**
-     * @property boolean $isFolderOwner
+     * @var boolean
      */
     protected $isFolderOwner = null;
 
     /**
-     * @property boolean $isFolderVisible
+     * @var boolean
      */
     protected $isFolderVisible = null;
 
     /**
-     * @property boolean $isFolderContact
+     * @var boolean
      */
     protected $isFolderContact = null;
 
     /**
-     * @property string $editItems
+     * @var string
      */
     protected $editItems = null;
 
     /**
-     * @property string $deleteItems
+     * @var string
      */
     protected $deleteItems = null;
 }

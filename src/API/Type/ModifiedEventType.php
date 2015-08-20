@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ModifiedEventType
  *
- * @method ModifiedEventType getUnreadCount()
+ * @method integer getUnreadCount()
  * @method ModifiedEventType setUnreadCount(integer $unreadCount)
  */
 class ModifiedEventType extends BaseObjectChangedEventType
 {
 
     /**
-     * @property integer $unreadCount
+     * @var integer
      */
     protected $unreadCount = null;
 }

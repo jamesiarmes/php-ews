@@ -8,22 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetSharingMetadataResponseMessageType
  *
- * @method GetSharingMetadataResponseMessageType getEncryptedSharedFolderDataCollection()
+ * @method array getEncryptedSharedFolderDataCollection()
  * @method GetSharingMetadataResponseMessageType setEncryptedSharedFolderDataCollection(array $encryptedSharedFolderDataCollection)
- * @method GetSharingMetadataResponseMessageType getInvalidRecipients()
+ * @method array getInvalidRecipients()
  * @method GetSharingMetadataResponseMessageType setInvalidRecipients(array $invalidRecipients)
  */
 class GetSharingMetadataResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EncryptedSharedFolderDataType[]
-     * $encryptedSharedFolderDataCollection
+     * @var \jamesiarmes\PEWS\API\Type\EncryptedSharedFolderDataType[]
      */
     protected $encryptedSharedFolderDataCollection = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\InvalidRecipientType[] $invalidRecipients
+     * @var \jamesiarmes\PEWS\API\Type\InvalidRecipientType[]
      */
     protected $invalidRecipients = null;
 }

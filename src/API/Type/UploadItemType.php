@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UploadItemType
  *
- * @method UploadItemType getCreateAction()
+ * @method string getCreateAction()
  * @method UploadItemType setCreateAction(string $createAction)
- * @method UploadItemType getIsAssociated()
+ * @method boolean getIsAssociated()
  * @method UploadItemType setIsAssociated(boolean $isAssociated)
- * @method UploadItemType getParentFolderId()
+ * @method FolderIdType getParentFolderId()
  * @method UploadItemType setParentFolderId(FolderIdType $parentFolderId)
- * @method UploadItemType getItemId()
+ * @method ItemIdType getItemId()
  * @method UploadItemType setItemId(ItemIdType $itemId)
- * @method UploadItemType getData()
+ * @method string getData()
  * @method UploadItemType setData(string $data)
  */
 class UploadItemType extends Type
 {
 
     /**
-     * @property string $createAction
+     * @var string
      */
     protected $createAction = null;
 
     /**
-     * @property boolean $isAssociated
+     * @var boolean
      */
     protected $isAssociated = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $parentFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property string $data
+     * @var string
      */
     protected $data = null;
 }

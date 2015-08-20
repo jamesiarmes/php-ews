@@ -10,70 +10,70 @@ use jamesiarmes\PEWS\API\Type;
  * Rule type
  * XSD Type: RuleType
  *
- * @method RuleType getRuleId()
+ * @method string getRuleId()
  * @method RuleType setRuleId(string $ruleId)
- * @method RuleType getDisplayName()
+ * @method string getDisplayName()
  * @method RuleType setDisplayName(string $displayName)
- * @method RuleType getPriority()
+ * @method integer getPriority()
  * @method RuleType setPriority(integer $priority)
- * @method RuleType getIsEnabled()
+ * @method boolean getIsEnabled()
  * @method RuleType setIsEnabled(boolean $isEnabled)
- * @method RuleType getIsNotSupported()
+ * @method boolean getIsNotSupported()
  * @method RuleType setIsNotSupported(boolean $isNotSupported)
- * @method RuleType getIsInError()
+ * @method boolean getIsInError()
  * @method RuleType setIsInError(boolean $isInError)
- * @method RuleType getConditions()
+ * @method RulePredicatesType getConditions()
  * @method RuleType setConditions(RulePredicatesType $conditions)
- * @method RuleType getExceptions()
+ * @method RulePredicatesType getExceptions()
  * @method RuleType setExceptions(RulePredicatesType $exceptions)
- * @method RuleType getActions()
+ * @method RuleActionsType getActions()
  * @method RuleType setActions(RuleActionsType $actions)
  */
 class RuleType extends Type
 {
 
     /**
-     * @property string $ruleId
+     * @var string
      */
     protected $ruleId = null;
 
     /**
-     * @property string $displayName
+     * @var string
      */
     protected $displayName = null;
 
     /**
-     * @property integer $priority
+     * @var integer
      */
     protected $priority = null;
 
     /**
-     * @property boolean $isEnabled
+     * @var boolean
      */
     protected $isEnabled = null;
 
     /**
-     * @property boolean $isNotSupported
+     * @var boolean
      */
     protected $isNotSupported = null;
 
     /**
-     * @property boolean $isInError
+     * @var boolean
      */
     protected $isInError = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RulePredicatesType $conditions
+     * @var \jamesiarmes\PEWS\API\Type\RulePredicatesType
      */
     protected $conditions = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RulePredicatesType $exceptions
+     * @var \jamesiarmes\PEWS\API\Type\RulePredicatesType
      */
     protected $exceptions = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RuleActionsType $actions
+     * @var \jamesiarmes\PEWS\API\Type\RuleActionsType
      */
     protected $actions = null;
 }

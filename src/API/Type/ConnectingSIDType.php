@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ConnectingSIDType
  *
- * @method ConnectingSIDType getPrincipalName()
+ * @method string getPrincipalName()
  * @method ConnectingSIDType setPrincipalName(string $principalName)
- * @method ConnectingSIDType getSID()
+ * @method string getSID()
  * @method ConnectingSIDType setSID(string $sID)
- * @method ConnectingSIDType getPrimarySmtpAddress()
+ * @method string getPrimarySmtpAddress()
  * @method ConnectingSIDType setPrimarySmtpAddress(string $primarySmtpAddress)
- * @method ConnectingSIDType getSmtpAddress()
+ * @method string getSmtpAddress()
  * @method ConnectingSIDType setSmtpAddress(string $smtpAddress)
  */
 class ConnectingSIDType extends Type
 {
 
     /**
-     * @property string $principalName
+     * @var string
      */
     protected $principalName = null;
 
     /**
-     * @property string $sID
+     * @var string
      */
     protected $sID = null;
 
     /**
-     * @property string $primarySmtpAddress
+     * @var string
      */
     protected $primarySmtpAddress = null;
 
     /**
-     * @property string $smtpAddress
+     * @var string
      */
     protected $smtpAddress = null;
 }

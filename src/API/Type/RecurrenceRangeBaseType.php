@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurrenceRangeBaseType
  *
- * @method RecurrenceRangeBaseType getStartDate()
+ * @method \DateTime getStartDate()
  * @method RecurrenceRangeBaseType setStartDate(\DateTime $startDate)
  */
 class RecurrenceRangeBaseType extends Type
 {
 
     /**
-     * @property \DateTime $startDate
+     * @var \DateTime
      */
     protected $startDate = null;
 

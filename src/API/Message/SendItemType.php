@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SendItemType
  *
- * @method SendItemType getSaveItemToFolder()
+ * @method boolean getSaveItemToFolder()
  * @method SendItemType setSaveItemToFolder(boolean $saveItemToFolder)
- * @method SendItemType getItemIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method SendItemType setItemIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method SendItemType getSavedItemFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method SendItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId)
  */
 class SendItemType extends BaseRequestType
 {
 
     /**
-     * @property boolean $saveItemToFolder
+     * @var boolean
      */
     protected $saveItemToFolder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $itemIds = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $savedItemFolderId = null;
 }

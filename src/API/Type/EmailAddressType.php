@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EmailAddress
  *
- * @method EmailAddressType getName()
+ * @method string getName()
  * @method EmailAddressType setName(string $name)
- * @method EmailAddressType getAddress()
+ * @method string getAddress()
  * @method EmailAddressType setAddress(string $address)
- * @method EmailAddressType getRoutingType()
+ * @method string getRoutingType()
  * @method EmailAddressType setRoutingType(string $routingType)
  */
 class EmailAddressType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property string $address
+     * @var string
      */
     protected $address = null;
 
     /**
-     * @property string $routingType
+     * @var string
      */
     protected $routingType = null;
 }

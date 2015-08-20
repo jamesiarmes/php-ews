@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SetUserOofSettingsRequest
  *
- * @method SetUserOofSettingsRequestType getMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\Mailbox getMailbox()
  * @method SetUserOofSettingsRequestType setMailbox(\jamesiarmes\PEWS\API\Type\Mailbox $mailbox)
- * @method SetUserOofSettingsRequestType getUserOofSettings()
+ * @method \jamesiarmes\PEWS\API\Type\UserOofSettings getUserOofSettings()
  * @method SetUserOofSettingsRequestType setUserOofSettings(\jamesiarmes\PEWS\API\Type\UserOofSettings $userOofSettings)
  */
 class SetUserOofSettingsRequestType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Mailbox $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\Mailbox
      */
     protected $mailbox = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserOofSettings $userOofSettings
+     * @var \jamesiarmes\PEWS\API\Type\UserOofSettings
      */
     protected $userOofSettings = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AbsoluteDateTransitionType
  *
- * @method AbsoluteDateTransitionType getDateTime()
+ * @method \DateTime getDateTime()
  * @method AbsoluteDateTransitionType setDateTime(\DateTime $dateTime)
  */
 class AbsoluteDateTransitionType extends TransitionType
 {
 
     /**
-     * @property \DateTime $dateTime
+     * @var \DateTime
      */
     protected $dateTime = null;
 

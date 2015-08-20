@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UpdateInboxRulesRequestType
  *
- * @method UpdateInboxRulesRequestType getMailboxSmtpAddress()
+ * @method string getMailboxSmtpAddress()
  * @method UpdateInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
- * @method UpdateInboxRulesRequestType getRemoveOutlookRuleBlob()
+ * @method boolean getRemoveOutlookRuleBlob()
  * @method UpdateInboxRulesRequestType setRemoveOutlookRuleBlob(boolean $removeOutlookRuleBlob)
- * @method UpdateInboxRulesRequestType getOperations()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType getOperations()
  * @method UpdateInboxRulesRequestType setOperations(\jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType $operations)
  */
 class UpdateInboxRulesRequestType extends BaseRequestType
 {
 
     /**
-     * @property string $mailboxSmtpAddress
+     * @var string
      */
     protected $mailboxSmtpAddress = null;
 
     /**
-     * @property boolean $removeOutlookRuleBlob
+     * @var boolean
      */
     protected $removeOutlookRuleBlob = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType $operations
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType
      */
     protected $operations = null;
 }

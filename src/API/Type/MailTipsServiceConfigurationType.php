@@ -8,49 +8,49 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MailTipsServiceConfiguration
  *
- * @method MailTipsServiceConfigurationType getMailTipsEnabled()
+ * @method boolean getMailTipsEnabled()
  * @method MailTipsServiceConfigurationType setMailTipsEnabled(boolean $mailTipsEnabled)
- * @method MailTipsServiceConfigurationType getMaxRecipientsPerGetMailTipsRequest()
+ * @method integer getMaxRecipientsPerGetMailTipsRequest()
  * @method MailTipsServiceConfigurationType setMaxRecipientsPerGetMailTipsRequest(integer $maxRecipientsPerGetMailTipsRequest)
- * @method MailTipsServiceConfigurationType getMaxMessageSize()
+ * @method integer getMaxMessageSize()
  * @method MailTipsServiceConfigurationType setMaxMessageSize(integer $maxMessageSize)
- * @method MailTipsServiceConfigurationType getLargeAudienceThreshold()
+ * @method integer getLargeAudienceThreshold()
  * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
- * @method MailTipsServiceConfigurationType getShowExternalRecipientCount()
+ * @method boolean getShowExternalRecipientCount()
  * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
- * @method MailTipsServiceConfigurationType getInternalDomains()
+ * @method array getInternalDomains()
  * @method MailTipsServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class MailTipsServiceConfigurationType extends ServiceConfigurationType
 {
 
     /**
-     * @property boolean $mailTipsEnabled
+     * @var boolean
      */
     protected $mailTipsEnabled = null;
 
     /**
-     * @property integer $maxRecipientsPerGetMailTipsRequest
+     * @var integer
      */
     protected $maxRecipientsPerGetMailTipsRequest = null;
 
     /**
-     * @property integer $maxMessageSize
+     * @var integer
      */
     protected $maxMessageSize = null;
 
     /**
-     * @property integer $largeAudienceThreshold
+     * @var integer
      */
     protected $largeAudienceThreshold = null;
 
     /**
-     * @property boolean $showExternalRecipientCount
+     * @var boolean
      */
     protected $showExternalRecipientCount = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SmtpDomainType[] $internalDomains
+     * @var \jamesiarmes\PEWS\API\Type\SmtpDomainType[]
      */
     protected $internalDomains = null;
 }

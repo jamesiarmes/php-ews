@@ -10,77 +10,77 @@ use jamesiarmes\PEWS\API\Type;
  * Compound property for Managed Folder related information for Managed Folders.
  * XSD Type: ManagedFolderInformationType
  *
- * @method ManagedFolderInformationType getCanDelete()
+ * @method boolean getCanDelete()
  * @method ManagedFolderInformationType setCanDelete(boolean $canDelete)
- * @method ManagedFolderInformationType getCanRenameOrMove()
+ * @method boolean getCanRenameOrMove()
  * @method ManagedFolderInformationType setCanRenameOrMove(boolean $canRenameOrMove)
- * @method ManagedFolderInformationType getMustDisplayComment()
+ * @method boolean getMustDisplayComment()
  * @method ManagedFolderInformationType setMustDisplayComment(boolean $mustDisplayComment)
- * @method ManagedFolderInformationType getHasQuota()
+ * @method boolean getHasQuota()
  * @method ManagedFolderInformationType setHasQuota(boolean $hasQuota)
- * @method ManagedFolderInformationType getIsManagedFoldersRoot()
+ * @method boolean getIsManagedFoldersRoot()
  * @method ManagedFolderInformationType setIsManagedFoldersRoot(boolean $isManagedFoldersRoot)
- * @method ManagedFolderInformationType getManagedFolderId()
+ * @method string getManagedFolderId()
  * @method ManagedFolderInformationType setManagedFolderId(string $managedFolderId)
- * @method ManagedFolderInformationType getComment()
+ * @method string getComment()
  * @method ManagedFolderInformationType setComment(string $comment)
- * @method ManagedFolderInformationType getStorageQuota()
+ * @method integer getStorageQuota()
  * @method ManagedFolderInformationType setStorageQuota(integer $storageQuota)
- * @method ManagedFolderInformationType getFolderSize()
+ * @method integer getFolderSize()
  * @method ManagedFolderInformationType setFolderSize(integer $folderSize)
- * @method ManagedFolderInformationType getHomePage()
+ * @method string getHomePage()
  * @method ManagedFolderInformationType setHomePage(string $homePage)
  */
 class ManagedFolderInformationType extends Type
 {
 
     /**
-     * @property boolean $canDelete
+     * @var boolean
      */
     protected $canDelete = null;
 
     /**
-     * @property boolean $canRenameOrMove
+     * @var boolean
      */
     protected $canRenameOrMove = null;
 
     /**
-     * @property boolean $mustDisplayComment
+     * @var boolean
      */
     protected $mustDisplayComment = null;
 
     /**
-     * @property boolean $hasQuota
+     * @var boolean
      */
     protected $hasQuota = null;
 
     /**
-     * @property boolean $isManagedFoldersRoot
+     * @var boolean
      */
     protected $isManagedFoldersRoot = null;
 
     /**
-     * @property string $managedFolderId
+     * @var string
      */
     protected $managedFolderId = null;
 
     /**
-     * @property string $comment
+     * @var string
      */
     protected $comment = null;
 
     /**
-     * @property integer $storageQuota
+     * @var integer
      */
     protected $storageQuota = null;
 
     /**
-     * @property integer $folderSize
+     * @var integer
      */
     protected $folderSize = null;
 
     /**
-     * @property string $homePage
+     * @var string
      */
     protected $homePage = null;
 }

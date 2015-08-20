@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ProtectionRuleAndType
  *
- * @method ProtectionRuleAndType getAllInternal()
+ * @method array getAllInternal()
  * @method ProtectionRuleAndType setAllInternal(array $allInternal)
- * @method ProtectionRuleAndType getAnd()
+ * @method array getAnd()
  * @method ProtectionRuleAndType setAnd(array $and)
- * @method ProtectionRuleAndType getRecipientIs()
+ * @method array getRecipientIs()
  * @method ProtectionRuleAndType setRecipientIs(array $recipientIs)
- * @method ProtectionRuleAndType getSenderDepartments()
+ * @method array getSenderDepartments()
  * @method ProtectionRuleAndType setSenderDepartments(array $senderDepartments)
- * @method ProtectionRuleAndType getTrue()
+ * @method array getTrue()
  * @method ProtectionRuleAndType setTrue(array $true)
  */
 class ProtectionRuleAndType extends Type
 {
 
     /**
-     * @property string[] $allInternal
+     * @var string[]
      */
     protected $allInternal = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ProtectionRuleAndType[] $and
+     * @var \jamesiarmes\PEWS\API\Type\ProtectionRuleAndType[]
      */
     protected $and = null;
 
     /**
-     * @property string[] $recipientIs
+     * @var string[]
      */
     protected $recipientIs = null;
 
     /**
-     * @property string[] $senderDepartments
+     * @var string[]
      */
     protected $senderDepartments = null;
 
     /**
-     * @property string[] $true
+     * @var string[]
      */
     protected $true = null;
 }

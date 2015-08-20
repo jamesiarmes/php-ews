@@ -10,37 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ItemChangeType
  *
- * @method ItemChangeType getItemId()
+ * @method ItemIdType getItemId()
  * @method ItemChangeType setItemId(ItemIdType $itemId)
- * @method ItemChangeType getOccurrenceItemId()
+ * @method OccurrenceItemIdType getOccurrenceItemId()
  * @method ItemChangeType setOccurrenceItemId(OccurrenceItemIdType $occurrenceItemId)
- * @method ItemChangeType getRecurringMasterItemId()
+ * @method RecurringMasterItemIdType getRecurringMasterItemId()
  * @method ItemChangeType setRecurringMasterItemId(RecurringMasterItemIdType $recurringMasterItemId)
- * @method ItemChangeType getUpdates()
+ * @method NonEmptyArrayOfItemChangeDescriptionsType getUpdates()
  * @method ItemChangeType setUpdates(NonEmptyArrayOfItemChangeDescriptionsType $updates)
  */
 class ItemChangeType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OccurrenceItemIdType $occurrenceItemId
+     * @var \jamesiarmes\PEWS\API\Type\OccurrenceItemIdType
      */
     protected $occurrenceItemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RecurringMasterItemIdType
-     * $recurringMasterItemId
+     * @var \jamesiarmes\PEWS\API\Type\RecurringMasterItemIdType
      */
     protected $recurringMasterItemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfItemChangeDescriptionsType
-     * $updates
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfItemChangeDescriptionsType
      */
     protected $updates = null;
 }

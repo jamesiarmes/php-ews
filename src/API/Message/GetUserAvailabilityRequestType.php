@@ -8,36 +8,35 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserAvailabilityRequestType
  *
- * @method GetUserAvailabilityRequestType getTimeZone()
+ * @method \jamesiarmes\PEWS\API\Type\TimeZone getTimeZone()
  * @method GetUserAvailabilityRequestType setTimeZone(\jamesiarmes\PEWS\API\Type\TimeZone $timeZone)
- * @method GetUserAvailabilityRequestType getMailboxDataArray()
+ * @method array getMailboxDataArray()
  * @method GetUserAvailabilityRequestType setMailboxDataArray(array $mailboxDataArray)
- * @method GetUserAvailabilityRequestType getFreeBusyViewOptions()
+ * @method \jamesiarmes\PEWS\API\Type\FreeBusyViewOptions getFreeBusyViewOptions()
  * @method GetUserAvailabilityRequestType setFreeBusyViewOptions(\jamesiarmes\PEWS\API\Type\FreeBusyViewOptions $freeBusyViewOptions)
- * @method GetUserAvailabilityRequestType getSuggestionsViewOptions()
+ * @method \jamesiarmes\PEWS\API\Type\SuggestionsViewOptions getSuggestionsViewOptions()
  * @method GetUserAvailabilityRequestType setSuggestionsViewOptions(\jamesiarmes\PEWS\API\Type\SuggestionsViewOptions $suggestionsViewOptions)
  */
 class GetUserAvailabilityRequestType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZone $timeZone
+     * @var \jamesiarmes\PEWS\API\Type\TimeZone
      */
     protected $timeZone = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MailboxDataType[] $mailboxDataArray
+     * @var \jamesiarmes\PEWS\API\Type\MailboxDataType[]
      */
     protected $mailboxDataArray = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FreeBusyViewOptions $freeBusyViewOptions
+     * @var \jamesiarmes\PEWS\API\Type\FreeBusyViewOptions
      */
     protected $freeBusyViewOptions = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SuggestionsViewOptions
-     * $suggestionsViewOptions
+     * @var \jamesiarmes\PEWS\API\Type\SuggestionsViewOptions
      */
     protected $suggestionsViewOptions = null;
 }

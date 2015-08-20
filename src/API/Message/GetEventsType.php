@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetEventsType
  *
- * @method GetEventsType getSubscriptionId()
+ * @method string getSubscriptionId()
  * @method GetEventsType setSubscriptionId(string $subscriptionId)
- * @method GetEventsType getWatermark()
+ * @method string getWatermark()
  * @method GetEventsType setWatermark(string $watermark)
  */
 class GetEventsType extends BaseRequestType
 {
 
     /**
-     * @property string $subscriptionId
+     * @var string
      */
     protected $subscriptionId = null;
 
     /**
-     * @property string $watermark
+     * @var string
      */
     protected $watermark = null;
 }

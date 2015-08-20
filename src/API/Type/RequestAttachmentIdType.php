@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RequestAttachmentIdType
  *
- * @method RequestAttachmentIdType getId()
+ * @method string getId()
  * @method RequestAttachmentIdType setId(string $id)
  */
 class RequestAttachmentIdType extends BaseItemIdType
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ExpandDLType
  *
- * @method ExpandDLType getMailbox()
+ * @method \jamesiarmes\PEWS\API\Type\EmailAddressType getMailbox()
  * @method ExpandDLType setMailbox(\jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox)
  */
 class ExpandDLType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 }

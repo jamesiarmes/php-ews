@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NumberedRecurrenceRangeType
  *
- * @method NumberedRecurrenceRangeType getNumberOfOccurrences()
+ * @method integer getNumberOfOccurrences()
  * @method NumberedRecurrenceRangeType setNumberOfOccurrences(integer $numberOfOccurrences)
  */
 class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
 {
 
     /**
-     * @property integer $numberOfOccurrences
+     * @var integer
      */
     protected $numberOfOccurrences = null;
 }

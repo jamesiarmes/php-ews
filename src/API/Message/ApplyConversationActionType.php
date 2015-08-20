@@ -8,15 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ApplyConversationActionType
  *
- * @method ApplyConversationActionType getConversationActions()
+ * @method array getConversationActions()
  * @method ApplyConversationActionType setConversationActions(array $conversationActions)
  */
 class ApplyConversationActionType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConversationActionType[]
-     * $conversationActions
+     * @var \jamesiarmes\PEWS\API\Type\ConversationActionType[]
      */
     protected $conversationActions = null;
 }

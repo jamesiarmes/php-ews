@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MailboxData
  *
- * @method MailboxDataType getEmail()
+ * @method EmailAddressType getEmail()
  * @method MailboxDataType setEmail(EmailAddressType $email)
- * @method MailboxDataType getAttendeeType()
+ * @method string getAttendeeType()
  * @method MailboxDataType setAttendeeType(string $attendeeType)
- * @method MailboxDataType getExcludeConflicts()
+ * @method boolean getExcludeConflicts()
  * @method MailboxDataType setExcludeConflicts(boolean $excludeConflicts)
  */
 class MailboxDataType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $email
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $email = null;
 
     /**
-     * @property string $attendeeType
+     * @var string
      */
     protected $attendeeType = null;
 
     /**
-     * @property boolean $excludeConflicts
+     * @var boolean
      */
     protected $excludeConflicts = null;
 }

@@ -8,42 +8,42 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: UpdateItemType
  *
- * @method UpdateItemType getConflictResolution()
+ * @method string getConflictResolution()
  * @method UpdateItemType setConflictResolution(string $conflictResolution)
- * @method UpdateItemType getMessageDisposition()
+ * @method string getMessageDisposition()
  * @method UpdateItemType setMessageDisposition(string $messageDisposition)
- * @method UpdateItemType getSendMeetingInvitationsOrCancellations()
+ * @method string getSendMeetingInvitationsOrCancellations()
  * @method UpdateItemType setSendMeetingInvitationsOrCancellations(string $sendMeetingInvitationsOrCancellations)
- * @method UpdateItemType getSavedItemFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method UpdateItemType setSavedItemFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId)
- * @method UpdateItemType getItemChanges()
+ * @method array getItemChanges()
  * @method UpdateItemType setItemChanges(array $itemChanges)
  */
 class UpdateItemType extends BaseRequestType
 {
 
     /**
-     * @property string $conflictResolution
+     * @var string
      */
     protected $conflictResolution = null;
 
     /**
-     * @property string $messageDisposition
+     * @var string
      */
     protected $messageDisposition = null;
 
     /**
-     * @property string $sendMeetingInvitationsOrCancellations
+     * @var string
      */
     protected $sendMeetingInvitationsOrCancellations = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $savedItemFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $savedItemFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemChangeType[] $itemChanges
+     * @var \jamesiarmes\PEWS\API\Type\ItemChangeType[]
      */
     protected $itemChanges = null;
 }

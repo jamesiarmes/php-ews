@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SidAndAttributesType
  *
- * @method SidAndAttributesType getAttributes()
+ * @method integer getAttributes()
  * @method SidAndAttributesType setAttributes(integer $attributes)
- * @method SidAndAttributesType getSecurityIdentifier()
+ * @method string getSecurityIdentifier()
  * @method SidAndAttributesType setSecurityIdentifier(string $securityIdentifier)
  */
 class SidAndAttributesType extends Type
 {
 
     /**
-     * @property integer $attributes
+     * @var integer
      */
     protected $attributes = null;
 
     /**
-     * @property string $securityIdentifier
+     * @var string
      */
     protected $securityIdentifier = null;
 }

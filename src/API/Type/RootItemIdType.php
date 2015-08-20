@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RootItemIdType
  *
- * @method RootItemIdType getRootItemId()
+ * @method string getRootItemId()
  * @method RootItemIdType setRootItemId(string $rootItemId)
- * @method RootItemIdType getRootItemChangeKey()
+ * @method string getRootItemChangeKey()
  * @method RootItemIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class RootItemIdType extends BaseItemIdType
 {
 
     /**
-     * @property string $rootItemId
+     * @var string
      */
     protected $rootItemId = null;
 
     /**
-     * @property string $rootItemChangeKey
+     * @var string
      */
     protected $rootItemChangeKey = null;
 }

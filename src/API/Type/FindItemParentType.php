@@ -10,56 +10,56 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FindItemParentType
  *
- * @method FindItemParentType getIndexedPagingOffset()
+ * @method integer getIndexedPagingOffset()
  * @method FindItemParentType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method FindItemParentType getNumeratorOffset()
+ * @method integer getNumeratorOffset()
  * @method FindItemParentType setNumeratorOffset(integer $numeratorOffset)
- * @method FindItemParentType getAbsoluteDenominator()
+ * @method integer getAbsoluteDenominator()
  * @method FindItemParentType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method FindItemParentType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method FindItemParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method FindItemParentType getTotalItemsInView()
+ * @method integer getTotalItemsInView()
  * @method FindItemParentType setTotalItemsInView(integer $totalItemsInView)
- * @method FindItemParentType getItems()
+ * @method ArrayOfRealItemsType getItems()
  * @method FindItemParentType setItems(ArrayOfRealItemsType $items)
- * @method FindItemParentType getGroups()
+ * @method array getGroups()
  * @method FindItemParentType setGroups(array $groups)
  */
 class FindItemParentType extends Type
 {
 
     /**
-     * @property integer $indexedPagingOffset
+     * @var integer
      */
     protected $indexedPagingOffset = null;
 
     /**
-     * @property integer $numeratorOffset
+     * @var integer
      */
     protected $numeratorOffset = null;
 
     /**
-     * @property integer $absoluteDenominator
+     * @var integer
      */
     protected $absoluteDenominator = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property integer $totalItemsInView
+     * @var integer
      */
     protected $totalItemsInView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType $items
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfRealItemsType
      */
     protected $items = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\GroupedItemsType[] $groups
+     * @var \jamesiarmes\PEWS\API\Type\GroupedItemsType[]
      */
     protected $groups = null;
 }

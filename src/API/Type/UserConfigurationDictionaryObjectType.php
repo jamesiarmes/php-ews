@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UserConfigurationDictionaryObjectType
  *
- * @method UserConfigurationDictionaryObjectType getType()
+ * @method string getType()
  * @method UserConfigurationDictionaryObjectType setType(string $type)
- * @method UserConfigurationDictionaryObjectType getValue()
+ * @method array getValue()
  * @method UserConfigurationDictionaryObjectType setValue(array $value)
  */
 class UserConfigurationDictionaryObjectType extends Type
 {
 
     /**
-     * @property string $type
+     * @var string
      */
     protected $type = null;
 
     /**
-     * @property string[] $value
+     * @var string[]
      */
     protected $value = null;
 }

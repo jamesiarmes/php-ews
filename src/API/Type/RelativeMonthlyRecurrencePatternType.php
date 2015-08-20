@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RelativeMonthlyRecurrencePatternType
  *
- * @method RelativeMonthlyRecurrencePatternType getDaysOfWeek()
+ * @method string getDaysOfWeek()
  * @method RelativeMonthlyRecurrencePatternType setDaysOfWeek(string $daysOfWeek)
- * @method RelativeMonthlyRecurrencePatternType getDayOfWeekIndex()
+ * @method string getDayOfWeekIndex()
  * @method RelativeMonthlyRecurrencePatternType setDayOfWeekIndex(string $dayOfWeekIndex)
  */
 class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {
 
     /**
-     * @property string $daysOfWeek
+     * @var string
      */
     protected $daysOfWeek = null;
 
     /**
-     * @property string $dayOfWeekIndex
+     * @var string
      */
     protected $dayOfWeekIndex = null;
 }

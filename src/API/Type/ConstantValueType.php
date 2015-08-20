@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ConstantValueType
  *
- * @method ConstantValueType getValue()
+ * @method string getValue()
  * @method ConstantValueType setValue(string $value)
  */
 class ConstantValueType extends Type
 {
 
     /**
-     * @property string $value
+     * @var string
      */
     protected $value = null;
 }

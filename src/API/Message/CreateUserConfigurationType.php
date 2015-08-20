@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: CreateUserConfigurationType
  *
- * @method CreateUserConfigurationType getUserConfiguration()
+ * @method \jamesiarmes\PEWS\API\Type\UserConfigurationType getUserConfiguration()
  * @method CreateUserConfigurationType setUserConfiguration(\jamesiarmes\PEWS\API\Type\UserConfigurationType $userConfiguration)
  */
 class CreateUserConfigurationType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserConfigurationType $userConfiguration
+     * @var \jamesiarmes\PEWS\API\Type\UserConfigurationType
      */
     protected $userConfiguration = null;
 }

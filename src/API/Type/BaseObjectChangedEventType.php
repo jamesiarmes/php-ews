@@ -8,20 +8,20 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseObjectChangedEventType
  *
- * @method BaseObjectChangedEventType getTimeStamp()
+ * @method \DateTime getTimeStamp()
  * @method BaseObjectChangedEventType setTimeStamp(\DateTime $timeStamp)
- * @method BaseObjectChangedEventType getFolderId()
+ * @method FolderIdType getFolderId()
  * @method BaseObjectChangedEventType setFolderId(FolderIdType $folderId)
- * @method BaseObjectChangedEventType getItemId()
+ * @method ItemIdType getItemId()
  * @method BaseObjectChangedEventType setItemId(ItemIdType $itemId)
- * @method BaseObjectChangedEventType getParentFolderId()
+ * @method FolderIdType getParentFolderId()
  * @method BaseObjectChangedEventType setParentFolderId(FolderIdType $parentFolderId)
  */
 class BaseObjectChangedEventType extends BaseNotificationEventType
 {
 
     /**
-     * @property \DateTime $timeStamp
+     * @var \DateTime
      */
     protected $timeStamp = null;
 
@@ -30,17 +30,17 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
     );
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $folderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $parentFolderId = null;
 }

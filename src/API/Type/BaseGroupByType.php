@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseGroupByType
  *
- * @method BaseGroupByType getOrder()
+ * @method string getOrder()
  * @method BaseGroupByType setOrder(string $order)
  */
 class BaseGroupByType extends Type
 {
 
     /**
-     * @property string $order
+     * @var string
      */
     protected $order = null;
 }

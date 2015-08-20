@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BodyType
  *
- * @method BodyType getBodyType()
+ * @method string getBodyType()
  * @method BodyType setBodyType(string $bodyType)
  */
 class BodyType extends Type
 {
 
     /**
-     * @property string $bodyType
+     * @var string
      */
     protected $bodyType = null;
 }

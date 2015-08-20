@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseNotificationEventType
  *
- * @method BaseNotificationEventType getWatermark()
+ * @method string getWatermark()
  * @method BaseNotificationEventType setWatermark(string $watermark)
  */
 class BaseNotificationEventType extends Type
 {
 
     /**
-     * @property string $watermark
+     * @var string
      */
     protected $watermark = null;
 }

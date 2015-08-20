@@ -10,88 +10,84 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfResponseObjectsType
  *
- * @method NonEmptyArrayOfResponseObjectsType getAcceptItem()
+ * @method array getAcceptItem()
  * @method NonEmptyArrayOfResponseObjectsType setAcceptItem(array $acceptItem)
- * @method NonEmptyArrayOfResponseObjectsType getTentativelyAcceptItem()
+ * @method array getTentativelyAcceptItem()
  * @method NonEmptyArrayOfResponseObjectsType setTentativelyAcceptItem(array $tentativelyAcceptItem)
- * @method NonEmptyArrayOfResponseObjectsType getDeclineItem()
+ * @method array getDeclineItem()
  * @method NonEmptyArrayOfResponseObjectsType setDeclineItem(array $declineItem)
- * @method NonEmptyArrayOfResponseObjectsType getReplyToItem()
+ * @method array getReplyToItem()
  * @method NonEmptyArrayOfResponseObjectsType setReplyToItem(array $replyToItem)
- * @method NonEmptyArrayOfResponseObjectsType getForwardItem()
+ * @method array getForwardItem()
  * @method NonEmptyArrayOfResponseObjectsType setForwardItem(array $forwardItem)
- * @method NonEmptyArrayOfResponseObjectsType getReplyAllToItem()
+ * @method array getReplyAllToItem()
  * @method NonEmptyArrayOfResponseObjectsType setReplyAllToItem(array $replyAllToItem)
- * @method NonEmptyArrayOfResponseObjectsType getCancelCalendarItem()
+ * @method array getCancelCalendarItem()
  * @method NonEmptyArrayOfResponseObjectsType setCancelCalendarItem(array $cancelCalendarItem)
- * @method NonEmptyArrayOfResponseObjectsType getRemoveItem()
+ * @method array getRemoveItem()
  * @method NonEmptyArrayOfResponseObjectsType setRemoveItem(array $removeItem)
- * @method NonEmptyArrayOfResponseObjectsType getSuppressReadReceipt()
+ * @method array getSuppressReadReceipt()
  * @method NonEmptyArrayOfResponseObjectsType setSuppressReadReceipt(array $suppressReadReceipt)
- * @method NonEmptyArrayOfResponseObjectsType getPostReplyItem()
+ * @method array getPostReplyItem()
  * @method NonEmptyArrayOfResponseObjectsType setPostReplyItem(array $postReplyItem)
- * @method NonEmptyArrayOfResponseObjectsType getAcceptSharingInvitation()
+ * @method array getAcceptSharingInvitation()
  * @method NonEmptyArrayOfResponseObjectsType setAcceptSharingInvitation(array $acceptSharingInvitation)
  */
 class NonEmptyArrayOfResponseObjectsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AcceptItemType[] $acceptItem
+     * @var \jamesiarmes\PEWS\API\Type\AcceptItemType[]
      */
     protected $acceptItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TentativelyAcceptItemType[]
-     * $tentativelyAcceptItem
+     * @var \jamesiarmes\PEWS\API\Type\TentativelyAcceptItemType[]
      */
     protected $tentativelyAcceptItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DeclineItemType[] $declineItem
+     * @var \jamesiarmes\PEWS\API\Type\DeclineItemType[]
      */
     protected $declineItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyToItemType[] $replyToItem
+     * @var \jamesiarmes\PEWS\API\Type\ReplyToItemType[]
      */
     protected $replyToItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ForwardItemType[] $forwardItem
+     * @var \jamesiarmes\PEWS\API\Type\ForwardItemType[]
      */
     protected $forwardItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyAllToItemType[] $replyAllToItem
+     * @var \jamesiarmes\PEWS\API\Type\ReplyAllToItemType[]
      */
     protected $replyAllToItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CancelCalendarItemType[]
-     * $cancelCalendarItem
+     * @var \jamesiarmes\PEWS\API\Type\CancelCalendarItemType[]
      */
     protected $cancelCalendarItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RemoveItemType[] $removeItem
+     * @var \jamesiarmes\PEWS\API\Type\RemoveItemType[]
      */
     protected $removeItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SuppressReadReceiptType[]
-     * $suppressReadReceipt
+     * @var \jamesiarmes\PEWS\API\Type\SuppressReadReceiptType[]
      */
     protected $suppressReadReceipt = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PostReplyItemType[] $postReplyItem
+     * @var \jamesiarmes\PEWS\API\Type\PostReplyItemType[]
      */
     protected $postReplyItem = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AcceptSharingInvitationType[]
-     * $acceptSharingInvitation
+     * @var \jamesiarmes\PEWS\API\Type\AcceptSharingInvitationType[]
      */
     protected $acceptSharingInvitation = null;
 }

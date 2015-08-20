@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ResolveNamesResponseMessageType
  *
- * @method ResolveNamesResponseMessageType getResolutionSet()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfResolutionType getResolutionSet()
  * @method ResolveNamesResponseMessageType setResolutionSet(\jamesiarmes\PEWS\API\Type\ArrayOfResolutionType $resolutionSet)
  */
 class ResolveNamesResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfResolutionType $resolutionSet
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfResolutionType
      */
     protected $resolutionSet = null;
 }

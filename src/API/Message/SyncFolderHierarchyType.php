@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SyncFolderHierarchyType
  *
- * @method SyncFolderHierarchyType getFolderShape()
+ * @method \jamesiarmes\PEWS\API\Type\FolderResponseShapeType getFolderShape()
  * @method SyncFolderHierarchyType setFolderShape(\jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape)
- * @method SyncFolderHierarchyType getSyncFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSyncFolderId()
  * @method SyncFolderHierarchyType setSyncFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $syncFolderId)
- * @method SyncFolderHierarchyType getSyncState()
+ * @method string getSyncState()
  * @method SyncFolderHierarchyType setSyncState(string $syncState)
  */
 class SyncFolderHierarchyType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderResponseShapeType $folderShape
+     * @var \jamesiarmes\PEWS\API\Type\FolderResponseShapeType
      */
     protected $folderShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $syncFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $syncFolderId = null;
 
     /**
-     * @property string $syncState
+     * @var string
      */
     protected $syncState = null;
 }

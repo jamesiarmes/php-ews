@@ -10,84 +10,84 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MailTips
  *
- * @method MailTipsType getRecipientAddress()
+ * @method EmailAddressType getRecipientAddress()
  * @method MailTipsType setRecipientAddress(EmailAddressType $recipientAddress)
- * @method MailTipsType getPendingMailTips()
+ * @method array getPendingMailTips()
  * @method MailTipsType setPendingMailTips(array $pendingMailTips)
- * @method MailTipsType getOutOfOffice()
+ * @method OutOfOfficeMailTipType getOutOfOffice()
  * @method MailTipsType setOutOfOffice(OutOfOfficeMailTipType $outOfOffice)
- * @method MailTipsType getMailboxFull()
+ * @method boolean getMailboxFull()
  * @method MailTipsType setMailboxFull(boolean $mailboxFull)
- * @method MailTipsType getCustomMailTip()
+ * @method string getCustomMailTip()
  * @method MailTipsType setCustomMailTip(string $customMailTip)
- * @method MailTipsType getTotalMemberCount()
+ * @method integer getTotalMemberCount()
  * @method MailTipsType setTotalMemberCount(integer $totalMemberCount)
- * @method MailTipsType getExternalMemberCount()
+ * @method integer getExternalMemberCount()
  * @method MailTipsType setExternalMemberCount(integer $externalMemberCount)
- * @method MailTipsType getMaxMessageSize()
+ * @method integer getMaxMessageSize()
  * @method MailTipsType setMaxMessageSize(integer $maxMessageSize)
- * @method MailTipsType getDeliveryRestricted()
+ * @method boolean getDeliveryRestricted()
  * @method MailTipsType setDeliveryRestricted(boolean $deliveryRestricted)
- * @method MailTipsType getIsModerated()
+ * @method boolean getIsModerated()
  * @method MailTipsType setIsModerated(boolean $isModerated)
- * @method MailTipsType getInvalidRecipient()
+ * @method boolean getInvalidRecipient()
  * @method MailTipsType setInvalidRecipient(boolean $invalidRecipient)
  */
 class MailTipsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $recipientAddress
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $recipientAddress = null;
 
     /**
-     * @property string[] $pendingMailTips
+     * @var string[]
      */
     protected $pendingMailTips = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OutOfOfficeMailTipType $outOfOffice
+     * @var \jamesiarmes\PEWS\API\Type\OutOfOfficeMailTipType
      */
     protected $outOfOffice = null;
 
     /**
-     * @property boolean $mailboxFull
+     * @var boolean
      */
     protected $mailboxFull = null;
 
     /**
-     * @property string $customMailTip
+     * @var string
      */
     protected $customMailTip = null;
 
     /**
-     * @property integer $totalMemberCount
+     * @var integer
      */
     protected $totalMemberCount = null;
 
     /**
-     * @property integer $externalMemberCount
+     * @var integer
      */
     protected $externalMemberCount = null;
 
     /**
-     * @property integer $maxMessageSize
+     * @var integer
      */
     protected $maxMessageSize = null;
 
     /**
-     * @property boolean $deliveryRestricted
+     * @var boolean
      */
     protected $deliveryRestricted = null;
 
     /**
-     * @property boolean $isModerated
+     * @var boolean
      */
     protected $isModerated = null;
 
     /**
-     * @property boolean $invalidRecipient
+     * @var boolean
      */
     protected $invalidRecipient = null;
 }

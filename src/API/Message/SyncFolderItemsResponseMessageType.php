@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SyncFolderItemsResponseMessageType
  *
- * @method SyncFolderItemsResponseMessageType getSyncState()
+ * @method string getSyncState()
  * @method SyncFolderItemsResponseMessageType setSyncState(string $syncState)
- * @method SyncFolderItemsResponseMessageType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method SyncFolderItemsResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method SyncFolderItemsResponseMessageType getChanges()
+ * @method \jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType getChanges()
  * @method SyncFolderItemsResponseMessageType setChanges(\jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType $changes)
  */
 class SyncFolderItemsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property string $syncState
+     * @var string
      */
     protected $syncState = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType $changes
+     * @var \jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType
      */
     protected $changes = null;
 }

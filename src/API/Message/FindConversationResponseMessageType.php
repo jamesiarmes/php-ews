@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindConversationResponseMessageType
  *
- * @method FindConversationResponseMessageType getConversations()
+ * @method array getConversations()
  * @method FindConversationResponseMessageType setConversations(array $conversations)
  */
 class FindConversationResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ConversationType[] $conversations
+     * @var \jamesiarmes\PEWS\API\Type\ConversationType[]
      */
     protected $conversations = null;
 }

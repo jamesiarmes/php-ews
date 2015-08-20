@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderHierarchyCreateOrUpdateType
  *
- * @method SyncFolderHierarchyCreateOrUpdateType getFolder()
+ * @method FolderType getFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setFolder(FolderType $folder)
- * @method SyncFolderHierarchyCreateOrUpdateType getCalendarFolder()
+ * @method CalendarFolderType getCalendarFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setCalendarFolder(CalendarFolderType $calendarFolder)
- * @method SyncFolderHierarchyCreateOrUpdateType getContactsFolder()
+ * @method ContactsFolderType getContactsFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setContactsFolder(ContactsFolderType $contactsFolder)
- * @method SyncFolderHierarchyCreateOrUpdateType getSearchFolder()
+ * @method SearchFolderType getSearchFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setSearchFolder(SearchFolderType $searchFolder)
- * @method SyncFolderHierarchyCreateOrUpdateType getTasksFolder()
+ * @method TasksFolderType getTasksFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class SyncFolderHierarchyCreateOrUpdateType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderType $folder
+     * @var \jamesiarmes\PEWS\API\Type\FolderType
      */
     protected $folder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarFolderType $calendarFolder
+     * @var \jamesiarmes\PEWS\API\Type\CalendarFolderType
      */
     protected $calendarFolder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactsFolderType $contactsFolder
+     * @var \jamesiarmes\PEWS\API\Type\ContactsFolderType
      */
     protected $contactsFolder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SearchFolderType $searchFolder
+     * @var \jamesiarmes\PEWS\API\Type\SearchFolderType
      */
     protected $searchFolder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TasksFolderType $tasksFolder
+     * @var \jamesiarmes\PEWS\API\Type\TasksFolderType
      */
     protected $tasksFolder = null;
 }

@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DistributionListType
  *
- * @method DistributionListType getDisplayName()
+ * @method string getDisplayName()
  * @method DistributionListType setDisplayName(string $displayName)
- * @method DistributionListType getFileAs()
+ * @method string getFileAs()
  * @method DistributionListType setFileAs(string $fileAs)
- * @method DistributionListType getContactSource()
+ * @method string getContactSource()
  * @method DistributionListType setContactSource(string $contactSource)
- * @method DistributionListType getMembers()
+ * @method array getMembers()
  * @method DistributionListType setMembers(array $members)
  */
 class DistributionListType extends ItemType
 {
 
     /**
-     * @property string $displayName
+     * @var string
      */
     protected $displayName = null;
 
     /**
-     * @property string $fileAs
+     * @var string
      */
     protected $fileAs = null;
 
     /**
-     * @property string $contactSource
+     * @var string
      */
     protected $contactSource = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MemberType[] $members
+     * @var \jamesiarmes\PEWS\API\Type\MemberType[]
      */
     protected $members = null;
 }

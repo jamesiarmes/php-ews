@@ -10,25 +10,25 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: OccurrenceInfoType
  *
- * @method OccurrenceInfoType getItemId()
+ * @method ItemIdType getItemId()
  * @method OccurrenceInfoType setItemId(ItemIdType $itemId)
- * @method OccurrenceInfoType getStart()
+ * @method \DateTime getStart()
  * @method OccurrenceInfoType setStart(\DateTime $start)
- * @method OccurrenceInfoType getEnd()
+ * @method \DateTime getEnd()
  * @method OccurrenceInfoType setEnd(\DateTime $end)
- * @method OccurrenceInfoType getOriginalStart()
+ * @method \DateTime getOriginalStart()
  * @method OccurrenceInfoType setOriginalStart(\DateTime $originalStart)
  */
 class OccurrenceInfoType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property \DateTime $start
+     * @var \DateTime
      */
     protected $start = null;
 
@@ -39,12 +39,12 @@ class OccurrenceInfoType extends Type
     );
 
     /**
-     * @property \DateTime $end
+     * @var \DateTime
      */
     protected $end = null;
 
     /**
-     * @property \DateTime $originalStart
+     * @var \DateTime
      */
     protected $originalStart = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UserConfigurationNameType
  *
- * @method UserConfigurationNameType getName()
+ * @method string getName()
  * @method UserConfigurationNameType setName(string $name)
  */
 class UserConfigurationNameType extends TargetFolderIdType
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 }

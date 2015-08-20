@@ -10,36 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AttachmentResponseShapeType
  *
- * @method AttachmentResponseShapeType getIncludeMimeContent()
+ * @method boolean getIncludeMimeContent()
  * @method AttachmentResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
- * @method AttachmentResponseShapeType getBodyType()
+ * @method string getBodyType()
  * @method AttachmentResponseShapeType setBodyType(string $bodyType)
- * @method AttachmentResponseShapeType getFilterHtmlContent()
+ * @method boolean getFilterHtmlContent()
  * @method AttachmentResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
- * @method AttachmentResponseShapeType getAdditionalProperties()
+ * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method AttachmentResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class AttachmentResponseShapeType extends Type
 {
 
     /**
-     * @property boolean $includeMimeContent
+     * @var boolean
      */
     protected $includeMimeContent = null;
 
     /**
-     * @property string $bodyType
+     * @var string
      */
     protected $bodyType = null;
 
     /**
-     * @property boolean $filterHtmlContent
+     * @var boolean
      */
     protected $filterHtmlContent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
-     * $additionalProperties
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
      */
     protected $additionalProperties = null;
 }

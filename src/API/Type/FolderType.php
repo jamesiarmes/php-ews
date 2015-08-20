@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FolderType
  *
- * @method FolderType getPermissionSet()
+ * @method PermissionSetType getPermissionSet()
  * @method FolderType setPermissionSet(PermissionSetType $permissionSet)
- * @method FolderType getUnreadCount()
+ * @method integer getUnreadCount()
  * @method FolderType setUnreadCount(integer $unreadCount)
  */
 class FolderType extends BaseFolderType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PermissionSetType $permissionSet
+     * @var \jamesiarmes\PEWS\API\Type\PermissionSetType
      */
     protected $permissionSet = null;
 
     /**
-     * @property integer $unreadCount
+     * @var integer
      */
     protected $unreadCount = null;
 }

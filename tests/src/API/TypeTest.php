@@ -3,6 +3,7 @@
 namespace jamesiarmes\PEWS\Test\API;
 
 use jamesiarmes\PEWS\API\Type;
+use jamesiarmes\PEWS\API\Message;
 use jamesiarmes\PEWS\API\Enumeration;
 use PHPUnit_Framework_TestCase;
 use Mockery;
@@ -45,13 +46,13 @@ class TypeTest extends PHPUnit_Framework_TestCase
      */
     public function testMagicCallFail()
     {
-        $calendarItem = new Type\CalendarItem();
+        $calendarItem = new Type\CalendarItemType();
         $calendarItem->getSomethingRandom();
     }
 
     public function testCast()
     {
-        $calendarItem = new Type\CalendarItem();
+        $calendarItem = new Type\CalendarItemType();
         $actual = $calendarItem->cast('2015-07-01', 'DateTime');
 
         $this->assertEquals(new \DateTime('2015-07-01'), $actual);
@@ -59,7 +60,7 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
     public function testSetCasting()
     {
-        $calendarItem = new Type\CalendarItem();
+        $calendarItem = new Type\CalendarItemType();
         $dateTime = $calendarItem->setStart('2015-07-01')
             ->getStart();
 
@@ -88,11 +89,11 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals($excepted, $actual);
 
-        $calendarItem = Type\CalendarItem::buildFromArray(array(
+        $calendarItem = Type\CalendarItemType::buildFromArray(array(
             'Subject' => 'Test'
         ));
 
-        $calendarControl = new Type\CalendarItem();
+        $calendarControl = new Type\CalendarItemType();
         $calendarControl->setSubject('Test');
 
         $this->assertEquals($calendarControl, $calendarItem);
@@ -110,105 +111,6 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $isAssoc = $type->arrayIsAssoc($array);
 
         $this->assertEquals($expected, $isAssoc);
-    }
-
-    public function testToXmlObject()
-    {
-        $start = new DateTime('8:00 AM');
-        $end = new DateTime('9:00 AM');
-
-        /** Creating the control object to test */
-        $control = new Type();
-        $control->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
-        $control->Items = new Type();
-        $control->Items->CalendarItem = new Type();
-        $control->Items->CalendarItem->Start = $start->format('c');
-        $control->Items->CalendarItem->End = $end->format('c');
-        $control->Items->CalendarItem->Body = new Type();
-        $control->Items->CalendarItem->Body->BodyType = Enumeration\BodyTypeType::HTML;
-        $control->Items->CalendarItem->Body->_ = 'This is <b>the</b> body';
-        $control->Items->CalendarItem->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
-        $control->Items->CalendarItem->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
-        $control->Items->CalendarItem->Categories = array('Testing', 'php-ews');
-        $control->Items->CalendarItem->Importance = Enumeration\ImportanceChoicesType::NORMAL;
-
-        /** Creating the first object to test */
-        $requestOne = new Type\CreateItemType();
-        $requestOne->Items = new Type\ArrayOfTypes();
-
-        $eventOne = new Type\CalendarItem();
-        $eventOne->Start = $start->format('c');
-        $eventOne->End = $end->format('c');
-
-        $eventOne->Body = new Type\Body();
-        $eventOne->Body->BodyType = Enumeration\BodyTypeType::HTML;
-        $eventOne->Body->_ = 'This is <b>the</b> body';
-
-        $eventOne->ItemClass = new Enumeration\ItemClassType();
-        $eventOne->ItemClass->_ = Enumeration\ItemClassType::APPOINTMENT;
-
-        $eventOne->Sensitivity = new Enumeration\SensitivityChoicesType();
-        $eventOne->Sensitivity->_ = Enumeration\SensitivityChoicesType::NORMAL;
-
-        $eventOne->Categories = array('Testing', 'php-ews');
-
-        $eventOne->Importance = new Enumeration\ImportanceChoicesType();
-        $eventOne->Importance->_ = Enumeration\ImportanceChoicesType::NORMAL;
-
-        $requestOne->Items->CalendarItem = $eventOne;
-
-        $requestOne->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
-
-        /** Creating the second object to test */
-        $requestTwo = new Type();
-        $requestTwo->Items = new Type();
-        $requestTwo->SendMeetingInvitations = Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE;
-
-        $eventTwo = new Type();
-        $eventTwo->Start = $start->format('c');
-        $eventTwo->End = $end->format('c');
-        $eventTwo->Body = array(
-            'BodyType' => Enumeration\BodyTypeType::HTML,
-            '_value' => 'This is <b>the</b> body'
-        );
-        $eventTwo->ItemClass = Enumeration\ItemClassType::APPOINTMENT;
-        $eventTwo->Sensitivity = Enumeration\SensitivityChoicesType::NORMAL;
-        $eventTwo->Categories = array('Testing', 'php-ews');
-        $eventTwo->Importance = Enumeration\ImportanceChoicesType::NORMAL;
-
-        $requestTwo->Items->CalendarItem = $eventTwo;
-
-        /** Creating the third object to test */
-        $requestThree = array(
-            'Items' => array(
-                'CalendarItem' => array(
-                    'Start' => $start->format('c'),
-                    'End' => $end->format('c'),
-                    'Body' => array(
-                        'BodyType' => Enumeration\BodyTypeType::HTML,
-                        '_value' => 'This is <b>the</b> body'
-                    ),
-                    'ItemClass' => Enumeration\ItemClassType::APPOINTMENT,
-                    'Sensitivity' => Enumeration\SensitivityChoicesType::NORMAL,
-                    'Categories' => array('Testing', 'php-ews'),
-                    'Importance' => Enumeration\ImportanceChoicesType::NORMAL
-                )
-            ),
-            'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
-        );
-
-        $requestThree = Type::buildFromArray($requestThree);
-
-        $this->assertEquals($control->toXmlObject(), $requestOne->toXmlObject());
-        $this->assertEquals($control->toXmlObject(), $requestTwo->toXmlObject());
-        $this->assertEquals($control->toXmlObject(), $requestThree->toXmlObject());
-
-        $object = new Type();
-        $object->_value = 'Test';
-        $object = $object->toXmlObject();
-
-        $this->assertEquals('Test', $object->_);
-        $this->assertEquals('Test', (string) $object);
     }
 
     /**

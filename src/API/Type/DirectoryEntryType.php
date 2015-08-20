@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DirectoryEntryType
  *
- * @method DirectoryEntryType getId()
+ * @method EmailAddressType getId()
  * @method DirectoryEntryType setId(EmailAddressType $id)
  */
 class DirectoryEntryType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $id
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $id = null;
 }

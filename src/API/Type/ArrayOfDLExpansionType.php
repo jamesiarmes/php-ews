@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfDLExpansionType
  *
- * @method ArrayOfDLExpansionType getIndexedPagingOffset()
+ * @method integer getIndexedPagingOffset()
  * @method ArrayOfDLExpansionType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method ArrayOfDLExpansionType getNumeratorOffset()
+ * @method integer getNumeratorOffset()
  * @method ArrayOfDLExpansionType setNumeratorOffset(integer $numeratorOffset)
- * @method ArrayOfDLExpansionType getAbsoluteDenominator()
+ * @method integer getAbsoluteDenominator()
  * @method ArrayOfDLExpansionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method ArrayOfDLExpansionType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method ArrayOfDLExpansionType getTotalItemsInView()
+ * @method integer getTotalItemsInView()
  * @method ArrayOfDLExpansionType setTotalItemsInView(integer $totalItemsInView)
- * @method ArrayOfDLExpansionType getMailbox()
+ * @method array getMailbox()
  * @method ArrayOfDLExpansionType setMailbox(array $mailbox)
  */
 class ArrayOfDLExpansionType extends Type
 {
 
     /**
-     * @property integer $indexedPagingOffset
+     * @var integer
      */
     protected $indexedPagingOffset = null;
 
     /**
-     * @property integer $numeratorOffset
+     * @var integer
      */
     protected $numeratorOffset = null;
 
     /**
-     * @property integer $absoluteDenominator
+     * @var integer
      */
     protected $absoluteDenominator = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property integer $totalItemsInView
+     * @var integer
      */
     protected $totalItemsInView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $mailbox = null;
 }

@@ -10,22 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TargetFolderIdType
  *
- * @method TargetFolderIdType getFolderId()
+ * @method FolderIdType getFolderId()
  * @method TargetFolderIdType setFolderId(FolderIdType $folderId)
- * @method TargetFolderIdType getDistinguishedFolderId()
+ * @method DistinguishedFolderIdType getDistinguishedFolderId()
  * @method TargetFolderIdType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
  */
 class TargetFolderIdType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $folderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType
-     * $distinguishedFolderId
+     * @var \jamesiarmes\PEWS\API\Type\DistinguishedFolderIdType
      */
     protected $distinguishedFolderId = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetPhoneCallInformationType
  *
- * @method GetPhoneCallInformationType getPhoneCallId()
+ * @method \jamesiarmes\PEWS\API\Type\PhoneCallIdType getPhoneCallId()
  * @method GetPhoneCallInformationType setPhoneCallId(\jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId)
  */
 class GetPhoneCallInformationType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PhoneCallIdType $phoneCallId
+     * @var \jamesiarmes\PEWS\API\Type\PhoneCallIdType
      */
     protected $phoneCallId = null;
 }

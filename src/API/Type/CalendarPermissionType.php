@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CalendarPermissionType
  *
- * @method CalendarPermissionType getReadItems()
+ * @method string getReadItems()
  * @method CalendarPermissionType setReadItems(string $readItems)
- * @method CalendarPermissionType getCalendarPermissionLevel()
+ * @method string getCalendarPermissionLevel()
  * @method CalendarPermissionType setCalendarPermissionLevel(string $calendarPermissionLevel)
  */
 class CalendarPermissionType extends BasePermissionType
 {
 
     /**
-     * @property string $readItems
+     * @var string
      */
     protected $readItems = null;
 
     /**
-     * @property string $calendarPermissionLevel
+     * @var string
      */
     protected $calendarPermissionLevel = null;
 }

@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: WorkingPeriod
  *
- * @method WorkingPeriodType getDayOfWeek()
+ * @method array getDayOfWeek()
  * @method WorkingPeriodType setDayOfWeek(array $dayOfWeek)
- * @method WorkingPeriodType getStartTimeInMinutes()
+ * @method integer getStartTimeInMinutes()
  * @method WorkingPeriodType setStartTimeInMinutes(integer $startTimeInMinutes)
- * @method WorkingPeriodType getEndTimeInMinutes()
+ * @method integer getEndTimeInMinutes()
  * @method WorkingPeriodType setEndTimeInMinutes(integer $endTimeInMinutes)
  */
 class WorkingPeriodType extends Type
 {
 
     /**
-     * @property string[] $dayOfWeek
+     * @var string[]
      */
     protected $dayOfWeek = null;
 
     /**
-     * @property integer $startTimeInMinutes
+     * @var integer
      */
     protected $startTimeInMinutes = null;
 
     /**
-     * @property integer $endTimeInMinutes
+     * @var integer
      */
     protected $endTimeInMinutes = null;
 }

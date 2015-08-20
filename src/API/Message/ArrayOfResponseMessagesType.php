@@ -10,371 +10,324 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ArrayOfResponseMessagesType
  *
- * @method ArrayOfResponseMessagesType getCreateItemResponseMessage()
+ * @method array getCreateItemResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateItemResponseMessage(array $createItemResponseMessage)
- * @method ArrayOfResponseMessagesType getDeleteItemResponseMessage()
+ * @method array getDeleteItemResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteItemResponseMessage(array $deleteItemResponseMessage)
- * @method ArrayOfResponseMessagesType getGetItemResponseMessage()
+ * @method array getGetItemResponseMessage()
  * @method ArrayOfResponseMessagesType setGetItemResponseMessage(array $getItemResponseMessage)
- * @method ArrayOfResponseMessagesType getUpdateItemResponseMessage()
+ * @method array getUpdateItemResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateItemResponseMessage(array $updateItemResponseMessage)
- * @method ArrayOfResponseMessagesType getSendItemResponseMessage()
+ * @method array getSendItemResponseMessage()
  * @method ArrayOfResponseMessagesType setSendItemResponseMessage(array $sendItemResponseMessage)
- * @method ArrayOfResponseMessagesType getDeleteFolderResponseMessage()
+ * @method array getDeleteFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteFolderResponseMessage(array $deleteFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getEmptyFolderResponseMessage()
+ * @method array getEmptyFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setEmptyFolderResponseMessage(array $emptyFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getCreateFolderResponseMessage()
+ * @method array getCreateFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateFolderResponseMessage(array $createFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getGetFolderResponseMessage()
+ * @method array getGetFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setGetFolderResponseMessage(array $getFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getFindFolderResponseMessage()
+ * @method array getFindFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setFindFolderResponseMessage(array $findFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getUpdateFolderResponseMessage()
+ * @method array getUpdateFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateFolderResponseMessage(array $updateFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getMoveFolderResponseMessage()
+ * @method array getMoveFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setMoveFolderResponseMessage(array $moveFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getCopyFolderResponseMessage()
+ * @method array getCopyFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCopyFolderResponseMessage(array $copyFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getCreateAttachmentResponseMessage()
+ * @method array getCreateAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateAttachmentResponseMessage(array $createAttachmentResponseMessage)
- * @method ArrayOfResponseMessagesType getDeleteAttachmentResponseMessage()
+ * @method array getDeleteAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteAttachmentResponseMessage(array $deleteAttachmentResponseMessage)
- * @method ArrayOfResponseMessagesType getGetAttachmentResponseMessage()
+ * @method array getGetAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setGetAttachmentResponseMessage(array $getAttachmentResponseMessage)
- * @method ArrayOfResponseMessagesType getUploadItemsResponseMessage()
+ * @method array getUploadItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setUploadItemsResponseMessage(array $uploadItemsResponseMessage)
- * @method ArrayOfResponseMessagesType getExportItemsResponseMessage()
+ * @method array getExportItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setExportItemsResponseMessage(array $exportItemsResponseMessage)
- * @method ArrayOfResponseMessagesType getFindItemResponseMessage()
+ * @method array getFindItemResponseMessage()
  * @method ArrayOfResponseMessagesType setFindItemResponseMessage(array $findItemResponseMessage)
- * @method ArrayOfResponseMessagesType getMoveItemResponseMessage()
+ * @method array getMoveItemResponseMessage()
  * @method ArrayOfResponseMessagesType setMoveItemResponseMessage(array $moveItemResponseMessage)
- * @method ArrayOfResponseMessagesType getCopyItemResponseMessage()
+ * @method array getCopyItemResponseMessage()
  * @method ArrayOfResponseMessagesType setCopyItemResponseMessage(array $copyItemResponseMessage)
- * @method ArrayOfResponseMessagesType getResolveNamesResponseMessage()
+ * @method array getResolveNamesResponseMessage()
  * @method ArrayOfResponseMessagesType setResolveNamesResponseMessage(array $resolveNamesResponseMessage)
- * @method ArrayOfResponseMessagesType getExpandDLResponseMessage()
+ * @method array getExpandDLResponseMessage()
  * @method ArrayOfResponseMessagesType setExpandDLResponseMessage(array $expandDLResponseMessage)
- * @method ArrayOfResponseMessagesType getGetServerTimeZonesResponseMessage()
+ * @method array getGetServerTimeZonesResponseMessage()
  * @method ArrayOfResponseMessagesType setGetServerTimeZonesResponseMessage(array $getServerTimeZonesResponseMessage)
- * @method ArrayOfResponseMessagesType getGetEventsResponseMessage()
+ * @method array getGetEventsResponseMessage()
  * @method ArrayOfResponseMessagesType setGetEventsResponseMessage(array $getEventsResponseMessage)
- * @method ArrayOfResponseMessagesType getGetStreamingEventsResponseMessage()
+ * @method array getGetStreamingEventsResponseMessage()
  * @method ArrayOfResponseMessagesType setGetStreamingEventsResponseMessage(array $getStreamingEventsResponseMessage)
- * @method ArrayOfResponseMessagesType getSubscribeResponseMessage()
+ * @method array getSubscribeResponseMessage()
  * @method ArrayOfResponseMessagesType setSubscribeResponseMessage(array $subscribeResponseMessage)
- * @method ArrayOfResponseMessagesType getUnsubscribeResponseMessage()
+ * @method array getUnsubscribeResponseMessage()
  * @method ArrayOfResponseMessagesType setUnsubscribeResponseMessage(array $unsubscribeResponseMessage)
- * @method ArrayOfResponseMessagesType getSendNotificationResponseMessage()
+ * @method array getSendNotificationResponseMessage()
  * @method ArrayOfResponseMessagesType setSendNotificationResponseMessage(array $sendNotificationResponseMessage)
- * @method ArrayOfResponseMessagesType getSyncFolderHierarchyResponseMessage()
+ * @method array getSyncFolderHierarchyResponseMessage()
  * @method ArrayOfResponseMessagesType setSyncFolderHierarchyResponseMessage(array $syncFolderHierarchyResponseMessage)
- * @method ArrayOfResponseMessagesType getSyncFolderItemsResponseMessage()
+ * @method array getSyncFolderItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setSyncFolderItemsResponseMessage(array $syncFolderItemsResponseMessage)
- * @method ArrayOfResponseMessagesType getCreateManagedFolderResponseMessage()
+ * @method array getCreateManagedFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateManagedFolderResponseMessage(array $createManagedFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getConvertIdResponseMessage()
+ * @method array getConvertIdResponseMessage()
  * @method ArrayOfResponseMessagesType setConvertIdResponseMessage(array $convertIdResponseMessage)
- * @method ArrayOfResponseMessagesType getGetSharingMetadataResponseMessage()
+ * @method array getGetSharingMetadataResponseMessage()
  * @method ArrayOfResponseMessagesType setGetSharingMetadataResponseMessage(array $getSharingMetadataResponseMessage)
- * @method ArrayOfResponseMessagesType getRefreshSharingFolderResponseMessage()
+ * @method array getRefreshSharingFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setRefreshSharingFolderResponseMessage(array $refreshSharingFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getGetSharingFolderResponseMessage()
+ * @method array getGetSharingFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setGetSharingFolderResponseMessage(array $getSharingFolderResponseMessage)
- * @method ArrayOfResponseMessagesType getCreateUserConfigurationResponseMessage()
+ * @method array getCreateUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateUserConfigurationResponseMessage(array $createUserConfigurationResponseMessage)
- * @method ArrayOfResponseMessagesType getDeleteUserConfigurationResponseMessage()
+ * @method array getDeleteUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteUserConfigurationResponseMessage(array $deleteUserConfigurationResponseMessage)
- * @method ArrayOfResponseMessagesType getGetUserConfigurationResponseMessage()
+ * @method array getGetUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setGetUserConfigurationResponseMessage(array $getUserConfigurationResponseMessage)
- * @method ArrayOfResponseMessagesType getUpdateUserConfigurationResponseMessage()
+ * @method array getUpdateUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateUserConfigurationResponseMessage(array $updateUserConfigurationResponseMessage)
- * @method ArrayOfResponseMessagesType getGetRoomListsResponse()
+ * @method array getGetRoomListsResponse()
  * @method ArrayOfResponseMessagesType setGetRoomListsResponse(array $getRoomListsResponse)
- * @method ArrayOfResponseMessagesType getGetRoomsResponse()
+ * @method array getGetRoomsResponse()
  * @method ArrayOfResponseMessagesType setGetRoomsResponse(array $getRoomsResponse)
- * @method ArrayOfResponseMessagesType getApplyConversationActionResponseMessage()
+ * @method array getApplyConversationActionResponseMessage()
  * @method ArrayOfResponseMessagesType setApplyConversationActionResponseMessage(array $applyConversationActionResponseMessage)
- * @method ArrayOfResponseMessagesType getFindMailboxStatisticsByKeywordsResponseMessage()
+ * @method array getFindMailboxStatisticsByKeywordsResponseMessage()
  * @method ArrayOfResponseMessagesType setFindMailboxStatisticsByKeywordsResponseMessage(array $findMailboxStatisticsByKeywordsResponseMessage)
- * @method ArrayOfResponseMessagesType getGetPasswordExpirationDateResponse()
+ * @method array getGetPasswordExpirationDateResponse()
  * @method ArrayOfResponseMessagesType setGetPasswordExpirationDateResponse(array $getPasswordExpirationDateResponse)
  */
 class ArrayOfResponseMessagesType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
-     * $createItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
      */
     protected $createItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $deleteItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $deleteItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
-     * $getItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
      */
     protected $getItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\UpdateItemResponseMessageType[]
-     * $updateItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\UpdateItemResponseMessageType[]
      */
     protected $updateItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $sendItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $sendItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $deleteFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $deleteFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $emptyFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $emptyFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $createFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $createFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $getFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $getFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FindFolderResponseMessageType[]
-     * $findFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FindFolderResponseMessageType[]
      */
     protected $findFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $updateFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $updateFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $moveFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $moveFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $copyFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $copyFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\AttachmentInfoResponseMessageType[]
-     * $createAttachmentResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\AttachmentInfoResponseMessageType[]
      */
     protected $createAttachmentResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\DeleteAttachmentResponseMessageType[]
-     * $deleteAttachmentResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\DeleteAttachmentResponseMessageType[]
      */
     protected $deleteAttachmentResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\AttachmentInfoResponseMessageType[]
-     * $getAttachmentResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\AttachmentInfoResponseMessageType[]
      */
     protected $getAttachmentResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\UploadItemsResponseMessageType[]
-     * $uploadItemsResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\UploadItemsResponseMessageType[]
      */
     protected $uploadItemsResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ExportItemsResponseMessageType[]
-     * $exportItemsResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ExportItemsResponseMessageType[]
      */
     protected $exportItemsResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FindItemResponseMessageType[]
-     * $findItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FindItemResponseMessageType[]
      */
     protected $findItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
-     * $moveItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
      */
     protected $moveItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
-     * $copyItemResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ItemInfoResponseMessageType[]
      */
     protected $copyItemResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResolveNamesResponseMessageType[]
-     * $resolveNamesResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResolveNamesResponseMessageType[]
      */
     protected $resolveNamesResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ExpandDLResponseMessageType[]
-     * $expandDLResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ExpandDLResponseMessageType[]
      */
     protected $expandDLResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetServerTimeZonesResponseMessageType[]
-     * $getServerTimeZonesResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetServerTimeZonesResponseMessageType[]
      */
     protected $getServerTimeZonesResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetEventsResponseMessageType[]
-     * $getEventsResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetEventsResponseMessageType[]
      */
     protected $getEventsResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetStreamingEventsResponseMessageType[]
-     * $getStreamingEventsResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetStreamingEventsResponseMessageType[]
      */
     protected $getStreamingEventsResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\SubscribeResponseMessageType[]
-     * $subscribeResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\SubscribeResponseMessageType[]
      */
     protected $subscribeResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $unsubscribeResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $unsubscribeResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\SendNotificationResponseMessageType[]
-     * $sendNotificationResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\SendNotificationResponseMessageType[]
      */
     protected $sendNotificationResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\SyncFolderHierarchyResponseMessageType[]
-     * $syncFolderHierarchyResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\SyncFolderHierarchyResponseMessageType[]
      */
     protected $syncFolderHierarchyResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\SyncFolderItemsResponseMessageType[]
-     * $syncFolderItemsResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\SyncFolderItemsResponseMessageType[]
      */
     protected $syncFolderItemsResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
-     * $createManagedFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\FolderInfoResponseMessageType[]
      */
     protected $createManagedFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ConvertIdResponseMessageType[]
-     * $convertIdResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ConvertIdResponseMessageType[]
      */
     protected $convertIdResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetSharingMetadataResponseMessageType[]
-     * $getSharingMetadataResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetSharingMetadataResponseMessageType[]
      */
     protected $getSharingMetadataResponseMessage = null;
 
     /**
-     * @property
-     * \jamesiarmes\PEWS\API\Message\RefreshSharingFolderResponseMessageType[]
-     * $refreshSharingFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\RefreshSharingFolderResponseMessageType[]
      */
     protected $refreshSharingFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetSharingFolderResponseMessageType[]
-     * $getSharingFolderResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetSharingFolderResponseMessageType[]
      */
     protected $getSharingFolderResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $createUserConfigurationResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $createUserConfigurationResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $deleteUserConfigurationResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $deleteUserConfigurationResponseMessage = null;
 
     /**
-     * @property
-     * \jamesiarmes\PEWS\API\Message\GetUserConfigurationResponseMessageType[]
-     * $getUserConfigurationResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\GetUserConfigurationResponseMessageType[]
      */
     protected $getUserConfigurationResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $updateUserConfigurationResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $updateUserConfigurationResponseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetRoomListsResponseMessageType[]
-     * $getRoomListsResponse
+     * @var \jamesiarmes\PEWS\API\Message\GetRoomListsResponseMessageType[]
      */
     protected $getRoomListsResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\GetRoomsResponseMessageType[]
-     * $getRoomsResponse
+     * @var \jamesiarmes\PEWS\API\Message\GetRoomsResponseMessageType[]
      */
     protected $getRoomsResponse = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
-     * $applyConversationActionResponseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType[]
      */
     protected $applyConversationActionResponseMessage = null;
 
     /**
-     * @property
+     * @var
      * \jamesiarmes\PEWS\API\Message\FindMailboxStatisticsByKeywordsResponseMessageType[]
-     * $findMailboxStatisticsByKeywordsResponseMessage
      */
     protected $findMailboxStatisticsByKeywordsResponseMessage = null;
 
     /**
-     * @property
+     * @var
      * \jamesiarmes\PEWS\API\Message\GetPasswordExpirationDateResponseMessageType[]
-     * $getPasswordExpirationDateResponse
      */
     protected $getPasswordExpirationDateResponse = null;
 }

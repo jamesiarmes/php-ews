@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindConversationType
  *
- * @method FindConversationType getIndexedPageItemView()
+ * @method \jamesiarmes\PEWS\API\Type\IndexedPageViewType getIndexedPageItemView()
  * @method FindConversationType setIndexedPageItemView(\jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageItemView)
- * @method FindConversationType getSortOrder()
+ * @method array getSortOrder()
  * @method FindConversationType setSortOrder(array $sortOrder)
- * @method FindConversationType getParentFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getParentFolderId()
  * @method FindConversationType setParentFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $parentFolderId)
  */
 class FindConversationType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageItemView
+     * @var \jamesiarmes\PEWS\API\Type\IndexedPageViewType
      */
     protected $indexedPageItemView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldOrderType[] $sortOrder
+     * @var \jamesiarmes\PEWS\API\Type\FieldOrderType[]
      */
     protected $sortOrder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $parentFolderId = null;
 }

@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  * A permission on a folder
  * XSD Type: PermissionType
  *
- * @method PermissionType getReadItems()
+ * @method string getReadItems()
  * @method PermissionType setReadItems(string $readItems)
- * @method PermissionType getPermissionLevel()
+ * @method string getPermissionLevel()
  * @method PermissionType setPermissionLevel(string $permissionLevel)
  */
 class PermissionType extends BasePermissionType
 {
 
     /**
-     * @property string $readItems
+     * @var string
      */
     protected $readItems = null;
 
     /**
-     * @property string $permissionLevel
+     * @var string
      */
     protected $permissionLevel = null;
 }

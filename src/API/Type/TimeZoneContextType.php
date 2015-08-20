@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TimeZoneContextType
  *
- * @method TimeZoneContextType getTimeZoneDefinition()
+ * @method TimeZoneDefinitionType getTimeZoneDefinition()
  * @method TimeZoneContextType setTimeZoneDefinition(TimeZoneDefinitionType $timeZoneDefinition)
  */
 class TimeZoneContextType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType $timeZoneDefinition
+     * @var \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType
      */
     protected $timeZoneDefinition = null;
 }

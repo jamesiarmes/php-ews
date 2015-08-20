@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: PlayOnPhoneType
  *
- * @method PlayOnPhoneType getItemId()
+ * @method \jamesiarmes\PEWS\API\Type\ItemIdType getItemId()
  * @method PlayOnPhoneType setItemId(\jamesiarmes\PEWS\API\Type\ItemIdType $itemId)
- * @method PlayOnPhoneType getDialString()
+ * @method string getDialString()
  * @method PlayOnPhoneType setDialString(string $dialString)
  */
 class PlayOnPhoneType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property string $dialString
+     * @var string
      */
     protected $dialString = null;
 }

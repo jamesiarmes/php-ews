@@ -8,59 +8,59 @@ namespace jamesiarmes\PEWS\API\Message;
  * Request type for the FindMailboxStatisticsByKeywords web method.
  * XSD Type: FindMailboxStatisticsByKeywordsType
  *
- * @method FindMailboxStatisticsByKeywordsType getMailboxes()
+ * @method array getMailboxes()
  * @method FindMailboxStatisticsByKeywordsType setMailboxes(array $mailboxes)
- * @method FindMailboxStatisticsByKeywordsType getKeywords()
+ * @method array getKeywords()
  * @method FindMailboxStatisticsByKeywordsType setKeywords(array $keywords)
- * @method FindMailboxStatisticsByKeywordsType getLanguage()
+ * @method string getLanguage()
  * @method FindMailboxStatisticsByKeywordsType setLanguage(string $language)
- * @method FindMailboxStatisticsByKeywordsType getSenders()
+ * @method array getSenders()
  * @method FindMailboxStatisticsByKeywordsType setSenders(array $senders)
- * @method FindMailboxStatisticsByKeywordsType getRecipients()
+ * @method array getRecipients()
  * @method FindMailboxStatisticsByKeywordsType setRecipients(array $recipients)
- * @method FindMailboxStatisticsByKeywordsType getFromDate()
+ * @method \DateTime getFromDate()
  * @method FindMailboxStatisticsByKeywordsType setFromDate(\DateTime $fromDate)
- * @method FindMailboxStatisticsByKeywordsType getToDate()
+ * @method \DateTime getToDate()
  * @method FindMailboxStatisticsByKeywordsType setToDate(\DateTime $toDate)
- * @method FindMailboxStatisticsByKeywordsType getMessageTypes()
+ * @method array getMessageTypes()
  * @method FindMailboxStatisticsByKeywordsType setMessageTypes(array $messageTypes)
- * @method FindMailboxStatisticsByKeywordsType getSearchDumpster()
+ * @method boolean getSearchDumpster()
  * @method FindMailboxStatisticsByKeywordsType setSearchDumpster(boolean $searchDumpster)
- * @method FindMailboxStatisticsByKeywordsType getIncludePersonalArchive()
+ * @method boolean getIncludePersonalArchive()
  * @method FindMailboxStatisticsByKeywordsType setIncludePersonalArchive(boolean $includePersonalArchive)
- * @method FindMailboxStatisticsByKeywordsType getIncludeUnsearchableItems()
+ * @method boolean getIncludeUnsearchableItems()
  * @method FindMailboxStatisticsByKeywordsType setIncludeUnsearchableItems(boolean $includeUnsearchableItems)
  */
 class FindMailboxStatisticsByKeywordsType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserMailboxType[] $mailboxes
+     * @var \jamesiarmes\PEWS\API\Type\UserMailboxType[]
      */
     protected $mailboxes = null;
 
     /**
-     * @property string[] $keywords
+     * @var string[]
      */
     protected $keywords = null;
 
     /**
-     * @property string $language
+     * @var string
      */
     protected $language = null;
 
     /**
-     * @property string[] $senders
+     * @var string[]
      */
     protected $senders = null;
 
     /**
-     * @property string[] $recipients
+     * @var string[]
      */
     protected $recipients = null;
 
     /**
-     * @property \DateTime $fromDate
+     * @var \DateTime
      */
     protected $fromDate = null;
 
@@ -70,27 +70,27 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
     );
 
     /**
-     * @property \DateTime $toDate
+     * @var \DateTime
      */
     protected $toDate = null;
 
     /**
-     * @property string[] $messageTypes
+     * @var string[]
      */
     protected $messageTypes = null;
 
     /**
-     * @property boolean $searchDumpster
+     * @var boolean
      */
     protected $searchDumpster = null;
 
     /**
-     * @property boolean $includePersonalArchive
+     * @var boolean
      */
     protected $includePersonalArchive = null;
 
     /**
-     * @property boolean $includeUnsearchableItems
+     * @var boolean
      */
     protected $includeUnsearchableItems = null;
 }

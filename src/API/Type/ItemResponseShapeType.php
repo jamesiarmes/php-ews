@@ -10,50 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ItemResponseShapeType
  *
- * @method ItemResponseShapeType getBaseShape()
+ * @method string getBaseShape()
  * @method ItemResponseShapeType setBaseShape(string $baseShape)
- * @method ItemResponseShapeType getIncludeMimeContent()
+ * @method boolean getIncludeMimeContent()
  * @method ItemResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
- * @method ItemResponseShapeType getBodyType()
+ * @method string getBodyType()
  * @method ItemResponseShapeType setBodyType(string $bodyType)
- * @method ItemResponseShapeType getFilterHtmlContent()
+ * @method boolean getFilterHtmlContent()
  * @method ItemResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
- * @method ItemResponseShapeType getConvertHtmlCodePageToUTF8()
+ * @method boolean getConvertHtmlCodePageToUTF8()
  * @method ItemResponseShapeType setConvertHtmlCodePageToUTF8(boolean $convertHtmlCodePageToUTF8)
- * @method ItemResponseShapeType getAdditionalProperties()
+ * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method ItemResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class ItemResponseShapeType extends Type
 {
 
     /**
-     * @property string $baseShape
+     * @var string
      */
     protected $baseShape = null;
 
     /**
-     * @property boolean $includeMimeContent
+     * @var boolean
      */
     protected $includeMimeContent = null;
 
     /**
-     * @property string $bodyType
+     * @var string
      */
     protected $bodyType = null;
 
     /**
-     * @property boolean $filterHtmlContent
+     * @var boolean
      */
     protected $filterHtmlContent = null;
 
     /**
-     * @property boolean $convertHtmlCodePageToUTF8
+     * @var boolean
      */
     protected $convertHtmlCodePageToUTF8 = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
-     * $additionalProperties
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
      */
     protected $additionalProperties = null;
 }

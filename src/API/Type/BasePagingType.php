@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BasePagingType
  *
- * @method BasePagingType getMaxEntriesReturned()
+ * @method integer getMaxEntriesReturned()
  * @method BasePagingType setMaxEntriesReturned(integer $maxEntriesReturned)
  */
 class BasePagingType extends Type
 {
 
     /**
-     * @property integer $maxEntriesReturned
+     * @var integer
      */
     protected $maxEntriesReturned = null;
 }

@@ -10,130 +10,130 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ItemType
  *
- * @method ItemType getMimeContent()
+ * @method MimeContentType getMimeContent()
  * @method ItemType setMimeContent(MimeContentType $mimeContent)
- * @method ItemType getItemId()
+ * @method ItemIdType getItemId()
  * @method ItemType setItemId(ItemIdType $itemId)
- * @method ItemType getParentFolderId()
+ * @method FolderIdType getParentFolderId()
  * @method ItemType setParentFolderId(FolderIdType $parentFolderId)
- * @method ItemType getItemClass()
+ * @method string getItemClass()
  * @method ItemType setItemClass(string $itemClass)
- * @method ItemType getSubject()
+ * @method string getSubject()
  * @method ItemType setSubject(string $subject)
- * @method ItemType getSensitivity()
+ * @method string getSensitivity()
  * @method ItemType setSensitivity(string $sensitivity)
- * @method ItemType getBody()
+ * @method BodyType getBody()
  * @method ItemType setBody(BodyType $body)
- * @method ItemType getAttachments()
+ * @method NonEmptyArrayOfAttachmentsType getAttachments()
  * @method ItemType setAttachments(NonEmptyArrayOfAttachmentsType $attachments)
- * @method ItemType getDateTimeReceived()
+ * @method \DateTime getDateTimeReceived()
  * @method ItemType setDateTimeReceived(\DateTime $dateTimeReceived)
- * @method ItemType getSize()
+ * @method integer getSize()
  * @method ItemType setSize(integer $size)
- * @method ItemType getCategories()
+ * @method array getCategories()
  * @method ItemType setCategories(array $categories)
- * @method ItemType getImportance()
+ * @method string getImportance()
  * @method ItemType setImportance(string $importance)
- * @method ItemType getInReplyTo()
+ * @method string getInReplyTo()
  * @method ItemType setInReplyTo(string $inReplyTo)
- * @method ItemType getIsSubmitted()
+ * @method boolean getIsSubmitted()
  * @method ItemType setIsSubmitted(boolean $isSubmitted)
- * @method ItemType getIsDraft()
+ * @method boolean getIsDraft()
  * @method ItemType setIsDraft(boolean $isDraft)
- * @method ItemType getIsFromMe()
+ * @method boolean getIsFromMe()
  * @method ItemType setIsFromMe(boolean $isFromMe)
- * @method ItemType getIsResend()
+ * @method boolean getIsResend()
  * @method ItemType setIsResend(boolean $isResend)
- * @method ItemType getIsUnmodified()
+ * @method boolean getIsUnmodified()
  * @method ItemType setIsUnmodified(boolean $isUnmodified)
- * @method ItemType getInternetMessageHeaders()
+ * @method array getInternetMessageHeaders()
  * @method ItemType setInternetMessageHeaders(array $internetMessageHeaders)
- * @method ItemType getDateTimeSent()
+ * @method \DateTime getDateTimeSent()
  * @method ItemType setDateTimeSent(\DateTime $dateTimeSent)
- * @method ItemType getDateTimeCreated()
+ * @method \DateTime getDateTimeCreated()
  * @method ItemType setDateTimeCreated(\DateTime $dateTimeCreated)
- * @method ItemType getResponseObjects()
+ * @method NonEmptyArrayOfResponseObjectsType getResponseObjects()
  * @method ItemType setResponseObjects(NonEmptyArrayOfResponseObjectsType $responseObjects)
- * @method ItemType getReminderDueBy()
+ * @method \DateTime getReminderDueBy()
  * @method ItemType setReminderDueBy(\DateTime $reminderDueBy)
- * @method ItemType getReminderIsSet()
+ * @method boolean getReminderIsSet()
  * @method ItemType setReminderIsSet(boolean $reminderIsSet)
- * @method ItemType getReminderMinutesBeforeStart()
+ * @method integer getReminderMinutesBeforeStart()
  * @method ItemType setReminderMinutesBeforeStart(integer $reminderMinutesBeforeStart)
- * @method ItemType getDisplayCc()
+ * @method string getDisplayCc()
  * @method ItemType setDisplayCc(string $displayCc)
- * @method ItemType getDisplayTo()
+ * @method string getDisplayTo()
  * @method ItemType setDisplayTo(string $displayTo)
- * @method ItemType getHasAttachments()
+ * @method boolean getHasAttachments()
  * @method ItemType setHasAttachments(boolean $hasAttachments)
- * @method ItemType getExtendedProperty()
+ * @method array getExtendedProperty()
  * @method ItemType setExtendedProperty(array $extendedProperty)
- * @method ItemType getCulture()
+ * @method string getCulture()
  * @method ItemType setCulture(string $culture)
- * @method ItemType getEffectiveRights()
+ * @method EffectiveRightsType getEffectiveRights()
  * @method ItemType setEffectiveRights(EffectiveRightsType $effectiveRights)
- * @method ItemType getLastModifiedName()
+ * @method string getLastModifiedName()
  * @method ItemType setLastModifiedName(string $lastModifiedName)
- * @method ItemType getLastModifiedTime()
+ * @method \DateTime getLastModifiedTime()
  * @method ItemType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method ItemType getIsAssociated()
+ * @method boolean getIsAssociated()
  * @method ItemType setIsAssociated(boolean $isAssociated)
- * @method ItemType getWebClientReadFormQueryString()
+ * @method string getWebClientReadFormQueryString()
  * @method ItemType setWebClientReadFormQueryString(string $webClientReadFormQueryString)
- * @method ItemType getWebClientEditFormQueryString()
+ * @method string getWebClientEditFormQueryString()
  * @method ItemType setWebClientEditFormQueryString(string $webClientEditFormQueryString)
- * @method ItemType getConversationId()
+ * @method ItemIdType getConversationId()
  * @method ItemType setConversationId(ItemIdType $conversationId)
- * @method ItemType getUniqueBody()
+ * @method BodyType getUniqueBody()
  * @method ItemType setUniqueBody(BodyType $uniqueBody)
- * @method ItemType getStoreEntryId()
+ * @method string getStoreEntryId()
  * @method ItemType setStoreEntryId(string $storeEntryId)
  */
 class ItemType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MimeContentType $mimeContent
+     * @var \jamesiarmes\PEWS\API\Type\MimeContentType
      */
     protected $mimeContent = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $parentFolderId = null;
 
     /**
-     * @property string $itemClass
+     * @var string
      */
     protected $itemClass = null;
 
     /**
-     * @property string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @property string $sensitivity
+     * @var string
      */
     protected $sensitivity = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BodyType $body
+     * @var \jamesiarmes\PEWS\API\Type\BodyType
      */
     protected $body = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType $attachments
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAttachmentsType
      */
     protected $attachments = null;
 
     /**
-     * @property \DateTime $dateTimeReceived
+     * @var \DateTime
      */
     protected $dateTimeReceived = null;
 
@@ -146,154 +146,152 @@ class ItemType extends Type
     );
 
     /**
-     * @property integer $size
+     * @var integer
      */
     protected $size = null;
 
     /**
-     * @property string[] $categories
+     * @var string[]
      */
     protected $categories = null;
 
     /**
-     * @property string $importance
+     * @var string
      */
     protected $importance = null;
 
     /**
-     * @property string $inReplyTo
+     * @var string
      */
     protected $inReplyTo = null;
 
     /**
-     * @property boolean $isSubmitted
+     * @var boolean
      */
     protected $isSubmitted = null;
 
     /**
-     * @property boolean $isDraft
+     * @var boolean
      */
     protected $isDraft = null;
 
     /**
-     * @property boolean $isFromMe
+     * @var boolean
      */
     protected $isFromMe = null;
 
     /**
-     * @property boolean $isResend
+     * @var boolean
      */
     protected $isResend = null;
 
     /**
-     * @property boolean $isUnmodified
+     * @var boolean
      */
     protected $isUnmodified = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\InternetHeaderType[]
-     * $internetMessageHeaders
+     * @var \jamesiarmes\PEWS\API\Type\InternetHeaderType[]
      */
     protected $internetMessageHeaders = null;
 
     /**
-     * @property \DateTime $dateTimeSent
+     * @var \DateTime
      */
     protected $dateTimeSent = null;
 
     /**
-     * @property \DateTime $dateTimeCreated
+     * @var \DateTime
      */
     protected $dateTimeCreated = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfResponseObjectsType
-     * $responseObjects
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfResponseObjectsType
      */
     protected $responseObjects = null;
 
     /**
-     * @property \DateTime $reminderDueBy
+     * @var \DateTime
      */
     protected $reminderDueBy = null;
 
     /**
-     * @property boolean $reminderIsSet
+     * @var boolean
      */
     protected $reminderIsSet = null;
 
     /**
-     * @property integer $reminderMinutesBeforeStart
+     * @var integer
      */
     protected $reminderMinutesBeforeStart = null;
 
     /**
-     * @property string $displayCc
+     * @var string
      */
     protected $displayCc = null;
 
     /**
-     * @property string $displayTo
+     * @var string
      */
     protected $displayTo = null;
 
     /**
-     * @property boolean $hasAttachments
+     * @var boolean
      */
     protected $hasAttachments = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedPropertyType[] $extendedProperty
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedPropertyType[]
      */
     protected $extendedProperty = null;
 
     /**
-     * @property string $culture
+     * @var string
      */
     protected $culture = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EffectiveRightsType $effectiveRights
+     * @var \jamesiarmes\PEWS\API\Type\EffectiveRightsType
      */
     protected $effectiveRights = null;
 
     /**
-     * @property string $lastModifiedName
+     * @var string
      */
     protected $lastModifiedName = null;
 
     /**
-     * @property \DateTime $lastModifiedTime
+     * @var \DateTime
      */
     protected $lastModifiedTime = null;
 
     /**
-     * @property boolean $isAssociated
+     * @var boolean
      */
     protected $isAssociated = null;
 
     /**
-     * @property string $webClientReadFormQueryString
+     * @var string
      */
     protected $webClientReadFormQueryString = null;
 
     /**
-     * @property string $webClientEditFormQueryString
+     * @var string
      */
     protected $webClientEditFormQueryString = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $conversationId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $conversationId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\BodyType $uniqueBody
+     * @var \jamesiarmes\PEWS\API\Type\BodyType
      */
     protected $uniqueBody = null;
 
     /**
-     * @property string $storeEntryId
+     * @var string
      */
     protected $storeEntryId = null;
 }

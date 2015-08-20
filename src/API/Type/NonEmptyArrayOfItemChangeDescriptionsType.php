@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfItemChangeDescriptionsType
  *
- * @method NonEmptyArrayOfItemChangeDescriptionsType getAppendToItemField()
+ * @method array getAppendToItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setAppendToItemField(array $appendToItemField)
- * @method NonEmptyArrayOfItemChangeDescriptionsType getSetItemField()
+ * @method array getSetItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setSetItemField(array $setItemField)
- * @method NonEmptyArrayOfItemChangeDescriptionsType getDeleteItemField()
+ * @method array getDeleteItemField()
  * @method NonEmptyArrayOfItemChangeDescriptionsType setDeleteItemField(array $deleteItemField)
  */
 class NonEmptyArrayOfItemChangeDescriptionsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AppendToItemFieldType[] $appendToItemField
+     * @var \jamesiarmes\PEWS\API\Type\AppendToItemFieldType[]
      */
     protected $appendToItemField = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SetItemFieldType[] $setItemField
+     * @var \jamesiarmes\PEWS\API\Type\SetItemFieldType[]
      */
     protected $setItemField = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DeleteItemFieldType[] $deleteItemField
+     * @var \jamesiarmes\PEWS\API\Type\DeleteItemFieldType[]
      */
     protected $deleteItemField = null;
 }

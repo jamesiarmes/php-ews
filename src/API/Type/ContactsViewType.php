@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ContactsViewType
  *
- * @method ContactsViewType getInitialName()
+ * @method string getInitialName()
  * @method ContactsViewType setInitialName(string $initialName)
- * @method ContactsViewType getFinalName()
+ * @method string getFinalName()
  * @method ContactsViewType setFinalName(string $finalName)
  */
 class ContactsViewType extends BasePagingType
 {
 
     /**
-     * @property string $initialName
+     * @var string
      */
     protected $initialName = null;
 
     /**
-     * @property string $finalName
+     * @var string
      */
     protected $finalName = null;
 }

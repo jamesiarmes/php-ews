@@ -10,15 +10,14 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: BaseResponseMessageType
  *
- * @method BaseResponseMessageType getResponseMessages()
+ * @method ArrayOfResponseMessagesType getResponseMessages()
  * @method BaseResponseMessageType setResponseMessages(ArrayOfResponseMessagesType $responseMessages)
  */
 class BaseResponseMessageType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ArrayOfResponseMessagesType
-     * $responseMessages
+     * @var \jamesiarmes\PEWS\API\Message\ArrayOfResponseMessagesType
      */
     protected $responseMessages = null;
 }

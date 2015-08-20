@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SearchFolderType
  *
- * @method SearchFolderType getSearchParameters()
+ * @method SearchParametersType getSearchParameters()
  * @method SearchFolderType setSearchParameters(SearchParametersType $searchParameters)
  */
 class SearchFolderType extends FolderType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SearchParametersType $searchParameters
+     * @var \jamesiarmes\PEWS\API\Type\SearchParametersType
      */
     protected $searchParameters = null;
 }

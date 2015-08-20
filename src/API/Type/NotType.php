@@ -8,92 +8,91 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NotType
  *
- * @method NotType getContains()
+ * @method array getContains()
  * @method NotType setContains(array $contains)
- * @method NotType getExcludes()
+ * @method array getExcludes()
  * @method NotType setExcludes(array $excludes)
- * @method NotType getExists()
+ * @method array getExists()
  * @method NotType setExists(array $exists)
- * @method NotType getIsEqualTo()
+ * @method array getIsEqualTo()
  * @method NotType setIsEqualTo(array $isEqualTo)
- * @method NotType getIsNotEqualTo()
+ * @method array getIsNotEqualTo()
  * @method NotType setIsNotEqualTo(array $isNotEqualTo)
- * @method NotType getIsGreaterThan()
+ * @method array getIsGreaterThan()
  * @method NotType setIsGreaterThan(array $isGreaterThan)
- * @method NotType getIsGreaterThanOrEqualTo()
+ * @method array getIsGreaterThanOrEqualTo()
  * @method NotType setIsGreaterThanOrEqualTo(array $isGreaterThanOrEqualTo)
- * @method NotType getIsLessThan()
+ * @method array getIsLessThan()
  * @method NotType setIsLessThan(array $isLessThan)
- * @method NotType getIsLessThanOrEqualTo()
+ * @method array getIsLessThanOrEqualTo()
  * @method NotType setIsLessThanOrEqualTo(array $isLessThanOrEqualTo)
- * @method NotType getAnd()
+ * @method array getAnd()
  * @method NotType setAnd(array $and)
- * @method NotType getNot()
+ * @method array getNot()
  * @method NotType setNot(array $not)
- * @method NotType getOr()
+ * @method array getOr()
  * @method NotType setOr(array $or)
  */
 class NotType extends SearchExpressionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Contains[] $contains
+     * @var \jamesiarmes\PEWS\API\Type\Contains[]
      */
     protected $contains = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Excludes[] $excludes
+     * @var \jamesiarmes\PEWS\API\Type\Excludes[]
      */
     protected $excludes = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Exists[] $exists
+     * @var \jamesiarmes\PEWS\API\Type\Exists[]
      */
     protected $exists = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsEqualTo[] $isEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsEqualTo[]
      */
     protected $isEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsNotEqualTo[] $isNotEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsNotEqualTo[]
      */
     protected $isNotEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsGreaterThan[] $isGreaterThan
+     * @var \jamesiarmes\PEWS\API\Type\IsGreaterThan[]
      */
     protected $isGreaterThan = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsGreaterThanOrEqualTo[]
-     * $isGreaterThanOrEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsGreaterThanOrEqualTo[]
      */
     protected $isGreaterThanOrEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsLessThan[] $isLessThan
+     * @var \jamesiarmes\PEWS\API\Type\IsLessThan[]
      */
     protected $isLessThan = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IsLessThanOrEqualTo[] $isLessThanOrEqualTo
+     * @var \jamesiarmes\PEWS\API\Type\IsLessThanOrEqualTo[]
      */
     protected $isLessThanOrEqualTo = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AndElement[] $and
+     * @var \jamesiarmes\PEWS\API\Type\AndElement[]
      */
     protected $and = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\Not[] $not
+     * @var \jamesiarmes\PEWS\API\Type\Not[]
      */
     protected $not = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OrElement[] $or
+     * @var \jamesiarmes\PEWS\API\Type\OrElement[]
      */
     protected $or = null;
 }

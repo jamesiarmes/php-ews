@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FreeBusyView
  *
- * @method FreeBusyViewType getFreeBusyViewType()
+ * @method array getFreeBusyViewType()
  * @method FreeBusyViewType setFreeBusyViewType(array $freeBusyViewType)
- * @method FreeBusyViewType getMergedFreeBusy()
+ * @method string getMergedFreeBusy()
  * @method FreeBusyViewType setMergedFreeBusy(string $mergedFreeBusy)
- * @method FreeBusyViewType getCalendarEventArray()
+ * @method array getCalendarEventArray()
  * @method FreeBusyViewType setCalendarEventArray(array $calendarEventArray)
- * @method FreeBusyViewType getWorkingHours()
+ * @method WorkingHoursType getWorkingHours()
  * @method FreeBusyViewType setWorkingHours(WorkingHoursType $workingHours)
  */
 class FreeBusyViewType extends Type
 {
 
     /**
-     * @property string[] $freeBusyViewType
+     * @var string[]
      */
     protected $freeBusyViewType = null;
 
     /**
-     * @property string $mergedFreeBusy
+     * @var string
      */
     protected $mergedFreeBusy = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarEventType[] $calendarEventArray
+     * @var \jamesiarmes\PEWS\API\Type\CalendarEventType[]
      */
     protected $calendarEventArray = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\WorkingHoursType $workingHours
+     * @var \jamesiarmes\PEWS\API\Type\WorkingHoursType
      */
     protected $workingHours = null;
 }

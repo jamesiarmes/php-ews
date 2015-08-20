@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetStreamingEventsResponseMessageType
  *
- * @method GetStreamingEventsResponseMessageType getNotifications()
+ * @method array getNotifications()
  * @method GetStreamingEventsResponseMessageType setNotifications(array $notifications)
- * @method GetStreamingEventsResponseMessageType getErrorSubscriptionIds()
+ * @method array getErrorSubscriptionIds()
  * @method GetStreamingEventsResponseMessageType setErrorSubscriptionIds(array $errorSubscriptionIds)
- * @method GetStreamingEventsResponseMessageType getConnectionStatus()
+ * @method string getConnectionStatus()
  * @method GetStreamingEventsResponseMessageType setConnectionStatus(string $connectionStatus)
  */
 class GetStreamingEventsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NotificationType[] $notifications
+     * @var \jamesiarmes\PEWS\API\Type\NotificationType[]
      */
     protected $notifications = null;
 
     /**
-     * @property string[] $errorSubscriptionIds
+     * @var string[]
      */
     protected $errorSubscriptionIds = null;
 
     /**
-     * @property string $connectionStatus
+     * @var string
      */
     protected $connectionStatus = null;
 }

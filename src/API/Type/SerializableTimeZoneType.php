@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SerializableTimeZone
  *
- * @method SerializableTimeZoneType getBias()
+ * @method integer getBias()
  * @method SerializableTimeZoneType setBias(integer $bias)
- * @method SerializableTimeZoneType getStandardTime()
+ * @method SerializableTimeZoneTimeType getStandardTime()
  * @method SerializableTimeZoneType setStandardTime(SerializableTimeZoneTimeType $standardTime)
- * @method SerializableTimeZoneType getDaylightTime()
+ * @method SerializableTimeZoneTimeType getDaylightTime()
  * @method SerializableTimeZoneType setDaylightTime(SerializableTimeZoneTimeType $daylightTime)
  */
 class SerializableTimeZoneType extends Type
 {
 
     /**
-     * @property integer $bias
+     * @var integer
      */
     protected $bias = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SerializableTimeZoneTimeType $standardTime
+     * @var \jamesiarmes\PEWS\API\Type\SerializableTimeZoneTimeType
      */
     protected $standardTime = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SerializableTimeZoneTimeType $daylightTime
+     * @var \jamesiarmes\PEWS\API\Type\SerializableTimeZoneTimeType
      */
     protected $daylightTime = null;
 }

@@ -10,71 +10,70 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseFolderType
  *
- * @method BaseFolderType getFolderId()
+ * @method FolderIdType getFolderId()
  * @method BaseFolderType setFolderId(FolderIdType $folderId)
- * @method BaseFolderType getParentFolderId()
+ * @method FolderIdType getParentFolderId()
  * @method BaseFolderType setParentFolderId(FolderIdType $parentFolderId)
- * @method BaseFolderType getFolderClass()
+ * @method string getFolderClass()
  * @method BaseFolderType setFolderClass(string $folderClass)
- * @method BaseFolderType getDisplayName()
+ * @method string getDisplayName()
  * @method BaseFolderType setDisplayName(string $displayName)
- * @method BaseFolderType getTotalCount()
+ * @method integer getTotalCount()
  * @method BaseFolderType setTotalCount(integer $totalCount)
- * @method BaseFolderType getChildFolderCount()
+ * @method integer getChildFolderCount()
  * @method BaseFolderType setChildFolderCount(integer $childFolderCount)
- * @method BaseFolderType getExtendedProperty()
+ * @method array getExtendedProperty()
  * @method BaseFolderType setExtendedProperty(array $extendedProperty)
- * @method BaseFolderType getManagedFolderInformation()
+ * @method ManagedFolderInformationType getManagedFolderInformation()
  * @method BaseFolderType setManagedFolderInformation(ManagedFolderInformationType $managedFolderInformation)
- * @method BaseFolderType getEffectiveRights()
+ * @method EffectiveRightsType getEffectiveRights()
  * @method BaseFolderType setEffectiveRights(EffectiveRightsType $effectiveRights)
  */
 class BaseFolderType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $folderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $folderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $parentFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $parentFolderId = null;
 
     /**
-     * @property string $folderClass
+     * @var string
      */
     protected $folderClass = null;
 
     /**
-     * @property string $displayName
+     * @var string
      */
     protected $displayName = null;
 
     /**
-     * @property integer $totalCount
+     * @var integer
      */
     protected $totalCount = null;
 
     /**
-     * @property integer $childFolderCount
+     * @var integer
      */
     protected $childFolderCount = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedPropertyType[] $extendedProperty
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedPropertyType[]
      */
     protected $extendedProperty = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ManagedFolderInformationType
-     * $managedFolderInformation
+     * @var \jamesiarmes\PEWS\API\Type\ManagedFolderInformationType
      */
     protected $managedFolderInformation = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EffectiveRightsType $effectiveRights
+     * @var \jamesiarmes\PEWS\API\Type\EffectiveRightsType
      */
     protected $effectiveRights = null;
 }

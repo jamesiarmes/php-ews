@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ProtectionRuleArgumentType
  *
- * @method ProtectionRuleArgumentType getValue()
+ * @method string getValue()
  * @method ProtectionRuleArgumentType setValue(string $value)
  */
 class ProtectionRuleArgumentType extends Type
 {
 
     /**
-     * @property string $value
+     * @var string
      */
     protected $value = null;
 }

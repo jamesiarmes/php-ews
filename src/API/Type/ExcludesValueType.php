@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ExcludesValueType
  *
- * @method ExcludesValueType getValue()
+ * @method string getValue()
  * @method ExcludesValueType setValue(string $value)
  */
 class ExcludesValueType extends Type
 {
 
     /**
-     * @property string $value
+     * @var string
      */
     protected $value = null;
 }

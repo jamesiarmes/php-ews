@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PathToExceptionFieldType
  *
- * @method PathToExceptionFieldType getFieldURI()
+ * @method string getFieldURI()
  * @method PathToExceptionFieldType setFieldURI(string $fieldURI)
  */
 class PathToExceptionFieldType extends BasePathToElementType
 {
 
     /**
-     * @property string $fieldURI
+     * @var string
      */
     protected $fieldURI = null;
 }

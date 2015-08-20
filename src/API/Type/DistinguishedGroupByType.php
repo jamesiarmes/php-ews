@@ -9,14 +9,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *  contrast to the arbitrary (custom) groupings available via the t:GroupByType
  * XSD Type: DistinguishedGroupByType
  *
- * @method DistinguishedGroupByType getStandardGroupBy()
+ * @method string getStandardGroupBy()
  * @method DistinguishedGroupByType setStandardGroupBy(string $standardGroupBy)
  */
 class DistinguishedGroupByType extends BaseGroupByType
 {
 
     /**
-     * @property string $standardGroupBy
+     * @var string
      */
     protected $standardGroupBy = null;
 }

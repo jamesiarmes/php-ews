@@ -8,15 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetServerTimeZonesResponseMessageType
  *
- * @method GetServerTimeZonesResponseMessageType getTimeZoneDefinitions()
+ * @method array getTimeZoneDefinitions()
  * @method GetServerTimeZonesResponseMessageType setTimeZoneDefinitions(array $timeZoneDefinitions)
  */
 class GetServerTimeZonesResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType[]
-     * $timeZoneDefinitions
+     * @var \jamesiarmes\PEWS\API\Type\TimeZoneDefinitionType[]
      */
     protected $timeZoneDefinitions = null;
 }

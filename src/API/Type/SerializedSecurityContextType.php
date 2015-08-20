@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SerializedSecurityContextType
  *
- * @method SerializedSecurityContextType getUserSid()
+ * @method string getUserSid()
  * @method SerializedSecurityContextType setUserSid(string $userSid)
- * @method SerializedSecurityContextType getGroupSids()
+ * @method array getGroupSids()
  * @method SerializedSecurityContextType setGroupSids(array $groupSids)
- * @method SerializedSecurityContextType getRestrictedGroupSids()
+ * @method array getRestrictedGroupSids()
  * @method SerializedSecurityContextType setRestrictedGroupSids(array $restrictedGroupSids)
- * @method SerializedSecurityContextType getPrimarySmtpAddress()
+ * @method string getPrimarySmtpAddress()
  * @method SerializedSecurityContextType setPrimarySmtpAddress(string $primarySmtpAddress)
  */
 class SerializedSecurityContextType extends Type
 {
 
     /**
-     * @property string $userSid
+     * @var string
      */
     protected $userSid = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SidAndAttributesType[] $groupSids
+     * @var \jamesiarmes\PEWS\API\Type\SidAndAttributesType[]
      */
     protected $groupSids = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\SidAndAttributesType[] $restrictedGroupSids
+     * @var \jamesiarmes\PEWS\API\Type\SidAndAttributesType[]
      */
     protected $restrictedGroupSids = null;
 
     /**
-     * @property string $primarySmtpAddress
+     * @var string
      */
     protected $primarySmtpAddress = null;
 }

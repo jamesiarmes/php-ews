@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderItemsDeleteType
  *
- * @method SyncFolderItemsDeleteType getItemId()
+ * @method ItemIdType getItemId()
  * @method SyncFolderItemsDeleteType setItemId(ItemIdType $itemId)
  */
 class SyncFolderItemsDeleteType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 }

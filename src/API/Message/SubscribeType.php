@@ -8,31 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SubscribeType
  *
- * @method SubscribeType getPullSubscriptionRequest()
+ * @method \jamesiarmes\PEWS\API\Type\PullSubscriptionRequestType getPullSubscriptionRequest()
  * @method SubscribeType setPullSubscriptionRequest(\jamesiarmes\PEWS\API\Type\PullSubscriptionRequestType $pullSubscriptionRequest)
- * @method SubscribeType getPushSubscriptionRequest()
+ * @method \jamesiarmes\PEWS\API\Type\PushSubscriptionRequestType getPushSubscriptionRequest()
  * @method SubscribeType setPushSubscriptionRequest(\jamesiarmes\PEWS\API\Type\PushSubscriptionRequestType $pushSubscriptionRequest)
- * @method SubscribeType getStreamingSubscriptionRequest()
+ * @method \jamesiarmes\PEWS\API\Type\StreamingSubscriptionRequestType getStreamingSubscriptionRequest()
  * @method SubscribeType setStreamingSubscriptionRequest(\jamesiarmes\PEWS\API\Type\StreamingSubscriptionRequestType $streamingSubscriptionRequest)
  */
 class SubscribeType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PullSubscriptionRequestType
-     * $pullSubscriptionRequest
+     * @var \jamesiarmes\PEWS\API\Type\PullSubscriptionRequestType
      */
     protected $pullSubscriptionRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PushSubscriptionRequestType
-     * $pushSubscriptionRequest
+     * @var \jamesiarmes\PEWS\API\Type\PushSubscriptionRequestType
      */
     protected $pushSubscriptionRequest = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\StreamingSubscriptionRequestType
-     * $streamingSubscriptionRequest
+     * @var \jamesiarmes\PEWS\API\Type\StreamingSubscriptionRequestType
      */
     protected $streamingSubscriptionRequest = null;
 }

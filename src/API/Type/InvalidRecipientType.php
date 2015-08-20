@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: InvalidRecipientType
  *
- * @method InvalidRecipientType getSmtpAddress()
+ * @method string getSmtpAddress()
  * @method InvalidRecipientType setSmtpAddress(string $smtpAddress)
- * @method InvalidRecipientType getResponseCode()
+ * @method string getResponseCode()
  * @method InvalidRecipientType setResponseCode(string $responseCode)
- * @method InvalidRecipientType getMessageText()
+ * @method string getMessageText()
  * @method InvalidRecipientType setMessageText(string $messageText)
  */
 class InvalidRecipientType extends Type
 {
 
     /**
-     * @property string $smtpAddress
+     * @var string
      */
     protected $smtpAddress = null;
 
     /**
-     * @property string $responseCode
+     * @var string
      */
     protected $responseCode = null;
 
     /**
-     * @property string $messageText
+     * @var string
      */
     protected $messageText = null;
 }

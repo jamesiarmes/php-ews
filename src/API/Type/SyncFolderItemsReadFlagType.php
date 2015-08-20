@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SyncFolderItemsReadFlagType
  *
- * @method SyncFolderItemsReadFlagType getItemId()
+ * @method ItemIdType getItemId()
  * @method SyncFolderItemsReadFlagType setItemId(ItemIdType $itemId)
- * @method SyncFolderItemsReadFlagType getIsRead()
+ * @method boolean getIsRead()
  * @method SyncFolderItemsReadFlagType setIsRead(boolean $isRead)
  */
 class SyncFolderItemsReadFlagType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $itemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $itemId = null;
 
     /**
-     * @property boolean $isRead
+     * @var boolean
      */
     protected $isRead = null;
 }

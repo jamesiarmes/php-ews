@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DelegatePermissionsType
  *
- * @method DelegatePermissionsType getCalendarFolderPermissionLevel()
+ * @method string getCalendarFolderPermissionLevel()
  * @method DelegatePermissionsType setCalendarFolderPermissionLevel(string $calendarFolderPermissionLevel)
- * @method DelegatePermissionsType getTasksFolderPermissionLevel()
+ * @method string getTasksFolderPermissionLevel()
  * @method DelegatePermissionsType setTasksFolderPermissionLevel(string $tasksFolderPermissionLevel)
- * @method DelegatePermissionsType getInboxFolderPermissionLevel()
+ * @method string getInboxFolderPermissionLevel()
  * @method DelegatePermissionsType setInboxFolderPermissionLevel(string $inboxFolderPermissionLevel)
- * @method DelegatePermissionsType getContactsFolderPermissionLevel()
+ * @method string getContactsFolderPermissionLevel()
  * @method DelegatePermissionsType setContactsFolderPermissionLevel(string $contactsFolderPermissionLevel)
- * @method DelegatePermissionsType getNotesFolderPermissionLevel()
+ * @method string getNotesFolderPermissionLevel()
  * @method DelegatePermissionsType setNotesFolderPermissionLevel(string $notesFolderPermissionLevel)
- * @method DelegatePermissionsType getJournalFolderPermissionLevel()
+ * @method string getJournalFolderPermissionLevel()
  * @method DelegatePermissionsType setJournalFolderPermissionLevel(string $journalFolderPermissionLevel)
  */
 class DelegatePermissionsType extends Type
 {
 
     /**
-     * @property string $calendarFolderPermissionLevel
+     * @var string
      */
     protected $calendarFolderPermissionLevel = null;
 
     /**
-     * @property string $tasksFolderPermissionLevel
+     * @var string
      */
     protected $tasksFolderPermissionLevel = null;
 
     /**
-     * @property string $inboxFolderPermissionLevel
+     * @var string
      */
     protected $inboxFolderPermissionLevel = null;
 
     /**
-     * @property string $contactsFolderPermissionLevel
+     * @var string
      */
     protected $contactsFolderPermissionLevel = null;
 
     /**
-     * @property string $notesFolderPermissionLevel
+     * @var string
      */
     protected $notesFolderPermissionLevel = null;
 
     /**
-     * @property string $journalFolderPermissionLevel
+     * @var string
      */
     protected $journalFolderPermissionLevel = null;
 }

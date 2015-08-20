@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  * Represents an alternate public folder Id.
  * XSD Type: AlternatePublicFolderIdType
  *
- * @method AlternatePublicFolderIdType getFolderId()
+ * @method string getFolderId()
  * @method AlternatePublicFolderIdType setFolderId(string $folderId)
  */
 class AlternatePublicFolderIdType extends AlternateIdBaseType
 {
 
     /**
-     * @property string $folderId
+     * @var string
      */
     protected $folderId = null;
 }

@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: NonEmptyArrayOfAttachmentsType
  *
- * @method NonEmptyArrayOfAttachmentsType getItemAttachment()
+ * @method array getItemAttachment()
  * @method NonEmptyArrayOfAttachmentsType setItemAttachment(array $itemAttachment)
- * @method NonEmptyArrayOfAttachmentsType getFileAttachment()
+ * @method array getFileAttachment()
  * @method NonEmptyArrayOfAttachmentsType setFileAttachment(array $fileAttachment)
  */
 class NonEmptyArrayOfAttachmentsType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemAttachmentType[] $itemAttachment
+     * @var \jamesiarmes\PEWS\API\Type\ItemAttachmentType[]
      */
     protected $itemAttachment = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FileAttachmentType[] $fileAttachment
+     * @var \jamesiarmes\PEWS\API\Type\FileAttachmentType[]
      */
     protected $fileAttachment = null;
 }

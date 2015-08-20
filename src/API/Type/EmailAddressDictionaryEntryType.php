@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EmailAddressDictionaryEntryType
  *
- * @method EmailAddressDictionaryEntryType getKey()
+ * @method string getKey()
  * @method EmailAddressDictionaryEntryType setKey(string $key)
- * @method EmailAddressDictionaryEntryType getName()
+ * @method string getName()
  * @method EmailAddressDictionaryEntryType setName(string $name)
- * @method EmailAddressDictionaryEntryType getRoutingType()
+ * @method string getRoutingType()
  * @method EmailAddressDictionaryEntryType setRoutingType(string $routingType)
- * @method EmailAddressDictionaryEntryType getMailboxType()
+ * @method string getMailboxType()
  * @method EmailAddressDictionaryEntryType setMailboxType(string $mailboxType)
  */
 class EmailAddressDictionaryEntryType extends Type
 {
 
     /**
-     * @property string $key
+     * @var string
      */
     protected $key = null;
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property string $routingType
+     * @var string
      */
     protected $routingType = null;
 
     /**
-     * @property string $mailboxType
+     * @var string
      */
     protected $mailboxType = null;
 }

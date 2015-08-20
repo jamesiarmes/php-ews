@@ -10,245 +10,245 @@ use jamesiarmes\PEWS\API\Type;
  * Rule predicates, used as rule conditions or exceptions
  * XSD Type: RulePredicatesType
  *
- * @method RulePredicatesType getCategories()
+ * @method array getCategories()
  * @method RulePredicatesType setCategories(array $categories)
- * @method RulePredicatesType getContainsBodyStrings()
+ * @method array getContainsBodyStrings()
  * @method RulePredicatesType setContainsBodyStrings(array $containsBodyStrings)
- * @method RulePredicatesType getContainsHeaderStrings()
+ * @method array getContainsHeaderStrings()
  * @method RulePredicatesType setContainsHeaderStrings(array $containsHeaderStrings)
- * @method RulePredicatesType getContainsRecipientStrings()
+ * @method array getContainsRecipientStrings()
  * @method RulePredicatesType setContainsRecipientStrings(array $containsRecipientStrings)
- * @method RulePredicatesType getContainsSenderStrings()
+ * @method array getContainsSenderStrings()
  * @method RulePredicatesType setContainsSenderStrings(array $containsSenderStrings)
- * @method RulePredicatesType getContainsSubjectOrBodyStrings()
+ * @method array getContainsSubjectOrBodyStrings()
  * @method RulePredicatesType setContainsSubjectOrBodyStrings(array $containsSubjectOrBodyStrings)
- * @method RulePredicatesType getContainsSubjectStrings()
+ * @method array getContainsSubjectStrings()
  * @method RulePredicatesType setContainsSubjectStrings(array $containsSubjectStrings)
- * @method RulePredicatesType getFlaggedForAction()
+ * @method string getFlaggedForAction()
  * @method RulePredicatesType setFlaggedForAction(string $flaggedForAction)
- * @method RulePredicatesType getFromAddresses()
+ * @method array getFromAddresses()
  * @method RulePredicatesType setFromAddresses(array $fromAddresses)
- * @method RulePredicatesType getFromConnectedAccounts()
+ * @method array getFromConnectedAccounts()
  * @method RulePredicatesType setFromConnectedAccounts(array $fromConnectedAccounts)
- * @method RulePredicatesType getHasAttachments()
+ * @method boolean getHasAttachments()
  * @method RulePredicatesType setHasAttachments(boolean $hasAttachments)
- * @method RulePredicatesType getImportance()
+ * @method string getImportance()
  * @method RulePredicatesType setImportance(string $importance)
- * @method RulePredicatesType getIsApprovalRequest()
+ * @method boolean getIsApprovalRequest()
  * @method RulePredicatesType setIsApprovalRequest(boolean $isApprovalRequest)
- * @method RulePredicatesType getIsAutomaticForward()
+ * @method boolean getIsAutomaticForward()
  * @method RulePredicatesType setIsAutomaticForward(boolean $isAutomaticForward)
- * @method RulePredicatesType getIsAutomaticReply()
+ * @method boolean getIsAutomaticReply()
  * @method RulePredicatesType setIsAutomaticReply(boolean $isAutomaticReply)
- * @method RulePredicatesType getIsEncrypted()
+ * @method boolean getIsEncrypted()
  * @method RulePredicatesType setIsEncrypted(boolean $isEncrypted)
- * @method RulePredicatesType getIsMeetingRequest()
+ * @method boolean getIsMeetingRequest()
  * @method RulePredicatesType setIsMeetingRequest(boolean $isMeetingRequest)
- * @method RulePredicatesType getIsMeetingResponse()
+ * @method boolean getIsMeetingResponse()
  * @method RulePredicatesType setIsMeetingResponse(boolean $isMeetingResponse)
- * @method RulePredicatesType getIsNDR()
+ * @method boolean getIsNDR()
  * @method RulePredicatesType setIsNDR(boolean $isNDR)
- * @method RulePredicatesType getIsPermissionControlled()
+ * @method boolean getIsPermissionControlled()
  * @method RulePredicatesType setIsPermissionControlled(boolean $isPermissionControlled)
- * @method RulePredicatesType getIsReadReceipt()
+ * @method boolean getIsReadReceipt()
  * @method RulePredicatesType setIsReadReceipt(boolean $isReadReceipt)
- * @method RulePredicatesType getIsSigned()
+ * @method boolean getIsSigned()
  * @method RulePredicatesType setIsSigned(boolean $isSigned)
- * @method RulePredicatesType getIsVoicemail()
+ * @method boolean getIsVoicemail()
  * @method RulePredicatesType setIsVoicemail(boolean $isVoicemail)
- * @method RulePredicatesType getItemClasses()
+ * @method array getItemClasses()
  * @method RulePredicatesType setItemClasses(array $itemClasses)
- * @method RulePredicatesType getMessageClassifications()
+ * @method array getMessageClassifications()
  * @method RulePredicatesType setMessageClassifications(array $messageClassifications)
- * @method RulePredicatesType getNotSentToMe()
+ * @method boolean getNotSentToMe()
  * @method RulePredicatesType setNotSentToMe(boolean $notSentToMe)
- * @method RulePredicatesType getSentCcMe()
+ * @method boolean getSentCcMe()
  * @method RulePredicatesType setSentCcMe(boolean $sentCcMe)
- * @method RulePredicatesType getSentOnlyToMe()
+ * @method boolean getSentOnlyToMe()
  * @method RulePredicatesType setSentOnlyToMe(boolean $sentOnlyToMe)
- * @method RulePredicatesType getSentToAddresses()
+ * @method array getSentToAddresses()
  * @method RulePredicatesType setSentToAddresses(array $sentToAddresses)
- * @method RulePredicatesType getSentToMe()
+ * @method boolean getSentToMe()
  * @method RulePredicatesType setSentToMe(boolean $sentToMe)
- * @method RulePredicatesType getSentToOrCcMe()
+ * @method boolean getSentToOrCcMe()
  * @method RulePredicatesType setSentToOrCcMe(boolean $sentToOrCcMe)
- * @method RulePredicatesType getSensitivity()
+ * @method string getSensitivity()
  * @method RulePredicatesType setSensitivity(string $sensitivity)
- * @method RulePredicatesType getWithinDateRange()
+ * @method RulePredicateDateRangeType getWithinDateRange()
  * @method RulePredicatesType setWithinDateRange(RulePredicateDateRangeType $withinDateRange)
- * @method RulePredicatesType getWithinSizeRange()
+ * @method RulePredicateSizeRangeType getWithinSizeRange()
  * @method RulePredicatesType setWithinSizeRange(RulePredicateSizeRangeType $withinSizeRange)
  */
 class RulePredicatesType extends Type
 {
 
     /**
-     * @property string[] $categories
+     * @var string[]
      */
     protected $categories = null;
 
     /**
-     * @property string[] $containsBodyStrings
+     * @var string[]
      */
     protected $containsBodyStrings = null;
 
     /**
-     * @property string[] $containsHeaderStrings
+     * @var string[]
      */
     protected $containsHeaderStrings = null;
 
     /**
-     * @property string[] $containsRecipientStrings
+     * @var string[]
      */
     protected $containsRecipientStrings = null;
 
     /**
-     * @property string[] $containsSenderStrings
+     * @var string[]
      */
     protected $containsSenderStrings = null;
 
     /**
-     * @property string[] $containsSubjectOrBodyStrings
+     * @var string[]
      */
     protected $containsSubjectOrBodyStrings = null;
 
     /**
-     * @property string[] $containsSubjectStrings
+     * @var string[]
      */
     protected $containsSubjectStrings = null;
 
     /**
-     * @property string $flaggedForAction
+     * @var string
      */
     protected $flaggedForAction = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $fromAddresses
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $fromAddresses = null;
 
     /**
-     * @property string[] $fromConnectedAccounts
+     * @var string[]
      */
     protected $fromConnectedAccounts = null;
 
     /**
-     * @property boolean $hasAttachments
+     * @var boolean
      */
     protected $hasAttachments = null;
 
     /**
-     * @property string $importance
+     * @var string
      */
     protected $importance = null;
 
     /**
-     * @property boolean $isApprovalRequest
+     * @var boolean
      */
     protected $isApprovalRequest = null;
 
     /**
-     * @property boolean $isAutomaticForward
+     * @var boolean
      */
     protected $isAutomaticForward = null;
 
     /**
-     * @property boolean $isAutomaticReply
+     * @var boolean
      */
     protected $isAutomaticReply = null;
 
     /**
-     * @property boolean $isEncrypted
+     * @var boolean
      */
     protected $isEncrypted = null;
 
     /**
-     * @property boolean $isMeetingRequest
+     * @var boolean
      */
     protected $isMeetingRequest = null;
 
     /**
-     * @property boolean $isMeetingResponse
+     * @var boolean
      */
     protected $isMeetingResponse = null;
 
     /**
-     * @property boolean $isNDR
+     * @var boolean
      */
     protected $isNDR = null;
 
     /**
-     * @property boolean $isPermissionControlled
+     * @var boolean
      */
     protected $isPermissionControlled = null;
 
     /**
-     * @property boolean $isReadReceipt
+     * @var boolean
      */
     protected $isReadReceipt = null;
 
     /**
-     * @property boolean $isSigned
+     * @var boolean
      */
     protected $isSigned = null;
 
     /**
-     * @property boolean $isVoicemail
+     * @var boolean
      */
     protected $isVoicemail = null;
 
     /**
-     * @property string[] $itemClasses
+     * @var string[]
      */
     protected $itemClasses = null;
 
     /**
-     * @property string[] $messageClassifications
+     * @var string[]
      */
     protected $messageClassifications = null;
 
     /**
-     * @property boolean $notSentToMe
+     * @var boolean
      */
     protected $notSentToMe = null;
 
     /**
-     * @property boolean $sentCcMe
+     * @var boolean
      */
     protected $sentCcMe = null;
 
     /**
-     * @property boolean $sentOnlyToMe
+     * @var boolean
      */
     protected $sentOnlyToMe = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $sentToAddresses
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $sentToAddresses = null;
 
     /**
-     * @property boolean $sentToMe
+     * @var boolean
      */
     protected $sentToMe = null;
 
     /**
-     * @property boolean $sentToOrCcMe
+     * @var boolean
      */
     protected $sentToOrCcMe = null;
 
     /**
-     * @property string $sensitivity
+     * @var string
      */
     protected $sensitivity = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RulePredicateDateRangeType $withinDateRange
+     * @var \jamesiarmes\PEWS\API\Type\RulePredicateDateRangeType
      */
     protected $withinDateRange = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RulePredicateSizeRangeType $withinSizeRange
+     * @var \jamesiarmes\PEWS\API\Type\RulePredicateSizeRangeType
      */
     protected $withinSizeRange = null;
 }

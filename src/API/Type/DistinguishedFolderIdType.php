@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Type;
  * Identifier for a distinguished folder
  * XSD Type: DistinguishedFolderIdType
  *
- * @method DistinguishedFolderIdType getId()
+ * @method string getId()
  * @method DistinguishedFolderIdType setId(string $id)
- * @method DistinguishedFolderIdType getChangeKey()
+ * @method string getChangeKey()
  * @method DistinguishedFolderIdType setChangeKey(string $changeKey)
- * @method DistinguishedFolderIdType getMailbox()
+ * @method EmailAddressType getMailbox()
  * @method DistinguishedFolderIdType setMailbox(EmailAddressType $mailbox)
  */
 class DistinguishedFolderIdType extends BaseFolderIdType
 {
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @property string $changeKey
+     * @var string
      */
     protected $changeKey = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 }

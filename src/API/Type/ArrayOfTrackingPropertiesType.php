@@ -10,15 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfTrackingPropertiesType
  *
- * @method ArrayOfTrackingPropertiesType getTrackingPropertyType()
+ * @method array getTrackingPropertyType()
  * @method ArrayOfTrackingPropertiesType setTrackingPropertyType(array $trackingPropertyType)
  */
 class ArrayOfTrackingPropertiesType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
-     * $trackingPropertyType
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $trackingPropertyType = null;
 }

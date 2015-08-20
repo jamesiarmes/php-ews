@@ -8,94 +8,91 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: FindItemType
  *
- * @method FindItemType getTraversal()
+ * @method string getTraversal()
  * @method FindItemType setTraversal(string $traversal)
- * @method FindItemType getItemShape()
+ * @method \jamesiarmes\PEWS\API\Type\ItemResponseShapeType getItemShape()
  * @method FindItemType setItemShape(\jamesiarmes\PEWS\API\Type\ItemResponseShapeType $itemShape)
- * @method FindItemType getIndexedPageItemView()
+ * @method \jamesiarmes\PEWS\API\Type\IndexedPageViewType getIndexedPageItemView()
  * @method FindItemType setIndexedPageItemView(\jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageItemView)
- * @method FindItemType getFractionalPageItemView()
+ * @method \jamesiarmes\PEWS\API\Type\FractionalPageViewType getFractionalPageItemView()
  * @method FindItemType setFractionalPageItemView(\jamesiarmes\PEWS\API\Type\FractionalPageViewType $fractionalPageItemView)
- * @method FindItemType getCalendarView()
+ * @method \jamesiarmes\PEWS\API\Type\CalendarViewType getCalendarView()
  * @method FindItemType setCalendarView(\jamesiarmes\PEWS\API\Type\CalendarViewType $calendarView)
- * @method FindItemType getContactsView()
+ * @method \jamesiarmes\PEWS\API\Type\ContactsViewType getContactsView()
  * @method FindItemType setContactsView(\jamesiarmes\PEWS\API\Type\ContactsViewType $contactsView)
- * @method FindItemType getGroupBy()
+ * @method \jamesiarmes\PEWS\API\Type\GroupByType getGroupBy()
  * @method FindItemType setGroupBy(\jamesiarmes\PEWS\API\Type\GroupByType $groupBy)
- * @method FindItemType getDistinguishedGroupBy()
+ * @method \jamesiarmes\PEWS\API\Type\DistinguishedGroupByType getDistinguishedGroupBy()
  * @method FindItemType setDistinguishedGroupBy(\jamesiarmes\PEWS\API\Type\DistinguishedGroupByType $distinguishedGroupBy)
- * @method FindItemType getRestriction()
+ * @method \jamesiarmes\PEWS\API\Type\RestrictionType getRestriction()
  * @method FindItemType setRestriction(\jamesiarmes\PEWS\API\Type\RestrictionType $restriction)
- * @method FindItemType getSortOrder()
+ * @method array getSortOrder()
  * @method FindItemType setSortOrder(array $sortOrder)
- * @method FindItemType getParentFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method FindItemType setParentFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
- * @method FindItemType getQueryString()
+ * @method string getQueryString()
  * @method FindItemType setQueryString(string $queryString)
  */
 class FindItemType extends BaseRequestType
 {
 
     /**
-     * @property string $traversal
+     * @var string
      */
     protected $traversal = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemResponseShapeType $itemShape
+     * @var \jamesiarmes\PEWS\API\Type\ItemResponseShapeType
      */
     protected $itemShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedPageViewType $indexedPageItemView
+     * @var \jamesiarmes\PEWS\API\Type\IndexedPageViewType
      */
     protected $indexedPageItemView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FractionalPageViewType
-     * $fractionalPageItemView
+     * @var \jamesiarmes\PEWS\API\Type\FractionalPageViewType
      */
     protected $fractionalPageItemView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarViewType $calendarView
+     * @var \jamesiarmes\PEWS\API\Type\CalendarViewType
      */
     protected $calendarView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ContactsViewType $contactsView
+     * @var \jamesiarmes\PEWS\API\Type\ContactsViewType
      */
     protected $contactsView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\GroupByType $groupBy
+     * @var \jamesiarmes\PEWS\API\Type\GroupByType
      */
     protected $groupBy = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DistinguishedGroupByType
-     * $distinguishedGroupBy
+     * @var \jamesiarmes\PEWS\API\Type\DistinguishedGroupByType
      */
     protected $distinguishedGroupBy = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RestrictionType $restriction
+     * @var \jamesiarmes\PEWS\API\Type\RestrictionType
      */
     protected $restriction = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldOrderType[] $sortOrder
+     * @var \jamesiarmes\PEWS\API\Type\FieldOrderType[]
      */
     protected $sortOrder = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
-     * $parentFolderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $parentFolderIds = null;
 
     /**
-     * @property string $queryString
+     * @var string
      */
     protected $queryString = null;
 }

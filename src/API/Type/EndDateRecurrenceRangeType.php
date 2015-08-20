@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EndDateRecurrenceRangeType
  *
- * @method EndDateRecurrenceRangeType getEndDate()
+ * @method \DateTime getEndDate()
  * @method EndDateRecurrenceRangeType setEndDate(\DateTime $endDate)
  */
 class EndDateRecurrenceRangeType extends RecurrenceRangeBaseType
 {
 
     /**
-     * @property \DateTime $endDate
+     * @var \DateTime
      */
     protected $endDate = null;
 

@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FileAttachmentType
  *
- * @method FileAttachmentType getIsContactPhoto()
+ * @method boolean getIsContactPhoto()
  * @method FileAttachmentType setIsContactPhoto(boolean $isContactPhoto)
- * @method FileAttachmentType getContent()
+ * @method string getContent()
  * @method FileAttachmentType setContent(string $content)
  */
 class FileAttachmentType extends AttachmentType
 {
 
     /**
-     * @property boolean $isContactPhoto
+     * @var boolean
      */
     protected $isContactPhoto = null;
 
     /**
-     * @property string $content
+     * @var string
      */
     protected $content = null;
 }

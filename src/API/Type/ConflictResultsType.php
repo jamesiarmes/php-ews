@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ConflictResultsType
  *
- * @method ConflictResultsType getCount()
+ * @method integer getCount()
  * @method ConflictResultsType setCount(integer $count)
  */
 class ConflictResultsType extends Type
 {
 
     /**
-     * @property integer $count
+     * @var integer
      */
     protected $count = null;
 }

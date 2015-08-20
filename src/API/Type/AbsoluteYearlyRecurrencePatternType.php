@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AbsoluteYearlyRecurrencePatternType
  *
- * @method AbsoluteYearlyRecurrencePatternType getDayOfMonth()
+ * @method integer getDayOfMonth()
  * @method AbsoluteYearlyRecurrencePatternType setDayOfMonth(integer $dayOfMonth)
- * @method AbsoluteYearlyRecurrencePatternType getMonth()
+ * @method string getMonth()
  * @method AbsoluteYearlyRecurrencePatternType setMonth(string $month)
  */
 class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
 {
 
     /**
-     * @property integer $dayOfMonth
+     * @var integer
      */
     protected $dayOfMonth = null;
 
     /**
-     * @property string $month
+     * @var string
      */
     protected $month = null;
 }

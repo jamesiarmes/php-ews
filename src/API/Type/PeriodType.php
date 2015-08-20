@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PeriodType
  *
- * @method PeriodType getBias()
+ * @method \DateInterval getBias()
  * @method PeriodType setBias(\DateInterval $bias)
- * @method PeriodType getName()
+ * @method string getName()
  * @method PeriodType setName(string $name)
- * @method PeriodType getId()
+ * @method string getId()
  * @method PeriodType setId(string $id)
  */
 class PeriodType extends Type
 {
 
     /**
-     * @property \DateInterval $bias
+     * @var \DateInterval
      */
     protected $bias = null;
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property string $id
+     * @var string
      */
     protected $id = null;
 }

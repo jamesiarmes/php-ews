@@ -10,42 +10,42 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ProtectionRuleType
  *
- * @method ProtectionRuleType getName()
+ * @method string getName()
  * @method ProtectionRuleType setName(string $name)
- * @method ProtectionRuleType getUserOverridable()
+ * @method boolean getUserOverridable()
  * @method ProtectionRuleType setUserOverridable(boolean $userOverridable)
- * @method ProtectionRuleType getPriority()
+ * @method integer getPriority()
  * @method ProtectionRuleType setPriority(integer $priority)
- * @method ProtectionRuleType getCondition()
+ * @method ProtectionRuleConditionType getCondition()
  * @method ProtectionRuleType setCondition(ProtectionRuleConditionType $condition)
- * @method ProtectionRuleType getAction()
+ * @method ProtectionRuleActionType getAction()
  * @method ProtectionRuleType setAction(ProtectionRuleActionType $action)
  */
 class ProtectionRuleType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property boolean $userOverridable
+     * @var boolean
      */
     protected $userOverridable = null;
 
     /**
-     * @property integer $priority
+     * @var integer
      */
     protected $priority = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ProtectionRuleConditionType $condition
+     * @var \jamesiarmes\PEWS\API\Type\ProtectionRuleConditionType
      */
     protected $condition = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ProtectionRuleActionType $action
+     * @var \jamesiarmes\PEWS\API\Type\ProtectionRuleActionType
      */
     protected $action = null;
 }

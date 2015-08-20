@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SmtpDomain
  *
- * @method SmtpDomainType getName()
+ * @method string getName()
  * @method SmtpDomainType setName(string $name)
- * @method SmtpDomainType getIncludeSubdomains()
+ * @method boolean getIncludeSubdomains()
  * @method SmtpDomainType setIncludeSubdomains(boolean $includeSubdomains)
  */
 class SmtpDomainType extends Type
 {
 
     /**
-     * @property string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @property boolean $includeSubdomains
+     * @var boolean
      */
     protected $includeSubdomains = null;
 }

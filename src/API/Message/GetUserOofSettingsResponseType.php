@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserOofSettingsResponse
  *
- * @method GetUserOofSettingsResponseType getResponseMessage()
+ * @method ResponseMessageType getResponseMessage()
  * @method GetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method GetUserOofSettingsResponseType getOofSettings()
+ * @method \jamesiarmes\PEWS\API\Type\OofSettings getOofSettings()
  * @method GetUserOofSettingsResponseType setOofSettings(\jamesiarmes\PEWS\API\Type\OofSettings $oofSettings)
- * @method GetUserOofSettingsResponseType getAllowExternalOof()
+ * @method string getAllowExternalOof()
  * @method GetUserOofSettingsResponseType setAllowExternalOof(string $allowExternalOof)
  */
 class GetUserOofSettingsResponseType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\ResponseMessageType $responseMessage
+     * @var \jamesiarmes\PEWS\API\Message\ResponseMessageType
      */
     protected $responseMessage = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\OofSettings $oofSettings
+     * @var \jamesiarmes\PEWS\API\Type\OofSettings
      */
     protected $oofSettings = null;
 
     /**
-     * @property string $allowExternalOof
+     * @var string
      */
     protected $allowExternalOof = null;
 }

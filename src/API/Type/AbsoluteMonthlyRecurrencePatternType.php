@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AbsoluteMonthlyRecurrencePatternType
  *
- * @method AbsoluteMonthlyRecurrencePatternType getDayOfMonth()
+ * @method integer getDayOfMonth()
  * @method AbsoluteMonthlyRecurrencePatternType setDayOfMonth(integer $dayOfMonth)
  */
 class AbsoluteMonthlyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {
 
     /**
-     * @property integer $dayOfMonth
+     * @var integer
      */
     protected $dayOfMonth = null;
 }

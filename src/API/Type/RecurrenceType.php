@@ -10,77 +10,70 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurrenceType
  *
- * @method RecurrenceType getRelativeYearlyRecurrence()
+ * @method RelativeYearlyRecurrencePatternType getRelativeYearlyRecurrence()
  * @method RecurrenceType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
- * @method RecurrenceType getAbsoluteYearlyRecurrence()
+ * @method AbsoluteYearlyRecurrencePatternType getAbsoluteYearlyRecurrence()
  * @method RecurrenceType setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $absoluteYearlyRecurrence)
- * @method RecurrenceType getRelativeMonthlyRecurrence()
+ * @method RelativeMonthlyRecurrencePatternType getRelativeMonthlyRecurrence()
  * @method RecurrenceType setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $relativeMonthlyRecurrence)
- * @method RecurrenceType getAbsoluteMonthlyRecurrence()
+ * @method AbsoluteMonthlyRecurrencePatternType getAbsoluteMonthlyRecurrence()
  * @method RecurrenceType setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $absoluteMonthlyRecurrence)
- * @method RecurrenceType getWeeklyRecurrence()
+ * @method WeeklyRecurrencePatternType getWeeklyRecurrence()
  * @method RecurrenceType setWeeklyRecurrence(WeeklyRecurrencePatternType $weeklyRecurrence)
- * @method RecurrenceType getDailyRecurrence()
+ * @method DailyRecurrencePatternType getDailyRecurrence()
  * @method RecurrenceType setDailyRecurrence(DailyRecurrencePatternType $dailyRecurrence)
- * @method RecurrenceType getNoEndRecurrence()
+ * @method NoEndRecurrenceRangeType getNoEndRecurrence()
  * @method RecurrenceType setNoEndRecurrence(NoEndRecurrenceRangeType $noEndRecurrence)
- * @method RecurrenceType getEndDateRecurrence()
+ * @method EndDateRecurrenceRangeType getEndDateRecurrence()
  * @method RecurrenceType setEndDateRecurrence(EndDateRecurrenceRangeType $endDateRecurrence)
- * @method RecurrenceType getNumberedRecurrence()
+ * @method NumberedRecurrenceRangeType getNumberedRecurrence()
  * @method RecurrenceType setNumberedRecurrence(NumberedRecurrenceRangeType $numberedRecurrence)
  */
 class RecurrenceType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RelativeYearlyRecurrencePatternType
-     * $relativeYearlyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\RelativeYearlyRecurrencePatternType
      */
     protected $relativeYearlyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AbsoluteYearlyRecurrencePatternType
-     * $absoluteYearlyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\AbsoluteYearlyRecurrencePatternType
      */
     protected $absoluteYearlyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RelativeMonthlyRecurrencePatternType
-     * $relativeMonthlyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\RelativeMonthlyRecurrencePatternType
      */
     protected $relativeMonthlyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AbsoluteMonthlyRecurrencePatternType
-     * $absoluteMonthlyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\AbsoluteMonthlyRecurrencePatternType
      */
     protected $absoluteMonthlyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\WeeklyRecurrencePatternType
-     * $weeklyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\WeeklyRecurrencePatternType
      */
     protected $weeklyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DailyRecurrencePatternType $dailyRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\DailyRecurrencePatternType
      */
     protected $dailyRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NoEndRecurrenceRangeType $noEndRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\NoEndRecurrenceRangeType
      */
     protected $noEndRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EndDateRecurrenceRangeType
-     * $endDateRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\EndDateRecurrenceRangeType
      */
     protected $endDateRecurrence = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NumberedRecurrenceRangeType
-     * $numberedRecurrence
+     * @var \jamesiarmes\PEWS\API\Type\NumberedRecurrenceRangeType
      */
     protected $numberedRecurrence = null;
 }

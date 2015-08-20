@@ -10,77 +10,77 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CompleteNameType
  *
- * @method CompleteNameType getTitle()
+ * @method string getTitle()
  * @method CompleteNameType setTitle(string $title)
- * @method CompleteNameType getFirstName()
+ * @method string getFirstName()
  * @method CompleteNameType setFirstName(string $firstName)
- * @method CompleteNameType getMiddleName()
+ * @method string getMiddleName()
  * @method CompleteNameType setMiddleName(string $middleName)
- * @method CompleteNameType getLastName()
+ * @method string getLastName()
  * @method CompleteNameType setLastName(string $lastName)
- * @method CompleteNameType getSuffix()
+ * @method string getSuffix()
  * @method CompleteNameType setSuffix(string $suffix)
- * @method CompleteNameType getInitials()
+ * @method string getInitials()
  * @method CompleteNameType setInitials(string $initials)
- * @method CompleteNameType getFullName()
+ * @method string getFullName()
  * @method CompleteNameType setFullName(string $fullName)
- * @method CompleteNameType getNickname()
+ * @method string getNickname()
  * @method CompleteNameType setNickname(string $nickname)
- * @method CompleteNameType getYomiFirstName()
+ * @method string getYomiFirstName()
  * @method CompleteNameType setYomiFirstName(string $yomiFirstName)
- * @method CompleteNameType getYomiLastName()
+ * @method string getYomiLastName()
  * @method CompleteNameType setYomiLastName(string $yomiLastName)
  */
 class CompleteNameType extends Type
 {
 
     /**
-     * @property string $title
+     * @var string
      */
     protected $title = null;
 
     /**
-     * @property string $firstName
+     * @var string
      */
     protected $firstName = null;
 
     /**
-     * @property string $middleName
+     * @var string
      */
     protected $middleName = null;
 
     /**
-     * @property string $lastName
+     * @var string
      */
     protected $lastName = null;
 
     /**
-     * @property string $suffix
+     * @var string
      */
     protected $suffix = null;
 
     /**
-     * @property string $initials
+     * @var string
      */
     protected $initials = null;
 
     /**
-     * @property string $fullName
+     * @var string
      */
     protected $fullName = null;
 
     /**
-     * @property string $nickname
+     * @var string
      */
     protected $nickname = null;
 
     /**
-     * @property string $yomiFirstName
+     * @var string
      */
     protected $yomiFirstName = null;
 
     /**
-     * @property string $yomiLastName
+     * @var string
      */
     protected $yomiLastName = null;
 }

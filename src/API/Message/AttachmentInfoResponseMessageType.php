@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: AttachmentInfoResponseMessageType
  *
- * @method AttachmentInfoResponseMessageType getAttachments()
+ * @method \jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType getAttachments()
  * @method AttachmentInfoResponseMessageType setAttachments(\jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType $attachments)
  */
 class AttachmentInfoResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType $attachments
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfAttachmentsType
      */
     protected $attachments = null;
 }

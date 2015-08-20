@@ -10,23 +10,21 @@ use jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetUserAvailabilityResponseType
  *
- * @method GetUserAvailabilityResponseType getFreeBusyResponseArray()
+ * @method array getFreeBusyResponseArray()
  * @method GetUserAvailabilityResponseType setFreeBusyResponseArray(array $freeBusyResponseArray)
- * @method GetUserAvailabilityResponseType getSuggestionsResponse()
+ * @method SuggestionsResponseType getSuggestionsResponse()
  * @method GetUserAvailabilityResponseType setSuggestionsResponse(SuggestionsResponseType $suggestionsResponse)
  */
 class GetUserAvailabilityResponseType extends Message
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\FreeBusyResponseType[]
-     * $freeBusyResponseArray
+     * @var \jamesiarmes\PEWS\API\Message\FreeBusyResponseType[]
      */
     protected $freeBusyResponseArray = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Message\SuggestionsResponseType
-     * $suggestionsResponse
+     * @var \jamesiarmes\PEWS\API\Message\SuggestionsResponseType
      */
     protected $suggestionsResponse = null;
 }

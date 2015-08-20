@@ -8,36 +8,35 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetMessageTrackingReportResponseMessageType
  *
- * @method GetMessageTrackingReportResponseMessageType getMessageTrackingReport()
+ * @method \jamesiarmes\PEWS\API\Type\MessageTrackingReportType getMessageTrackingReport()
  * @method GetMessageTrackingReportResponseMessageType setMessageTrackingReport(\jamesiarmes\PEWS\API\Type\MessageTrackingReportType $messageTrackingReport)
- * @method GetMessageTrackingReportResponseMessageType getDiagnostics()
+ * @method array getDiagnostics()
  * @method GetMessageTrackingReportResponseMessageType setDiagnostics(array $diagnostics)
- * @method GetMessageTrackingReportResponseMessageType getErrors()
+ * @method array getErrors()
  * @method GetMessageTrackingReportResponseMessageType setErrors(array $errors)
- * @method GetMessageTrackingReportResponseMessageType getProperties()
+ * @method array getProperties()
  * @method GetMessageTrackingReportResponseMessageType setProperties(array $properties)
  */
 class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\MessageTrackingReportType
-     * $messageTrackingReport
+     * @var \jamesiarmes\PEWS\API\Type\MessageTrackingReportType
      */
     protected $messageTrackingReport = null;
 
     /**
-     * @property string[] $diagnostics
+     * @var string[]
      */
     protected $diagnostics = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType[] $errors
+     * @var \jamesiarmes\PEWS\API\Type\ArrayOfTrackingPropertiesType[]
      */
     protected $errors = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

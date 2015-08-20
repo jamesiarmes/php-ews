@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ChangeDescriptionType
  *
- * @method ChangeDescriptionType getFieldURI()
+ * @method array getFieldURI()
  * @method ChangeDescriptionType setFieldURI(array $fieldURI)
- * @method ChangeDescriptionType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method ChangeDescriptionType setIndexedFieldURI(array $indexedFieldURI)
- * @method ChangeDescriptionType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method ChangeDescriptionType setExtendedFieldURI(array $extendedFieldURI)
  */
 class ChangeDescriptionType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 }

@@ -10,36 +10,36 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecipientTrackingEventType
  *
- * @method RecipientTrackingEventType getDate()
+ * @method \DateTime getDate()
  * @method RecipientTrackingEventType setDate(\DateTime $date)
- * @method RecipientTrackingEventType getRecipient()
+ * @method EmailAddressType getRecipient()
  * @method RecipientTrackingEventType setRecipient(EmailAddressType $recipient)
- * @method RecipientTrackingEventType getDeliveryStatus()
+ * @method string getDeliveryStatus()
  * @method RecipientTrackingEventType setDeliveryStatus(string $deliveryStatus)
- * @method RecipientTrackingEventType getEventDescription()
+ * @method string getEventDescription()
  * @method RecipientTrackingEventType setEventDescription(string $eventDescription)
- * @method RecipientTrackingEventType getEventData()
+ * @method array getEventData()
  * @method RecipientTrackingEventType setEventData(array $eventData)
- * @method RecipientTrackingEventType getServer()
+ * @method string getServer()
  * @method RecipientTrackingEventType setServer(string $server)
- * @method RecipientTrackingEventType getInternalId()
+ * @method integer getInternalId()
  * @method RecipientTrackingEventType setInternalId(integer $internalId)
- * @method RecipientTrackingEventType getBccRecipient()
+ * @method boolean getBccRecipient()
  * @method RecipientTrackingEventType setBccRecipient(boolean $bccRecipient)
- * @method RecipientTrackingEventType getHiddenRecipient()
+ * @method boolean getHiddenRecipient()
  * @method RecipientTrackingEventType setHiddenRecipient(boolean $hiddenRecipient)
- * @method RecipientTrackingEventType getUniquePathId()
+ * @method string getUniquePathId()
  * @method RecipientTrackingEventType setUniquePathId(string $uniquePathId)
- * @method RecipientTrackingEventType getRootAddress()
+ * @method string getRootAddress()
  * @method RecipientTrackingEventType setRootAddress(string $rootAddress)
- * @method RecipientTrackingEventType getProperties()
+ * @method array getProperties()
  * @method RecipientTrackingEventType setProperties(array $properties)
  */
 class RecipientTrackingEventType extends Type
 {
 
     /**
-     * @property \DateTime $date
+     * @var \DateTime
      */
     protected $date = null;
 
@@ -48,57 +48,57 @@ class RecipientTrackingEventType extends Type
     );
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $recipient
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $recipient = null;
 
     /**
-     * @property string $deliveryStatus
+     * @var string
      */
     protected $deliveryStatus = null;
 
     /**
-     * @property string $eventDescription
+     * @var string
      */
     protected $eventDescription = null;
 
     /**
-     * @property string[] $eventData
+     * @var string[]
      */
     protected $eventData = null;
 
     /**
-     * @property string $server
+     * @var string
      */
     protected $server = null;
 
     /**
-     * @property integer $internalId
+     * @var integer
      */
     protected $internalId = null;
 
     /**
-     * @property boolean $bccRecipient
+     * @var boolean
      */
     protected $bccRecipient = null;
 
     /**
-     * @property boolean $hiddenRecipient
+     * @var boolean
      */
     protected $hiddenRecipient = null;
 
     /**
-     * @property string $uniquePathId
+     * @var string
      */
     protected $uniquePathId = null;
 
     /**
-     * @property string $rootAddress
+     * @var string
      */
     protected $rootAddress = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

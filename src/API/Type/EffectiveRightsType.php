@@ -10,56 +10,56 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EffectiveRightsType
  *
- * @method EffectiveRightsType getCreateAssociated()
+ * @method boolean getCreateAssociated()
  * @method EffectiveRightsType setCreateAssociated(boolean $createAssociated)
- * @method EffectiveRightsType getCreateContents()
+ * @method boolean getCreateContents()
  * @method EffectiveRightsType setCreateContents(boolean $createContents)
- * @method EffectiveRightsType getCreateHierarchy()
+ * @method boolean getCreateHierarchy()
  * @method EffectiveRightsType setCreateHierarchy(boolean $createHierarchy)
- * @method EffectiveRightsType getDelete()
+ * @method boolean getDelete()
  * @method EffectiveRightsType setDelete(boolean $delete)
- * @method EffectiveRightsType getModify()
+ * @method boolean getModify()
  * @method EffectiveRightsType setModify(boolean $modify)
- * @method EffectiveRightsType getRead()
+ * @method boolean getRead()
  * @method EffectiveRightsType setRead(boolean $read)
- * @method EffectiveRightsType getViewPrivateItems()
+ * @method boolean getViewPrivateItems()
  * @method EffectiveRightsType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class EffectiveRightsType extends Type
 {
 
     /**
-     * @property boolean $createAssociated
+     * @var boolean
      */
     protected $createAssociated = null;
 
     /**
-     * @property boolean $createContents
+     * @var boolean
      */
     protected $createContents = null;
 
     /**
-     * @property boolean $createHierarchy
+     * @var boolean
      */
     protected $createHierarchy = null;
 
     /**
-     * @property boolean $delete
+     * @var boolean
      */
     protected $delete = null;
 
     /**
-     * @property boolean $modify
+     * @var boolean
      */
     protected $modify = null;
 
     /**
-     * @property boolean $read
+     * @var boolean
      */
     protected $read = null;
 
     /**
-     * @property boolean $viewPrivateItems
+     * @var boolean
      */
     protected $viewPrivateItems = null;
 }

@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseSubscriptionRequestType
  *
- * @method BaseSubscriptionRequestType getSubscribeToAllFolders()
+ * @method boolean getSubscribeToAllFolders()
  * @method BaseSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
- * @method BaseSubscriptionRequestType getFolderIds()
+ * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method BaseSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
- * @method BaseSubscriptionRequestType getEventTypes()
+ * @method array getEventTypes()
  * @method BaseSubscriptionRequestType setEventTypes(array $eventTypes)
- * @method BaseSubscriptionRequestType getWatermark()
+ * @method string getWatermark()
  * @method BaseSubscriptionRequestType setWatermark(string $watermark)
  */
 class BaseSubscriptionRequestType extends Type
 {
 
     /**
-     * @property boolean $subscribeToAllFolders
+     * @var boolean
      */
     protected $subscribeToAllFolders = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
 
     /**
-     * @property string[] $eventTypes
+     * @var string[]
      */
     protected $eventTypes = null;
 
     /**
-     * @property string $watermark
+     * @var string
      */
     protected $watermark = null;
 }

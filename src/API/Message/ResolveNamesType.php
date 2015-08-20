@@ -8,43 +8,42 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ResolveNamesType
  *
- * @method ResolveNamesType getReturnFullContactData()
+ * @method boolean getReturnFullContactData()
  * @method ResolveNamesType setReturnFullContactData(boolean $returnFullContactData)
- * @method ResolveNamesType getSearchScope()
+ * @method string getSearchScope()
  * @method ResolveNamesType setSearchScope(string $searchScope)
- * @method ResolveNamesType getContactDataShape()
+ * @method string getContactDataShape()
  * @method ResolveNamesType setContactDataShape(string $contactDataShape)
- * @method ResolveNamesType getParentFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method ResolveNamesType setParentFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
- * @method ResolveNamesType getUnresolvedEntry()
+ * @method string getUnresolvedEntry()
  * @method ResolveNamesType setUnresolvedEntry(string $unresolvedEntry)
  */
 class ResolveNamesType extends BaseRequestType
 {
 
     /**
-     * @property boolean $returnFullContactData
+     * @var boolean
      */
     protected $returnFullContactData = null;
 
     /**
-     * @property string $searchScope
+     * @var string
      */
     protected $searchScope = null;
 
     /**
-     * @property string $contactDataShape
+     * @var string
      */
     protected $contactDataShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
-     * $parentFolderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $parentFolderIds = null;
 
     /**
-     * @property string $unresolvedEntry
+     * @var string
      */
     protected $unresolvedEntry = null;
 }

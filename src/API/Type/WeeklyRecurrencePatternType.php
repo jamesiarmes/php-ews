@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: WeeklyRecurrencePatternType
  *
- * @method WeeklyRecurrencePatternType getDaysOfWeek()
+ * @method array getDaysOfWeek()
  * @method WeeklyRecurrencePatternType setDaysOfWeek(array $daysOfWeek)
- * @method WeeklyRecurrencePatternType getFirstDayOfWeek()
+ * @method string getFirstDayOfWeek()
  * @method WeeklyRecurrencePatternType setFirstDayOfWeek(string $firstDayOfWeek)
  */
 class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {
 
     /**
-     * @property string[] $daysOfWeek
+     * @var string[]
      */
     protected $daysOfWeek = null;
 
     /**
-     * @property string $firstDayOfWeek
+     * @var string
      */
     protected $firstDayOfWeek = null;
 }

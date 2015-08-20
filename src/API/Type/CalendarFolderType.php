@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CalendarFolderType
  *
- * @method CalendarFolderType getSharingEffectiveRights()
+ * @method string getSharingEffectiveRights()
  * @method CalendarFolderType setSharingEffectiveRights(string $sharingEffectiveRights)
- * @method CalendarFolderType getPermissionSet()
+ * @method CalendarPermissionSetType getPermissionSet()
  * @method CalendarFolderType setPermissionSet(CalendarPermissionSetType $permissionSet)
  */
 class CalendarFolderType extends BaseFolderType
 {
 
     /**
-     * @property string $sharingEffectiveRights
+     * @var string
      */
     protected $sharingEffectiveRights = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\CalendarPermissionSetType $permissionSet
+     * @var \jamesiarmes\PEWS\API\Type\CalendarPermissionSetType
      */
     protected $permissionSet = null;
 }

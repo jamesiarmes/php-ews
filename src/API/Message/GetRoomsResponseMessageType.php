@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetRoomsResponseMessageType
  *
- * @method GetRoomsResponseMessageType getRooms()
+ * @method array getRooms()
  * @method GetRoomsResponseMessageType setRooms(array $rooms)
  */
 class GetRoomsResponseMessageType extends ResponseMessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RoomType[] $rooms
+     * @var \jamesiarmes\PEWS\API\Type\RoomType[]
      */
     protected $rooms = null;
 }

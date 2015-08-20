@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DeletedOccurrenceInfoType
  *
- * @method DeletedOccurrenceInfoType getStart()
+ * @method \DateTime getStart()
  * @method DeletedOccurrenceInfoType setStart(\DateTime $start)
  */
 class DeletedOccurrenceInfoType extends Type
 {
 
     /**
-     * @property \DateTime $start
+     * @var \DateTime
      */
     protected $start = null;
 

@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  * Size range type used for the WithinSizeRange rule predicate.
  * XSD Type: RulePredicateSizeRangeType
  *
- * @method RulePredicateSizeRangeType getMinimumSize()
+ * @method integer getMinimumSize()
  * @method RulePredicateSizeRangeType setMinimumSize(integer $minimumSize)
- * @method RulePredicateSizeRangeType getMaximumSize()
+ * @method integer getMaximumSize()
  * @method RulePredicateSizeRangeType setMaximumSize(integer $maximumSize)
  */
 class RulePredicateSizeRangeType extends Type
 {
 
     /**
-     * @property integer $minimumSize
+     * @var integer
      */
     protected $minimumSize = null;
 
     /**
-     * @property integer $maximumSize
+     * @var integer
      */
     protected $maximumSize = null;
 }

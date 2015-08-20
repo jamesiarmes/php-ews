@@ -10,108 +10,108 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ConversationType
  *
- * @method ConversationType getConversationId()
+ * @method ItemIdType getConversationId()
  * @method ConversationType setConversationId(ItemIdType $conversationId)
- * @method ConversationType getConversationTopic()
+ * @method string getConversationTopic()
  * @method ConversationType setConversationTopic(string $conversationTopic)
- * @method ConversationType getUniqueRecipients()
+ * @method array getUniqueRecipients()
  * @method ConversationType setUniqueRecipients(array $uniqueRecipients)
- * @method ConversationType getGlobalUniqueRecipients()
+ * @method array getGlobalUniqueRecipients()
  * @method ConversationType setGlobalUniqueRecipients(array $globalUniqueRecipients)
- * @method ConversationType getUniqueUnreadSenders()
+ * @method array getUniqueUnreadSenders()
  * @method ConversationType setUniqueUnreadSenders(array $uniqueUnreadSenders)
- * @method ConversationType getGlobalUniqueUnreadSenders()
+ * @method array getGlobalUniqueUnreadSenders()
  * @method ConversationType setGlobalUniqueUnreadSenders(array $globalUniqueUnreadSenders)
- * @method ConversationType getUniqueSenders()
+ * @method array getUniqueSenders()
  * @method ConversationType setUniqueSenders(array $uniqueSenders)
- * @method ConversationType getGlobalUniqueSenders()
+ * @method array getGlobalUniqueSenders()
  * @method ConversationType setGlobalUniqueSenders(array $globalUniqueSenders)
- * @method ConversationType getLastDeliveryTime()
+ * @method \DateTime getLastDeliveryTime()
  * @method ConversationType setLastDeliveryTime(\DateTime $lastDeliveryTime)
- * @method ConversationType getGlobalLastDeliveryTime()
+ * @method \DateTime getGlobalLastDeliveryTime()
  * @method ConversationType setGlobalLastDeliveryTime(\DateTime $globalLastDeliveryTime)
- * @method ConversationType getCategories()
+ * @method array getCategories()
  * @method ConversationType setCategories(array $categories)
- * @method ConversationType getGlobalCategories()
+ * @method array getGlobalCategories()
  * @method ConversationType setGlobalCategories(array $globalCategories)
- * @method ConversationType getFlagStatus()
+ * @method string getFlagStatus()
  * @method ConversationType setFlagStatus(string $flagStatus)
- * @method ConversationType getGlobalFlagStatus()
+ * @method string getGlobalFlagStatus()
  * @method ConversationType setGlobalFlagStatus(string $globalFlagStatus)
- * @method ConversationType getHasAttachments()
+ * @method boolean getHasAttachments()
  * @method ConversationType setHasAttachments(boolean $hasAttachments)
- * @method ConversationType getGlobalHasAttachments()
+ * @method boolean getGlobalHasAttachments()
  * @method ConversationType setGlobalHasAttachments(boolean $globalHasAttachments)
- * @method ConversationType getMessageCount()
+ * @method integer getMessageCount()
  * @method ConversationType setMessageCount(integer $messageCount)
- * @method ConversationType getGlobalMessageCount()
+ * @method integer getGlobalMessageCount()
  * @method ConversationType setGlobalMessageCount(integer $globalMessageCount)
- * @method ConversationType getUnreadCount()
+ * @method integer getUnreadCount()
  * @method ConversationType setUnreadCount(integer $unreadCount)
- * @method ConversationType getGlobalUnreadCount()
+ * @method integer getGlobalUnreadCount()
  * @method ConversationType setGlobalUnreadCount(integer $globalUnreadCount)
- * @method ConversationType getSize()
+ * @method integer getSize()
  * @method ConversationType setSize(integer $size)
- * @method ConversationType getGlobalSize()
+ * @method integer getGlobalSize()
  * @method ConversationType setGlobalSize(integer $globalSize)
- * @method ConversationType getItemClasses()
+ * @method array getItemClasses()
  * @method ConversationType setItemClasses(array $itemClasses)
- * @method ConversationType getGlobalItemClasses()
+ * @method array getGlobalItemClasses()
  * @method ConversationType setGlobalItemClasses(array $globalItemClasses)
- * @method ConversationType getImportance()
+ * @method string getImportance()
  * @method ConversationType setImportance(string $importance)
- * @method ConversationType getGlobalImportance()
+ * @method string getGlobalImportance()
  * @method ConversationType setGlobalImportance(string $globalImportance)
- * @method ConversationType getItemIds()
+ * @method NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method ConversationType setItemIds(NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method ConversationType getGlobalItemIds()
+ * @method NonEmptyArrayOfBaseItemIdsType getGlobalItemIds()
  * @method ConversationType setGlobalItemIds(NonEmptyArrayOfBaseItemIdsType $globalItemIds)
  */
 class ConversationType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $conversationId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $conversationId = null;
 
     /**
-     * @property string $conversationTopic
+     * @var string
      */
     protected $conversationTopic = null;
 
     /**
-     * @property string[] $uniqueRecipients
+     * @var string[]
      */
     protected $uniqueRecipients = null;
 
     /**
-     * @property string[] $globalUniqueRecipients
+     * @var string[]
      */
     protected $globalUniqueRecipients = null;
 
     /**
-     * @property string[] $uniqueUnreadSenders
+     * @var string[]
      */
     protected $uniqueUnreadSenders = null;
 
     /**
-     * @property string[] $globalUniqueUnreadSenders
+     * @var string[]
      */
     protected $globalUniqueUnreadSenders = null;
 
     /**
-     * @property string[] $uniqueSenders
+     * @var string[]
      */
     protected $uniqueSenders = null;
 
     /**
-     * @property string[] $globalUniqueSenders
+     * @var string[]
      */
     protected $globalUniqueSenders = null;
 
     /**
-     * @property \DateTime $lastDeliveryTime
+     * @var \DateTime
      */
     protected $lastDeliveryTime = null;
 
@@ -121,98 +121,97 @@ class ConversationType extends Type
     );
 
     /**
-     * @property \DateTime $globalLastDeliveryTime
+     * @var \DateTime
      */
     protected $globalLastDeliveryTime = null;
 
     /**
-     * @property string[] $categories
+     * @var string[]
      */
     protected $categories = null;
 
     /**
-     * @property string[] $globalCategories
+     * @var string[]
      */
     protected $globalCategories = null;
 
     /**
-     * @property string $flagStatus
+     * @var string
      */
     protected $flagStatus = null;
 
     /**
-     * @property string $globalFlagStatus
+     * @var string
      */
     protected $globalFlagStatus = null;
 
     /**
-     * @property boolean $hasAttachments
+     * @var boolean
      */
     protected $hasAttachments = null;
 
     /**
-     * @property boolean $globalHasAttachments
+     * @var boolean
      */
     protected $globalHasAttachments = null;
 
     /**
-     * @property integer $messageCount
+     * @var integer
      */
     protected $messageCount = null;
 
     /**
-     * @property integer $globalMessageCount
+     * @var integer
      */
     protected $globalMessageCount = null;
 
     /**
-     * @property integer $unreadCount
+     * @var integer
      */
     protected $unreadCount = null;
 
     /**
-     * @property integer $globalUnreadCount
+     * @var integer
      */
     protected $globalUnreadCount = null;
 
     /**
-     * @property integer $size
+     * @var integer
      */
     protected $size = null;
 
     /**
-     * @property integer $globalSize
+     * @var integer
      */
     protected $globalSize = null;
 
     /**
-     * @property string[] $itemClasses
+     * @var string[]
      */
     protected $itemClasses = null;
 
     /**
-     * @property string[] $globalItemClasses
+     * @var string[]
      */
     protected $globalItemClasses = null;
 
     /**
-     * @property string $importance
+     * @var string
      */
     protected $importance = null;
 
     /**
-     * @property string $globalImportance
+     * @var string
      */
     protected $globalImportance = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $itemIds = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
-     * $globalItemIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $globalItemIds = null;
 }

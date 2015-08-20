@@ -8,16 +8,16 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CalendarViewType
  *
- * @method CalendarViewType getStartDate()
+ * @method \DateTime getStartDate()
  * @method CalendarViewType setStartDate(\DateTime $startDate)
- * @method CalendarViewType getEndDate()
+ * @method \DateTime getEndDate()
  * @method CalendarViewType setEndDate(\DateTime $endDate)
  */
 class CalendarViewType extends BasePagingType
 {
 
     /**
-     * @property \DateTime $startDate
+     * @var \DateTime
      */
     protected $startDate = null;
 
@@ -27,7 +27,7 @@ class CalendarViewType extends BasePagingType
     );
 
     /**
-     * @property \DateTime $endDate
+     * @var \DateTime
      */
     protected $endDate = null;
 }

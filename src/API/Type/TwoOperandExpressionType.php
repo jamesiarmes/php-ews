@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: TwoOperandExpressionType
  *
- * @method TwoOperandExpressionType getFieldURI()
+ * @method array getFieldURI()
  * @method TwoOperandExpressionType setFieldURI(array $fieldURI)
- * @method TwoOperandExpressionType getIndexedFieldURI()
+ * @method array getIndexedFieldURI()
  * @method TwoOperandExpressionType setIndexedFieldURI(array $indexedFieldURI)
- * @method TwoOperandExpressionType getExtendedFieldURI()
+ * @method array getExtendedFieldURI()
  * @method TwoOperandExpressionType setExtendedFieldURI(array $extendedFieldURI)
- * @method TwoOperandExpressionType getFieldURIOrConstant()
+ * @method FieldURIOrConstantType getFieldURIOrConstant()
  * @method TwoOperandExpressionType setFieldURIOrConstant(FieldURIOrConstantType $fieldURIOrConstant)
  */
 class TwoOperandExpressionType extends SearchExpressionType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURI[] $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\FieldURI[]
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\IndexedFieldURI[] $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\IndexedFieldURI[]
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[] $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FieldURIOrConstantType $fieldURIOrConstant
+     * @var \jamesiarmes\PEWS\API\Type\FieldURIOrConstantType
      */
     protected $fieldURIOrConstant = null;
 }

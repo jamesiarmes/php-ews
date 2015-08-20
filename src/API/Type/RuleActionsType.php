@@ -10,100 +10,98 @@ use jamesiarmes\PEWS\API\Type;
  * Rule actions
  * XSD Type: RuleActionsType
  *
- * @method RuleActionsType getAssignCategories()
+ * @method array getAssignCategories()
  * @method RuleActionsType setAssignCategories(array $assignCategories)
- * @method RuleActionsType getCopyToFolder()
+ * @method TargetFolderIdType getCopyToFolder()
  * @method RuleActionsType setCopyToFolder(TargetFolderIdType $copyToFolder)
- * @method RuleActionsType getDelete()
+ * @method boolean getDelete()
  * @method RuleActionsType setDelete(boolean $delete)
- * @method RuleActionsType getForwardAsAttachmentToRecipients()
+ * @method array getForwardAsAttachmentToRecipients()
  * @method RuleActionsType setForwardAsAttachmentToRecipients(array $forwardAsAttachmentToRecipients)
- * @method RuleActionsType getForwardToRecipients()
+ * @method array getForwardToRecipients()
  * @method RuleActionsType setForwardToRecipients(array $forwardToRecipients)
- * @method RuleActionsType getMarkImportance()
+ * @method string getMarkImportance()
  * @method RuleActionsType setMarkImportance(string $markImportance)
- * @method RuleActionsType getMarkAsRead()
+ * @method boolean getMarkAsRead()
  * @method RuleActionsType setMarkAsRead(boolean $markAsRead)
- * @method RuleActionsType getMoveToFolder()
+ * @method TargetFolderIdType getMoveToFolder()
  * @method RuleActionsType setMoveToFolder(TargetFolderIdType $moveToFolder)
- * @method RuleActionsType getPermanentDelete()
+ * @method boolean getPermanentDelete()
  * @method RuleActionsType setPermanentDelete(boolean $permanentDelete)
- * @method RuleActionsType getRedirectToRecipients()
+ * @method array getRedirectToRecipients()
  * @method RuleActionsType setRedirectToRecipients(array $redirectToRecipients)
- * @method RuleActionsType getSendSMSAlertToRecipients()
+ * @method array getSendSMSAlertToRecipients()
  * @method RuleActionsType setSendSMSAlertToRecipients(array $sendSMSAlertToRecipients)
- * @method RuleActionsType getServerReplyWithMessage()
+ * @method ItemIdType getServerReplyWithMessage()
  * @method RuleActionsType setServerReplyWithMessage(ItemIdType $serverReplyWithMessage)
- * @method RuleActionsType getStopProcessingRules()
+ * @method boolean getStopProcessingRules()
  * @method RuleActionsType setStopProcessingRules(boolean $stopProcessingRules)
  */
 class RuleActionsType extends Type
 {
 
     /**
-     * @property string[] $assignCategories
+     * @var string[]
      */
     protected $assignCategories = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $copyToFolder
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $copyToFolder = null;
 
     /**
-     * @property boolean $delete
+     * @var boolean
      */
     protected $delete = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[]
-     * $forwardAsAttachmentToRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $forwardAsAttachmentToRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $forwardToRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $forwardToRecipients = null;
 
     /**
-     * @property string $markImportance
+     * @var string
      */
     protected $markImportance = null;
 
     /**
-     * @property boolean $markAsRead
+     * @var boolean
      */
     protected $markAsRead = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $moveToFolder
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $moveToFolder = null;
 
     /**
-     * @property boolean $permanentDelete
+     * @var boolean
      */
     protected $permanentDelete = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $redirectToRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $redirectToRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[]
-     * $sendSMSAlertToRecipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $sendSMSAlertToRecipients = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $serverReplyWithMessage
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $serverReplyWithMessage = null;
 
     /**
-     * @property boolean $stopProcessingRules
+     * @var boolean
      */
     protected $stopProcessingRules = null;
 }

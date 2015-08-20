@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: PhoneCallInformationType
  *
- * @method PhoneCallInformationType getPhoneCallState()
+ * @method string getPhoneCallState()
  * @method PhoneCallInformationType setPhoneCallState(string $phoneCallState)
- * @method PhoneCallInformationType getConnectionFailureCause()
+ * @method string getConnectionFailureCause()
  * @method PhoneCallInformationType setConnectionFailureCause(string $connectionFailureCause)
- * @method PhoneCallInformationType getSIPResponseText()
+ * @method string getSIPResponseText()
  * @method PhoneCallInformationType setSIPResponseText(string $sIPResponseText)
- * @method PhoneCallInformationType getSIPResponseCode()
+ * @method integer getSIPResponseCode()
  * @method PhoneCallInformationType setSIPResponseCode(integer $sIPResponseCode)
  */
 class PhoneCallInformationType extends Type
 {
 
     /**
-     * @property string $phoneCallState
+     * @var string
      */
     protected $phoneCallState = null;
 
     /**
-     * @property string $connectionFailureCause
+     * @var string
      */
     protected $connectionFailureCause = null;
 
     /**
-     * @property string $sIPResponseText
+     * @var string
      */
     protected $sIPResponseText = null;
 
     /**
-     * @property integer $sIPResponseCode
+     * @var integer
      */
     protected $sIPResponseCode = null;
 }

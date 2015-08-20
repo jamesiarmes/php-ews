@@ -8,49 +8,49 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SyncFolderItemsType
  *
- * @method SyncFolderItemsType getItemShape()
+ * @method \jamesiarmes\PEWS\API\Type\ItemResponseShapeType getItemShape()
  * @method SyncFolderItemsType setItemShape(\jamesiarmes\PEWS\API\Type\ItemResponseShapeType $itemShape)
- * @method SyncFolderItemsType getSyncFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getSyncFolderId()
  * @method SyncFolderItemsType setSyncFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $syncFolderId)
- * @method SyncFolderItemsType getSyncState()
+ * @method string getSyncState()
  * @method SyncFolderItemsType setSyncState(string $syncState)
- * @method SyncFolderItemsType getIgnore()
+ * @method array getIgnore()
  * @method SyncFolderItemsType setIgnore(array $ignore)
- * @method SyncFolderItemsType getMaxChangesReturned()
+ * @method integer getMaxChangesReturned()
  * @method SyncFolderItemsType setMaxChangesReturned(integer $maxChangesReturned)
- * @method SyncFolderItemsType getSyncScope()
+ * @method string getSyncScope()
  * @method SyncFolderItemsType setSyncScope(string $syncScope)
  */
 class SyncFolderItemsType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemResponseShapeType $itemShape
+     * @var \jamesiarmes\PEWS\API\Type\ItemResponseShapeType
      */
     protected $itemShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $syncFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $syncFolderId = null;
 
     /**
-     * @property string $syncState
+     * @var string
      */
     protected $syncState = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType[] $ignore
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType[]
      */
     protected $ignore = null;
 
     /**
-     * @property integer $maxChangesReturned
+     * @var integer
      */
     protected $maxChangesReturned = null;
 
     /**
-     * @property string $syncScope
+     * @var string
      */
     protected $syncScope = null;
 }

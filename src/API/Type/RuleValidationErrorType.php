@@ -10,35 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  * Represents a single validation error on a particular rule property value, predicate property value or action property value
  * XSD Type: RuleValidationErrorType
  *
- * @method RuleValidationErrorType getFieldURI()
+ * @method string getFieldURI()
  * @method RuleValidationErrorType setFieldURI(string $fieldURI)
- * @method RuleValidationErrorType getErrorCode()
+ * @method string getErrorCode()
  * @method RuleValidationErrorType setErrorCode(string $errorCode)
- * @method RuleValidationErrorType getErrorMessage()
+ * @method string getErrorMessage()
  * @method RuleValidationErrorType setErrorMessage(string $errorMessage)
- * @method RuleValidationErrorType getFieldValue()
+ * @method string getFieldValue()
  * @method RuleValidationErrorType setFieldValue(string $fieldValue)
  */
 class RuleValidationErrorType extends Type
 {
 
     /**
-     * @property string $fieldURI
+     * @var string
      */
     protected $fieldURI = null;
 
     /**
-     * @property string $errorCode
+     * @var string
      */
     protected $errorCode = null;
 
     /**
-     * @property string $errorMessage
+     * @var string
      */
     protected $errorMessage = null;
 
     /**
-     * @property string $fieldValue
+     * @var string
      */
     protected $fieldValue = null;
 }

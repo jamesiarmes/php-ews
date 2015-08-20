@@ -10,49 +10,49 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: ArrayOfResolutionType
  *
- * @method ArrayOfResolutionType getIndexedPagingOffset()
+ * @method integer getIndexedPagingOffset()
  * @method ArrayOfResolutionType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method ArrayOfResolutionType getNumeratorOffset()
+ * @method integer getNumeratorOffset()
  * @method ArrayOfResolutionType setNumeratorOffset(integer $numeratorOffset)
- * @method ArrayOfResolutionType getAbsoluteDenominator()
+ * @method integer getAbsoluteDenominator()
  * @method ArrayOfResolutionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method ArrayOfResolutionType getIncludesLastItemInRange()
+ * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method ArrayOfResolutionType getTotalItemsInView()
+ * @method integer getTotalItemsInView()
  * @method ArrayOfResolutionType setTotalItemsInView(integer $totalItemsInView)
- * @method ArrayOfResolutionType getResolution()
+ * @method array getResolution()
  * @method ArrayOfResolutionType setResolution(array $resolution)
  */
 class ArrayOfResolutionType extends Type
 {
 
     /**
-     * @property integer $indexedPagingOffset
+     * @var integer
      */
     protected $indexedPagingOffset = null;
 
     /**
-     * @property integer $numeratorOffset
+     * @var integer
      */
     protected $numeratorOffset = null;
 
     /**
-     * @property integer $absoluteDenominator
+     * @var integer
      */
     protected $absoluteDenominator = null;
 
     /**
-     * @property boolean $includesLastItemInRange
+     * @var boolean
      */
     protected $includesLastItemInRange = null;
 
     /**
-     * @property integer $totalItemsInView
+     * @var integer
      */
     protected $totalItemsInView = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ResolutionType[] $resolution
+     * @var \jamesiarmes\PEWS\API\Type\ResolutionType[]
      */
     protected $resolution = null;
 }

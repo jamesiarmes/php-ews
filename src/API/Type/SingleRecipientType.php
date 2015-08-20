@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: SingleRecipientType
  *
- * @method SingleRecipientType getMailbox()
+ * @method EmailAddressType getMailbox()
  * @method SingleRecipientType setMailbox(EmailAddressType $mailbox)
  */
 class SingleRecipientType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 }

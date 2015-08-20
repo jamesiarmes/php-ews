@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: EncryptedSharedFolderDataType
  *
- * @method EncryptedSharedFolderDataType getToken()
+ * @method EncryptedDataContainerType getToken()
  * @method EncryptedSharedFolderDataType setToken(EncryptedDataContainerType $token)
- * @method EncryptedSharedFolderDataType getData()
+ * @method EncryptedDataContainerType getData()
  * @method EncryptedSharedFolderDataType setData(EncryptedDataContainerType $data)
  */
 class EncryptedSharedFolderDataType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EncryptedDataContainerType $token
+     * @var \jamesiarmes\PEWS\API\Type\EncryptedDataContainerType
      */
     protected $token = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EncryptedDataContainerType $data
+     * @var \jamesiarmes\PEWS\API\Type\EncryptedDataContainerType
      */
     protected $data = null;
 }

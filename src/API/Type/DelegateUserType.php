@@ -10,36 +10,35 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DelegateUserType
  *
- * @method DelegateUserType getUserId()
+ * @method UserIdType getUserId()
  * @method DelegateUserType setUserId(UserIdType $userId)
- * @method DelegateUserType getDelegatePermissions()
+ * @method DelegatePermissionsType getDelegatePermissions()
  * @method DelegateUserType setDelegatePermissions(DelegatePermissionsType $delegatePermissions)
- * @method DelegateUserType getReceiveCopiesOfMeetingMessages()
+ * @method boolean getReceiveCopiesOfMeetingMessages()
  * @method DelegateUserType setReceiveCopiesOfMeetingMessages(boolean $receiveCopiesOfMeetingMessages)
- * @method DelegateUserType getViewPrivateItems()
+ * @method boolean getViewPrivateItems()
  * @method DelegateUserType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class DelegateUserType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\UserIdType $userId
+     * @var \jamesiarmes\PEWS\API\Type\UserIdType
      */
     protected $userId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DelegatePermissionsType
-     * $delegatePermissions
+     * @var \jamesiarmes\PEWS\API\Type\DelegatePermissionsType
      */
     protected $delegatePermissions = null;
 
     /**
-     * @property boolean $receiveCopiesOfMeetingMessages
+     * @var boolean
      */
     protected $receiveCopiesOfMeetingMessages = null;
 
     /**
-     * @property boolean $viewPrivateItems
+     * @var boolean
      */
     protected $viewPrivateItems = null;
 }

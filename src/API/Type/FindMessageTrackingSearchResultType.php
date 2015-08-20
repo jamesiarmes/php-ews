@@ -10,50 +10,50 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FindMessageTrackingSearchResultType
  *
- * @method FindMessageTrackingSearchResultType getSubject()
+ * @method string getSubject()
  * @method FindMessageTrackingSearchResultType setSubject(string $subject)
- * @method FindMessageTrackingSearchResultType getSender()
+ * @method EmailAddressType getSender()
  * @method FindMessageTrackingSearchResultType setSender(EmailAddressType $sender)
- * @method FindMessageTrackingSearchResultType getPurportedSender()
+ * @method EmailAddressType getPurportedSender()
  * @method FindMessageTrackingSearchResultType setPurportedSender(EmailAddressType $purportedSender)
- * @method FindMessageTrackingSearchResultType getRecipients()
+ * @method array getRecipients()
  * @method FindMessageTrackingSearchResultType setRecipients(array $recipients)
- * @method FindMessageTrackingSearchResultType getSubmittedTime()
+ * @method \DateTime getSubmittedTime()
  * @method FindMessageTrackingSearchResultType setSubmittedTime(\DateTime $submittedTime)
- * @method FindMessageTrackingSearchResultType getMessageTrackingReportId()
+ * @method string getMessageTrackingReportId()
  * @method FindMessageTrackingSearchResultType setMessageTrackingReportId(string $messageTrackingReportId)
- * @method FindMessageTrackingSearchResultType getPreviousHopServer()
+ * @method string getPreviousHopServer()
  * @method FindMessageTrackingSearchResultType setPreviousHopServer(string $previousHopServer)
- * @method FindMessageTrackingSearchResultType getFirstHopServer()
+ * @method string getFirstHopServer()
  * @method FindMessageTrackingSearchResultType setFirstHopServer(string $firstHopServer)
- * @method FindMessageTrackingSearchResultType getProperties()
+ * @method array getProperties()
  * @method FindMessageTrackingSearchResultType setProperties(array $properties)
  */
 class FindMessageTrackingSearchResultType extends Type
 {
 
     /**
-     * @property string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $sender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $sender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $purportedSender
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $purportedSender = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType[] $recipients
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType[]
      */
     protected $recipients = null;
 
     /**
-     * @property \DateTime $submittedTime
+     * @var \DateTime
      */
     protected $submittedTime = null;
 
@@ -62,22 +62,22 @@ class FindMessageTrackingSearchResultType extends Type
     );
 
     /**
-     * @property string $messageTrackingReportId
+     * @var string
      */
     protected $messageTrackingReportId = null;
 
     /**
-     * @property string $previousHopServer
+     * @var string
      */
     protected $previousHopServer = null;
 
     /**
-     * @property string $firstHopServer
+     * @var string
      */
     protected $firstHopServer = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TrackingPropertyType[] $properties
+     * @var \jamesiarmes\PEWS\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
 }

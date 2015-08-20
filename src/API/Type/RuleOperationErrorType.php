@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RuleOperationErrorType
  *
- * @method RuleOperationErrorType getOperationIndex()
+ * @method integer getOperationIndex()
  * @method RuleOperationErrorType setOperationIndex(integer $operationIndex)
- * @method RuleOperationErrorType getValidationErrors()
+ * @method array getValidationErrors()
  * @method RuleOperationErrorType setValidationErrors(array $validationErrors)
  */
 class RuleOperationErrorType extends Type
 {
 
     /**
-     * @property integer $operationIndex
+     * @var integer
      */
     protected $operationIndex = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RuleValidationErrorType[] $validationErrors
+     * @var \jamesiarmes\PEWS\API\Type\RuleValidationErrorType[]
      */
     protected $validationErrors = null;
 }

@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: DeleteRuleOperationType
  *
- * @method DeleteRuleOperationType getRuleId()
+ * @method string getRuleId()
  * @method DeleteRuleOperationType setRuleId(string $ruleId)
  */
 class DeleteRuleOperationType extends RuleOperationType
 {
 
     /**
-     * @property string $ruleId
+     * @var string
      */
     protected $ruleId = null;
 }

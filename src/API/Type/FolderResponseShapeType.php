@@ -10,22 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: FolderResponseShapeType
  *
- * @method FolderResponseShapeType getBaseShape()
+ * @method string getBaseShape()
  * @method FolderResponseShapeType setBaseShape(string $baseShape)
- * @method FolderResponseShapeType getAdditionalProperties()
+ * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method FolderResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class FolderResponseShapeType extends Type
 {
 
     /**
-     * @property string $baseShape
+     * @var string
      */
     protected $baseShape = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
-     * $additionalProperties
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfPathsToElementType
      */
     protected $additionalProperties = null;
 }

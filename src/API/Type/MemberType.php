@@ -10,28 +10,28 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MemberType
  *
- * @method MemberType getKey()
+ * @method string getKey()
  * @method MemberType setKey(string $key)
- * @method MemberType getMailbox()
+ * @method EmailAddressType getMailbox()
  * @method MemberType setMailbox(EmailAddressType $mailbox)
- * @method MemberType getStatus()
+ * @method string getStatus()
  * @method MemberType setStatus(string $status)
  */
 class MemberType extends Type
 {
 
     /**
-     * @property string $key
+     * @var string
      */
     protected $key = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\EmailAddressType $mailbox
+     * @var \jamesiarmes\PEWS\API\Type\EmailAddressType
      */
     protected $mailbox = null;
 
     /**
-     * @property string $status
+     * @var string
      */
     protected $status = null;
 }

@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: RecurringMasterItemIdType
  *
- * @method RecurringMasterItemIdType getOccurrenceId()
+ * @method string getOccurrenceId()
  * @method RecurringMasterItemIdType setOccurrenceId(string $occurrenceId)
- * @method RecurringMasterItemIdType getChangeKey()
+ * @method string getChangeKey()
  * @method RecurringMasterItemIdType setChangeKey(string $changeKey)
  */
 class RecurringMasterItemIdType extends BaseItemIdType
 {
 
     /**
-     * @property string $occurrenceId
+     * @var string
      */
     protected $occurrenceId = null;
 
     /**
-     * @property string $changeKey
+     * @var string
      */
     protected $changeKey = null;
 }

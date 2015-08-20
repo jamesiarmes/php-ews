@@ -10,21 +10,21 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: OutOfOfficeMailTip
  *
- * @method OutOfOfficeMailTipType getReplyBody()
+ * @method ReplyBodyType getReplyBody()
  * @method OutOfOfficeMailTipType setReplyBody(ReplyBodyType $replyBody)
- * @method OutOfOfficeMailTipType getDuration()
+ * @method DurationType getDuration()
  * @method OutOfOfficeMailTipType setDuration(DurationType $duration)
  */
 class OutOfOfficeMailTipType extends Type
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ReplyBodyType $replyBody
+     * @var \jamesiarmes\PEWS\API\Type\ReplyBodyType
      */
     protected $replyBody = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\DurationType $duration
+     * @var \jamesiarmes\PEWS\API\Type\DurationType
      */
     protected $duration = null;
 }

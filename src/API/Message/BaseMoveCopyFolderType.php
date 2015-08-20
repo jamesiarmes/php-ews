@@ -8,21 +8,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: BaseMoveCopyFolderType
  *
- * @method BaseMoveCopyFolderType getToFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\TargetFolderIdType getToFolderId()
  * @method BaseMoveCopyFolderType setToFolderId(\jamesiarmes\PEWS\API\Type\TargetFolderIdType $toFolderId)
- * @method BaseMoveCopyFolderType getFolderIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method BaseMoveCopyFolderType setFolderIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class BaseMoveCopyFolderType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\TargetFolderIdType $toFolderId
+     * @var \jamesiarmes\PEWS\API\Type\TargetFolderIdType
      */
     protected $toFolderId = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
 }

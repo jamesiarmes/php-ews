@@ -8,58 +8,58 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MeetingMessageType
  *
- * @method MeetingMessageType getAssociatedCalendarItemId()
+ * @method ItemIdType getAssociatedCalendarItemId()
  * @method MeetingMessageType setAssociatedCalendarItemId(ItemIdType $associatedCalendarItemId)
- * @method MeetingMessageType getIsDelegated()
+ * @method boolean getIsDelegated()
  * @method MeetingMessageType setIsDelegated(boolean $isDelegated)
- * @method MeetingMessageType getIsOutOfDate()
+ * @method boolean getIsOutOfDate()
  * @method MeetingMessageType setIsOutOfDate(boolean $isOutOfDate)
- * @method MeetingMessageType getHasBeenProcessed()
+ * @method boolean getHasBeenProcessed()
  * @method MeetingMessageType setHasBeenProcessed(boolean $hasBeenProcessed)
- * @method MeetingMessageType getResponseType()
+ * @method string getResponseType()
  * @method MeetingMessageType setResponseType(string $responseType)
- * @method MeetingMessageType getUID()
+ * @method string getUID()
  * @method MeetingMessageType setUID(string $uID)
- * @method MeetingMessageType getRecurrenceId()
+ * @method \DateTime getRecurrenceId()
  * @method MeetingMessageType setRecurrenceId(\DateTime $recurrenceId)
- * @method MeetingMessageType getDateTimeStamp()
+ * @method \DateTime getDateTimeStamp()
  * @method MeetingMessageType setDateTimeStamp(\DateTime $dateTimeStamp)
  */
 class MeetingMessageType extends MessageType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\ItemIdType $associatedCalendarItemId
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
      */
     protected $associatedCalendarItemId = null;
 
     /**
-     * @property boolean $isDelegated
+     * @var boolean
      */
     protected $isDelegated = null;
 
     /**
-     * @property boolean $isOutOfDate
+     * @var boolean
      */
     protected $isOutOfDate = null;
 
     /**
-     * @property boolean $hasBeenProcessed
+     * @var boolean
      */
     protected $hasBeenProcessed = null;
 
     /**
-     * @property string $responseType
+     * @var string
      */
     protected $responseType = null;
 
     /**
-     * @property string $uID
+     * @var string
      */
     protected $uID = null;
 
     /**
-     * @property \DateTime $recurrenceId
+     * @var \DateTime
      */
     protected $recurrenceId = null;
 
@@ -69,7 +69,7 @@ class MeetingMessageType extends MessageType
     );
 
     /**
-     * @property \DateTime $dateTimeStamp
+     * @var \DateTime
      */
     protected $dateTimeStamp = null;
 }

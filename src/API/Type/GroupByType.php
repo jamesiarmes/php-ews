@@ -8,35 +8,35 @@ namespace jamesiarmes\PEWS\API\Type;
  * Allows consumers to specify arbitrary groupings for FindItem queries.
  * XSD Type: GroupByType
  *
- * @method GroupByType getFieldURI()
+ * @method PathToUnindexedFieldType getFieldURI()
  * @method GroupByType setFieldURI(PathToUnindexedFieldType $fieldURI)
- * @method GroupByType getIndexedFieldURI()
+ * @method PathToIndexedFieldType getIndexedFieldURI()
  * @method GroupByType setIndexedFieldURI(PathToIndexedFieldType $indexedFieldURI)
- * @method GroupByType getExtendedFieldURI()
+ * @method PathToExtendedFieldType getExtendedFieldURI()
  * @method GroupByType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
- * @method GroupByType getAggregateOn()
+ * @method AggregateOnType getAggregateOn()
  * @method GroupByType setAggregateOn(AggregateOnType $aggregateOn)
  */
 class GroupByType extends BaseGroupByType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToUnindexedFieldType $fieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToUnindexedFieldType
      */
     protected $fieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToIndexedFieldType $indexedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToIndexedFieldType
      */
     protected $indexedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType $extendedFieldURI
+     * @var \jamesiarmes\PEWS\API\Type\PathToExtendedFieldType
      */
     protected $extendedFieldURI = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\AggregateOnType $aggregateOn
+     * @var \jamesiarmes\PEWS\API\Type\AggregateOnType
      */
     protected $aggregateOn = null;
 }

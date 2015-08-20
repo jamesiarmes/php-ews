@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: RefreshSharingFolderType
  *
- * @method RefreshSharingFolderType getSharingFolderId()
+ * @method \jamesiarmes\PEWS\API\Type\FolderIdType getSharingFolderId()
  * @method RefreshSharingFolderType setSharingFolderId(\jamesiarmes\PEWS\API\Type\FolderIdType $sharingFolderId)
  */
 class RefreshSharingFolderType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $sharingFolderId
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $sharingFolderId = null;
 }

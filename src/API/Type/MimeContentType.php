@@ -10,14 +10,14 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MimeContentType
  *
- * @method MimeContentType getCharacterSet()
+ * @method string getCharacterSet()
  * @method MimeContentType setCharacterSet(string $characterSet)
  */
 class MimeContentType extends Type
 {
 
     /**
-     * @property string $characterSet
+     * @var string
      */
     protected $characterSet = null;
 }

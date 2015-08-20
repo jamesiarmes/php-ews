@@ -9,21 +9,21 @@ namespace jamesiarmes\PEWS\API\Message;
  *  returned.
  * XSD Type: ConvertIdType
  *
- * @method ConvertIdType getDestinationFormat()
+ * @method string getDestinationFormat()
  * @method ConvertIdType setDestinationFormat(string $destinationFormat)
- * @method ConvertIdType getSourceIds()
+ * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAlternateIdsType getSourceIds()
  * @method ConvertIdType setSourceIds(\jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAlternateIdsType $sourceIds)
  */
 class ConvertIdType extends BaseRequestType
 {
 
     /**
-     * @property string $destinationFormat
+     * @var string
      */
     protected $destinationFormat = null;
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAlternateIdsType $sourceIds
+     * @var \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfAlternateIdsType
      */
     protected $sourceIds = null;
 }

@@ -8,28 +8,28 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetSharingMetadataType
  *
- * @method GetSharingMetadataType getIdOfFolderToShare()
+ * @method \jamesiarmes\PEWS\API\Type\FolderIdType getIdOfFolderToShare()
  * @method GetSharingMetadataType setIdOfFolderToShare(\jamesiarmes\PEWS\API\Type\FolderIdType $idOfFolderToShare)
- * @method GetSharingMetadataType getSenderSmtpAddress()
+ * @method string getSenderSmtpAddress()
  * @method GetSharingMetadataType setSenderSmtpAddress(string $senderSmtpAddress)
- * @method GetSharingMetadataType getRecipients()
+ * @method array getRecipients()
  * @method GetSharingMetadataType setRecipients(array $recipients)
  */
 class GetSharingMetadataType extends BaseRequestType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\FolderIdType $idOfFolderToShare
+     * @var \jamesiarmes\PEWS\API\Type\FolderIdType
      */
     protected $idOfFolderToShare = null;
 
     /**
-     * @property string $senderSmtpAddress
+     * @var string
      */
     protected $senderSmtpAddress = null;
 
     /**
-     * @property string[] $recipients
+     * @var string[]
      */
     protected $recipients = null;
 }

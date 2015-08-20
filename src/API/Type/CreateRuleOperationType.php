@@ -8,14 +8,14 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: CreateRuleOperationType
  *
- * @method CreateRuleOperationType getRule()
+ * @method RuleType getRule()
  * @method CreateRuleOperationType setRule(RuleType $rule)
  */
 class CreateRuleOperationType extends RuleOperationType
 {
 
     /**
-     * @property \jamesiarmes\PEWS\API\Type\RuleType $rule
+     * @var \jamesiarmes\PEWS\API\Type\RuleType
      */
     protected $rule = null;
 }
