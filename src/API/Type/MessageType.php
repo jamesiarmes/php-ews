@@ -127,4 +127,12 @@ class MessageType extends ItemType
      * @var \jamesiarmes\PEWS\API\Type\SingleRecipientType
      */
     protected $receivedRepresenting = null;
+
+    /**
+     * @return bool
+     */
+    public function isAReply()
+    {
+        return ($this->exists('InReplyTo') && $this->InReplyTo !== null);
+    }
 }
