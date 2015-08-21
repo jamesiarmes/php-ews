@@ -8,12 +8,18 @@ use \DateTime;
 
 class MailAPI extends API
 {
+    /**
+     * @var Type\FolderIdType
+     */
     protected $folderId;
 
+    /**
+     * @return Type\FolderIdType
+     */
     public function getFolderId()
     {
         if (!$this->folderId) {
-            $this->folderId = $this->getFolderByDistinguishedId('inbox')->FolderId;
+            $this->folderId = $this->getFolderByDistinguishedId('inbox')->getFolderId();
         }
 
         return $this->folderId;
@@ -23,7 +29,7 @@ class MailAPI extends API
      * Get all mail items in the inbox
      *
      * @param array $options
-     * @return Type\Message[]
+     * @return Type\MessageType[]
      */
     public function getMailItems($options = array())
     {
@@ -34,8 +40,8 @@ class MailAPI extends API
             ),
             'ParentFolderIds' => array(
                 'FolderId' => array(
-                    'Id' => $this->getFolderId()->Id,
-                    'ChangeKey' => $this->getFolderId()->ChangeKey
+                    'Id' => $this->getFolderId()->getId(),
+                    'ChangeKey' => $this->getFolderId()->getChangeKey()
                 )
             )
         );
@@ -44,15 +50,12 @@ class MailAPI extends API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        $items = $response;
-        if (!isset($items->Message)) {
-            return array();
+        $messages = $response->getItems()->getMessage();
+
+        if (!is_array($messages)) {
+            $messages = array($messages);
         }
 
-        if (!is_array($items->Message)) {
-            $items->Message = array($items->Message);
-        }
-
-        return $items->Message;
+        return $messages;
     }
 }
