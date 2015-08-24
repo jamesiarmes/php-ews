@@ -284,8 +284,17 @@ class API
         return false;
     }
 
+    /**
+     * @param $itemId array|Type\ItemIdType
+     * @param array $options
+     * @return Type
+     */
     public function getItem($itemId, $options = array())
     {
+        if ($itemId instanceof Type\ItemIdType) {
+            $itemId = $itemId->toArray();
+        }
+
         $request = array(
             'ItemShape' => array('BaseShape' => 'AllProperties'),
             'ItemIds' => array('ItemId' => $itemId)
