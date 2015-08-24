@@ -1,10 +1,11 @@
 # Changelog
 
-## 0.5.0 - TBD
+## 0.5.0 - 2015-08-24
  * Massive Breaking Change
  * Some basic mail fetching functions
  * Easy to use examples
  * Objects for everything. All Auto-Generated
+ * Made impersonating users easier
 
 ## 0.4.1 - 2015-07-22
  * Updating Type::buildFromArray
