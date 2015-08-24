@@ -2,22 +2,24 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
-use jamesiarmes\PEWS\API\Type;
-
 /**
  * Class representing EmailAddressType
  *
- *
- * XSD Type: EmailAddress
+ * Identifier for a fully resolved email address
+ * XSD Type: EmailAddressType
  *
  * @method string getName()
  * @method EmailAddressType setName(string $name)
- * @method string getAddress()
- * @method EmailAddressType setAddress(string $address)
+ * @method string getEmailAddress()
+ * @method EmailAddressType setEmailAddress(string $emailAddress)
  * @method string getRoutingType()
  * @method EmailAddressType setRoutingType(string $routingType)
+ * @method string getMailboxType()
+ * @method EmailAddressType setMailboxType(string $mailboxType)
+ * @method ItemIdType getItemId()
+ * @method EmailAddressType setItemId(ItemIdType $itemId)
  */
-class EmailAddressType extends Type
+class EmailAddressType extends BaseEmailAddressType
 {
 
     /**
@@ -28,10 +30,20 @@ class EmailAddressType extends Type
     /**
      * @var string
      */
-    protected $address = null;
+    protected $emailAddress = null;
 
     /**
      * @var string
      */
     protected $routingType = null;
+
+    /**
+     * @var string
+     */
+    protected $mailboxType = null;
+
+    /**
+     * @var \jamesiarmes\PEWS\API\Type\ItemIdType
+     */
+    protected $itemId = null;
 }

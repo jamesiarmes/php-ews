@@ -10,9 +10,7 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * @method SingleRecipientType getSender()
  * @method MessageType setSender(SingleRecipientType $sender)
- * @method MessageType addToRecipients(EmailAddressType $toRecipients)
  * @method EmailAddressType[] getToRecipients()
- * @method MessageType setToRecipients(array $toRecipients)
  * @method MessageType addCcRecipients(EmailAddressType $ccRecipients)
  * @method EmailAddressType[] getCcRecipients()
  * @method MessageType setCcRecipients(array $ccRecipients)
@@ -138,5 +136,44 @@ class MessageType extends ItemType
     public function isAReply()
     {
         return ($this->exists('inReplyTo') && $this->getInReplyTo() !== null);
+    }
+
+    /**
+     * @param BodyType|string $body
+     * @return MessageType
+     */
+    public function setBody($body)
+    {
+        if (is_string($body)) {
+            $body = new BodyType($body);
+        }
+
+        return parent::setBody($body);
+    }
+
+    public function addToRecipients($recipient)
+    {
+        if (is_string($recipient)) {
+            $address = new Mailbox();
+            $address->setEmailAddress($recipient);
+            $recipient = $address;
+        }
+
+        return parent::addToRecipients($recipient);
+    }
+
+    public function setToRecipients($recipients)
+    {
+        $this->toRecipients = [ ];
+
+        if (!is_array($recipients)) {
+            $recipients = array($recipients);
+        }
+
+        foreach ($recipients as $recipient) {
+            $this->addToRecipients($recipient);
+        }
+
+        return $this;
     }
 }

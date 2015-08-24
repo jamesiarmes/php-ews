@@ -104,6 +104,14 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             }
         );
 
+        $converter->addAliasMap(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'EmailAddress',
+            function ($type) use ($schemas) {
+                return "jamesiarmes\\PEWS\\API\\Type\\EmailAddressType";
+            }
+        );
+
         $items = $converter->convert($schemas);
         $progress->start($output, count($items));
         $classMap = [];

@@ -38,27 +38,27 @@ class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
         parent::__construct($namingStrategy);
 
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "dateTime", function (Type $type) {
-        
+
             return "DateTime";
         });
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "time", function (Type $type) {
-        
+
             return "DateTime";
         });
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "date", function (Type $type) {
-        
+
             return "DateTime";
         });
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "anySimpleType", function (Type $type) {
-        
+
             return "mixed";
         });
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "anyType", function (Type $type) {
-        
+
             return "mixed";
         });
         $this->addAliasMap("http://www.w3.org/2001/XMLSchema", "base64Binary", function (Type $type) {
-        
+
             return "string";
         });
     }
@@ -82,7 +82,7 @@ class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
     private function getTypes()
     {
         uasort($this->classes, function ($a, $b) {
-        
+
             return strcmp($a["class"]->getFullName(), $b["class"]->getFullName());
         });
         $ret = array();

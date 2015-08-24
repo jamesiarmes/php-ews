@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.1 - 2015-08-24
+ * Added an example for sending mail
+
 ## 0.5.0 - 2015-08-24
  * Massive Breaking Change
  * Some basic mail fetching functions

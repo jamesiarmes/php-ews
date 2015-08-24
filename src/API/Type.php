@@ -33,7 +33,7 @@ class Type
         }
 
         if ($callType == "add" && count($arguments) == 1) {
-            return $this->add($propertyName, $arguments);
+            return $this->add($propertyName, $arguments[0]);
         }
 
         if ($callType == "is" && count($arguments) == 0) {

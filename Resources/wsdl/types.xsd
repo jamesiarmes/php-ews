@@ -100,7 +100,7 @@
     </xs:anyAttribute>
   </xs:complexType>
   <xs:element name="OpenAsAdminOrSystemService" type="t:OpenAsAdminOrSystemServiceType" />
-  
+
   <!-- External sharing security header for person-to-person sharing relationships -->
   <xs:element name="SharingSecurity" type="t:EncryptedDataContainerType"/>
 
@@ -470,7 +470,7 @@
       <xs:enumeration value="contacts:WeddingAnniversary" />
       <xs:enumeration value="contacts:UserSMIMECertificate" />
       <xs:enumeration value="contacts:HasPicture" />
-      
+
       <xs:enumeration value="distributionlist:Members" />
 
       <!-- Post item -->
@@ -1240,25 +1240,25 @@
       <xs:element name="DistinguishedFolderId" type="t:DistinguishedFolderIdType"/>
     </xs:choice>
   </xs:complexType>
-    
+
     <!-- UploadItems types -->
     <xs:complexType name="NonEmptyArrayOfUploadItemsType">
         <xs:sequence>
             <xs:element name="Item" type="t:UploadItemType" maxOccurs="unbounded" minOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <!-- UploadItemType-->
     <xs:complexType name="UploadItemType">
         <xs:sequence>
             <xs:element name="ParentFolderId" type="t:FolderIdType" maxOccurs ="1" minOccurs ="1"/>
             <xs:element name="ItemId" type="t:ItemIdType" maxOccurs ="1" minOccurs="0"/>
-            <xs:element name="Data" type="xs:base64Binary" maxOccurs ="1" minOccurs ="1"/> 
+            <xs:element name="Data" type="xs:base64Binary" maxOccurs ="1" minOccurs ="1"/>
         </xs:sequence>
         <xs:attribute name="CreateAction" type="t:CreateActionType" use="required"/>
         <xs:attribute name="IsAssociated" type="xs:boolean" use="optional"/>
     </xs:complexType>
-    
+
     <!-- CreateActionType -->
     <xs:simpleType name="CreateActionType">
         <xs:restriction base="xs:string">
@@ -1446,7 +1446,7 @@
     <xs:complexType name="NonEmptyArrayOfItemIdsType">
         <xs:sequence>
             <xs:element name="ItemId" type="t:ItemIdType" maxOccurs ="unbounded" minOccurs ="1"/>
-        </xs:sequence> 
+        </xs:sequence>
     </xs:complexType>
 
   <!-- Item classes -->
@@ -1699,7 +1699,7 @@
       <xs:enumeration value="SetReadState" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:complexType name="ConversationActionType">
     <xs:sequence>
       <xs:element name="Action" type="t:ConversationActionTypeType" minOccurs="1" maxOccurs="1" />
@@ -3603,7 +3603,7 @@
         <xs:element name="MovedEvent" type="t:MovedCopiedEventType"/>
         <xs:element name="NewMailEvent" type="t:BaseObjectChangedEventType"/>
         <xs:element name="StatusEvent" type="t:BaseNotificationEventType"/>
-        <xs:element name="FreeBusyChangedEvent" type="t:BaseObjectChangedEventType"/>        
+        <xs:element name="FreeBusyChangedEvent" type="t:BaseObjectChangedEventType"/>
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
@@ -3682,14 +3682,14 @@
       <xs:enumeration value="Unsubscribe" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:complexType name="NonEmptyArrayOfSubscriptionIdsType">
     <xs:sequence>
       <xs:element name="SubscriptionId" type="t:SubscriptionIdType" minOccurs="1"
                   maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:complexType name="NonEmptyArrayOfNotificationsType">
     <xs:sequence>
       <xs:element name="Notification" type="t:NotificationType" minOccurs="0"
@@ -4854,7 +4854,7 @@
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="ArrayOfTrackingPropertiesType" type="t:ArrayOfTrackingPropertiesType" />
     </xs:choice>
-  </xs:complexType>  
+  </xs:complexType>
 
   <xs:complexType name="ArrayOfRecipientTrackingEventType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">

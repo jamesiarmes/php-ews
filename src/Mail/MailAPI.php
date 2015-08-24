@@ -5,6 +5,7 @@ namespace jamesiarmes\PEWS\Mail;
 use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Type;
 use \DateTime;
+use jamesiarmes\PEWS\API\Type\MessageType;
 
 class MailAPI extends API
 {
@@ -110,5 +111,13 @@ class MailAPI extends API
         $this->updateMailItem($mailItem, array(
             'IsRead' => true
         ));
+    }
+
+    public function sendMail(MessageType $message)
+    {
+        $items = array('Message' => $message->toXmlObject() );
+        $options = array ('MessageDisposition' => 'SendAndSaveCopy' );
+
+        return $this->createItems($items, $options);
     }
 }
