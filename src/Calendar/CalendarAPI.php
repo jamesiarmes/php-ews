@@ -142,12 +142,11 @@ class CalendarAPI extends API
     /**
      * Updates a calendar item with changes
      *
-     * @param $id
-     * @param $changeKey
+     * @param $itemId Type\ItemIdType
      * @param $changes
      * @return Type\CalendarItemType[]
      */
-    public function updateCalendarItem($id, $changeKey, $changes)
+    public function updateCalendarItem(Type\ItemIdType $itemId, $changes)
     {
         $setItemFields = array();
 
@@ -164,7 +163,7 @@ class CalendarAPI extends API
         //Create the request
         $request = array(
             'ItemChange' => array(
-                'ItemId' => array('Id' => $id, 'ChangeKey' => $changeKey),
+                'ItemId' => $itemId->toArray(),
                 'Updates' => array('SetItemField' =>$setItemFields)
             )
         );
@@ -174,7 +173,6 @@ class CalendarAPI extends API
         );
 
         $items =  $this->updateItems($request, $options);
-        $items = $items->getCalendarItem();
 
         if (!is_array($items)) {
             $items = array($items);
@@ -184,16 +182,12 @@ class CalendarAPI extends API
     }
 
     /**
-     * @param $itemId
-     * @param $changeKey
+     * @param $itemId Type\ItemIdType
      * @return bool
      */
-    public function deleteCalendarItem($itemId, $changeKey)
+    public function deleteCalendarItem(Type\ItemIdType $itemId)
     {
-        return $this->deleteItems(array(
-            'Id' => $itemId,
-            'ChangeKey' => $changeKey
-        ), array(
+        return $this->deleteItems($itemId, array(
             'SendMeetingCancellations' => 'SendToNone'
         ));
     }
@@ -207,7 +201,7 @@ class CalendarAPI extends API
     {
         $items = $this->getCalendarItems($start, $end, $options);
         foreach ($items as $item) {
-            $this->deleteCalendarItem($item->getItemId()->getId(), $item->getItemId()->getChangeKey());
+            $this->deleteCalendarItem($item->getItemId());
         }
     }
 

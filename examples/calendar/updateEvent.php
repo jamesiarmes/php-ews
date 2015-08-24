@@ -14,7 +14,7 @@ $itemId = $item->getItemId();
 $newStart = new \DateTime('9:00');
 
 //Let's send off the request to update
-$updateItems = $calendar->updateCalendarItem($itemId->getId(), $itemId->getChangeKey(), array(
+$updateItems = $calendar->updateCalendarItem($itemId, array(
     'Subject' => 'Testing Update 2',
     'Start' => $newStart->format('c')
 ));
@@ -23,7 +23,7 @@ $newItemId = $updateItems[0]->getItemId();
 
 //You can also update the series of a recurring event,
 // if you have it's Master ID (The ID passed back when you first created the series)
-$response = $calendar->updateCalendarItem($masterItem->getId(), $masterItem->getChangeKey(), array(
+$response = $calendar->updateCalendarItem($masterItemId, array(
     'Subject' => 'Test Update 2',
     'Recurrence' => array(
         'WeeklyRecurrence' => array(

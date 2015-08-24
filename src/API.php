@@ -174,6 +174,11 @@ class API
         return $this->getClient()->UpdateItem($request)->getItems();
     }
 
+    /**
+     * @param $items Type\ItemIdType|Type\ItemIdType[]
+     * @param array $options
+     * @return bool
+     */
     public function deleteItems($items, $options = array())
     {
         if (!is_array($items) || Type::arrayIsAssoc($items)) {

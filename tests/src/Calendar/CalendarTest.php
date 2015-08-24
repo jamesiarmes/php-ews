@@ -119,7 +119,7 @@ class APITest extends PHPUnit_Framework_TestCase
 
         $item = $items[0];
 
-        $client->updateCalendarItem($item->getId(), $item->getChangeKey(), array(
+        $client->updateCalendarItem($item, array(
             'Subject' => 'Test Updated Calendar Item'
         ));
 
@@ -147,7 +147,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $this->assertNotEmpty($items);
 
-        $client->deleteCalendarItem($items[0]->getItemId()->getId(), $items[0]->getItemId()->getChangeKey());
+        $client->deleteCalendarItem($items[0]->getItemId());
         $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $this->assertEmpty($items);
     }
