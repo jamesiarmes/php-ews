@@ -284,12 +284,14 @@ class API
         return false;
     }
 
-    public function getItem($itemId)
+    public function getItem($itemId, $options = array())
     {
         $request = array(
             'ItemShape' => array('BaseShape' => 'AllProperties'),
             'ItemIds' => array('ItemId' => $itemId)
         );
+
+        $request = array_merge_recursive($request, $options);
 
         return $this->getClient()->GetItem($request);
     }
