@@ -133,6 +133,6 @@ class MessageType extends ItemType
      */
     public function isAReply()
     {
-        return ($this->exists('InReplyTo') && $this->getInReplyTo() !== null);
+        return ($this->exists('inReplyTo') && $this->getInReplyTo() !== null);
     }
 }
