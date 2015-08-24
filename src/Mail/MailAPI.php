@@ -58,4 +58,57 @@ class MailAPI extends API
 
         return $messages;
     }
+
+    /**
+     * Updates a calendar item with changes
+     *
+     * @param $itemId Type\ItemIdType|Type
+     * @param $changes
+     * @return Type\MessageType[]
+     */
+    public function updateMailItem($itemId, $changes)
+    {
+        $setItemFields = array();
+
+        //Add each property to a setItemField
+        foreach ($changes as $key => $value) {
+            $fullName = $this->getFieldUriByName($key, 'message');
+
+            $setItemFields[] = array(
+                'FieldURI' => array('FieldURI' => $fullName),
+                'Message' => array($key => $value)
+            );
+        }
+
+        //Create the request
+        $request = array(
+            'ItemChange' => array(
+                'ItemId' => array('Id' => $itemId->getId(), 'ChangeKey' => $itemId->getChangeKey()),
+                'Updates' => array('SetItemField' =>$setItemFields)
+            )
+        );
+
+        $items =  $this->updateItems($request);
+        $items = $items->getCalendarItem();
+
+        if (!is_array($items)) {
+            $items = array($items);
+        }
+
+        return $items;
+    }
+
+    /**
+     * @param $mailItem Type\MessageType|Type\ItemIdType
+     */
+    public function markMailAsRead($mailItem)
+    {
+        if ($mailItem instanceof Type\MessageType) {
+            $mailItem = $mailItem->getItemId();
+        }
+
+        $this->updateMailItem($mailItem, array(
+            'IsRead' => true
+        ));
+    }
 }
