@@ -144,7 +144,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         $expected = new SoapHeader(
             'http://schemas.microsoft.com/exchange/services/2006/types',
             'ExchangeImpersonation',
-            'testImpersonation'
+            API\Type\ExchangeImpersonation::fromEmailAddress('testImpersonation')->toXmlObject()
         );
         $this->assertEquals($expected, $ntlmClient->__default_headers[1]);
     }
