@@ -10,7 +10,7 @@ Please note that version 0.5.0 (Unreleased yet) will have objects auto generated
 for the existing functions. This release is not backwards compatible, but shouldn't be too hard to migrate to.
 
 # Dependencies
-* PHP 5.2+
+* PHP 5.5+
 * cURL with NTLM support (7.23.0+ recommended)
 * Composer
 * Exchange 2007 or 2010*
