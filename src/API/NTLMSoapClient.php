@@ -2,6 +2,7 @@
 
 namespace jamesiarmes\PEWS\API;
 
+use jamesiarmes\PEWS\API\Type\ExchangeImpersonation;
 use SoapClient;
 use GuzzleHttp;
 use SoapHeader;
@@ -122,10 +123,14 @@ class NTLMSoapClient extends SoapClient
 
         // If impersonation was set then add it to the headers.
         if (!empty($options['impersonation'])) {
+            if (is_string($options['impersonation'])) {
+                $impersonation = ExchangeImpersonation::fromEmailAddress($options['impersonation']);
+            }
+
             $this->__default_headers[] = new SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
-                $options['impersonation']
+                $impersonation->toXmlObject()
             );
         }
 

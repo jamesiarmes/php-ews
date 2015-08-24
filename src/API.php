@@ -338,18 +338,4 @@ class API
         $response = $this->getClient()->SyncFolderItems($request);
         return $response;
     }
-    public function setImpersonation($email)
-    {
-        $this->_email = $email;
-        $request = array (
-            'ExchangeImpersonation' => array('ConnectingSID' => array('PrimarySmtpAddress' => $email))
-        );
-        $request = Type::buildFromArray($request);
-        $this->getClient()->setImpersonation($request->ExchangeImpersonation);
-        return $this;
-    }
-    public function getImpersonation()
-    {
-        return $this->getClient()->getImpersonation();
-    }
 }
