@@ -12,6 +12,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getCreateAction()
  * @method UploadItemType setCreateAction(string $createAction)
+ * @method boolean isAssociated()
  * @method boolean getIsAssociated()
  * @method UploadItemType setIsAssociated(boolean $isAssociated)
  * @method FolderIdType getParentFolderId()

@@ -16,6 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindFolderParentType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method FindFolderParentType setAbsoluteDenominator(integer $absoluteDenominator)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method FindFolderParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()

@@ -10,6 +10,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method string getSyncState()
  * @method SyncFolderHierarchyResponseMessageType setSyncState(string $syncState)
+ * @method boolean isIncludesLastFolderInRange()
  * @method boolean getIncludesLastFolderInRange()
  * @method SyncFolderHierarchyResponseMessageType setIncludesLastFolderInRange(boolean $includesLastFolderInRange)
  * @method \jamesiarmes\PEWS\API\Type\SyncFolderHierarchyChangesType getChanges()

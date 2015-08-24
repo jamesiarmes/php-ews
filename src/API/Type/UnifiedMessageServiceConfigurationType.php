@@ -8,10 +8,12 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: UnifiedMessageServiceConfiguration
  *
+ * @method boolean isUmEnabled()
  * @method boolean getUmEnabled()
  * @method UnifiedMessageServiceConfigurationType setUmEnabled(boolean $umEnabled)
  * @method string getPlayOnPhoneDialString()
  * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneDialString(string $playOnPhoneDialString)
+ * @method boolean isPlayOnPhoneEnabled()
  * @method boolean getPlayOnPhoneEnabled()
  * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneEnabled(boolean $playOnPhoneEnabled)
  */

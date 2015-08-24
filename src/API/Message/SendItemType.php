@@ -8,6 +8,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: SendItemType
  *
+ * @method boolean isSaveItemToFolder()
  * @method boolean getSaveItemToFolder()
  * @method SendItemType setSaveItemToFolder(boolean $saveItemToFolder)
  * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()

@@ -14,6 +14,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method NotificationType setSubscriptionId(string $subscriptionId)
  * @method string getPreviousWatermark()
  * @method NotificationType setPreviousWatermark(string $previousWatermark)
+ * @method boolean isMoreEvents()
  * @method boolean getMoreEvents()
  * @method NotificationType setMoreEvents(boolean $moreEvents)
  * @method NotificationType addCopiedEvent(MovedCopiedEventType $copiedEvent)

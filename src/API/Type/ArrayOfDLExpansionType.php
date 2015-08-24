@@ -16,6 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfDLExpansionType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ArrayOfDLExpansionType setAbsoluteDenominator(integer $absoluteDenominator)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()

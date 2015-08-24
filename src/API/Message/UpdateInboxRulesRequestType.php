@@ -10,6 +10,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method string getMailboxSmtpAddress()
  * @method UpdateInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
+ * @method boolean isRemoveOutlookRuleBlob()
  * @method boolean getRemoveOutlookRuleBlob()
  * @method UpdateInboxRulesRequestType setRemoveOutlookRuleBlob(boolean $removeOutlookRuleBlob)
  * @method \jamesiarmes\PEWS\API\Type\ArrayOfRuleOperationsType getOperations()

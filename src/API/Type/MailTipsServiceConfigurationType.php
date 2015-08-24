@@ -8,6 +8,7 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: MailTipsServiceConfiguration
  *
+ * @method boolean isMailTipsEnabled()
  * @method boolean getMailTipsEnabled()
  * @method MailTipsServiceConfigurationType setMailTipsEnabled(boolean $mailTipsEnabled)
  * @method integer getMaxRecipientsPerGetMailTipsRequest()
@@ -16,6 +17,7 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method MailTipsServiceConfigurationType setMaxMessageSize(integer $maxMessageSize)
  * @method integer getLargeAudienceThreshold()
  * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
+ * @method boolean isShowExternalRecipientCount()
  * @method boolean getShowExternalRecipientCount()
  * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
  * @method MailTipsServiceConfigurationType addInternalDomains(SmtpDomainType $internalDomains)

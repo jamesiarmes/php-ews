@@ -16,6 +16,7 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method PostItemType setFrom(SingleRecipientType $from)
  * @method string getInternetMessageId()
  * @method PostItemType setInternetMessageId(string $internetMessageId)
+ * @method boolean isRead()
  * @method boolean getIsRead()
  * @method PostItemType setIsRead(boolean $isRead)
  * @method \DateTime getPostedTime()

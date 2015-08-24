@@ -8,6 +8,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetInboxRulesResponseType
  *
+ * @method boolean isOutlookRuleBlobExists()
  * @method boolean getOutlookRuleBlobExists()
  * @method GetInboxRulesResponseType setOutlookRuleBlobExists(boolean $outlookRuleBlobExists)
  * @method GetInboxRulesResponseType addInboxRules(\jamesiarmes\PEWS\API\Type\RuleType $inboxRules)

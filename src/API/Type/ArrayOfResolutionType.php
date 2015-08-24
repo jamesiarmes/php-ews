@@ -16,6 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfResolutionType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ArrayOfResolutionType setAbsoluteDenominator(integer $absoluteDenominator)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()

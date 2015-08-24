@@ -14,8 +14,10 @@ use jamesiarmes\PEWS\API\Type;
  * @method DelegateUserType setUserId(UserIdType $userId)
  * @method DelegatePermissionsType getDelegatePermissions()
  * @method DelegateUserType setDelegatePermissions(DelegatePermissionsType $delegatePermissions)
+ * @method boolean isReceiveCopiesOfMeetingMessages()
  * @method boolean getReceiveCopiesOfMeetingMessages()
  * @method DelegateUserType setReceiveCopiesOfMeetingMessages(boolean $receiveCopiesOfMeetingMessages)
+ * @method boolean isViewPrivateItems()
  * @method boolean getViewPrivateItems()
  * @method DelegateUserType setViewPrivateItems(boolean $viewPrivateItems)
  */

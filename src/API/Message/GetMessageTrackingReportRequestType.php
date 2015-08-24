@@ -16,6 +16,7 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method GetMessageTrackingReportRequestType setRecipientFilter(\jamesiarmes\PEWS\API\Type\EmailAddressType $recipientFilter)
  * @method string getMessageTrackingReportId()
  * @method GetMessageTrackingReportRequestType setMessageTrackingReportId(string $messageTrackingReportId)
+ * @method boolean isReturnQueueEvents()
  * @method boolean getReturnQueueEvents()
  * @method GetMessageTrackingReportRequestType setReturnQueueEvents(boolean $returnQueueEvents)
  * @method string getDiagnosticsLevel()

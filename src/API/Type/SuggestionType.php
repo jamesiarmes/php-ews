@@ -12,6 +12,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method \DateTime getMeetingTime()
  * @method SuggestionType setMeetingTime(\DateTime $meetingTime)
+ * @method boolean isWorkTime()
  * @method boolean getIsWorkTime()
  * @method SuggestionType setIsWorkTime(boolean $isWorkTime)
  * @method string getSuggestionQuality()

@@ -10,6 +10,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method string getSyncState()
  * @method SyncFolderItemsResponseMessageType setSyncState(string $syncState)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method SyncFolderItemsResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method \jamesiarmes\PEWS\API\Type\SyncFolderItemsChangesType getChanges()

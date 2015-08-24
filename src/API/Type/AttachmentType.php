@@ -24,6 +24,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method AttachmentType setSize(integer $size)
  * @method \DateTime getLastModifiedTime()
  * @method AttachmentType setLastModifiedTime(\DateTime $lastModifiedTime)
+ * @method boolean isInline()
  * @method boolean getIsInline()
  * @method AttachmentType setIsInline(boolean $isInline)
  */

@@ -10,10 +10,13 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * @method ItemIdType getAssociatedCalendarItemId()
  * @method MeetingMessageType setAssociatedCalendarItemId(ItemIdType $associatedCalendarItemId)
+ * @method boolean isDelegated()
  * @method boolean getIsDelegated()
  * @method MeetingMessageType setIsDelegated(boolean $isDelegated)
+ * @method boolean isOutOfDate()
  * @method boolean getIsOutOfDate()
  * @method MeetingMessageType setIsOutOfDate(boolean $isOutOfDate)
+ * @method boolean isHasBeenProcessed()
  * @method boolean getHasBeenProcessed()
  * @method MeetingMessageType setHasBeenProcessed(boolean $hasBeenProcessed)
  * @method string getResponseType()

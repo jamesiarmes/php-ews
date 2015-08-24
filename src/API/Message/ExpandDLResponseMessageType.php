@@ -14,6 +14,7 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method ExpandDLResponseMessageType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ExpandDLResponseMessageType setAbsoluteDenominator(integer $absoluteDenominator)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ExpandDLResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()

@@ -8,6 +8,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: ResolveNamesType
  *
+ * @method boolean isReturnFullContactData()
  * @method boolean getReturnFullContactData()
  * @method ResolveNamesType setReturnFullContactData(boolean $returnFullContactData)
  * @method string getSearchScope()

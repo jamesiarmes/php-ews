@@ -29,10 +29,13 @@ namespace jamesiarmes\PEWS\API\Message;
  * @method FindMailboxStatisticsByKeywordsType addMessageTypes(string $messageTypes)
  * @method string[] getMessageTypes()
  * @method FindMailboxStatisticsByKeywordsType setMessageTypes(array $messageTypes)
+ * @method boolean isSearchDumpster()
  * @method boolean getSearchDumpster()
  * @method FindMailboxStatisticsByKeywordsType setSearchDumpster(boolean $searchDumpster)
+ * @method boolean isIncludePersonalArchive()
  * @method boolean getIncludePersonalArchive()
  * @method FindMailboxStatisticsByKeywordsType setIncludePersonalArchive(boolean $includePersonalArchive)
+ * @method boolean isIncludeUnsearchableItems()
  * @method boolean getIncludeUnsearchableItems()
  * @method FindMailboxStatisticsByKeywordsType setIncludeUnsearchableItems(boolean $includeUnsearchableItems)
  */

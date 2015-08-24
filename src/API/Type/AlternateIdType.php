@@ -12,6 +12,7 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method AlternateIdType setId(string $id)
  * @method string getMailbox()
  * @method AlternateIdType setMailbox(string $mailbox)
+ * @method boolean isArchive()
  * @method boolean getIsArchive()
  * @method AlternateIdType setIsArchive(boolean $isArchive)
  */

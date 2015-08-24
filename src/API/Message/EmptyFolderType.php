@@ -10,6 +10,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * @method string getDeleteType()
  * @method EmptyFolderType setDeleteType(string $deleteType)
+ * @method boolean isDeleteSubFolders()
  * @method boolean getDeleteSubFolders()
  * @method EmptyFolderType setDeleteSubFolders(boolean $deleteSubFolders)
  * @method \jamesiarmes\PEWS\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()

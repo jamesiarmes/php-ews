@@ -146,6 +146,10 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $this->handleAdder($generator, $prop, $class);
         }
 
+        if ($this->getPropertyType($prop) == "boolean") {
+            $this->handleIs($generator, $prop, $class);
+        }
+
         $this->handleGetter($generator, $prop, $class);
         $this->handleSetter($generator, $prop, $class);
     }
@@ -166,6 +170,26 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         }
 
         $fullName = "method {$class->getName()} $name($type \${$prop->getName()})";
+
+        $docblock = $generator->getDocBlock();
+        $docblock->setWordWrap(false);
+
+        $tag = new Generator\DocBlock\Tag();
+        $tag->setName($fullName);
+
+        $docblock->setTag($tag);
+
+        return;
+    }
+
+    protected function handleIs(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    {
+        $name = $prop->getName();
+        if (strtolower(substr($name, 0, 2)) !== "is") {
+            $name = "is" . Inflector::classify($name);
+        }
+
+        $fullName = "method boolean $name()";
 
         $docblock = $generator->getDocBlock();
         $docblock->setWordWrap(false);

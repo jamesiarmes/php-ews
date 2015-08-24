@@ -14,6 +14,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method MailboxDataType setEmail(EmailAddressType $email)
  * @method string getAttendeeType()
  * @method MailboxDataType setAttendeeType(string $attendeeType)
+ * @method boolean isExcludeConflicts()
  * @method boolean getExcludeConflicts()
  * @method MailboxDataType setExcludeConflicts(boolean $excludeConflicts)
  */

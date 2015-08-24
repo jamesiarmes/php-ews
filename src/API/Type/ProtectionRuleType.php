@@ -12,6 +12,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getName()
  * @method ProtectionRuleType setName(string $name)
+ * @method boolean isUserOverridable()
  * @method boolean getUserOverridable()
  * @method ProtectionRuleType setUserOverridable(boolean $userOverridable)
  * @method integer getPriority()

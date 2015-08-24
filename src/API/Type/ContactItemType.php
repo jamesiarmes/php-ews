@@ -74,6 +74,7 @@ namespace jamesiarmes\PEWS\API\Type;
  * @method ContactItemType setSurname(string $surname)
  * @method \DateTime getWeddingAnniversary()
  * @method ContactItemType setWeddingAnniversary(\DateTime $weddingAnniversary)
+ * @method boolean isHasPicture()
  * @method boolean getHasPicture()
  * @method ContactItemType setHasPicture(boolean $hasPicture)
  * @method string getPhoneticFullName()

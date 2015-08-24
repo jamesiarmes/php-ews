@@ -12,6 +12,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method ItemIdType getItemId()
  * @method SyncFolderItemsReadFlagType setItemId(ItemIdType $itemId)
+ * @method boolean isRead()
  * @method boolean getIsRead()
  * @method SyncFolderItemsReadFlagType setIsRead(boolean $isRead)
  */

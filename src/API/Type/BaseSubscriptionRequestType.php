@@ -10,6 +10,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: BaseSubscriptionRequestType
  *
+ * @method boolean isSubscribeToAllFolders()
  * @method boolean getSubscribeToAllFolders()
  * @method BaseSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()

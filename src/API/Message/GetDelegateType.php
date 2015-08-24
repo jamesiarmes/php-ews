@@ -8,6 +8,7 @@ namespace jamesiarmes\PEWS\API\Message;
  *
  * XSD Type: GetDelegateType
  *
+ * @method boolean isIncludePermissions()
  * @method boolean getIncludePermissions()
  * @method GetDelegateType setIncludePermissions(boolean $includePermissions)
  * @method GetDelegateType addUserIds(\jamesiarmes\PEWS\API\Type\UserIdType $userIds)

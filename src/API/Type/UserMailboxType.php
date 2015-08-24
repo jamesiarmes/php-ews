@@ -12,6 +12,7 @@ use jamesiarmes\PEWS\API\Type;
  *
  * @method string getId()
  * @method UserMailboxType setId(string $id)
+ * @method boolean isArchive()
  * @method boolean getIsArchive()
  * @method UserMailboxType setIsArchive(boolean $isArchive)
  */

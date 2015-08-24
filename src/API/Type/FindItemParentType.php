@@ -16,6 +16,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method FindItemParentType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method FindItemParentType setAbsoluteDenominator(integer $absoluteDenominator)
+ * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method FindItemParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()

@@ -10,10 +10,12 @@ use jamesiarmes\PEWS\API\Type;
  *
  * XSD Type: AttachmentResponseShapeType
  *
+ * @method boolean isIncludeMimeContent()
  * @method boolean getIncludeMimeContent()
  * @method AttachmentResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
  * @method string getBodyType()
  * @method AttachmentResponseShapeType setBodyType(string $bodyType)
+ * @method boolean isFilterHtmlContent()
  * @method boolean getFilterHtmlContent()
  * @method AttachmentResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
  * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
