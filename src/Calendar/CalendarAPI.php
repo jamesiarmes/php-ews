@@ -2,6 +2,7 @@
 
 namespace jamesiarmes\PEWS\Calendar;
 
+use jamesiarmes\PEWS\API\Type\CalendarItemType;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Enumeration;
@@ -49,7 +50,7 @@ class CalendarAPI extends API
     /**
      * Create one or more calendar items
      *
-     * @param $items CalendarItem[]|CalendarItem|Array or more calendar items to create
+     * @param $items CalendarItemType[]|CalendarItemType|Array or more calendar items to create
      * @return Type\ItemIdType[]
      */
     public function createCalendarItems($items)
@@ -83,7 +84,7 @@ class CalendarAPI extends API
      * @param string|DateTime $start
      * @param string|DateTime $end
      * @param array $options
-     * @return Type\CalendarItemType[]
+     * @return CalendarItemType[]
      */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
