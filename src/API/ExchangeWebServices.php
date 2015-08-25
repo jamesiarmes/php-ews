@@ -151,7 +151,7 @@ class ExchangeWebServices
         $password = null,
         $options = [ ]
     ) {
-        $options = array_merge(['version' => self::VERSION_2007], $options);
+        $options = array_replace_recursive(['version' => self::VERSION_2007], $options);
 
         // Set the object properties.
         $this->setServer($server);
@@ -356,7 +356,7 @@ class ExchangeWebServices
             'classmap' => ClassMap::getClassMap()
         );
 
-        $options = array_merge($options, $this->options);
+        $options = array_replace_recursive($options, $this->options);
 
         $client = new Exchange(
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',

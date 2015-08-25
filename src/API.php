@@ -127,7 +127,7 @@ class API
         $password,
         $options = [ ]
     ) {
-        $options = array_merge(['version' => ExchangeWebServices::VERSION_2010], $options);
+        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
 
         $client = new ExchangeWebServices($server, $username, $password, $options);
         $this->setClient($client);
@@ -151,7 +151,7 @@ class API
             'Items' => $items
         );
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
         $request = Type::buildFromArray($request);
 
         $response = $this->getClient()->CreateItem($request);
@@ -167,7 +167,7 @@ class API
             'ConflictResolution' => 'AlwaysOverwrite'
         );
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
 
@@ -202,7 +202,7 @@ class API
             'DeleteType' => 'MoveToDeletedItems'
         );
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
         $request = Type::buildFromArray($request);
         $this->getClient()->DeleteItem($request);
 
@@ -272,7 +272,7 @@ class API
             )
         );
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
 
@@ -305,7 +305,7 @@ class API
             'ItemIds' => array('ItemId' => $itemId)
         );
 
-        $request = array_merge_recursive($request, $options);
+        $request = array_replace_recursive($request, $options);
 
         return $this->getClient()->GetItem($request);
     }
@@ -332,7 +332,7 @@ class API
             $request['ItemShape']['BaseShape'] = 'AllProperties';
         }
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->SyncFolderItems($request);

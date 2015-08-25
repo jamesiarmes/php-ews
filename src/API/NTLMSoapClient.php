@@ -98,7 +98,7 @@ class NTLMSoapClient extends SoapClient
      */
     public function __construct($wsdl, $options = array())
     {
-        $options = array_merge([
+        $options = array_replace_recursive([
             'httpPlayback' => [
                 'mode' => null
             ]

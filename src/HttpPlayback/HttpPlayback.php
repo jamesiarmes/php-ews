@@ -47,7 +47,7 @@ class HttpPlayback
 
     public function setPlaybackOptions($options = [])
     {
-        $options = array_merge(['mode' => null, 'recordLocation' => null, 'recordFileName' => null], $options);
+        $options = array_replace_recursive(['mode' => null, 'recordLocation' => null, 'recordFileName' => null], $options);
 
         if ($options['mode'] !== null) {
             $this->mode = $options['mode'];

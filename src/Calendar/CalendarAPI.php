@@ -114,7 +114,7 @@ class CalendarAPI extends API
             )
         );
 
-        $request = array_merge($request, $options);
+        $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
