@@ -173,7 +173,7 @@ class CalendarAPI extends API
             'SendMeetingInvitationsOrCancellations' => 'SendToNone'
         );
 
-        $items =  $this->updateItems($request, $options);
+        $items =  $this->updateItems($request, $options)->getCalendarItem();
 
         if (!is_array($items)) {
             $items = array($items);
