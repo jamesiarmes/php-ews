@@ -16,6 +16,12 @@ namespace jamesiarmes\PEWS\API\Type;
 class ItemIdType extends BaseItemIdType
 {
 
+    public function __construct($id, $changeKey)
+    {
+        $this->id = $id;
+        $this->changeKey = $changeKey;
+    }
+
     /**
      * @var string
      */

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.2 - 2015-08-24
+ * Added a constructor for ItemIdType
+
 ## 0.5.1 - 2015-08-24
  * Added an example for sending mail
 
