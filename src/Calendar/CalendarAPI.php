@@ -107,10 +107,7 @@ class CalendarAPI extends API
                 'EndDate' => $end->format('c')
             ),
             'ParentFolderIds' => array(
-                'FolderId' => array(
-                    'Id' => $this->getFolderId()->getId(),
-                    'ChangeKey' => $this->getFolderId()->getChangeKey()
-                )
+                'FolderId' => $this->getFolderId()->toXmlObject()
             )
         );
 

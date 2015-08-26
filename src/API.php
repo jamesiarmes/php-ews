@@ -14,6 +14,14 @@ use jamesiarmes\PEWS\Calendar\CalendarAPI;
  */
 class API
 {
+    /**
+     * @return Type\EmailAddressType
+     */
+    public function getPrimarySmtpMailbox()
+    {
+        return $this->getClient()->getPrimarySmtpMailbox();
+    }
+
     private $_fieldUris = array();
 
     /**
@@ -134,6 +142,22 @@ class API
         return $this;
     }
 
+    public function getPrimarySmptEmailAddress()
+    {
+        if ($this->getPrimarySmtpMailbox() == null) {
+            return null;
+        }
+
+        return $this->getPrimarySmtpMailbox()->getEmailAddress();
+    }
+
+    public function setPrimarySmtpEmailAddress($emailAddress)
+    {
+        $this->getClient()->setPrimarySmtpEmailAddress($emailAddress);
+
+        return $this;
+    }
+
     /**
      * Create items through the API client
      *
@@ -238,7 +262,8 @@ class API
     {
         return $this->getFolder(array(
             'DistinguishedFolderId' => array(
-                'Id' => $distinguishedId
+                'Id' => $distinguishedId,
+                'Mailbox' => $this->getPrimarySmtpMailbox()
             )
         ));
     }
@@ -250,7 +275,7 @@ class API
     public function getFolderByFolderId($folderId)
     {
         return $this->getFolder(array(
-            'FolderId' => array('Id'=>$folderId)
+            'FolderId' => array('Id'=>$folderId, 'Mailbox' => $this->getPrimarySmtpMailbox())
         ));
     }
 

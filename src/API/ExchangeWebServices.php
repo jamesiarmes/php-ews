@@ -7,6 +7,7 @@ namespace jamesiarmes\PEWS\API;
 
 use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
 use jamesiarmes\PEWS\API\Message;
+use jamesiarmes\PEWS\API\Type\EmailAddressType;
 
 /**
  * Base class of the Exchange Web Services application.
@@ -109,6 +110,37 @@ class ExchangeWebServices
     protected $impersonation;
 
     /**
+     * @var EmailAddressType
+     */
+    protected $primarySmtpMailbox;
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getPrimarySmtpMailbox()
+    {
+        return $this->primarySmtpMailbox;
+    }
+
+    public function getPrimarySmptEmailAddress()
+    {
+        if ($this->primarySmtpMailbox == null) {
+            return null;
+        }
+
+        return $this->primarySmtpMailbox->getEmailAddress();
+    }
+
+    public function setPrimarySmtpEmailAddress($emailAddress)
+    {
+        $mailbox = new EmailAddressType();
+        $mailbox->setEmailAddress($emailAddress);
+        $this->primarySmtpMailbox = $mailbox;
+
+        return $this;
+    }
+
+    /**
      * Miscrosoft Exchange version that we are going to connect to
      *
      * @var string
@@ -158,6 +190,14 @@ class ExchangeWebServices
         $this->setUsername($username);
         $this->setPassword($password);
         $this->setVersion($options['version']);
+
+        if (isset($options['primarySmtpEmailAddress'])) {
+            $this->setPrimarySmtpEmailAddress($options['primarySmtpEmailAddress']);
+        }
+
+        if (isset($options['impersonation'])) {
+            $this->setPrimarySmtpEmailAddress($options['impersonation']);
+        }
 
         $this->options = $options;
     }

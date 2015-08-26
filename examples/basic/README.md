@@ -6,3 +6,4 @@ libraries, so that you can utilize the API beyond what has been simplified.
  * [Quick Start](quickstart.php)
  * [Building Requests Manually](buildingRequests.php)
  * [Impersonating Other Users](impersonation.php)
+ * [Accessing a Primary SMTP Mailbox](primarySmtpAddress.php)

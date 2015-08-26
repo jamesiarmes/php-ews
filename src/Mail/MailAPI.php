@@ -85,11 +85,11 @@ class MailAPI extends API
         $request = array(
             'ItemChange' => array(
                 'ItemId' => array('Id' => $itemId->getId(), 'ChangeKey' => $itemId->getChangeKey()),
-                'Updates' => array('SetItemField' =>$setItemFields)
+                'Updates' => array('SetItemField' => $setItemFields)
             )
         );
 
-        $items =  $this->updateItems($request);
+        $items = $this->updateItems($request);
         $items = $items->getCalendarItem();
 
         if (!is_array($items)) {
@@ -115,8 +115,16 @@ class MailAPI extends API
 
     public function sendMail(MessageType $message, $options = array())
     {
-        $items = array('Message' => $message->toXmlObject() );
-        $defaultOptions = array ('MessageDisposition' => 'SendAndSaveCopy' );
+        $items = array('Message' => $message->toXmlObject());
+        $defaultOptions = array(
+            'MessageDisposition' => 'SendAndSaveCopy',
+        );
+
+        if ($this->getPrimarySmtpMailbox() != null) {
+            $sentItems = $this->getFolderByDistinguishedId('sentitems')->getFolderId();
+            $defaultOptions['SavedItemFolderId'] =
+                array('FolderId' => $sentItems->toXmlObject());
+        }
 
         $options = array_replace_recursive($defaultOptions, $options);
 
