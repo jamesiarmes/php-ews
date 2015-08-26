@@ -113,10 +113,12 @@ class MailAPI extends API
         ));
     }
 
-    public function sendMail(MessageType $message)
+    public function sendMail(MessageType $message, $options = array())
     {
         $items = array('Message' => $message->toXmlObject() );
-        $options = array ('MessageDisposition' => 'SendAndSaveCopy' );
+        $defaultOptions = array ('MessageDisposition' => 'SendAndSaveCopy' );
+
+        $options = array_replace_recursive($defaultOptions, $options);
 
         return $this->createItems($items, $options);
     }

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.4 - 2015-08-25
+ * Fixed result for updateCalendarItem
+
 ## 0.5.3 - 2015-08-25
  * Replaced all array_merge with array_replace_recursive
 
