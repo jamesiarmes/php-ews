@@ -338,7 +338,7 @@ class API
     /**
      * Get a list of sync changes on a folder
      *
-     * @param string $folderId
+     * @param Type\FolderIdType $folderId
      * @param null $syncState
      * @param array $options
      * @return mixed
@@ -347,7 +347,7 @@ class API
     {
         $request = array(
             'ItemShape' => array('BaseShape' => 'IdOnly'),
-            'SyncFolderId' => array('FolderId' => array('Id'=>$folderId)),
+            'SyncFolderId' => array('FolderId' => $folderId->toXmlObject()),
             'SyncScope' => 'NormalItems',
             'MaxChangesReturned' => '10'
         );

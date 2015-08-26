@@ -40,10 +40,7 @@ class MailAPI extends API
                 'BaseShape' => 'AllProperties'
             ),
             'ParentFolderIds' => array(
-                'FolderId' => array(
-                    'Id' => $this->getFolderId()->getId(),
-                    'ChangeKey' => $this->getFolderId()->getChangeKey()
-                )
+                'FolderId' => $this->getFolderId()->toXmlObject()
             )
         );
 

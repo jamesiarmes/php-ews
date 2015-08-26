@@ -65,7 +65,7 @@ class CalendarAPI extends API
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
             'SavedItemFolderId' => array(
-                'FolderId' => array('Id' => $this->getFolderId()->getId())
+                'FolderId' => $this->getFolderId()->toXmlObject()
             )
         );
 
@@ -212,6 +212,6 @@ class CalendarAPI extends API
      */
     public function listChanges($syncState = null, $options = array())
     {
-        return parent::listItemChanges($this->getFolderId()->getId(), $syncState, $options);
+        return parent::listItemChanges($this->getFolderId(), $syncState, $options);
     }
 }
