@@ -208,7 +208,7 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $folder = call_user_func_array(array($client, 'getFolderByDisplayname'), $folderInput);
 
-        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->getFolderId()->getId()));
+        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->getFolderId()));
         $this->assertNotNull($response->getSyncState());
         $this->assertNotNull($response->getChanges());
     }
