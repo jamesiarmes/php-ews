@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.5 - 2015-08-26
+ * Fixed support for impersonation and access of other mailboxes by including the primarySmtpEmailAddress option, which
+ will automatically be sent to the server when you request a folderId()
+
 ## 0.5.4 - 2015-08-25
  * Fixed result for updateCalendarItem
 
