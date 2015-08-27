@@ -115,4 +115,18 @@ trait MagicMethodsTrait
 
         return ($this->exists($name) && (bool) $this->$name);
     }
+
+    public function cast($value, $type)
+    {
+        return Caster::cast($value, $type);
+    }
+
+    public function castToExchange($value, $type)
+    {
+        if (Caster::castExists($type, 'ExchangeFormat')) {
+            $value = Caster::cast($value, 'ExchangeFormat');
+        }
+
+        return $value;
+    }
 }
