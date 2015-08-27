@@ -20,20 +20,12 @@ trait MagicMethodsTrait
         $callType = substr($name, 0, $callTypeIndex);
         $propertyName = substr($name, $callTypeIndex);
 
-        if ($callType == "get") {
-            return $this->get($propertyName);
+        if (in_array($callType, array('get', 'is')) && count($arguments) == 0) {
+            return $this->{$callType}($propertyName);
         }
 
-        if ($callType == "set" && count($arguments) == 1) {
-            return $this->set($propertyName, $arguments[0]);
-        }
-
-        if ($callType == "add" && count($arguments) == 1) {
-            return $this->add($propertyName, $arguments[0]);
-        }
-
-        if ($callType == "is" && count($arguments) == 0) {
-            return $this->is($propertyName);
+        if (in_array($callType, array('add', 'set')) && count($arguments) == 1) {
+            return $this->{$callType}($propertyName, $arguments[0]);
         }
 
         return $this;
