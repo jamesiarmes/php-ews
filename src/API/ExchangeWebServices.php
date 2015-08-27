@@ -298,10 +298,13 @@ class ExchangeWebServices
     }
 
     /**
-     * @param $response Type
+     * @param $response
+     * @return array
+     * @throws \Exception
      */
     public function drillDownResponseLevels($response)
     {
+        $items = array();
         if ($response instanceof Type) {
             $items = $response->getNonNullItems();
         } elseif (is_array($response)) {
