@@ -16,8 +16,6 @@ class Type
 {
     use MagicMethodsTrait;
 
-    protected $_typeMap = [ ];
-
     /**
      * @var string
      */
