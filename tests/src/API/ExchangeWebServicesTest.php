@@ -9,6 +9,7 @@
 namespace jamesiarmes\PEWS\Test\API;
 
 use jamesiarmes\PEWS\API\ClassMap;
+use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
@@ -138,6 +139,20 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $expectedMailbox = new Type\EmailAddressType();
         $expectedMailbox->setEmailAddress('test@test.com');
         $client->setPrimarySmtpEmailAddress('test@test.com');
+
+        $this->assertEquals($client->getPrimarySmtpMailbox(), $expectedMailbox);
+        $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
+
+        $client = new ExchangeWebServices('test@test.com', 'user', 'password', [
+            'primarySmtpEmailAddress' => 'test@test.com'
+        ]);
+
+        $this->assertEquals($client->getPrimarySmtpMailbox(), $expectedMailbox);
+        $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
+
+        $client = new ExchangeWebServices('test@test.com', 'user', 'password', [
+            'impersonation' => 'test@test.com'
+        ]);
 
         $this->assertEquals($client->getPrimarySmtpMailbox(), $expectedMailbox);
         $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
