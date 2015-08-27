@@ -186,10 +186,10 @@ class ExchangeWebServices
         $options = array_replace_recursive(['version' => self::VERSION_2007], $options);
 
         // Set the object properties.
-        $this->setServer($server);
-        $this->setUsername($username);
-        $this->setPassword($password);
-        $this->setVersion($options['version']);
+        $this->server = $this->cleanServerUrl($server);
+        $this->username = $username;
+        $this->password = $password;
+        $this->version = $options['version'];
 
         if (isset($options['primarySmtpEmailAddress'])) {
             $this->setPrimarySmtpEmailAddress($options['primarySmtpEmailAddress']);
@@ -266,44 +266,6 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the password property
-     *
-     * @param string $password
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Sets the server property, after cleaning by cleanServerUrl
-     *
-     * @param $server
-     * @return $this
-     */
-    public function setServer($server)
-    {
-        $server = $this->cleanServerUrl($server);
-
-        $this->server = $server;
-
-        return $this;
-    }
-
-    /**
-     * Gets the server property
-     *
-     * @return string
-     */
-    public function getServer()
-    {
-        return $this->server;
-    }
-
-    /**
      * Cleans the server URL for usage
      *
      * @param $server
@@ -329,53 +291,6 @@ class ExchangeWebServices
         $server = rtrim($server, "/");
 
         return $server;
-    }
-
-    /**
-     * Sets the user name property
-     *
-     * @param string $username
-     * @return $this
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-
-        return true;
-    }
-
-    /**
-     * Gets the username
-     *
-     * @return string
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * Sets the version property
-     *
-     * @param string $version
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        $this->version = $version;
-        $this->options['version'] = $version;
-
-        return $this;
-    }
-
-    /**
-     * Get the version
-     *
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->version;
     }
 
     /**

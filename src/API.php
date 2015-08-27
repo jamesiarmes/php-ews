@@ -22,19 +22,13 @@ class API
         return $this->getClient()->getPrimarySmtpMailbox();
     }
 
-    private $_fieldUris = array();
-
-    /**
-     * Storing the impersonation email
-     * @var ExchangeWebServices
-     */
-     private $_email;
+    private $fieldUris = array();
 
     /**
      * Storing the API client
      * @var ExchangeWebServices
      */
-    private $_client;
+    private $client;
 
     public function setupFieldUris()
     {
@@ -54,20 +48,20 @@ class API
             $constantsFound[$name][] = $constant;
         }
 
-        $this->_fieldUris = $constantsFound;
+        $this->fieldUris = $constantsFound;
     }
 
     public function getFieldUriByName($fieldName, $preferance = null)
     {
-        if (empty($this->_fieldUris)) {
+        if (empty($this->fieldUris)) {
             $this->setupFieldUris();
         }
 
-        if (!isset($this->_fieldUris[$fieldName])) {
+        if (!isset($this->fieldUris[$fieldName])) {
             return false;
         }
 
-        $constants = $this->_fieldUris[$fieldName];
+        $constants = $this->fieldUris[$fieldName];
 
         if (count($constants) == 1) {
             return $constants[0];
@@ -80,7 +74,7 @@ class API
             }
         }
 
-        return $this->_fieldUris[$fieldName][0];
+        return $this->fieldUris[$fieldName][0];
     }
 
     /**
@@ -106,7 +100,7 @@ class API
      */
     public function setClient($client)
     {
-        $this->_client = $client;
+        $this->client = $client;
         return $this;
     }
 
@@ -117,7 +111,7 @@ class API
      */
     public function getClient()
     {
-        return $this->_client;
+        return $this->client;
     }
 
     /**

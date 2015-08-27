@@ -44,37 +44,6 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     *
-     * @dataProvider cleanServerUrlProvider
-     * @param $input
-     * @param $expected
-     */
-    public function testServerGetSet($input, $expected)
-    {
-        $client = $this->getClientMock();
-        $client->setServer($input);
-        $actual = $client->getServer();
-
-        $this->assertEquals($expected, $actual);
-    }
-
-    public function testUsernameGetSet()
-    {
-        $client = $this->getClientMock();
-
-        $client->setUsername('test');
-        $this->assertEquals('test', $client->getUsername());
-    }
-
-    public function testVersionGetSet()
-    {
-        $client = $this->getClientMock();
-
-        $client->setVersion('test');
-        $this->assertEquals('test', $client->getVersion());
-    }
-
-    /**
      * @dataProvider processResponseFailProvider
      * @expectedException \Exception
      */
@@ -93,16 +62,14 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 
     public function testClientInitialisation()
     {
-        $client = $this->getClientMock();
-        $client->setUsername('testUser');
-        $client->setPassword('testPassword');
-        $client->setVersion('testVersion');
-        $client->setServer('testServer');
+        $client = new ExchangeWebServices('testServer', 'testUsername', 'testPassword', [
+            'version' => 'testVersion'
+        ]);
 
         $expected = new Exchange(
             dirname(__FILE__).'/../../../Resources/wsdl/services.wsdl',
             array(
-                'user' => 'testUser',
+                'user' => 'testUsername',
                 'password' => 'testPassword',
                 'version' => 'testVersion',
                 'location' => 'https://testServer/EWS/Exchange.asmx',
