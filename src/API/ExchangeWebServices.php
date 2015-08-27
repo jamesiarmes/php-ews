@@ -174,15 +174,24 @@ class ExchangeWebServices
         $server = null,
         $username = null,
         $password = null,
-        $options = [ ]
+        $options = []
     ) {
-        $options = array_replace_recursive(['version' => self::VERSION_2007], $options);
+        $location = 'https://' . $this->cleanServerUrl($server) . '/EWS/Exchange.asmx';
 
-        // Set the object properties.
-        $this->server = $this->cleanServerUrl($server);
-        $this->username = $username;
-        $this->password = $password;
-        $this->version = $options['version'];
+        $options = array_replace_recursive([
+            'version' => self::VERSION_2007,
+            'trace' => 1,
+            'exceptions' => true,
+            'classmap' => ClassMap::getClassMap()
+        ], $options);
+
+        $this->soap = new Exchange(
+            $location,
+            $username,
+            $password,
+            dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
+            $options
+        );
 
         if (isset($options['primarySmtpEmailAddress'])) {
             $this->setPrimarySmtpEmailAddress($options['primarySmtpEmailAddress']);
@@ -191,8 +200,6 @@ class ExchangeWebServices
         if (isset($options['impersonation'])) {
             $this->setPrimarySmtpEmailAddress($options['impersonation']);
         }
-
-        $this->options = $options;
     }
 
     /**
@@ -206,6 +213,7 @@ class ExchangeWebServices
     public function __call($name, $arguments)
     {
         $response = $this->getClient()->__call($name, $arguments);
+
         return $this->processResponse($response);
     }
 
@@ -216,10 +224,6 @@ class ExchangeWebServices
      */
     public function getClient()
     {
-        if (!$this->soap) {
-            $this->initializeClient();
-        }
-
         return $this->soap;
     }
 
@@ -232,6 +236,7 @@ class ExchangeWebServices
     public function setClient($client)
     {
         $this->soap = $client;
+
         return $this;
     }
 
@@ -264,35 +269,6 @@ class ExchangeWebServices
     }
 
     /**
-     * Initializes the SoapClient object to make a request
-     *
-     * @return Exchange
-     */
-    protected function initializeClient()
-    {
-        $options = array (
-            'user' => $this->username,
-            'password' => $this->password,
-            'version' => $this->version,
-            'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-            'trace' => '1',
-            'exceptions' => true,
-            'classmap' => ClassMap::getClassMap()
-        );
-
-        $options = array_replace_recursive($options, $this->options);
-
-        $client = new Exchange(
-            dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
-            $options
-        );
-
-        $this->setClient($client);
-
-        return $this;
-    }
-
-    /**
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
@@ -310,8 +286,9 @@ class ExchangeWebServices
         }
 
         if (empty($response) ||
-            empty($response->getNonNullResponseMessages())) {
-                throw new \Exception('No response returned');
+            empty($response->getNonNullResponseMessages())
+        ) {
+            throw new \Exception('No response returned');
         }
 
         $response = $response->getResponseMessages();

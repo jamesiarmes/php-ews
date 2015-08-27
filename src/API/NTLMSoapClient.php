@@ -90,28 +90,24 @@ class NTLMSoapClient extends SoapClient
     }
 
     /**
-     * Constructor
-     *
-     * @param string $wsdl
-     * @throws Exception
+     * @param mixed $location
+     * @param string $user
+     * @param string $password
+     * @param $wsdl
      * @param array $options
      */
-    public function __construct($wsdl, $options = array())
+    public function __construct($location, $user, $password, $wsdl, $options = array())
     {
+        $this->user = $user;
+        $this->password = $password;
+
         $options = array_replace_recursive([
             'httpPlayback' => [
                 'mode' => null
             ]
         ], $options);
 
-        // Verify that a user name and password were entered.
-        if (empty($options['user']) || empty($options['password'])) {
-            throw new Exception('A username and password is required.');
-        }
-
-        // Set the username and password properties.
-        $this->user = $options['user'];
-        $this->password = $options['password'];
+        $options['location'] = $location;
 
         // If a version was set then add it to the headers.
         if (!empty($options['version'])) {
@@ -144,8 +140,6 @@ class NTLMSoapClient extends SoapClient
                     )
                 )
             );
-
-            unset($options['timezone']);
         }
 
         $this->httpPlayback = HttpPlayback::getInstance($options['httpPlayback']);

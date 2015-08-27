@@ -67,24 +67,18 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         ]);
 
         $expected = new Exchange(
+            'https://testServer/EWS/Exchange.asmx',
+            'testUsername',
+            'testPassword',
             dirname(__FILE__).'/../../../Resources/wsdl/services.wsdl',
             array(
-                'user' => 'testUsername',
-                'password' => 'testPassword',
                 'version' => 'testVersion',
-                'location' => 'https://testServer/EWS/Exchange.asmx',
                 'impersonation' => null,
-                'trace' => '1',
+                'trace' => 1,
                 'exceptions' => true,
                 'classmap' => ClassMap::getClassMap()
             )
         );
-        $this->assertEquals($expected, $client->getClient());
-
-        $client->setClient('test');
-        $this->assertEquals('test', $client->getClient());
-
-        $client->setClient(false);
         $this->assertEquals($expected, $client->getClient());
     }
 
