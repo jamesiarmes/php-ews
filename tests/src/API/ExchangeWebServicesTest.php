@@ -129,6 +129,20 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('test', $client->getImpersonation());
     }
 
+    public function testPrimarySmtpMailbox()
+    {
+        $client = $this->getClientMock();
+        $this->assertNull($client->getPrimarySmtpMailbox());
+        $this->assertNull($client->getPrimarySmtpEmailAddress());
+
+        $expectedMailbox = new Type\EmailAddressType();
+        $expectedMailbox->setEmailAddress('test@test.com');
+        $client->setPrimarySmtpEmailAddress('test@test.com');
+
+        $this->assertEquals($client->getPrimarySmtpMailbox(), $expectedMailbox);
+        $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
+    }
+
     public function cleanServerUrlProvider()
     {
         return array(

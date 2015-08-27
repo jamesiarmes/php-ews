@@ -122,7 +122,7 @@ class ExchangeWebServices
         return $this->primarySmtpMailbox;
     }
 
-    public function getPrimarySmptEmailAddress()
+    public function getPrimarySmtpEmailAddress()
     {
         if ($this->primarySmtpMailbox == null) {
             return null;

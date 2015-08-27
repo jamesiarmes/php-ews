@@ -50,6 +50,54 @@ class TypeTest extends PHPUnit_Framework_TestCase
         $calendarItem->getSomethingRandom();
     }
 
+    public function testMagicIs()
+    {
+        $item = Type::buildFromArray(array(
+            'isTrueOne' => true,
+            'IsTrueTwo' => true,
+            'trueThree' => true,
+            'TrueFour' => true
+        ));
+
+        $this->assertTrue($item->is('isTrueOne'));
+        $this->assertTrue($item->isTrueOne());
+        $this->assertTrue($item->isIsTrueOne());
+
+        $this->assertTrue($item->is('IsTrueTwo'));
+        $this->assertTrue($item->isTrueTwo());
+        $this->assertTrue($item->isIsTrueTwo());
+
+        $this->assertTrue($item->is('trueThree'));
+        $this->assertTrue($item->isTrueThree());
+
+        $this->assertTrue($item->is('TrueFour'));
+        $this->assertTrue($item->isTrueFour());
+    }
+
+    public function testMagicAdd()
+    {
+        $item = Type::buildFromArray(array(
+            'itemToAdd' => null
+        ));
+
+        $item->add('itemToAdd', 'someAdd');
+        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
+
+        $item->add('itemToAdd', 'anotherAdd');
+        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
+        $item->setItemToAdd(null);
+
+        $item->addItemToAdd('someAdd');
+        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
+
+        $item->addItemToAdd('anotherAdd');
+        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
+
+        $item->setItemToAdd('someAdd');
+        $item->addItemToAdd('anotherAdd');
+        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
+    }
+
     public function testCast()
     {
         $calendarItem = new Type\CalendarItemType();
