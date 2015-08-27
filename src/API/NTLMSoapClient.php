@@ -119,7 +119,8 @@ class NTLMSoapClient extends SoapClient
 
         // If impersonation was set then add it to the headers.
         if (!empty($options['impersonation'])) {
-            if (is_string($options['impersonation'])) {
+            $impersonation = $options['impersonation'];
+            if (is_string($impersonation)) {
                 $impersonation = ExchangeImpersonation::fromEmailAddress($options['impersonation']);
             }
 
