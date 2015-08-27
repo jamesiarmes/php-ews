@@ -8,8 +8,12 @@
 
 namespace jamesiarmes\PEWS\API;
 
+use jamesiarmes\PEWS\Caster;
+
 trait MagicMethodsTrait
 {
+    protected $_typeMap = [ ];
+
     public function __call($name, $arguments)
     {
         $callTypeIndex = 3;
@@ -51,11 +55,11 @@ trait MagicMethodsTrait
             $name = lcfirst($name);
         }
 
-        if ($this->exists($name)) {
-            return $this->$name;
+        if (!$this->exists($name)) {
+            throw new \Exception('Property ' . $name . ' does not exist');
         }
 
-        throw new \Exception('Property ' . $name . ' does not exist');
+        return $this->$name;
     }
 
     public function set($name, $value)
@@ -64,13 +68,15 @@ trait MagicMethodsTrait
             $name = lcfirst($name);
         }
 
-        if ($this->exists($name)) {
-            if (isset($this->_typeMap[$name])) {
-                $value = $this->cast($value, $this->_typeMap[$name]);
-            }
-
-            $this->$name = $value;
+        if (!$this->exists($name)) {
+            throw new \Exception('Property ' . $name . ' does not exist');
         }
+
+        if (isset($this->_typeMap[$name])) {
+            $value = $this->cast($value, $this->_typeMap[$name]);
+        }
+
+        $this->$name = $value;
 
         return $this;
     }
@@ -82,7 +88,7 @@ trait MagicMethodsTrait
         }
 
         if (!$this->exists($name)) {
-            return $this;
+            throw new \Exception('Property ' . $name . ' does not exist');
         }
 
         if (isset($this->_typeMap[$name])) {
@@ -113,7 +119,11 @@ trait MagicMethodsTrait
             $name = lcfirst($name);
         }
 
-        return ($this->exists($name) && (bool) $this->$name);
+        if (!$this->exists($name)) {
+            throw new \Exception('Property ' . $name . ' does not exist');
+        }
+
+        return ((bool) $this->$name);
     }
 
     public function cast($value, $type)
