@@ -88,15 +88,6 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $client->getClient());
     }
 
-    public function testImpersonation()
-    {
-        $client = $this->getClientMock();
-
-        $this->assertEquals(null, $client->getImpersonation());
-        $client->setImpersonation('test');
-        $this->assertEquals('test', $client->getImpersonation());
-    }
-
     public function testPrimarySmtpMailbox()
     {
         $client = $this->getClientMock();

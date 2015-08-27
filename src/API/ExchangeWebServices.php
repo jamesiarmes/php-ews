@@ -103,13 +103,6 @@ class ExchangeWebServices
     protected $username;
 
     /**
-     * Exchange impersonation
-     *
-     * @var Type
-     */
-    protected $impersonation;
-
-    /**
      * @var EmailAddressType
      */
     protected $primarySmtpMailbox;
@@ -243,29 +236,6 @@ class ExchangeWebServices
     }
 
     /**
-     * Sets the impersonation property
-     *
-     * @param Type $impersonation
-     * @return $this
-     */
-    public function setImpersonation($impersonation)
-    {
-        $this->impersonation = $impersonation;
-
-        return $this;
-    }
-
-    /**
-     * Gets the impersonation property
-     *
-     * @return Type
-     */
-    public function getImpersonation()
-    {
-        return $this->impersonation;
-    }
-
-    /**
      * Cleans the server URL for usage
      *
      * @param $server
@@ -305,7 +275,6 @@ class ExchangeWebServices
             'password' => $this->password,
             'version' => $this->version,
             'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-            'impersonation' => $this->impersonation,
             'trace' => '1',
             'exceptions' => true,
             'classmap' => ClassMap::getClassMap()
