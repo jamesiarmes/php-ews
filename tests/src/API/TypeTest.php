@@ -11,16 +11,16 @@ use DateTime;
 
 class TypeTest extends PHPUnit_Framework_TestCase
 {
-    private $_typeMock;
+    private $typeMock;
 
     public function getTypeMock()
     {
-        if (!$this->_typeMock) {
+        if (!$this->typeMock) {
             $object = Mockery::mock('jamesiarmes\PEWS\API\Type')->makePartial();
-            $this->_typeMock = $object;
+            $this->typeMock = $object;
         }
 
-        return $this->_typeMock;
+        return $this->typeMock;
     }
 
     public function testMagicCall()
@@ -37,41 +37,43 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('Two Test', $item->getTwo());
 
-        $item->setTwo('Two Test Two', 'Some Random Thing');
+        $item->setTwo('Two Test');
         $this->assertEquals('Two Test', $item->getTwo());
     }
 
     /**
+     * @dataProvider magicExceptionProvider
      * @expectedException \Exception
      */
-    public function testMagicCallFail()
+    public function testMagicCallFail($callName, $value = null)
     {
         $calendarItem = new Type\CalendarItemType();
-        $calendarItem->getSomethingRandom();
+
+        if ($value === null) {
+            $calendarItem->{$callName}();
+        } else {
+            $calendarItem->{$callName}($value);
+        }
+
     }
 
-    public function testMagicIs()
+    /**
+     * @dataProvider magicIsDataProvider
+     */
+    public function testMagicIs($input, $valueName, $expected)
     {
-        $item = Type::buildFromArray(array(
-            'isTrueOne' => true,
-            'IsTrueTwo' => true,
-            'trueThree' => true,
-            'TrueFour' => true
-        ));
+        $item = Type::buildFromArray($input);
 
-        $this->assertTrue($item->is('isTrueOne'));
-        $this->assertTrue($item->isTrueOne());
-        $this->assertTrue($item->isIsTrueOne());
+        $this->assertEquals($item->is($valueName), $expected);
 
-        $this->assertTrue($item->is('IsTrueTwo'));
-        $this->assertTrue($item->isTrueTwo());
-        $this->assertTrue($item->isIsTrueTwo());
+        $callName = "is" . ucfirst($valueName);
+        $this->assertEquals($item->{$callName}(), $expected);
 
-        $this->assertTrue($item->is('trueThree'));
-        $this->assertTrue($item->isTrueThree());
-
-        $this->assertTrue($item->is('TrueFour'));
-        $this->assertTrue($item->isTrueFour());
+        if (substr(strtolower($valueName), 0, 2) == "is") {
+            $valueName = substr($valueName, 2);
+            $callName = "is" . ucfirst($valueName);
+            $this->assertEquals($item->{$callName}(), $expected);
+        }
     }
 
     public function testMagicAdd()
@@ -219,6 +221,34 @@ class TypeTest extends PHPUnit_Framework_TestCase
             array(1, ''),
             array(new \stdClass(), ''),
             array('one', 'one')
+        );
+    }
+
+    public function magicIsDataProvider()
+    {
+        return array(
+            array(
+                array( 'someTrueValue' => true ),
+                'someTrueValue',
+                true
+            ),
+
+            array(
+                array( 'isSomeFalseValue' => false ),
+                'isSomeFalseValue',
+                false
+            )
+        );
+    }
+
+    public function magicExceptionProvider()
+    {
+        return array (
+            array('getSomeValue'),
+            array('setSomeValue', 'value'),
+            array('setSomeValue'),
+            array('addSomeValue', 'value'),
+            array('isSomeValue')
         );
     }
 }

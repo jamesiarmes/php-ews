@@ -32,7 +32,7 @@ trait MagicMethodsTrait
             return $this->{$callType}($propertyName, $arguments[0]);
         }
 
-        return $this;
+        throw new \Exception("The method you tried to call doesn't exist");
     }
 
     public function __set($name, $value)
