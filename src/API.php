@@ -198,6 +198,23 @@ class API
         return $this->getClient()->UpdateItem($request)->getItems();
     }
 
+    protected function buildUpdateItemChanges($itemType, $uriType, $changes)
+    {
+        $setItemFields = array();
+
+        //Add each property to a setItemField
+        foreach ($changes as $key => $value) {
+            $fullName = $this->getFieldUriByName($key, $uriType);
+
+            $setItemFields[] = array(
+                'FieldURI' => array('FieldURI' => $fullName),
+                $itemType => array($key => $value)
+            );
+        }
+
+        return $setItemFields;
+    }
+
     /**
      * @param $items Type\ItemIdType|Type\ItemIdType[]
      * @param array $options

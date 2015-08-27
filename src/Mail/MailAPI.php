@@ -66,28 +66,17 @@ class MailAPI extends API
      */
     public function updateMailItem($itemId, $changes)
     {
-        $setItemFields = array();
-
-        //Add each property to a setItemField
-        foreach ($changes as $key => $value) {
-            $fullName = $this->getFieldUriByName($key, 'message');
-
-            $setItemFields[] = array(
-                'FieldURI' => array('FieldURI' => $fullName),
-                'Message' => array($key => $value)
-            );
-        }
-
         //Create the request
         $request = array(
             'ItemChange' => array(
-                'ItemId' => array('Id' => $itemId->getId(), 'ChangeKey' => $itemId->getChangeKey()),
-                'Updates' => array('SetItemField' => $setItemFields)
+                'ItemId' => $itemId->toArray(),
+                'Updates' => array(
+                    'SetItemField' => $this->buildUpdateItemChanges('Message', 'message', $changes)
+                )
             )
         );
 
         $items = $this->updateItems($request);
-        $items = $items->getCalendarItem();
 
         if (!is_array($items)) {
             $items = array($items);

@@ -36,6 +36,7 @@ class CalendarAPI extends API
         }
 
         $this->folderId = $folder->getFolderId();
+
         return $this;
     }
 
@@ -61,7 +62,7 @@ class CalendarAPI extends API
             $items = array($items);
         }
 
-        $item = array('CalendarItem'=>$items);
+        $item = array('CalendarItem' => $items);
         $options = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
             'SavedItemFolderId' => array(
@@ -134,7 +135,7 @@ class CalendarAPI extends API
      */
     public function getCalendarItem($id, $changeKey)
     {
-        return $this->getItem([ 'Id' => $id, 'ChangeKey' => $changeKey ]);
+        return $this->getItem(['Id' => $id, 'ChangeKey' => $changeKey]);
     }
 
     /**
@@ -146,23 +147,13 @@ class CalendarAPI extends API
      */
     public function updateCalendarItem(Type\ItemIdType $itemId, $changes)
     {
-        $setItemFields = array();
-
-        //Add each property to a setItemField
-        foreach ($changes as $key => $value) {
-            $fullName = $this->getFieldUriByName($key, 'calendar');
-
-            $setItemFields[] = array(
-                'FieldURI' => array('FieldURI' => $fullName),
-                'CalendarItem' => array($key => $value)
-            );
-        }
-
         //Create the request
         $request = array(
             'ItemChange' => array(
                 'ItemId' => $itemId->toArray(),
-                'Updates' => array('SetItemField' =>$setItemFields)
+                'Updates' => array(
+                    'SetItemField' => $this->buildUpdateItemChanges('CalendarItem', 'calendar', $changes)
+                )
             )
         );
 
@@ -170,7 +161,7 @@ class CalendarAPI extends API
             'SendMeetingInvitationsOrCancellations' => 'SendToNone'
         );
 
-        $items =  $this->updateItems($request, $options)->getCalendarItem();
+        $items = $this->updateItems($request, $options)->getCalendarItem();
 
         if (!is_array($items)) {
             $items = array($items);
