@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.6 - 2015-09-28
+ * Added simple support for creating folders
+ * Added simple support for moving items
+ * Added simple support for restrictions when getting mail
+
 ## 0.5.5 - 2015-08-26
  * Fixed support for impersonation and access of other mailboxes by including the primarySmtpEmailAddress option, which
  will automatically be sent to the server when you request a folderId()
