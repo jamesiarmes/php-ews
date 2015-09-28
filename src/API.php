@@ -233,6 +233,18 @@ class API
         return true;
     }
 
+    public function moveItem(Type\ItemIdType $itemId, Type\FolderIdType $folderId, $options = array())
+    {
+        $request = array(
+            'ToFolderId' => array('FolderId' => $folderId->toArray()),
+            'ItemIds' => array('ItemId' => $itemId->toArray())
+        );
+
+        $request = array_merge_recursive($request, $options);
+
+        return $this->client->MoveItem($request);
+    }
+
     /**
      * @param $items Type\ItemIdType|Type\ItemIdType[]
      * @param array $options
