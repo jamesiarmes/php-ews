@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.7 - 2015-09-28
+ * Allows the parentFolder in getFolderByDisplayName to be a folderId or a string
+
 ## 0.5.6 - 2015-09-28
  * Added simple support for creating folders
  * Added simple support for moving items

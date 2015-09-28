@@ -328,19 +328,23 @@ class API
 
     /**
      * @param $folderName
-     * @param string $parentFolder
+     * @param string|Type\FolderIdType $parentFolderId
      * @param array $options
      * @return bool|Type\BaseFolderType
      */
-    public function getFolderByDisplayName($folderName, $parentFolder = 'root', $options = array())
+    public function getFolderByDisplayName($folderName, $parentFolderId = 'root', $options = array())
     {
+        if (is_string($parentFolderId)) {
+            $parentFolderId = $this->getFolderByDistinguishedId($parentFolderId)->getFolderId();
+        }
+
         $request = array(
             'Traversal' => 'Shallow',
             'FolderShape' => array(
                 'BaseShape' => 'AllProperties'
             ),
             'ParentFolderIds' => array(
-                'DistinguishedFolderId' => array('Id'=>$parentFolder)
+                'FolderId' => $parentFolderId->toArray()
             )
         );
 
