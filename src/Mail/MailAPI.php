@@ -44,6 +44,23 @@ class MailAPI extends API
             )
         );
 
+        if (!empty($options['Restriction'])) {
+            foreach ($options['Restriction'] as $restrictionType => $query) {
+                $formattedRestrictionType = array();
+                foreach ($query as $key => $value) {
+                    if ($value === false) {
+                        $value = 'false';
+                    }
+                    $formattedRestrictionType[] = array(
+                        'FieldURI' => array('FieldURI' => $this->getFieldUriByName($key, 'message')),
+                        'FieldURIOrConstant' => array('Constant' => array('Value' => (string) $value))
+                    );
+                }
+
+                $options['Restriction'][$restrictionType] = $formattedRestrictionType;
+            }
+        }
+
         $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
@@ -55,6 +72,21 @@ class MailAPI extends API
         }
 
         return $messages;
+    }
+
+    public function getUnreadMailItems($options = array())
+    {
+        $unReadOption = array(
+            'Restriction' => array(
+                'IsEqualTo' => array(
+                    'IsRead' => false
+                )
+            )
+        );
+
+        $options = array_replace_recursive($unReadOption, $options);
+
+        return $this->getMailItems($options);
     }
 
     /**
@@ -95,7 +127,7 @@ class MailAPI extends API
         }
 
         $this->updateMailItem($mailItem, array(
-            'IsRead' => true
+            'IsRead' => false
         ));
     }
 
