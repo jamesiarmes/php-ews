@@ -58,22 +58,35 @@ class ArrayOfFoldersType extends Type
     {
         $folders = array();
         if ($this->folder !== null) {
-            $folders = array_merge($folders, $this->folder);
+            $folders = array_merge($folders, (is_array($this->folder) ? $this->folder : array($this->folder)));
         }
 
         if ($this->calendarFolder !== null) {
-            $folders = array_merge($folders, $this->calendarFolder);
+            $folders = array_merge(
+                $folders,
+                (is_array($this->calendarFolder) ? $this->calendarFolder : array($this->calendarFolder))
+            );
         }
 
         if ($this->contactsFolder !== null) {
-            $folders = array_merge($folders, $this->contactsFolder);
+            $folders = array_merge(
+                $folders,
+                (is_array($this->contactsFolder) ? $this->contactsFolder : array($this->contactsFolder))
+            );
         }
 
         if ($this->searchFolder !== null) {
-            $folders = array_merge($folders, $this->searchFolder);
+            $folders = array_merge(
+                $folders,
+                (is_array($this->searchFolder) ? $this->searchFolder : array($this->searchFolder))
+            );
         }
 
         if ($this->tasksFolder !== null) {
+            $folders = array_merge(
+                $folders,
+                (is_array($this->tasksFolder) ? $this->tasksFolder : array($this->tasksFolder))
+            );
             $folders = array_merge($folders, $this->tasksFolder);
         }
 

@@ -68,8 +68,12 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         $prop = $reflection->getProperty('validate');
         $prop->setAccessible(true);
 
-        $client = new NTLMSoapClient('location', 'user', 'password',
-            __DIR__ . '/../../../Resources/wsdl/services.wsdl');
+        $client = new NTLMSoapClient(
+            'location',
+            'user',
+            'password',
+            __DIR__ . '/../../../Resources/wsdl/services.wsdl'
+        );
 
         $this->assertFalse($prop->getValue($client));
 
