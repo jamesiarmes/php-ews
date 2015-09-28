@@ -209,6 +209,30 @@ class API
         return $setItemFields;
     }
 
+    public function createFolders($names, Type\FolderIdType $parentFolder, $options = array())
+    {
+        $request = array('Folders' => array('Folder' => array()));
+        if (!empty($parentFolder)) {
+            $request['ParentFolderId'] = array('FolderId' => $parentFolder->toArray());
+        }
+
+        if (!is_array($names)) {
+            $names = array($names);
+        }
+
+        foreach ($names as $name) {
+            $request['Folders']['Folder'][] = array(
+                'DisplayName' => $name
+            );
+        }
+
+        $request = array_merge_recursive($request, $options);
+
+        $this->client->CreateFolder($request);
+
+        return true;
+    }
+
     /**
      * @param $items Type\ItemIdType|Type\ItemIdType[]
      * @param array $options
