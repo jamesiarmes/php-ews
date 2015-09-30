@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.5.7 - 2015-09-30
+## 0.5.8 - 2015-09-30
  * Fixed a test for Travis to pass
 
 ## 0.5.7 - 2015-09-28
