@@ -24,7 +24,7 @@ class APITest extends PHPUnit_Framework_TestCase
     {
         $mode = getenv('HttpPlayback');
         if ($mode == false) {
-            $mode = 'playback';
+            $mode = 'record';
         }
 
         $auth = [
@@ -228,7 +228,7 @@ class APITest extends PHPUnit_Framework_TestCase
     public function getFolderByDisplayNameProvider()
     {
         return array(
-            array('AllItems', 'AllItems')
+            array('Common Views', 'Common Views')
         );
     }
 }
