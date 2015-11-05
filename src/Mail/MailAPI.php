@@ -148,4 +148,16 @@ class MailAPI extends API
 
         return $this->createItems($items, $options);
     }
+
+    public function getAttachment(Type\AttachmentIdType $attachmentId)
+    {
+        $request = array (
+            'AttachmentIds' => array(
+                $attachmentId->toXmlObject()
+            )
+        );
+
+        $attachment = $this->getClient()->GetAttachment($request);
+        return $attachment;
+    }
 }

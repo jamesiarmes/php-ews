@@ -29,4 +29,28 @@ class NonEmptyArrayOfAttachmentsType extends Type
      * @var \jamesiarmes\PEWS\API\Type\FileAttachmentType[]
      */
     protected $fileAttachment = null;
+
+    /**
+     * @return FileAttachmentType[]
+     */
+    public function getFileAttachment()
+    {
+        if (!is_array($this->fileAttachment) && $this->fileAttachment !== null) {
+            return array($this->fileAttachment);
+        }
+
+        return $this->fileAttachment;
+    }
+
+    /**
+     * @return ItemAttachmentType[]
+     */
+    public function getItemAttachment()
+    {
+        if (!is_array($this->itemAttachment) && $this->itemAttachment !== null) {
+            return array($this->itemAttachment);
+        }
+
+        return $this->itemAttachment;
+    }
 }

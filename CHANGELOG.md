@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.9 - 2015-11-05
+ * Adding ability to get the attachments of an eamil
+
 ## 0.5.8 - 2015-09-30
  * Fixed a test for Travis to pass
 
