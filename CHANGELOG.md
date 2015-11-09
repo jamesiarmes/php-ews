@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.10 - 2015-11-09
+ * Fixing but in `MailAPI::markEmailAsRead()` and allowing you to set it as unread through the same function
+
 ## 0.5.9 - 2015-11-05
  * Adding ability to get the attachments of an eamil
 

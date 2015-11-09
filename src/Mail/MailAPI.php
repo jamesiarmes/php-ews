@@ -119,15 +119,16 @@ class MailAPI extends API
 
     /**
      * @param $mailItem Type\MessageType|Type\ItemIdType
+     * @param $isRead boolean
      */
-    public function markMailAsRead($mailItem)
+    public function markMailAsRead($mailItem, $isRead = true)
     {
         if ($mailItem instanceof Type\MessageType) {
             $mailItem = $mailItem->getItemId();
         }
 
         $this->updateMailItem($mailItem, array(
-            'IsRead' => false
+            'IsRead' => $isRead
         ));
     }
 
