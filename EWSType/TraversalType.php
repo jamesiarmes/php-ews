@@ -8,7 +8,7 @@
  *
  * @package php-ews\Enumerations
  */
-class EWSType_TraversalType extends EWSYType
+class EWSType_TraversalType extends EWSType
 {
     /**
      * Consider both direct children as well as all children contained within
