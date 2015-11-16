@@ -5,6 +5,7 @@ namespace jamesiarmes\PEWS;
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\Calendar\CalendarAPI;
+use jamesiarmes\PEWS\Mail\MailAPI;
 
 /**
  * A base class for APIs
@@ -90,6 +91,19 @@ class API
         $calendar->pickCalendar($name);
 
         return $calendar;
+    }
+
+    /**
+     * @param string $folderName
+     * @return MailAPI
+     */
+    public function getMailbox($folderName = null)
+    {
+        $mailApi = new MailAPI();
+        $mailApi->setClient($this->getClient());
+        $mailApi->pickMailFolder($folderName);
+
+        return $mailApi;
     }
 
     /**

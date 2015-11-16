@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.11 - 2015-11-16
+ * Added an `API::getMailbox(string $folderName = null)` function
+ * Added a `MailAPI::setFolderId(FolderIdType $folderId)` function
+ * Added a `MailAPI::pickMailboxFolder(string $displayName, string|FolderIdType $parentFolder)` function
+ * With the above functions you can now get mail items from folders other than the inbox
+ * Version 0.6.0+ will change the `getMailItems` signature to include a folder to pick from as well
+
 ## 0.5.10 - 2015-11-09
  * Fixing but in `MailAPI::markEmailAsRead()` and allowing you to set it as unread through the same function
 

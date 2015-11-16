@@ -27,6 +27,29 @@ class MailAPI extends API
     }
 
     /**
+     * @param Type\FolderIdType $folderId
+     */
+    public function setFolderId($folderId)
+    {
+        $this->folderId = $folderId;
+    }
+
+    /**
+     * @param string $displayName
+     * @param string|Type\FolderIdType $parentFolder
+     */
+    public function pickMailFolder($displayName = null, $parentFolder = 'inbox')
+    {
+        if ($displayName === null) {
+            $this->folderId = $this->getFolderByDistinguishedId('inbox')->getFolderId();
+            return;
+        }
+
+        $folder = $this->getFolderByDisplayName($displayName, $parentFolder);
+        $this->folderId = $folder->getFolderId();
+    }
+
+    /**
      * Get all mail items in the inbox
      *
      * @param array $options
