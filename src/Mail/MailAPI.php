@@ -52,18 +52,23 @@ class MailAPI extends API
     /**
      * Get all mail items in the inbox
      *
+     * @param Type\FolderIdType
      * @param array $options
      * @return Type\MessageType[]
      */
-    public function getMailItems($options = array())
+    public function getMailItems($folderId = null, $options = array())
     {
+        if (!$folderId) {
+            $folderId = $this->getFolderId();
+        }
+
         $request = array(
             'Traversal' => 'Shallow',
             'ItemShape' => array(
                 'BaseShape' => 'AllProperties'
             ),
             'ParentFolderIds' => array(
-                'FolderId' => $this->getFolderId()->toXmlObject()
+                'FolderId' => $folderId->toXmlObject()
             )
         );
 
@@ -97,7 +102,12 @@ class MailAPI extends API
         return $messages;
     }
 
-    public function getUnreadMailItems($options = array())
+    /**
+     * @param Type\FolderIdType $folderId
+     * @param array $options
+     * @return Type\MessageType[]
+     */
+    public function getUnreadMailItems($folderId = null, $options = array())
     {
         $unReadOption = array(
             'Restriction' => array(
@@ -109,7 +119,7 @@ class MailAPI extends API
 
         $options = array_replace_recursive($unReadOption, $options);
 
-        return $this->getMailItems($options);
+        return $this->getMailItems($folderId, $options);
     }
 
     /**

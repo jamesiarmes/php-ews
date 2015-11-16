@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 - 2015-11-16
+ * Added a `FolderIdType $folderId` option to `MailAPI::getMailItems()` and `MailAPI::getUnreadMailItems()`. Because this
+ is a minor BC breaking change, it gets a new new minor version, since this is a pre-1.0 release.
+
 ## 0.5.11 - 2015-11-16
  * Added an `API::getMailbox(string $folderName = null)` function
  * Added a `MailAPI::setFolderId(FolderIdType $folderId)` function
