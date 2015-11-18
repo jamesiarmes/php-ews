@@ -95,6 +95,10 @@ class MailAPI extends API
         $response = $this->getClient()->FindItem($request);
         $messages = $response->getItems()->getMessage();
 
+        if ($messages === null) {
+            $messages = array();
+        }
+
         if (!is_array($messages)) {
             $messages = array($messages);
         }
