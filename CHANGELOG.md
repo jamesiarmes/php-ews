@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.1 - 2015-11-18
+ * Fixed file names for the recordings for the test. This should allow installation on windows machines again
+
 ## 0.6.0 - 2015-11-16
  * Added a `FolderIdType $folderId` option to `MailAPI::getMailItems()` and `MailAPI::getUnreadMailItems()`. Because this
  is a minor BC breaking change, it gets a new new minor version, since this is a pre-1.0 release.
