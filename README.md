@@ -131,13 +131,18 @@ And then those calls will play back from the recorded files, allowing you to con
 without touching the live server, while still allowing you to double check that it really works before release by
 changing the mode option.
 
+# Versioning
+The versioning of this component is done to comply with [semver](http://semver.org/) standards. This means that any BC breaks that are made will result in an increasing Major Version number (IE: 1.x -> 2.x),
+and new features that do not result in BC breaks will result in Minor version increases (IE: 1.1.x -> 1.2.0) and bug fixes that do not result in new features or BC breaks will result in the Patch number
+increasing (IE: 1.0.0 -> 1.0.1). The exception is development pre-1.0 release, where the Minor number is treated as a Major and the patch number is treated as both Patch and Minor numbers. That means
+that you can pin your composer to, say, 0.6.* and you will not receive any BC breaks, as BC breaks will result in the Minor version changing.
+
 # Resources
-* [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
 * [Exchange 2007 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=EXCHG.80\).aspx)
 * [Exchange 2010 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=exchg.140\).aspx)
 
 # Support
-All questions should use the [issue queue](https://github.com/jamesiarmes/php-ews/issues). This allows the community to contribute to and benefit from questions or issues you may have. Any support requests sent to my email address will be directed here.
+All questions should use the [issue queue](https://github.com/garethp/php-ews/issues). This allows the community to contribute to and benefit from questions or issues you may have. Any support requests sent to my email address will be directed here.
 
 # Contributions
 Contributions are always welcome!
