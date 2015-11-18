@@ -9,3 +9,18 @@
 
 ## All Types
  * Add a dirty/clean state to objects, so you can do `$api->updateItem($items)` and have it know what to update
+
+## Test Coverage
+ * Increase to at least 80%
+
+## Compatibility
+ * Investigate possible issue with installing on Windows machines due to the file names of recordings in Resources
+ * Think about swapping out Guzzle to reduce PHP version requirement to 5.4
+
+## Code Generation
+ * Modify generator to include the SOAP functions as Doc Blocks on ExchangeWebServices class
+
+## Features
+ * Create interfaces for at least the API classes
+ * Merge `getFileAttachments()` and `getItemAttachments()` to `getAllAttachments()` in `NonEmptyArrayOfAttachmentsType`
+ * Implement `ItemType::getAttachments($attachmentType = null)` to allow selection of certain types of attachments
