@@ -54,7 +54,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => self::class . '::' . $this->getName() . '.json'
+                    'recordFileName' => self::class . '.' . $this->getName() . '.json'
                 ]
             ]
         );
