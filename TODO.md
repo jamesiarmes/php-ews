@@ -23,3 +23,6 @@
  * Create interfaces for at least the API classes
  * Merge `getFileAttachments()` and `getItemAttachments()` to `getAllAttachments()` in `NonEmptyArrayOfAttachmentsType`
  * Implement `ItemType::getAttachments($attachmentType = null)` to allow selection of certain types of attachments
+
+## Incorrectly returned values
+ * `ItemType::getCategories()` return a `stdClass` with a property `String` which holds the categories, rather than returning them directly
