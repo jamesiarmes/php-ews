@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.2 - 2015-11-19
+ * Fixed a bug where Guzzle wasn't actually attempting NTLM Authentication. It does now
+
 ## 0.6.1 - 2015-11-18
  * Fixed file names for the recordings for the test. This should allow installation on windows machines again
 
