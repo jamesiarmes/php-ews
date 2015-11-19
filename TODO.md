@@ -26,3 +26,6 @@
 
 ## Incorrectly returned values
  * `ItemType::getCategories()` return a `stdClass` with a property `String` which holds the categories, rather than returning them directly
+
+## Feature
+ * Implement a "Always return as Array" feature (Will break BC)
