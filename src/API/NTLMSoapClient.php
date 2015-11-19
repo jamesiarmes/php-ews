@@ -166,16 +166,19 @@ class NTLMSoapClient extends SoapClient
             'Connection' => 'Keep-Alive',
             'User-Agent' => 'PHP-SOAP-CURL',
             'Content-Type' => 'text/xml; charset=utf-8',
-            'SOAPAction' => $action,
+            'SOAPAction' => $action
         );
 
         $client = $this->httpPlayback->getHttpClient();
         $response = $client->post($location, array(
             'body' => $request,
             'headers' => $headers,
-            'auth' => [$this->user, $this->password],
             'verify' => $this->validate,
-            'http_errors' => false
+            'http_errors' => false,
+            'curl' => [
+                CURLOPT_HTTPAUTH => CURLAUTH_BASIC | CURLAUTH_NTLM,
+                CURLOPT_USERPWD => $this->user.':'.$this->password
+            ]
         ));
 
         $this->__last_request_headers = $headers;
