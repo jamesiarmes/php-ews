@@ -11,10 +11,9 @@
  * Add a dirty/clean state to objects, so you can do `$api->updateItem($items)` and have it know what to update
 
 ## Test Coverage
- * Increase to at least 80%
+ * Increase to at least 90%
 
 ## Compatibility
- * Investigate possible issue with installing on Windows machines due to the file names of recordings in Resources
  * Think about swapping out Guzzle to reduce PHP version requirement to 5.4
 
 ## Code Generation

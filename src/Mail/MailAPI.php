@@ -49,6 +49,26 @@ class MailAPI extends API
         $this->folderId = $folder->getFolderId();
     }
 
+    protected function formatRestrictions($restrictions)
+    {
+        foreach ($restrictions as $restrictionType => $query) {
+            $formattedRestrictionType = array();
+            foreach ($query as $key => $value) {
+                if ($value === false) {
+                    $value = 'false';
+                }
+                $formattedRestrictionType[] = array(
+                    'FieldURI' => array('FieldURI' => $this->getFieldUriByName($key, 'message')),
+                    'FieldURIOrConstant' => array('Constant' => array('Value' => (string) $value))
+                );
+            }
+
+            $restrictions[$restrictionType] = $formattedRestrictionType;
+        }
+
+        return $restrictions;
+    }
+
     /**
      * Get all mail items in the inbox
      *
@@ -73,20 +93,7 @@ class MailAPI extends API
         );
 
         if (!empty($options['Restriction'])) {
-            foreach ($options['Restriction'] as $restrictionType => $query) {
-                $formattedRestrictionType = array();
-                foreach ($query as $key => $value) {
-                    if ($value === false) {
-                        $value = 'false';
-                    }
-                    $formattedRestrictionType[] = array(
-                        'FieldURI' => array('FieldURI' => $this->getFieldUriByName($key, 'message')),
-                        'FieldURIOrConstant' => array('Constant' => array('Value' => (string) $value))
-                    );
-                }
-
-                $options['Restriction'][$restrictionType] = $formattedRestrictionType;
-            }
+            $options['Restriction'] = $this->formatRestrictions($options['Restriction']);
         }
 
         $request = array_replace_recursive($request, $options);
