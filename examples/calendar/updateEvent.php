@@ -2,8 +2,7 @@
 
 use jamesiarmes\PEWS\API;
 
-$api = new API();
-$api->buildClient('server', 'username', 'password');
+$api = API::withUsernameAndPassword('server', 'username', 'password');
 $calendar = $api->getCalendar();
 
 //Get our item to update

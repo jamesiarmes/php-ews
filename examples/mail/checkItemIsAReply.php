@@ -3,10 +3,9 @@
 require_once "vendor/autoload.php";
 
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\API\TypeTest;
+use jamesiarmes\PEWS\Mail\MailAPI;
 
-$api = new \jamesiarmes\PEWS\Mail\MailAPI();
-$api->buildClient('server', 'username', 'password');
+$api = MailAPI::withUsernameAndPassword('server', 'username', 'password');
 
 $mailItem = $api->getMailItems()[0];
 $read = $mailItem->isAReply();

@@ -8,8 +8,7 @@ use jamesiarmes\PEWS\Caster;
 use jamesiarmes\PEWS\Test\API\TypeTest;
 use jamesiarmes\PEWS\Calendar\CalendarAPI;
 
-$api = new \jamesiarmes\PEWS\API();
-$api->buildClient(
+$api = \jamesiarmes\PEWS\API::withUsernameAndPassword(
     'server',
     'username',
     'password',

@@ -14,8 +14,7 @@ use jamesiarmes\PEWS\API\Enumeration;
 use jamesiarmes\PEWS\API\Type;
 
 //Create and build the client
-$api = new API();
-$api->buildClient('server', 'username', 'password');
+$api = API::withUsernameAndPassword('server', 'username', 'password');
 
 //Build the request as an array
 $request = array(

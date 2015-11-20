@@ -12,8 +12,7 @@ use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Enumeration;
 
 //Create and build the client
-$api = new API();
-$api->buildClient('server', 'username', 'password');
+$api = API::withUsernameAndPassword('server', 'username', 'password');
 
 //Get the folder to save the event to
 $folder = $api->getFolderByDistinguishedId('calendar');

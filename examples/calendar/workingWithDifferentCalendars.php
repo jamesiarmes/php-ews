@@ -2,8 +2,7 @@
 
 use jamesiarmes\PEWS\API;
 
-$api = new API();
-$api->buildClient('server', 'username', 'password');
+$api = API::withUsernameAndPassword('server', 'username', 'password');
 
 //Get the default calendar
 $calendar = $api->getCalendar();

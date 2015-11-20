@@ -3,10 +3,9 @@
 require_once "vendor/autoload.php";
 
 use jamesiarmes\PEWS\API\Type;
-use jamesiarmes\PEWS\API\TypeTest;
+use jamesiarmes\PEWS\Mail\MailAPI;
 
-$api = new \jamesiarmes\PEWS\Mail\MailAPI();
-$api->buildClient('server', 'username', 'password');
+$api = MailApi::withUsernameAndPassword('server', 'username', 'password');
 
 //Create the message item
 $message = new Type\MessageType();
