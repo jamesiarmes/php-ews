@@ -45,6 +45,10 @@ class CalendarAPI extends API
      */
     public function getFolderId()
     {
+        if ($this->folderId === null) {
+            $this->pickCalendar();
+        }
+
         return $this->folderId;
     }
 

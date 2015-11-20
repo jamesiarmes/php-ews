@@ -96,10 +96,9 @@ class NTLMSoapClient extends SoapClient
      * @param $wsdl
      * @param array $options
      */
-    public function __construct($location, $user, $password, $wsdl, $options = array())
+    public function __construct($location, $auth, $wsdl, $options = array())
     {
-        $this->user = $user;
-        $this->password = $password;
+        $this->auth = $auth;
 
         $options = array_replace_recursive([
             'httpPlayback' => [
@@ -162,26 +161,24 @@ class NTLMSoapClient extends SoapClient
      */
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
-        $headers = array(
-            'Connection' => 'Keep-Alive',
-            'User-Agent' => 'PHP-SOAP-CURL',
-            'Content-Type' => 'text/xml; charset=utf-8',
-            'SOAPAction' => $action
+        $postOptions = array(
+            'body' => $request,
+            'headers' => array(
+                'Connection' => 'Keep-Alive',
+                'User-Agent' => 'PHP-SOAP-CURL',
+                'Content-Type' => 'text/xml; charset=utf-8',
+                'SOAPAction' => $action
+            ),
+            'verify' => $this->validate,
+            'http_errors' => false
         );
 
-        $client = $this->httpPlayback->getHttpClient();
-        $response = $client->post($location, array(
-            'body' => $request,
-            'headers' => $headers,
-            'verify' => $this->validate,
-            'http_errors' => false,
-            'curl' => [
-                CURLOPT_HTTPAUTH => CURLAUTH_BASIC | CURLAUTH_NTLM,
-                CURLOPT_USERPWD => $this->user.':'.$this->password
-            ]
-        ));
+        $postOptions = array_replace_recursive($postOptions, $this->auth);
 
-        $this->__last_request_headers = $headers;
+        $client = $this->httpPlayback->getHttpClient();
+        $response = $client->post($location, $postOptions);
+
+        $this->__last_request_headers = $postOptions['headers'];
         $this->_responseCode = $response->getStatusCode();
 
         return $response->getBody()->__toString();

@@ -70,8 +70,7 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 
         $client = new NTLMSoapClient(
             'location',
-            'user',
-            'password',
+            API\ExchangeWebServicesAuth::fromUsernameAndPassword('user', 'password'),
             __DIR__ . '/../../../Resources/wsdl/services.wsdl'
         );
 
@@ -87,10 +86,11 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
 
     public function testConstructor()
     {
+        $expectedAuth = API\ExchangeWebServicesAuth::fromUsernameAndPassword('testUser', 'testPassword');
+
         $ntlmClient = new NTLMSoapClient(
             'testLocation',
-            'testUser',
-            'testPassword',
+            API\ExchangeWebServicesAuth::fromUsernameAndPassword('testUser', 'testPassword'),
             __DIR__ . '/../../../Resources/wsdl/services.wsdl',
             array(
                 'version' => 'testVersion',
@@ -99,15 +99,6 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         );
 
         $reflection = new ReflectionClass('\jamesiarmes\PEWS\API\NTLMSoapClient\Exchange');
-
-        $username = $reflection->getProperty('user');
-        $username->setAccessible(true);
-
-        $password = $reflection->getProperty('password');
-        $password->setAccessible(true);
-
-        $this->assertEquals('testUser', $username->getValue($ntlmClient));
-        $this->assertEquals('testPassword', $password->getValue($ntlmClient));
 
         $expected = new SoapHeader(
             'http://schemas.microsoft.com/exchange/services/2006/types',

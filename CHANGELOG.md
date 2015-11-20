@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.3 - 2015-*-*
+ * Extracted the authentication part of the call in to a configuration option for future authentication
+ * Added an `ExchangeWebServicesAuth` class for generating these options
+
 ## 0.6.2 - 2015-11-19
  * Fixed a bug where Guzzle wasn't actually attempting NTLM Authentication. It does now
 

@@ -187,8 +187,7 @@ class ExchangeWebServices
 
         $this->soap = new Exchange(
             $location,
-            $username,
-            $password,
+            ExchangeWebServicesAuth::fromUsernameAndPassword($username, $password),
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
             $options
         );
