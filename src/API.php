@@ -16,6 +16,17 @@ use jamesiarmes\PEWS\Mail\MailAPI;
  */
 class API
 {
+    protected static $defaultClientOptions = array(
+        'version' => ExchangeWebServices::VERSION_2010
+    );
+
+    public function __construct(ExchangeWebServices $client = null)
+    {
+        if ($client) {
+            $this->setClient($client);
+        }
+    }
+
     /**
      * @return Type\EmailAddressType
      */
@@ -145,33 +156,31 @@ class API
         $password,
         $options = [ ]
     ) {
-        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
-
-        $client = ExchangeWebServices::fromUsernameAndPassword($server, $username, $password, $options);
-        $this->setClient($client);
-        return $this;
+        $this->setClient(ExchangeWebServices::fromUsernameAndPassword(
+            $server,
+            $username,
+            $password,
+            array_replace_recursive(self::$defaultClientOptions, $options)
+        ));
     }
 
     public static function withUsernameAndPassword($server, $username, $password, $options = [ ])
     {
-        $self = new static();
-
-        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
-        $client = ExchangeWebServices::fromUsernameAndPassword($server, $username, $password, $options);
-        $self->setClient($client);
-
-        return $self;
+        return new static(ExchangeWebServices::fromUsernameAndPassword(
+            $server,
+            $username,
+            $password,
+            array_replace_recursive(self::$defaultClientOptions, $options)
+        ));
     }
 
     public static function withCallbackToken($server, $token, $options = [ ])
     {
-        $self = new static();
-
-        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
-        $client = ExchangeWebServices::fromCallbackToken($server, $token, $options);
-        $self->setClient($client);
-
-        return $self;
+        return new static(ExchangeWebServices::fromCallbackToken(
+            $server,
+            $token,
+            array_replace_recursive(self::$defaultClientOptions, $options)
+        ));
     }
 
     public function getPrimarySmptEmailAddress()
