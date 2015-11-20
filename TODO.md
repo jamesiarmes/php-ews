@@ -27,8 +27,6 @@
  are in the view or if this requests contains the last item in the list. There's also no easy way to get a list starting
  at an offset. This should be fixed
  * Allow drillDownResponses to be optional. Or at least part of it. There should be a way to get richer responses if desired
- * Allow using this library with Office 365, which means that we need to support auth using a token instead of a username
- and password. It also means we need a way of fetching this token
 
 ### Incorrectly returned values
  * `ItemType::getCategories()` return a `stdClass` with a property `String` which holds the categories, rather than returning them directly

@@ -1,11 +1,11 @@
 # Changelog
 
-## 0.6.3 - 2015-*-*
+## 0.6.3 - 2015-11-20
  * Extracted the authentication part of the call in to a configuration option for future authentication
  * Added an `ExchangeWebServicesAuth` class for generating these options
  * Moved API and ExchangeWebServices constructors to static functions. `$api->buildClient()` will now be deprecated and
  removed in 0.7.0. Please use `$api = API::withUsernameAndPassword($server, $username, $password)` instead
- * Added support for EWS with Callback tokens
+ * Added support for Office 365 with tokens instead of usernames and passwords. This is an experimental feature
 
 ## 0.6.2 - 2015-11-19
  * Fixed a bug where Guzzle wasn't actually attempting NTLM Authentication. It does now
