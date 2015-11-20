@@ -3,6 +3,7 @@
 namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
+use jamesiarmes\PEWS\API\ExchangeWebServicesAuth;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\Calendar\CalendarAPI;
 use jamesiarmes\PEWS\Mail\MailAPI;
@@ -131,6 +132,7 @@ class API
     /**
      * Instantiate and set a client (ExchangeWebServices) based on the parameters given
      *
+     * @deprecated Since 0.6.3
      * @param $server
      * @param $username
      * @param $password
@@ -145,9 +147,31 @@ class API
     ) {
         $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
 
-        $client = new ExchangeWebServices($server, $username, $password, $options);
+        $client = ExchangeWebServices::fromUsernameAndPassword($server, $username, $password, $options);
         $this->setClient($client);
         return $this;
+    }
+
+    public static function withUsernameAndPassword($server, $username, $password, $options = [ ])
+    {
+        $self = new static();
+
+        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
+        $client = ExchangeWebServices::fromUsernameAndPassword($server, $username, $password, $options);
+        $self->setClient($client);
+
+        return $self;
+    }
+
+    public static function withCallbackToken($server, $token, $options = [ ])
+    {
+        $self = new static();
+
+        $options = array_replace_recursive(['version' => ExchangeWebServices::VERSION_2010], $options);
+        $client = ExchangeWebServices::fromCallbackToken($server, $token, $options);
+        $self->setClient($client);
+
+        return $self;
     }
 
     public function getPrimarySmptEmailAddress()

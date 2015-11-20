@@ -165,6 +165,7 @@ class ExchangeWebServices
     /**
      * Constructor for the ExchangeWebServices class
      *
+     * @deprecated Since 0.6.3
      * @param string $server
      * @param string $username
      * @param string $password
@@ -176,6 +177,33 @@ class ExchangeWebServices
         $password = null,
         $options = []
     ) {
+        if ($server !== null) {
+            $this->createClient(
+                $server,
+                ExchangeWebServicesAuth::fromUsernameAndPassword($username, $password),
+                $options
+            );
+        }
+    }
+
+    public static function fromUsernameAndPassword($server, $username, $password, $options)
+    {
+        $self = new static();
+        $self->createClient($server, ExchangeWebServicesAuth::fromUsernameAndPassword($username, $password), $options);
+
+        return $self;
+    }
+
+    public static function fromCallbackToken($server, $token, $options)
+    {
+        $self = new static();
+        $self->createClient($server, ExchangeWebServicesAuth::fromCallbackToken($token), $options);
+
+        return $self;
+    }
+
+    protected function createClient($server, $auth, $options)
+    {
         $location = 'https://' . $this->cleanServerUrl($server) . '/EWS/Exchange.asmx';
 
         $options = array_replace_recursive([
@@ -187,7 +215,7 @@ class ExchangeWebServices
 
         $this->soap = new Exchange(
             $location,
-            ExchangeWebServicesAuth::fromUsernameAndPassword($username, $password),
+            $auth,
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
             $options
         );

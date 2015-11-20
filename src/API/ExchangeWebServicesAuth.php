@@ -13,4 +13,13 @@ class ExchangeWebServicesAuth
             )
         );
     }
+
+    public static function fromCallbackToken($token)
+    {
+        return array(
+            'headers' => array(
+                'Authorization' => 'Bearer ' . $token
+            )
+        );
+    }
 }
