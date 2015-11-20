@@ -6,8 +6,10 @@
 The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.
 
 # Breaking Change
-Please note that version 0.5.0 (Unreleased yet) will have objects auto generated for everything, with different outputs
-for the existing functions. This release is not backwards compatible, but shouldn't be too hard to migrate to.
+Please note that version 0.7.0 (Unreleased yet) will have the `new API()` constructor and `API::buildClient()` function
+removed. Instead, they will be replaced with the currently existing
+`API::withUsernameAndPassword($server, $username, $password)` and `API::withCallbackToken($server, $token)` for Office
+365 authentication
 
 # Dependencies
 * PHP 5.5+
@@ -29,10 +31,10 @@ composer require garethp/php-ews
 The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
 
 ```php
-$ews = new ExchangeWebServices($server, $username, $password, $options = aray());
+$ews = ExchangeWebServices::fromUsernameAndPassword($server, $username, $password, $options = array());
 ```
 
-The `ExchangeWebServices` class takes four parameters for its constructor:
+The `ExchangeWebServices::fromUsernameAndPassword` static constructor takes four parameters:
 
 * `$server`: The url to the exchange server you wish to connect to, without the protocol. Example: mail.example.com. If you have trouble determing the correct url, you could try using the [`EWSAutodiscover`](https://github.com/jamesiarmes/php-ews/wiki/Autodiscovery) class.
 * `$username`: The user to connect to the server with. This is usually the local portion of the users email address. Example: "user" if the email address is "user@example.com".
@@ -92,8 +94,7 @@ to hit live, record the responses, then use those easily. You can even have diff
 them, like this library does. Here's some examples of running the different modes:
 
 ```php
-$client = new API();
-$client->buildClient(
+$client = Api::withUsernameAndPassword(
     'server',
     'user',
     'password',
@@ -111,8 +112,7 @@ $client->buildClient(
 That will then record al lthe responses to the recordings.json file. Likewise, to play back
 
 ```php
-$client = new API();
-$client->buildClient(
+$client = API::withUsernameAndPassword(
     'server',
     'user',
     'password',
