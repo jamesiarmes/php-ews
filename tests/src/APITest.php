@@ -37,8 +37,7 @@ class APITest extends PHPUnit_Framework_TestCase
             $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
         }
 
-        $client = new API();
-        $client->buildClient(
+        $client = API::withUsernameAndPassword(
             $auth['server'],
             $auth['user'],
             $auth['password'],
@@ -93,7 +92,8 @@ class APITest extends PHPUnit_Framework_TestCase
      */
     public function testBuildClient()
     {
-        $client = $this->getClient();
+        $api = new API();
+        $api->buildClient('test.com', 'username', 'password');
 
         //Create our expected item, get our class to build our item, then compare
         $expected = new ExchangeWebServices(
@@ -102,7 +102,35 @@ class APITest extends PHPUnit_Framework_TestCase
             'password',
             ['version' => ExchangeWebServices::VERSION_2010]
         );
-        $client->buildClient('test.com', 'username', 'password');
+        $actual = $api->getClient();
+
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testWithUsernameAndPassword()
+    {
+        //Create our expected item, get our class to build our item, then compare
+        $expected = ExchangeWebServices::fromUsernameAndPassword(
+            'test.com',
+            'username',
+            'password',
+            ['version' => ExchangeWebServices::VERSION_2010]
+        );
+        $client = API::withUsernameAndPassword('test.com', 'username', 'password');
+        $actual = $client->getClient();
+
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testWithCallbackToken()
+    {
+        //Create our expected item, get our class to build our item, then compare
+        $expected = ExchangeWebServices::fromCallbackToken(
+            'test.com',
+            'token',
+            ['version' => ExchangeWebServices::VERSION_2010]
+        );
+        $client = API::withCallbackToken('test.com', 'token');
         $actual = $client->getClient();
 
         $this->assertEquals($expected, $actual);
