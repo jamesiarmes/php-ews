@@ -4,9 +4,9 @@
     "description": "PHP Exchange Web Services",
     "keywords": ["exchange", "php"],
     "homepage": "https://github.com/jamesiarmes/php-ews/wiki",
-    "license": "n.a.",
+    "license": "proprietary",
     "authors": [
-        {"name": "James Iarmes", "email": "jamesiarmes@gmail.com", "homepage": "http://jamesarmes.com"}
+        {"name": "James Iarmes", "email": "jamesiarmes@gmail.com", "homepage": "http://jamesarmes.com"},
         {"name": "GitHub Contributors", "homepage": "https://github.com/jamesiarmes/php-ews/graphs/contributors"}
     ],
     "require": {
