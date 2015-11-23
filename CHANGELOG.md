@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.4 - 2015-11-24
+ * Added an `$options` parameter in `CalendarAPI::createCalendarItems($items, $options)` to allow you to override the
+ default options
+ * Allow you to create `ItemIdType` with only an `$itemId` and not a `$changeKey`
+
 ## 0.6.3 - 2015-11-20
  * Extracted the authentication part of the call in to a configuration option for future authentication
  * Added an `ExchangeWebServicesAuth` class for generating these options

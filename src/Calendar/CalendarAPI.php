@@ -56,9 +56,10 @@ class CalendarAPI extends API
      * Create one or more calendar items
      *
      * @param $items CalendarItemType[]|CalendarItemType|Array or more calendar items to create
+     * @param $options array Options to merge in to the request
      * @return Type\ItemIdType[]
      */
-    public function createCalendarItems($items)
+    public function createCalendarItems($items, $options = array())
     {
         //If the item passed in is an object, or if it's an associative]
         // array waiting to be an object, let's put it in to an array
@@ -67,12 +68,14 @@ class CalendarAPI extends API
         }
 
         $item = array('CalendarItem' => $items);
-        $options = array(
+        $defaultOptions = array(
             'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
             'SavedItemFolderId' => array(
                 'FolderId' => $this->getFolderId()->toXmlObject()
             )
         );
+
+        $options = array_replace_recursive($options, $defaultOptions);
 
         $items = $this->createItems($item, $options);
 
