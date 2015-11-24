@@ -75,7 +75,7 @@ class CalendarAPI extends API
             )
         );
 
-        $options = array_replace_recursive($options, $defaultOptions);
+        $options = array_replace_recursive($defaultOptions, $options);
 
         $items = $this->createItems($item, $options);
 

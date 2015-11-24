@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.5 - 2015-11-25
+ * Fixed a bug in `CalendarAPI::createCalendarItems()` that caused options not to be overridden
+
 ## 0.6.4 - 2015-11-24
  * Added an `$options` parameter in `CalendarAPI::createCalendarItems($items, $options)` to allow you to override the
  default options
