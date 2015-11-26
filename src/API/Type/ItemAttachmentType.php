@@ -81,4 +81,41 @@ class ItemAttachmentType extends AttachmentType
      * @var \jamesiarmes\PEWS\API\Type\PostItemType
      */
     protected $postItem = null;
+
+    public function getItemAttachment()
+    {
+        if ($this->item) {
+            return $this->item;
+        }
+
+        if ($this->message) {
+            return $this->message;
+        }
+
+        if ($this->calendarItem) {
+            return $this->calendarItem;
+        }
+
+        if ($this->meetingMessage) {
+            return $this->meetingMessage;
+        }
+
+        if ($this->meetingResponse) {
+            return $this->meetingResponse;
+        }
+
+        if ($this->meetingRequest) {
+            return $this->meetingRequest;
+        }
+
+        if ($this->task) {
+            return $this->task;
+        }
+
+        if ($this->postItem) {
+            return $this->postItem;
+        }
+
+        return null;
+    }
 }

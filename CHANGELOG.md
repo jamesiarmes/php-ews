@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.6 - 2015-11-*
+ * getAttachment not returns the mimeContent of the attachment, which will allow for saving the file
+ * Added `ItemAttachmentType::getItemAttachment()` which will return whichever item is not null
+
 ## 0.6.5 - 2015-11-25
  * Fixed a bug in `CalendarAPI::createCalendarItems()` that caused options not to be overridden
 
