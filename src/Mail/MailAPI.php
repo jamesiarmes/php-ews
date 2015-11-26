@@ -199,6 +199,9 @@ class MailAPI extends API
         $request = array (
             'AttachmentIds' => array(
                 $attachmentId->toXmlObject()
+            ),
+            'AttachmentShape' => array(
+                'IncludeMimeContent' => true
             )
         );
 
