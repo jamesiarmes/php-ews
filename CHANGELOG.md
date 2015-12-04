@@ -1,8 +1,10 @@
 # Changelog
 
-## 0.6.6 - 2015-11-*
+## 0.6.6 - 2015-12-04
  * getAttachment not returns the mimeContent of the attachment, which will allow for saving the file
  * Added `ItemAttachmentType::getItemAttachment()` which will return whichever item is not null
+ * Field URI's for updating items are now case insensitive and will either return preference:name or item:name or throw
+ and exception
 
 ## 0.6.5 - 2015-11-25
  * Fixed a bug in `CalendarAPI::createCalendarItems()` that caused options not to be overridden

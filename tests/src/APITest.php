@@ -56,11 +56,11 @@ class APITest extends PHPUnit_Framework_TestCase
     {
         $mock = $this->getClient();
 
-        $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject'));
-        $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start'));
-        $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence'));
+        $this->assertEquals('item:Subject', $mock->getFieldURIByName('Subject', 'item'));
+        $this->assertEquals('calendar:Start', $mock->getFieldURIByName('Start', 'calendar'));
+        $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'calendar'));
         $this->assertEquals('task:Recurrence', $mock->getFieldURIByName('Recurrence', 'task'));
-        $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'somePreference'));
+        $this->assertEquals('calendar:Recurrence', $mock->getFieldURIByName('Recurrence', 'calendar'));
         $this->assertFalse($mock->getFieldURIByName('thisShouldntExist'));
     }
 

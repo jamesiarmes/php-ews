@@ -52,20 +52,28 @@ class API
 
         //Loop through all URI's to list them in an array
         foreach ($constants as $constant) {
-            $constantName = explode(":", $constant);
-            $name = array_pop($constantName);
+            $exploded = explode(":", $constant);
+            if (count($exploded) == 1) {
+                $exploded = ['item', $exploded[0]];
+            }
+
+            $name = strtolower($exploded[1]);
+            $category = strtolower($exploded[0]);
 
             if (!isset($constantsFound[$name])) {
                 $constantsFound[$name] = array();
             }
-            $constantsFound[$name][] = $constant;
+            $constantsFound[$name][$category] = $constant;
         }
 
         $this->fieldUris = $constantsFound;
     }
 
-    public function getFieldUriByName($fieldName, $preferance = null)
+    public function getFieldUriByName($fieldName, $preference = 'item')
     {
+        $fieldName = strtolower($fieldName);
+        $preference = strtolower($preference);
+
         if (empty($this->fieldUris)) {
             $this->setupFieldUris();
         }
@@ -74,20 +82,15 @@ class API
             return false;
         }
 
-        $constants = $this->fieldUris[$fieldName];
-
-        if (count($constants) == 1) {
-            return $constants[0];
+        if (!isset($this->fieldUris[$fieldName][$preference])) {
+            $preference = 'item';
         }
 
-        foreach ($constants as $constant) {
-            $parts = explode(":", $constant);
-            if ($parts[0] == $preferance) {
-                return $constant;
-            }
+        if (!isset($this->fieldUris[$fieldName][$preference])) {
+            throw new \Exception("Could not find uri $preference:$fieldName");
         }
 
-        return $this->fieldUris[$fieldName][0];
+        return $this->fieldUris[$fieldName][$preference];
     }
 
     /**
