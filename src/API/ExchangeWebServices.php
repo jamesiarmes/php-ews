@@ -108,6 +108,14 @@ class ExchangeWebServices
     protected $primarySmtpMailbox;
 
     /**
+     * A setting to check whether or not responses should be drilled down before being returned. Setting this to false
+     * will return the raw responses without any filtering
+     *
+     * @var bool
+     */
+    protected $drillDownResponses = true;
+
+    /**
      * @return EmailAddressType
      */
     public function getPrimarySmtpMailbox()
@@ -210,7 +218,8 @@ class ExchangeWebServices
             'version' => self::VERSION_2007,
             'trace' => 1,
             'exceptions' => true,
-            'classmap' => ClassMap::getClassMap()
+            'classmap' => ClassMap::getClassMap(),
+            'drillDownResponses' => true
         ], $options);
 
         $this->soap = new Exchange(
@@ -227,6 +236,8 @@ class ExchangeWebServices
         if (isset($options['impersonation'])) {
             $this->setPrimarySmtpEmailAddress($options['impersonation']);
         }
+
+        $this->drillDownResponses = $options['drillDownResponses'];
     }
 
     /**
@@ -316,6 +327,10 @@ class ExchangeWebServices
             empty($response->getNonNullResponseMessages())
         ) {
             throw new \Exception('No response returned');
+        }
+
+        if (!$this->drillDownResponses) {
+            return $response;
         }
 
         $response = $response->getResponseMessages();

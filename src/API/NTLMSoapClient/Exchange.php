@@ -21,7 +21,7 @@ class Exchange extends NTLMSoapClient
     {
         //If the request passed in is our custom type, let's use the toXmlObject function, since that's what it's built
         //for
-        if ($args[0] instanceof Type) {
+        if (isset($args[0]) && $args[0] instanceof Type) {
             $args[0] = $args[0]->toXmlObject();
         }
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.7 - 2015-12-04
+ * Adding an option to get the raw responses from requests instead of having them drilled down automatically
+
 ## 0.6.6 - 2015-12-04
  * getAttachment not returns the mimeContent of the attachment, which will allow for saving the file
  * Added `ItemAttachmentType::getItemAttachment()` which will return whichever item is not null

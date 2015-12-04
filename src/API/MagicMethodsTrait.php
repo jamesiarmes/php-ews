@@ -51,6 +51,10 @@ trait MagicMethodsTrait
 
     public function get($name)
     {
+        if (!$this->exists($name) && $this->exists("get$name")) {
+            $name = "get$name";
+        }
+
         if (!$this->exists($name) && $this->exists(lcfirst($name))) {
             $name = lcfirst($name);
         }
