@@ -92,7 +92,7 @@ class CalendarAPI extends API
      * @param string|DateTime $start
      * @param string|DateTime $end
      * @param array $options
-     * @return CalendarItemType[]
+     * @return CalendarItemType[]|Type\FindItemParentType
      */
     public function getCalendarItems($start = '12:00 AM', $end = '11:59 PM', $options = array())
     {
@@ -123,14 +123,7 @@ class CalendarAPI extends API
 
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->FindItem($request);
-        $items = $response->getItems()->getCalendarItem();
-        if ($items == null) {
-            return array();
-        }
-
-        if (!is_array($items)) {
-            $items = array($items);
-        }
+        $items = $response;
 
         return $items;
     }

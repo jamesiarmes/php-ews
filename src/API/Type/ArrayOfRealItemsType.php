@@ -44,7 +44,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PostItemType[] getPostItem()
  * @method ArrayOfRealItemsType setPostItem(array $postItem)
  */
-class ArrayOfRealItemsType extends Type
+class ArrayOfRealItemsType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
 {
 
     /**
@@ -101,4 +101,109 @@ class ArrayOfRealItemsType extends Type
      * @var \jamesiarmes\PEWS\API\Type\PostItemType[]
      */
     protected $postItem = null;
+
+    private $itemsArray;
+
+    public function getItems()
+    {
+        if ($this->itemsArray) {
+            return $this->itemsArray;
+        }
+
+        $items = null;
+
+        if ($this->item) {
+            $items = $this->item;
+        }
+
+        if ($this->message) {
+            $items = $this->message;
+        }
+
+        if ($this->calendarItem) {
+            $items = $this->calendarItem;
+        }
+
+        if ($this->contact) {
+            $items = $this->contact;
+        }
+
+        if ($this->distributionList) {
+            $items = $this->distributionList;
+        }
+
+        if ($this->meetingMessage) {
+            $items = $this->meetingMessage;
+        }
+
+        if ($this->meetingRequest) {
+            $items = $this->meetingRequest;
+        }
+
+        if ($this->meetingResponse) {
+            $items = $this->meetingResponse;
+        }
+
+        if ($this->meetingCancellation) {
+            $items = $this->meetingCancellation;
+        }
+
+        if ($this->task) {
+            $items = $this->task;
+        }
+
+        if ($this->postItem) {
+            $items = $this->postItem;
+        }
+
+        if ($items === null) {
+            $items = array();
+        }
+
+        if (!is_array($items)) {
+            $items = array($items);
+        }
+
+        $this->itemsArray = $items;
+        return $this->itemsArray;
+    }
+
+    public function count()
+    {
+        return count($this->getItems());
+    }
+
+    public function offsetExists($offset)
+    {
+        return isset($this->getItems()[$offset]);
+    }
+
+    public function offsetGet($offset)
+    {
+        $this->getItems();
+        return isset($this->itemsArray[$offset]) ? $this->itemsArray[$offset] : null;
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        $this->getItems();
+
+        if (is_null($offset)) {
+            $this->itemsArray[] = $value;
+        } else {
+            $this->itemsArray[$offset] = $value;
+        }
+    }
+
+    public function offsetUnset($offset)
+    {
+        $this->getItems();
+        unset($this->itemsArray[$offset]);
+    }
+
+    public function getIterator()
+    {
+        $this->getItems();
+        return new \ArrayIterator($this->itemsArray);
+    }
 }

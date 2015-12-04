@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 - 2015-12-*
+ * Implemented `ArrayAccess`, `AggregateIterator` and `Countable` on `ArrayOfRealItemsType`, `FindItemParentType` and
+ `GroupedItemsType` to let you iterate over them directly. This should allow you to use responses more effectively and
+ access other data that was previous lost (such as whether or not the responses returned were paginated). This is a breaking
+ change because `getCalendarItems()` now returned a `FindItemParentType` object which, while you can use as an array,
+ will return false on is_array()
+
 ## 0.6.7 - 2015-12-04
  * Adding an option to get the raw responses from requests instead of having them drilled down automatically
 

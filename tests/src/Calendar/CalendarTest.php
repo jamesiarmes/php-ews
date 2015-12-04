@@ -83,7 +83,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $items = $client->getCalendarItems('2015-07-01 00:00', '2015-07-01 23:59');
 
-        $this->assertTrue(is_array($items));
         $this->assertCount(0, $items);
     }
 

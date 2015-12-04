@@ -27,7 +27,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method GroupedItemsType[] getGroups()
  * @method FindItemParentType setGroups(array $groups)
  */
-class FindItemParentType extends Type
+class FindItemParentType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
 {
 
     /**
@@ -64,4 +64,44 @@ class FindItemParentType extends Type
      * @var \jamesiarmes\PEWS\API\Type\GroupedItemsType[]
      */
     protected $groups = null;
+
+    public function count()
+    {
+        return count($this->items);
+    }
+
+    public function offsetExists($offset)
+    {
+        $arrayAccessName = ($this->items != null ? 'items' : 'groups');
+        return isset($this->{$arrayAccessName}[$offset]);
+    }
+
+    public function offsetGet($offset)
+    {
+        $arrayAccessName = ($this->items != null ? 'items' : 'groups');
+        return isset($this->{$arrayAccessName}[$offset]) ? $this->{$arrayAccessName}[$offset] : null;
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        $arrayAccessName = ($this->items != null ? 'items' : 'groups');
+
+        if (is_null($offset)) {
+            array_push($this->{$arrayAccessName}, $value);
+        } else {
+            $this->{$arrayAccessName}[$offset] = $value;
+        }
+    }
+
+    public function offsetUnset($offset)
+    {
+        $arrayAccessName = ($this->items != null ? 'items' : 'groups');
+        unset($this->{$arrayAccessName}[$offset]);
+    }
+
+    public function getIterator()
+    {
+        $arrayAccessName = ($this->items != null ? 'items' : 'groups');
+        return new \ArrayIterator($this->{$arrayAccessName}->getIterator());
+    }
 }
