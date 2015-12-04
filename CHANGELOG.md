@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.7.0 - 2015-12-*
+## 0.7.0 - 2015-12-04
  * Implemented `ArrayAccess`, `AggregateIterator` and `Countable` on `ArrayOfRealItemsType`, `FindItemParentType` and
  `GroupedItemsType` to let you iterate over them directly. This should allow you to use responses more effectively and
  access other data that was previous lost (such as whether or not the responses returned were paginated). This is a breaking
