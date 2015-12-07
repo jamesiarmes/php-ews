@@ -110,58 +110,18 @@ class ArrayOfRealItemsType extends Type implements \Countable, \ArrayAccess, \It
             return $this->itemsArray;
         }
 
-        $items = null;
+        $items = array();
 
-        if ($this->item) {
-            $items = $this->item;
-        }
+        foreach (get_object_vars($this) as $key => $value) {
+            if ($key == "itemsArray" || substr($key, 0, 1) == "_" || $value === null) {
+                continue;
+            }
 
-        if ($this->message) {
-            $items = $this->message;
-        }
+            if (!is_array($value)) {
+                $value = array($value);
+            }
 
-        if ($this->calendarItem) {
-            $items = $this->calendarItem;
-        }
-
-        if ($this->contact) {
-            $items = $this->contact;
-        }
-
-        if ($this->distributionList) {
-            $items = $this->distributionList;
-        }
-
-        if ($this->meetingMessage) {
-            $items = $this->meetingMessage;
-        }
-
-        if ($this->meetingRequest) {
-            $items = $this->meetingRequest;
-        }
-
-        if ($this->meetingResponse) {
-            $items = $this->meetingResponse;
-        }
-
-        if ($this->meetingCancellation) {
-            $items = $this->meetingCancellation;
-        }
-
-        if ($this->task) {
-            $items = $this->task;
-        }
-
-        if ($this->postItem) {
-            $items = $this->postItem;
-        }
-
-        if ($items === null) {
-            $items = array();
-        }
-
-        if (!is_array($items)) {
-            $items = array($items);
+            $items = array_merge($items, $value);
         }
 
         $this->itemsArray = $items;

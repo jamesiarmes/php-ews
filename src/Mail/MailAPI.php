@@ -99,18 +99,7 @@ class MailAPI extends API
         $request = array_replace_recursive($request, $options);
 
         $request = Type::buildFromArray($request);
-        $response = $this->getClient()->FindItem($request);
-        $messages = $response->getItems()->getMessage();
-
-        if ($messages === null) {
-            $messages = array();
-        }
-
-        if (!is_array($messages)) {
-            $messages = array($messages);
-        }
-
-        return $messages;
+        return $this->getClient()->FindItem($request);
     }
 
     /**

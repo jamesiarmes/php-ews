@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.1 - 2015-12-07
+ * `MailAPI::getMailItems()` now returns the `FindItemParentType`, which as of `0.7.0` is iterable.
+
 ## 0.7.0 - 2015-12-04
  * Implemented `ArrayAccess`, `AggregateIterator` and `Countable` on `ArrayOfRealItemsType`, `FindItemParentType` and
  `GroupedItemsType` to let you iterate over them directly. This should allow you to use responses more effectively and
