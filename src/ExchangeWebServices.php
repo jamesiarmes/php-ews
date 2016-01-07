@@ -1189,7 +1189,7 @@ class ExchangeWebServices
     protected function initializeSoapClient()
     {
         $this->soap = new NTLMSoapClient_Exchange(
-            dirname(__FILE__).'/wsdl/services.wsdl',
+            dirname(__DIR__) . '/wsdl/services.wsdl',
             array(
                 'user' => $this->username,
                 'password' => $this->password,

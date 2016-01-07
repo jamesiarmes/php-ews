@@ -1,5 +1,4 @@
 .buildpath
 .project
 .settings/
-tests/
-/nbproject/
+.idea/

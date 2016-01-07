@@ -1,3 +1,9 @@
+# INFO
+
+This is a fork from jamesiarmes/php-ews, adding composer and autoloading support so we can use this package with composer without the need to update existing projects.
+
+> Not reccomended for use in new projects as it is not maintained anymore. ATM of writing this seems to be an actively maintained fork: https://github.com/Garethp/php-ews
+
 # PHP Exchange Web Services
 The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.
 
