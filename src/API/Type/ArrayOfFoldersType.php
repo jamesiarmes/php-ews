@@ -2,6 +2,10 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
+use Countable;
+use ArrayAccess;
+use IteratorAggregate;
+
 use jamesiarmes\PEWS\API\Type;
 
 /**
@@ -26,8 +30,9 @@ use jamesiarmes\PEWS\API\Type;
  * @method TasksFolderType[] getTasksFolder()
  * @method ArrayOfFoldersType setTasksFolder(array $tasksFolder)
  */
-class ArrayOfFoldersType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
+class ArrayOfFoldersType extends Type implements Countable, ArrayAccess, IteratorAggregate
 {
+
     protected $allFolders = null;
 
     /**

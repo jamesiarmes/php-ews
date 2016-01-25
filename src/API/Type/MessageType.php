@@ -10,7 +10,9 @@ namespace jamesiarmes\PEWS\API\Type;
  *
  * @method SingleRecipientType getSender()
  * @method MessageType setSender(SingleRecipientType $sender)
+ * @method MessageType addToRecipients(EmailAddressType $toRecipients)
  * @method EmailAddressType[] getToRecipients()
+ * @method MessageType setToRecipients(array $toRecipients)
  * @method MessageType addCcRecipients(EmailAddressType $ccRecipients)
  * @method EmailAddressType[] getCcRecipients()
  * @method MessageType setCcRecipients(array $ccRecipients)

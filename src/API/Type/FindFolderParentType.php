@@ -2,6 +2,10 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
+use Countable;
+use ArrayAccess;
+use IteratorAggregate;
+
 use jamesiarmes\PEWS\API\Type;
 
 /**
@@ -24,7 +28,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfFoldersType getFolders()
  * @method FindFolderParentType setFolders(ArrayOfFoldersType $folders)
  */
-class FindFolderParentType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
+class FindFolderParentType extends Type implements Countable, ArrayAccess, IteratorAggregate
 {
 
     /**

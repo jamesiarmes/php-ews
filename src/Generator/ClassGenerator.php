@@ -20,8 +20,23 @@ use Doctrine\Common\Inflector\Inflector;
 
 class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
 {
+    public function fixInterfaces(Generator\ClassGenerator $class)
+    {
+        $interfaces = $class->getImplementedInterfaces();
+
+        if (in_array('Traversable', $interfaces) && in_array('IteratorAggregate', $interfaces)) {
+            unset($interfaces[array_search('Traversable', $interfaces)]);
+        }
+
+        $class->setImplementedInterfaces($interfaces);
+
+        return $class;
+    }
+
     public function generate(Generator\ClassGenerator $class, PHPClass $type)
     {
+        $class = $this->fixInterfaces($class);
+
         if (!($extends = $type->getExtends()) && class_exists($type->getNamespace())) {
             $extendNamespace = $type->getNamespace();
             $extendNamespace = explode('\\', $extendNamespace);

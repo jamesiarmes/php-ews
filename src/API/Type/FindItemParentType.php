@@ -2,6 +2,10 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
+use Countable;
+use ArrayAccess;
+use IteratorAggregate;
+
 use jamesiarmes\PEWS\API\Type;
 
 /**
@@ -27,7 +31,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method GroupedItemsType[] getGroups()
  * @method FindItemParentType setGroups(array $groups)
  */
-class FindItemParentType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
+class FindItemParentType extends Type implements Countable, ArrayAccess, IteratorAggregate
 {
 
     /**

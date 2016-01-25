@@ -15,6 +15,7 @@ namespace jamesiarmes\PEWS\API\Type;
  */
 class FolderIdType extends BaseFolderIdType
 {
+
     /**
      * @var string
      */
@@ -30,7 +31,6 @@ class FolderIdType extends BaseFolderIdType
         $this->id = $id;
         $this->changeKey = $changeKey;
     }
-
 
     public function toArray()
     {

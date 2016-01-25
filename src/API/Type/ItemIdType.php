@@ -16,12 +16,6 @@ namespace jamesiarmes\PEWS\API\Type;
 class ItemIdType extends BaseItemIdType
 {
 
-    public function __construct($id, $changeKey = null)
-    {
-        $this->id = $id;
-        $this->changeKey = $changeKey;
-    }
-
     /**
      * @var string
      */
@@ -31,6 +25,12 @@ class ItemIdType extends BaseItemIdType
      * @var string
      */
     protected $changeKey = null;
+
+    public function __construct($id, $changeKey = null)
+    {
+        $this->id = $id;
+        $this->changeKey = $changeKey;
+    }
 
     public function toArray()
     {

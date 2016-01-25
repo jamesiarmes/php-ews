@@ -2,6 +2,10 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
+use Countable;
+use ArrayAccess;
+use IteratorAggregate;
+
 use jamesiarmes\PEWS\API\Type;
 
 /**
@@ -15,7 +19,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method ArrayOfRealItemsType getItems()
  * @method GroupedItemsType setItems(ArrayOfRealItemsType $items)
  */
-class GroupedItemsType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
+class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorAggregate
 {
 
     /**

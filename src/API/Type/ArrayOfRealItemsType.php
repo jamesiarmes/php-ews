@@ -2,6 +2,10 @@
 
 namespace jamesiarmes\PEWS\API\Type;
 
+use Countable;
+use ArrayAccess;
+use IteratorAggregate;
+
 use jamesiarmes\PEWS\API\Type;
 
 /**
@@ -44,7 +48,7 @@ use jamesiarmes\PEWS\API\Type;
  * @method PostItemType[] getPostItem()
  * @method ArrayOfRealItemsType setPostItem(array $postItem)
  */
-class ArrayOfRealItemsType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
+class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, IteratorAggregate
 {
 
     /**
@@ -102,7 +106,7 @@ class ArrayOfRealItemsType extends Type implements \Countable, \ArrayAccess, \It
      */
     protected $postItem = null;
 
-    private $itemsArray;
+    private $itemsArray = null;
 
     public function getItems()
     {

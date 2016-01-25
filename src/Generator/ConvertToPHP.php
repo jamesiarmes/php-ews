@@ -129,18 +129,21 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
 
             $itemClass = $item->getNamespace() . '\\' . $item->getName();
             if (class_exists($itemClass)) {
-                $existingClass = Generator\ClassGenerator::fromReflection(new ClassReflection($itemClass));
-                $classGen = $existingClass;
+                $fileGen = FileGenerator::fromReflectedFileName($path);
+                $fileGen->setFilename($path);
+
+                $classGen = Generator\ClassGenerator::fromReflection(new ClassReflection($itemClass));
             }
 
             if ($generator->generate($classGen, $item)) {
+                $namespace = $classGen->getNamespaceName();
                 $fileGen->setClass($classGen);
 
                 $fileGen->write();
                 $output->writeln("done.");
                 if (isset($item->type) && $item->type->getName() != "") {
                     $classMap[$item->type->getName()] =
-                        '\\' . $classGen->getNamespaceName() . '\\' . $classGen->getName();
+                        '\\' . $namespace . '\\' . $classGen->getName();
                 }
 
             } else {
