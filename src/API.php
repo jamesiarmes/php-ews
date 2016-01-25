@@ -377,12 +377,11 @@ class API
     }
 
     /**
-     * @param $folderName
      * @param string|Type\FolderIdType $parentFolderId
      * @param array $options
      * @return bool|Type\BaseFolderType
      */
-    public function getFolderByDisplayName($folderName, $parentFolderId = 'root', $options = array())
+    public function getChildrenFolders($parentFolderId = 'root', $options = array())
     {
         if (is_string($parentFolderId)) {
             $parentFolderId = $this->getFolderByDistinguishedId($parentFolderId)->getFolderId();
@@ -403,10 +402,21 @@ class API
         $request = Type::buildFromArray($request);
 
         /** @var \jamesiarmes\PEWS\API\Message\FindFolderResponseMessageType $folders */
-        $folders = $this->getClient()->FindFolder($request);
-        $folders = $folders->getFolders();
+        return $this->getClient()->FindFolder($request);
+        return $folders->getFolders();
+    }
 
-        foreach ($folders->getAllFolders() as $folder) {
+    /**
+     * @param $folderName
+     * @param string|Type\FolderIdType $parentFolderId
+     * @param array $options
+     * @return bool|Type\BaseFolderType
+     */
+    public function getFolderByDisplayName($folderName, $parentFolderId = 'root', $options = array())
+    {
+        $folders = $this->getChildrenFolders($parentFolderId, $options);
+
+        foreach ($folders as $folder) {
             if ($folder->getDisplayName() == $folderName) {
                 return $folder;
             }

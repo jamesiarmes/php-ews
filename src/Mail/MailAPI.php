@@ -4,7 +4,6 @@ namespace jamesiarmes\PEWS\Mail;
 
 use jamesiarmes\PEWS\API;
 use jamesiarmes\PEWS\API\Type;
-use \DateTime;
 use jamesiarmes\PEWS\API\Type\MessageType;
 
 class MailAPI extends API

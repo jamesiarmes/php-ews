@@ -26,8 +26,9 @@ use jamesiarmes\PEWS\API\Type;
  * @method TasksFolderType[] getTasksFolder()
  * @method ArrayOfFoldersType setTasksFolder(array $tasksFolder)
  */
-class ArrayOfFoldersType extends Type
+class ArrayOfFoldersType extends Type implements \Countable, \ArrayAccess, \IteratorAggregate
 {
+    protected $allFolders = null;
 
     /**
      * @var \jamesiarmes\PEWS\API\Type\FolderType[]
@@ -56,6 +57,10 @@ class ArrayOfFoldersType extends Type
 
     public function getAllFolders()
     {
+        if ($this->allFolders !== null) {
+            return $this->allFolders;
+        }
+
         $folders = array();
         if ($this->folder !== null) {
             $folders = array_merge($folders, (is_array($this->folder) ? $this->folder : array($this->folder)));
@@ -90,6 +95,46 @@ class ArrayOfFoldersType extends Type
             $folders = array_merge($folders, $this->tasksFolder);
         }
 
-        return $folders;
+        $this->allFolders = $folders;
+        return $this->allFolders;
+    }
+
+    public function count()
+    {
+        return count($this->getAllFolders());
+    }
+
+    public function offsetExists($offset)
+    {
+        return isset($this->getAllFolders()[$offset]);
+    }
+
+    public function offsetGet($offset)
+    {
+        $this->getAllFolders();
+        return isset($this->allFolders[$offset]) ? $this->allFolders[$offset] : null;
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        $this->getAllFolders();
+
+        if (is_null($offset)) {
+            $this->allFolders[] = $value;
+        } else {
+            $this->allFolders[$offset] = $value;
+        }
+    }
+
+    public function offsetUnset($offset)
+    {
+        $this->getAllFolders();
+        unset($this->allFolders[$offset]);
+    }
+
+    public function getIterator()
+    {
+        $this->getAllFolders();
+        return new \ArrayIterator($this->allFolders);
     }
 }
