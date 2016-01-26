@@ -1,10 +1,11 @@
 # Changelog
 
-## 0.7.2 - TBD
+## 0.7.2 - 2016-01-26
  * Added `ContactsAPI` for simple usage
  * Added examples for the ContactsAPI
  * Added `API::getChildrenFolders($parentFolderId, $options)`
  * Made `FindFolderParentType` and `ArrayOfFoldersType` iterable like the previous updates
+ * Added a `CalendarAPI::setFolderId($folderId)` method
 
 ## 0.7.1 - 2015-12-07
  * `MailAPI::getMailItems()` now returns the `FindItemParentType`, which as of `0.7.0` is iterable.
