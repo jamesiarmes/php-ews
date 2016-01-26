@@ -6,7 +6,8 @@
 	},
 	"scripts": {
 		"cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/",
-		"cbf": "./vendor/bin/phpcbf --standard=ruleset.xml -np src/ tests/"
+		"cbf": "./vendor/bin/phpcbf --standard=ruleset.xml -np src/ tests/",
+		"generate": "php bin/generateModels.php && composer cbf"
 	},
 	"autoload": {
 		"psr-4": {

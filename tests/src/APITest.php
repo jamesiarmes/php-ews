@@ -160,6 +160,8 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = $this->getClient();
         $response = $client->createItems($args[0]['Items'], $args[1]);
         $this->assertNotNull($response->getId());
+
+        $client->deleteItems($response, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     public function testDeleteItems()
