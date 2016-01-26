@@ -53,6 +53,17 @@ class CalendarAPI extends API
     }
 
     /**
+     * @param Type\FolderIdType $folderId
+     * @return $this
+     */
+    public function setFolderId($folderId)
+    {
+        $this->folderId = $folderId;
+
+        return $this;
+    }
+
+    /**
      * Create one or more calendar items
      *
      * @param $items CalendarItemType[]|CalendarItemType|Array or more calendar items to create
