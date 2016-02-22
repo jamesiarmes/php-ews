@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.3 - 2016-02-22
+ * If a response doesn't have a 'ResponseMessages' Property (such as `GetUserAvailabilityResponseType`), then don't drill
+ down response levels and instead simply return the response
+
 ## 0.7.2 - 2016-01-26
  * Added `ContactsAPI` for simple usage
  * Added examples for the ContactsAPI

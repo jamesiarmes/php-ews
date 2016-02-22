@@ -333,6 +333,10 @@ class ExchangeWebServices
             return $response;
         }
 
+        if (!$response->exists('responseMessages')) {
+            return $response;
+        }
+
         $response = $response->getResponseMessages();
         $response = $this->drillDownResponseLevels($response);
 
