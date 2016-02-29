@@ -4,6 +4,7 @@ namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\ExchangeWebServicesAuth;
+use jamesiarmes\PEWS\API\Message\SyncFolderItemsResponseMessageType;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\Calendar\CalendarAPI;
 use jamesiarmes\PEWS\Mail\MailAPI;
@@ -452,7 +453,7 @@ class API
      * @param Type\FolderIdType $folderId
      * @param null $syncState
      * @param array $options
-     * @return mixed
+     * @return SyncFolderItemsResponseMessageType
      */
     public function listItemChanges($folderId, $syncState = null, $options = array())
     {

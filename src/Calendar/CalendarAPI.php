@@ -66,7 +66,7 @@ class CalendarAPI extends API
     /**
      * Create one or more calendar items
      *
-     * @param $items CalendarItemType[]|CalendarItemType|Array or more calendar items to create
+     * @param $items CalendarItemType[]|CalendarItemType|array or more calendar items to create
      * @param $options array Options to merge in to the request
      * @return Type\ItemIdType[]
      */
@@ -210,7 +210,7 @@ class CalendarAPI extends API
      *
      * @param null $syncState
      * @param array $options
-     * @return mixed
+     * @return API\Message\SyncFolderItemsResponseMessageType
      */
     public function listChanges($syncState = null, $options = array())
     {

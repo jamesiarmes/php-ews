@@ -68,6 +68,23 @@ class NTLMSoapClient extends SoapClient
     protected $_responseCode;
 
     /**
+     * An array of headers for us to store or use. Since not all requests use all headers (DeleteItem and SyncItems
+     * don't allow you to pass a Timezone for example), we need to be able to smartly decide what headers to include
+     * and exclude from a request. Until we have propper selection (an array of all known operations and what headers
+     * are allowed for example), this seems like a decent solution for storing the headers before we decide if they
+     * belong in the request or not)
+     *
+     * @var array
+     */
+    protected $ewsHeaders = array(
+        'version' => null,
+        'impersonation' => null,
+        'timezone' => null
+    );
+
+    protected $auth;
+
+    /**
      * @TODO: Make this smarter. It should know and search what headers to remove on what actions
      *
      * @param string $name
@@ -76,17 +93,18 @@ class NTLMSoapClient extends SoapClient
      */
     public function __call($name, $args)
     {
-        if (($name == "DeleteItem" || $name == "SyncFolderItems") && isset($this->__default_headers[1])) {
-            $header = $this->__default_headers[1];
-            unset($this->__default_headers[1]);
+        $this->__default_headers = array (
+            $this->ewsHeaders['version'],
+            $this->ewsHeaders['impersonation']
+        );
 
-            $return = parent::__call($name, $args);
-            $this->__default_headers[1] = $header;
-
-            return $return;
+        if ($name != "DeleteItem" && $name != "SyncFolderItems") {
+            $this->__default_headers[] = $this->ewsHeaders['timezone'];
         }
 
-        return parent::__call($name, $args);
+        $response = parent::__call($name, $args);
+        $this->__default_headers = [];
+        return $response;
     }
 
     /**
@@ -110,7 +128,7 @@ class NTLMSoapClient extends SoapClient
 
         // If a version was set then add it to the headers.
         if (!empty($options['version'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->ewsHeaders['version'] = new SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'RequestServerVersion Version="' . $options['version'] . '"'
             );
@@ -123,7 +141,7 @@ class NTLMSoapClient extends SoapClient
                 $impersonation = ExchangeImpersonation::fromEmailAddress($options['impersonation']);
             }
 
-            $this->__default_headers[] = new SoapHeader(
+            $this->ewsHeaders['impersonation'] = new SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
                 $impersonation->toXmlObject()
@@ -131,7 +149,7 @@ class NTLMSoapClient extends SoapClient
         }
 
         if (!empty($options['timezone'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->ewsHeaders['timezone'] = new SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'TimeZoneContext',
                 array(
@@ -180,7 +198,7 @@ class NTLMSoapClient extends SoapClient
 
         $this->__last_request_headers = $postOptions['headers'];
         $this->_responseCode = $response->getStatusCode();
-
+        
         return $response->getBody()->__toString();
     }
 

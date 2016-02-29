@@ -82,35 +82,4 @@ class NTLMSoapClientTest extends PHPUnit_Framework_TestCase
         $client->validateCertificate(false);
         $this->assertFalse($prop->getValue($client));
     }
-
-
-    public function testConstructor()
-    {
-        $expectedAuth = API\ExchangeWebServicesAuth::fromUsernameAndPassword('testUser', 'testPassword');
-
-        $ntlmClient = new NTLMSoapClient(
-            'testLocation',
-            API\ExchangeWebServicesAuth::fromUsernameAndPassword('testUser', 'testPassword'),
-            __DIR__ . '/../../../Resources/wsdl/services.wsdl',
-            array(
-                'version' => 'testVersion',
-                'impersonation' => 'testImpersonation'
-            )
-        );
-
-        $reflection = new ReflectionClass('\jamesiarmes\PEWS\API\NTLMSoapClient\Exchange');
-
-        $expected = new SoapHeader(
-            'http://schemas.microsoft.com/exchange/services/2006/types',
-            'RequestServerVersion Version="testVersion"'
-        );
-        $this->assertEquals($expected, $ntlmClient->__default_headers[0]);
-
-        $expected = new SoapHeader(
-            'http://schemas.microsoft.com/exchange/services/2006/types',
-            'ExchangeImpersonation',
-            API\Type\ExchangeImpersonation::fromEmailAddress('testImpersonation')->toXmlObject()
-        );
-        $this->assertEquals($expected, $ntlmClient->__default_headers[1]);
-    }
 }
