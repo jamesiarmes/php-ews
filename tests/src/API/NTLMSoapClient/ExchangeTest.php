@@ -10,14 +10,6 @@ use SoapHeader;
 
 class ExchangeTest extends PHPUnit_Framework_TestCase
 {
-    public function getMock()
-    {
-        $mock = Mockery::mock('jamesiarmes\PEWS\API\NTLMSoapClient\Exchange')
-            ->shouldDeferMissing();
-
-        return $mock;
-    }
-
     public function testDummy()
     {
         $this->assertTrue(true);
