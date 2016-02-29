@@ -284,6 +284,19 @@ class API
         return true;
     }
 
+    public function deleteFolder(Type\FolderIdType $folderId, $options = array())
+    {
+        $request = array(
+            'DeleteType' => 'HardDelete',
+            'FolderIds' => array(
+                'FolderId' => $folderId->toArray()
+            )
+        );
+
+        $request = array_merge_recursive($request, $options);
+        return $this->client->DeleteFolder($request);
+    }
+
     public function moveItem(Type\ItemIdType $itemId, Type\FolderIdType $folderId, $options = array())
     {
         $request = array(

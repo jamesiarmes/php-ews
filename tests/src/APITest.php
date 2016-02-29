@@ -26,7 +26,7 @@ class APITest extends PHPUnit_Framework_TestCase
         if ($mode == false) {
             $mode = 'record';
         }
-
+        
         $auth = [
             'server' => 'server',
             'user' => 'user',
@@ -50,6 +50,48 @@ class APITest extends PHPUnit_Framework_TestCase
         );
 
         return $client;
+    }
+
+    public function testPrimarySmtpAddress()
+    {
+        $client = $this->getClient();
+        $originalPrimarySmtp = $client->getPrimarySmptEmailAddress();
+        $this->assertNull($originalPrimarySmtp);
+
+        $client->setPrimarySmtpEmailAddress('gareth@true.nl');
+        $this->assertEquals('gareth@true.nl', $client->getPrimarySmptEmailAddress());
+        $this->assertEquals('gareth@true.nl', $client->getPrimarySmtpMailbox()->getEmailAddress());
+    }
+
+    public function testCreateFolders()
+    {
+        $client = $this->getClient();
+
+        $parentFolder = $client->getFolderByDistinguishedId('inbox');
+        $testCreateFolder = $client->getFolderByDisplayName('Test Create Folder', $parentFolder->getFolderId());
+
+        $this->assertFalse($testCreateFolder);
+
+        $client->createFolders('Test Create Folder', $parentFolder->getFolderId());
+        $testCreateFolder = $client->getFolderByDisplayName('Test Create Folder', $parentFolder->getFolderId());
+        $this->assertNotFalse($testCreateFolder);
+
+        $client->deleteFolder($testCreateFolder->getFolderId());
+    }
+
+    public function testDeleteFolder()
+    {
+        $client = $this->getClient();
+
+        $parentFolder = $client->getFolderByDistinguishedId('inbox');
+        $client->createFolders('Test Create Folder', $parentFolder->getFolderId());
+        $testCreateFolder = $client->getFolderByDisplayName('Test Create Folder', $parentFolder->getFolderId());
+        $this->assertNotFalse($testCreateFolder);
+
+        $client->deleteFolder($testCreateFolder->getFolderId());
+
+        $testCreateFolder = $client->getFolderByDisplayName('Test Create Folder', $parentFolder->getFolderId());
+        $this->assertFalse($testCreateFolder);
     }
 
     public function testGetFieldURIByName()
@@ -134,6 +176,40 @@ class APITest extends PHPUnit_Framework_TestCase
         $actual = $client->getClient();
 
         $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * Test that getItems get's the correct items and accepts either an array of ItemId object
+     */
+    public function testGetItems()
+    {
+        $start = new \DateTime();
+
+        //This is the arguments that we will pass in, and check against
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Get Items',
+                        'Start' => $start->format('c')
+                    )
+                ),
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE
+            ),
+            array('SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE)
+        );
+
+        $client = $this->getClient();
+        $response = $client->createItems($args[0]['Items'], $args[1]);
+        $this->assertNotNull($response->getId());
+
+        $item = $client->getItem(['Id' => $response->getId(), 'ChangeKey' => $response->getChangeKey()]);
+        $this->assertEquals('Test Get Items', $item->getSubject());
+
+        $item = $client->getItem($response);
+        $this->assertEquals('Test Get Items', $item->getSubject());
+
+        $client->deleteItems($response, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
@@ -227,20 +303,57 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $folder->getDisplayName());
     }
 
+    public function testGetFolderByDisplayNameFail()
+    {
+        $client = $this->getClient();
+        $folder = $client->getFolderByDisplayName('Something made up that shouldnt exist');
+
+        $this->assertFalse($folder);
+    }
+
     /**
-     * Test that the syncFolderItems() function passes the correct arguments to it's client
+     * Test that the syncFolderItems() function passes the correct arguments to it's client.
      *
      * @dataProvider listChangesProvider
-     * @param $input
+     * @param $folderInput
      */
     public function testListItemChanges($folderInput)
     {
+
         $client = $this->getClient();
         $folder = call_user_func_array(array($client, 'getFolderByDisplayname'), $folderInput);
 
-        $response = call_user_func_array(array($client, 'listItemChanges'), array($folder->getFolderId()));
-        $this->assertNotNull($response->getSyncState());
-        $this->assertNotNull($response->getChanges());
+        //Create a calendar item in our folder to have a change to test again
+        $start = new \DateTime();
+        $args = array(
+            array(
+                'Items' => array(
+                    'CalendarItem' => array(
+                        'Subject' => 'Test Sync Item Changes',
+                        'Start' => $start->format('c')
+                    )
+                )
+            ),
+            array(
+                'SendMeetingInvitations' => Enumeration\CalendarItemCreateOrDeleteOperationType::SEND_TO_NONE,
+                'SavedItemFolderId' => array('FolderId' => $folder->getFolderId())
+            )
+        );
+
+        $item = $client->createItems($args[0]['Items'], $args[1]);
+
+        $changes = $client->listItemChanges($folder->getFolderId());
+        $this->assertNotNull($changes->getSyncState());
+        $this->assertNotNull($changes->getChanges());
+
+        $moreChanges = $client->listItemChanges($folder->getFolderId(), $changes->getSyncState());
+        $this->assertNotNull($moreChanges->getSyncState());
+        $this->assertNotNull($moreChanges->getChanges());
+
+        $this->assertNotEquals($changes->getSyncState(), $moreChanges->getSyncState());
+        $this->assertNotEquals($changes->getChanges(), $moreChanges->getChanges());
+
+        $client->deleteItems($item, ['SendMeetingCancellations' => 'SendToNone']);
     }
 
     /**
