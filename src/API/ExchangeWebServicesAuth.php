@@ -25,12 +25,18 @@ class ExchangeWebServicesAuth
         );
     }
 
-    public static function getTokenFromAuthorizationCode($clientId, $clientSecret, $authorizationCode, $redirectUri)
-    {
+    public static function getTokenFromAuthorizationCode(
+        $clientId,
+        $clientSecret,
+        $authorizationCode,
+        $redirectUri,
+        $tokenEndPoint = 'https://login.microsoftonline.com/common/oauth2/token'
+    ) {
         $postOptions = array(
             'http_errors' => false,
             'form_params' => array(
                 'client_id' => $clientId,
+                'resource' => 'https://outlook.office365.com',
                 'client_secret' => $clientSecret,
                 'code' => $authorizationCode,
                 'redirect_uri' => $redirectUri,
@@ -38,13 +44,12 @@ class ExchangeWebServicesAuth
             )
         );
 
-        $url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
-
         $client = new Client();
-        $response = $client->request('POST', $url, $postOptions);
+        $response = $client->request('POST', $tokenEndPoint, $postOptions);
         $response = $response->getBody()->__toString();
 
         $response = json_decode($response);
+
         return $response->access_token;
     }
 }

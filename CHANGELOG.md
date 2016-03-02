@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.4 - 2016-03-02
+ * Introduced the `API::deleteFolder($folderId)` method
+ * Improved OAuth Documentation
+
 ## 0.7.3 - 2016-02-22
  * If a response doesn't have a 'ResponseMessages' Property (such as `GetUserAvailabilityResponseType`), then don't drill
  down response levels and instead simply return the response
