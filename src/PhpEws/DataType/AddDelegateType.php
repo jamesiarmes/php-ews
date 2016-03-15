@@ -22,4 +22,11 @@ class AddDelegateType extends DataType
      * @var DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
+    
+    /**
+     * Mailbox property
+     *
+     * @var EmailAddressType
+     */
+    public $Mailbox;
 }
