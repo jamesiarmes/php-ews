@@ -5,7 +5,6 @@
 
 namespace jamesiarmes\PEWS\API;
 
-use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
 use jamesiarmes\PEWS\API\Message;
 use jamesiarmes\PEWS\API\Type\EmailAddressType;
 
@@ -222,7 +221,7 @@ class ExchangeWebServices
             'drillDownResponses' => true
         ], $options);
 
-        $this->soap = new Exchange(
+        $this->soap = new NTLMSoapClient(
             $location,
             $auth,
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
@@ -258,7 +257,7 @@ class ExchangeWebServices
     /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
-     * @return Exchange
+     * @return NTLMSoapClient
      */
     public function getClient()
     {
@@ -268,7 +267,7 @@ class ExchangeWebServices
     /**
      * Sets the client
      *
-     * @param Exchange $client
+     * @param NTLMSoapClient $client
      * @return $this
      */
     public function setClient($client)

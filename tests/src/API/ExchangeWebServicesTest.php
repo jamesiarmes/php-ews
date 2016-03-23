@@ -11,10 +11,10 @@ namespace jamesiarmes\PEWS\Test\API;
 use jamesiarmes\PEWS\API\ClassMap;
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\ExchangeWebServicesAuth;
+use jamesiarmes\PEWS\API\NTLMSoapClient;
 use jamesiarmes\PEWS\API\Type;
 use Mockery;
 use PHPUnit_Framework_TestCase;
-use jamesiarmes\PEWS\API\NTLMSoapClient\Exchange;
 
 class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 {
@@ -67,7 +67,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
             'version' => 'testVersion'
         ]);
 
-        $expected = new Exchange(
+        $expected = new NTLMSoapClient(
             'https://testServer/EWS/Exchange.asmx',
             ExchangeWebServicesAuth::fromUsernameAndPassword('testUsername', 'testPassword'),
             dirname(__FILE__).'/../../../Resources/wsdl/services.wsdl',
