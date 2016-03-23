@@ -104,7 +104,7 @@ class NTLMSoapClient extends SoapClient
             $this->ewsHeaders['impersonation']
         );
 
-        if ($name != "DeleteItem" && $name != "SyncFolderItems") {
+        if ($name != "DeleteItem" && $name != "SyncFolderItems" && $name != "GetServerTimeZones") {
             $this->__default_headers[] = $this->ewsHeaders['timezone'];
         }
 

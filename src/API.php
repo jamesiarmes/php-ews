@@ -3,7 +3,7 @@
 namespace jamesiarmes\PEWS;
 
 use jamesiarmes\PEWS\API\ExchangeWebServices;
-use jamesiarmes\PEWS\API\ExchangeWebServicesAuth;
+use jamesiarmes\PEWS\API\Message\GetServerTimeZonesType;
 use jamesiarmes\PEWS\API\Message\SyncFolderItemsResponseMessageType;
 use jamesiarmes\PEWS\API\Type;
 use jamesiarmes\PEWS\Calendar\CalendarAPI;
@@ -487,5 +487,25 @@ class API
         $request = Type::buildFromArray($request);
         $response = $this->getClient()->SyncFolderItems($request);
         return $response;
+    }
+
+    public function getServerTimezones($timezoneIDs = array(), $fullTimezoneData = false)
+    {
+        $request = GetServerTimeZonesType::buildFromArray(array(
+            'returnFullTimeZoneData' => $fullTimezoneData
+        ));
+
+        if (!empty($timezoneIDs)) {
+            $request->setIds($timezoneIDs);
+        }
+
+        $timezones = $this->getClient()->GetServerTimeZones($request);
+        $timezones = $timezones->TimeZoneDefinition;
+
+        if (!is_array($timezones)) {
+            $timezones = array($timezones);
+        }
+
+        return $timezones;
     }
 }
