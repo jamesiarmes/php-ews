@@ -26,9 +26,9 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
      */
     public function __construct($wsdl, $options)
     {
-        // Verify that a user name and password were entered.
-        if (empty($options['user']) || empty($options['password'])) {
-            throw new EWS_Exception('A username and password is required.');
+        // Verify that an access token was entered
+        if (empty($options['access_token'])) {
+            throw new EWS_Exception('An access token is required.');
         }
 
         // Set the access token properties.
