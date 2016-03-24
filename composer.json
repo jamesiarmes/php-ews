@@ -1,0 +1,15 @@
+{
+    "name": "barracudanetworks/php-ews",
+    "description": "PHP Exchange Web Services",
+    "type": "library",
+    "require": {
+        "ext-curl": "*"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Zach Stuart",
+            "email": "zstuart@barracuda.com"
+        }
+    ]
+}

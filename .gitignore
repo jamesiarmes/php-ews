@@ -3,3 +3,7 @@
 .settings/
 tests/
 /nbproject/
+
+# Composer
+/vendor/
+composer.lock
