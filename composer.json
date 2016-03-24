@@ -11,5 +11,8 @@
             "name": "Zach Stuart",
             "email": "zstuart@barracuda.com"
         }
-    ]
+    ],
+    "autoload": {
+        "classmap": ["."]
+    }
 }
