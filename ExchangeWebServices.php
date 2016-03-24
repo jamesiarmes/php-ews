@@ -60,6 +60,20 @@ class ExchangeWebServices
     const VERSION_2010_SP2 = 'Exchange2010_SP2';
 
     /**
+     * NTLM Authorization
+     *
+     * @var string
+     */
+    const NTLM_AUTH = 'NTLM_Auth';
+
+    /**
+     * OAuth Authorization
+     *
+     * @var string
+     */
+    const OAUTH_AUTH = 'OAuth_Auth';
+
+    /**
      * Password to use when connecting to the Exchange server.
      *
      * @var string
@@ -76,7 +90,7 @@ class ExchangeWebServices
     /**
      * SOAP client used to make the request
      *
-     * @var NTLMSoapClient_Exchange
+     * @var NTLMSoapClient_Exchange or OAuthSoapClient_Exchange
      */
     protected $soap;
 
@@ -93,6 +107,20 @@ class ExchangeWebServices
      * @var EWSType_ExchangeImpersonationType
      */
     protected $impersonation;
+
+    /**
+     * Method of authorization for access to exchange, either NTLM or OAuth
+     *
+     * @var string
+     */
+    protected $auth_method;
+
+    /**
+     * Access token when using OAuth Authentication
+     *
+     * @var string
+     */
+    protected $access_token;
 
     /**
      * Miscrosoft Exchange version that we are going to connect to
@@ -113,28 +141,58 @@ class ExchangeWebServices
      * @param string $username
      * @param string $password
      * @param string $version one of the ExchangeWebServices::VERSION_* constants
+     * @param string $auth_method The method used to authorize exchange
+     * @param string $access_token The access token
      */
     public function __construct(
         $server = null,
         $username = null,
         $password = null,
-        $version = self::VERSION_2007
+        $version = self::VERSION_2007,
+        $auth_method = self::NTLM_AUTH,
+        $access_token = null
     ) {
         // Set the object properties.
         $this->setServer($server);
         $this->setUsername($username);
         $this->setPassword($password);
         $this->setVersion($version);
+        $this->setAuthMethod($auth_method);
+        $this->setAccessToken($access_token);
     }
 
     /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
-     * @return NTLMSoapClient_Exchange
+     * @return NTLMSoapClient_Exchange or OAuthSoapClient_Exchange
      */
     public function getClient()
     {
         return $this->initializeSoapClient();
+    }
+
+     /**
+     * Sets the authorizing method.
+     *
+     * @param string $auth_method The method to use for authorization, either NTLM or OAuth
+     */
+    public function setAuthMethod($auth_method)
+    {
+        $this->auth_method = $auth_method;
+
+        return true;
+    }
+
+    /**
+     * Sets the access token. This is needed for OAuth authorization.
+     *
+     * @param string $access_token The access token to use
+     */
+    public function setAccessToken($access_token)
+    {
+        $this->access_token = $access_token;
+
+        return true;
     }
 
     /**
@@ -1184,20 +1242,36 @@ class ExchangeWebServices
     /**
      * Initializes the SoapClient object to make a request
      *
-     * @return NTLMSoapClient_Exchange
+     * @return NTLMSoapClient_Exchange or OAuthSoapClient_Exchange
      */
     protected function initializeSoapClient()
     {
-        $this->soap = new NTLMSoapClient_Exchange(
-            dirname(__FILE__).'/wsdl/services.wsdl',
-            array(
-                'user' => $this->username,
-                'password' => $this->password,
-                'version' => $this->version,
-                'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
-                'impersonation' => $this->impersonation,
-            )
-        );
+        switch ($this->auth_method)
+        {
+            case self::NTLM_AUTH:
+                $this->soap = new NTLMSoapClient_Exchange(
+                    dirname(__FILE__).'/wsdl/services.wsdl',
+                    array(
+                        'user' => $this->username,
+                        'password' => $this->password,
+                        'version' => $this->version,
+                        'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+                        'impersonation' => $this->impersonation,
+                    )
+                );
+                break;
+            case self::OAUTH_AUTH:
+                $this->soap = new OAuthSoapClient_Exchange(
+                    dirname(__FILE__).'/wsdl/services.wsdl',
+                    array(
+                        'access_token' => $this->access_token,
+                        'version' => $this->version,
+                        'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+                        'impersonation' => $this->impersonation,
+                    )
+                );
+                break;
+        }
 
         return $this->soap;
     }
