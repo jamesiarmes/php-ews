@@ -3,6 +3,7 @@
 ## 0.7.5 - TBD
  * Removed `NTLMSoapClient\Exchange`. Folded the few lines of functionality in to `NTLMSoapClient`
  * Added `API::getServerTimezones($timezoneIDs = array(), $fullTimezoneData = false)`
+ * Added `CalendarAPI::acceptMeeting($itemId, $message, $sensitivity = 'Private', $options = array()`
 
 ## 0.7.4 - 2016-03-02
  * Introduced the `API::deleteFolder($folderId)` method

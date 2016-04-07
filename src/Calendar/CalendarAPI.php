@@ -216,4 +216,24 @@ class CalendarAPI extends API
     {
         return parent::listItemChanges($this->getFolderId(), $syncState, $options);
     }
+
+    /**
+     * @param Type\ItemIdType $itemId
+     * @param string $message
+     * @param string $sensitivity
+     * @param array $options
+     *
+     * @return Type\ItemIdType[]
+     */
+    public function acceptMeeting($itemId, $message, $sensitivity = 'Private', $options = array())
+    {
+        $acceptItem = array(
+            'Sensitivity' => $sensitivity,
+            'Body' => $message,
+            'ReferenceItemId' => $itemId->toArray()
+        );
+
+        $acceptItem = array('AcceptItem' => array(array_replace_recursive($acceptItem, $options)));
+        return $this->createItems($acceptItem);
+    }
 }
