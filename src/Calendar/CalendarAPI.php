@@ -234,6 +234,6 @@ class CalendarAPI extends API
         );
 
         $acceptItem = array('AcceptItem' => array(array_replace_recursive($acceptItem, $options)));
-        return $this->createItems($acceptItem);
+        return $this->createItems($acceptItem, array('MessageDisposition'=>'SendOnly'));
     }
 }

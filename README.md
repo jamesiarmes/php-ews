@@ -21,6 +21,9 @@ Require the composer package and use away
 composer require garethp/php-ews
 ```
 
+# Upcoming Backwards Compatibility Breaking Change
+As of version `0.8`, the namespace of all classes will change from `jamesiarmes\PEWS` to `garethp\ews`
+
 # Usage
 The library can be used to make several different request types. In order to make a request, you need to instantiate a new `ExchangeWebServices` object:
 
