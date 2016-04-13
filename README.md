@@ -98,7 +98,7 @@ $client = Api::withUsernameAndPassword(
     [
         'httpPlayback' => [
             'mode' => 'record',
-            'recordLocation' => __ROOT__ . DS . /recordings.json'
+            'recordLocation' => __ROOT__ . DS . '/recordings.json'
         ]
     ]
 );
@@ -116,7 +116,7 @@ $client = API::withUsernameAndPassword(
     [
         'httpPlayback' => [
             'mode' => 'playback',
-            'recordLocation' => __ROOT__ . DS . /recordings.json'
+            'recordLocation' => __ROOT__ . DS . '/recordings.json'
         ]
     ]
 );
