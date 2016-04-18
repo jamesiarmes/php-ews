@@ -2,6 +2,8 @@
 
 namespace jamesiarmes\PEWS;
 
+use jamesiarmes\PEWS\API\Enumeration\DictionaryURIType;
+use jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType;
 use jamesiarmes\PEWS\API\ExchangeWebServices;
 use jamesiarmes\PEWS\API\Message\GetServerTimeZonesType;
 use jamesiarmes\PEWS\API\Message\SyncFolderItemsResponseMessageType;
@@ -36,7 +38,8 @@ class API
         return $this->getClient()->getPrimarySmtpMailbox();
     }
 
-    private $fieldUris = array();
+    private $unIndexedFieldUris = array();
+    private $dictionaryFieldUris = array();
 
     /**
      * Storing the API client
@@ -44,10 +47,14 @@ class API
      */
     private $client;
 
-    public function setupFieldUris()
+    /**
+     * @param $className
+     * @return array
+     */
+    public function getFieldUrisFromClass($className)
     {
         //So, since we have to pass in URI's of everything we update, we need to fetch them
-        $reflection = new \ReflectionClass('jamesiarmes\PEWS\API\Enumeration\UnindexedFieldURIType');
+        $reflection = new \ReflectionClass($className);
         $constants = $reflection->getConstants();
         $constantsFound = array();
 
@@ -67,7 +74,16 @@ class API
             $constantsFound[$name][$category] = $constant;
         }
 
-        $this->fieldUris = $constantsFound;
+        return $constantsFound;
+    }
+
+    public function setupFieldUris()
+    {
+        $this->unIndexedFieldUris = $this
+            ->getFieldUrisFromClass(UnindexedFieldURIType::class);
+
+        $this->dictionaryFieldUris = $this
+            ->getFieldUrisFromClass(DictionaryURIType::class);
     }
 
     public function getFieldUriByName($fieldName, $preference = 'item')
@@ -75,23 +91,47 @@ class API
         $fieldName = strtolower($fieldName);
         $preference = strtolower($preference);
 
-        if (empty($this->fieldUris)) {
+        if (empty($this->unIndexedFieldUris)) {
             $this->setupFieldUris();
         }
 
-        if (!isset($this->fieldUris[$fieldName])) {
+        if (!isset($this->unIndexedFieldUris[$fieldName])) {
             return false;
         }
 
-        if (!isset($this->fieldUris[$fieldName][$preference])) {
+        if (!isset($this->unIndexedFieldUris[$fieldName][$preference])) {
             $preference = 'item';
         }
 
-        if (!isset($this->fieldUris[$fieldName][$preference])) {
+        if (!isset($this->unIndexedFieldUris[$fieldName][$preference])) {
             throw new \Exception("Could not find uri $preference:$fieldName");
         }
 
-        return $this->fieldUris[$fieldName][$preference];
+        return $this->unIndexedFieldUris[$fieldName][$preference];
+    }
+
+    public function getIndexedFieldUriByName($fieldName, $preference = 'item')
+    {
+        $fieldName = strtolower($fieldName);
+        $preference = strtolower($preference);
+
+        if (empty($this->dictionaryFieldUris)) {
+            $this->setupFieldUris();
+        }
+
+        if (!isset($this->dictionaryFieldUris[$fieldName])) {
+            return false;
+        }
+
+        if (!isset($this->dictionaryFieldUris[$fieldName][$preference])) {
+            $preference = 'item';
+        }
+
+        if (!isset($this->dictionaryFieldUris[$fieldName][$preference])) {
+            throw new \Exception("Could not find uri $preference:$fieldName");
+        }
+
+        return $this->dictionaryFieldUris[$fieldName][$preference];
     }
 
     /**
@@ -249,6 +289,23 @@ class API
 
         //Add each property to a setItemField
         foreach ($changes as $key => $value) {
+            if (strpos($key, ':') !== false) {
+                try {
+                    $fieldUri = $this->getIndexedFieldUriByName(substr($key, 0, strpos($key, ':')), $uriType);
+
+                    list ($key, $index) = explode(':', $key);
+                    $fieldKey = key($value);
+                    $value = $value[$fieldKey];
+
+                    $setItemFields[] = array(
+                        'IndexedFieldURI' => array('FieldURI' => $fieldUri, 'FieldIndex' => $index),
+                        $itemType => array($fieldKey => $value)
+                    );
+                    continue;
+                } catch (\Exception $e) {
+                }
+            }
+
             $fullName = $this->getFieldUriByName($key, $uriType);
 
             $setItemFields[] = array(

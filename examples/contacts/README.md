@@ -5,3 +5,6 @@ Please note that you can do much more if you query against the SOAP client direc
 that have been made simpler
 
  * [Get a list of contacts](listContacts.php)
+ * [Create a contact](createContacts.php)
+ * [Update a contact](updateContact.php)
+ * [Delete a contact](deleteContact.php)

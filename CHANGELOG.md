@@ -4,6 +4,9 @@
  * Removed `NTLMSoapClient\Exchange`. Folded the few lines of functionality in to `NTLMSoapClient`
  * Added `API::getServerTimezones($timezoneIDs = array(), $fullTimezoneData = false)`
  * Added `CalendarAPI::acceptMeeting($itemId, $message, $sensitivity = 'Private', $options = array()`
+ * Added `ContactsAPI::createContacts($contact, $options=array())`
+ * Added `ContactsAPI::updateContactItem($itemId, $changes)`
+ * Added some contact examples
 
 ## 0.7.4 - 2016-03-02
  * Introduced the `API::deleteFolder($folderId)` method
