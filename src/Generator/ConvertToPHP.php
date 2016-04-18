@@ -145,10 +145,8 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
                     $classMap[$item->type->getName()] =
                         '\\' . $namespace . '\\' . $classGen->getName();
                 }
-
             } else {
                 $output->write("skip.");
-
             }
         }
 
