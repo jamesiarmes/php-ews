@@ -1,9 +1,10 @@
 # Changelog
 
-## 0.7.5 - TBD
+## 0.7.5 - 2016-04-18
  * Removed `NTLMSoapClient\Exchange`. Folded the few lines of functionality in to `NTLMSoapClient`
  * Added `API::getServerTimezones($timezoneIDs = array(), $fullTimezoneData = false)`
  * Added `CalendarAPI::acceptMeeting($itemId, $message, $sensitivity = 'Private', $options = array()`
+ * Added `CalendarAPI::declineMeeting($itemId, $message, $sensitivity = 'Private', $options = array()`
  * Added `ContactsAPI::createContacts($contact, $options=array())`
  * Added `ContactsAPI::updateContactItem($itemId, $changes)`
  * Added some contact examples

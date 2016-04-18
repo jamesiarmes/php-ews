@@ -227,13 +227,50 @@ class CalendarAPI extends API
      */
     public function acceptMeeting($itemId, $message, $sensitivity = 'Private', $options = array())
     {
-        $acceptItem = array(
-            'Sensitivity' => $sensitivity,
-            'Body' => $message,
-            'ReferenceItemId' => $itemId->toArray()
+        $request = array(
+            'AcceptItem' => array(
+                'Sensitivity' => $sensitivity,
+                'Body' => array('BodyType' => 'HTML', '_value' => $message),
+                'ReferenceItemId' => $itemId->toArray()
+            )
         );
 
-        $acceptItem = array('AcceptItem' => array(array_replace_recursive($acceptItem, $options)));
-        return $this->createItems($acceptItem, array('MessageDisposition'=>'SendOnly'));
+        $defaultOptions = array('MessageDisposition' => 'SendOnly');
+        $options = array_replace_recursive($defaultOptions, $options);
+
+        $return = $this->createItems($request, $options)->getCalendarItem();
+        if (!is_array($request)) {
+            $return = array($return);
+        }
+
+        return $return;
+    }
+
+    /**
+     * @param $itemId
+     * @param $message
+     * @param string $sensitivity
+     * @param array $options
+     * @return Type\ItemIdType[]
+     */
+    public function declineMeeting($itemId, $message, $sensitivity = 'Private', $options = array())
+    {
+        $request = array(
+            'DeclineItem' => array(
+                'Sensitivity' => $sensitivity,
+                'Body' => array('BodyType' => 'HTML', '_value' => $message),
+                'ReferenceItemId' => $itemId->toArray()
+            )
+        );
+
+        $defaultOptions = array('MessageDisposition' => 'SendOnly');
+        $options = array_replace_recursive($defaultOptions, $options);
+
+        $return = $this->createItems($request, $options)->getCalendarItem();
+        if (!is_array($request)) {
+            $return = array($return);
+        }
+
+        return $return;
     }
 }

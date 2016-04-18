@@ -12,10 +12,7 @@
 
 ### Test Coverage
  * Increase to at least 90%
-
-### Compatibility
- * Think about swapping out Guzzle to reduce PHP version requirement to 5.4
-
+ 
 ### Code Generation
  * Modify generator to include the SOAP functions as Doc Blocks on ExchangeWebServices class
 
