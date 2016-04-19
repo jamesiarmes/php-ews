@@ -9,5 +9,8 @@ $api->createContacts(array (
     'Surname' => 'Smith',
     'EmailAddresses' => array(
         'Entry' => array('Key' => 'EmailAddress1', '_value' => 'john.smith@gmail.com')
+    ),
+    'PhoneNumbers' => array(
+        'Entry' => array('Key' => 'HomePhone', '_value' => '000')
     )
 ));

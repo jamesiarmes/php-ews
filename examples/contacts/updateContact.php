@@ -12,12 +12,19 @@ $contact = $api->getContacts();
 
 //However, we know that we want to update an email address, but the actual field we need to update is "EmailAddresses",
 //hence why instead of a simple $key => $value array, we have this multi-dimensional array. They value of
-//"EmailAddress:key" need to have the same structure as when we created the value
+//"EmailAddress:key" need to have the same structure as when we created the value.
+
+//Phone numbers have to be updated in the same manner
 $api->updateContactItem($contact[0]->getItemId(), array(
     'GivenName' => 'Jane',
     'EmailAddress:EmailAddress1' => array (
         'EmailAddresses' => array (
             'Entry' => array('Key' => 'EmailAddress1', '_value' => 'jane.smith@gmail.com')
+        )
+    ),
+    'PhoneNumber:HomePhone' => array (
+        'PhoneNumbers' => array (
+            'Entry' => array('Key' => 'HomePhone', '_value' => '111')
         )
     )
 ));
