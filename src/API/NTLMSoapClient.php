@@ -84,6 +84,13 @@ class NTLMSoapClient extends SoapClient
 
     protected $auth;
 
+    protected $callsWithoutTimezone = array(
+        'DeleteItem',
+        'SyncFolderItems',
+        'GetServerTimeZones',
+        'ConvertId'
+    );
+
     /**
      * @TODO: Make this smarter. It should know and search what headers to remove on what actions
      *
@@ -104,7 +111,7 @@ class NTLMSoapClient extends SoapClient
             $this->ewsHeaders['impersonation']
         );
 
-        if ($name != "DeleteItem" && $name != "SyncFolderItems" && $name != "GetServerTimeZones") {
+        if (!in_array($name, $this->callsWithoutTimezone)) {
             $this->__default_headers[] = $this->ewsHeaders['timezone'];
         }
 

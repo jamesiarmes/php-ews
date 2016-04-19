@@ -565,4 +565,30 @@ class API
 
         return $timezones;
     }
+
+    /**
+     * @param Type\ItemIdType $itemId
+     * @param $fromType
+     * @param $destinationType
+     * @param $mailbox
+     *
+     * @return Type\ItemIdType
+     */
+    public function convertIdFormat(Type\ItemIdType $itemId, $fromType, $destinationType, $mailbox)
+    {
+        $result = $this->getClient()->ConvertId(array(
+            'DestinationFormat' => $destinationType,
+            'SourceIds' => array (
+                'AlternateId' => array(
+                    'Format' => $fromType,
+                    'Id' => $itemId->getId(),
+                    'Mailbox' => $mailbox
+                )
+            )
+        ));
+
+        $itemId->setId($result->getId());
+
+        return $itemId;
+    }
 }

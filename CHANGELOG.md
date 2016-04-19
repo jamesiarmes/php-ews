@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.6 - 2016-04-19
+ * Added a `API::convertIdFormat($itemId, $oldFormat, $destinationFormat, $mailbox)` function
+
 ## 0.7.5 - 2016-04-18
  * Removed `NTLMSoapClient\Exchange`. Folded the few lines of functionality in to `NTLMSoapClient`
  * Added `API::getServerTimezones($timezoneIDs = array(), $fullTimezoneData = false)`
