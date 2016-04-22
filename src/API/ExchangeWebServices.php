@@ -245,7 +245,7 @@ class ExchangeWebServices
      * @param $name
      * @param $arguments
      * @return Type
-     * @throws Exception
+     * @throws \jamesiarmes\PEWS\API\Exception
      */
     public function __call($name, $arguments)
     {
@@ -311,21 +311,20 @@ class ExchangeWebServices
      *
      * @param \jamesiarmes\PEWS\API\Message\BaseResponseMessageType $response
      * @return \jamesiarmes\PEWS\API\Message\ArrayOfResponseMessageType|\jamesiarmes\PEWS\API\Message\ResponseMessageType
-     * @throws Exception
-     * @throws \Exception
+     * @throws \jamesiarmes\PEWS\API\Exception
      */
     protected function processResponse($response)
     {
         // If the soap call failed then we need to thow an exception.
         $code = $this->getClient()->getResponseCode();
         if ($code != 200) {
-            throw new Exception('SOAP client returned status of ' . $code, $code);
+            throw new \jamesiarmes\PEWS\API\Exception('SOAP client returned status of ' . $code, $code);
         }
 
         if (empty($response) ||
             empty($response->getNonNullResponseMessages())
         ) {
-            throw new \Exception('No response returned');
+            throw new \jamesiarmes\PEWS\API\Exception('No response returned');
         }
 
         if (!$this->drillDownResponses) {
@@ -345,7 +344,7 @@ class ExchangeWebServices
     /**
      * @param $response
      * @return array
-     * @throws \Exception
+     * @throws \jamesiarmes\PEWS\API\Exception
      */
     public function drillDownResponseLevels($response)
     {
@@ -358,7 +357,7 @@ class ExchangeWebServices
 
         if ($response instanceof Message\ResponseMessageType) {
             if ($response->getResponseClass() !== "Success") {
-                throw new \Exception($response->getMessageText());
+                throw new \jamesiarmes\PEWS\API\Exception($response->getMessageText());
             }
 
             unset($items['responseClass']);
