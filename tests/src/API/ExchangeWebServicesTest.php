@@ -60,28 +60,7 @@ class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
 
         $response = $client->processResponse($input);
     }
-
-    public function testClientInitialisation()
-    {
-        $client = new ExchangeWebServices('testServer', 'testUsername', 'testPassword', [
-            'version' => 'testVersion'
-        ]);
-
-        $expected = new NTLMSoapClient(
-            'https://testServer/EWS/Exchange.asmx',
-            ExchangeWebServicesAuth::fromUsernameAndPassword('testUsername', 'testPassword'),
-            dirname(__FILE__).'/../../../Resources/wsdl/services.wsdl',
-            array(
-                'version' => 'testVersion',
-                'impersonation' => null,
-                'trace' => 1,
-                'exceptions' => true,
-                'classmap' => ClassMap::getClassMap()
-            )
-        );
-        $this->assertEquals($expected, $client->getClient());
-    }
-
+    
     public function testPrimarySmtpMailbox()
     {
         $client = $this->getClientMock();

@@ -26,7 +26,7 @@ class APITest extends PHPUnit_Framework_TestCase
         if ($mode == false) {
             $mode = 'record';
         }
-        
+
         $auth = [
             'server' => 'server',
             'user' => 'user',
@@ -129,26 +129,6 @@ class APITest extends PHPUnit_Framework_TestCase
         $this->assertEquals('test', $client->getClient());
     }
 
-    /**
-     * Test that building the client works
-     */
-    public function testBuildClient()
-    {
-        $api = new API();
-        $api->buildClient('test.com', 'username', 'password');
-
-        //Create our expected item, get our class to build our item, then compare
-        $expected = new ExchangeWebServices(
-            'test.com',
-            'username',
-            'password',
-            ['version' => ExchangeWebServices::VERSION_2010]
-        );
-        $actual = $api->getClient();
-
-        $this->assertEquals($expected, $actual);
-    }
-
     public function testWithUsernameAndPassword()
     {
         //Create our expected item, get our class to build our item, then compare
@@ -161,7 +141,14 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = API::withUsernameAndPassword('test.com', 'username', 'password');
         $actual = $client->getClient();
 
-        $this->assertEquals($expected, $actual);
+        $ntlmSoapReflection = new \ReflectionClass(API\NTLMSoapClient::class);
+        $reflectedProp = $ntlmSoapReflection->getProperty('auth');
+        $reflectedProp->setAccessible(true);
+
+        $this->assertEquals(
+            $reflectedProp->getValue($expected->getClient()),
+            $reflectedProp->getValue($actual->getClient())
+        );
     }
 
     public function testWithCallbackToken()
@@ -175,7 +162,14 @@ class APITest extends PHPUnit_Framework_TestCase
         $client = API::withCallbackToken('test.com', 'token');
         $actual = $client->getClient();
 
-        $this->assertEquals($expected, $actual);
+        $ntlmSoapReflection = new \ReflectionClass(API\NTLMSoapClient::class);
+        $reflectedProp = $ntlmSoapReflection->getProperty('auth');
+        $reflectedProp->setAccessible(true);
+
+        $this->assertEquals(
+            $reflectedProp->getValue($expected->getClient()),
+            $reflectedProp->getValue($actual->getClient())
+        );
     }
 
     /**
