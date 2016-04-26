@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.7/phpunit.xsd"
+        bootstrap="tests/bootstrap.php">
+    <php>
+        <env name="HttpPlayback" value="record" />
+    </php>
+    <testsuites>
+        <testsuite name="PHP EWS Test Suite">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory>Type</directory>
+                <directory>Enumeration</directory>
+            </exclude>
+        </whitelist>
+        <blacklist>
+            <directory>tests</directory>
+            <directory>vendor</directory>
+            <directory>src/Type</directory>
+            <directory>src/Enumeration</directory>
+        </blacklist>
+    </filter>
+</phpunit>
