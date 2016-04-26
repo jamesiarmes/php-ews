@@ -52,7 +52,10 @@ class NtlmSoapClient extends \SoapClient
         );
 
         $this->__last_request_headers = $headers;
-        $this->ch = curl_init($location);
+        // Only reinitialize curl handle if the location is different
+        if(!$this->ch || curl_getinfo($this->ch, CURLINFO_EFFECTIVE_URL) != $location) {
+            $this->ch = curl_init($location);
+        } 
 
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
