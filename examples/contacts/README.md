@@ -8,3 +8,4 @@ that have been made simpler
  * [Create a contact](createContacts.php)
  * [Update a contact](updateContact.php)
  * [Delete a contact](deleteContact.php)
+ * [Upload a contact Photo](uploadContactPhoto.php)
