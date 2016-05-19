@@ -21,10 +21,12 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
     /**
      * Constructor
      *
-     * @param string $wsdl
-     * @param array $options
+     * @param string $wsdl        Location of wsdl.
+     * @param array $options      SOAP call options
+     * @param bool $write_to_file Whether to write curl output to disk.
+     * @throws \EWS_Exception
      */
-    public function __construct($wsdl, $options)
+    public function __construct($wsdl, $options, $write_to_file = false)
     {
         // Verify that an access token was entered
         if (empty($options['access_token'])) {
@@ -51,6 +53,8 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
             );
         }
 
+        $this->write_to_file = $write_to_file;
+
         parent::__construct($wsdl, $options);
     }
 
@@ -62,5 +66,15 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
     public function getResponseCode()
     {
         return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
+    }
+
+    /**
+     * Close the curl resource handler.
+     *
+     * @return void
+     */
+    public function closeConnection()
+    {
+        curl_close($this->ch);
     }
 }
