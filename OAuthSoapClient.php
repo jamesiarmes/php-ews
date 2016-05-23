@@ -88,7 +88,14 @@ class OAuthSoapClient extends SoapClient
 
         if ($this->write_to_file)
         {
-            $file_path = '/tmp/transfer_xml_' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
+	    $next_five_minute_window = '/tmp/transfer_output/' . date('Y_m_d_H_i_s', ceil(time() / 300) * 300);
+
+	    if (!file_exists($next_file_minute_window))
+	    {
+		mkdir($next_five_minute_window);
+	    }
+
+	    $file_path = $next_five_minute_window . '/' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
             $file_handler = fopen($file_path, 'w');
             $error_path = $file_path . '_error';
             $file_error_handler = fopen($error_path, 'w');

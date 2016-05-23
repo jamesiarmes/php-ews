@@ -1427,7 +1427,9 @@ class ExchangeWebServices
             throw new EWS_Exception(
                 'XML Parse Error'
             );
-        }
+	}
+
+	unlink($response);
 
         return $xml->Envelope->Body->{$property_offset};
     }
