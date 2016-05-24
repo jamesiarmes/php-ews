@@ -12,11 +12,25 @@
 class OAuthSoapClient_Exchange extends OAuthSoapClient
 {
     /**
-     * Access toekn for authentication on the exchnage server
+     * Access token for authentication on the exchnage server
      *
      * @var string
      */
     protected $access_token;
+
+    /**
+     * Soap output path
+     *
+     * @var string
+     */
+    protected $file_output;
+
+    /**
+     * If writing soap response to a file shoudl occur
+     *
+     * @var bool
+     */
+    protected $write_to_file;
 
     /**
      * Constructor
@@ -26,7 +40,7 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
      * @param bool $write_to_file Whether to write curl output to disk.
      * @throws \EWS_Exception
      */
-    public function __construct($wsdl, $options, $write_to_file = false)
+    public function __construct($wsdl, $options, $file_output, $write_to_file = false)
     {
         // Verify that an access token was entered
         if (empty($options['access_token'])) {
@@ -53,6 +67,10 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
             );
         }
 
+        // set the file output
+        $this->file_output = $file_output;
+
+        // set the write to file flag
         $this->write_to_file = $write_to_file;
 
         parent::__construct($wsdl, $options);

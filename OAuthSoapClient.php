@@ -81,21 +81,21 @@ class OAuthSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($this->ch, CURLOPT_POST, true );
+        curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
 
         if ($this->write_to_file)
         {
-	    $next_five_minute_window = '/tmp/transfer_output/' . date('Y_m_d_H_i_s', ceil(time() / 300) * 300);
+            $next_five_minute_window = $this->file_output . '/' . date('Y_m_d_H_i', ceil(time() / 300) * 300);
 
-	    if (!file_exists($next_file_minute_window))
-	    {
-		mkdir($next_five_minute_window);
-	    }
+            if (!file_exists($next_five_minute_window))
+            {
+                mkdir($next_five_minute_window);
+            }
 
-	    $file_path = $next_five_minute_window . '/' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
+            $file_path = $next_five_minute_window . '/' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
             $file_handler = fopen($file_path, 'w');
             $error_path = $file_path . '_error';
             $file_error_handler = fopen($error_path, 'w');
@@ -112,10 +112,10 @@ class OAuthSoapClient extends SoapClient
 
             curl_exec($this->ch);
 
-            $error_response = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', file_get_contents($error_path));
-
             fclose($file_handler);
             fclose($file_error_handler);
+
+            $error_response = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', file_get_contents($error_path));
 
             $file_stat = stat($file_path);
 
@@ -127,26 +127,28 @@ class OAuthSoapClient extends SoapClient
         else
         {
             $xml = curl_exec($this->ch);
-            $error_response = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $xml);
+            $xml = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $xml);
         }
 
-        if (curl_getinfo(CURLINFO_SIZE_DOWNLOAD) === 0)
+        if (curl_getinfo($this->ch, CURLINFO_SIZE_DOWNLOAD) === 0)
         {
             $error_response = 'Empty Response';
+        }
+
+        // clean up error files
+        if (isset($error_path) && file_exists($error_path))
+        {
+            unlink($error_path);
         }
 
         // TODO: Add some real error handling.
         // If the response if false than there was an error and we should throw
         // an exception.
-        if (!empty($error_response)) {
+        if (!empty($error_response) || $xml === false) {
             throw new EWS_Exception(
                 'Curl error: ' . curl_error($this->ch),
                 curl_errno($this->ch)
             );
-        }
-        elseif (isset($error_path))
-        {
-            unlink($error_path);
         }
 
         return $xml;

@@ -19,7 +19,7 @@ class ExchangeWebServices
     /**
      * @var callable Where to output binary content.
      */
-    protected $cache_name_callback;
+    protected $cache_name_callback = array();
 
     /**
      * Microsoft Exchange 2007
@@ -148,6 +148,13 @@ class ExchangeWebServices
     protected $xml_parser;
 
     /**
+     * A directory to output to for curl.
+     *
+     * @var string
+     */
+    protected $file_output;
+
+    /**
      * Constructor for the ExchangeWebServices class
      *
      * @param string $server
@@ -156,7 +163,8 @@ class ExchangeWebServices
      * @param string $version one of the ExchangeWebServices::VERSION_* constants
      * @param string $auth_method The method used to authorize exchange
      * @param string $access_token The access token
-     * @param bool $write_to_file Whether to write curl response to file.
+     * @param bool   $write_to_file Whether to write curl response to file.
+     * @param string $file_output The file location to output calls to.
      * @param callable $cache_name_callback Path to write binary cache files.
      */
     public function __construct(
@@ -167,6 +175,7 @@ class ExchangeWebServices
         $auth_method = self::NTLM_AUTH,
         $access_token = null,
         $write_to_file = false,
+        $file_output = '/tmp/transfer_output',
         callable $cache_name_callback = null
     ) {
         // Set the object properties.
@@ -177,11 +186,27 @@ class ExchangeWebServices
         $this->setAuthMethod($auth_method);
         $this->setAccessToken($access_token);
         $this->setWriteToFile($write_to_file);
+        $this->file_output = $file_output;
+
+        // set up dir if writing to file is occuring
+        if ($write_to_file && !file_exists($this->file_output))
+        {
+            mkdir($this->file_output, 0777);
+        }
 
         if (is_callable($cache_name_callback))
         {
             $this->setCacheNameCallback($cache_name_callback);
         }
+    }
+
+    /**
+     * @param string $method
+     * @param mixed  $arg
+     */
+    public function __call($method, $args)
+    {
+        call_user_func_array([$this, $method], $args);
     }
 
     /**
@@ -191,7 +216,7 @@ class ExchangeWebServices
      */
     public function setCacheNameCallback(callable $cache_name_callback)
     {
-        $this->cache_name_callback = $cache_name_callback;
+        $this->cache_name_callback[] = $cache_name_callback;
     }
 
     /**
@@ -1370,6 +1395,7 @@ class ExchangeWebServices
                         'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
                         'impersonation' => $this->impersonation,
                     ),
+                    $this->file_output,
                     $this->write_to_file
                 );
                 break;
@@ -1405,7 +1431,7 @@ class ExchangeWebServices
         else
         {
             $this->xml_parser = new XMLReader();
-            $this->xml_parser->open($response);
+            $this->xml_parser->open($response, null, LIBXML_PARSEHUGE);
         }
 
         $xml = $this->parseFullXML();
@@ -1427,9 +1453,9 @@ class ExchangeWebServices
             throw new EWS_Exception(
                 'XML Parse Error'
             );
-	}
+    }
 
-	unlink($response);
+    unlink($response);
 
         return $xml->Envelope->Body->{$property_offset};
     }
@@ -1451,6 +1477,7 @@ class ExchangeWebServices
             }
 
             $name = $this->xml_parser->localName;
+
 
             if ($this->xml_parser->nodeType == XMLReader::ELEMENT && !$this->xml_parser->isEmptyElement)
             {
@@ -1552,9 +1579,9 @@ class ExchangeWebServices
             }
         }
 
-        if (isset($assoc->MimeContent) && isset($assoc->ItemId->Id) && is_callable($this->cache_name_callback))
+        if (isset($assoc->MimeContent) && isset($assoc->ItemId->Id) && is_callable($this->cache_name_callback[0]))
         {
-            $file_path = $this->cache_name_callback(basename(str_replace('/', '', $assoc->ItemId->Id)));
+            $file_path = $this->cache_name_callback[0](basename(str_replace('/', '', $assoc->ItemId->Id)));
             $cache_handle = fopen($file_path, 'w');
             fwrite($cache_handle, base64_decode($assoc->MimeContent));
             fclose($cache_handle);
