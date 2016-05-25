@@ -79,7 +79,6 @@ class OAuthSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_TIMEOUT, 300);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
-        curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
@@ -97,11 +96,8 @@ class OAuthSoapClient extends SoapClient
 
             $file_path = $next_five_minute_window . '/' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
             $file_handler = fopen($file_path, 'w');
-            $error_path = $file_path . '_error';
-            $file_error_handler = fopen($error_path, 'w');
 
             curl_setopt($this->ch, CURLOPT_FILE, $file_handler);
-            curl_setopt($this->ch, CURLOPT_STDERR, $file_error_handler);
 
             self::$last_path = $file_path;
 
@@ -110,41 +106,33 @@ class OAuthSoapClient extends SoapClient
                 . $file_path .
                 '</path></s:Body></s:Envelope>';
 
-            curl_exec($this->ch);
+            $result = curl_exec($this->ch);
 
             fclose($file_handler);
-            fclose($file_error_handler);
 
-            $error_response = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', file_get_contents($error_path));
-
-            $file_stat = stat($file_path);
-
-            if (!$file_stat || $file_stat['size'] === 0)
+            // check the code and return the proper XML if an issue occured
+            $code = $this->getResponseCode();
+            if ($code != 200)
             {
-                $error_response = 'Empty Response';
+                $xml = file_get_contents($file_path);
             }
         }
         else
         {
-            $xml = curl_exec($this->ch);
-            $xml = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $xml);
-        }
+            curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($this->ch);
 
-        if (curl_getinfo($this->ch, CURLINFO_SIZE_DOWNLOAD) === 0)
-        {
-            $error_response = 'Empty Response';
-        }
-
-        // clean up error files
-        if (isset($error_path) && file_exists($error_path))
-        {
-            unlink($error_path);
+            if ($result)
+            {
+                $xml = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $result);
+            }
         }
 
         // TODO: Add some real error handling.
         // If the response if false than there was an error and we should throw
         // an exception.
-        if (!empty($error_response) || $xml === false) {
+        if ($result === false)
+        {
             throw new EWS_Exception(
                 'Curl error: ' . curl_error($this->ch),
                 curl_errno($this->ch)

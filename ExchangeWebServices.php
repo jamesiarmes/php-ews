@@ -1418,11 +1418,12 @@ class ExchangeWebServices
     {
         // If the soap call failed then we need to thow an exception.
         $code = $this->soap->getResponseCode();
-        $this->soap->closeConnection();
-
-        if ($code != 200) {
+        if ($code != 200)
+        {
             throw new EWS_Exception('SOAP client returned status of ' . $code, $code);
         }
+
+        $this->soap->closeConnection();
 
         if (!$this->write_to_file)
         {
@@ -1453,9 +1454,9 @@ class ExchangeWebServices
             throw new EWS_Exception(
                 'XML Parse Error'
             );
-    }
+        }
 
-    unlink($response);
+        unlink($response);
 
         return $xml->Envelope->Body->{$property_offset};
     }
