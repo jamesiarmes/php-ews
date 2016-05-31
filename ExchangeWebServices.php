@@ -1436,6 +1436,7 @@ class ExchangeWebServices
         }
 
         $xml = $this->parseFullXML();
+        unlink($response);
 
         gc_collect_cycles();
 
@@ -1455,8 +1456,6 @@ class ExchangeWebServices
                 'XML Parse Error'
             );
         }
-
-        unlink($response);
 
         return $xml->Envelope->Body->{$property_offset};
     }
@@ -1506,13 +1505,18 @@ class ExchangeWebServices
 
                         if (!isset($assoc->{$name}))
                         {
-                            $assoc->{$name} = new stdClass;
+                            $assoc->{$name} = new \stdClass;
                         }
 
                         if (is_array($assoc->{$name}))
                         {
                             if (isset($assoc->{$name}[count($assoc->{$name}) - 1]) && !isset($assoc->{$name}[count($assoc->{$name}) - 1]->{$attribute_name}))
                             {
+                                if (!is_object($assoc->{$name}[count($assoc->{$name}) - 1]))
+                                {
+                                    $assoc->{$name}[count($assoc->{$name}) - 1] = new \stdClass;
+                                }
+
                                 $assoc->{$name}[count($assoc->{$name}) - 1]->{$attribute_name} = $this->xml_parser->value;
                             }
                             else
