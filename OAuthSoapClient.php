@@ -33,6 +33,11 @@ class OAuthSoapClient extends SoapClient
 {
     public static $last_path;
 
+    /**
+     * The file handler (if one exists) to use for writing curl response to disk
+     */
+    protected $file_handler;
+
     protected $write_to_file;
     /**
      * cURL resource used to make the SOAP request
@@ -95,9 +100,9 @@ class OAuthSoapClient extends SoapClient
             }
 
             $file_path = $next_five_minute_window . '/' . md5($action . $this->access_token . time() . getmypid() . rand(0, getmypid())) . '.' . getmypid();
-            $file_handler = fopen($file_path, 'w');
+            $this->file_handler = fopen($file_path, 'w');
 
-            curl_setopt($this->ch, CURLOPT_FILE, $file_handler);
+            curl_setopt($this->ch, CURLOPT_WRITEFUNCTION, array($this, 'curlWriteFunction'));
 
             self::$last_path = $file_path;
 
@@ -108,7 +113,7 @@ class OAuthSoapClient extends SoapClient
 
             $result = curl_exec($this->ch);
 
-            fclose($file_handler);
+            fclose($this->file_handler);
 
             // check the code and return the proper XML if an issue occured
             $code = $this->getResponseCode();
@@ -140,6 +145,27 @@ class OAuthSoapClient extends SoapClient
         }
 
         return $xml;
+    }
+
+    /**
+     * Callback for curl write function. This is used to sanitize invalid input received from microsoft.
+     *
+     * @param resource $curl_handle The curl handle.
+     * @param string   $data        The data received from the curl.
+     * @return int     $length      The number of bytes received/processed by the curl.
+     */
+    public function curlWriteFunction($curl_handle, $data)
+    {
+        // keep the expected length around for the return to avoid curl errors
+        $length = strlen($data);
+
+        // sanitize the data
+        $sanitized_data = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $data);
+
+        // write the data to the file handler
+        fwrite($this->file_handler, $sanitized_data);
+
+        return $length;
     }
 
     public function __call($function_name, $arguments)
