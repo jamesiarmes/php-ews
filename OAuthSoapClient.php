@@ -31,7 +31,11 @@
  */
 class OAuthSoapClient extends SoapClient
 {
+    /** @var String location for file on disk where downloaded content will be stored. */
     public static $last_path;
+
+    /** @var  String the last 5 characters sliced off to prepend onto the next curl frame. */
+    protected $last_segment = null;
 
     /**
      * The file handler (if one exists) to use for writing curl response to disk
@@ -69,6 +73,8 @@ class OAuthSoapClient extends SoapClient
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
         self::$last_path = null;
+        $this->last_segment = null;
+
         $headers = array(
             'Method: POST',
             'Connection: Keep-Alive',
@@ -112,6 +118,11 @@ class OAuthSoapClient extends SoapClient
                 '</path></s:Body></s:Envelope>';
 
             $result = curl_exec($this->ch);
+
+            if (!is_null($this->last_segment))
+            {
+                fwrite($this->file_handler, $this->last_segment);
+            }
 
             fclose($this->file_handler);
 
@@ -159,11 +170,18 @@ class OAuthSoapClient extends SoapClient
         // keep the expected length around for the return to avoid curl errors
         $length = strlen($data);
 
+        if (!is_null($this->last_segment))
+        {
+            $data = $this->last_segment . $data;
+        }
+
         // sanitize the data
         $sanitized_data = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $data);
 
         // write the data to the file handler
         fwrite($this->file_handler, $sanitized_data);
+
+        $this->last_segment = substr($sanitized_data, -5);
 
         return $length;
     }
