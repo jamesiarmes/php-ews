@@ -170,7 +170,7 @@ class OAuthSoapClient extends SoapClient
         // keep the expected length around for the return to avoid curl errors
         $length = strlen($data);
 
-        if (!is_null($this->last_segment))
+        if ($this->last_segment !== null)
         {
             $data = $this->last_segment . $data;
         }
@@ -178,10 +178,11 @@ class OAuthSoapClient extends SoapClient
         // sanitize the data
         $sanitized_data = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $data);
 
-        // write the data to the file handler
-        fwrite($this->file_handler, $sanitized_data);
-
+        // store the last segment of the data
         $this->last_segment = substr($sanitized_data, -5);
+
+        // write the data to the file handler without the last segment
+        fwrite($this->file_handler, substr($sanitized_data, 0, -5));
 
         return $length;
     }
