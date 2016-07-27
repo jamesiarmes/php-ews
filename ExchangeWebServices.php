@@ -228,6 +228,14 @@ class ExchangeWebServices
     }
 
     /**
+     * @return bool
+     */
+    public function getWriteToFile()
+    {
+        return $this->write_to_file;
+    }
+
+    /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
      * @return NTLMSoapClient_Exchange or OAuthSoapClient_Exchange
