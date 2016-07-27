@@ -202,8 +202,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\AddDelegateType $request
-     *
+     * @param \jamesiarmes\PhpEws\Request\AddDelegateType $request
      * @return \jamesiarmes\PhpEws\Type\AddDelegateResponseMessageType
      */
     public function AddDelegate($request)
@@ -217,7 +216,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\ConvertIdType $request
+     * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
      * @return \jamesiarmes\PhpEws\Type\ConvertIdResponseType
      */
     public function ConvertId($request)
@@ -231,7 +230,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CopyFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\CopyFolderType $request
      * @return \jamesiarmes\PhpEws\Type\CopyFolderResponseType
      */
     public function CopyFolder($request)
@@ -245,7 +244,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CopyItemType $request
+     * @param \jamesiarmes\PhpEws\Request\CopyItemType $request
      * @return \jamesiarmes\PhpEws\Type\CopyItemResponseType
      */
     public function CopyItem($request)
@@ -259,7 +258,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CreateAttachmentType $request
+     * @param \jamesiarmes\PhpEws\Request\CreateAttachmentType $request
      * @return \jamesiarmes\PhpEws\Type\CreateAttachmentResponseType
      */
     public function CreateAttachment($request)
@@ -273,7 +272,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CreateFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\CreateFolderType $request
      * @return \jamesiarmes\PhpEws\Type\CreateFolderResponseType
      */
     public function CreateFolder($request)
@@ -287,7 +286,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CreateItemType $request
+     * @param \jamesiarmes\PhpEws\Request\CreateItemType $request
      * @return \jamesiarmes\PhpEws\Type\CreateItemResponseType
      */
     public function CreateItem($request)
@@ -301,7 +300,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\CreateManagedFolderRequestType $request
+     * @param \jamesiarmes\PhpEws\Request\CreateManagedFolderRequestType $request
      * @return \jamesiarmes\PhpEws\Type\CreateManagedFolderResponseType
      */
     public function CreateManagedFolder($request)
@@ -315,7 +314,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\DeleteAttachmentType $request
+     * @param \jamesiarmes\PhpEws\Request\DeleteAttachmentType $request
      * @return \jamesiarmes\PhpEws\Type\DeleteAttachmentResponseType
      */
     public function DeleteAttachment($request)
@@ -329,7 +328,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\DeleteFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\DeleteFolderType $request
      * @return \jamesiarmes\PhpEws\Type\DeleteFolderResponseType
      */
     public function DeleteFolder($request)
@@ -343,7 +342,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\DeleteItemType $request
+     * @param \jamesiarmes\PhpEws\Request\DeleteItemType $request
      * @return \jamesiarmes\PhpEws\Type\DeleteItemResponseType
      */
     public function DeleteItem($request)
@@ -357,7 +356,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\ExpandDLType $request
+     * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
      * @return \jamesiarmes\PhpEws\Type\ExpandDLResponseType
      */
     public function ExpandDL($request)
@@ -371,7 +370,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\FindFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\FindFolderType $request
      * @return \jamesiarmes\PhpEws\Type\FindFolderResponseType
      */
     public function FindFolder($request)
@@ -385,7 +384,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\FindItemType $request
+     * @param \jamesiarmes\PhpEws\Request\FindItemType $request
      * @return \jamesiarmes\PhpEws\Type\FindItemResponseType
      */
     public function FindItem($request)
@@ -399,7 +398,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetAttachmentType $request
+     * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
      * @return \jamesiarmes\PhpEws\Type\GetAttachmentResponseType
      */
     public function GetAttachment($request)
@@ -413,7 +412,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetDelegateType $request
+     * @param \jamesiarmes\PhpEws\Request\GetDelegateType $request
      * @return \jamesiarmes\PhpEws\Type\GetDelegateResponseMessageType
      */
     public function GetDelegate($request)
@@ -427,7 +426,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetEventsType $request
+     * @param \jamesiarmes\PhpEws\Request\GetEventsType $request
      * @return \jamesiarmes\PhpEws\Type\GetEventsResponseType
      */
     public function GetEvents($request)
@@ -441,7 +440,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\GetFolderType $request
      * @return \jamesiarmes\PhpEws\Type\GetFolderResponseType
      */
     public function GetFolder($request)
@@ -455,7 +454,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetItemType $request
+     * @param \jamesiarmes\PhpEws\Request\GetItemType $request
      * @return \jamesiarmes\PhpEws\Type\GetItemResponseType
      */
     public function GetItem($request)
@@ -471,7 +470,7 @@ class Client
      *
      * @since Exchange 2010
      *
-     * @param \jamesiarmes\PhpEws\Type\GetServerTimeZonesType $request
+     * @param \jamesiarmes\PhpEws\Request\GetServerTimeZonesType $request
      * @return \jamesiarmes\PhpEws\Type\GetServerTimeZonesResponseType
      */
     public function GetServerTimeZones($request)
@@ -485,7 +484,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetUserAvailabilityRequestType $request
+     * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request
      * @return \jamesiarmes\PhpEws\Type\GetUserAvailabilityResponseType
      */
     public function GetUserAvailability($request)
@@ -499,7 +498,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\GetUserOofSettingsRequest $request
+     * @param \jamesiarmes\PhpEws\Request\GetUserOofSettingsRequest $request
      * @return \jamesiarmes\PhpEws\Type\GetUserOofSettingsResponse
      */
     public function GetUserOofSettings($request)
@@ -513,7 +512,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\MoveFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request
      * @return \jamesiarmes\PhpEws\Type\MoveFolderResponseType
      */
     public function MoveFolder($request)
@@ -527,7 +526,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\MoveItemType $request
+     * @param \jamesiarmes\PhpEws\Request\MoveItemType $request
      * @return \jamesiarmes\PhpEws\Type\MoveItemResponseType
      */
     public function MoveItem($request)
@@ -541,7 +540,7 @@ class Client
     /**
      * Function Description
      *
-     * @param RemoveDelegateType $request
+     * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request
      * @return \jamesiarmes\PhpEws\Type\RemoveDelegateResponseMessageType
      */
     public function RemoveDelegate($request)
@@ -555,7 +554,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\ResolveNamesType $request
+     * @param \jamesiarmes\PhpEws\Request\ResolveNamesType $request
      * @return \jamesiarmes\PhpEws\Type\ResolveNamesResponseType
      */
     public function ResolveNames($request)
@@ -569,7 +568,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\SendItemType $request
+     * @param \jamesiarmes\PhpEws\Request\SendItemType $request
      * @return \jamesiarmes\PhpEws\Type\SendItemResponseType
      */
     public function SendItem($request)
@@ -583,7 +582,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\SetUserOofSettingsRequest $request
+     * @param \jamesiarmes\PhpEws\Request\SetUserOofSettingsRequest $request
      * @return \jamesiarmes\PhpEws\Type\SetUserOofSettingsResponse
      */
     public function SetUserOofSettings($request)
@@ -597,7 +596,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\SubscribeType $request
+     * @param \jamesiarmes\PhpEws\Request\SubscribeType $request
      * @return \jamesiarmes\PhpEws\Type\SubscribeResponseType
      */
     public function Subscribe($request)
@@ -611,7 +610,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\SyncFolderHierarchyType $request
+     * @param \jamesiarmes\PhpEws\Request\SyncFolderHierarchyType $request
      * @return \jamesiarmes\PhpEws\Type\SyncFolderHierarchyResponseType
      */
     public function SyncFolderHierarchy($request)
@@ -625,7 +624,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\SyncFolderItemsType $request
+     * @param \jamesiarmes\PhpEws\Request\SyncFolderItemsType $request
      * @return \jamesiarmes\PhpEws\Type\SyncFolderItemsResponseType
      */
     public function SyncFolderItems($request)
@@ -639,7 +638,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\UnsubscribeType $request
+     * @param \jamesiarmes\PhpEws\Request\UnsubscribeType $request
      * @return \jamesiarmes\PhpEws\Type\UnsubscribeResponseType
      */
     public function Unsubscribe($request)
@@ -653,7 +652,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\UpdateDelegateType $request
+     * @param \jamesiarmes\PhpEws\Request\UpdateDelegateType $request
      * @return \jamesiarmes\PhpEws\Type\UpdateDelegateResponseMessageType
      */
     public function UpdateDelegate($request)
@@ -667,7 +666,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\UpdateFolderType $request
+     * @param \jamesiarmes\PhpEws\Request\UpdateFolderType $request
      * @return \jamesiarmes\PhpEws\Type\UpdateFolderResponseType
      */
     public function UpdateFolder($request)
@@ -681,7 +680,7 @@ class Client
     /**
      * Function Description
      *
-     * @param \jamesiarmes\PhpEws\Type\UpdateItemType $request
+     * @param \jamesiarmes\PhpEws\Request\UpdateItemType $request
      * @return \jamesiarmes\PhpEws\Type\UpdateItemResponseType
      */
     public function UpdateItem($request)
