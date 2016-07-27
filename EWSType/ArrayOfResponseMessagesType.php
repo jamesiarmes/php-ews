@@ -16,7 +16,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\ApplyConversationActionResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ApplyConversationActionResponseMessageType
      */
     public $ApplyConversationActionResponseMessage;
 
@@ -25,7 +25,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\ConvertIdResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ConvertIdResponseMessageType
      */
     public $ConvertIdResponseMessage;
 
@@ -34,7 +34,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $CopyFolderResponseMessage;
 
@@ -43,7 +43,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ItemInfoResponseMessageType
      */
     public $CopyItemResponseMessage;
 
@@ -52,7 +52,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\AttachmentInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\AttachmentInfoResponseMessageType
      */
     public $CreateAttachmentResponseMessage;
 
@@ -61,7 +61,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $CreateFolderResponseMessage;
 
@@ -70,7 +70,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ItemInfoResponseMessageType
      */
     public $CreateItemResponseMessage;
 
@@ -79,7 +79,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $CreateManagedFolderResponseMessage;
 
@@ -88,7 +88,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $CreateUserConfigurationResponseMessage;
 
@@ -97,7 +97,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\DeleteAttachmentResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\DeleteAttachmentResponseMessageType
      */
     public $DeleteAttachmentResponseMessage;
 
@@ -106,7 +106,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $DeleteFolderResponseMessage;
 
@@ -115,7 +115,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $DeleteItemResponseMessage;
 
@@ -124,7 +124,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $DeleteUserConfigurationResponseMessage;
 
@@ -133,7 +133,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $EmptyFolderResponseMessage;
 
@@ -142,7 +142,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ExpandDLResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ExpandDLResponseMessageType
      */
     public $ExpandDLResponseMessage;
 
@@ -151,7 +151,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\ExportItemsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ExportItemsResponseMessageType
      */
     public $ExportItemsResponseMessage;
 
@@ -160,7 +160,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FindFolderResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FindFolderResponseMessageType
      */
     public $FindFolderResponseMessage;
 
@@ -169,7 +169,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FindItemResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FindItemResponseMessageType
      */
     public $FindItemResponseMessage;
 
@@ -188,7 +188,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\AttachmentInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\AttachmentInfoResponseMessageType
      */
     public $GetAttachmentResponseMessage;
 
@@ -197,7 +197,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\GetEventsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetEventsResponseMessageType
      */
     public $GetEventsResponseMessage;
 
@@ -206,7 +206,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $GetFolderResponseMessage;
 
@@ -215,7 +215,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ItemInfoResponseMessageType
      */
     public $GetItemResponseMessage;
 
@@ -224,7 +224,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\GetRemindersResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetRemindersResponseMessageType
      */
     public $GetRemindersResponse;
 
@@ -233,7 +233,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetRoomListsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetRoomListsResponseMessageType
      */
     public $GetRoomListsResponse;
 
@@ -242,7 +242,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetRoomsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetRoomsResponseMessageType
      */
     public $GetRoomsResponse;
 
@@ -251,7 +251,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetServerTimeZonesResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetServerTimeZonesResponseMessageType
      */
     public $GetServerTimeZonesResponseMessage;
 
@@ -260,7 +260,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetSharingFolderResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetSharingFolderResponseMessageType
      */
     public $GetSharingFolderResponseMessage;
 
@@ -269,7 +269,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetSharingMetadataResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetSharingMetadataResponseMessageType
      */
     public $GetSharingMetadataResponseMessage;
 
@@ -278,7 +278,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\GetStreamingEventsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetStreamingEventsResponseMessageType
      */
     public $GetStreamingEventsResponseMessage;
 
@@ -287,7 +287,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\GetUserConfigurationResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\GetUserConfigurationResponseMessageType
      */
     public $GetUserConfigurationResponseMessage;
 
@@ -296,7 +296,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $MoveFolderResponseMessage;
 
@@ -305,7 +305,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ItemInfoResponseMessageType
      */
     public $MoveItemResponseMessage;
 
@@ -323,7 +323,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $RefreshSharingFolderResponseMessage;
 
@@ -332,7 +332,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResolveNamesResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResolveNamesResponseMessageType
      */
     public $ResolveNamesResponseMessage;
 
@@ -341,7 +341,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $SendItemResponseMessage;
 
@@ -350,7 +350,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SendNotificationResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\SendNotificationResponseMessageType
      */
     public $SendNotificationResponseMessage;
 
@@ -359,7 +359,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SubscribeResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\SubscribeResponseMessageType
      */
     public $SubscribeResponseMessage;
 
@@ -368,7 +368,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderHierarchyResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\SyncFolderHierarchyResponseMessageType
      */
     public $SyncFolderHierarchyResponseMessage;
 
@@ -377,7 +377,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\SyncFolderItemsResponseMessageType
      */
     public $SyncFolderItemsResponseMessage;
 
@@ -386,7 +386,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $UnsubscribeResponseMessage;
 
@@ -395,7 +395,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderInfoResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\FolderInfoResponseMessageType
      */
     public $UpdateFolderResponseMessage;
 
@@ -413,7 +413,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $UpdateUserConfigurationResponseMessage;
 
@@ -422,7 +422,7 @@ class EWSType_ArrayOfResponseMessagesType extends EWSType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\UploadItemsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\UploadItemsResponseMessageType
      */
     public $UploadItemsResponseMessage;
 }

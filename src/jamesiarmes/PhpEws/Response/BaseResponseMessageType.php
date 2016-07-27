@@ -10,7 +10,7 @@ use \jamesiarmes\PhpEws\Response;
 /**
  * Base class for responses.
  *
- * @package php-ews\Types
+ * @package php-ews\Response
  */
 class BaseResponseMessageType extends Response
 {

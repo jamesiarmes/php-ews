@@ -1,18 +1,18 @@
 <?php
 /**
- * Contains \jamesiarmes\PhpEws\Type\ResponseMessageType.
+ * Contains \jamesiarmes\PhpEws\Response\ResponseMessageType.
  */
 
-namespace jamesiarmes\PhpEws\Type;
+namespace jamesiarmes\PhpEws\Response;
 
-use jamesiarmes\PhpEws\Type;
+use \jamesiarmes\PhpEws\Response;
 
 /**
  * Represents the status and result of a request.
  *
- * @package php-ews\Types
+ * @package php-ews\Response
  */
-class ResponseMessageType extends Type
+class ResponseMessageType extends Response
 {
     /**
      * Currently unused and reserved for future use.

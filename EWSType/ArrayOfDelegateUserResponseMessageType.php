@@ -3,7 +3,7 @@
  * Contains EWSType_ArrayOfDelegateUserResponseMessageType.
  */
 
-use jamesiarmes\PhpEws\Type\BaseDelegateResponseMessageType;
+use jamesiarmes\PhpEws\Response\BaseDelegateResponseMessageType;
 
 /**
  * Contains the response messages for an Exchange Web Services delegate
@@ -19,7 +19,7 @@ class EWSType_ArrayOfDelegateUserResponseMessageType extends
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\DelegateUserResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\DelegateUserResponseMessageType
      */
     public $DelegateUserResponseMessageType;
 }

@@ -15,7 +15,7 @@ class EWSType_ArrayOfMailTipsResponseMessageType extends EWSType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\MailTipsResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\MailTipsResponseMessageType
      */
     public $MailTipsResponseMessageType;
 }

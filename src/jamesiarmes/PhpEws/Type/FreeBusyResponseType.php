@@ -28,7 +28,7 @@ class FreeBusyResponseType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
      */
     public $ResponseMessage;
 }
