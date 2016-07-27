@@ -96,6 +96,8 @@ class OAuthSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
 
+        $xml = '';
+
         if ($this->write_to_file)
         {
             $next_five_minute_window = $this->file_output . '/' . date('Y_m_d_H_i', ceil(time() / 300) * 300);
@@ -153,6 +155,10 @@ class OAuthSoapClient extends SoapClient
                 'Curl error: ' . curl_error($this->ch),
                 curl_errno($this->ch)
             );
+        }
+        elseif ($result == false)
+        {
+            throw new EWS_Empty_Exception('response from Microsoft was empty');
         }
 
         return $xml;
