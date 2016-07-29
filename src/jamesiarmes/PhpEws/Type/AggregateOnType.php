@@ -25,7 +25,7 @@ class AggregateOnType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AggregateType
+     * @var \jamesiarmes\PhpEws\Enumeration\AggregateType
      */
     public $Aggregate;
 
