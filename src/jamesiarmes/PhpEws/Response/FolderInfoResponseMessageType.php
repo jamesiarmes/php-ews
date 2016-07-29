@@ -17,7 +17,7 @@ class FolderInfoResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfFoldersType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfFoldersType
      */
     public $Folders;
 }

@@ -18,7 +18,7 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEncryptedSharedFolderDataType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEncryptedSharedFolderDataType
      */
     public $EncryptedSharedFolderDataCollection;
 
@@ -27,7 +27,7 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfInvalidRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfInvalidRecipientsType
      */
     public $InvalidRecipients;
 }

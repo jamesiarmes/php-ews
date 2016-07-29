@@ -20,7 +20,7 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $AssignCategories;
 
@@ -48,7 +48,7 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $ForwardAsAttachmentToRecipients;
 
@@ -57,7 +57,7 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $ForwardToRecipients;
 
@@ -103,7 +103,7 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $RedirectToRecipients;
 
@@ -113,7 +113,7 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $SendSMSAlertToRecipients;
 

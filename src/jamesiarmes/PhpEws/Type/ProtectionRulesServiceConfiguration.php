@@ -44,7 +44,7 @@ class ProtectionRulesServiceConfiguration extends ServiceConfiguration
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfProtectionRulesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfProtectionRulesType
      */
     public $Rules;
 }

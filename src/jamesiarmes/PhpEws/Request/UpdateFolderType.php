@@ -18,7 +18,7 @@ class UpdateFolderType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfFolderChangesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFolderChangesType
      */
     public $FolderChanges;
 }

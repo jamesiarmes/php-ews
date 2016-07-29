@@ -18,7 +18,7 @@ class UpdateInboxRulesResponseType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfRuleOperationErrorsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRuleOperationErrorsType
      */
     public $RuleOperationErrors;
 }

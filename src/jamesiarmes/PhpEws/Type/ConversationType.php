@@ -20,7 +20,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Categories;
 
@@ -59,7 +59,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $GlobalCategories;
 
@@ -99,7 +99,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfItemClassType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfItemClassType
      */
     public $GlobalItemClasses;
 
@@ -109,7 +109,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseItemIdsType
      */
     public $GlobalItemIds;
 
@@ -152,7 +152,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $GlobalUniqueRecipients;
 
@@ -161,7 +161,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $GlobalUniqueSenders;
 
@@ -171,7 +171,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $GlobalUniqueUnreadSenders;
 
@@ -210,7 +210,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfItemClassType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfItemClassType
      */
     public $ItemClasses;
 
@@ -220,7 +220,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 
@@ -263,7 +263,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $UniqueRecipients;
 
@@ -275,7 +275,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $UniqueSenders;
 
@@ -287,7 +287,7 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $UniqueUnreadSenders;
 

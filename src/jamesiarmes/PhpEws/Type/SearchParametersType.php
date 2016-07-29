@@ -20,7 +20,7 @@ class SearchParametersType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType
      */
     public $BaseFolderIds;
 

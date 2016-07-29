@@ -29,7 +29,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfDLExpansionType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfDLExpansionType
      */
     public $DLExpansion;
 

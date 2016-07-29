@@ -17,7 +17,7 @@ class ApplyConversationActionType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfApplyConversationActionType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfApplyConversationActionType
      */
     public $ConversationActions;
 }

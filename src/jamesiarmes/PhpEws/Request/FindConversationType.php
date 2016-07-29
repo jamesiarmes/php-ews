@@ -79,7 +79,7 @@ class FindConversationType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfFieldOrdersType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFieldOrdersType
      */
     public $SortOrder;
 

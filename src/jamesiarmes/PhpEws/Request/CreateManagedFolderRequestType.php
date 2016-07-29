@@ -17,7 +17,7 @@ class CreateManagedFolderRequestType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfFolderNamesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFolderNamesType
      */
     public $FolderNames;
 

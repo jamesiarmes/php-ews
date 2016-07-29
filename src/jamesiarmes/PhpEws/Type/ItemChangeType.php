@@ -60,7 +60,7 @@ class ItemChangeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfItemChangeDescriptionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemChangeDescriptionsType
      */
     public $Updates;
 }

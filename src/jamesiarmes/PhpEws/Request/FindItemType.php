@@ -97,7 +97,7 @@ class FindItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType
      */
     public $ParentFolderIds;
 
@@ -129,7 +129,7 @@ class FindItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfFieldOrdersType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFieldOrdersType
      */
     public $SortOrder;
 

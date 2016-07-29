@@ -28,7 +28,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Diagnostics;
 
@@ -38,7 +38,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfArraysOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfArraysOfTrackingPropertiesType
      */
     public $Errors;
 
@@ -47,7 +47,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 }

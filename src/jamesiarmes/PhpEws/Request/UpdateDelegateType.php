@@ -18,7 +18,7 @@ class UpdateDelegateType extends BaseDelegateType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfDelegateUserType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfDelegateUserType
      */
     public $DelegateUsers;
 

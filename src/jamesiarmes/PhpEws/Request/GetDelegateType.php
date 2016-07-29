@@ -27,7 +27,7 @@ class GetDelegateType extends BaseDelegateType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfUserIdType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfUserIdType
      */
     public $UserIds;
 }

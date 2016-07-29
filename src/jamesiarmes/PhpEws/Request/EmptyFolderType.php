@@ -41,7 +41,7 @@ class EmptyFolderType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 }

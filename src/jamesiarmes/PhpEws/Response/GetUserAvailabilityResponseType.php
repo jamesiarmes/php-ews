@@ -21,7 +21,7 @@ class GetUserAvailabilityResponseType extends Response
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfFreeBusyResponse
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfFreeBusyResponse
      */
     public $FreeBusyResponseArray;
 

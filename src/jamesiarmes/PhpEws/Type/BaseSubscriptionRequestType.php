@@ -20,7 +20,7 @@ abstract class BaseSubscriptionRequestType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfNotificationEventTypesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfNotificationEventTypesType
      */
     public $EventTypes;
 
@@ -30,7 +30,7 @@ abstract class BaseSubscriptionRequestType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 

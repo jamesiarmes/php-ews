@@ -39,7 +39,7 @@ class FolderChangeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfFolderChangeDescriptionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFolderChangeDescriptionsType
      */
     public $Updates;
 }

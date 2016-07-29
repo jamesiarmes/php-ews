@@ -17,7 +17,7 @@ class UploadItemsType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfUploadItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfUploadItemsType
      */
     public $Items;
 }

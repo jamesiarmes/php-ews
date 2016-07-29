@@ -20,7 +20,7 @@ class MessageTrackingReportType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $OriginalRecipients;
 
@@ -29,7 +29,7 @@ class MessageTrackingReportType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 
@@ -47,7 +47,7 @@ class MessageTrackingReportType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfRecipientTrackingEventType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientTrackingEventType
      */
     public $RecipientTrackingEvents;
 

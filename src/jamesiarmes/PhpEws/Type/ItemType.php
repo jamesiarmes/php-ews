@@ -41,7 +41,7 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Categories;
 
@@ -180,7 +180,7 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfInternetHeadersType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfInternetHeadersType
      */
     public $InternetMessageHeaders;
 
@@ -361,7 +361,7 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfResponseObjectsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfResponseObjectsType
      */
     public $ResponseObjects;
 

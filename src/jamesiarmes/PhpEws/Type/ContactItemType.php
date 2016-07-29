@@ -55,7 +55,7 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Children;
 
@@ -65,7 +65,7 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Companies;
 
@@ -262,7 +262,7 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2010 SP2
      *
-     * @var EWSType_ArrayOfBinaryType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfBinaryType
      */
     public $MSExchangeCertificate;
 
@@ -390,7 +390,7 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2010 SP2
      *
-     * @var EWSType_ArrayOfBinaryType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfBinaryType
      */
     public $UserSMIMECertificate;
 

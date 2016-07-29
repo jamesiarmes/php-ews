@@ -19,7 +19,7 @@ class BaseResponseMessageType extends Response
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfResponseMessagesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfResponseMessagesType
      */
     public $ResponseMessages;
 }

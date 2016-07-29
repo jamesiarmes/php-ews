@@ -25,7 +25,7 @@ class GetServerTimeZonesType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_NonEmptyArrayOfTimeZoneIdType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfTimeZoneIdType
      */
     public $Ids;
 

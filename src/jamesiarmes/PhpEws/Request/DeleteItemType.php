@@ -45,7 +45,7 @@ class DeleteItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfBaseItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseItemIdsType
      */
     public $ItemIds;
 

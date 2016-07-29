@@ -37,7 +37,7 @@ class ExtendedPropertyType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfPropertyValuesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfPropertyValuesType
      */
     public $Values;
 }

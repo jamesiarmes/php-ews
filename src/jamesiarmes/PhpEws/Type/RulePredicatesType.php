@@ -21,7 +21,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Categories;
 
@@ -31,7 +31,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsBodyStrings;
 
@@ -41,7 +41,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsHeaderStrings;
 
@@ -52,7 +52,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsRecipientStrings;
 
@@ -62,7 +62,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsSenderStrings;
 
@@ -72,7 +72,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsSubjectOrBodyStrings;
 
@@ -82,7 +82,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ContainsSubjectStrings;
 
@@ -102,7 +102,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $FromAddresses;
 
@@ -112,7 +112,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $FromConnectedAccounts;
 
@@ -252,7 +252,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $ItemClasses;
 
@@ -262,7 +262,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $MessageClassifications;
 
@@ -315,7 +315,7 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfEmailAddressesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfEmailAddressesType
      */
     public $SentToAddresses;
 

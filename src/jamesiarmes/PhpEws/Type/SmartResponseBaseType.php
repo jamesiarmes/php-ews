@@ -23,7 +23,7 @@ class SmartResponseBaseType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $BccRecipients;
 
@@ -42,7 +42,7 @@ class SmartResponseBaseType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $CcRecipients;
 
@@ -116,7 +116,7 @@ class SmartResponseBaseType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $ToRecipients;
 }

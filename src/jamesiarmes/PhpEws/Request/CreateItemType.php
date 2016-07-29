@@ -18,7 +18,7 @@ class CreateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType
      */
     public $Items;
 

@@ -19,7 +19,7 @@ class PhoneNumberAttributedValueType extends Type
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ArrayOfValueAttributionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfValueAttributionsType
      */
     public $Attributions;
 

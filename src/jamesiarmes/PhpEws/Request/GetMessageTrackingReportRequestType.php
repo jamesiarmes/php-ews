@@ -86,7 +86,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 }

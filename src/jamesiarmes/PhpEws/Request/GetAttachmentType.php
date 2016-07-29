@@ -29,7 +29,7 @@ class GetAttachmentType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_AttachmentResponseShapeType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentShape;
 }

@@ -20,7 +20,7 @@ class Suggestion extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfAttendeeConflictData
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfAttendeeConflictData
      */
     public $AttendeeConflictDataArray;
 

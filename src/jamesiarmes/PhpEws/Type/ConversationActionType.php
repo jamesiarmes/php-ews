@@ -32,7 +32,7 @@ class ConversationActionType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Categories;
 

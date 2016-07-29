@@ -17,7 +17,7 @@ class GetServiceConfigurationResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfServiceConfigurationResponseMessageType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfServiceConfigurationResponseMessageType
      */
     public $ResponseMessages;
 }

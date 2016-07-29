@@ -17,7 +17,7 @@ class ItemInfoResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRealItemsType
      */
     public $Items;
 }

@@ -17,7 +17,7 @@ class GetMailTipsResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfMailTipsResponseMessageType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfMailTipsResponseMessageType
      */
     public $ResponseMessages;
 }

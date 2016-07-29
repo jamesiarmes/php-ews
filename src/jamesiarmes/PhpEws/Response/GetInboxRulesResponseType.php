@@ -17,7 +17,7 @@ class GetInboxRulesResponseType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfRulesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRulesType
      */
     public $InboxRules;
 

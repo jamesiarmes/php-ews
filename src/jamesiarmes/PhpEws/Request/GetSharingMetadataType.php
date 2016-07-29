@@ -46,7 +46,7 @@ class GetSharingMetadataType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfSmtpAddressType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfSmtpAddressType
      */
     public $Recipients;
 }

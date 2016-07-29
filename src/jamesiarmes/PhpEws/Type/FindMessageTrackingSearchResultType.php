@@ -50,7 +50,7 @@ class FindMessageTrackingSearchResultType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 
@@ -68,7 +68,7 @@ class FindMessageTrackingSearchResultType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $Recipients;
 

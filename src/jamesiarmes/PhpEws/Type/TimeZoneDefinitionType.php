@@ -38,7 +38,7 @@ class TimeZoneDefinitionType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_NonEmptyArrayOfPeriodsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfPeriodsType
      */
     public $Periods;
 
@@ -47,7 +47,7 @@ class TimeZoneDefinitionType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfTransitionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTransitionsType
      */
     public $Transitions;
 
@@ -56,7 +56,7 @@ class TimeZoneDefinitionType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfTransitionsGroupsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTransitionsGroupsType
      */
     public $TransitionsGroups;
 }

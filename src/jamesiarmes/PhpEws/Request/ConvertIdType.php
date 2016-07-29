@@ -32,7 +32,7 @@ class ConvertIdType extends BaseRequestType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_NonEmptyArrayOfAlternateIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAlternateIdsType
      */
     public $SourceIds;
 }

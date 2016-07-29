@@ -38,7 +38,7 @@ class GetServiceConfigurationType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfServiceConfigurationType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfServiceConfigurationType
      */
     public $RequestedConfiguration;
 }

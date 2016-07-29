@@ -26,7 +26,7 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfMailboxData
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfMailboxData
      */
     public $MailboxDataArray;
 

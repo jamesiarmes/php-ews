@@ -20,7 +20,7 @@ class StreamingSubscriptionRequest extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfNotificationEventTypesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfNotificationEventTypesType
      */
     public $EventTypes;
 
@@ -30,7 +30,7 @@ class StreamingSubscriptionRequest extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfBaseFolderIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType
      */
     public $FolderIds;
 

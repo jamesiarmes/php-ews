@@ -17,7 +17,7 @@ class ResolveNamesResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfResolutionType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfResolutionType
      */
     public $ResolutionSet;
 }

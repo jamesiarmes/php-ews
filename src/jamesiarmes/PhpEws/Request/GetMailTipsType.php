@@ -26,7 +26,7 @@ class GetMailTipsType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $Recipients;
 

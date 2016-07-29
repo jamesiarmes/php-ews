@@ -17,7 +17,7 @@ class FindConversationResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfConversationsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfConversationsType
      */
     public $Conversations;
 }

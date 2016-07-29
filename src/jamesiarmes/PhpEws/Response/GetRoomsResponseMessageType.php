@@ -18,7 +18,7 @@ class GetRoomsResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfRoomsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRoomsType
      */
     public $Rooms;
 }

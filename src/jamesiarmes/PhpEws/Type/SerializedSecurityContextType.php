@@ -20,7 +20,7 @@ class SerializedSecurityContextType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfGroupIdentifiersType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfGroupIdentifiersType
      */
     public $GroupSids;
 
@@ -38,7 +38,7 @@ class SerializedSecurityContextType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfRestrictedGroupIdentifiersType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfRestrictedGroupIdentifiersType
      */
     public $RestrictedGroupSids;
 

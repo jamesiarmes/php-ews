@@ -33,7 +33,7 @@ class FindItemParentType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfGroupedItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfGroupedItemsType
      */
     public $Groups;
 
@@ -63,7 +63,7 @@ class FindItemParentType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRealItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRealItemsType
      */
     public $Items;
 

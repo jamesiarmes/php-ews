@@ -17,7 +17,7 @@ class CreateFolderType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfFoldersType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfFoldersType
      */
     public $Folders;
 

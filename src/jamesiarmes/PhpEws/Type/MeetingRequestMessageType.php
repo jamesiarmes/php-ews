@@ -27,7 +27,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType
      */
     public $AdjacentMeetings;
 
@@ -102,7 +102,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType
      */
     public $ConflictingMeetings;
 
@@ -113,7 +113,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfDeletedOccurrencesType
      */
     public $DeletedOccurrences;
 
@@ -291,7 +291,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfOccurrenceInfoType
      */
     public $ModifiedOccurrences;
 
@@ -318,7 +318,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $OptionalAttendees;
 
@@ -356,7 +356,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $RequiredAttendees;
 
@@ -365,7 +365,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $Resources;
 

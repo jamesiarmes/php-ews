@@ -18,7 +18,7 @@ class MessageType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $BccRecipients;
 
@@ -28,7 +28,7 @@ class MessageType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $CcRecipients;
 
@@ -122,7 +122,7 @@ class MessageType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $ReplyTo;
 
@@ -140,7 +140,7 @@ class MessageType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfRecipientsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRecipientsType
      */
     public $ToRecipients;
 }

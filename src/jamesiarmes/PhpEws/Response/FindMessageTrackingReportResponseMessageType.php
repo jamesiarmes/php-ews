@@ -19,7 +19,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $Diagnostics;
 
@@ -29,7 +29,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfArraysOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfArraysOfTrackingPropertiesType
      */
     public $Errors;
 
@@ -47,7 +47,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfFindMessageTrackingSearchResultType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfFindMessageTrackingSearchResultType
      */
     public $MessageTrackingSearchResults;
 
@@ -56,7 +56,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 }

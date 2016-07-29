@@ -29,7 +29,7 @@ class SuggestionsResponseType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfSuggestionDayResult
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfSuggestionDayResult
      */
     public $SuggestionDayResultArray;
 }

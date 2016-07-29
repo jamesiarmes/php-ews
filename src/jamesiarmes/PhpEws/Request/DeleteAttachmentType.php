@@ -18,7 +18,7 @@ class DeleteAttachmentType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfRequestAttachmentIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfRequestAttachmentIdsType
      */
     public $AttachmentIds;
 }

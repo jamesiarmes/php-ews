@@ -27,7 +27,7 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfSubscriptionIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfSubscriptionIdsType
      */
     public $ErrorSubscriptionIds;
 
@@ -37,7 +37,7 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfNotificationsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfNotificationsType
      */
     public $Notifications;
 }

@@ -17,7 +17,7 @@ class GetRemindersResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2013
      *
-     * @var EWSType_ArrayOfRemindersType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRemindersType
      */
     public $Reminders;
 }

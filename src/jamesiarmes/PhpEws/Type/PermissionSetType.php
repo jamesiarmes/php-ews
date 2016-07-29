@@ -19,7 +19,7 @@ class PermissionSetType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfPermissionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfPermissionsType
      */
     public $Permissions;
 
@@ -29,7 +29,7 @@ class PermissionSetType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfUnknownEntriesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
 }

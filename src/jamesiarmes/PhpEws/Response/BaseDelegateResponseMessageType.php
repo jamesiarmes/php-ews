@@ -18,7 +18,7 @@ abstract class BaseDelegateResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfDelegateUserResponseMessageType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfDelegateUserResponseMessageType
      */
     public $ResponseMessages;
 }

@@ -18,7 +18,7 @@ class GetServerTimeZonesResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfTimeZoneDefinitionType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTimeZoneDefinitionType
      */
     public $TimeZoneDefinitions;
 }

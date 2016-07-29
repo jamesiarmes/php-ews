@@ -19,7 +19,7 @@ class SyncFolderItemsType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfBaseItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfBaseItemIdsType
      */
     public $Ignore;
 

@@ -48,7 +48,7 @@ class RecipientTrackingEventType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfStringsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfStringsType
      */
     public $EventData;
 
@@ -84,7 +84,7 @@ class RecipientTrackingEventType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfTrackingPropertiesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType
      */
     public $Properties;
 

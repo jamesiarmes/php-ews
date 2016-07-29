@@ -20,7 +20,7 @@ class FreeBusyView extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfCalendarEvent
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfCalendarEvent
      */
     public $CalendarEventArray;
 

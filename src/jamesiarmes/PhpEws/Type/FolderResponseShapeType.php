@@ -22,7 +22,7 @@ class FolderResponseShapeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 

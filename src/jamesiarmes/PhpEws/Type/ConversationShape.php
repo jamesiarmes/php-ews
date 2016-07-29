@@ -20,7 +20,7 @@ class ConversationShape extends Type
      *
      * @since Exchange 2013
      *
-     * @var EWSType_NonEmptyArrayOfPathsToElementType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfPathsToElementType
      */
     public $AdditionalProperties;
 

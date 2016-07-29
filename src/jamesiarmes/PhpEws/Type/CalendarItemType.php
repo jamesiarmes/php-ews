@@ -27,7 +27,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType
      */
     public $AdjacentMeetings;
 
@@ -104,7 +104,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAllItemsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType
      */
     public $ConflictingMeetings;
 
@@ -127,7 +127,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfDeletedOccurrencesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfDeletedOccurrencesType
      */
     public $DeletedOccurrences;
 
@@ -295,7 +295,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfOccurrenceInfoType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfOccurrenceInfoType
      */
     public $ModifiedOccurrences;
 
@@ -322,7 +322,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $OptionalAttendees;
 
@@ -373,7 +373,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $RequiredAttendees;
 
@@ -382,7 +382,7 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var EWSType_NonEmptyArrayOfAttendeesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType
      */
     public $Resources;
 

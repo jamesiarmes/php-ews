@@ -19,7 +19,7 @@ class CalendarPermissionSetType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfCalendarPermissionsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfCalendarPermissionsType
      */
     public $CalendarPermissions;
 
@@ -29,7 +29,7 @@ class CalendarPermissionSetType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var EWSType_ArrayOfUnknownEntriesType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfUnknownEntriesType
      */
     public $UnknownEntries;
 }

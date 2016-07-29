@@ -19,7 +19,7 @@ class PerformReminderActionResponseMessageType extends Type
      *
      * @since Exchange 2013
      *
-     * @var EWSType_NonEmptyArrayOfItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemIdsType
      */
     public $UpdatedItemIds;
 }

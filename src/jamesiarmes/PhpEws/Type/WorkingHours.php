@@ -36,7 +36,7 @@ class WorkingHours extends Type
      *
      * @since Exchange 2007
      *
-     * @var EWSType_ArrayOfWorkingPeriod
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfWorkingPeriod
      */
     public $WorkingPeriodArray;
 }

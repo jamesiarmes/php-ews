@@ -18,7 +18,7 @@ class ExportItemsType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var EWSType_NonEmptyArrayOfItemIdsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemIdsType
      */
     public $ItemIds;
 }

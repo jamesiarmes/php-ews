@@ -30,7 +30,7 @@ class RuleOperationErrorType extends Type
      *
      * @since Exchange 2010
      *
-     * @var EWSType_ArrayOfRuleValidationErrorsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfRuleValidationErrorsType
      */
     public $ValidationErrors;
 }
