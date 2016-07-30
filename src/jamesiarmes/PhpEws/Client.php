@@ -704,7 +704,7 @@ class Client
     protected function initializeSoapClient()
     {
         $this->soap = new SoapClient(
-            dirname(__FILE__).'/../../../wsdl/services.wsdl',
+            dirname(__FILE__).'/assets/services.wsdl',
             array(
                 'user' => $this->username,
                 'password' => $this->password,
