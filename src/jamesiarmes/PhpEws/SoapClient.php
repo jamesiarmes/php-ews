@@ -1,7 +1,11 @@
 <?php
 /**
- * Contains NTLMSoapClient_Exchange.
+ * Contains \jamesiarmes\PhpEws\SoapClient.
  */
+
+namespace jamesiarmes\PhpEws;
+
+use \jamesiarmes\PhpEws\Ntlm\SoapClient as NtlmSoapClient;
 
 /**
  * Handles Soap communication with the Exchange server using NTLM
@@ -9,7 +13,7 @@
  *
  * @package php-ews\Auth
  */
-class NTLMSoapClient_Exchange extends NTLMSoapClient
+class SoapClient extends NtlmSoapClient
 {
     /**
      * Username for authentication on the exchnage server
@@ -35,7 +39,7 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
     {
         // Verify that a user name and password were entered.
         if (empty($options['user']) || empty($options['password'])) {
-            throw new EWS_Exception('A username and password is required.');
+            throw new \Exception('A username and password is required.');
         }
 
         // Set the username and password properties.
@@ -44,7 +48,7 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
 
         // If a version was set then add it to the headers.
         if (!empty($options['version'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->__default_headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'RequestServerVersion Version="' . $options['version'] . '"'
             );
@@ -52,7 +56,7 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
 
         // If impersonation was set then add it to the headers.
         if (!empty($options['impersonation'])) {
-            $this->__default_headers[] = new SoapHeader(
+            $this->__default_headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
                 $options['impersonation']
