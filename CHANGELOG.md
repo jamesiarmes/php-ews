@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- Composer support.
+- Appropriate base classes.
+
+### Changed
+- Renamed and namespaced all classes to be PSR-4 compatible.
+
+### Removed
+- Custom exception class.
+
 ## 0.1.1 - 2015-02-19
 
 ### Added
