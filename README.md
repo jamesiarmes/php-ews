@@ -38,7 +38,7 @@ require_once 'php-ews/EWSType/BodyType.php';
 function __autoload($class_name)
 {
     // Start from the base path and determine the location from the class name,
-    $base_path = 'path/to/php-ews';
+    $base_path = 'path/to/php-ews;
     $include_file = $base_path . '/' . str_replace('_', '/', $class_name) . '.php';
 
     return (file_exists($include_file) ? require_once $include_file : false);
@@ -70,17 +70,3 @@ The request objects are build similar to the XML body of the request. See the re
 
 ## Support
 All questions should use the [issue queue](https://github.com/jamesiarmes/php-ews/issues). This allows the community to contribute to and benefit from questions or issues you may have. Any support requests sent to my email address will be directed here.
-
-## Contributions
-Contributions are always welcome!
-
-### Contributing Code
-If you would like to contribute code please fork the repository on [github](https://github.com/jamesiarmes/php-ews) and issue a pull request against the master branch. It is recommended that you make any changes to your fork in a separate branch that you would then use for the pull request. If you would like to receive credit for your contribution outside of git, please add your name and email address (optional) to the CONTRIBUTORS.txt file. All contributions should follow the [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) coding standards.
-
-### Contributing Documentation
-If you would like to contribute to the documentation, please feel free to update the [wiki](https://github.com/jamesiarmes/php-ews/wiki). I request that you do not make changes to the home page but other pages (including new ones) are fair game. Please leave a descriptive log message for any changes that you make.
-
-### Other Contributions
-Have you found this library helpful? Why not take a minute to endorse my hard work on [coderwall](http://coderwall.com)! Just click the badge below:
-
-[![](http://api.coderwall.com/jamesiarmes/endorsecount.png)](http://coderwall.com/jamesiarmes)
