@@ -1,7 +1,9 @@
 <?php
 /**
- * Contains EWSAutodiscover.
+ * Contains \jamesiarmes\PhpEws\Autodiscover.
  */
+
+namespace jamesiarmes\PhpEws;
 
 /**
  * Exchange Web Services Autodiscover implementation
@@ -30,7 +32,7 @@
  *
  * @package php-ews\AutoDiscovery
  */
-class EWSAutodiscover
+class Autodiscover
 {
     /**
      * The path appended to the various schemes and hostnames used during
@@ -229,6 +231,8 @@ class EWSAutodiscover
      * until a valid response is received, or all methods have failed.
      *
      * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
+     *
+     * @todo Throw an exception on failure.
      */
     public function discover()
     {
@@ -279,7 +283,7 @@ class EWSAutodiscover
 
     /**
      * Parse the hex ServerVersion value and return a valid
-     * ExchangeWebServices::VERSION_* constant.
+     * Client::VERSION_* constant.
      *
      * @return string|boolean A known version constant, or FALSE if it could not
      * be determined.
@@ -287,6 +291,8 @@ class EWSAutodiscover
      * @link http://msdn.microsoft.com/en-us/library/bb204122(v=exchg.140).aspx
      * @link http://blogs.msdn.com/b/pcreehan/archive/2009/09/21/parsing-serverversion-when-an-int-is-really-5-ints.aspx
      * @link http://office.microsoft.com/en-us/outlook-help/determine-the-version-of-microsoft-exchange-server-my-account-connects-to-HA001191800.aspx
+     *
+     * @todo Update to include Exchange 2013 versions.
      */
     public function parseServerVersion($version_hex)
     {
@@ -302,33 +308,33 @@ class EWSAutodiscover
         if ($majorversion == 8) {
             switch ($minorversion) {
                 case 0:
-                    return ExchangeWebServices::VERSION_2007;
+                    return Client::VERSION_2007;
                     break;
                 case 1:
-                    return ExchangeWebServices::VERSION_2007_SP1;
+                    return Client::VERSION_2007_SP1;
                     break;
                 case 2:
-                    return ExchangeWebServices::VERSION_2007_SP2;
+                    return Client::VERSION_2007_SP2;
                     break;
                 case 3:
-                    return ExchangeWebServices::VERSION_2007_SP3;
+                    return Client::VERSION_2007_SP3;
                     break;
                 default:
-                    return ExchangeWebServices::VERSION_2007;
+                    return Client::VERSION_2007;
             }
         } elseif ($majorversion == 14) {
             switch ($minorversion) {
                 case 0:
-                    return ExchangeWebServices::VERSION_2010;
+                    return Client::VERSION_2010;
                     break;
                 case 1:
-                    return ExchangeWebServices::VERSION_2010_SP1;
+                    return Client::VERSION_2010_SP1;
                     break;
                 case 2:
-                    return ExchangeWebServices::VERSION_2010_SP2;
+                    return Client::VERSION_2010_SP2;
                     break;
                 default:
-                    return ExchangeWebServices::VERSION_2010;
+                    return Client::VERSION_2010;
             }
         }
 
@@ -337,10 +343,10 @@ class EWSAutodiscover
     }
 
     /**
-     * Method to return a new ExchangeWebServices object, auto-configured
+     * Method to return a new Client object, auto-configured
      * with the proper hostname.
      *
-     * @return mixed ExchangeWebServices object on success, FALSE on failure.
+     * @return mixed Client object on success, FALSE on failure.
      */
     public function newEWS()
     {
@@ -379,9 +385,9 @@ class EWSAutodiscover
         if ($server) {
             if ($version === null) {
                 // EWS class default.
-                $version = ExchangeWebServices::VERSION_2007;
+                $version = Client::VERSION_2007;
             }
-            return new ExchangeWebServices(
+            return new Client(
                 $server,
                 $this->email,
                 $this->password,
@@ -403,7 +409,7 @@ class EWSAutodiscover
      */
     public static function getEWS($email, $password, $username = null)
     {
-        $auto = new EWSAutodiscover($email, $password, $username);
+        $auto = new Autodiscover($email, $password, $username);
         return $auto->newEWS();
     }
 
@@ -699,7 +705,7 @@ class EWSAutodiscover
             return $this->requestxml;
         }
 
-        $xml = new XMLWriter;
+        $xml = new \XMLWriter();
         $xml->openMemory();
         $xml->setIndent(true);
         $xml->startDocument('1.0', 'UTF-8');
