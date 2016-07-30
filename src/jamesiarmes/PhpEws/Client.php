@@ -78,7 +78,7 @@ class Client
     /**
      * SOAP client used to make the request
      *
-     * @var NTLMSoapClient_Exchange
+     * @var \jamesiarmes\PhpEws\SoapClient
      */
     protected $soap;
 
@@ -101,10 +101,13 @@ class Client
      *
      * @var string
      *
-     * @see ExchangeWebServices::VERSION_2007
-     * @see ExchangeWebServices::VERSION_2007_SP1
-     * @see ExchangeWebServices::VERSION_2010
-     * @see ExchangeWebServices::VERSION_2010_SP1
+     * @see Client::VERSION_2007
+     * @see Client::VERSION_2007_SP1
+     * @see Client::VERSION_2007_SP2
+     * @see Client::VERSION_2007_SP3
+     * @see Client::VERSION_2010
+     * @see Client::VERSION_2010_SP1
+     * @see Client::VERSION_2010_SP2
      */
     protected $version;
 
@@ -114,7 +117,7 @@ class Client
      * @param string $server
      * @param string $username
      * @param string $password
-     * @param string $version one of the ExchangeWebServices::VERSION_* constants
+     * @param string $version One of the Client::VERSION_* constants.
      */
     public function __construct(
         $server = null,
@@ -132,7 +135,7 @@ class Client
     /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
-     * @return NTLMSoapClient_Exchange
+     * @return \jamesiarmes\PhpEws\SoapClient
      */
     public function getClient()
     {
@@ -694,12 +697,14 @@ class Client
     /**
      * Initializes the SoapClient object to make a request
      *
-     * @return NTLMSoapClient_Exchange
+     * @return \jamesiarmes\PhpEws\SoapClient
+     *
+     * TODO: Build a class map that we can pass to the client.
      */
     protected function initializeSoapClient()
     {
-        $this->soap = new NTLMSoapClient_Exchange(
-            dirname(__FILE__).'/wsdl/services.wsdl',
+        $this->soap = new SoapClient(
+            dirname(__FILE__).'/../../../wsdl/services.wsdl',
             array(
                 'user' => $this->username,
                 'password' => $this->password,
@@ -716,19 +721,20 @@ class Client
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @throws EWS_Exception
+     * @throws \Exception
      *
-     * @param stdClass $response
-     * @return EWSType
-     *
-     * @todo Map the response to a real object.
+     * @param \stdClass $response
+     * @return \stdClass
      */
     protected function processResponse($response)
     {
-        // If the soap call failed then we need to thow an exception.
+        // If the soap call failed then we need to throw an exception.
         $code = $this->soap->getResponseCode();
         if ($code != 200) {
-            throw new EWS_Exception('SOAP client returned status of '.$code, $code);
+            throw new \Exception(
+                "SOAP client returned status of $code.",
+                $code
+            );
         }
 
         return $response;
