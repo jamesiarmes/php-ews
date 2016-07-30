@@ -389,7 +389,7 @@ class Autodiscover
             }
             return new Client(
                 $server,
-                $this->email,
+                (!empty($this->username) ? $this->username : $this->email),
                 $this->password,
                 $version
             );
