@@ -5,9 +5,7 @@ Contributions are always welcome!
 If you would like to contribute code please fork this repository and issue a
 pull request against the master branch. It is recommended that you make any
 changes to your fork in a separate branch that you would then use for the pull
-request. If you would like to receive credit for your contribution outside of
-git, please add your name and email address (optional) to the CONTRIBUTORS.txt
-file. All contributions should follow the
+request. All contributions should follow the
 [PSR-2](http://www.php-fig.org/psr/psr-2/) coding standard.
 
 ## Contributing Documentation

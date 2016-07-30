@@ -1,8 +1,0 @@
-Project maintainer:
-James I. Armes <jamesiarmes@gmail.com>
-
-Additional contributers:
-David Gwynne <jon.kloske.uq@gmail.com>
-Chris Kitchen <cby016@gmail.com>
-Daniel Areiza <daareiza@gmail.com>
-Clay Loveless <clay@loveless.net>
