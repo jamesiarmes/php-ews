@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section>
+  <div class="jumbotron">
+    <div class="container">
+      {{site.description}}
+
+    </div>
+
+</div>
+</section>
+
+<section id="page-content">
+  <div class="container">
+    <div class="post-list">
+      {%  for post in site.posts %}
+      <div class="post-box">
+        <div class="post-title">
+          <a class="post-title" href="{{post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+        </div>
+
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+          {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}
+        </p>
+
+        <div class="post-content container" itemprop="articleBody">
+          {{ post.content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

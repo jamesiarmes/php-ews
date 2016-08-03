@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="jumbotron">
+<div class="container">
+  <h1 class="post-title-main" itemprop="name headline">{{ page.title }}</h1>
+  <h4 class="post-title-main" itemprop="name headline">Last updated: {{ page.updated | date: "%b %-d, %Y" }}</h4>
+</div>
+</div>
+
+<div class="container page-stuff">
+  {% include sidebar.html %}
+
+  {{ content }}
+</div>
