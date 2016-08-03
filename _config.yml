@@ -14,7 +14,7 @@ description: "<h1>php-ews</h1>PHP Exchange Web Services library."
 
 
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/php-ews" # the subpath of your site, e.g. /blog
 url: "http://jamesiarmes.github.io/php-ews" # the base hostname & protocol for your site
 twitter_username: jamesiarmes
 github_username:  jamesiarmes
