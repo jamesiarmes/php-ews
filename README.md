@@ -71,7 +71,7 @@ The request objects are build similar to the XML body of the request. See the
 resources section below for more information on building the requests.
 
 ## Resources
-* [PHP Exchange Web Services Wiki](https://github.com/jamesiarmes/php-ews/wiki)
+* [php-ews Website](http://jamesarmes.com/php-ews/)
 * [Exchange 2007 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=EXCHG.80\).aspx)
 * [Exchange 2010 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=exchg.140\).aspx)
 * [Exchange 2013 Web Services Reference](http://msdn.microsoft.com/library/bb204119\(v=exchg.150\).aspx)

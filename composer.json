@@ -1,6 +1,7 @@
 {
   "name": "php-ews/php-ews",
   "description": "Library for communicating with Exchange Web Services.",
+  "homepage": "http://jamesarmes.com/php-ews/",
   "license": "MIT",
   "authors": [
     {
