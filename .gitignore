@@ -1,5 +1,3 @@
-.buildpath
-.project
-.settings/
-tests/
-/nbproject/
+# Ignore files created by composer.
+composer.lock
+vendor/
