@@ -14,7 +14,6 @@
 }
 .navbar-default .navbar-nav > li > a:hover{
     color:#03a4fb !important;
-
 }
 .navbar-default .navbar-nav > li > a:focus{
     color:#03a4fb !important;
@@ -39,7 +38,6 @@ body{
         color:#03a4fb !important;
         text-decoration: none !important;
         border-bottom: 1px dotted #03a4fb;
-        padding-bottom:0.5em;
       }
     }
   }
@@ -57,12 +55,13 @@ body{
 a {
     color: #03a4fb;
     text-decoration: none;
+    word-wrap: break-word;
 }
 a:hover{
   color:#03a4fb !important;
   text-decoration: none !important;
   border-bottom: 1px dotted #03a4fb;
-
+  padding-bottom: 0;
 }
 
 .post-list{

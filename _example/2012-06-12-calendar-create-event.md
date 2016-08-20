@@ -62,7 +62,7 @@ $response = $ews->CreateItem($request);
 In Exchange 2010, the start and end times should be set without the timezone
 offset. Instead, you should set the StartTimeZone and EndTimeZone properties. To
 retrieve timezone definitions from you server, see
-[Timezone: Retrieving Timezone Definitions](/doc/0.1/examples/timezone-retrieving-timezone-definitions.html).
+[Timezone: Retrieving Timezone Definitions](/php-ews/doc/0.1/examples/timezone-retrieving-timezone-definitions.html).
 
 ```php?start_inline=1
 // Set the start and end times.
