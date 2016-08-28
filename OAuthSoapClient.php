@@ -84,6 +84,12 @@ class OAuthSoapClient extends SoapClient
             'Authorization: Bearer ' . $this->access_token
         );
 
+		if (!is_null($this->anchor_mailbox))
+		{
+			$headers['X-AnchorMailbox'] = $this->anchor_mailbox;
+			$headers['X-PreferServerAffinity'] = true;
+		}
+
         $this->__last_request_headers = $headers;
         $this->ch = curl_init($location);
 

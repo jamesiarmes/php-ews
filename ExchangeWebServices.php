@@ -249,6 +249,8 @@ class ExchangeWebServices
      * Sets the authorizing method.
      *
      * @param string $auth_method The method to use for authorization, either NTLM or OAuth
+	 *
+	 * @return bool
      */
     public function setAuthMethod($auth_method)
     {
@@ -261,6 +263,8 @@ class ExchangeWebServices
      * Sets the access token. This is needed for OAuth authorization.
      *
      * @param string $access_token The access token to use
+	 *
+	 * @return bool
      */
     public function setAccessToken($access_token)
     {
@@ -273,10 +277,17 @@ class ExchangeWebServices
      * Sets the impersonation property.
      *
      * @param EWSType_ExchangeImpersonationType $impersonation
+	 *
+	 * @return bool
      */
     public function setImpersonation($impersonation)
     {
         $this->impersonation = $impersonation;
+
+        if ($this->soap)
+        {
+            $this->soap->setAnchorMailBox($impersonation->ConnectingSID->PrimarySmtpAddress);
+        }
 
         return true;
     }
@@ -285,6 +296,7 @@ class ExchangeWebServices
      * Sets the password property.
      *
      * @param string $password
+	 * @return bool
      */
     public function setPassword($password)
     {
@@ -297,6 +309,7 @@ class ExchangeWebServices
      * Sets the server property.
      *
      * @param string $server
+	 * @return bool
      */
     public function setServer($server)
     {
@@ -309,6 +322,7 @@ class ExchangeWebServices
      * Sets the user name property.
      *
      * @param string $username
+	 * @return bool
      */
     public function setUsername($username)
     {
@@ -321,6 +335,7 @@ class ExchangeWebServices
      * Sets the version property.
      *
      * @param string $version
+	 * @return bool
      */
     public function setVersion($version)
     {

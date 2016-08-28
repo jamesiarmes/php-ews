@@ -32,6 +32,13 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
      */
     protected $write_to_file;
 
+	/**
+	 * Used for routing users for impersonation purposes.
+	 *
+	 * @var string
+	 */
+	protected $anchor_mailbox;
+
     /**
      * Constructor
      *
@@ -65,7 +72,9 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
                 'ExchangeImpersonation',
                 $options['impersonation']
             );
-        }
+
+            $this->anchor_mailbox = $options['impersonation']->ConnectingSID->PrimarySmtpAddress;
+		}
 
         // set the file output
         $this->file_output = $file_output;
@@ -74,6 +83,16 @@ class OAuthSoapClient_Exchange extends OAuthSoapClient
         $this->write_to_file = $write_to_file;
 
         parent::__construct($wsdl, $options);
+    }
+
+	/**
+     * Set the anchor mailbox value for X-AnchorMailBox header.
+     *
+	 * @param string $email
+     */
+    public function setAnchorMailBox($email)
+	{
+		$this->anchor_mailbox = $email;
     }
 
     /**
