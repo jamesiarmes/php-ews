@@ -1,9 +1,9 @@
 <?php
 /**
- * Contains \jamesiarmes\PhpEws\Type\FindMailboxStatisticsByKeywordsResponseMessageType.
+ * Contains \jamesiarmes\PhpEws\Response\FindMailboxStatisticsByKeywordsResponseMessageType.
  */
 
-namespace jamesiarmes\PhpEws\Type;
+namespace jamesiarmes\PhpEws\Response;
 
 /**
  * Represents the response message for a FindMailboxStatisticsByKeywords

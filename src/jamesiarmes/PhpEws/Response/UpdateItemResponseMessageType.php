@@ -1,9 +1,9 @@
 <?php
 /**
- * Contains \jamesiarmes\PhpEws\Type\UpdateItemResponseMessageType.
+ * Contains \jamesiarmes\PhpEws\Response\UpdateItemResponseMessageType.
  */
 
-namespace jamesiarmes\PhpEws\Type;
+namespace jamesiarmes\PhpEws\Response;
 
 /**
  * Represents the status and result of a single UpdateItem request.

@@ -183,7 +183,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\FindMailboxStatisticsByKeywordsResponseMessageType[]
+     * @var \jamesiarmes\PhpEws\Response\FindMailboxStatisticsByKeywordsResponseMessageTypee[]
      */
     public $FindMailboxStatisticsByKeywordsResponseMessage;
 
@@ -408,7 +408,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\UpdateItemResponseMessageType[]
+     * @var \jamesiarmes\PhpEws\Response\UpdateItemResponseMessageType[]
      */
     public $UpdateItemResponseMessage;
 
