@@ -145,6 +145,13 @@ class Autodiscover
     protected $skip_ssl_verification = false;
 
     /**
+     * The body of the last response.
+     *
+     * @var string
+     */
+    public $last_response;
+
+    /**
      * An associative array of response headers that resulted from the
      * last request. Keys are lowercased for easy checking.
      *
@@ -303,22 +310,17 @@ class Autodiscover
 
         $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
         $minorversion = base_convert(substr($svbinary, 10, 6), 2, 10);
-        $buildversion = base_convert(substr($svbinary, 17, 15), 2, 10);
 
         if ($majorversion == 8) {
             switch ($minorversion) {
                 case 0:
                     return Client::VERSION_2007;
-                    break;
                 case 1:
                     return Client::VERSION_2007_SP1;
-                    break;
                 case 2:
                     return Client::VERSION_2007_SP2;
-                    break;
                 case 3:
                     return Client::VERSION_2007_SP3;
-                    break;
                 default:
                     return Client::VERSION_2007;
             }
@@ -326,13 +328,10 @@ class Autodiscover
             switch ($minorversion) {
                 case 0:
                     return Client::VERSION_2010;
-                    break;
                 case 1:
                     return Client::VERSION_2010_SP1;
-                    break;
                 case 2:
                     return Client::VERSION_2010_SP2;
-                    break;
                 default:
                     return Client::VERSION_2010;
             }
@@ -421,13 +420,8 @@ class Autodiscover
      */
     public function tryTLD()
     {
-        $url = 'https://www.'.$this->tld . self::AUTODISCOVER_PATH;
-        $result = $this->doNTLMPost($url, 5);
-        if ($result) {
-            return self::AUTODISCOVERED_VIA_TLD;
-        }
-
-        return false;
+        $url = 'https://www.' . $this->tld . self::AUTODISCOVER_PATH;
+        return ($this->tryViaUrl($url) ? self::AUTODISCOVERED_VIA_TLD : false);
     }
 
     /**
@@ -438,13 +432,10 @@ class Autodiscover
      */
     public function trySubdomain()
     {
-        $url = 'https://autodiscover.'.$this->tld . self::AUTODISCOVER_PATH;
-        $result = $this->doNTLMPost($url, 5);
-        if ($result) {
-            return self::AUTODISCOVERED_VIA_SUBDOMAIN;
-        }
-
-        return false;
+        $url = 'https://autodiscover.' . $this->tld . self::AUTODISCOVER_PATH;
+        return ($this->tryViaUrl($url)
+            ? self::AUTODISCOVERED_VIA_SUBDOMAIN
+            : false);
     }
 
     /**
@@ -480,12 +471,7 @@ class Autodiscover
             $this->last_info['http_code'] == 302
             || $this->last_info['http_code'] == 301
         ) {
-            // Do the NTLM POST to the redirect.
-            $result = $this->doNTLMPost(
-                $this->last_response_headers['location']
-            );
-
-            if ($result) {
+            if ($this->tryViaUrl($this->last_response_headers['location'])) {
                 return self::AUTODISCOVERED_VIA_UNAUTHENTICATED_GET;
             }
         }
@@ -506,8 +492,7 @@ class Autodiscover
         if (sizeof($lookup) > 0) {
             $host = $lookup[0]['target'];
             $url = 'https://' . $host . self::AUTODISCOVER_PATH;
-            $result = $this->doNTLMPost($url);
-            if ($result) {
+            if ($this->tryViaUrl($url)) {
                 return self::AUTODISCOVERED_VIA_SRV_RECORD;
             }
         }
@@ -647,13 +632,11 @@ class Autodiscover
                     'redirectUrl' => $response['Account']['redirectUrl']
                 );
                 return false;
-                break;
             case 'redirectAddr':
                 $this->redirect = array(
                     'redirectAddr' => $response['Account']['redirectAddr']
                 );
                 return false;
-                break;
             case 'settings':
             default:
                 $this->discovered = $response;
@@ -821,4 +804,15 @@ class Autodiscover
         return $output;
     }
 
+    /**
+     * Attempts an autodiscover via a URL.
+     *
+     * @param string $url Url to attempt an autodiscover.
+     * @return boolean
+     */
+    protected function tryViaUrl($url, $timeout = 6)
+    {
+        $result = $this->doNTLMPost($url, $timeout);
+        return ($result ? true : false);
+    }
 }
