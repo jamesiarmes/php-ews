@@ -703,6 +703,7 @@ class Client
      */
     protected function initializeSoapClient()
     {
+        $backup = libxml_disable_entity_loader(true);
         $this->soap = new SoapClient(
             dirname(__FILE__) . '/assets/services.wsdl',
             array(
@@ -713,6 +714,7 @@ class Client
                 'impersonation' => $this->impersonation,
             )
         );
+        libxml_disable_entity_loader($backup);
 
         return $this->soap;
     }
