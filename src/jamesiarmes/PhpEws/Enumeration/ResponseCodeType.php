@@ -2319,7 +2319,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const INVALID_RETENTION_TAG_TYPE_MISMATCH  = 'ErrorInvalidRetentionTagTypeMismatch';
+    const INVALID_RETENTION_TAG_TYPE_MISMATCH = 'ErrorInvalidRetentionTagTypeMismatch';
 
     /**
      * This error occurs if the routing type that is passed for an

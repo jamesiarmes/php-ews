@@ -17,7 +17,7 @@ class Enumeration extends Type
      *
      * @var string
      */
-    public $_ ;
+    public $_;
 
     /**
      * Returns the value of this enumeration as a string..
@@ -26,6 +26,6 @@ class Enumeration extends Type
      */
     public function __toString()
     {
-        return $this-> _ ;
+        return $this->_;
     }
 }
