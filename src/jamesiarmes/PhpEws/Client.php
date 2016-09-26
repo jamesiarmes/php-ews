@@ -704,12 +704,12 @@ class Client
     protected function initializeSoapClient()
     {
         $this->soap = new SoapClient(
-            dirname(__FILE__).'/assets/services.wsdl',
+            dirname(__FILE__) . '/assets/services.wsdl',
             array(
                 'user' => $this->username,
                 'password' => $this->password,
                 'version' => $this->version,
-                'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
+                'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'impersonation' => $this->impersonation,
             )
         );

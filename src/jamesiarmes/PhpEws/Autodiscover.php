@@ -305,7 +305,7 @@ class Autodiscover
     {
         $svbinary = base_convert($version_hex, 16, 2);
         if (strlen($svbinary) == 31) {
-            $svbinary = '0'.$svbinary;
+            $svbinary = '0' . $svbinary;
         }
 
         $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
@@ -447,7 +447,7 @@ class Autodiscover
     public function trySubdomainUnauthenticatedGet()
     {
         $this->reset();
-        $url = 'http://autodiscover.'.$this->tld . self::AUTODISCOVER_PATH;
+        $url = 'http://autodiscover.' . $this->tld . self::AUTODISCOVER_PATH;
         $ch = curl_init();
         $opts = array(
             CURLOPT_URL                 => $url,
@@ -563,7 +563,7 @@ class Autodiscover
             CURLOPT_CUSTOMREQUEST   => 'POST',
             CURLOPT_POSTFIELDS      => $this->getAutoDiscoverRequest(),
             CURLOPT_RETURNTRANSFER  => true,
-            CURLOPT_USERPWD         => $this->username.':'.$this->password,
+            CURLOPT_USERPWD         => $this->username . ':' . $this->password,
             CURLOPT_TIMEOUT         => $timeout,
             CURLOPT_CONNECTTIMEOUT  => $this->connection_timeout,
             CURLOPT_FOLLOWLOCATION  => true,
@@ -577,11 +577,11 @@ class Autodiscover
         // Set the appropriate content-type.
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml; charset=utf-8'));
 
-        if (! empty($this->cainfo)) {
+        if (!empty($this->cainfo)) {
             $opts[CURLOPT_CAINFO] = $this->cainfo;
         }
 
-        if (! empty($this->capath)) {
+        if (!empty($this->capath)) {
             $opts[CURLOPT_CAPATH] = $this->capath;
         }
 
@@ -609,7 +609,8 @@ class Autodiscover
      * Parse the Autoresponse Payload, particularly to determine if an
      * additional request is necessary.
      *
-     * @return mixed FALSE if response isn't XML or parsed response array
+     * @return boolean|array FALSE if response isn't XML or parsed response
+     *   array.
      */
     protected function parseAutodiscoverResponse()
     {
@@ -654,7 +655,7 @@ class Autodiscover
     {
         $pos = strpos($this->email, '@');
         if ($pos !== false) {
-            $this->tld = trim(substr($this->email, $pos+1));
+            $this->tld = trim(substr($this->email, $pos + 1));
             return true;
         }
 
@@ -684,7 +685,7 @@ class Autodiscover
      */
     public function getAutodiscoverRequest()
     {
-        if (! empty($this->requestxml)) {
+        if (!empty($this->requestxml)) {
             return $this->requestxml;
         }
 
@@ -724,7 +725,7 @@ class Autodiscover
         $pos = strpos($str, ':');
         if ($pos !== false) {
             $key = strtolower(substr($str, 0, $pos));
-            $val = trim(substr($str, $pos+1));
+            $val = trim(substr($str, $pos + 1));
             $this->last_response_headers[$key] = $val;
         }
 
@@ -750,9 +751,10 @@ class Autodiscover
     /**
      * Recursive method for parsing DOM nodes.
      *
-     * @link https://github.com/gaarf/XML-string-to-PHP-array
-     * @param object $node DOMNode object
+     * @param \DOMElement $node DOMNode object.
      * @return mixed
+     *
+     * @link https://github.com/gaarf/XML-string-to-PHP-array
      */
     protected function nodeToArray($node)
     {
@@ -763,7 +765,7 @@ class Autodiscover
                 $output = trim($node->textContent);
                 break;
             case XML_ELEMENT_NODE:
-                for ($i=0, $m = $node->childNodes->length; $i < $m; $i++) {
+                for ($i = 0, $m = $node->childNodes->length; $i < $m; $i++) {
                     $child = $node->childNodes->item($i);
                     $v = $this->nodeToArray($child);
                     if (isset($child->tagName)) {
@@ -793,7 +795,7 @@ class Autodiscover
                         $output['@attributes'] = $a;
                     }
                     foreach ($output as $t => $v) {
-                        if (is_array($v) && count($v)==1 && $t!='@attributes') {
+                        if (is_array($v) && count($v) == 1 && $t != '@attributes') {
                             $output[$t] = $v[0];
                         }
                     }

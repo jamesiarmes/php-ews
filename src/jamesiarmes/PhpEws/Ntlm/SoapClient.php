@@ -64,7 +64,7 @@ class SoapClient extends \SoapClient
             'Connection: Keep-Alive',
             'User-Agent: PHP-SOAP-CURL',
             'Content-Type: text/xml; charset=utf-8',
-            'SOAPAction: "'.$action.'"',
+            'SOAPAction: "' . $action . '"',
         );
 
         $this->__last_request_headers = $headers;
@@ -74,11 +74,11 @@ class SoapClient extends \SoapClient
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($this->ch, CURLOPT_POST, true );
+        curl_setopt($this->ch, CURLOPT_POST, true);
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
         curl_setopt($this->ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
-        curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
+        curl_setopt($this->ch, CURLOPT_USERPWD, $this->user . ':' . $this->password);
 
         $response = curl_exec($this->ch);
 
