@@ -148,7 +148,9 @@ class OAuthSoapClient extends SoapClient
 
             if ($result)
             {
-                $xml = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $result);
+                // replaces anything thats not in the list below with ' '
+                // #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+                $xml = preg_replace("/&#x(([0-8B-CEF])|([1][0-9A-F])|([D][8-9A-F][0-9A-F]{2})|([F][F][F][E-F])|([1-9A-F][1-9A-F][0-9A-F]{4}));/", " ", $result);
             }
         }
 
@@ -188,13 +190,13 @@ class OAuthSoapClient extends SoapClient
         }
 
         // sanitize the data
-        $sanitized_data = preg_replace('/&#x[0-1]?[0-9A-F];/', ' ', $data);
+        $sanitized_data = preg_replace("/&#x(([0-8B-CEF])|([1][0-9A-F])|([D][8-9A-F][0-9A-F]{2})|([F][F][F][E-F])|([1-9A-F][1-9A-F][0-9A-F]{4}));/", " ", $data);
 
         // store the last segment of the data
-        $this->last_segment = substr($sanitized_data, -5);
+        $this->last_segment = substr($sanitized_data, -10);
 
         // write the data to the file handler without the last segment
-        fwrite($this->file_handler, substr($sanitized_data, 0, -5));
+        fwrite($this->file_handler, substr($sanitized_data, 0, -10));
 
         return $length;
     }
