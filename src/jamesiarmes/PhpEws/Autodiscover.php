@@ -420,7 +420,7 @@ class Autodiscover
      */
     public function tryTLD()
     {
-        $url = 'https://www.' . $this->tld . self::AUTODISCOVER_PATH;
+        $url = 'https://' . $this->tld . self::AUTODISCOVER_PATH;
         return ($this->tryViaUrl($url) ? self::AUTODISCOVERED_VIA_TLD : false);
     }
 
@@ -559,7 +559,7 @@ class Autodiscover
         $ch = curl_init();
         $opts = array(
             CURLOPT_URL             => $url,
-            CURLOPT_HTTPAUTH        => CURLAUTH_NTLM,
+            CURLOPT_HTTPAUTH        => CURLAUTH_BASIC | CURLAUTH_NTLM,
             CURLOPT_CUSTOMREQUEST   => 'POST',
             CURLOPT_POSTFIELDS      => $this->getAutoDiscoverRequest(),
             CURLOPT_RETURNTRANSFER  => true,
@@ -571,7 +571,7 @@ class Autodiscover
             CURLOPT_HEADERFUNCTION  => array($this, 'readHeaders'),
             CURLOPT_IPRESOLVE       => CURL_IPRESOLVE_V4,
             CURLOPT_SSL_VERIFYPEER  => true,
-            CURLOPT_SSL_VERIFYHOST  => true,
+            CURLOPT_SSL_VERIFYHOST  => 2,
         );
 
         // Set the appropriate content-type.
@@ -587,7 +587,6 @@ class Autodiscover
 
         if ($this->skip_ssl_verification) {
             $opts[CURLOPT_SSL_VERIFYPEER] = false;
-            $opts[CURLOPT_SSL_VERIFYHOST] = false;
         }
 
         curl_setopt_array($ch, $opts);
