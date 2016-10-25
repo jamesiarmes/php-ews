@@ -12,7 +12,9 @@ title: php-ews
 #write html inside the double quotes to display in jumbotron
 description: "<h1>php-ews</h1>PHP Exchange Web Services library."
 
-
+#google analytics
+google:
+    tracking-id: "UA-3412924-3" #paste your tracking id here
 
 baseurl: "/php-ews" # the subpath of your site, e.g. /blog
 url: "http://jamesiarmes.github.io/php-ews" # the base hostname & protocol for your site
