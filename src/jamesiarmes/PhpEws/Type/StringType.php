@@ -12,7 +12,7 @@ use \jamesiarmes\PhpEws\Type;
  *
  * @package php-ews\Type
  */
-abstract class String extends Type
+abstract class StringType extends Type
 {
     /**
      * Value of the element.
