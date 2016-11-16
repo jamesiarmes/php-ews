@@ -271,6 +271,22 @@ class Client
     }
 
     /**
+     * Adds a new instant messaging (IM) group to a mailbox.
+     *
+     * @param \jamesiarmes\PhpEws\Request\AddImGroupType $request
+     * @return \jamesiarmes\PhpEws\Response\AddImGroupResponseMessageType
+     *
+     * @since Exchange 2013
+     */
+    public function AddImGroup($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
