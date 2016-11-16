@@ -15,7 +15,6 @@ use \jamesiarmes\PhpEws\ArrayType;
  */
 class ArrayOfArraysOfTrackingPropertiesType extends ArrayType
 {
-
     /**
      * Contains a list of one or more tracking properties.
      *

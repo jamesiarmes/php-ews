@@ -238,6 +238,23 @@ class Client
     }
 
     /**
+     * Adds a distribution group to the instant messaging (IM) list in the
+     * Unified Contact Store.
+     *
+     * @param \jamesiarmes\PhpEws\Request\AddDistributionGroupToImListType $request
+     * @return \jamesiarmes\PhpEws\Response\AddDistributionGroupToImListResponseMessageType
+     *
+     * @since Exchange 2013
+     */
+    public function AddDistributionGroupToImList($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
