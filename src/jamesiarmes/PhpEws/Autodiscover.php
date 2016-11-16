@@ -317,12 +317,12 @@ class Autodiscover
                 return $this->parseVersion2007($minorversion);
             case 14:
                 return $this->parseVersion2010($minorversion);
-            case 15;
+            case 15:
                 if ($minorversion == 0) {
-                    return $this->parseVersion2013($minorversion, $majorbuild);
+                    return $this->parseVersion2013($majorbuild);
                 }
 
-                return $this->parseVersion2016($minorversion, $majorbuild);
+                return $this->parseVersion2016();
         }
 
         // Guess we didn't find a known version.
@@ -848,10 +848,9 @@ class Autodiscover
     /**
      * Parses the version of an Exchange 2016 server.
      *
-     * @param integer $majorbuild Major build version.
      * @return string Server version.
      */
-    protected function parseVersion2016($majorbuild) {
+    protected function parseVersion2016() {
         return Client::VERSION_2016;
     }
 
