@@ -310,31 +310,19 @@ class Autodiscover
 
         $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
         $minorversion = base_convert(substr($svbinary, 10, 6), 2, 10);
+        $majorbuild = base_convert(substr($svbinary, 17, 15), 2, 10);
 
-        if ($majorversion == 8) {
-            switch ($minorversion) {
-                case 0:
-                    return Client::VERSION_2007;
-                case 1:
-                    return Client::VERSION_2007_SP1;
-                case 2:
-                    return Client::VERSION_2007_SP2;
-                case 3:
-                    return Client::VERSION_2007_SP3;
-                default:
-                    return Client::VERSION_2007;
-            }
-        } elseif ($majorversion == 14) {
-            switch ($minorversion) {
-                case 0:
-                    return Client::VERSION_2010;
-                case 1:
-                    return Client::VERSION_2010_SP1;
-                case 2:
-                    return Client::VERSION_2010_SP2;
-                default:
-                    return Client::VERSION_2010;
-            }
+        switch ($majorversion) {
+            case 8:
+                return $this->parseVersion2007($minorversion);
+            case 14:
+                return $this->parseVersion2010($minorversion);
+            case 15;
+                if ($minorversion == 0) {
+                    return $this->parseVersion2013($minorversion, $majorbuild);
+                }
+
+                return $this->parseVersion2016($minorversion, $majorbuild);
         }
 
         // Guess we didn't find a known version.
@@ -803,6 +791,68 @@ class Autodiscover
         }
 
         return $output;
+    }
+
+    /**
+     * Parses the version of an Exchange 2007 server.
+     *
+     * @param integer $minorversion Minor server version.
+     * @return string Server version.
+     */
+    protected function parseVersion2007($minorversion) {
+        switch ($minorversion) {
+            case 0:
+                return Client::VERSION_2007;
+            case 1:
+                return Client::VERSION_2007_SP1;
+            case 2:
+                return Client::VERSION_2007_SP2;
+            case 3:
+                return Client::VERSION_2007_SP3;
+            default:
+                return Client::VERSION_2007;
+        }
+    }
+
+    /**
+     * Parses the version of an Exchange 2010 server.
+     *
+     * @param integer $minorversion Minor server version.
+     * @return string Server version.
+     */
+    protected function parseVersion2010($minorversion) {
+        switch ($minorversion) {
+            case 0:
+                return Client::VERSION_2010;
+            case 1:
+                return Client::VERSION_2010_SP1;
+            case 2:
+                return Client::VERSION_2010_SP2;
+            default:
+                return Client::VERSION_2010;
+        }
+    }
+
+    /**
+     * Parses the version of an Exchange 2013 server.
+     *
+     * @param integer $majorbuild Major build version.
+     * @return string Server version.
+     */
+    protected function parseVersion2013($majorbuild) {
+        return ($majorbuild == 847
+            ? Client::VERSION_2013_SP1
+            : Client::VERSION_2013);
+    }
+
+    /**
+     * Parses the version of an Exchange 2016 server.
+     *
+     * @param integer $majorbuild Major build version.
+     * @return string Server version.
+     */
+    protected function parseVersion2016($majorbuild) {
+        return Client::VERSION_2016;
     }
 
     /**

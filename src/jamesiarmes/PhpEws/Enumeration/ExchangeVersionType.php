@@ -79,4 +79,13 @@ class ExchangeVersionType extends Enumeration
      * @var string
      */
     const EXCHANGE_2013_SP1 = 'Exchange2013_SP1';
+
+    /**
+     * Target the schema files for Exchange 2016.
+     *
+     * @since Exchange 2016
+     *
+     * @var string
+     */
+    const VERSION_2016 = 'Exchange2016';
 }
