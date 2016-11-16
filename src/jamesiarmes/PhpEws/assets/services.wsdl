@@ -10,6 +10,23 @@
             <xs:import namespace="http://schemas.microsoft.com/exchange/services/2006/messages" schemaLocation="messages.xsd"/>
         </xs:schema>
     </wsdl:types>
+    <wsdl:message name="FindAvailableMeetingTimesSoapIn">
+        <wsdl:part name="request" element="tns:FindAvailableMeetingTimes"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="FindAvailableMeetingTimesSoapOut">
+        <wsdl:part name="FindAvailableMeetingTimesResult" element="tns:FindAvailableMeetingTimesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="FindMeetingTimeCandidatesSoapIn">
+        <wsdl:part name="request" element="tns:FindMeetingTimeCandidates"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
+    </wsdl:message>
+    <wsdl:message name="FindMeetingTimeCandidatesSoapOut">
+        <wsdl:part name="FindMeetingTimeCandidatesResult" element="tns:FindMeetingTimeCandidatesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
     <wsdl:message name="UploadItemsSoapIn">
         <wsdl:part name="request" element="tns:UploadItems"/>
         <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
@@ -25,6 +42,7 @@
         <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
         <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
     </wsdl:message>
     <wsdl:message name="ExportItemsSoapOut">
         <wsdl:part name="ExportItemsResult" element="tns:ExportItemsResponse"/>
@@ -46,6 +64,7 @@
         <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
         <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
     </wsdl:message>
     <wsdl:message name="GetFolderSoapOut">
         <wsdl:part name="GetFolderResult" element="tns:GetFolderResponse" />
@@ -60,6 +79,17 @@
     </wsdl:message>
     <wsdl:message name="CreateFolderSoapOut">
         <wsdl:part name="CreateFolderResult" element="tns:CreateFolderResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="CreateFolderPathSoapIn">
+        <wsdl:part name="request" element="tns:CreateFolderPath" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
+    </wsdl:message>
+    <wsdl:message name="CreateFolderPathSoapOut">
+        <wsdl:part name="CreateFolderPathResult" element="tns:CreateFolderPathResponse" />
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="CreateManagedFolderSoapIn">
@@ -88,7 +118,7 @@
         <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
     </wsdl:message>
-        <wsdl:message name="EmptyFolderSoapOut">
+    <wsdl:message name="EmptyFolderSoapOut">
         <wsdl:part name="EmptyFolderResult" element="tns:EmptyFolderResponse" />
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
@@ -129,6 +159,7 @@
         <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
         <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
     </wsdl:message>
     <wsdl:message name="FindFolderSoapOut">
         <wsdl:part name="FindFolderResult" element="tns:FindFolderResponse"/>
@@ -141,6 +172,7 @@
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
         <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
         <wsdl:part name="DateTimePrecision" element="t:DateTimePrecision" />
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
     </wsdl:message>
     <wsdl:message name="GetItemSoapOut">
         <wsdl:part name="GetItemResult" element="tns:GetItemResponse" />
@@ -178,6 +210,18 @@
         <wsdl:part name="UpdateItemResult" element="tns:UpdateItemResponse" />
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
+    <wsdl:message name="UpdateItemInRecoverableItemsSoapIn">
+        <wsdl:part name="request" element="tns:UpdateItemInRecoverableItems" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateItemInRecoverableItemsSoapOut">
+        <wsdl:part name="UpdateItemInRecoverableItemsResult" element="tns:UpdateItemInRecoverableItemsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
     <wsdl:message name="SendItemSoapIn">
         <wsdl:part name="request" element="tns:SendItem" />
         <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
@@ -206,6 +250,16 @@
     </wsdl:message>
     <wsdl:message name="CopyItemSoapOut">
         <wsdl:part name="CopyItemResult" element="tns:CopyItemResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="ArchiveItemSoapIn">
+        <wsdl:part name="request" element="tns:ArchiveItem" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="ArchiveItemSoapOut">
+        <wsdl:part name="ArchiveItemResult" element="tns:ArchiveItemResponse" />
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="CreateAttachmentSoapIn">
@@ -238,6 +292,38 @@
     </wsdl:message>
     <wsdl:message name="GetAttachmentSoapOut">
         <wsdl:part name="GetAttachmentResult" element="tns:GetAttachmentResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetClientAccessTokenSoapIn">
+        <wsdl:part name="request" element="tns:GetClientAccessToken" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetClientAccessTokenSoapOut">
+        <wsdl:part name="GetClientAccessTokenResult" element="tns:GetClientAccessTokenResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetFocusedOtherOverridesSoapIn">
+        <wsdl:part name="request" element="tns:GetFocusedOtherOverrides"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetFocusedOtherOverridesSoapOut">
+        <wsdl:part name="GetFocusedOtherOverridesResult" element="tns:GetFocusedOtherOverridesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="CreateOrUpdateFocusedOtherOverrideSoapIn">
+        <wsdl:part name="request" element="tns:CreateOrUpdateFocusedOtherOverride"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="CreateOrUpdateFocusedOtherOverrideSoapOut">
+        <wsdl:part name="CreateOrUpdateFocusedOtherOverrideResult" element="tns:CreateOrUpdateFocusedOtherOverrideResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteFocusedOtherOverrideSoapIn">
+        <wsdl:part name="request" element="tns:DeleteFocusedOtherOverride"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteFocusedOtherOverrideSoapOut">
+        <wsdl:part name="DeleteFocusedOtherOverrideResult" element="tns:DeleteFocusedOtherOverrideResponse"/>
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="ResolveNamesSoapIn">
@@ -276,6 +362,7 @@
         <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
         <wsdl:part name="TimeZoneContext" element="t:TimeZoneContext"/>
         <wsdl:part name="DateTimePrecision" element="t:DateTimePrecision" />
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
     </wsdl:message>
     <wsdl:message name="FindItemSoapOut">
         <wsdl:part name="FindItemResult" element="tns:FindItemResponse"/>
@@ -313,14 +400,14 @@
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="GetStreamingEventsSoapIn">
-      <wsdl:part name="request" element="tns:GetStreamingEvents" />
-      <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
-      <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
-      <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="request" element="tns:GetStreamingEvents" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
     </wsdl:message>
     <wsdl:message name="GetStreamingEventsSoapOut">
-      <wsdl:part name="GetStreamingEventsResult" element="tns:GetStreamingEventsResponse" />
-      <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+        <wsdl:part name="GetStreamingEventsResult" element="tns:GetStreamingEventsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="SyncFolderHierarchySoapIn">
         <wsdl:part name="request" element="tns:SyncFolderHierarchy" />
@@ -412,6 +499,16 @@
     </wsdl:message>
     <wsdl:message name="GetUserConfigurationSoapOut">
         <wsdl:part name="GetUserConfigurationResult" element="tns:GetUserConfigurationResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetSpecificUserConfigurationSoapIn">
+        <wsdl:part name="request" element="tns:GetSpecificUserConfiguration" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetSpecificUserConfigurationSoapOut">
+        <wsdl:part name="GetSpecificUserConfigurationResult" element="tns:GetSpecificUserConfigurationResponse" />
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
     <wsdl:message name="UpdateUserConfigurationSoapIn">
@@ -529,6 +626,27 @@
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
 
+    <!-- SetTeamMailbox -->
+    <wsdl:message name="SetTeamMailboxSoapIn">
+        <wsdl:part name="request" element="tns:SetTeamMailbox"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="SetTeamMailboxSoapOut">
+        <wsdl:part name="SetTeamMailboxResult" element="tns:SetTeamMailboxResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- UnpinTeamMailbox -->
+    <wsdl:message name="UnpinTeamMailboxSoapIn">
+        <wsdl:part name="request" element="tns:UnpinTeamMailbox"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="UnpinTeamMailboxSoapOut">
+        <wsdl:part name="UnpinTeamMailboxResult" element="tns:UnpinTeamMailboxResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
     <!-- Find A Room Service Messages -->
 
     <!-- GetRoomLists Service Messages -->
@@ -609,6 +727,71 @@
         <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
     </wsdl:message>
 
+    <wsdl:message name="GetConversationItemsSoapIn">
+        <wsdl:part name="request" element="tns:GetConversationItems" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="GetConversationItemsSoapOut">
+        <wsdl:part name="GetConversationItemsResult" element="tns:GetConversationItemsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
+    <!-- FindPeople Messages-->
+    <wsdl:message name="FindPeopleSoapIn">
+        <wsdl:part name="request" element="tns:FindPeople" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="FindPeopleSoapOut">
+        <wsdl:part name="FindPeopleResult" element="tns:FindPeopleResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
+    <!-- FindTags  Messages-->
+    <wsdl:message name="FindTagsSoapIn">
+        <wsdl:part name="request" element="tns:FindTags" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="FindTagsSoapOut">
+        <wsdl:part name="FindTagsResult" element="tns:FindTagsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
+    <!-- AddTag  Messages-->
+    <wsdl:message name="AddTagSoapIn">
+        <wsdl:part name="request" element="tns:AddTag" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="AddTagSoapOut">
+        <wsdl:part name="AddTagResult" element="tns:AddTagResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
+    <!-- HideTag  Messages-->
+    <wsdl:message name="HideTagSoapIn">
+        <wsdl:part name="request" element="tns:HideTag" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="HideTagSoapOut">
+        <wsdl:part name="HideTagResult" element="tns:HideTagResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
+    <!-- GetPersona Messages-->
+    <wsdl:message name="GetPersonaSoapIn">
+        <wsdl:part name="request" element="tns:GetPersona" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion" />
+    </wsdl:message>
+    <wsdl:message name="GetPersonaSoapOut">
+        <wsdl:part name="GetPersonaResult" element="tns:GetPersonaResponseMessage" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo" />
+    </wsdl:message>
+
     <!-- Inbox Rules Messages -->
     <wsdl:message name="GetInboxRulesSoapIn">
         <wsdl:part name="request" element="tns:GetInboxRules" />
@@ -635,16 +818,507 @@
     </wsdl:message>
 
     <wsdl:message name="GetPasswordExpirationDateSoapIn">
-      <wsdl:part name="request" element="tns:GetPasswordExpirationDate" />
-      <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
-      <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="request" element="tns:GetPasswordExpirationDate" />
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
     </wsdl:message>
     <wsdl:message name="GetPasswordExpirationDateSoapOut">
-      <wsdl:part name="GetPasswordExpirationDateResult" element="tns:GetPasswordExpirationDateResponse" />
-      <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+        <wsdl:part name="GetPasswordExpirationDateResult" element="tns:GetPasswordExpirationDateResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
     </wsdl:message>
 
-  <wsdl:portType name="ExchangeServicePortType">
+    <!-- Mailbox Search Messages -->
+    <wsdl:message name="GetSearchableMailboxesSoapIn">
+        <wsdl:part name="request" element="tns:GetSearchableMailboxes"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetSearchableMailboxesSoapOut">
+        <wsdl:part name="GetSearchableMailboxesResult" element="tns:GetSearchableMailboxesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="SearchMailboxesSoapIn">
+        <wsdl:part name="request" element="tns:SearchMailboxes"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="SearchMailboxesSoapOut">
+        <wsdl:part name="SearchMailboxesResult" element="tns:SearchMailboxesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetDiscoverySearchConfigurationSoapIn">
+        <wsdl:part name="request" element="tns:GetDiscoverySearchConfiguration"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetDiscoverySearchConfigurationSoapOut">
+        <wsdl:part name="GetDiscoverySearchConfigurationResult" element="tns:GetDiscoverySearchConfigurationResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetHoldOnMailboxesSoapIn">
+        <wsdl:part name="request" element="tns:GetHoldOnMailboxes"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetHoldOnMailboxesSoapOut">
+        <wsdl:part name="GetHoldOnMailboxesResult" element="tns:GetHoldOnMailboxesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="SetHoldOnMailboxesSoapIn">
+        <wsdl:part name="request" element="tns:SetHoldOnMailboxes"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="SetHoldOnMailboxesSoapOut">
+        <wsdl:part name="SetHoldOnMailboxesResult" element="tns:SetHoldOnMailboxesResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetNonIndexableItemStatisticsSoapIn">
+        <wsdl:part name="request" element="tns:GetNonIndexableItemStatistics"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetNonIndexableItemStatisticsSoapOut">
+        <wsdl:part name="GetNonIndexableItemStatisticsResult" element="tns:GetNonIndexableItemStatisticsResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+    <wsdl:message name="GetNonIndexableItemDetailsSoapIn">
+        <wsdl:part name="request" element="tns:GetNonIndexableItemDetails"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetNonIndexableItemDetailsSoapOut">
+        <wsdl:part name="GetNonIndexableItemDetailsResult" element="tns:GetNonIndexableItemDetailsResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="MarkAllItemsAsReadSoapIn">
+        <wsdl:part name="request" element="tns:MarkAllItemsAsRead" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="MarkAllItemsAsReadSoapOut">
+        <wsdl:part name="MarkAllItemsAsReadResult" element="tns:MarkAllItemsAsReadResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="MarkAsJunkSoapIn">
+        <wsdl:part name="request" element="tns:MarkAsJunk" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="MarkAsJunkSoapOut">
+        <wsdl:part name="MarkAsJunkResult" element="tns:MarkAsJunkResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="ReportMessageSoapIn">
+        <wsdl:part name="request" element="tns:ReportMessage" />
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="ReportMessageSoapOut">
+        <wsdl:part name="ReportMessageResult" element="tns:ReportMessageResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetAppManifestsSoapIn">
+        <wsdl:part name="request" element="tns:GetAppManifests" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetAppManifestsSoapOut">
+        <wsdl:part name="GetAppManifestsResult" element="tns:GetAppManifestsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="InstallAppSoapIn">
+        <wsdl:part name="request" element="tns:InstallApp" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="InstallAppSoapOut">
+        <wsdl:part name="InstallAppResult" element="tns:InstallAppResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="UninstallAppSoapIn">
+        <wsdl:part name="request" element="tns:UninstallApp" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="UninstallAppSoapOut">
+        <wsdl:part name="UninstallAppResult" element="tns:UninstallAppResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="DisableAppSoapIn">
+        <wsdl:part name="request" element="tns:DisableApp" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="DisableAppSoapOut">
+        <wsdl:part name="DisableAppResult" element="tns:DisableAppResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- RegisterConsent Messages -->
+    <wsdl:message name="RegisterConsentSoapIn">
+        <wsdl:part name="request" element="tns:RegisterConsent"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="RegisterConsentSoapOut">
+        <wsdl:part name="RegisterConsentResult" element="tns:RegisterConsentResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetAppMarketplaceUrlSoapIn">
+        <wsdl:part name="request" element="tns:GetAppMarketplaceUrl" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetAppMarketplaceUrlSoapOut">
+        <wsdl:part name="GetAppMarketplaceUrlResult" element="tns:GetAppMarketplaceUrlResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Unified contact store Messages -->
+    <wsdl:message name="AddNewImContactToGroupSoapIn">
+        <wsdl:part name="request" element="tns:AddNewImContactToGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="AddNewImContactToGroupSoapOut">
+        <wsdl:part name="AddNewImContactToGroupResult" element="tns:AddNewImContactToGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddNewTelUriContactToGroupSoapIn">
+        <wsdl:part name="request" element="tns:AddNewTelUriContactToGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="AddNewTelUriContactToGroupSoapOut">
+        <wsdl:part name="AddNewTelUriContactToGroupResult" element="tns:AddNewTelUriContactToGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddImContactToGroupSoapIn">
+        <wsdl:part name="request" element="tns:AddImContactToGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="AddImContactToGroupSoapOut">
+        <wsdl:part name="AddImContactToGroupResult" element="tns:AddImContactToGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveImContactFromGroupSoapIn">
+        <wsdl:part name="request" element="tns:RemoveImContactFromGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="RemoveImContactFromGroupSoapOut">
+        <wsdl:part name="RemoveImContactFromGroupResult" element="tns:RemoveImContactFromGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddImGroupSoapIn">
+        <wsdl:part name="request" element="tns:AddImGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="AddImGroupSoapOut">
+        <wsdl:part name="AddImGroupResult" element="tns:AddImGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddDistributionGroupToImListSoapIn">
+        <wsdl:part name="request" element="tns:AddDistributionGroupToImList"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="AddDistributionGroupToImListSoapOut">
+        <wsdl:part name="AddDistributionGroupToImListResult" element="tns:AddDistributionGroupToImListResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetImItemListSoapIn">
+        <wsdl:part name="request" element="tns:GetImItemList"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetImItemListSoapOut">
+        <wsdl:part name="GetImItemListResult" element="tns:GetImItemListResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetImItemsSoapIn">
+        <wsdl:part name="request" element="tns:GetImItems"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetImItemsSoapOut">
+        <wsdl:part name="GetImItemsResult" element="tns:GetImItemsResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveContactFromImListSoapIn">
+        <wsdl:part name="request" element="tns:RemoveContactFromImList"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="RemoveContactFromImListSoapOut">
+        <wsdl:part name="RemoveContactFromImListResult" element="tns:RemoveContactFromImListResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveDistributionGroupFromImListSoapIn">
+        <wsdl:part name="request" element="tns:RemoveDistributionGroupFromImList"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="RemoveDistributionGroupFromImListSoapOut">
+        <wsdl:part name="RemoveDistributionGroupFromImListResult" element="tns:RemoveDistributionGroupFromImListResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveImGroupSoapIn">
+        <wsdl:part name="request" element="tns:RemoveImGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="RemoveImGroupSoapOut">
+        <wsdl:part name="RemoveImGroupResult" element="tns:RemoveImGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="SetImGroupSoapIn">
+        <wsdl:part name="request" element="tns:SetImGroup"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="SetImGroupSoapOut">
+        <wsdl:part name="SetImGroupResult" element="tns:SetImGroupResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="SetImListMigrationCompletedSoapIn">
+        <wsdl:part name="request" element="tns:SetImListMigrationCompleted"/>
+        <wsdl:part name="Impersonation" element="t:ExchangeImpersonation"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="SetImListMigrationCompletedSoapOut">
+        <wsdl:part name="SetImListMigrationCompletedResult" element="tns:SetImListMigrationCompletedResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- MRM Messages -->
+    <wsdl:message name="GetUserRetentionPolicyTagsSoapIn">
+        <wsdl:part name="request" element="tns:GetUserRetentionPolicyTags"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetUserRetentionPolicyTagsSoapOut">
+        <wsdl:part name="GetUserRetentionPolicyTagsResult" element="tns:GetUserRetentionPolicyTagsResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Photos -->
+    <wsdl:message name="GetUserPhotoSoapIn">
+        <wsdl:part name="request" element="tns:GetUserPhoto"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetUserPhotoSoapOut">
+        <wsdl:part name="GetUserPhotoResult" element="tns:GetUserPhotoResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="SetUserPhotoSoapIn">
+        <wsdl:part name="request" element="tns:SetUserPhoto"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="SetUserPhotoSoapOut">
+        <wsdl:part name="SetUserPhotoResult" element="tns:SetUserPhotoResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMeetingSpaceSoapIn">
+        <wsdl:part name="request" element="tns:GetMeetingSpace"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetMeetingSpaceSoapOut">
+        <wsdl:part name="GetMeetingSpaceResult" element="tns:GetMeetingSpaceResponseMessage"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteMeetingSpaceSoapIn">
+        <wsdl:part name="request" element="tns:DeleteMeetingSpace"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteMeetingSpaceSoapOut">
+        <wsdl:part name="DeleteMeetingSpaceResult" element="tns:DeleteMeetingSpaceResponseMessage"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMeetingSpaceSoapIn">
+        <wsdl:part name="request" element="tns:UpdateMeetingSpace"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateMeetingSpaceSoapOut">
+        <wsdl:part name="UpdateMeetingSpaceResult" element="tns:UpdateMeetingSpaceResponseMessage"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="CreateMeetingSpaceSoapIn">
+        <wsdl:part name="request" element="tns:CreateMeetingSpace"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="CreateMeetingSpaceSoapOut">
+        <wsdl:part name="CreateMeetingSpaceResult" element="tns:CreateMeetingSpaceResponseMessage"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="FindMeetingSpaceByJoinUrlSoapIn">
+        <wsdl:part name="request" element="tns:FindMeetingSpaceByJoinUrl"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="FindMeetingSpaceByJoinUrlSoapOut">
+        <wsdl:part name="FindMeetingSpaceByJoinUrlResult" element="tns:FindMeetingSpaceByJoinUrlResponseMessage"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetMeetingInstanceSoapIn">
+        <wsdl:part name="request" element="tns:GetMeetingInstanceRequest"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="GetMeetingInstanceSoapOut">
+        <wsdl:part name="GetMeetingInstanceResult" element="tns:GetMeetingInstanceResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="DeleteMeetingInstanceSoapIn">
+        <wsdl:part name="request" element="tns:DeleteMeetingInstanceRequest"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteMeetingInstanceSoapOut">
+        <wsdl:part name="DeleteMeetingInstanceResult" element="tns:DeleteMeetingInstanceResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="UpdateMeetingInstanceSoapIn">
+        <wsdl:part name="request" element="tns:UpdateMeetingInstanceRequest"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateMeetingInstanceSoapOut">
+        <wsdl:part name="UpdateMeetingInstanceResult" element="tns:UpdateMeetingInstanceResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:message name="CreateMeetingInstanceSoapIn">
+        <wsdl:part name="request" element="tns:CreateMeetingInstanceRequest"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+        <wsdl:part name="ManagementRole" element="t:ManagementRole"/>
+    </wsdl:message>
+    <wsdl:message name="CreateMeetingInstanceSoapOut">
+        <wsdl:part name="CreateMeetingInstanceResult" element="tns:CreateMeetingInstanceResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Start Search Session Messages -->
+    <wsdl:message name="StartSearchSessionSoapIn">
+        <wsdl:part name="request" element="tns:StartSearchSession"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="StartSearchSessionSoapOut">
+        <wsdl:part name="StartSearchSessionResult" element="tns:StartSearchSessionResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Get Search Suggestions Messages -->
+    <wsdl:message name="GetSearchSuggestionsSoapIn">
+        <wsdl:part name="request" element="tns:GetSearchSuggestions"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetSearchSuggestionsSoapOut">
+        <wsdl:part name="GetSearchSuggestionsResult" element="tns:GetSearchSuggestionsResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Delete Search Suggestion Messages -->
+    <wsdl:message name="DeleteSearchSuggestionSoapIn">
+        <wsdl:part name="request" element="tns:DeleteSearchSuggestion"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteSearchSuggestionSoapOut">
+        <wsdl:part name="DeleteSearchSuggestionResult" element="tns:DeleteSearchSuggestionResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- Execute Search Messages> -->
+    <wsdl:message name="ExecuteSearchSoapIn">
+        <wsdl:part name="request" element="tns:ExecuteSearch"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="ExecuteSearchSoapOut">
+        <wsdl:part name="ExecuteSearchResult" element="tns:ExecuteSearchResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- End search Session Messages -->
+    <wsdl:message name="EndSearchSessionSoapIn">
+        <wsdl:part name="request" element="tns:EndSearchSession"/>
+        <wsdl:part name="MailboxCulture" element="t:MailboxCulture"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="EndSearchSessionSoapOut">
+        <wsdl:part name="EndSearchSessionResult" element="tns:EndSearchSessionResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- GetLastPrivateCatalogUpdate Messages -->
+    <wsdl:message name="GetLastPrivateCatalogUpdateSoapIn">
+        <wsdl:part name="request" element="tns:GetLastPrivateCatalogUpdate"/>
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetLastPrivateCatalogUpdateSoapOut">
+        <wsdl:part name="GetLastPrivateCatalogUpdateResult" element="tns:GetLastPrivateCatalogUpdateResponse"/>
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <!-- GetPrivateCatalogAddIns Messages -->
+    <wsdl:message name="GetPrivateCatalogAddInsSoapIn">
+        <wsdl:part name="request" element="tns:GetPrivateCatalogAddIns" />
+        <wsdl:part name="RequestVersion" element="t:RequestServerVersion"/>
+    </wsdl:message>
+    <wsdl:message name="GetPrivateCatalogAddInsSoapOut">
+        <wsdl:part name="GetPrivateCatalogAddInsResult" element="tns:GetPrivateCatalogAddInsResponse" />
+        <wsdl:part name="ServerVersion" element="t:ServerVersionInfo"/>
+    </wsdl:message>
+
+    <wsdl:portType name="ExchangeServicePortType">
         <wsdl:operation name="ResolveNames">
             <wsdl:input message="tns:ResolveNamesSoapIn" />
             <wsdl:output message="tns:ResolveNamesSoapOut" />
@@ -670,14 +1344,14 @@
             <wsdl:output message="tns:GetFolderSoapOut" />
         </wsdl:operation>
 
-      <wsdl:operation name="UploadItems">
-          <wsdl:input message="tns:UploadItemsSoapIn" />
-          <wsdl:output message="tns:UploadItemsSoapOut" />
-      </wsdl:operation>
-      <wsdl:operation name="ExportItems">
-          <wsdl:input message="tns:ExportItemsSoapIn" />
-          <wsdl:output message="tns:ExportItemsSoapOut" />
-      </wsdl:operation>
+        <wsdl:operation name="UploadItems">
+            <wsdl:input message="tns:UploadItemsSoapIn" />
+            <wsdl:output message="tns:UploadItemsSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="ExportItems">
+            <wsdl:input message="tns:ExportItemsSoapIn" />
+            <wsdl:output message="tns:ExportItemsSoapOut" />
+        </wsdl:operation>
 
         <wsdl:operation name="ConvertId">
             <wsdl:input message="tns:ConvertIdSoapIn"/>
@@ -686,6 +1360,10 @@
         <wsdl:operation name="CreateFolder">
             <wsdl:input message="tns:CreateFolderSoapIn" />
             <wsdl:output message="tns:CreateFolderSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="CreateFolderPath">
+            <wsdl:input message="tns:CreateFolderPathSoapIn" />
+            <wsdl:output message="tns:CreateFolderPathSoapOut" />
         </wsdl:operation>
         <wsdl:operation name="DeleteFolder">
             <wsdl:input message="tns:DeleteFolderSoapIn" />
@@ -720,8 +1398,8 @@
             <wsdl:output message="tns:GetEventsSoapOut" />
         </wsdl:operation>
         <wsdl:operation name="GetStreamingEvents">
-          <wsdl:input message="tns:GetStreamingEventsSoapIn" />
-          <wsdl:output message="tns:GetStreamingEventsSoapOut" />
+            <wsdl:input message="tns:GetStreamingEventsSoapIn" />
+            <wsdl:output message="tns:GetStreamingEventsSoapOut" />
         </wsdl:operation>
         <wsdl:operation name="SyncFolderHierarchy">
             <wsdl:input message="tns:SyncFolderHierarchySoapIn" />
@@ -753,6 +1431,10 @@
             <wsdl:input message="tns:UpdateItemSoapIn" />
             <wsdl:output message="tns:UpdateItemSoapOut" />
         </wsdl:operation>
+        <wsdl:operation name="UpdateItemInRecoverableItems">
+            <wsdl:input message="tns:UpdateItemInRecoverableItemsSoapIn" />
+            <wsdl:output message="tns:UpdateItemInRecoverableItemsSoapOut" />
+        </wsdl:operation>
         <wsdl:operation name="SendItem">
             <wsdl:input message="tns:SendItemSoapIn" />
             <wsdl:output message="tns:SendItemSoapOut" />
@@ -765,6 +1447,10 @@
             <wsdl:input message="tns:CopyItemSoapIn" />
             <wsdl:output message="tns:CopyItemSoapOut" />
         </wsdl:operation>
+        <wsdl:operation name="ArchiveItem">
+            <wsdl:input message="tns:ArchiveItemSoapIn" />
+            <wsdl:output message="tns:ArchiveItemSoapOut" />
+        </wsdl:operation>
         <wsdl:operation name="CreateAttachment">
             <wsdl:input message="tns:CreateAttachmentSoapIn" />
             <wsdl:output message="tns:CreateAttachmentSoapOut" />
@@ -776,6 +1462,10 @@
         <wsdl:operation name="GetAttachment">
             <wsdl:input message="tns:GetAttachmentSoapIn" />
             <wsdl:output message="tns:GetAttachmentSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="GetClientAccessToken">
+            <wsdl:input message="tns:GetClientAccessTokenSoapIn" />
+            <wsdl:output message="tns:GetClientAccessTokenSoapOut" />
         </wsdl:operation>
         <wsdl:operation name="GetDelegate">
             <wsdl:input message="tns:GetDelegateSoapIn" />
@@ -793,7 +1483,6 @@
             <wsdl:input message="tns:UpdateDelegateSoapIn" />
             <wsdl:output message="tns:UpdateDelegateSoapOut" />
         </wsdl:operation>
-
         <wsdl:operation name="CreateUserConfiguration">
             <wsdl:input message="tns:CreateUserConfigurationSoapIn" />
             <wsdl:output message="tns:CreateUserConfigurationSoapOut" />
@@ -805,6 +1494,10 @@
         <wsdl:operation name="GetUserConfiguration">
             <wsdl:input message="tns:GetUserConfigurationSoapIn" />
             <wsdl:output message="tns:GetUserConfigurationSoapOut" />
+        </wsdl:operation>
+        <wsdl:operation name="GetSpecificUserConfiguration">
+            <wsdl:input message="tns:GetSpecificUserConfigurationSoapIn" />
+            <wsdl:output message="tns:GetSpecificUserConfigurationSoapOut" />
         </wsdl:operation>
         <wsdl:operation name="UpdateUserConfiguration">
             <wsdl:input message="tns:UpdateUserConfigurationSoapIn" />
@@ -875,6 +1568,18 @@
             <wsdl:output message="tns:GetSharingFolderSoapOut" />
         </wsdl:operation>
 
+        <!-- SetTeamMailbox -->
+        <wsdl:operation name="SetTeamMailbox">
+            <wsdl:input message="tns:SetTeamMailboxSoapIn" />
+            <wsdl:output message="tns:SetTeamMailboxSoapOut" />
+        </wsdl:operation>
+
+        <!-- UnpinTeamMailbox -->
+        <wsdl:operation name="UnpinTeamMailbox">
+            <wsdl:input message="tns:UnpinTeamMailboxSoapIn" />
+            <wsdl:output message="tns:UnpinTeamMailboxSoapOut" />
+        </wsdl:operation>
+
         <!-- Find A Room Service Operations -->
 
         <!-- GetRoomLists -->
@@ -911,6 +1616,41 @@
             <wsdl:output message="tns:ApplyConversationActionSoapOut" />
         </wsdl:operation>
 
+        <wsdl:operation name ="GetConversationItems">
+            <wsdl:input message="tns:GetConversationItemsSoapIn" />
+            <wsdl:output message="tns:GetConversationItemsSoapOut" />
+        </wsdl:operation>
+
+        <!--FindPeople-->
+        <wsdl:operation name="FindPeople">
+            <wsdl:input message="tns:FindPeopleSoapIn" />
+            <wsdl:output message="tns:FindPeopleSoapOut" />
+        </wsdl:operation>
+
+        <!--FindTags-->
+        <wsdl:operation name="FindTags">
+            <wsdl:input message="tns:FindTagsSoapIn" />
+            <wsdl:output message="tns:FindTagsSoapOut" />
+        </wsdl:operation>
+
+        <!--AddTag-->
+        <wsdl:operation name="AddTag">
+            <wsdl:input message="tns:AddTagSoapIn" />
+            <wsdl:output message="tns:AddTagSoapOut" />
+        </wsdl:operation>
+
+        <!--HideTag-->
+        <wsdl:operation name="HideTag">
+            <wsdl:input message="tns:HideTagSoapIn" />
+            <wsdl:output message="tns:HideTagSoapOut" />
+        </wsdl:operation>
+
+        <!--GetPersona-->
+        <wsdl:operation name="GetPersona">
+            <wsdl:input message="tns:GetPersonaSoapIn" />
+            <wsdl:output message="tns:GetPersonaSoapOut" />
+        </wsdl:operation>
+
         <!-- Inbox Rules -->
         <wsdl:operation name="GetInboxRules">
             <wsdl:input message="tns:GetInboxRulesSoapIn" />
@@ -923,8 +1663,266 @@
         </wsdl:operation>
 
         <wsdl:operation name="GetPasswordExpirationDate">
-          <wsdl:input message="tns:GetPasswordExpirationDateSoapIn" />
-          <wsdl:output message="tns:GetPasswordExpirationDateSoapOut" />
+            <wsdl:input message="tns:GetPasswordExpirationDateSoapIn" />
+            <wsdl:output message="tns:GetPasswordExpirationDateSoapOut" />
+        </wsdl:operation>
+
+        <!-- Mailbox Search Operations -->
+        <wsdl:operation name="GetSearchableMailboxes">
+            <wsdl:input message="tns:GetSearchableMailboxesSoapIn"/>
+            <wsdl:output message="tns:GetSearchableMailboxesSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="SearchMailboxes">
+            <wsdl:input message="tns:SearchMailboxesSoapIn"/>
+            <wsdl:output message="tns:SearchMailboxesSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetDiscoverySearchConfiguration">
+            <wsdl:input message="tns:GetDiscoverySearchConfigurationSoapIn"/>
+            <wsdl:output message="tns:GetDiscoverySearchConfigurationSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetHoldOnMailboxes">
+            <wsdl:input message="tns:GetHoldOnMailboxesSoapIn"/>
+            <wsdl:output message="tns:GetHoldOnMailboxesSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetHoldOnMailboxes">
+            <wsdl:input message="tns:SetHoldOnMailboxesSoapIn"/>
+            <wsdl:output message="tns:SetHoldOnMailboxesSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetNonIndexableItemStatistics">
+            <wsdl:input message="tns:GetNonIndexableItemStatisticsSoapIn"/>
+            <wsdl:output message="tns:GetNonIndexableItemStatisticsSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetNonIndexableItemDetails">
+            <wsdl:input message="tns:GetNonIndexableItemDetailsSoapIn"/>
+            <wsdl:output message="tns:GetNonIndexableItemDetailsSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="MarkAllItemsAsRead">
+            <wsdl:input message="tns:MarkAllItemsAsReadSoapIn" />
+            <wsdl:output message="tns:MarkAllItemsAsReadSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="MarkAsJunk">
+            <wsdl:input message="tns:MarkAsJunkSoapIn" />
+            <wsdl:output message="tns:MarkAsJunkSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="ReportMessage">
+            <wsdl:input message="tns:ReportMessageSoapIn" />
+            <wsdl:output message="tns:ReportMessageSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="GetAppManifests">
+            <wsdl:input message="tns:GetAppManifestsSoapIn" />
+            <wsdl:output message="tns:GetAppManifestsSoapOut" />
+        </wsdl:operation>
+
+        <!-- Unified Contact Store Operations -->
+        <wsdl:operation name="AddNewImContactToGroup">
+            <wsdl:input message="tns:AddNewImContactToGroupSoapIn"/>
+            <wsdl:output message="tns:AddNewImContactToGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddNewTelUriContactToGroup">
+            <wsdl:input message="tns:AddNewTelUriContactToGroupSoapIn"/>
+            <wsdl:output message="tns:AddNewTelUriContactToGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddImContactToGroup">
+            <wsdl:input message="tns:AddImContactToGroupSoapIn"/>
+            <wsdl:output message="tns:AddImContactToGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveImContactFromGroup">
+            <wsdl:input message="tns:RemoveImContactFromGroupSoapIn"/>
+            <wsdl:output message="tns:RemoveImContactFromGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddImGroup">
+            <wsdl:input message="tns:AddImGroupSoapIn"/>
+            <wsdl:output message="tns:AddImGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddDistributionGroupToImList">
+            <wsdl:input message="tns:AddDistributionGroupToImListSoapIn"/>
+            <wsdl:output message="tns:AddDistributionGroupToImListSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetImItemList">
+            <wsdl:input message="tns:GetImItemListSoapIn"/>
+            <wsdl:output message="tns:GetImItemListSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetImItems">
+            <wsdl:input message="tns:GetImItemsSoapIn"/>
+            <wsdl:output message="tns:GetImItemsSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveContactFromImList">
+            <wsdl:input message="tns:RemoveContactFromImListSoapIn"/>
+            <wsdl:output message="tns:RemoveContactFromImListSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveDistributionGroupFromImList">
+            <wsdl:input message="tns:RemoveDistributionGroupFromImListSoapIn"/>
+            <wsdl:output message="tns:RemoveDistributionGroupFromImListSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveImGroup">
+            <wsdl:input message="tns:RemoveImGroupSoapIn"/>
+            <wsdl:output message="tns:RemoveImGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetImGroup">
+            <wsdl:input message="tns:SetImGroupSoapIn"/>
+            <wsdl:output message="tns:SetImGroupSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetImListMigrationCompleted">
+            <wsdl:input message="tns:SetImListMigrationCompletedSoapIn"/>
+            <wsdl:output message="tns:SetImListMigrationCompletedSoapOut"/>
+        </wsdl:operation>
+
+        <!-- MRM Operations -->
+        <wsdl:operation name="GetUserRetentionPolicyTags">
+            <wsdl:input message="tns:GetUserRetentionPolicyTagsSoapIn"/>
+            <wsdl:output message="tns:GetUserRetentionPolicyTagsSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="InstallApp">
+            <wsdl:input message="tns:InstallAppSoapIn"/>
+            <wsdl:output message="tns:InstallAppSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="UninstallApp">
+            <wsdl:input message="tns:UninstallAppSoapIn"/>
+            <wsdl:output message="tns:UninstallAppSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="DisableApp">
+            <wsdl:input message="tns:DisableAppSoapIn"/>
+            <wsdl:output message="tns:DisableAppSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetAppMarketplaceUrl">
+            <wsdl:input message="tns:GetAppMarketplaceUrlSoapIn"/>
+            <wsdl:output message="tns:GetAppMarketplaceUrlSoapOut"/>
+        </wsdl:operation>
+
+        <!-- FindAvailableMeetingTimes (PortType) Operation -->
+        <wsdl:operation name="FindAvailableMeetingTimes">
+            <wsdl:input message="tns:FindAvailableMeetingTimesSoapIn" />
+            <wsdl:output message="tns:FindAvailableMeetingTimesSoapOut" />
+        </wsdl:operation>
+
+        <!-- FindMeetingTimeCandidates (PortType) Operation -->
+        <wsdl:operation name="FindMeetingTimeCandidates">
+            <wsdl:input message="tns:FindMeetingTimeCandidatesSoapIn" />
+            <wsdl:output message="tns:FindMeetingTimeCandidatesSoapOut" />
+        </wsdl:operation>
+
+        <!-- Photos -->
+        <wsdl:operation name="GetUserPhoto">
+            <wsdl:input message="tns:GetUserPhotoSoapIn"/>
+            <wsdl:output message="tns:GetUserPhotoSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetUserPhoto">
+            <wsdl:input message="tns:SetUserPhotoSoapIn"/>
+            <wsdl:output message="tns:SetUserPhotoSoapOut"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetMeetingSpace">
+            <wsdl:input message="tns:GetMeetingSpaceSoapIn" />
+            <wsdl:output message="tns:GetMeetingSpaceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="DeleteMeetingSpace">
+            <wsdl:input message="tns:DeleteMeetingSpaceSoapIn" />
+            <wsdl:output message="tns:DeleteMeetingSpaceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="UpdateMeetingSpace">
+            <wsdl:input message="tns:UpdateMeetingSpaceSoapIn" />
+            <wsdl:output message="tns:UpdateMeetingSpaceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="CreateMeetingSpace">
+            <wsdl:input message="tns:CreateMeetingSpaceSoapIn" />
+            <wsdl:output message="tns:CreateMeetingSpaceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="FindMeetingSpaceByJoinUrl">
+            <wsdl:input message="tns:FindMeetingSpaceByJoinUrlSoapIn" />
+            <wsdl:output message="tns:FindMeetingSpaceByJoinUrlSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="GetMeetingInstance">
+            <wsdl:input message="tns:GetMeetingInstanceSoapIn" />
+            <wsdl:output message="tns:GetMeetingInstanceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="DeleteMeetingInstance">
+            <wsdl:input message="tns:DeleteMeetingInstanceSoapIn" />
+            <wsdl:output message="tns:DeleteMeetingInstanceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="UpdateMeetingInstance">
+            <wsdl:input message="tns:UpdateMeetingInstanceSoapIn" />
+            <wsdl:output message="tns:UpdateMeetingInstanceSoapOut" />
+        </wsdl:operation>
+
+        <wsdl:operation name="CreateMeetingInstance">
+            <wsdl:input message="tns:CreateMeetingInstanceSoapIn" />
+            <wsdl:output message="tns:CreateMeetingInstanceSoapOut" />
+        </wsdl:operation>
+
+        <!-- StartSearchSession (PortType) operation -->
+        <wsdl:operation name="StartSearchSession">
+            <wsdl:input message="tns:StartSearchSessionSoapIn" />
+            <wsdl:output message="tns:StartSearchSessionSoapOut" />
+        </wsdl:operation>
+
+        <!-- GetSearchSuggestions (PortType) operation -->
+        <wsdl:operation name="GetSearchSuggestions">
+            <wsdl:input message="tns:GetSearchSuggestionsSoapIn" />
+            <wsdl:output message="tns:GetSearchSuggestionsSoapOut" />
+        </wsdl:operation>
+
+        <!-- DeleteSearchSuggestion (PortType) operation -->
+        <wsdl:operation name="DeleteSearchSuggestion">
+            <wsdl:input message="tns:DeleteSearchSuggestionSoapIn" />
+            <wsdl:output message="tns:DeleteSearchSuggestionSoapOut" />
+        </wsdl:operation>
+
+        <!-- ExecuteSearch (PortType) operation -->
+        <wsdl:operation name="ExecuteSearch">
+            <wsdl:input message="tns:ExecuteSearchSoapIn" />
+            <wsdl:output message="tns:ExecuteSearchSoapOut" />
+        </wsdl:operation>
+
+        <!-- EndSearchSession (PortType) operation -->
+        <wsdl:operation name="EndSearchSession">
+            <wsdl:input message="tns:EndSearchSessionSoapIn" />
+            <wsdl:output message="tns:EndSearchSessionSoapOut" />
+        </wsdl:operation>
+
+        <!-- GetLastPrivateCatalogUpdate (PortType) operation -->
+        <wsdl:operation name="GetLastPrivateCatalogUpdate">
+            <wsdl:input message="tns:GetLastPrivateCatalogUpdateSoapIn" />
+            <wsdl:output message="tns:GetLastPrivateCatalogUpdateSoapOut" />
+        </wsdl:operation>
+
+        <!-- GetPrivateCatalogAddIns (PortType) operation -->
+        <wsdl:operation name="GetPrivateCatalogAddIns">
+            <wsdl:input message="tns:GetPrivateCatalogAddInsSoapIn" />
+            <wsdl:output message="tns:GetPrivateCatalogAddInsSoapOut" />
         </wsdl:operation>
     </wsdl:portType>
 
@@ -980,6 +1978,7 @@
                 <soap:header message="tns:FindFolderSoapIn" part="MailboxCulture" use="literal"/>
                 <soap:header message="tns:FindFolderSoapIn" part="RequestVersion" use="literal"/>
                 <soap:header message="tns:FindFolderSoapIn" part="TimeZoneContext" use="literal"/>
+                <soap:header message="tns:FindFolderSoapIn" part="ManagementRole" use="literal"/>
                 <soap:body parts="request" use="literal" />
             </wsdl:input>
             <wsdl:output>
@@ -995,6 +1994,7 @@
                 <soap:header message="tns:FindItemSoapIn" part="RequestVersion" use="literal"/>
                 <soap:header message="tns:FindItemSoapIn" part="TimeZoneContext" use="literal"/>
                 <soap:header message="tns:FindItemSoapIn" part="DateTimePrecision" use="literal" />
+                <soap:header message="tns:FindItemSoapIn" part="ManagementRole" use="literal"/>
                 <soap:body parts="request" use="literal" />
             </wsdl:input>
             <wsdl:output>
@@ -1009,6 +2009,7 @@
                 <soap:header message="tns:GetFolderSoapIn" part="MailboxCulture" use="literal"/>
                 <soap:header message="tns:GetFolderSoapIn" part="RequestVersion" use="literal"/>
                 <soap:header message="tns:GetFolderSoapIn" part="TimeZoneContext" use="literal"/>
+                <soap:header message="tns:GetFolderSoapIn" part="ManagementRole" use="literal"/>
                 <soap:body parts="request" use="literal" />
             </wsdl:input>
             <wsdl:output>
@@ -1049,6 +2050,7 @@
                 <soap:header message="tns:ExportItemsSoapIn" part="Impersonation" use="literal"/>
                 <soap:header message="tns:ExportItemsSoapIn" part="MailboxCulture" use="literal"/>
                 <soap:header message="tns:ExportItemsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:ExportItemsSoapIn" part="ManagementRole" use="literal"/>
                 <soap:body parts="request" use="literal" />
             </wsdl:input>
             <wsdl:output>
@@ -1057,6 +2059,20 @@
             </wsdl:output>
         </wsdl:operation>
 
+        <wsdl:operation name="CreateFolderPath">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/CreateFolderPath" />
+            <wsdl:input>
+                <soap:header message="tns:CreateFolderPathSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:CreateFolderPathSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:CreateFolderPathSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:CreateFolderPathSoapIn" part="TimeZoneContext" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="CreateFolderPathResult" use="literal" />
+                <soap:header message="tns:CreateFolderPathSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
         <wsdl:operation name="CreateFolder">
             <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/CreateFolder" />
             <wsdl:input>
@@ -1177,17 +2193,17 @@
             </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="GetStreamingEvents">
-          <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetEvents" />
-          <wsdl:input>
-            <soap:header message="tns:GetStreamingEventsSoapIn" part="Impersonation" use="literal"/>
-            <soap:header message="tns:GetStreamingEventsSoapIn" part="MailboxCulture" use="literal"/>
-            <soap:header message="tns:GetStreamingEventsSoapIn" part="RequestVersion" use="literal"/>
-            <soap:body parts="request" use="literal" />
-          </wsdl:input>
-          <wsdl:output>
-            <soap:body parts="GetStreamingEventsResult" use="literal" />
-            <soap:header message="tns:GetStreamingEventsSoapOut" part="ServerVersion" use="literal"/>
-          </wsdl:output>
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetEvents" />
+            <wsdl:input>
+                <soap:header message="tns:GetStreamingEventsSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:GetStreamingEventsSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:GetStreamingEventsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetStreamingEventsResult" use="literal" />
+                <soap:header message="tns:GetStreamingEventsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="SyncFolderHierarchy">
             <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SyncFolderHierarchy" />
@@ -1224,6 +2240,7 @@
                 <soap:header message="tns:GetItemSoapIn" part="RequestVersion" use="literal"/>
                 <soap:header message="tns:GetItemSoapIn" part="TimeZoneContext" use="literal"/>
                 <soap:header message="tns:GetItemSoapIn" part="DateTimePrecision" use="literal" />
+                <soap:header message="tns:GetItemSoapIn" part="ManagementRole" use="literal" />
                 <soap:body parts="request" use="literal" />
             </wsdl:input>
             <wsdl:output>
@@ -1272,6 +2289,21 @@
                 <soap:header message="tns:UpdateItemSoapOut" part="ServerVersion" use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="UpdateItemInRecoverableItems">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UpdateItemInRecoverableItems" />
+            <wsdl:input>
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapIn" part="TimeZoneContext" use="literal"/>
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="UpdateItemInRecoverableItemsResult" use="literal" />
+                <soap:header message="tns:UpdateItemInRecoverableItemsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
         <wsdl:operation name="SendItem">
             <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SendItem" />
             <wsdl:input>
@@ -1309,6 +2341,19 @@
             <wsdl:output>
                 <soap:body parts="CopyItemResult" use="literal" />
                 <soap:header message="tns:CopyItemSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ArchiveItem">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/ArchiveItem" />
+            <wsdl:input>
+                <soap:header message="tns:ArchiveItemSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:ArchiveItemSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:ArchiveItemSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="ArchiveItemResult" use="literal" />
+                <soap:header message="tns:ArchiveItemSoapOut" part="ServerVersion" use="literal"/>
             </wsdl:output>
         </wsdl:operation>
         <wsdl:operation name="CreateAttachment">
@@ -1350,6 +2395,18 @@
             <wsdl:output>
                 <soap:body parts="GetAttachmentResult" use="literal" />
                 <soap:header message="tns:GetAttachmentSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetClientAccessToken">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetClientAccessToken" />
+            <wsdl:input>
+                <soap:header message="tns:GetClientAccessTokenSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetClientAccessTokenResult" use="literal" />
+                <soap:header message="tns:GetClientAccessTokenSoapOut" part="ServerVersion" use="literal"/>
             </wsdl:output>
         </wsdl:operation>
 
@@ -1465,6 +2522,20 @@
             </wsdl:output>
         </wsdl:operation>
 
+        <wsdl:operation name="GetSpecificUserConfiguration">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetSpecificUserConfiguration" />
+            <wsdl:input>
+                <soap:header message="tns:GetSpecificUserConfigurationSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:GetSpecificUserConfigurationSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:GetSpecificUserConfigurationSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetSpecificUserConfigurationResult" use="literal" />
+                <soap:header message="tns:GetSpecificUserConfigurationSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
         <wsdl:operation name="UpdateUserConfiguration">
             <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UpdateUserConfiguration" />
             <wsdl:input>
@@ -1489,6 +2560,7 @@
                 <soap:header message="tns:GetUserAvailabilitySoapIn" part="TimeZoneContext" use="literal"/>
                 <soap:header message="tns:GetUserAvailabilitySoapIn" part="RequestVersion" use="literal"/>
                 <soap:body parts="GetUserAvailabilityRequest" use="literal" />
+                <soap:header message="tns:GetUserAvailabilitySoapIn" part="RequestVersion" use="literal"/>
             </wsdl:input>
             <wsdl:output>
                 <soap:body parts="GetUserAvailabilityResult" use="literal" />
@@ -1637,6 +2709,33 @@
             </wsdl:output>
         </wsdl:operation>
 
+        <!-- SetTeamMailbox -->
+        <wsdl:operation name="SetTeamMailbox">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SetTeamMailbox" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+                <soap:header message="tns:SetTeamMailboxSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:SetTeamMailboxSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SetTeamMailboxResult" use="literal" />
+                <soap:header message="tns:SetTeamMailboxSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- UnpinTeamMailbox -->
+        <wsdl:operation name="UnpinTeamMailbox">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UnpinTeamMailbox" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal"/>
+                <soap:header message="tns:UnpinTeamMailboxSoapIn" part="RequestVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="UnpinTeamMailboxResult" use="literal" />
+                <soap:header message="tns:UnpinTeamMailboxSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
         <!-- Find A Room Service -->
 
         <!-- GetRoomLists -->
@@ -1723,6 +2822,89 @@
             </wsdl:output>
         </wsdl:operation>
 
+        <wsdl:operation name="GetConversationItems">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetConversationItems" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:GetConversationItemsSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:GetConversationItemsSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetConversationItemsResult" use="literal" />
+                <soap:header message="tns:GetConversationItemsSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--FindPeople-->
+        <wsdl:operation name="FindPeople">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/FindPeople" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:FindPeopleSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:FindPeopleSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="FindPeopleResult" use="literal" />
+                <soap:header message="tns:FindPeopleSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--FindTags-->
+        <wsdl:operation name="FindTags">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/FindTags" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:FindTagsSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:FindTagsSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="FindTagsResult" use="literal" />
+                <soap:header message="tns:FindTagsSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--AddTag-->
+        <wsdl:operation name="AddTag">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddTag" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:AddTagSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:AddTagSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddTagResult" use="literal" />
+                <soap:header message="tns:AddTagSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--HideTag-->
+        <wsdl:operation name="HideTag">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/HideTag" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:HideTagSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:HideTagSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="HideTagResult" use="literal" />
+                <soap:header message="tns:HideTagSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!--GetPersona-->
+        <wsdl:operation name="GetPersona">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetPersona" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:GetPersonaSoapIn" part="RequestVersion" use="literal" />
+                <soap:header message="tns:GetPersonaSoapIn" part="Impersonation" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetPersonaResult" use="literal" />
+                <soap:header message="tns:GetPersonaSoapOut" part="ServerVersion" use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+
         <!-- Inbox Rules Operations -->
 
         <!-- GetInboxRules -->
@@ -1757,24 +2939,686 @@
             </wsdl:output>
         </wsdl:operation>
 
-      <wsdl:operation name="GetPasswordExpirationDate">
-        <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetPasswordExpirationDate" />
-        <wsdl:input>
-          <soap:header message="tns:GetPasswordExpirationDateSoapIn" part="MailboxCulture" use="literal"/>
-          <soap:header message="tns:GetPasswordExpirationDateSoapIn" part="RequestVersion" use="literal"/>
-          <soap:body parts="request" use="literal" />
-        </wsdl:input>
-        <wsdl:output>
-          <soap:body parts="GetPasswordExpirationDateResult" use="literal" />
-          <soap:header message="tns:GetPasswordExpirationDateSoapOut" part="ServerVersion" use="literal"/>
-        </wsdl:output>
-      </wsdl:operation>
+        <wsdl:operation name="GetPasswordExpirationDate">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetPasswordExpirationDate" />
+            <wsdl:input>
+                <soap:header message="tns:GetPasswordExpirationDateSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:GetPasswordExpirationDateSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetPasswordExpirationDateResult" use="literal" />
+                <soap:header message="tns:GetPasswordExpirationDateSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
 
+        <!-- Mailbox Search Operations -->
+        <!-- GetDiscoverySearchConfiguration -->
+        <wsdl:operation name="GetDiscoverySearchConfiguration">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetDiscoverySearchConfiguration" />
+            <wsdl:input>
+                <soap:header message="tns:GetDiscoverySearchConfigurationSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetDiscoverySearchConfigurationSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetDiscoverySearchConfigurationResult" use="literal" />
+                <soap:header message="tns:GetDiscoverySearchConfigurationSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetSearchableMailboxes -->
+        <wsdl:operation name="GetSearchableMailboxes">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetSearchableMailboxes" />
+            <wsdl:input>
+                <soap:header message="tns:GetSearchableMailboxesSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetSearchableMailboxesSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetSearchableMailboxesResult" use="literal" />
+                <soap:header message="tns:GetSearchableMailboxesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- SearchMailboxes -->
+        <wsdl:operation name="SearchMailboxes">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SearchMailboxes" />
+            <wsdl:input>
+                <soap:header message="tns:SearchMailboxesSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:SearchMailboxesSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SearchMailboxesResult" use="literal" />
+                <soap:header message="tns:SearchMailboxesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetHoldOnMailboxes -->
+        <wsdl:operation name="GetHoldOnMailboxes">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetHoldOnMailboxes" />
+            <wsdl:input>
+                <soap:header message="tns:GetHoldOnMailboxesSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetHoldOnMailboxesSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetHoldOnMailboxesResult" use="literal" />
+                <soap:header message="tns:GetHoldOnMailboxesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- SetHoldOnMailboxes -->
+        <wsdl:operation name="SetHoldOnMailboxes">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SetHoldOnMailboxes" />
+            <wsdl:input>
+                <soap:header message="tns:SetHoldOnMailboxesSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:SetHoldOnMailboxesSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SetHoldOnMailboxesResult" use="literal" />
+                <soap:header message="tns:SetHoldOnMailboxesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetNonIndexableItemStatistics -->
+        <wsdl:operation name="GetNonIndexableItemStatistics">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetNonIndexableItemStatistics" />
+            <wsdl:input>
+                <soap:header message="tns:GetNonIndexableItemStatisticsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetNonIndexableItemStatisticsSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetNonIndexableItemStatisticsResult" use="literal" />
+                <soap:header message="tns:GetNonIndexableItemStatisticsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetNonIndexableItemDetails -->
+        <wsdl:operation name="GetNonIndexableItemDetails">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetNonIndexableItemDetails" />
+            <wsdl:input>
+                <soap:header message="tns:GetNonIndexableItemDetailsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetNonIndexableItemDetailsSoapIn" part="ManagementRole" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetNonIndexableItemDetailsResult" use="literal" />
+                <soap:header message="tns:GetNonIndexableItemDetailsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="MarkAllItemsAsRead">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/MarkAllItemsAsRead" />
+            <wsdl:input>
+                <soap:header message="tns:MarkAllItemsAsReadSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:MarkAllItemsAsReadSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:MarkAllItemsAsReadSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="MarkAllItemsAsReadResult" use="literal" />
+                <soap:header message="tns:MarkAllItemsAsReadSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="MarkAsJunk">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/MarkAsJunk" />
+            <wsdl:input>
+                <soap:header message="tns:MarkAsJunkSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:MarkAsJunkSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:MarkAsJunkSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="MarkAsJunkResult" use="literal" />
+                <soap:header message="tns:MarkAsJunkSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="ReportMessage">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/ReportMessage" />
+            <wsdl:input>
+                <soap:header message="tns:ReportMessageSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:ReportMessageSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:ReportMessageSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="ReportMessageResult" use="literal" />
+                <soap:header message="tns:ReportMessageSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetAppManifests">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetAppManifests" />
+            <wsdl:input>
+                <soap:header message="tns:GetAppManifestsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetAppManifestsResult" use="literal" />
+                <soap:header message="tns:GetAppManifestsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Unified Contact Store Operations -->
+        <wsdl:operation name="AddNewImContactToGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddNewImContactToGroup" />
+            <wsdl:input>
+                <soap:header message="tns:AddNewImContactToGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:AddNewImContactToGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:AddNewImContactToGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddNewImContactToGroupResult" use="literal" />
+                <soap:header message="tns:AddNewImContactToGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddNewTelUriContactToGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddNewTelUriContactToGroup" />
+            <wsdl:input>
+                <soap:header message="tns:AddNewTelUriContactToGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:AddNewTelUriContactToGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:AddNewTelUriContactToGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddNewTelUriContactToGroupResult" use="literal" />
+                <soap:header message="tns:AddNewTelUriContactToGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddImContactToGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddImContactToGroup" />
+            <wsdl:input>
+                <soap:header message="tns:AddImContactToGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:AddImContactToGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:AddImContactToGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddImContactToGroupResult" use="literal" />
+                <soap:header message="tns:AddImContactToGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveImContactFromGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/RemoveImContactFromGroup" />
+            <wsdl:input>
+                <soap:header message="tns:RemoveImContactFromGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:RemoveImContactFromGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:RemoveImContactFromGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="RemoveImContactFromGroupResult" use="literal" />
+                <soap:header message="tns:RemoveImContactFromGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddImGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddImGroup" />
+            <wsdl:input>
+                <soap:header message="tns:AddImGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:AddImGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:AddImGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddImGroupResult" use="literal" />
+                <soap:header message="tns:AddImGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddDistributionGroupToImList">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/AddDistributionGroupToImList" />
+            <wsdl:input>
+                <soap:header message="tns:AddDistributionGroupToImListSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:AddDistributionGroupToImListSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:AddDistributionGroupToImListSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="AddDistributionGroupToImListResult" use="literal" />
+                <soap:header message="tns:AddDistributionGroupToImListSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetImItemList">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetImItemList" />
+            <wsdl:input>
+                <soap:header message="tns:GetImItemListSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:GetImItemListSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:GetImItemListSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetImItemListResult" use="literal" />
+                <soap:header message="tns:GetImItemListSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetImItems">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetImItems" />
+            <wsdl:input>
+                <soap:header message="tns:GetImItemsSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:GetImItemsSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:GetImItemsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetImItemsResult" use="literal" />
+                <soap:header message="tns:GetImItemsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveContactFromImList">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/RemoveContactFromImList" />
+            <wsdl:input>
+                <soap:header message="tns:RemoveContactFromImListSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:RemoveContactFromImListSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:RemoveContactFromImListSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="RemoveContactFromImListResult" use="literal" />
+                <soap:header message="tns:RemoveContactFromImListSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveDistributionGroupFromImList">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/RemoveDistributionGroupFromImList" />
+            <wsdl:input>
+                <soap:header message="tns:RemoveDistributionGroupFromImListSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:RemoveDistributionGroupFromImListSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:RemoveDistributionGroupFromImListSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="RemoveDistributionGroupFromImListResult" use="literal" />
+                <soap:header message="tns:RemoveDistributionGroupFromImListSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveImGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/RemoveImGroup" />
+            <wsdl:input>
+                <soap:header message="tns:RemoveImGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:RemoveImGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:RemoveImGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="RemoveImGroupResult" use="literal" />
+                <soap:header message="tns:RemoveImGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetImGroup">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SetImGroup" />
+            <wsdl:input>
+                <soap:header message="tns:SetImGroupSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:SetImGroupSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:SetImGroupSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SetImGroupResult" use="literal" />
+                <soap:header message="tns:SetImGroupSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetImListMigrationCompleted">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SetImListMigrationCompleted" />
+            <wsdl:input>
+                <soap:header message="tns:SetImListMigrationCompletedSoapIn" part="Impersonation" use="literal"/>
+                <soap:header message="tns:SetImListMigrationCompletedSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:header message="tns:SetImListMigrationCompletedSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SetImListMigrationCompletedResult" use="literal" />
+                <soap:header message="tns:SetImListMigrationCompletedSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- MRM Operations -->
+
+        <!-- GetRetentionPolicyTags -->
+        <wsdl:operation name="GetUserRetentionPolicyTags">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetUserRetentionPolicyTags" />
+            <wsdl:input>
+                <soap:header message="tns:GetUserRetentionPolicyTagsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetUserRetentionPolicyTagsResult" use="literal" />
+                <soap:header message="tns:GetUserRetentionPolicyTagsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="DisableApp">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/DisableApp"/>
+            <wsdl:input>
+                <soap:header message="tns:DisableAppSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="DisableAppResult" use="literal"/>
+                <soap:header message="tns:DisableAppSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="InstallApp">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/InstallApp"/>
+            <wsdl:input>
+                <soap:header message="tns:InstallAppSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="InstallAppResult" use="literal"/>
+                <soap:header message="tns:InstallAppSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="UninstallApp">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UninstallApp"/>
+            <wsdl:input>
+                <soap:header message="tns:UninstallAppSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="UninstallAppResult" use="literal"/>
+                <soap:header message="tns:UninstallAppSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetAppMarketplaceUrl">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetAppMarketplaceUrl"/>
+            <wsdl:input>
+                <soap:header message="tns:GetAppMarketplaceUrlSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetAppMarketplaceUrlResult" use="literal"/>
+                <soap:header message="tns:GetAppMarketplaceUrlSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- FindAvailableMeetingTimes (Binding) Operation -->
+        <wsdl:operation name="FindAvailableMeetingTimes">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/FindAvailableMeetingTimes" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:FindAvailableMeetingTimesSoapIn" part="RequestVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="FindAvailableMeetingTimesResult" use="literal" />
+                <soap:header message="tns:FindAvailableMeetingTimesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- FindMeetingTimeCandidates (Binding) Operation -->
+        <wsdl:operation name="FindMeetingTimeCandidates">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/FindMeetingTimeCandidates" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:FindMeetingTimeCandidatesSoapIn" part="RequestVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="FindMeetingTimeCandidatesResult" use="literal" />
+                <soap:header message="tns:FindMeetingTimeCandidatesSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Photos -->
+        <wsdl:operation name="GetUserPhoto">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetUserPhoto"/>
+            <wsdl:input>
+                <soap:header message="tns:GetUserPhotoSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetUserPhotoResult" use="literal"/>
+                <soap:header message="tns:GetUserPhotoSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="SetUserPhoto">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/SetUserPhoto"/>
+            <wsdl:input>
+                <soap:header message="tns:SetUserPhotoSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="SetUserPhotoResult" use="literal"/>
+                <soap:header message="tns:SetUserPhotoSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetMeetingSpace">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetMeetingSpace" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:GetMeetingSpaceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetMeetingSpaceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetMeetingSpaceResult" use="literal" />
+                <soap:header message="tns:GetMeetingSpaceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="DeleteMeetingSpace">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/DeleteMeetingSpace" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:DeleteMeetingSpaceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:DeleteMeetingSpaceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="DeleteMeetingSpaceResult" use="literal" />
+                <soap:header message="tns:DeleteMeetingSpaceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="UpdateMeetingSpace">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UpdateMeetingSpace" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:UpdateMeetingSpaceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:UpdateMeetingSpaceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="UpdateMeetingSpaceResult" use="literal" />
+                <soap:header message="tns:UpdateMeetingSpaceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="CreateMeetingSpace">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/CreateMeetingSpace" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:CreateMeetingSpaceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:CreateMeetingSpaceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="CreateMeetingSpaceResult" use="literal" />
+                <soap:header message="tns:CreateMeetingSpaceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="FindMeetingSpaceByJoinUrl">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/FindMeetingSpaceByJoinUrl" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:FindMeetingSpaceByJoinUrlSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:FindMeetingSpaceByJoinUrlSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="FindMeetingSpaceByJoinUrlResult" use="literal" />
+                <soap:header message="tns:FindMeetingSpaceByJoinUrlSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetMeetingInstance">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetMeetingInstanceRequest" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:GetMeetingInstanceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetMeetingInstanceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetMeetingInstanceResult" use="literal" />
+                <soap:header message="tns:GetMeetingInstanceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="DeleteMeetingInstance">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/DeleteMeetingInstanceRequest" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:DeleteMeetingInstanceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:DeleteMeetingInstanceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="DeleteMeetingInstanceResult" use="literal" />
+                <soap:header message="tns:DeleteMeetingInstanceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="UpdateMeetingInstance">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/UpdateMeetingInstanceRequest" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:UpdateMeetingInstanceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:UpdateMeetingInstanceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="UpdateMeetingInstanceResult" use="literal" />
+                <soap:header message="tns:UpdateMeetingInstanceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="CreateMeetingInstance">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/CreateMeetingInstanceRequest" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:CreateMeetingInstanceSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:CreateMeetingInstanceSoapIn" part="ManagementRole" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="CreateMeetingInstanceResult" use="literal" />
+                <soap:header message="tns:CreateMeetingInstanceSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Start Seach Session -->
+        <wsdl:operation name="StartSearchSession">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/StartSearchSession" />
+            <wsdl:input>
+                <soap:header message="tns:StartSearchSessionSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:StartSearchSessionSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="StartSearchSessionResult" use="literal" />
+                <soap:header message="tns:StartSearchSessionSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Execute Search -->
+        <wsdl:operation name="ExecuteSearch">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/ExecuteSearch" />
+            <wsdl:input>
+                <soap:header message="tns:ExecuteSearchSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:ExecuteSearchSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="ExecuteSearchResult" use="literal" />
+                <soap:header message="tns:ExecuteSearchSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Get SearchSuggestions -->
+        <wsdl:operation name="GetSearchSuggestions">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetSearchSuggestions" />
+            <wsdl:input>
+                <soap:header message="tns:GetSearchSuggestionsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:GetSearchSuggestionsSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetSearchSuggestionsResult" use="literal" />
+                <soap:header message="tns:GetSearchSuggestionsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- Delete SearchSuggestion -->
+        <wsdl:operation name="DeleteSearchSuggestion">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/DeleteSearchSuggestion" />
+            <wsdl:input>
+                <soap:header message="tns:DeleteSearchSuggestionSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:DeleteSearchSuggestionSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="DeleteSearchSuggestionResult" use="literal" />
+                <soap:header message="tns:DeleteSearchSuggestionSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- End Search Session-->
+        <wsdl:operation name="EndSearchSession">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/EndSearchSession" />
+            <wsdl:input>
+                <soap:header message="tns:EndSearchSessionSoapIn" part="RequestVersion" use="literal"/>
+                <soap:header message="tns:EndSearchSessionSoapIn" part="MailboxCulture" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="EndSearchSessionResult" use="literal" />
+                <soap:header message="tns:EndSearchSessionSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetLastPrivateCatalogUpdate (Binding) Operation -->
+        <wsdl:operation name="GetLastPrivateCatalogUpdate">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetLastPrivateCatalogUpdate" />
+            <wsdl:input>
+                <soap:body parts="request" use="literal" />
+                <soap:header message="tns:GetLastPrivateCatalogUpdateSoapIn" part="RequestVersion" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetLastPrivateCatalogUpdateResult" use="literal" />
+                <soap:header message="tns:GetLastPrivateCatalogUpdateSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <!-- GetPrivateCatalogAddIns (Binding) Operation -->
+        <wsdl:operation name="GetPrivateCatalogAddIns">
+            <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/GetPrivateCatalogAddIns" />
+            <wsdl:input>
+                <soap:header message="tns:GetPrivateCatalogAddInsSoapIn" part="RequestVersion" use="literal"/>
+                <soap:body parts="request" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="GetPrivateCatalogAddInsResult" use="literal" />
+                <soap:header message="tns:GetPrivateCatalogAddInsSoapOut" part="ServerVersion" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
     </wsdl:binding>
 
     <wsdl:service name="ExchangeServices">
-      <wsdl:port name="ExchangeServicePort" binding="tns:ExchangeServiceBinding">
-        <soap:address location="" />
-      </wsdl:port>
-    </wsdl:service> 
+        <wsdl:port name="ExchangeServicePort" binding="tns:ExchangeServiceBinding">
+            <soap:address location="" />
+        </wsdl:port>
+    </wsdl:service>
 </wsdl:definitions>
