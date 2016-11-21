@@ -319,6 +319,26 @@ class Client
     }
 
     /**
+     * Sets a one-time or follow up action on all the items in a conversation.
+     *
+     * This operation allows you to categorize, move, copy, delete, and set the
+     * read state on all items in a conversation. Actions can also be set for
+     * new messages in a conversation.
+     *
+     * @since Exchange 2010 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\ApplyConversationActionType $request
+     * @return \jamesiarmes\PhpEws\Response\ApplyConversationActionResponseType
+     */
+    public function ApplyConversationAction($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
