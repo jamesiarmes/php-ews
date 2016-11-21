@@ -287,6 +287,22 @@ class Client
     }
 
     /**
+     * Adds a new contact to an instant messaging (IM) group.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\AddNewImContactToGroup $request
+     * @return \jamesiarmes\PhpEws\Response\AddNewImContactToGroupResponseMessageType
+     */
+    public function AddNewImContactToGroup($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
