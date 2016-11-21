@@ -18,18 +18,18 @@ class PersonaAttributionType extends Type
      * Defines the display name of a folder, contact, distribution list,
      * delegate user, or rule.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $DisplayName;
 
     /**
      * Contains the identifier and change key of a folder.
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\FolderIdType
      */
     public $FolderId;
 
@@ -37,9 +37,9 @@ class PersonaAttributionType extends Type
      * Specifies a string that uniquely identifies an app or an attribution in a
      * persona.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $Id;
 
@@ -48,9 +48,9 @@ class PersonaAttributionType extends Type
      * Active Directory recipient should be hidden or displayed as part of the
      * persona.
      *
-     * @var boolean
-     *
      * @since Exchange 2013
+     *
+     * @var boolean
      */
     public $IsHidden;
 
@@ -58,9 +58,9 @@ class PersonaAttributionType extends Type
      * Specifies a Boolean value that indicates whether the underlying contact
      * or Active Directory recipient is a quick contact.
      *
-     * @var boolean
-     *
      * @since Exchange 2013
+     *
+     * @var boolean
      */
     public $IsQuickContact;
 
@@ -68,18 +68,18 @@ class PersonaAttributionType extends Type
      * Specifies whether the underlying contact or Active Directory recipient
      * can be written to.
      *
-     * @var boolean
-     *
      * @since Exchange 2013
+     *
+     * @var boolean
      */
     public $IsWritable;
 
     /**
      * Specifies the identifier of the contact or Active Directory recipient.
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $SourceId;
 }

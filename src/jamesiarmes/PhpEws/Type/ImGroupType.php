@@ -18,36 +18,36 @@ class ImGroupType extends Type
      * Contains the display name of a new instant messaging group contact or
      * the display name of a new instant messaging group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $DisplayName;
 
     /**
      * Specifies the instant messaging (IM) group identifier.
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $ExchangeStoreId;
 
     /**
      * Specifies an array of additional properties
      *
-     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfExtendedPropertyType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfExtendedPropertyType
      */
     public $ExtendedProperties;
 
     /**
      * Specifies the group class of an instant messaging (IM) group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $GroupType;
 
@@ -55,9 +55,9 @@ class ImGroupType extends Type
      * Specifies the identifiers of the contacts that are part of the instant
      * messaging (IM) group.
      *
-     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemIdsType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemIdsType
      */
     public $MemberCorrelationKey;
 
@@ -66,9 +66,9 @@ class ImGroupType extends Type
      * to be used for impersonation or a Simple Mail Transfer Protocol (SMTP)
      * recipient address of a calendar or contact sharing request.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $SmtpAddress;
 }

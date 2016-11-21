@@ -18,9 +18,9 @@ class ArrayOfPersonaAttributionsType extends ArrayType
     /**
      * Specifies an instance in an array of attributes for a Persona.
      *
-     * @var \jamesiarmes\PhpEws\Type\PersonaAttributionType[]
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\PersonaAttributionType[]
      */
     public $Attribution;
 }

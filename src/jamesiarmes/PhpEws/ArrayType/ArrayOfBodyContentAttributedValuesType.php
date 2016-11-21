@@ -17,9 +17,9 @@ class ArrayOfBodyContentAttributedValuesType extends ArrayType
     /**
      * Specifies the body content of an item.
      *
-     * @var \jamesiarmes\PhpEws\Type\BodyContentAttributedValueType[]
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\BodyContentAttributedValueType[]
      */
     public $BodyContentAttributedValue;
 }

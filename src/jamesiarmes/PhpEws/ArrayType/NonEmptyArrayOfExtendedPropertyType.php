@@ -17,9 +17,9 @@ class NonEmptyArrayOfExtendedPropertyType extends ArrayType
     /**
      * Identifies extended MAPI properties on folders and items.
      *
-     * @var \jamesiarmes\PhpEws\Type\ExtendedPropertyType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ExtendedPropertyType[]
      */
     public $ExtendedProperty;
 }

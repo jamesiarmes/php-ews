@@ -16,9 +16,9 @@ class AddDistributionGroupToImListType extends BaseRequestType
      * Contains the display name of a new instant messaging group contact or the
      * display name of a new instant messaging group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $DisplayName;
 
@@ -27,9 +27,9 @@ class AddDistributionGroupToImListType extends BaseRequestType
      * to be used for impersonation or a Simple Mail Transfer Protocol (SMTP)
      * recipient address of a calendar or contact sharing request.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $SmtpAddress;
 }

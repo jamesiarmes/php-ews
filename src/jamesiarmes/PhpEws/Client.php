@@ -241,10 +241,10 @@ class Client
      * Adds a distribution group to the instant messaging (IM) list in the
      * Unified Contact Store.
      *
+     * @since Exchange 2013
+     *
      * @param \jamesiarmes\PhpEws\Request\AddDistributionGroupToImListType $request
      * @return \jamesiarmes\PhpEws\Response\AddDistributionGroupToImListResponseMessageType
-     *
-     * @since Exchange 2013
      */
     public function AddDistributionGroupToImList($request)
     {
@@ -257,10 +257,10 @@ class Client
     /**
      * Adds an existing instant messaging (IM) contact to a group.
      *
+     * @since Exchange 2013
+     *
      * @param \jamesiarmes\PhpEws\Request\AddImContactToGroup $request
      * @return \jamesiarmes\PhpEws\Response\AddImContactToGroupResponseMessageType
-     *
-     * @since Exchange 2013
      */
     public function AddImContactToGroup($request)
     {
@@ -273,10 +273,10 @@ class Client
     /**
      * Adds a new instant messaging (IM) group to a mailbox.
      *
+     * @since Exchange 2013
+     *
      * @param \jamesiarmes\PhpEws\Request\AddImGroupType $request
      * @return \jamesiarmes\PhpEws\Response\AddImGroupResponseMessageType
-     *
-     * @since Exchange 2013
      */
     public function AddImGroup($request)
     {

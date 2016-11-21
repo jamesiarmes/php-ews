@@ -21,7 +21,7 @@ class ArrayOfStringAttributedValuesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\StringAttributedValueType
+     * @var \jamesiarmes\PhpEws\Type\StringAttributedValueType[]
      */
     public $StringAttributedValue;
 }

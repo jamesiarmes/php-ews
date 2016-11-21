@@ -15,9 +15,9 @@ class AddNewImContactToGroupResponseMessageType extends ResponseMessageType
     /**
      * Specifies a set of persona data.
      *
-     * @var \jamesiarmes\PhpEws\Type\PersonaType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\PersonaType
      */
     public $Persona;
 }

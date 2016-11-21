@@ -15,9 +15,9 @@ class AddDistributionGroupToImListResponseMessageType extends ResponseMessageTyp
     /**
      * Represents an instant messaging group.
      *
-     * @var \jamesiarmes\PhpEws\Type\ImGroupType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ImGroupType
      */
     public $ImGroup;
 }

@@ -16,18 +16,18 @@ class AddImContactToGroup extends BaseRequestType
     /**
      * Uniquely identifies a contact.
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $ContactId;
 
     /**
      * Uniquely identifies a group.
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $GroupId;
 }

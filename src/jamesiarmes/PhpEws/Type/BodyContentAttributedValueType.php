@@ -19,18 +19,18 @@ class BodyContentAttributedValueType extends Type
      * contacts or active directory recipients aggregated into the associated
      * persona.
      *
-     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfPersonaAttributionsType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfPersonaAttributionsType
      */
     public $Attributions;
 
     /**
      * Specifies the value of a BodyContentAttributedValue element.
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
      */
     public $Value;
 }

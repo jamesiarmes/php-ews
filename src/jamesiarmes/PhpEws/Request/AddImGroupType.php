@@ -15,9 +15,9 @@ class AddImGroupType extends BaseRequestType
     /**
      * Display name of the instant messaging group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $DisplayName;
 }

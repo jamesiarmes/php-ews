@@ -17,18 +17,18 @@ class BodyContentType extends Type
     /**
      * Identifies how the body text is formatted.
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
      */
     public $BodyType;
 
     /**
      * Contains the value of the body content.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $Value;
 }

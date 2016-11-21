@@ -17,18 +17,18 @@ class AddNewImContactToGroup extends BaseRequestType
      * Contains the display name of a new instant messaging group contact or the
      * display name of a new instant messaging group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $DisplayName;
 
     /**
      * Unique identifier of a group.
      *
-     * @var \jamesiarmes\PhpEws\Type\ItemIdType
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\ItemIdType
      */
     public $GroupId;
 
@@ -36,9 +36,9 @@ class AddNewImContactToGroup extends BaseRequestType
      * Contains the instant messaging address of a new contact that will be
      * added to an instant messaging group.
      *
-     * @var string
-     *
      * @since Exchange 2013
+     *
+     * @var string
      */
     public $ImAddress;
 }

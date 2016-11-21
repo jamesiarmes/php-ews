@@ -17,9 +17,9 @@ class ArrayOfFolderIdType extends ArrayType
     /**
      * Contains the identifier and change key of a folder.
      *
-     * @var \jamesiarmes\PhpEws\Type\FolderIdType[]
-     *
      * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\FolderIdType[]
      */
     public $FolderId;
 }
