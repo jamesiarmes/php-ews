@@ -303,6 +303,22 @@ class Client
     }
 
     /**
+     * Adds a new contact to a group based on a contact's phone number.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\AddNewTelUriContactToGroupType $request
+     * @return \jamesiarmes\PhpEws\Response\AddNewTelUriContactToGroupResponse
+     */
+    public function AddNewTelUriContactToGroup($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
