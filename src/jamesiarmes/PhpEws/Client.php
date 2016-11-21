@@ -339,6 +339,22 @@ class Client
     }
 
     /**
+     * Moves an item into the mailbox user's archive mailbox.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\ArchiveItemType $request
+     * @return \jamesiarmes\PhpEws\Response\ArchiveItemResponse
+     */
+    public function ArchiveItem($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request

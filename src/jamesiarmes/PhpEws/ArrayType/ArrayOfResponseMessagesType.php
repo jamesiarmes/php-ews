@@ -25,6 +25,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $ApplyConversationActionResponseMessage;
 
     /**
+     * Contains the status and result of a single ArchiveItem request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\ItemInfoResponseMessageType[]
+     */
+    public $ArchiveItemResponseMessage;
+
+    /**
      * Contains the status and result of a ConvertId request.
      *
      * @since Exchange 2007 SP1

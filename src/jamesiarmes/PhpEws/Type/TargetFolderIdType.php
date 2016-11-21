@@ -15,6 +15,15 @@ use \jamesiarmes\PhpEws\Type;
 class TargetFolderIdType extends Type
 {
     /**
+     * Specifies the identifier of an address list.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\AddressListIdType
+     */
+    public $AddressListId;
+
+    /**
      * Identifies folders that can be referenced by name.
      *
      * @since Exchange 2007
