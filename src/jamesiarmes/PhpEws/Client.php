@@ -469,6 +469,22 @@ class Client
     }
 
     /**
+     * Creates a user configuration object on a folder.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\CreateUserConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\CreateUserConfigurationResponseType
+     */
+    public function CreateUserConfiguration($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\DeleteAttachmentType $request
