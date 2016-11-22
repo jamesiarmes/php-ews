@@ -527,6 +527,22 @@ class Client
     }
 
     /**
+     * Deletes a user configuration object on a folder.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\DeleteUserConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\DeleteUserConfigurationResponseType
+     */
+    public function DeleteUserConfiguration($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
