@@ -425,6 +425,22 @@ class Client
     }
 
     /**
+     * Creates a folder hierarchy.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\CreateFolderPathType $request
+     * @return \jamesiarmes\PhpEws\Response\CreateFolderPathResponseType
+     */
+    public function CreateFolderPath($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\CreateItemType $request
