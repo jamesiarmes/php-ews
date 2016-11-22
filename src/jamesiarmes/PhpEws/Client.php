@@ -543,6 +543,22 @@ class Client
     }
 
     /**
+     * Disables a mail app for Outlook.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\DisableAppType $request
+     * @return \jamesiarmes\PhpEws\Response\DisableAppResponseType
+     */
+    public function DisableApp($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
