@@ -625,6 +625,20 @@ class Client
     }
 
     /**
+     * Enumerates a list of conversations in a folder.
+     *
+     * @param \jamesiarmes\PhpEws\Request\FindConversationType $request
+     * @return \jamesiarmes\PhpEws\Response\FindConversationResponseMessageType
+     */
+    public function FindConversation($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\FindFolderType $request
