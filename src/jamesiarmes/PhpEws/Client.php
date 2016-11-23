@@ -609,6 +609,22 @@ class Client
     }
 
     /**
+     * Exports items out of a mailbox.
+     *
+     * @since Exchange 2010 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\ExportItemsType $request
+     * @return \jamesiarmes\PhpEws\Response\ExportItemsResponseType
+     */
+    public function ExportItems($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\FindFolderType $request
