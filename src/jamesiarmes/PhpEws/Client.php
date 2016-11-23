@@ -683,6 +683,23 @@ class Client
     }
 
     /**
+     * Returns all persona objects from a specified Contacts folder or retrieves
+     * contacts that match a specified query string.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\FindPeopleType $request
+     * @return \jamesiarmes\PhpEws\Response\FindPeopleResponseMessageType
+     */
+    public function FindPeople($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
