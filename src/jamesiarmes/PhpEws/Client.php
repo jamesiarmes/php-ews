@@ -575,6 +575,26 @@ class Client
     }
 
     /**
+     * Empties folders in a mailbox.
+     *
+     * Optionally, this operation enables you to delete the subfolders of the
+     * specified folder. When a subfolder is deleted, the subfolder and the
+     * messages within the subfolder are deleted.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\EmptyFolderType $request
+     * @return \jamesiarmes\PhpEws\Response\EmptyFolderResponseType
+     */
+    public function EmptyFolder($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
