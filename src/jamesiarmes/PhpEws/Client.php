@@ -716,6 +716,23 @@ class Client
     }
 
     /**
+     * Retrieves the URL for the app marketplace that a client can visit to
+     * acquire apps to install in a mailbox.
+     *
+     * @since Exchange 2013 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetAppMarketplaceUrl $request
+     * @return \jamesiarmes\PhpEws\Response\GetAppMarketplaceUrlResponseMessageType
+     */
+    public function GetAppMarketplaceUrl($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
