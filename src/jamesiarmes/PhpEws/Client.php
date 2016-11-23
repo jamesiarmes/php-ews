@@ -667,6 +667,22 @@ class Client
     }
 
     /**
+     * Finds messages that meet the specified criteria.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\FindMessageTrackingReportRequestType $request
+     * @return \jamesiarmes\PhpEws\Response\FindMessageTrackingReportResponseMessageType
+     */
+    public function FindMessageTrackingReport($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
