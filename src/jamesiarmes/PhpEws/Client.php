@@ -559,6 +559,22 @@ class Client
     }
 
     /**
+     * Terminates a telephone call.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\DisconnectPhoneCallType $request
+     * @return \jamesiarmes\PhpEws\Response\DisconnectPhoneCallResponseMessageType
+     */
+    public function DisconnectPhoneCall($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
