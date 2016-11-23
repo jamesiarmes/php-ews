@@ -700,6 +700,22 @@ class Client
     }
 
     /**
+     * Retrieves app manifests.
+     *
+     * @since Exchange 2013 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetAppManifestsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetAppManifestsResponseType
+     */
+    public function GetAppManifests($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
