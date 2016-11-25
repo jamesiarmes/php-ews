@@ -839,6 +839,23 @@ class Client
     }
 
     /**
+     * Retrieves the mailboxes that are under a specific hold and the associated
+     * hold query.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetHoldOnMailboxesType $request
+     * @return \jamesiarmes\PhpEws\Response\GetHoldOnMailboxesResponseMessageType
+     */
+    public function GetHoldOnMailboxes($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetItemType $request
