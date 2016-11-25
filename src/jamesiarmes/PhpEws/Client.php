@@ -747,6 +747,22 @@ class Client
     }
 
     /**
+     * Gets a client access token for a mail app for Outlook.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetClientAccessTokenType $request
+     * @return \jamesiarmes\PhpEws\Response\GetClientAccessTokenResponseType
+     */
+    public function GetClientAccessToken($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetDelegateType $request
