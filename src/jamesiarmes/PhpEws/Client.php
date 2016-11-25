@@ -794,6 +794,23 @@ class Client
     }
 
     /**
+     * Returns configuration information for in-place holds, saved discovery
+     * searches, and the mailboxes that are enabled for discovery search.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetDiscoverySearchConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\GetDiscoverySearchConfigurationResponseMessageType
+     */
+    public function GetDiscoverySearchConfiguration($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetEventsType $request
