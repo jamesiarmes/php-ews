@@ -197,6 +197,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $FindMailboxStatisticsByKeywordsResponseMessage;
 
     /**
+     * Contains the status and result of a single GetAttachment request.
+     *
+     * @since Exchange 2007
+     *
+     * @var \jamesiarmes\PhpEws\Response\AttachmentInfoResponseMessageType[]
+     */
+    public $GetAttachmentResponseMessage;
+
+    /**
      * Contains the status and result of a single GetClientAccessToken request.
      *
      * @since Exchange 2013
@@ -206,13 +215,13 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $GetClientAccessTokenResponseMessage;
 
     /**
-     * Contains the status and result of a single GetAttachment request.
+     * Specifies the response message for a GetConversationItems request.
      *
-     * @since Exchange 2007
+     * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Response\AttachmentInfoResponseMessageType[]
+     * @var \jamesiarmes\PhpEws\Response\GetConversationItemsResponseMessageType[]
      */
-    public $GetAttachmentResponseMessage;
+    public $GetConversationItemsResponseMessage;
 
     /**
      * Contains the status and result of a single GetEvents request.

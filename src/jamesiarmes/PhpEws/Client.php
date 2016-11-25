@@ -763,6 +763,23 @@ class Client
     }
 
     /**
+     * Retrieves one or more sets of items that are organized in to nodes in a
+     * conversation.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetConversationItemsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetConversationItemsResponseType
+     */
+    public function GetConversationItems($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetDelegateType $request
