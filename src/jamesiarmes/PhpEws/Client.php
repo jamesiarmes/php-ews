@@ -992,6 +992,22 @@ class Client
     }
 
     /**
+     * Requests notifications from the Client Access server.
+     *
+     * The GetStreamingEvents response returns an array of items and events that
+     * have occurred in a mailbox since the last the notification.
+     *
+     * @since Exchange 2010 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetStreamingEventsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetStreamingEventsResponseType
+     */
+    public function GetStreamingEvents($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request

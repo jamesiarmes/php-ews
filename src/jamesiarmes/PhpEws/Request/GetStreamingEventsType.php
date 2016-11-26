@@ -16,6 +16,8 @@ class GetStreamingEventsType extends BaseRequestType
     /**
      * Represents the number of minutes to keep a connection open.
      *
+     * The value must be between 1 and 30, inclusive.
+     *
      * @since Exchange 2010 SP1
      *
      * @var integer
@@ -27,7 +29,7 @@ class GetStreamingEventsType extends BaseRequestType
      *
      * @since Exchange 2010 SP1
      *
-     * @var string
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfSubscriptionIdsType
      */
     public $SubscriptionId;
 }
