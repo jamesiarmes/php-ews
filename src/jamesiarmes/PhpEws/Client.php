@@ -920,6 +920,23 @@ class Client
     }
 
     /**
+     * Retrieves a scoped set of searchable mailboxes for discovery searches.
+     *
+     * The scope of searchable mailboxes returned in the response is determined
+     * by the search filter and whether distribution group membership is
+     * expanded.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetSearchableMailboxesType $request
+     * @return \jamesiarmes\PhpEws\Response\GetSearchableMailboxesResponseMessageType
+     */
+    public function GetSearchableMailboxes($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
