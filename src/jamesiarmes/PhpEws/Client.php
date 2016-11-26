@@ -1056,6 +1056,21 @@ class Client
     }
 
     /**
+     * Retrieves a list of all default, system folder, and personal tags that
+     * are associated with a user by means of a system policy or that were
+     * applied by the user.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetUserRetentionPolicyTagsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetUserRetentionPolicyTagsResponseMessageType
+     */
+    public function GetUserRetentionPolicyTags($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request
