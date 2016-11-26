@@ -856,6 +856,23 @@ class Client
     }
 
     /**
+     * Retrieves the list of instant messaging (IM) groups and IM contact
+     * personas in a mailbox.
+     *
+     * @since Exchnage 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetImItemListType $request
+     * @return \jamesiarmes\PhpEws\Response\GetImItemListResponseMessageType
+     */
+    public function GetImItemList($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetItemType $request

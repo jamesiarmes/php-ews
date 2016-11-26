@@ -78,6 +78,15 @@ class DistinguishedPropertySetType extends Enumeration
     const PUBLIC_STRINGS = 'PublicStrings';
 
     /**
+     * Identifies the sharing property set ID by name.
+     *
+     * @since Exchange 2016
+     *
+     * @var string
+     */
+    const SHARING = 'Sharing';
+
+    /**
      * Indicates a task.
      *
      * @since Exchange 2010
