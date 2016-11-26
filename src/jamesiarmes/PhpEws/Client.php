@@ -952,6 +952,26 @@ class Client
     }
 
     /**
+     * Retrieves details about items that cannot be indexed.
+     *
+     * This includes, but is not limited to, the item identifier, an error code,
+     * an error description, when an attempt was made to index the item, and
+     * additional information about the file.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetNonIndexableItemDetailsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetNonIndexableItemDetailsResponseMessageType
+     */
+    public function GetNonIndexableItemDetails($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
