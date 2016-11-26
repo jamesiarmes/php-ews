@@ -893,6 +893,20 @@ class Client
     }
 
     /**
+     * Retrieves the room lists that are available within the Exchange
+     * organization.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetRoomListsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetRoomListsResponseMessageType
+     */
+    public function GetRoomLists($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
