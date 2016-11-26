@@ -26,18 +26,6 @@ class GetSharingMetadataType extends BaseRequestType
     public $IdOfFolderToShare;
 
     /**
-     * Represents the SMTP email address that corresponds to the mailbox that
-     * contains the folder that is identified by the IdOfFolderToShare element.
-     *
-     * This element is required.
-     *
-     * @since Exchange 2010
-     *
-     * @var string
-     */
-    public $SenderSmtpAddress;
-
-    /**
      * Represents the SMTP email addresses of one or more entities that will be
      * granted access to the data in the folder that is identified by the
      * IdOfFolderToShare element.
@@ -49,4 +37,16 @@ class GetSharingMetadataType extends BaseRequestType
      * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfSmtpAddressType
      */
     public $Recipients;
+
+    /**
+     * Represents the SMTP email address that corresponds to the mailbox that
+     * contains the folder that is identified by the IdOfFolderToShare element.
+     *
+     * This element is required.
+     *
+     * @since Exchange 2010
+     *
+     * @var string
+     */
+    public $SenderSmtpAddress;
 }

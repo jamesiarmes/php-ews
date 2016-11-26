@@ -979,6 +979,19 @@ class Client
     }
 
     /**
+     * Gets an opaque authentication token that identifies a sharing invitation.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetSharingMetadataType $request
+     * @return \jamesiarmes\PhpEws\Response\GetSharingMetadataResponseMessageType
+     */
+    public function GetSharingMetadata($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request
