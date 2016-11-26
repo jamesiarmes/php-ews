@@ -231,10 +231,7 @@ class Client
      */
     public function AddDelegate($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -248,10 +245,7 @@ class Client
      */
     public function AddDistributionGroupToImList($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -264,10 +258,7 @@ class Client
      */
     public function AddImContactToGroup($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -280,10 +271,7 @@ class Client
      */
     public function AddImGroup($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -296,10 +284,7 @@ class Client
      */
     public function AddNewImContactToGroup($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -312,10 +297,7 @@ class Client
      */
     public function AddNewTelUriContactToGroup($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -332,10 +314,7 @@ class Client
      */
     public function ApplyConversationAction($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -348,10 +327,7 @@ class Client
      */
     public function ArchiveItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -362,10 +338,7 @@ class Client
      */
     public function ConvertId($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -376,10 +349,7 @@ class Client
      */
     public function CopyFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -390,10 +360,7 @@ class Client
      */
     public function CopyItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -404,10 +371,7 @@ class Client
      */
     public function CreateAttachment($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -418,10 +382,7 @@ class Client
      */
     public function CreateFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -434,10 +395,7 @@ class Client
      */
     public function CreateFolderPath($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -448,10 +406,7 @@ class Client
      */
     public function CreateItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -462,10 +417,7 @@ class Client
      */
     public function CreateManagedFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -478,10 +430,7 @@ class Client
      */
     public function CreateUserConfiguration($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -492,10 +441,7 @@ class Client
      */
     public function DeleteAttachment($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -506,10 +452,7 @@ class Client
      */
     public function DeleteFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -520,10 +463,7 @@ class Client
      */
     public function DeleteItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -536,10 +476,7 @@ class Client
      */
     public function DeleteUserConfiguration($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -552,10 +489,7 @@ class Client
      */
     public function DisableApp($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -568,10 +502,7 @@ class Client
      */
     public function DisconnectPhoneCall($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -588,10 +519,7 @@ class Client
      */
     public function EmptyFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -602,10 +530,7 @@ class Client
      */
     public function ExpandDL($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -618,10 +543,7 @@ class Client
      */
     public function ExportItems($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -632,10 +554,7 @@ class Client
      */
     public function FindConversation($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -646,10 +565,7 @@ class Client
      */
     public function FindFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -660,10 +576,7 @@ class Client
      */
     public function FindItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -676,10 +589,7 @@ class Client
      */
     public function FindMessageTrackingReport($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -693,10 +603,7 @@ class Client
      */
     public function FindPeople($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -709,10 +616,7 @@ class Client
      */
     public function GetAppManifests($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -726,10 +630,7 @@ class Client
      */
     public function GetAppMarketplaceUrl($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -740,10 +641,7 @@ class Client
      */
     public function GetAttachment($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -756,10 +654,7 @@ class Client
      */
     public function GetClientAccessToken($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -773,10 +668,7 @@ class Client
      */
     public function GetConversationItems($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -787,10 +679,7 @@ class Client
      */
     public function GetDelegate($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -804,10 +693,7 @@ class Client
      */
     public function GetDiscoverySearchConfiguration($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -818,10 +704,7 @@ class Client
      */
     public function GetEvents($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -832,10 +715,7 @@ class Client
      */
     public function GetFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -849,10 +729,7 @@ class Client
      */
     public function GetHoldOnMailboxes($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -866,10 +743,7 @@ class Client
      */
     public function GetImItemList($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -883,10 +757,7 @@ class Client
      */
     public function GetImItems($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -899,10 +770,7 @@ class Client
      */
     public function GetInboxRules($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -913,10 +781,7 @@ class Client
      */
     public function GetItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -929,10 +794,7 @@ class Client
      */
     public function GetMailTips($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -945,10 +807,7 @@ class Client
      */
     public function GetMessageTrackingReport($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -965,10 +824,7 @@ class Client
      */
     public function GetNonIndexableItemDetails($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -981,10 +837,7 @@ class Client
      */
     public function GetNonIndexableItemStatistics($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -997,10 +850,7 @@ class Client
      */
     public function GetPasswordExpirationDate($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1013,10 +863,7 @@ class Client
      */
     public function GetPersona($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1029,10 +876,7 @@ class Client
      */
     public function GetServerTimeZones($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1043,10 +887,7 @@ class Client
      */
     public function GetUserAvailability($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1057,10 +898,7 @@ class Client
      */
     public function GetUserOofSettings($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1071,10 +909,7 @@ class Client
      */
     public function MoveFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1085,10 +920,7 @@ class Client
      */
     public function MoveItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1099,10 +931,7 @@ class Client
      */
     public function RemoveDelegate($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1113,10 +942,7 @@ class Client
      */
     public function ResolveNames($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1127,10 +953,7 @@ class Client
      */
     public function SendItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1141,10 +964,7 @@ class Client
      */
     public function SetUserOofSettings($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1155,10 +975,7 @@ class Client
      */
     public function Subscribe($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1169,10 +986,7 @@ class Client
      */
     public function SyncFolderHierarchy($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1183,10 +997,7 @@ class Client
      */
     public function SyncFolderItems($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1197,10 +1008,7 @@ class Client
      */
     public function Unsubscribe($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1211,10 +1019,7 @@ class Client
      */
     public function UpdateDelegate($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1225,10 +1030,7 @@ class Client
      */
     public function UpdateFolder($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1239,10 +1041,7 @@ class Client
      */
     public function UpdateItem($request)
     {
-        $this->initializeSoapClient();
-        $response = $this->soap->{__FUNCTION__}($request);
-
-        return $this->processResponse($response);
+        return $this->makeRequest(__FUNCTION__, $request);
     }
 
     /**
@@ -1266,6 +1065,24 @@ class Client
         );
 
         return $this->soap;
+    }
+
+    /**
+     * Makes the SOAP call for a request.
+     *
+     * @param string $operation
+     *   The operation to be called.
+     * @param \jamesiarmes\PhpEws\Request $request
+     *   The request object for the operation.
+     * @return \jamesiarmes\PhpEws\Response
+     *   The response object for the operation.
+     */
+    protected function makeRequest($operation, $request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{$operation}($request);
+
+        return $this->processResponse($response);
     }
 
     /**
