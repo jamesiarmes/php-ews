@@ -890,6 +890,22 @@ class Client
     }
 
     /**
+     * Retrieves Inbox rules in the identified user's mailbox.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetInboxRulesRequestType $request
+     * @return \jamesiarmes\PhpEws\Response\GetInboxRulesResponseType
+     */
+    public function GetInboxRules($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetItemType $request
