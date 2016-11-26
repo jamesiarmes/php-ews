@@ -972,6 +972,22 @@ class Client
     }
 
     /**
+     * Retrieves the count of items that cannot be indexed in a mailbox.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetNonIndexableItemStatisticsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetNonIndexableItemStatisticsResponseMessageType
+     */
+    public function GetNonIndexableItemStatistics($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
