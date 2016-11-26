@@ -920,6 +920,22 @@ class Client
     }
 
     /**
+     * Retrieves the mail tips information for the specified mailbox.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetMailTipsType $request
+     * @return \jamesiarmes\PhpEws\Response\GetMailTipsResponseMessageType
+     */
+    public function GetMailTips($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
