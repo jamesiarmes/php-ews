@@ -44,4 +44,13 @@ class NonEmptyArrayOfBaseItemIdsType extends ArrayType
      * @var \jamesiarmes\PhpEws\Type\RecurringMasterItemIdType[]
      */
     public $RecurringMasterItemId;
+
+    /**
+     * Specifies an array of occurrence ranges.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\RecurringMasterItemIdRanges[]
+     */
+    public $RecurringMasterItemIdRanges;
 }
