@@ -1019,6 +1019,19 @@ class Client
     }
 
     /**
+     * Retrieves a user configuration object from a folder.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetUserConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\GetUserConfigurationResponseType
+     */
+    public function GetUserConfiguration($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserOofSettingsRequest $request
