@@ -12,7 +12,7 @@ namespace jamesiarmes\PhpEws\Type;
  *
  * @package php-ews\Type
  */
-class TransitionTargetType extends String
+class TransitionTargetType extends StringType
 {
     /**
      * Indicates whether the time zone transition target is a time zone period
