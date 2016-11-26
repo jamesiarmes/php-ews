@@ -880,6 +880,19 @@ class Client
     }
 
     /**
+     * Retrieves reminders for calendar and task items.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetRemindersType $request
+     * @return \jamesiarmes\PhpEws\Response\GetRemindersResponseMessageType
+     */
+    public function GetReminders($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
