@@ -936,6 +936,22 @@ class Client
     }
 
     /**
+     * Retrieves tracking information about the specified messages.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetMessageTrackingReportRequestType $request
+     * @return \jamesiarmes\PhpEws\Response\GetMessageTrackingReportResponseMessageType
+     */
+    public function GetMessageTrackingReport($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
