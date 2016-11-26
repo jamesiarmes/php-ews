@@ -950,6 +950,22 @@ class Client
     }
 
     /**
+     * Retrieves configuration information for the specified type of service.
+     *
+     * This operation can return configuration settings for the Unified
+     * Messaging, Protection Rules, and Mail Tips services.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetServiceConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\GetServiceConfigurationResponseMessageType
+     */
+    public function GetServiceConfiguration($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request
