@@ -1004,6 +1004,22 @@ class Client
     }
 
     /**
+     * Retrieves a set of properties that are associated with a persona.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetPersonaType $request
+     * @return \jamesiarmes\PhpEws\Response\GetPersonaResponseMessageType
+     */
+    public function GetPersona($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
