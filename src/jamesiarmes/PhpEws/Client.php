@@ -966,6 +966,19 @@ class Client
     }
 
     /**
+     * Retrieves the local folder identifier of a specified shared folder.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetSharingFolderType $request
+     * @return \jamesiarmes\PhpEws\Response\GetSharingFolderResponseMessageType
+     */
+    public function GetSharingFolder($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request
