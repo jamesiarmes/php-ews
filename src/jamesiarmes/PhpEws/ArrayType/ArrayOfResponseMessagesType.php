@@ -323,6 +323,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $GetUserConfigurationResponseMessage;
 
     /**
+     * Contains the status and results of a GetUserPhoto request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\GetUserPhotoResponseMessageType[]
+     */
+    public $GetUserPhotoResponseMessage;
+
+    /**
      * Contains the status and result of a single MoveFolder request.
      *
      * @since Exchange 2007

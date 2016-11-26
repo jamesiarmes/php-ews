@@ -1043,6 +1043,19 @@ class Client
     }
 
     /**
+     * Retrieves a user photo from Active Directory Domain Services (AD DS).
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetUserPhotoType $request
+     * @return \jamesiarmes\PhpEws\Response\GetUserPhotoResponseMessageType
+     */
+    public function GetUserPhoto($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request
