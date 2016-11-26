@@ -988,6 +988,22 @@ class Client
     }
 
     /**
+     * Provides the email account password expiration date for the current user.
+     *
+     * @since Exchange 2010 SP2
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetPasswordExpirationDateType $request
+     * @return \jamesiarmes\PhpEws\Response\GetPasswordExpirationDateResponseMessageType
+     */
+    public function GetPasswordExpirationDate($request)
+    {
+        $this->initializeSoapClient();
+        $response = $this->soap->{__FUNCTION__}($request);
+
+        return $this->processResponse($response);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
