@@ -867,6 +867,19 @@ class Client
     }
 
     /**
+     * Retrieves information about the specified telephone call.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\GetPhoneCallInformationType $request
+     * @return \jamesiarmes\PhpEws\Response\GetPhoneCallInformationResponseMessageType
+     */
+    public function GetPhoneCallInformation($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Retrieve the timezones supported by the server.
      *
      * @since Exchange 2010
