@@ -1098,6 +1098,20 @@ class Client
     }
 
     /**
+     * Adds and removes users from the blocked email list and moves email
+     * messages to the Junk Email folder.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\MarkAsJunkType $request
+     * @return \jamesiarmes\PhpEws\Response\MarkAsJunkResponseType
+     */
+    public function MarkAsJunk($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request

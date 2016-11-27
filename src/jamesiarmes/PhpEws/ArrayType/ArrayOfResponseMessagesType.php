@@ -341,6 +341,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $MarkAllItemsAsReadResponseMessage;
 
     /**
+     * Defines a response message for a MarkAsJunk request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\MarkAsJunkResponseMessageType
+     */
+    public $MarkAsJunkResponseMessage;
+
+    /**
      * Contains the status and result of a single MoveFolder request.
      *
      * @since Exchange 2007
