@@ -1226,6 +1226,19 @@ class Client
     }
 
     /**
+     * Removes a single instant messaging (IM) group from a mailbox.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\RemoveImGroupType $request
+     * @return \jamesiarmes\PhpEws\Response\RemoveImGroupResponseMessageType
+     */
+    public function RemoveImGroup($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ResolveNamesType $request
