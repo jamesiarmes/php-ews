@@ -1160,6 +1160,20 @@ class Client
     }
 
     /**
+     * Refreshes the specified local folder with the latest data from the folder
+     * that is being shared.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\RefreshSharingFolderType $request
+     * @return \jamesiarmes\PhpEws\Response\RefreshSharingFolderResponseMessageType
+     */
+    public function RefreshSharingFolder($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request

@@ -381,7 +381,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType[]
+     * @var \jamesiarmes\PhpEws\Response\RefreshSharingFolderResponseMessageType[]
      */
     public $RefreshSharingFolderResponseMessage;
 
