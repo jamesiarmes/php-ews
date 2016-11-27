@@ -1084,6 +1084,20 @@ class Client
     }
 
     /**
+     * Sets the IsRead property on all items, in one or more folders, to
+     * indicate that all items are either read or unread.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\MarkAllItemsAsRead $request
+     * @return \jamesiarmes\PhpEws\Response\MarkAllItemsAsReadResponseType
+     */
+    public function MarkAllItemsAsRead($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request

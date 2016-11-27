@@ -332,6 +332,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $GetUserPhotoResponseMessage;
 
     /**
+     * Defines a response message for a MarkAllItemsAsRead request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
+     */
+    public $MarkAllItemsAsReadResponseMessage;
+
+    /**
      * Contains the status and result of a single MoveFolder request.
      *
      * @since Exchange 2007
