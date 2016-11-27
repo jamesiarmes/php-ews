@@ -1134,6 +1134,19 @@ class Client
     }
 
     /**
+     * Initiates a dismiss or snooze action on a reminder.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\PerformReminderActionType $request
+     * @return \jamesiarmes\PhpEws\Response\PerformReminderActionResponseMessageType
+     */
+    public function PerformReminderAction($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request
