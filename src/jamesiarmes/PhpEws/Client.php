@@ -1213,6 +1213,19 @@ class Client
     }
 
     /**
+     * Removes a single IM contact from an IM group.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\RemoveImContactFromGroupType $request
+     * @return \jamesiarmes\PhpEws\Response\RemoveImContactFromGroupResponseMessageType
+     */
+    public function RemoveImContactFromGroup($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ResolveNamesType $request
