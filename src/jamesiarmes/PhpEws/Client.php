@@ -1147,6 +1147,19 @@ class Client
     }
 
     /**
+     * Initiates an outbound call and plays a message over the telephone.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\PlayOnPhoneType $request
+     * @return \jamesiarmes\PhpEws\Response\PlayOnPhoneResponseMessageType
+     */
+    public function PlayOnPhone($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request
