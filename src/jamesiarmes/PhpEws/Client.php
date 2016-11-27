@@ -1199,6 +1199,20 @@ class Client
     }
 
     /**
+     * Removes a distribution group from the Lync instant messaging (IM) list
+     * when Lync uses Exchange for the contact store.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\RemoveDistributionGroupFromImListType $request
+     * @return \jamesiarmes\PhpEws\Response\RemoveDistributionGroupFromImListResponseMessageType
+     */
+    public function RemoveDistributionGroupFromImList($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\ResolveNamesType $request
