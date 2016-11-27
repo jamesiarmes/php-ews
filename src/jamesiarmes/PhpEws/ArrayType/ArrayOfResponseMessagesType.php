@@ -395,6 +395,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $ResolveNamesResponseMessage;
 
     /**
+     * Contains the status and result of a SearchMailboxes request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\SearchMailboxesResponseMessageType[]
+     */
+    public $SearchMailboxesResponseMessage;
+
+    /**
      * Contains the status and result of a single SendItem request.
      *
      * @since Exchange 2007

@@ -1250,6 +1250,19 @@ class Client
     }
 
     /**
+     * Searches mailboxes for occurrences of terms in mailbox items.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\SearchMailboxesType $request
+     * @return \jamesiarmes\PhpEws\Response\SearchMailboxesResponseType
+     */
+    public function SearchMailboxes($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\SendItemType $request
