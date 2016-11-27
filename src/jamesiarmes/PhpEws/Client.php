@@ -1174,6 +1174,20 @@ class Client
     }
 
     /**
+     * Removes contacts from the Lync instant messaging (IM) list when Lync uses
+     * Exchange for the contact store.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\RemoveContactFromImListType $request
+     * @return \jamesiarmes\PhpEws\Response\RemoveContactFromImListResponseMessageType
+     */
+    public function RemoveContactFromImList($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request
