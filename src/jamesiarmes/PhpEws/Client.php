@@ -1071,6 +1071,19 @@ class Client
     }
 
     /**
+     * Installs a mail app for Outlook in a mailbox.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\InstallAppType $request
+     * @return \jamesiarmes\PhpEws\Response\InstallAppResponseType
+     */
+    public function InstallApp($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request
