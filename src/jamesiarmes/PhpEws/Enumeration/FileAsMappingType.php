@@ -159,7 +159,7 @@ class FileAsMappingType extends Enumeration
     const LAST_SPACE_FIRST = 'LastSpaceFirst';
 
     /**
-     * File as mapping for "lasy name first name company".
+     * File as mapping for "last name first name company".
      *
      * @since Exchange 2007
      *

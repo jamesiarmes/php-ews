@@ -104,7 +104,7 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const NOTE_RULES_REPLYTEMPLATE_MICROSOFT = 'IPM.Note.Rules.ReplyTemplate.Microsoft';
+    const NOTE_RULES_REPLY_TEMPLATE_MICROSOFT = 'IPM.Note.Rules.ReplyTemplate.Microsoft';
 
     /**
      * Class used to identify a form for encrypted notes to other people.
@@ -242,7 +242,7 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const STICKYNOTE = 'IPM.StickyNote';
+    const STICKY_NOTE = 'IPM.StickyNote';
 
     /**
      * Class used to identify a form for tasks.
@@ -260,7 +260,7 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const TASKREQUEST = 'IPM.TaskRequest';
+    const TASK_REQUEST = 'IPM.TaskRequest';
 
     /**
      * Class used to identify a form for responses to accept task requests.
@@ -269,7 +269,7 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const TASKREQUEST_ACCEPT = 'IPM.TaskRequest.Accept';
+    const TASK_REQUEST_ACCEPT = 'IPM.TaskRequest.Accept';
 
     /**
      * Class used to identify a form for responses to decline task requests.
@@ -278,7 +278,7 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const TASKREQUEST_DECLINE = 'IPM.TaskRequest.Decline';
+    const TASK_REQUEST_DECLINE = 'IPM.TaskRequest.Decline';
 
     /**
      * Class used to identify a form for updates to requested tasks.
@@ -287,5 +287,5 @@ class ItemClassType extends Enumeration
      *
      * @var string
      */
-    const TASKREQUEST_UPDATE = 'IPM.TaskRequest.Update';
+    const TASK_REQUEST_UPDATE = 'IPM.TaskRequest.Update';
 }

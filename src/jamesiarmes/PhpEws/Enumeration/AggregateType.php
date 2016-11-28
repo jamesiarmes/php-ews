@@ -31,5 +31,5 @@ class AggregateType extends Enumeration
      *
      * @var string
      */
-    const MINUMUM = 'Minimum';
+    const MINIMUM = 'Minimum';
 }

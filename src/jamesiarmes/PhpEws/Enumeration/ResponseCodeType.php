@@ -59,7 +59,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const ADD_DELIGATES_FAILED = 'ErrorAddDelegatesFailed';
+    const ADD_DELEGATES_FAILED = 'ErrorAddDelegatesFailed';
 
     /**
      * This error occurs when the address space record, or Domain Name System
@@ -383,7 +383,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const CANNOT_SET_PERMISSION_UNKOWN_ENTRIES = 'ErrorCannotSetPermissionUnknownEntries';
+    const CANNOT_SET_PERMISSION_UNKNOWN_ENTRIES = 'ErrorCannotSetPermissionUnknownEntries';
 
     /**
      * Indicates that an attempt was made to specify the search folder as the
@@ -972,7 +972,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const FOLDER_PROOPERTY_REQUEST_FAILED = 'ErrorFolderPropertRequestFailed';
+    const FOLDER_PROPERTY_REQUEST_FAILED = 'ErrorFolderPropertRequestFailed';
 
     /**
      * This error indicates that the folder could not be created or updated
@@ -3569,7 +3569,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const OCCURRENCE_CROSSING_BOUNDRY = 'ErrorOccurrenceCrossingBoundary';
+    const OCCURRENCE_CROSSING_BOUNDARY = 'ErrorOccurrenceCrossingBoundary';
 
     /**
      * This error indicates that the occurrence index does not point to an
@@ -4337,7 +4337,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const SUBMISSION_QUOTE_EXCEDDED = 'ErrorSubmissionQuotaExceeded';
+    const SUBMISSION_QUOTE_EXCEEDED = 'ErrorSubmissionQuotaExceeded';
 
     /**
      * This error occurs when you try to access a subscription by using an
@@ -4620,7 +4620,7 @@ class ResponseCodeType extends Enumeration
      *
      * @var string
      */
-    const UNSUPPORTED_MAPI_PROPRTY_TYPE = 'ErrorUnsupportedMapiPropertyType';
+    const UNSUPPORTED_MAPI_PROPERTY_TYPE = 'ErrorUnsupportedMapiPropertyType';
 
     /**
      * This error occurs when you are trying to retrieve or set MIME content for

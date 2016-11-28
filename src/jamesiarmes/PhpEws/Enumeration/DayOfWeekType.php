@@ -102,5 +102,5 @@ class DayOfWeekType extends Enumeration
      *
      * @var string
      */
-    const WEEKENDDAY = 'WeekendDay';
+    const WEEKEND_DAY = 'WeekendDay';
 }

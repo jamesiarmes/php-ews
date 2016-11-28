@@ -30,7 +30,7 @@ class ResponseTypeType extends Enumeration
      *
      * @var string
      */
-    const DECLNE = 'Decline';
+    const DECLINE = 'Decline';
 
     /**
      * Response type indicating that no response has been received.

@@ -1794,7 +1794,7 @@ class UnindexedFieldURIType extends Enumeration
      *
      * @var string
      */
-    const MEETING_PROPOSED_END = 'meeting:PropsedEnd';
+    const MEETING_PROPOSED_END = 'meeting:ProposedEnd';
 
     /**
      * Identifies the ProposedStart property.
