@@ -8,7 +8,7 @@ namespace jamesiarmes\PhpEws\Type;
 use jamesiarmes\PhpEws\Type;
 
 /**
- * Defines the result of the GetHoldOnMailboxes request.
+ * Defines the result of the mailbox hold request request.
  *
  * @package php-ews\Type
  */

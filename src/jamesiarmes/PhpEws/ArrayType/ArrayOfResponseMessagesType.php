@@ -422,6 +422,15 @@ class ArrayOfResponseMessagesType extends ArrayType
     public $SendNotificationResponseMessage;
 
     /**
+     * Contains the status and result of a SetHoldOnMailboxes request.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Response\SetHoldOnMailboxesResponseMessageType[]
+     */
+    public $SetHoldOnMailboxesResponseMessage;
+
+    /**
      * Contains the status and result of a single Subscribe request.
      *
      * @since Exchange 2007

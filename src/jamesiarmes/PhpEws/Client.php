@@ -1274,6 +1274,19 @@ class Client
     }
 
     /**
+     * Sets a mailbox hold policy on mailboxes.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\SetHoldOnMailboxesType $request
+     * @return \jamesiarmes\PhpEws\Response\SetHoldOnMailboxesResponseMessageType
+     */
+    public function SetHoldOnMailboxes($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\SetUserOofSettingsRequest $request
