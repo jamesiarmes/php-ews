@@ -1390,6 +1390,23 @@ class Client
     }
 
     /**
+     * Updates the authenticated user's Inbox rules by applying the specified
+     * operations.
+     *
+     * This operation is used to create an Inbox rule, to set an Inbox rule, or
+     * to delete an Inbox rule.
+     *
+     * @since Exchange 2010 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\UpdateInboxRulesRequestType $request
+     * @return \jamesiarmes\PhpEws\Response\UpdateInboxRulesResponseType
+     */
+    public function UpdateInboxRules($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\UpdateItemType $request
