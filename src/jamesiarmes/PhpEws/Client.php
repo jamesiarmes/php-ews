@@ -1548,6 +1548,7 @@ class Client
                 'version' => $this->version,
                 'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'impersonation' => $this->impersonation,
+                'classmap' => ClassMap::getMap(),
             )
         );
 

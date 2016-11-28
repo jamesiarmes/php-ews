@@ -1,0 +1,27 @@
+<?php
+/**
+ * Contains \jamesiarmes\PhpEws\ClassMap.
+ *
+ * This class is generated using the build-classmap.php script. To make changes
+ * to this file should be made there or in the ClassMap.mustache template.
+ */
+
+namespace jamesiarmes\PhpEws;
+
+/**
+ * Mapping of complex types to class implementations.
+ *
+ * @package php-ews\ClassMap
+ */
+class ClassMap {
+    public static function getMap() {
+        return array(
+          {{#maps}}
+            // Map for {{namespace}} classes.
+            {{#map}}
+            '{{type}}' => '{{class}}',
+            {{/map}}
+          {{/maps}}
+        );
+    }
+}

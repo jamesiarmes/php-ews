@@ -15,6 +15,9 @@
     "php": ">=5.3.9",
     "ext-soap": "*"
   },
+  "require-dev": {
+    "mustache/mustache": "~2.0"
+  },
   "config": {
     "bin-dir": "bin"
   },
