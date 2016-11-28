@@ -1344,6 +1344,19 @@ class Client
     }
 
     /**
+     * Uninstalls a mail app for Outlook.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\UninstallAppType $request
+     * @return \jamesiarmes\PhpEws\Response\UninstallAppResponseType
+     */
+    public function UninstallApp($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\UnsubscribeType $request
