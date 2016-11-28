@@ -6,7 +6,7 @@
 namespace jamesiarmes\PhpEws\Response;
 
 /**
- * {insert doc block}
+ * Defines the response to an InstallApp request.
  *
  * @package php-ews\Response
  */

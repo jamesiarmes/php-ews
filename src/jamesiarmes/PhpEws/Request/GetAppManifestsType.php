@@ -27,7 +27,7 @@ class GetAppManifestsType extends BaseRequestType
      * Contains the version of the JavaScript API for Office supported by the
      * client.
      *
-     * @since Exchnage 2013 SP1
+     * @since Exchange 2013 SP1
      *
      * @var string
      */
@@ -41,7 +41,7 @@ class GetAppManifestsType extends BaseRequestType
      * @var string
      *
      * @todo Update once documentation exists.
-     * @todo Determine if we need a ListOfExtensionIdsType implmentation.
+     * @todo Determine if we need a ListOfExtensionIdsType implementation.
      */
     public $ExtensionIds;
 
@@ -92,7 +92,7 @@ class GetAppManifestsType extends BaseRequestType
     /**
      * Contains the version of the manifest schema supported by the client.
      *
-     * @since Exchnage 2013 SP1
+     * @since Exchange 2013 SP1
      *
      * @var string
      */

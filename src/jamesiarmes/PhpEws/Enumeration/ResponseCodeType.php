@@ -300,7 +300,7 @@ class ResponseCodeType extends Enumeration
     const CANNOT_DELETE_TASK_OCCURRENCE = 'ErrorCannotDeleteTaskOccurrence';
 
     /**
-     * Indicates that an attempt was made to disable a mandatorty extension.
+     * Indicates that an attempt was made to disable a mandatory extension.
      *
      * @since Exchange 2013
      *
@@ -1278,7 +1278,7 @@ class ResponseCodeType extends Enumeration
     const INVALID_ATTRIBUTE_VALUE = 'ErrorCalendarInvalidAttributeValue';
 
     /**
-     * This error indicates that the authorization procedure for the requestor
+     * This error indicates that the authorization procedure for the requester
      * failed.
      *
      * @since Exchange 2007
@@ -1471,7 +1471,7 @@ class ResponseCodeType extends Enumeration
     const INVALID_EXTERNAL_SHARING_SUBSCRIBER = 'ErrorInvalidExternalSharingSubscriber';
 
     /**
-     * This error indicates that the requestor's organization federation objects
+     * This error indicates that the requester's organization federation objects
      * are not correctly configured.
      *
      * @since Exchange 2010
@@ -3277,7 +3277,7 @@ class ResponseCodeType extends Enumeration
      * This error occurs when a request attempts to access multiple mailbox
      * servers.
      *
-     * @var since 2013
+     * @since Exchange 2013
      *
      * @var string
      */

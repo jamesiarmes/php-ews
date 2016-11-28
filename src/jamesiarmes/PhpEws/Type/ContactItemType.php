@@ -81,7 +81,7 @@ class ContactItemType extends ItemType
     /**
      * Represents the complete name of a contact.
      *
-     * This propery is read-only.
+     * This property is read-only.
      *
      * @since Exchange 2007
      *

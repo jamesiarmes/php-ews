@@ -6,7 +6,7 @@
 namespace jamesiarmes\PhpEws\Request;
 
 /**
- * Defines a request to retrieve nonindexable item statistics.
+ * Defines a request to retrieve non-indexable item statistics.
  *
  * @package php-ews\Request
  */

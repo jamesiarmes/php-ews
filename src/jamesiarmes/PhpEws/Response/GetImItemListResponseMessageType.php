@@ -6,7 +6,7 @@
 namespace jamesiarmes\PhpEws\Response;
 
 /**
- * {insert doc block}
+ * Defines a response to a GetImItemList request.
  *
  * @package php-ews\Response
  */

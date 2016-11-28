@@ -6,7 +6,8 @@
 namespace jamesiarmes\PhpEws\Request;
 
 /**
- * {insert doc block}
+ * Defines a request to get information about the specified instant messaging
+ * groups and instant messaging contact personas.
  *
  * @package php-ews\Request
  */

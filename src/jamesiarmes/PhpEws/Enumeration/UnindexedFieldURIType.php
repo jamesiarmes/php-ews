@@ -1599,7 +1599,7 @@ class UnindexedFieldURIType extends Enumeration
     const ITEM_PARENT_FOLDER_ID = 'item:ParentFolderId';
 
     /**
-     * Idnentifies the PolicyTag property.
+     * Identifies the PolicyTag property.
      *
      * @since Exchange 2013
      *

@@ -8,7 +8,8 @@ namespace jamesiarmes\PhpEws\Type;
 use jamesiarmes\PhpEws\Type;
 
 /**
- * {insert doc block}
+ * Defines an instance of an array of email addresses and their associated
+ * attributions.
  *
  * @package php-ews\Type
  */

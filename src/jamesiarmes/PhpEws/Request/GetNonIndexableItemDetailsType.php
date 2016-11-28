@@ -6,7 +6,7 @@
 namespace jamesiarmes\PhpEws\Request;
 
 /**
- * Defines a request to retrieve nonindexable item details.
+ * Defines a request to retrieve non-indexable item details.
  *
  * @package php-ews\Request
  */

@@ -23,7 +23,7 @@ class RemoveImContactFromGroupType extends BaseRequestType
     public $ContactId;
 
     /**
-     * Identifies the group to remove the conact from.
+     * Identifies the group to remove the contact from.
      *
      * @since Exchange 2013
      *

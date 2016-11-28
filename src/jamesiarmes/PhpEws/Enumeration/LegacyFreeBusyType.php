@@ -52,7 +52,7 @@ class LegacyFreeBusyType extends Enumeration
     const OUT_OF_OFFICE = 'OOF';
 
     /**
-     * The calendar item represents tentativly busy time.
+     * The calendar item represents tentatively busy time.
      *
      * @since Exchange 2007
      *

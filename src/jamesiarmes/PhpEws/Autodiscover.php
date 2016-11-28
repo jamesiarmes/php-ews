@@ -263,8 +263,8 @@ class Autodiscover
     /**
      * Return the settings discovered from the Autodiscover process.
      *
-     * NULL indicates discovery hasn't completed (or been attempted)
-     * FALSE indicates discovery wasn't successful. Check for errors
+     * NULL indicates discovery has not completed (or been attempted)
+     * FALSE indicates discovery was not successful. Check for errors
      *  or redirects.
      * An array will be returned with discovered settings on success.
      *

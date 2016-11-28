@@ -143,7 +143,7 @@ class TaskType extends ItemType
     public $IsRecurring;
 
     /**
-     * ndicates whether the task is owned by a team or not.
+     * Indicates whether the task is owned by a team or not.
      *
      * @since Exchange 2007
      *

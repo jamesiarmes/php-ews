@@ -3519,7 +3519,7 @@
             </wsdl:output>
         </wsdl:operation>
 
-        <!-- Start Seach Session -->
+        <!-- Start Search Session -->
         <wsdl:operation name="StartSearchSession">
             <soap:operation soapAction="http://schemas.microsoft.com/exchange/services/2006/messages/StartSearchSession" />
             <wsdl:input>

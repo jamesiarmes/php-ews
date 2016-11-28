@@ -17,7 +17,7 @@ class ConversationActionTypeType extends Enumeration
 {
     /**
      * The current items and new items in the conversation will automatically be
-     * set with the categories identified by the Categorie property.
+     * set with the categories identified by the Categories property.
      *
      * @since Exchange 2010 SP1
      *

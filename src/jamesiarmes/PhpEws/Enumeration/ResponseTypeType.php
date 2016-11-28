@@ -33,7 +33,7 @@ class ResponseTypeType extends Enumeration
     const DECLNE = 'Decline';
 
     /**
-     * Response type indicating that no reponse has been received.
+     * Response type indicating that no response has been received.
      *
      * @since Exchange 2007
      *
@@ -60,7 +60,7 @@ class ResponseTypeType extends Enumeration
     const TENTATIVE = 'Tentative';
 
     /**
-     * Response type indicating that the reponse is unknown.
+     * Response type indicating that the response is unknown.
      *
      * @since Exchange 2007
      *

@@ -45,7 +45,7 @@ class Occurrence extends Enumeration
     const FOURTH_FROM_BEGINNING = 4;
 
     /**
-     * The fourh occurrence of the specified day of the week from the end of the
+     * The fourth occurrence of the specified day of the week from the end of the
      * month.
      *
      * @since Exchange 2010

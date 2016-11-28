@@ -6,7 +6,7 @@
 namespace jamesiarmes\PhpEws\Response;
 
 /**
- * {insert doc block}
+ * Defines a response to an AddImGroup request.
  *
  * @package php-ews\Response
  */

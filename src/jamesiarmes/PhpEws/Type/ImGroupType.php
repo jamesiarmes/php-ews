@@ -8,7 +8,7 @@ namespace jamesiarmes\PhpEws\Type;
 use jamesiarmes\PhpEws\Type;
 
 /**
- * {insert doc block}
+ * Defines an instant messaging group.
  *
  * @package php-ews\Type
  */

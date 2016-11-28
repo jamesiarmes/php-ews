@@ -575,7 +575,7 @@
             <xs:element name="SetClientExtensionResponseMessage" type="m:ResponseMessageType"/>
             <xs:element name="GetOMEConfigurationResponseMessage" type="m:ResponseMessageType"/>
             <xs:element name="SetOMEConfigurationResponseMessage" type="m:ResponseMessageType"/>
-            <!-- Generic reponse to enumerating the items below a folder -->
+            <!-- Generic response to enumerating the items below a folder -->
             <xs:element name="FindItemResponseMessage" type="m:FindItemResponseMessageType"/>
             <xs:element name="MoveItemResponseMessage" type="m:ItemInfoResponseMessageType"/>
             <xs:element name="ArchiveItemResponseMessage" type="m:ItemInfoResponseMessageType"/>

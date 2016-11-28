@@ -1126,7 +1126,7 @@
         <xs:annotation>
             <xs:documentation>
                 Represents an extended property.  Note that there are only a couple of valid attribute
-                combinations.  Note that all occurances require the PropertyType attribute.
+                combinations.  Note that all occurrences require the PropertyType attribute.
 
                 1.  (DistinguishedPropertySetId || PropertySetId) + (PropertyName || Property Id)
                 2.  PropertyTag
@@ -2749,7 +2749,7 @@
 
     <!-- End Entity Extraction -->
 
-    <!-- Begin Rights Managment License Data -->
+    <!-- Begin Rights Management License Data -->
     <xs:complexType name="RightsManagementLicenseDataType">
         <xs:sequence>
             <xs:element name="RightsManagedMessageDecryptionStatus" type="xs:int" minOccurs="0" />
@@ -5611,7 +5611,7 @@
         </xs:annotation>
         <xs:choice>
             <!-- Note that the property path here determines which property to examine on each item
-            in the group for the aggregation function.  This has nothing to do with defintion what
+            in the group for the aggregation function.  This has nothing to do with definition what
             is in each group.  That determination has already been made via the GroupBy property path.
             -->
             <xs:element name="FieldURI" type="t:PathToUnindexedFieldType"/>

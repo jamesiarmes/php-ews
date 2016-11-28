@@ -272,7 +272,7 @@ class ItemClassType extends Enumeration
     const TASKREQUEST_ACCEPT = 'IPM.TaskRequest.Accept';
 
     /**
-     * Class used to identify a form for responses to desline task requests.
+     * Class used to identify a form for responses to decline task requests.
      *
      * @since Exchange 2007
      *

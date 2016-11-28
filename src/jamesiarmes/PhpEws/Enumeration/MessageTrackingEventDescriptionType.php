@@ -88,7 +88,7 @@ class MessageTrackingEventDescriptionType extends Enumeration
     const FORWARDED = 'Forwarded';
 
     /**
-     * Indicates the event is for a message that was defered.
+     * Indicates the event is for a message that was deferred.
      *
      * @since Exchange 2010
      *

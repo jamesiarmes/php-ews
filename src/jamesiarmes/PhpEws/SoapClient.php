@@ -16,14 +16,14 @@ use \jamesiarmes\PhpEws\Ntlm\SoapClient as NtlmSoapClient;
 class SoapClient extends NtlmSoapClient
 {
     /**
-     * Username for authentication on the exchnage server
+     * Username for authentication on the exchange server
      *
      * @var string
      */
     protected $user;
 
     /**
-     * Password for authentication on the exchnage server
+     * Password for authentication on the exchange server
      *
      * @var string
      */

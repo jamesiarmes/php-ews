@@ -118,7 +118,7 @@ class Client
     protected $impersonation;
 
     /**
-     * Miscrosoft Exchange version that we are going to connect to
+     * Microsoft Exchange version that we are going to connect to
      *
      * @var string
      *
@@ -224,7 +224,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Adds one or more delegates to a principal's mailbox and sets specific
+     * access permissions.
+     *
+     * @since Exchange 2007 SP1
      *
      * @param \jamesiarmes\PhpEws\Request\AddDelegateType $request
      * @return \jamesiarmes\PhpEws\Response\AddDelegateResponseMessageType
@@ -331,7 +334,11 @@ class Client
     }
 
     /**
-     * Function Description
+     * Converts item and folder identifiers between formats that are accepted by
+     * Exchange Online, Exchange Online as part of Office 365, and on-premises
+     * versions of Exchange.
+     *
+     * @since Exchange 2007 SP1
      *
      * @param \jamesiarmes\PhpEws\Request\ConvertIdType $request
      * @return \jamesiarmes\PhpEws\Response\ConvertIdResponseType
@@ -342,7 +349,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Copies folders in a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CopyFolderType $request
      * @return \jamesiarmes\PhpEws\Response\CopyFolderResponseType
@@ -353,7 +362,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Copies items and puts the items in a different folder.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CopyItemType $request
      * @return \jamesiarmes\PhpEws\Response\CopyItemResponseType
@@ -364,7 +375,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Creates either an item or file attachment and attaches it to the
+     * specified item.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CreateAttachmentType $request
      * @return \jamesiarmes\PhpEws\Response\CreateAttachmentResponseType
@@ -375,7 +389,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Creates folders, calendar folders, contacts folders, tasks folders, and
+     * search folders.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CreateFolderType $request
      * @return \jamesiarmes\PhpEws\Response\CreateFolderResponseType
@@ -399,7 +416,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Creates items in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CreateItemType $request
      * @return \jamesiarmes\PhpEws\Response\CreateItemResponseType
@@ -410,7 +429,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Creates a managed folder in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\CreateManagedFolderRequestType $request
      * @return \jamesiarmes\PhpEws\Response\CreateManagedFolderResponseType
@@ -434,7 +455,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Deletes file and item attachments from an existing item in the Exchange
+     * store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\DeleteAttachmentType $request
      * @return \jamesiarmes\PhpEws\Response\DeleteAttachmentResponseType
@@ -445,7 +469,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Deletes folders from a mailbox.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\DeleteFolderType $request
      * @return \jamesiarmes\PhpEws\Response\DeleteFolderResponseType
@@ -456,7 +482,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Deletes items in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\DeleteItemType $request
      * @return \jamesiarmes\PhpEws\Response\DeleteItemResponseType
@@ -523,7 +551,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Exposes the full membership of distribution lists.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\ExpandDLType $request
      * @return \jamesiarmes\PhpEws\Response\ExpandDLResponseType
@@ -558,7 +588,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Finds subfolders of an identified folder and returns a set of properties
+     * that describe the set of subfolders.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\FindFolderType $request
      * @return \jamesiarmes\PhpEws\Response\FindFolderResponseType
@@ -569,7 +602,12 @@ class Client
     }
 
     /**
-     * Function Description
+     * Searches for items that are located in a user’s mailbox.
+     *
+     * This operation provides many ways to filter and format how search results
+     * are returned to the caller.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\FindItemType $request
      * @return \jamesiarmes\PhpEws\Response\FindItemResponseType
@@ -634,7 +672,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Retrieves existing attachments on items in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetAttachmentType $request
      * @return \jamesiarmes\PhpEws\Response\GetAttachmentResponseType
@@ -672,7 +712,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Retrieves the delegate settings for a specified mailbox.
+     *
+     * @since Exchange 2007 SP1
      *
      * @param \jamesiarmes\PhpEws\Request\GetDelegateType $request
      * @return \jamesiarmes\PhpEws\Response\GetDelegateResponseMessageType
@@ -697,7 +739,13 @@ class Client
     }
 
     /**
-     * Function Description
+     * Used by pull subscription clients to request notifications from the
+     * Client Access server.
+     *
+     * The response returns an array of items and events that have occurred in a
+     * mailbox since the last the notification.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetEventsType $request
      * @return \jamesiarmes\PhpEws\Response\GetEventsResponseType
@@ -708,7 +756,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Gets folders from the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetFolderType $request
      * @return \jamesiarmes\PhpEws\Response\GetFolderResponseType
@@ -774,7 +824,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Gets folders from the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetItemType $request
      * @return \jamesiarmes\PhpEws\Response\GetItemResponseType
@@ -1008,7 +1060,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Provides detailed information about the availability of a set of users,
+     * rooms, and resources within a specified time period.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserAvailabilityRequestType $request
      * @return \jamesiarmes\PhpEws\Response\GetUserAvailabilityResponseType
@@ -1032,7 +1087,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Gets a mailbox user's Out of Office (OOF) settings and messages.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\GetUserOofSettingsRequest $request
      * @return \jamesiarmes\PhpEws\Response\GetUserOofSettingsResponse
@@ -1112,7 +1169,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Moves folders from a specified folder and puts them in another folder.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\MoveFolderType $request
      * @return \jamesiarmes\PhpEws\Response\MoveFolderResponseType
@@ -1123,7 +1182,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Moves one or more items to a single destination folder.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\MoveItemType $request
      * @return \jamesiarmes\PhpEws\Response\MoveItemResponseType
@@ -1188,7 +1249,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Removes one or more delegates from a user's mailbox.
+     *
+     * @since Exchange 2007 SP1
      *
      * @param \jamesiarmes\PhpEws\Request\RemoveDelegateType $request
      * @return \jamesiarmes\PhpEws\Response\RemoveDelegateResponseMessageType
@@ -1239,7 +1302,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Resolves ambiguous email addresses and display names.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\ResolveNamesType $request
      * @return \jamesiarmes\PhpEws\Response\ResolveNamesResponseType
@@ -1263,7 +1328,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Sends e-mail messages that are located in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\SendItemType $request
      * @return \jamesiarmes\PhpEws\Response\SendItemResponseType
@@ -1300,7 +1367,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Sets a mailbox user's Out of Office (OOF) settings and message.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\SetUserOofSettingsRequest $request
      * @return \jamesiarmes\PhpEws\Response\SetUserOofSettingsResponse
@@ -1311,7 +1380,12 @@ class Client
     }
 
     /**
-     * Function Description
+     * Subscribes client applications to either push or pull notifications.
+     *
+     * It is important to be aware that the structure of the request messages
+     * and responses is different depending on the type of event notification.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\SubscribeType $request
      * @return \jamesiarmes\PhpEws\Response\SubscribeResponseType
@@ -1322,7 +1396,10 @@ class Client
     }
 
     /**
-     * Function Description
+     * Synchronizes folders between the computer that is running Microsoft
+     * Exchange Server and the client.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\SyncFolderHierarchyType $request
      * @return \jamesiarmes\PhpEws\Response\SyncFolderHierarchyResponseType
@@ -1333,7 +1410,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Synchronizes items between the Exchange server and the client.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\SyncFolderItemsType $request
      * @return \jamesiarmes\PhpEws\Response\SyncFolderItemsResponseType
@@ -1357,7 +1436,12 @@ class Client
     }
 
     /**
-     * Function Description
+     * Ends a pull notification subscription.
+     *
+     * Use this operation rather than letting a subscription timeout. This
+     * operation is only valid for pull notifications.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\UnsubscribeType $request
      * @return \jamesiarmes\PhpEws\Response\UnsubscribeResponseType
@@ -1368,7 +1452,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Updates delegate permissions on a principal's mailbox.
+     *
+     * @since Exchange 2007 SP1
      *
      * @param \jamesiarmes\PhpEws\Request\UpdateDelegateType $request
      * @return \jamesiarmes\PhpEws\Response\UpdateDelegateResponseMessageType
@@ -1379,7 +1465,16 @@ class Client
     }
 
     /**
-     * Function Description
+     * Modifies properties of an existing item in the Exchange store.
+     *
+     * Each UpdateFolder operation consists of the following:
+     * - A FolderId element that specifies a folder to update.
+     * - An internal path of an element in the folder, as specified by the
+     *   folder shape, which specifies the data to update.
+     * - A folder that contains the new value of the updated field, if the
+     *   update is not a deletion.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\UpdateFolderType $request
      * @return \jamesiarmes\PhpEws\Response\UpdateFolderResponseType
@@ -1407,7 +1502,9 @@ class Client
     }
 
     /**
-     * Function Description
+     * Used to modify the properties of an existing item in the Exchange store.
+     *
+     * @since Exchange 2007
      *
      * @param \jamesiarmes\PhpEws\Request\UpdateItemType $request
      * @return \jamesiarmes\PhpEws\Response\UpdateItemResponseType
