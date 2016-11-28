@@ -138,7 +138,8 @@ class Client
      * @param string $server
      * @param string $username
      * @param string $password
-     * @param string $version One of the Client::VERSION_* constants.
+     * @param string $version
+     *   One of the Client::VERSION_* constants.
      */
     public function __construct(
         $server = null,

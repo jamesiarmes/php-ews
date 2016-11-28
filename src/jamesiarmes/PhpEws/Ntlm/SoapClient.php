@@ -50,12 +50,20 @@ class SoapClient extends \SoapClient
      *
      * @link http://php.net/manual/en/function.soap-soapclient-dorequest.php
      *
-     * @param string $request the xml soap request
-     * @param string $location the url to request
-     * @param string $action the soap action.
-     * @param integer $version the soap version
+     * @param string $request
+     *   The XML SOAP request.
+     * @param string $location
+     *   The URL to request.
+     * @param string $action
+     *   The SOAP action.
+     * @param integer $version
+     *   The SOAP version
      * @param integer $one_way
-     * @return string the xml soap response.
+     * @return string
+     *   The XML soap response.
+     *
+     * @throws \Exception
+     *   If the request failed.
      */
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {

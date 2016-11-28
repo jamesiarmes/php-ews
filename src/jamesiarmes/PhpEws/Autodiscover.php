@@ -218,7 +218,8 @@ class Autodiscover
      *
      * @param string $email
      * @param string $password
-     * @param string $username If left blank, the email provided will be used.
+     * @param string $username
+     *   If left blank, the email provided will be used.
      */
     public function __construct($email, $password, $username = null)
     {
@@ -237,7 +238,8 @@ class Autodiscover
      * Execute the full discovery chain of events in the correct sequence
      * until a valid response is received, or all methods have failed.
      *
-     * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
+     * @return integer|boolean
+     *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
      *
      * @todo Throw an exception on failure.
      */
@@ -278,7 +280,8 @@ class Autodiscover
     /**
      * Toggle skipping of SSL verification in cURL requests.
      *
-     * @param boolean $skip To skip, or not.
+     * @param boolean $skip
+     *   Whether or not to skip SSL certificate verification.
      * @return self
      */
     public function skipSSLVerification($skip = true)
@@ -298,6 +301,9 @@ class Autodiscover
      * @link http://msdn.microsoft.com/en-us/library/bb204122(v=exchg.140).aspx
      * @link http://blogs.msdn.com/b/pcreehan/archive/2009/09/21/parsing-serverversion-when-an-int-is-really-5-ints.aspx
      * @link http://office.microsoft.com/en-us/outlook-help/determine-the-version-of-microsoft-exchange-server-my-account-connects-to-HA001191800.aspx
+     *
+     * @param string $version_hex
+     *   Hexadecimal version string.
      *
      * @todo Update to include Exchange 2013 versions.
      */
@@ -391,7 +397,8 @@ class Autodiscover
      *
      * @param string $email
      * @param string $password
-     * @param string $username If left blank, the email provided will be used.
+     * @param string $username
+     *   If left blank, the email provided will be used.
      * @return mixed
      */
     public static function getEWS($email, $password, $username = null)
@@ -404,7 +411,10 @@ class Autodiscover
      * Perform an NTLM authenticated HTTPS POST to the top-level
      * domain of the email address.
      *
-     * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
+     * @return integer|boolean
+     *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
+     *
+     * @todo Throw an exception on failure.
      */
     public function tryTLD()
     {
@@ -416,7 +426,10 @@ class Autodiscover
      * Perform an NTLM authenticated HTTPS POST to the 'autodiscover'
      * subdomain of the email address' TLD.
      *
-     * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
+     * @return integer|boolean
+     *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
+     *
+     * @todo Throw an exception on failure.
      */
     public function trySubdomain()
     {
@@ -430,7 +443,10 @@ class Autodiscover
      * Perform an unauthenticated HTTP GET in an attempt to get redirected
      * via 302 to the correct location to perform the HTTPS POST.
      *
-     * @return An AUTODISCOVERED_VIA_* constant or FALSE on failure.
+     * @return integer|boolean
+     *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
+     *
+     * @todo Throw an exception on failure.
      */
     public function trySubdomainUnauthenticatedGet()
     {
@@ -471,7 +487,11 @@ class Autodiscover
      * Attempt to retrieve the autodiscover host from an SRV DNS record.
      *
      * @link http://support.microsoft.com/kb/940881
-     * @return self::AUTODISCOVERED_VIA_SRV_RECORD or false
+     *
+     * @return integer|boolean
+     *   The value of self::AUTODISCOVERED_VIA_SRV_RECORD or false.
+     *
+     * @todo Throw an exception on failure.
      */
     public function trySRVRecord()
     {
@@ -491,7 +511,8 @@ class Autodiscover
     /**
      * Set the path to the file to be used by CURLOPT_CAINFO.
      *
-     * @param string $path Path to a certificate file such as cacert.pem
+     * @param string $path
+     *   Path to a certificate file such as cacert.pem
      * @return self
      */
     public function setCAInfo($path)
@@ -506,8 +527,8 @@ class Autodiscover
     /**
      * Set the path to the file to be used by CURLOPT_CAPATH.
      *
-     * @param string $path Path to a directory containing one or more CA
-     * certificates.
+     * @param string $path
+     *   Path to a directory containing one or more CA certificates.
      * @return self
      */
     public function setCAPath($path)
@@ -522,7 +543,8 @@ class Autodiscover
     /**
      * Set a connection timeout for the POST methods.
      *
-     * @param integer $seconds Seconds to wait for a connection.
+     * @param integer $seconds
+     *   Seconds to wait for a connection.
      * @return self
      */
     public function setConnectionTimeout($seconds)
@@ -536,8 +558,10 @@ class Autodiscover
      * Perform the NTLM authenticated post against one of the chosen
      * endpoints.
      *
-     * @param string $url URL to try posting to
-     * @param integer $timeout Overall cURL timeout for this request
+     * @param string $url
+     *   URL to try posting to.
+     * @param integer $timeout
+     *   Number of seconds before the request should timeout.
      * @return boolean
      */
     public function doNTLMPost($url, $timeout = 6)
@@ -703,9 +727,12 @@ class Autodiscover
      * Utility function to pick headers off of the incoming cURL response.
      * Used with CURLOPT_HEADERFUNCTION.
      *
-     * @param resource $_ch cURL handle
-     * @param string $str Header string to read
-     * @return integer Bytes read
+     * @param resource $_ch
+     *   cURL handle.
+     * @param string $str
+     *   Header string to read.
+     * @return integer
+     *   Bytes read.
      */
     public function readHeaders($_ch, $str)
     {
@@ -723,7 +750,8 @@ class Autodiscover
      * Utility function to parse XML payloads from the response into easier
      * to manage associative arrays.
      *
-     * @param string $xml XML to parse
+     * @param string $xml
+     *   XML to parse.
      * @return array
      */
     public function responseToArray($xml)
@@ -738,7 +766,8 @@ class Autodiscover
     /**
      * Recursive method for parsing DOM nodes.
      *
-     * @param \DOMElement $node DOMNode object.
+     * @param \DOMElement $node
+     *   DOMNode object.
      * @return mixed
      *
      * @link https://github.com/gaarf/XML-string-to-PHP-array
@@ -796,7 +825,8 @@ class Autodiscover
     /**
      * Parses the version of an Exchange 2007 server.
      *
-     * @param integer $minorversion Minor server version.
+     * @param integer $minorversion
+     *   Minor server version.
      * @return string Server version.
      */
     protected function parseVersion2007($minorversion) {
@@ -817,7 +847,8 @@ class Autodiscover
     /**
      * Parses the version of an Exchange 2010 server.
      *
-     * @param integer $minorversion Minor server version.
+     * @param integer $minorversion
+     *   Minor server version.
      * @return string Server version.
      */
     protected function parseVersion2010($minorversion) {
@@ -836,7 +867,8 @@ class Autodiscover
     /**
      * Parses the version of an Exchange 2013 server.
      *
-     * @param integer $majorbuild Major build version.
+     * @param integer $majorbuild
+     *   Major build version.
      * @return string Server version.
      */
     protected function parseVersion2013($majorbuild) {
@@ -857,7 +889,10 @@ class Autodiscover
     /**
      * Attempts an autodiscover via a URL.
      *
-     * @param string $url Url to attempt an autodiscover.
+     * @param string $url
+     *   Url to attempt an autodiscover.
+     * @param integer $timeout
+     *    Number of seconds before the request should timeout.
      * @return boolean
      */
     protected function tryViaUrl($url, $timeout = 6)

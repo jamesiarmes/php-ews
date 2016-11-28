@@ -34,6 +34,9 @@ class SoapClient extends NtlmSoapClient
      *
      * @param string $wsdl
      * @param array $options
+     *
+     * @throws \Exception
+     *   If the username or password are empty.
      */
     public function __construct($wsdl, $options)
     {
