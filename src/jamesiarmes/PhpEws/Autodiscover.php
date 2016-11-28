@@ -362,7 +362,7 @@ class Autodiscover
                 ($protocol['Type'] == 'EXCH' || $protocol['Type'] == 'EXPR')
                 && isset($protocol['ServerVersion'])
             ) {
-                if ($version == null) {
+                if ($version === null) {
                     $sv = $this->parseServerVersion($protocol['ServerVersion']);
                     if ($sv !== false) {
                         $version = $sv;
