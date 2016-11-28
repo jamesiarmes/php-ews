@@ -1287,6 +1287,19 @@ class Client
     }
 
     /**
+     * Changes the display name of an instant messaging (IM) group.
+     *
+     * @since Exchange 2013
+     *
+     * @param \jamesiarmes\PhpEws\Request\SetImGroupType $request
+     * @return \jamesiarmes\PhpEws\Response\SetImGroupResponseMessageType
+     */
+    public function SetImGroup($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Function Description
      *
      * @param \jamesiarmes\PhpEws\Request\SetUserOofSettingsRequest $request
