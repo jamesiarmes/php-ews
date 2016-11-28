@@ -114,11 +114,19 @@ class TaskType extends ItemType
     /**
      * Indicates whether the task is editable or not.
      *
+     * The following values are possible:
+     * - 0: The default for all task items.
+     * - 1: A task request.
+     * - 2: A task acceptance from a recipient of a task request.
+     * - 3: A task declination from a recipient of a task request.
+     * - 4: An update to a previous task request.
+     * - 5: Not used.
+     *
      * This element is read-only.
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\TaskType
+     * @var integer
      */
     public $IsAssignmentEditable;
 

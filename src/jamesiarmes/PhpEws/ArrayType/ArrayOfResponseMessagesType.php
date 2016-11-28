@@ -372,7 +372,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\PerformReminderActionResponseMessageType[]
+     * @var \jamesiarmes\PhpEws\Response\PerformReminderActionResponseMessageType[]
      */
     public $PerformReminderActionResponse;
 
