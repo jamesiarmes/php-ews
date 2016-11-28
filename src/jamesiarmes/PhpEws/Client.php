@@ -1431,6 +1431,19 @@ class Client
     }
 
     /**
+     * Uploads a stream of items into an Exchange mailbox.
+     *
+     * @since Exchange 2010 SP1
+     *
+     * @param \jamesiarmes\PhpEws\Request\UploadItemsType $request
+     * @return \jamesiarmes\PhpEws\Response\UploadItemsResponseType
+     */
+    public function UploadItems($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Initializes the SoapClient object to make a request
      *
      * @return \jamesiarmes\PhpEws\SoapClient
