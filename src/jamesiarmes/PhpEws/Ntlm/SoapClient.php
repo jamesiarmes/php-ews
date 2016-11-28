@@ -115,7 +115,5 @@ class SoapClient extends \SoapClient
     public function validateCertificate($validate = true)
     {
         $this->validate = $validate;
-
-        return true;
     }
 }

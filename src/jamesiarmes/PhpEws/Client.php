@@ -171,8 +171,6 @@ class Client
     public function setImpersonation($impersonation)
     {
         $this->impersonation = $impersonation;
-
-        return true;
     }
 
     /**
@@ -183,8 +181,6 @@ class Client
     public function setPassword($password)
     {
         $this->password = $password;
-
-        return true;
     }
 
     /**
@@ -195,8 +191,6 @@ class Client
     public function setServer($server)
     {
         $this->server = $server;
-
-        return true;
     }
 
     /**
@@ -207,8 +201,6 @@ class Client
     public function setUsername($username)
     {
         $this->username = $username;
-
-        return true;
     }
 
     /**
@@ -219,8 +211,6 @@ class Client
     public function setVersion($version)
     {
         $this->version = $version;
-
-        return true;
     }
 
     /**
