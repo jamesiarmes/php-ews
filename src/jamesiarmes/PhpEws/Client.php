@@ -1418,6 +1418,19 @@ class Client
     }
 
     /**
+     * Updates a user configuration object on a folder.
+     *
+     * @since Exchange 2010
+     *
+     * @param \jamesiarmes\PhpEws\Request\UpdateUserConfigurationType $request
+     * @return \jamesiarmes\PhpEws\Response\UpdateUserConfigurationResponseType
+     */
+    public function UpdateUserConfiguration($request)
+    {
+        return $this->makeRequest(__FUNCTION__, $request);
+    }
+
+    /**
      * Initializes the SoapClient object to make a request
      *
      * @return \jamesiarmes\PhpEws\SoapClient
