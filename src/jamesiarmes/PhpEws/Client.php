@@ -83,6 +83,13 @@ class Client
     const VERSION_2016 = 'Exchange2016';
 
     /**
+     * cURL options to be passed to the SOAP client.
+     *
+     * @var array
+     */
+    protected $curl_options = array();
+
+    /**
      * Password to use when connecting to the Exchange server.
      *
      * @var string
@@ -162,6 +169,16 @@ class Client
     public function getClient()
     {
         return $this->initializeSoapClient();
+    }
+
+    /**
+     * Sets the cURL options that will be set on the SOAP client.
+     *
+     * @param array $options
+     */
+    public function setCurlOptions(array $options)
+    {
+        $this->curl_options = $options;
     }
 
     /**
@@ -1535,8 +1552,6 @@ class Client
      * Initializes the SoapClient object to make a request
      *
      * @return \jamesiarmes\PhpEws\SoapClient
-     *
-     * TODO: Build a class map that we can pass to the client.
      */
     protected function initializeSoapClient()
     {
@@ -1549,6 +1564,7 @@ class Client
                 'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'impersonation' => $this->impersonation,
                 'classmap' => ClassMap::getMap(),
+                'curlopts' => $this->curl_options,
             )
         );
 
