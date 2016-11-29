@@ -5,50 +5,21 @@
 
 namespace jamesiarmes\PhpEws;
 
-use \jamesiarmes\PhpEws\Ntlm\SoapClient as NtlmSoapClient;
+use \jamesiarmes\PhpNtlm\SoapClient as NtlmSoapClient;
 
 /**
- * Handles Soap communication with the Exchange server using NTLM
- * authentication
+ * Handles SOAP communication with the Exchange server using NTLM
+ * authentication.
  *
  * @package php-ews\Auth
  */
 class SoapClient extends NtlmSoapClient
 {
     /**
-     * Username for authentication on the exchange server
-     *
-     * @var string
-     */
-    protected $user;
-
-    /**
-     * Password for authentication on the exchange server
-     *
-     * @var string
-     */
-    protected $password;
-
-    /**
-     * Constructor
-     *
-     * @param string $wsdl
-     * @param array $options
-     *
-     * @throws \Exception
-     *   If the username or password are empty.
+     * {@inheritdoc}
      */
     public function __construct($wsdl, $options)
     {
-        // Verify that a user name and password were entered.
-        if (empty($options['user']) || empty($options['password'])) {
-            throw new \Exception('A username and password is required.');
-        }
-
-        // Set the username and password properties.
-        $this->user = $options['user'];
-        $this->password = $options['password'];
-
         // If a version was set then add it to the headers.
         if (!empty($options['version'])) {
             $this->__default_headers[] = new \SoapHeader(

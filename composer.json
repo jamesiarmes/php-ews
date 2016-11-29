@@ -13,7 +13,8 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.3.9",
-    "ext-soap": "*"
+    "ext-soap": "*",
+    "jamesiarmes/php-ntlm": "dev-master"
   },
   "require-dev": {
     "mustache/mustache": "~2.0"
