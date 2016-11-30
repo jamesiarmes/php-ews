@@ -27,20 +27,6 @@ class Client
     const VERSION_2007_SP1 = 'Exchange2007_SP1';
 
     /**
-     * Microsoft Exchange 2007 SP2
-     *
-     * @var string
-     */
-    const VERSION_2007_SP2 = 'Exchange2007_SP2';
-
-    /**
-     * Microsoft Exchange 2007 SP3
-     *
-     * @var string
-     */
-    const VERSION_2007_SP3 = 'Exchange2007_SP3';
-
-    /**
      * Microsoft Exchange 2010
      *
      * @var string
