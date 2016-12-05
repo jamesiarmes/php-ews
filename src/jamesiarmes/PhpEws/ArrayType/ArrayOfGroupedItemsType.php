@@ -23,5 +23,5 @@ class ArrayOfGroupedItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\GroupedItemsType[]
      */
-    public $GroupedItems;
+    public $GroupedItems = array();
 }

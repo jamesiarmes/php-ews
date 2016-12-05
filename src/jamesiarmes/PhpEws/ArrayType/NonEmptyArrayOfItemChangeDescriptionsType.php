@@ -23,7 +23,7 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AppendToItemFieldType[]
      */
-    public $AppendToItemField;
+    public $AppendToItemField = array();
 
     /**
      * Represents an operation to delete a given property from an item during an
@@ -33,7 +33,7 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DeleteItemFieldType[]
      */
-    public $DeleteItemField;
+    public $DeleteItemField = array();
 
     /**
      * Represents an update to a single property of an item in an UpdateItem
@@ -43,5 +43,5 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SetItemFieldType[]
      */
-    public $SetItemField;
+    public $SetItemField = array();
 }

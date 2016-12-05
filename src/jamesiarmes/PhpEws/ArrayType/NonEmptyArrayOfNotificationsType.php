@@ -23,5 +23,5 @@ class NonEmptyArrayOfNotificationsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\NotificationType[]
      */
-    public $Notification;
+    public $Notification = array();
 }

@@ -22,5 +22,5 @@ class ArrayOfInvalidRecipientsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\InvalidRecipientType[]
      */
-    public $InvalidRecipient;
+    public $InvalidRecipient = array();
 }

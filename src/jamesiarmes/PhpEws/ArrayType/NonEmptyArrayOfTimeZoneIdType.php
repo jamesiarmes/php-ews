@@ -21,5 +21,5 @@ class NonEmptyArrayOfTimeZoneIdType extends ArrayType
      *
      * @var string[]
      */
-    public $Id;
+    public $Id = array();
 }

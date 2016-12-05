@@ -23,5 +23,5 @@ class NonEmptyArrayOfGroupIdentifiersType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SidAndAttributesType[]
      */
-    public $GroupIdentifier;
+    public $GroupIdentifier = array();
 }

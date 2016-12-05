@@ -24,7 +24,7 @@ class ArrayOfAttendeeConflictData extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\GroupAttendeeConflictData[]
      */
-    public $GroupAttendeeConflictData;
+    public $GroupAttendeeConflictData = array();
 
     /**
      * Contains a user's or contact's free/busy status for a time window that
@@ -35,7 +35,7 @@ class ArrayOfAttendeeConflictData extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\IndividualAttendeeConflictData[]
      */
-    public $IndividualAttendeeConflictData;
+    public $IndividualAttendeeConflictData = array();
 
     /**
      * Represents an attendee that resolved as a distribution list that was too
@@ -45,7 +45,7 @@ class ArrayOfAttendeeConflictData extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\TooBigGroupAttendeeConflictData[]
      */
-    public $TooBigGroupAttendeeConflictData;
+    public $TooBigGroupAttendeeConflictData = array();
 
     /**
      * Represents an unresolvable attendee or an attendee that is not a user,
@@ -55,5 +55,5 @@ class ArrayOfAttendeeConflictData extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\UnknownAttendeeConflictData[]
      */
-    public $UnknownAttendeeConflictData;
+    public $UnknownAttendeeConflictData = array();
 }

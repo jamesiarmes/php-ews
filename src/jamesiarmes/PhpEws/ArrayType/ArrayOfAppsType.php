@@ -23,5 +23,5 @@ class ArrayOfAppsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AppType[]
      */
-    public $App;
+    public $App = array();
 }

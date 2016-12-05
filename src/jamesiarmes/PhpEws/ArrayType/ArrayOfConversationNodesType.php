@@ -21,5 +21,5 @@ class ArrayOfConversationNodesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ConversationNodeType
      */
-    public $ConversationNode;
+    public $ConversationNode = array();
 }

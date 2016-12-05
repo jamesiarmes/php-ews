@@ -21,5 +21,5 @@ class NonEmptyArrayOfReminderItemActionType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ReminderItemActionType
      */
-    public $ReminderItemAction;
+    public $ReminderItemAction = array();
 }

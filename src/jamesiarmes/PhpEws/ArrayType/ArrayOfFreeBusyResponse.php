@@ -23,5 +23,5 @@ class ArrayOfFreeBusyResponse extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\FreeBusyResponseType[]
      */
-    public $FreeBusyResponse;
+    public $FreeBusyResponse = array();
 }

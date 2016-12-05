@@ -21,5 +21,5 @@ class NonEmptyArrayOfExtendedFieldURIs extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PathToExtendedFieldType[]
      */
-    public $ExtendedProperty;
+    public $ExtendedProperty = array();
 }

@@ -23,5 +23,5 @@ class ArrayOfUnknownEntriesType extends ArrayType
      *
      * @var string[]
      */
-    public $UnknownEntry;
+    public $UnknownEntry = array();
 }

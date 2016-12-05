@@ -21,5 +21,5 @@ class ArrayOfConversationsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ConversationType[]
      */
-    public $Conversation;
+    public $Conversation = array();
 }

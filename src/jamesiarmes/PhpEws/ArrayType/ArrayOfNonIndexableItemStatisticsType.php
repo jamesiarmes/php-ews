@@ -21,5 +21,5 @@ class ArrayOfNonIndexableItemStatisticsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\NonIndexableItemStatisticType[]
      */
-    public $NonIndexableItemStatistic;
+    public $NonIndexableItemStatistic = array();
 }

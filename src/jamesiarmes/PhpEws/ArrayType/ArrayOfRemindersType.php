@@ -21,5 +21,5 @@ class ArrayOfRemindersType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ReminderType[]
      */
-    public $Reminder;
+    public $Reminder = array();
 }

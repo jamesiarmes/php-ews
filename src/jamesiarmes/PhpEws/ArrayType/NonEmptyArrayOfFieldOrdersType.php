@@ -26,5 +26,5 @@ class NonEmptyArrayOfFieldOrdersType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\FieldOrderType[]
      */
-    public $FieldOrder;
+    public $FieldOrder = array();
 }

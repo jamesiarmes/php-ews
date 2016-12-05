@@ -21,5 +21,5 @@ class ArrayOfValueAttributionsType extends ArrayType
      *
      * @var string[]
      */
-    public $Attribution;
+    public $Attribution = array();
 }

@@ -21,5 +21,5 @@ class NonEmptyArrayOfAttendeesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AttendeeType[]
      */
-    public $Attendee;
+    public $Attendee = array();
 }

@@ -22,5 +22,5 @@ class NonEmptyArrayOfItemChangesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ItemChangeType[]
      */
-    public $ItemChange;
+    public $ItemChange = array();
 }

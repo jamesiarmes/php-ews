@@ -21,5 +21,5 @@ class NonEmptyArrayOfClientAccessTokenRequestsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ClientAccessTokenRequestType
      */
-    public $TokenRequest;
+    public $TokenRequest = array();
 }

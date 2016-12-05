@@ -21,7 +21,7 @@ class NonEmptyArrayOfAlternateIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AlternateIdType[]
      */
-    public $AlternateId;
+    public $AlternateId = array();
 
     /**
      * Describes a public folder identifier to convert.
@@ -30,7 +30,7 @@ class NonEmptyArrayOfAlternateIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AlternatePublicFolderIdType[]
      */
-    public $AlternatePublicFolderId;
+    public $AlternatePublicFolderId = array();
 
     /**
      * Describes a public folder item identifier to convert.
@@ -39,5 +39,5 @@ class NonEmptyArrayOfAlternateIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AlternatePublicFolderItemIdType[]
      */
-    public $AlternatePublicFolderItemId;
+    public $AlternatePublicFolderItemId = array();
 }

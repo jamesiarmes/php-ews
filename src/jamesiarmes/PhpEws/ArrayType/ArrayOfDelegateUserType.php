@@ -21,5 +21,5 @@ class ArrayOfDelegateUserType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DelegateUserType[]
      */
-    public $DelegateUser;
+    public $DelegateUser = array();
 }

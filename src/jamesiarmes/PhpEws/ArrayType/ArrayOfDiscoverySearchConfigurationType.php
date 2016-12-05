@@ -21,5 +21,5 @@ class ArrayOfDiscoverySearchConfigurationType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DiscoverySearchConfigurationType[]
      */
-    public $DiscoverySearchConfiguration;
+    public $DiscoverySearchConfiguration = array();
 }

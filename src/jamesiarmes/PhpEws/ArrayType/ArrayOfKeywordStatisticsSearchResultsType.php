@@ -21,5 +21,5 @@ class ArrayOfKeywordStatisticsSearchResultsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\KeywordStatisticsSearchResultType[]
      */
-    public $KeywordStat;
+    public $KeywordStat = array();
 }

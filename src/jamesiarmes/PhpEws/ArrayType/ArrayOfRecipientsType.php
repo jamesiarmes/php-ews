@@ -21,5 +21,5 @@ class ArrayOfRecipientsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\EmailAddressType[]
      */
-    public $Mailbox;
+    public $Mailbox = array();
 }

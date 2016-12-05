@@ -21,5 +21,5 @@ class ArrayOfSuggestion extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\Suggestion[]
      */
-    public $Suggestion;
+    public $Suggestion = array();
 }

@@ -21,5 +21,5 @@ class NonEmptyArrayOfFolderNamesType extends ArrayType
      *
      * @var string[]
      */
-    public $FolderName;
+    public $FolderName = array();
 }

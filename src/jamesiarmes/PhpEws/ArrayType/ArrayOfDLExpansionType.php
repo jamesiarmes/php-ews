@@ -24,7 +24,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var integer
      */
-    public $AbsoluteDenominator;
+    public $AbsoluteDenominator = array();
 
     /**
      * Indicates whether the current results contain the last item in the query
@@ -34,7 +34,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var boolean
      */
-    public $IncludesLastItemInRange;
+    public $IncludesLastItemInRange = array();
 
     /**
      * Represents the next index that should be used for the next request when
@@ -44,7 +44,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var string
      */
-    public $IndexedPagingOffset;
+    public $IndexedPagingOffset = array();
 
     /**
      * Identifies a mail-enabled Active Directory directory service object.
@@ -53,7 +53,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\EmailAddressType[]
      */
-    public $Mailbox;
+    public $Mailbox = array();
 
     /**
      * Represents the new numerator value to use for the next request when you
@@ -63,7 +63,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var integer
      */
-    public $NumeratorOffset;
+    public $NumeratorOffset = array();
 
     /**
      * Represents the total number of items in the view.
@@ -72,5 +72,5 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @var integer
      */
-    public $TotalItemsInView;
+    public $TotalItemsInView = array();
 }

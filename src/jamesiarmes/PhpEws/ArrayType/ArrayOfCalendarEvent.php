@@ -22,5 +22,5 @@ class ArrayOfCalendarEvent extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\CalendarEvent[]
      */
-    public $CalendarEvent;
+    public $CalendarEvent = array();
 }

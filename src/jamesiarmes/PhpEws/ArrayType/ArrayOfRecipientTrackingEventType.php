@@ -21,5 +21,5 @@ class ArrayOfRecipientTrackingEventType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RecipientTrackingEventType[]
      */
-    public $RecipientTrackingEvent;
+    public $RecipientTrackingEvent = array();
 }

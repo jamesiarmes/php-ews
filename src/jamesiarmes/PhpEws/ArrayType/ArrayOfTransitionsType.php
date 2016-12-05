@@ -22,7 +22,7 @@ class ArrayOfTransitionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AbsoluteDateTransitionType[]
      */
-    public $AbsoluteDateTransition;
+    public $AbsoluteDateTransition = array();
 
     /**
      * The unique identifier of the transitions group.
@@ -31,7 +31,7 @@ class ArrayOfTransitionsType extends ArrayType
      *
      * @var string
      */
-    public $Id;
+    public $Id = array();
 
     /**
      * A time zone transition that occurs on a specified day of the year.
@@ -40,7 +40,7 @@ class ArrayOfTransitionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RecurringDateTransitionType[]
      */
-    public $RecurringDateTransition;
+    public $RecurringDateTransition = array();
 
     /**
      * A time zone transition that occurs on the same day each year.
@@ -49,5 +49,5 @@ class ArrayOfTransitionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RecurringDayTransitionType[]
      */
-    public $RecurringDayTransition;
+    public $RecurringDayTransition = array();
 }

@@ -22,5 +22,5 @@ class ArrayOfPersonaAttributionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PersonaAttributionType[]
      */
-    public $Attribution;
+    public $Attribution = array();
 }

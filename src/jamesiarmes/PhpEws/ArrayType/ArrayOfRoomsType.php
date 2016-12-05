@@ -22,5 +22,5 @@ class ArrayOfRoomsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RoomType[]
      */
-    public $Room;
+    public $Room = array();
 }

@@ -21,5 +21,5 @@ class ArrayOfSearchPreviewItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SearchPreviewItemType[]
      */
-    public $SearchPreviewItem;
+    public $SearchPreviewItem = array();
 }

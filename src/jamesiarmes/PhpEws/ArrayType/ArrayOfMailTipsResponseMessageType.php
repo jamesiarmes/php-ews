@@ -21,5 +21,5 @@ class ArrayOfMailTipsResponseMessageType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Response\MailTipsResponseMessageType[]
      */
-    public $MailTipsResponseMessageType;
+    public $MailTipsResponseMessageType = array();
 }

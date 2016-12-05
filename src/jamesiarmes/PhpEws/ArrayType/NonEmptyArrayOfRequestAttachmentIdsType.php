@@ -21,5 +21,5 @@ class NonEmptyArrayOfRequestAttachmentIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RequestAttachmentIdType[]
      */
-    public $AttachmentId;
+    public $AttachmentId = array();
 }

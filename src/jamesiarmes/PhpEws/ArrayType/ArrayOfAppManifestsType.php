@@ -24,5 +24,5 @@ class ArrayOfAppManifestsType extends ArrayType
      *
      * @todo Create a base64 class?
      */
-    public $Manifest;
+    public $Manifest = array();
 }

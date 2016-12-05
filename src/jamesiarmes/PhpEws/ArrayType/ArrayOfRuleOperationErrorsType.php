@@ -22,5 +22,5 @@ class ArrayOfRuleOperationErrorsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RuleOperationErrorType[]
      */
-    public $RuleOperationError;
+    public $RuleOperationError = array();
 }

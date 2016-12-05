@@ -21,5 +21,5 @@ class ArrayOfSearchableMailboxesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SearchableMailboxType[]
      */
-    public $SearchableMailbox;
+    public $SearchableMailbox = array();
 }

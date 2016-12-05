@@ -21,5 +21,5 @@ class ArrayOfPeopleType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PersonaType[]
      */
-    public $Persona;
+    public $Persona = array();
 }

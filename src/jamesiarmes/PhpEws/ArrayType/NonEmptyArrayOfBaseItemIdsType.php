@@ -24,7 +24,7 @@ class NonEmptyArrayOfBaseItemIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ItemIdType[]
      */
-    public $ItemId;
+    public $ItemId = array();
 
     /**
      * Identifies a single occurrence of a recurring item.
@@ -33,7 +33,7 @@ class NonEmptyArrayOfBaseItemIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\OccurrenceItemIdType[]
      */
-    public $OccurrenceItemId;
+    public $OccurrenceItemId = array();
 
     /**
      * Identifies a recurrence master item by identifying one of its related
@@ -43,7 +43,7 @@ class NonEmptyArrayOfBaseItemIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RecurringMasterItemIdType[]
      */
-    public $RecurringMasterItemId;
+    public $RecurringMasterItemId = array();
 
     /**
      * Specifies an array of occurrence ranges.
@@ -52,5 +52,5 @@ class NonEmptyArrayOfBaseItemIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RecurringMasterItemIdRanges[]
      */
-    public $RecurringMasterItemIdRanges;
+    public $RecurringMasterItemIdRanges = array();
 }

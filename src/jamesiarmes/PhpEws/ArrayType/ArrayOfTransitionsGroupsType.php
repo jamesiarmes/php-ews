@@ -21,5 +21,5 @@ class ArrayOfTransitionsGroupsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTransitionsType[]
      */
-    public $TransitionsGroup;
+    public $TransitionsGroup = array();
 }

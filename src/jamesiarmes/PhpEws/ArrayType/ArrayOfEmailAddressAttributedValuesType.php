@@ -23,5 +23,5 @@ class ArrayOfEmailAddressAttributedValuesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\EmailAddressAttributedValueType[]
      */
-    public $EmailAddressAttributedValue;
+    public $EmailAddressAttributedValue = array();
 }

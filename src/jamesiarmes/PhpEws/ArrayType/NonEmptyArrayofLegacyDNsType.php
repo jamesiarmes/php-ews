@@ -21,5 +21,5 @@ class NonEmptyArrayofLegacyDNsType extends ArrayType
      *
      * @var string[]
      */
-    public $LegacyDN;
+    public $LegacyDN = array();
 }

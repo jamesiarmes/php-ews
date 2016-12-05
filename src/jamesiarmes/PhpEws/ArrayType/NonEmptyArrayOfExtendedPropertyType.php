@@ -21,5 +21,5 @@ class NonEmptyArrayOfExtendedPropertyType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ExtendedPropertyType[]
      */
-    public $ExtendedProperty;
+    public $ExtendedProperty = array();
 }

@@ -21,5 +21,5 @@ class ArrayOfRulesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RuleType[]
      */
-    public $Rule;
+    public $Rule = array();
 }

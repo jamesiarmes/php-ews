@@ -25,5 +25,5 @@ class ArrayOfPrivateCatalogAddInsType extends ArrayType
      *
      * @todo Update once documentation exists.
      */
-    public $AddIn;
+    public $AddIn = array();
 }

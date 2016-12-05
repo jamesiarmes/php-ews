@@ -22,5 +22,5 @@ class ArrayOfUserIdType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\UserIdType[]
      */
-    public $UserId;
+    public $UserId = array();
 }

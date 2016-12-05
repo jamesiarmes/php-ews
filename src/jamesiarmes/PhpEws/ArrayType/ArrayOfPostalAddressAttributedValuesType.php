@@ -23,5 +23,5 @@ class ArrayOfPostalAddressAttributedValuesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PostalAddressAttributedValueType[]
      */
-    public $PostalAddressAttributedValue;
+    public $PostalAddressAttributedValue = array();
 }

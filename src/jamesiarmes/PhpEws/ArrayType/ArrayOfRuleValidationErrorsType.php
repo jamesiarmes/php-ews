@@ -23,5 +23,5 @@ class ArrayOfRuleValidationErrorsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RuleValidationErrorType[]
      */
-    public $Error;
+    public $Error = array();
 }

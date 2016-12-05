@@ -21,5 +21,5 @@ class NonEmptyArrayOfPropertyValuesType extends ArrayType
      *
      * @var string[]
      */
-    public $Value;
+    public $Value = array();
 }

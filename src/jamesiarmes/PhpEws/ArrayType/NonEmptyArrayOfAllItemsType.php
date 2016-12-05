@@ -21,7 +21,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AcceptItemType[]
      */
-    public $AcceptItem;
+    public $AcceptItem = array();
 
     /**
      * Used to accept an invitation that allows access to another user’s
@@ -31,7 +31,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\AcceptSharingInvitationType[]
      */
-    public $AcceptSharingInvitation;
+    public $AcceptSharingInvitation = array();
 
     /**
      * Represents an Exchange calendar item.
@@ -40,7 +40,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\CalendarItemType[]
      */
-    public $CalendarItem;
+    public $CalendarItem = array();
 
     /**
      * Represents the response object that is used to cancel a meeting.
@@ -49,7 +49,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\CancelCalendarItemType[]
      */
-    public $CancelCalendarItem;
+    public $CancelCalendarItem = array();
 
     /**
      * Represents an Exchange contact item.
@@ -58,7 +58,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ContactItemType[]
      */
-    public $Contact;
+    public $Contact = array();
 
     /**
      * Represents a Decline reply to a meeting request.
@@ -67,7 +67,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DeclineItemType[]
      */
-    public $DeclineItem;
+    public $DeclineItem = array();
 
     /**
      * Represents a distribution list.
@@ -76,7 +76,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DistributionListType[]
      */
-    public $DistributionList;
+    public $DistributionList = array();
 
     /**
      * Contains an Exchange store item to forward to recipients.
@@ -85,7 +85,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ForwardItemType[]
      */
-    public $ForwardItem;
+    public $ForwardItem = array();
 
     /**
      * Represents an item in the Exchange store.
@@ -94,7 +94,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ItemType[]
      */
-    public $Item;
+    public $Item = array();
 
     /**
      * Represents a meeting cancellation in the Exchange store.
@@ -103,7 +103,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingCancellationMessageType[]
      */
-    public $MeetingCancellation;
+    public $MeetingCancellation = array();
 
     /**
      * Represents a meeting message in the Exchange store.
@@ -112,7 +112,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingMessageType[]
      */
-    public $MeetingMessage;
+    public $MeetingMessage = array();
 
     /**
      * Represents a meeting request in the Exchange store.
@@ -121,7 +121,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingRequestMessageType[]
      */
-    public $MeetingRequest;
+    public $MeetingRequest = array();
 
     /**
      * Represents a meeting response in the Exchange store.
@@ -130,7 +130,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingResponseMessageType[]
      */
-    public $MeetingResponse;
+    public $MeetingResponse = array();
 
     /**
      * Represents an Exchange e-mail message.
@@ -139,7 +139,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MessageType[]
      */
-    public $Message;
+    public $Message = array();
 
     /**
      * Contains a post item.
@@ -148,7 +148,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PostItemType[]
      */
-    public $PostItem;
+    public $PostItem = array();
 
     /**
      * Contains a reply to a post item.
@@ -157,7 +157,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PostReplyItemType[]
      */
-    public $PostReplyItem;
+    public $PostReplyItem = array();
 
     /**
      * Represents a response object that is used to remove a meeting item when a
@@ -167,7 +167,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RemoveItemType[]
      */
-    public $RemoveItem;
+    public $RemoveItem = array();
 
     /**
      * Contains a reply to the sender and all identified recipients of an item
@@ -177,7 +177,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ReplyAllToItemType[]
      */
-    public $ReplyAllToItem;
+    public $ReplyAllToItem = array();
 
     /**
      * Contains a reply to the sender of an item in the Exchange store.
@@ -186,7 +186,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ReplyToItemType[]
      */
-    public $ReplyToItem;
+    public $ReplyToItem = array();
 
     /**
      * Used to suppress read receipts.
@@ -195,7 +195,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SuppressReadReceiptType[]
      */
-    public $SuppressReadReceipt;
+    public $SuppressReadReceipt = array();
 
     /**
      * Represents a task in the Exchange store.
@@ -204,7 +204,7 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\TaskType[]
      */
-    public $Task;
+    public $Task = array();
 
     /**
      * Represents a Tentative reply to a meeting request.
@@ -213,5 +213,5 @@ class NonEmptyArrayOfAllItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\TentativelyAcceptItemType[]
      */
-    public $TentativelyAcceptItem;
+    public $TentativelyAcceptItem = array();
 }

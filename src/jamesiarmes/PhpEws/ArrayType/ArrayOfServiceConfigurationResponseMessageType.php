@@ -23,5 +23,5 @@ class ArrayOfServiceConfigurationResponseMessageType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Response\ServiceConfigurationResponseMessageType[]
      */
-    public $ServiceConfigurationResponseMessageType;
+    public $ServiceConfigurationResponseMessageType = array();
 }

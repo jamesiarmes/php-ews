@@ -21,5 +21,5 @@ class ArrayOfMailboxHoldStatusType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MailboxHoldStatusType[]
      */
-    public $MailboxHoldStatus;
+    public $MailboxHoldStatus = array();
 }

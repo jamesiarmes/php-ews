@@ -21,7 +21,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\CalendarItemType[]
      */
-    public $CalendarItem;
+    public $CalendarItem = array();
 
     /**
      * Represents an Exchange contact item.
@@ -30,7 +30,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ContactItemType[]
      */
-    public $Contact;
+    public $Contact = array();
 
     /**
      * Represents a distribution list.
@@ -39,7 +39,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DistributionListType[]
      */
-    public $DistributionList;
+    public $DistributionList = array();
 
     /**
      * Represents an item in the Exchange store.
@@ -48,7 +48,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ItemType[]
      */
-    public $Item;
+    public $Item = array();
 
     /**
      * Represents a meeting cancellation in the Exchange store.
@@ -57,7 +57,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingCancellationMessageType[]
      */
-    public $MeetingCancellation;
+    public $MeetingCancellation = array();
 
     /**
      * Represents a meeting message in the Exchange store.
@@ -66,7 +66,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingMessageType[]
      */
-    public $MeetingMessage;
+    public $MeetingMessage = array();
 
     /**
      * Represents a meeting request in the Exchange store.
@@ -75,7 +75,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingRequestMessageType[]
      */
-    public $MeetingRequest;
+    public $MeetingRequest = array();
 
     /**
      * Represents a meeting response in the Exchange store.
@@ -84,7 +84,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MeetingResponseMessageType[]
      */
-    public $MeetingResponse;
+    public $MeetingResponse = array();
 
     /**
      * Represents an Exchange e-mail message.
@@ -93,7 +93,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MessageType[]
      */
-    public $Message;
+    public $Message = array();
 
     /**
      * Represents a post item in the Exchange store.
@@ -102,7 +102,7 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PostItemType[]
      */
-    public $PostItem;
+    public $PostItem = array();
 
     /**
      * Represents a task in the Exchange store.
@@ -111,5 +111,5 @@ class ArrayOfRealItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\TaskType[]
      */
-    public $Task;
+    public $Task = array();
 }

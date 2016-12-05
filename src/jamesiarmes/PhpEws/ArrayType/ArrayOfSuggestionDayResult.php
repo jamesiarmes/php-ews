@@ -21,5 +21,5 @@ class ArrayOfSuggestionDayResult extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SuggestionDayResult[]
      */
-    public $SuggestionDayResult;
+    public $SuggestionDayResult = array();
 }

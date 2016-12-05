@@ -21,5 +21,5 @@ class ArrayOfNonIndexableItemDetailsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\NonIndexableItemDetailType[]
      */
-    public $NonIndexableItemDetail;
+    public $NonIndexableItemDetail = array();
 }

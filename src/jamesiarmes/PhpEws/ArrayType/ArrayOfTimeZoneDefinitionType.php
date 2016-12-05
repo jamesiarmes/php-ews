@@ -21,5 +21,5 @@ class ArrayOfTimeZoneDefinitionType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\TimeZoneDefinitionType[]
      */
-    public $TimeZoneDefinition;
+    public $TimeZoneDefinition = array();
 }

@@ -21,5 +21,5 @@ class ArrayOfPeopleQuerySource extends ArrayType
      *
      * @var string[]
      */
-    public $Source;
+    public $Source = array();
 }

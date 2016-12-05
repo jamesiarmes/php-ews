@@ -21,5 +21,5 @@ class ArrayOfFailedSearchMailboxesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\FailedSearchMailboxType[]
      */
-    public $FailedMailbox;
+    public $FailedMailbox = array();
 }

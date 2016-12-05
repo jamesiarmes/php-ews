@@ -21,5 +21,5 @@ class NonEmptyArrayOfMailboxQueriesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MailboxQueryType[]
      */
-    public $MailboxQuery;
+    public $MailboxQuery = array();
 }

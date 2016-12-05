@@ -22,5 +22,5 @@ class ArrayOfDelegateUserResponseMessageType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Response\DelegateUserResponseMessageType[]
      */
-    public $DelegateUserResponseMessageType;
+    public $DelegateUserResponseMessageType = array();
 }

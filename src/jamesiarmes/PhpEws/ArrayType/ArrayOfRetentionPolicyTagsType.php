@@ -21,5 +21,5 @@ class ArrayOfRetentionPolicyTagsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\RetentionPolicyTagType[]
      */
-    public $RetentionPolicyTag;
+    public $RetentionPolicyTag = array();
 }

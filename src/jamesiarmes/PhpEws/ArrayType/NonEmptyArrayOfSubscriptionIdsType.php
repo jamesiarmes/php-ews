@@ -21,5 +21,5 @@ class NonEmptyArrayOfSubscriptionIdsType extends ArrayType
      *
      * @var string[]
      */
-    public $SubscriptionId;
+    public $SubscriptionId = array();
 }

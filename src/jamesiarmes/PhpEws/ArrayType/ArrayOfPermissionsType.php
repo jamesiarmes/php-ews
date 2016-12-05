@@ -21,5 +21,5 @@ class ArrayOfPermissionsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PermissionType[]
      */
-    public $Permission;
+    public $Permission = array();
 }

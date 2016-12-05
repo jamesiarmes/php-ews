@@ -22,5 +22,5 @@ class NonEmptyArrayOfRestrictedGroupIdentifiersType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\SidAndAttributesType[]
      */
-    public $RestrictedGroupIdentifier;
+    public $RestrictedGroupIdentifier = array();
 }

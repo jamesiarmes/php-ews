@@ -21,7 +21,7 @@ class ArrayOfStringsType extends ArrayType
      *
      * @var string[]
      */
-    public $String;
+    public $String = array();
 
     /**
      * Properly converts the value of this type to a string.

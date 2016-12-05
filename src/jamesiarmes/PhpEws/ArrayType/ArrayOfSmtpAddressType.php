@@ -22,5 +22,5 @@ class ArrayOfSmtpAddressType extends ArrayType
      *
      * @var string[]
      */
-    public $SmtpAddress;
+    public $SmtpAddress = array();
 }

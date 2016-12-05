@@ -21,5 +21,5 @@ class ArrayOfServiceConfigurationType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Enumeration\ServiceConfigurationType[]
      */
-    public $ConfigurationName;
+    public $ConfigurationName = array();
 }

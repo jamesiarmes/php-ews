@@ -21,5 +21,5 @@ class ArrayOfItemClassType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType[]
      */
-    public $ItemClass;
+    public $ItemClass = array();
 }

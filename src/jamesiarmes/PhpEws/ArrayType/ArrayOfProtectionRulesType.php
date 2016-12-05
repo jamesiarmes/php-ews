@@ -25,5 +25,5 @@ class ArrayOfProtectionRulesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ProtectionRuleType[]
      */
-    public $Rule;
+    public $Rule = array();
 }

@@ -22,5 +22,5 @@ class NonEmptyArrayOfOccurrenceInfoType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\OccurrenceInfoType[]
      */
-    public $Occurrence;
+    public $Occurrence = array();
 }

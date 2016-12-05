@@ -23,5 +23,5 @@ class NonEmptyArrayOfPeriodsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PeriodType[]
      */
-    public $Period;
+    public $Period = array();
 }

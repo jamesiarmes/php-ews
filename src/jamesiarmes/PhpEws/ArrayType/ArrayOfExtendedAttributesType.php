@@ -21,5 +21,5 @@ class ArrayOfExtendedAttributesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ExtendedAttributeType[]
      */
-    public $ExtendedAttribute;
+    public $ExtendedAttribute = array();
 }

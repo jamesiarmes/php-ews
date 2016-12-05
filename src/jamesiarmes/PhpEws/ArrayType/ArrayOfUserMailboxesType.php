@@ -21,5 +21,5 @@ class ArrayOfUserMailboxesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\UserMailboxType[]
      */
-    public $UserMailbox;
+    public $UserMailbox = array();
 }

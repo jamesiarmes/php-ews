@@ -22,5 +22,5 @@ class ArrayOfMailboxData extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\MailboxData[]
      */
-    public $MailboxData;
+    public $MailboxData = array();
 }

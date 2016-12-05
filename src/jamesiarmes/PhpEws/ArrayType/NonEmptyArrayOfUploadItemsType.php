@@ -21,5 +21,5 @@ class NonEmptyArrayOfUploadItemsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\UploadItemType[]
      */
-    public $Item;
+    public $Item = array();
 }

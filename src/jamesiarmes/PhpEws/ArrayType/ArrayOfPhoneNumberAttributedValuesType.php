@@ -23,5 +23,5 @@ class ArrayOfPhoneNumberAttributedValuesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\PhoneNumberAttributedValueType[]
      */
-    public $PhoneNumberAttributedValue;
+    public $PhoneNumberAttributedValue = array();
 }

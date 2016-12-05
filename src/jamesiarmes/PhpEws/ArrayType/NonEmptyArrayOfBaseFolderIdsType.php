@@ -23,7 +23,7 @@ class NonEmptyArrayOfBaseFolderIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\DistinguishedFolderIdType[]
      */
-    public $DistinguishedFolderId;
+    public $DistinguishedFolderId = array();
 
     /**
      * Contains the identifier and change key of a folder.
@@ -32,5 +32,5 @@ class NonEmptyArrayOfBaseFolderIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\FolderIdType[]
      */
-    public $FolderId;
+    public $FolderId = array();
 }

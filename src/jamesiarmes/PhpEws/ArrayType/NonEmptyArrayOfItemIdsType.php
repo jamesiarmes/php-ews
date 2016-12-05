@@ -22,5 +22,5 @@ class NonEmptyArrayOfItemIdsType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\ItemIdType[]
      */
-    public $ItemId;
+    public $ItemId = array();
 }

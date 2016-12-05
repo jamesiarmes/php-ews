@@ -22,5 +22,5 @@ class ArrayOfArraysOfTrackingPropertiesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfTrackingPropertiesType[]
      */
-    public $Properties;
+    public $Properties = array();
 }

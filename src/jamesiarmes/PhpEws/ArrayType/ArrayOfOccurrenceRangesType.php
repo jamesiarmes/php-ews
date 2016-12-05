@@ -22,5 +22,5 @@ class ArrayOfOccurrenceRangesType extends ArrayType
      *
      * @var \jamesiarmes\PhpEws\Type\OccurrencesRangeType[]
      */
-    public $Range;
+    public $Range = array();
 }
