@@ -45,7 +45,6 @@ $request = new UpdateItemType();
 //$request->MessageDisposition = 'SaveOnly';
 $request->ConflictResolution = new ConflictResolutionType();
 $request->ConflictResolution->_ = ConflictResolutionType::ALWAYS_OVERWRITE;
-$request->ItemChanges = array();
 
 // Iterate over the contacts to be updated.
 foreach ($contact_updates as $update) {
