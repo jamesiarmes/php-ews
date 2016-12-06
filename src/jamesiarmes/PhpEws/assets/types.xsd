@@ -4688,7 +4688,7 @@
 
     <xs:complexType name="TimeZoneDefinitionType">
         <xs:sequence minOccurs="0">
-            <xs:element name="Periods" type="t:NonEmptyArrayOfPeriodsType" />
+            <xs:element name="Periods" type="t:NonEmptyArrayOfPeriodsType" minOccurs="0"  />
             <xs:element name="TransitionsGroups" type="t:ArrayOfTransitionsGroupsType"   minOccurs="0"/>
             <xs:element name="Transitions" type="t:ArrayOfTransitionsType" minOccurs="0" />
         </xs:sequence>

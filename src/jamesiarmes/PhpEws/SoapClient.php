@@ -16,34 +16,11 @@ use \jamesiarmes\PhpNtlm\SoapClient as NtlmSoapClient;
 class SoapClient extends NtlmSoapClient
 {
     /**
-     * {@inheritdoc}
-     */
-    public function __construct($wsdl, $options)
-    {
-        // If a version was set then add it to the headers.
-        if (!empty($options['version'])) {
-            $this->__default_headers[] = new \SoapHeader(
-                'http://schemas.microsoft.com/exchange/services/2006/types',
-                'RequestServerVersion Version="' . $options['version'] . '"'
-            );
-        }
-
-        // If impersonation was set then add it to the headers.
-        if (!empty($options['impersonation'])) {
-            $this->__default_headers[] = new \SoapHeader(
-                'http://schemas.microsoft.com/exchange/services/2006/types',
-                'ExchangeImpersonation',
-                $options['impersonation']
-            );
-        }
-
-        parent::__construct($wsdl, $options);
-    }
-
-    /**
      * Returns the response code from the last request
      *
      * @return integer
+     *
+     * @todo Move this to the php-ntlm library and remove this class.
      */
     public function getResponseCode()
     {

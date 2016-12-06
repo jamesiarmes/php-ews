@@ -97,6 +97,13 @@ class Client
     protected $soap;
 
     /**
+     * Timezone to be used for all requests.
+     *
+     * @var string
+     */
+    protected $timezone;
+
+    /**
      * Username to use when connecting to the Exchange server.
      *
      * @var string
@@ -195,6 +202,16 @@ class Client
     public function setServer($server)
     {
         $this->server = $server;
+    }
+
+    /**
+     * Sets the timezone to be used for all requests.
+     *
+     * @param string $timezone
+     */
+    public function setTimezone($timezone)
+    {
+        $this->timezone = $timezone;
     }
 
     /**
@@ -1546,13 +1563,12 @@ class Client
             array(
                 'user' => $this->username,
                 'password' => $this->password,
-                'version' => $this->version,
                 'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-                'impersonation' => $this->impersonation,
                 'classmap' => ClassMap::getMap(),
                 'curlopts' => $this->curl_options,
             )
         );
+        $this->soap->__setSoapHeaders($this->soapHeaders());
 
         return $this->soap;
     }
@@ -1596,5 +1612,44 @@ class Client
         }
 
         return $response;
+    }
+
+    /**
+     * Builds the soap headers to be included with the request.
+     *
+     * @return \SoapHeader[]
+     */
+    protected function soapHeaders()
+    {
+        $headers = array();
+
+        // Set the schema version.
+        $headers[] = new \SoapHeader(
+            'http://schemas.microsoft.com/exchange/services/2006/types',
+            'RequestServerVersion Version="' . $this->version . '"'
+        );
+
+        // If impersonation was set then add it to the headers.
+        if (!empty($this->impersonation)) {
+            $headers[] = new \SoapHeader(
+                'http://schemas.microsoft.com/exchange/services/2006/types',
+                'ExchangeImpersonation',
+                $this->impersonation
+            );
+        }
+
+        if (!empty($this->timezone)) {
+            $headers[] = new \SoapHeader(
+                'http://schemas.microsoft.com/exchange/services/2006/types',
+                'TimeZoneContext',
+                array(
+                    'TimeZoneDefinition' => array(
+                        'Id' => $this->timezone,
+                    )
+                )
+            );
+        }
+
+        return $headers;
     }
 }
