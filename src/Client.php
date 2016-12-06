@@ -5,6 +5,8 @@
 
 namespace jamesiarmes\PhpEws;
 
+use \jamesiarmes\PhpNtlm\SoapClient;
+
 /**
  * Base class of the Exchange Web Services application.
  *
@@ -92,7 +94,7 @@ class Client
     /**
      * SOAP client used to make the request
      *
-     * @var \jamesiarmes\PhpEws\SoapClient
+     * @var \jamesiarmes\PhpNtlm\SoapClient
      */
     protected $soap;
 
@@ -157,7 +159,7 @@ class Client
     /**
      * Returns the SOAP Client that may be used to make calls against the server
      *
-     * @return \jamesiarmes\PhpEws\SoapClient
+     * @return \jamesiarmes\PhpNtlm\SoapClient
      */
     public function getClient()
     {
@@ -1554,7 +1556,7 @@ class Client
     /**
      * Initializes the SoapClient object to make a request
      *
-     * @return \jamesiarmes\PhpEws\SoapClient
+     * @return \jamesiarmes\PhpNtlm\SoapClient
      */
     protected function initializeSoapClient()
     {
