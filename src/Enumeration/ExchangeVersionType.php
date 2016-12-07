@@ -35,6 +35,13 @@ class ExchangeVersionType extends Enumeration
     const EXCHANGE_2007_SP1 = 'Exchange2007_SP1';
 
     /**
+     * Microsoft Exchange 2007 SP2
+     *
+     * @var string
+     */
+    const VERSION_2009 = 'Exchange2009';
+
+    /**
      * Target the schema files for Exchange 2010.
      *
      * @since Exchange 2010

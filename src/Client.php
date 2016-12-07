@@ -29,6 +29,13 @@ class Client
     const VERSION_2007_SP1 = 'Exchange2007_SP1';
 
     /**
+     * Microsoft Exchange 2007 SP2
+     *
+     * @var string
+     */
+    const VERSION_2009 = 'Exchange2009';
+
+    /**
      * Microsoft Exchange 2010
      *
      * @var string
