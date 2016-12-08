@@ -82,10 +82,10 @@ $contact->Body->BodyType->_ = BodyTypeType::TEXT;
 $contact->Body->_ = 'Test body.';
 
 $request->Items->Contact[] = $contact;
-$result = $client->CreateItem($request);
+$response = $client->CreateItem($request);
 
 // If we only created one item then we won't have an array from the response.
-$response_messages = $result->ResponseMessages->CreateItemResponseMessage;
+$response_messages = $response->ResponseMessages->CreateItemResponseMessage;
 if (!is_array($response_messages)) {
     $response_messages = array($response_messages);
 }
