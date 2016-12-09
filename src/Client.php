@@ -1575,6 +1575,7 @@ class Client
                 'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
                 'classmap' => ClassMap::getMap(),
                 'curlopts' => $this->curl_options,
+                'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
             )
         );
         $this->soap->__setSoapHeaders($this->soapHeaders());

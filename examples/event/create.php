@@ -67,13 +67,8 @@ $request->Items->CalendarItem[] = $event;
 
 $response = $client->CreateItem($request);
 
-// If we only created one item then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->CreateItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or event ids.
+$response_messages = $response->ResponseMessages->CreateItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -82,8 +77,11 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    $id = $response_message->Items->CalendarItem->ItemId->Id;
-    fwrite(STDOUT, "Created event $id\n");
+    // Iterate over the created events, printing the id for each.
+    foreach ($response_message->Items->CalendarItem as $item) {
+        $id = $item->ItemId->Id;
+        fwrite(STDOUT, "Created event $id\n");
+    }
 }
 
 

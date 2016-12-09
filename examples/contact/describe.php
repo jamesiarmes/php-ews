@@ -42,13 +42,8 @@ foreach ($contacts_ids as $contact_id) {
 
 $response = $client->GetItem($request);
 
-// If we only retrieved one item then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->GetItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or contact names.
+$response_messages = $response->ResponseMessages->GetItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -57,6 +52,9 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    $name = $response_message->Items->Contact->DisplayName;
-    fwrite(STDOUT, "Retrieved contact $name\n");
+    // Iterate over the contacts.
+    foreach ($response_message->Items->Contact as $item) {
+        $name = $item->DisplayName;
+        fwrite(STDOUT, "Retrieved contact $name\n");
+    }
 }

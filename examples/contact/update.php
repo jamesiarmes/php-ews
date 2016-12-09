@@ -41,8 +41,6 @@ $client = new Client($host, $username, $password, $version);
 
 // Build the request.
 $request = new UpdateItemType();
-//$request->SendMeetingInvitationsOrCancellations = 'SendToNone';
-//$request->MessageDisposition = 'SaveOnly';
 $request->ConflictResolution = new ConflictResolutionType();
 $request->ConflictResolution->_ = ConflictResolutionType::ALWAYS_OVERWRITE;
 
@@ -82,14 +80,9 @@ foreach ($contact_updates as $update) {
 
 $response = $client->UpdateItem($request);
 
-// If we only updated one item then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->UpdateItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or ids of contacts that
 // were updated.
+$response_messages = $response->ResponseMessages->UpdateItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -98,6 +91,9 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    $id = $response_message->Items->Contact->ItemId->Id;
-    fwrite(STDOUT, "Updated contact $id\n");
+    // Iterate over the updated contacts, printing the id of each.
+    foreach ($response_message->Items->Contact as $item) {
+        $id = $item->ItemId->Id;
+        fwrite(STDOUT, "Updated contact $id\n");
+    }
 }

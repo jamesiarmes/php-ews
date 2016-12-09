@@ -46,13 +46,8 @@ foreach ($event_ids as $event_id) {
 
 $response = $client->GetItem($request);
 
-// If we only retrieved one item then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->GetItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or event names.
+$response_messages = $response->ResponseMessages->GetItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -61,6 +56,9 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    $subject = $response_message->Items->CalendarItem->Subject;
-    fwrite(STDOUT, "Retrieved event $subject\n");
+    // Iterate over the events, printing the title for each.
+    foreach ($response_message->Items->CalendarItem as $item) {
+        $subject = $item->Subject;
+        fwrite(STDOUT, "Retrieved event $subject\n");
+    }
 }

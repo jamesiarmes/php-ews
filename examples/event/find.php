@@ -48,13 +48,8 @@ $request->CalendarView->EndDate = $end_date->format('c');
 
 $response = $client->FindItem($request);
 
-// If only one item was found then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->FindItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or event ids.
+$response_messages = $response->ResponseMessages->FindItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -63,13 +58,8 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    // If only one event was found, we won't have an array.
-    $items = $response_message->RootFolder->Items->CalendarItem;
-    if (!is_array($items)) {
-        $items = array($items);
-    }
-
     // Iterate over the events that were found, printing some data for each.
+    $items = $response_message->RootFolder->Items->CalendarItem;
     foreach ($items as $item) {
         $id = $item->ItemId->Id;
         $start = new DateTime($item->Start);

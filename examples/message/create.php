@@ -69,13 +69,8 @@ $request->Items->Message[] = $message;
 
 $response = $client->CreateItem($request);
 
-// If we only created one item then we won't have an array from the response.
-$response_messages = $response->ResponseMessages->CreateItemResponseMessage;
-if (!is_array($response_messages)) {
-    $response_messages = array($response_messages);
-}
-
 // Iterate over the results, printing any error messages or message ids.
+$response_messages = $response->ResponseMessages->CreateItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
@@ -84,7 +79,10 @@ foreach ($response_messages as $response_message) {
         continue;
     }
 
-    $id = $response_message->Items->Message->ItemId->Id;
-    fwrite(STDOUT, "Created message $id\n");
+    // Iterate over the created messages, printing the id for each.
+    foreach ($response_message->Items->Message as $item) {
+        $id = $item->ItemId->Id;
+        fwrite(STDOUT, "Created message $id\n");
+    }
 }
 
