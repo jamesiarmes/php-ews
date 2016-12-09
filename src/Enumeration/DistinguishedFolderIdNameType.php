@@ -168,15 +168,6 @@ class DistinguishedFolderIdNameType extends Enumeration
     const FAVORITES = 'favorites';
 
     /**
-     * Represents the Inbox folder.
-     *
-     * @since Exchange 2007
-     *
-     * @var string
-     */
-    const INBOX = 'inbox';
-
-    /**
      * Represents the IM contact list folder.
      *
      * @since Exchange 2013
@@ -184,6 +175,15 @@ class DistinguishedFolderIdNameType extends Enumeration
      * @var string
      */
     const IM_CONTACT_LIST = 'imcontactlist';
+
+    /**
+     * Represents the Inbox folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const INBOX = 'inbox';
 
     /**
      * Represents the Journal folder.
@@ -256,6 +256,15 @@ class DistinguishedFolderIdNameType extends Enumeration
      * @var string
      */
     const PEOPLE_CONNECT = 'peopleconnect';
+
+    /**
+     * Indicates the URL of the public folders root folder.
+     *
+     * @since Exchange 2007
+     *
+     * @var string
+     */
+    const PUBLIC_FOLDERS_ROOT = 'publicfoldersroot';
 
     /**
      * Represents the quick contacts folder.
