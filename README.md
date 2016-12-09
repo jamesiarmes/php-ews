@@ -15,7 +15,7 @@ Dependencies
 
  * Composer
  * PHP 5.4 or greater
- * cURL with NTLM support (7.23.0+ recommended)
+ * cURL with NTLM support (7.30.0+ recommended)
  * Exchange 2007 or later
 
 **Note: Not all operations or request elements are supported on all versions of
