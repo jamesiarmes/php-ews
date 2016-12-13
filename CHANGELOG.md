@@ -16,6 +16,7 @@
 - Assets now match the latest for Exchange 2016/Exchange Online.
 - Autodiscovery now supports Exchange 2013 and 2016.
 - Properties on array types in responses should always be an array now.
+- SOAP client and headers are only reinitialized/rebuilt when necessary.
 
 ### Removed
 - Custom exception class.

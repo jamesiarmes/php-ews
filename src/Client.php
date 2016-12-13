@@ -85,6 +85,13 @@ class Client
     protected $curl_options = array();
 
     /**
+     * SOAP headers used for requests.
+     *
+     * @var \SoapHeader[]
+     */
+    protected $headers = array();
+
+    /**
      * Password to use when connecting to the Exchange server.
      *
      * @var string
@@ -170,7 +177,12 @@ class Client
      */
     public function getClient()
     {
-        return $this->initializeSoapClient();
+        // If the SOAP client has yet to be initialized then do so now.
+        if (empty($this->soap)) {
+            $this->initializeSoapClient();
+        }
+
+        return $this->soap;
     }
 
     /**
@@ -181,6 +193,9 @@ class Client
     public function setCurlOptions(array $options)
     {
         $this->curl_options = $options;
+
+        // We need to reinitialize the SOAP client.
+        $this->soap = null;
     }
 
     /**
@@ -191,6 +206,9 @@ class Client
     public function setImpersonation($impersonation)
     {
         $this->impersonation = $impersonation;
+
+        // We need to re-build the SOAP headers.
+        $this->headers = array();
     }
 
     /**
@@ -201,6 +219,9 @@ class Client
     public function setPassword($password)
     {
         $this->password = $password;
+
+        // We need to reinitialize the SOAP client.
+        $this->soap = null;
     }
 
     /**
@@ -211,6 +232,9 @@ class Client
     public function setServer($server)
     {
         $this->server = $server;
+
+        // We need to reinitialize the SOAP client.
+        $this->soap = null;
     }
 
     /**
@@ -221,6 +245,9 @@ class Client
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
+
+        // We need to re-build the SOAP headers.
+        $this->headers = array();
     }
 
     /**
@@ -231,6 +258,9 @@ class Client
     public function setUsername($username)
     {
         $this->username = $username;
+
+        // We need to reinitialize the SOAP client.
+        $this->soap = null;
     }
 
     /**
@@ -241,6 +271,9 @@ class Client
     public function setVersion($version)
     {
         $this->version = $version;
+
+        // We need to re-build the SOAP headers.
+        $this->headers = array();
     }
 
     /**
@@ -1578,7 +1611,6 @@ class Client
                 'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
             )
         );
-        $this->soap->__setSoapHeaders($this->soapHeaders());
 
         return $this->soap;
     }
@@ -1595,7 +1627,7 @@ class Client
      */
     protected function makeRequest($operation, $request)
     {
-        $this->initializeSoapClient();
+        $this->getClient()->__setSoapHeaders($this->soapHeaders());
         $response = $this->soap->{$operation}($request);
 
         return $this->processResponse($response);
@@ -1631,17 +1663,22 @@ class Client
      */
     protected function soapHeaders()
     {
-        $headers = array();
+        // If the headers have already been built, no need to do so again.
+        if (!empty($this->headers)) {
+            return $this->headers;
+        }
+
+        $this->headers = array();
 
         // Set the schema version.
-        $headers[] = new \SoapHeader(
+        $this->headers[] = new \SoapHeader(
             'http://schemas.microsoft.com/exchange/services/2006/types',
             'RequestServerVersion Version="' . $this->version . '"'
         );
 
         // If impersonation was set then add it to the headers.
         if (!empty($this->impersonation)) {
-            $headers[] = new \SoapHeader(
+            $this->headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
                 $this->impersonation
@@ -1649,7 +1686,7 @@ class Client
         }
 
         if (!empty($this->timezone)) {
-            $headers[] = new \SoapHeader(
+            $this->headers[] = new \SoapHeader(
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'TimeZoneContext',
                 array(
@@ -1660,6 +1697,6 @@ class Client
             );
         }
 
-        return $headers;
+        return $this->headers;
     }
 }
