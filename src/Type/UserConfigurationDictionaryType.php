@@ -19,7 +19,7 @@ class UserConfigurationDictionaryType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\UserConfigurationDictionaryEntryType
+     * @var \jamesiarmes\PhpEws\Type\UserConfigurationDictionaryEntryType[]
      */
-    public $DictionaryEntry;
+    public $DictionaryEntry = array();
 }

@@ -28,7 +28,7 @@ class UserConfigurationDictionaryObjectType extends Type
      *
      * @since Exchange 2010
      *
-     * @var string
+     * @var string[]
      */
-    public $Value;
+    public $Value = array();
 }
