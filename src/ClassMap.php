@@ -4,6 +4,8 @@
  *
  * This class is generated using the build-classmap.php script. To make changes
  * to this file should be made there or in the ClassMap.mustache template.
+ *
+ * Last updated on: 2016-12-14 06:06:01 UTC
  */
 
 namespace jamesiarmes\PhpEws;

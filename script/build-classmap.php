@@ -43,6 +43,10 @@ foreach (array('ArrayType', 'Request', 'Response', 'Type') as $namespace) {
     }
 }
 
+// Prepare the updated timestamp.
+$updated = new DateTime();
+$updated->setTimezone(new DateTimeZone('UTC'));
+
 // Load and render the template.
 $engine = new Mustache_Engine(array(
     'loader' => new Mustache_Loader_FilesystemLoader($base_path . '/templates')
@@ -50,7 +54,10 @@ $engine = new Mustache_Engine(array(
 $template = $engine->loadTemplate('ClassMap');
 file_put_contents(
     "$src_path/ClassMap.php",
-    $template->render(array('maps' => $map))
+    $template->render(array(
+        'maps' => $map,
+        'updated' => $updated->format('Y-m-d H:i:s e'),
+    ))
 );
 
 fwrite(STDOUT, "Class map written to \"$src_path/ClassMap.php\".\n");
