@@ -8,7 +8,8 @@ services and provides an object-oriented interface to the complex types
 required to form a request.
 
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jamesiarmes/php-ews/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jamesiarmes/php-ews/?branch=master)
+[![Scrutinizer](https://img.shields.io/scrutinizer/g/jamesiarmes/php-ews.svg?style=flat-square)](https://scrutinizer-ci.com/g/jamesiarmes/php-ews)
+[![Total Downloads](https://img.shields.io/packagist/dt/php-ews/php-ews.svg?style=flat-square)](https://packagist.org/packages/php-ews/php-ews)
 
 Dependencies
 ------------
