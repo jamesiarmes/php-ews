@@ -39,7 +39,9 @@ class RecipientTrackingEventType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MessageTrackingDeliveryStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MessageTrackingDeliveryStatusType
      */
     public $DeliveryStatus;
 
@@ -57,7 +59,9 @@ class RecipientTrackingEventType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MessageTrackingEventDescriptionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MessageTrackingEventDescriptionType
      */
     public $EventDescription;
 

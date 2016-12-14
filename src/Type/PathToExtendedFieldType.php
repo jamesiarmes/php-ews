@@ -30,7 +30,9 @@ class PathToExtendedFieldType extends BasePathToElementType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DistinguishedPropertySetType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DistinguishedPropertySetType
      */
     public $DistinguishedPropertySetId;
 
@@ -124,7 +126,9 @@ class PathToExtendedFieldType extends BasePathToElementType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MapiPropertyTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MapiPropertyTypeType
      */
     public $PropertyType;
 }

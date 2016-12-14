@@ -20,7 +20,9 @@ class TransitionTargetType extends StringType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\TransitionTargetKindType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\TransitionTargetKindType
      */
     public $Kind;
 }

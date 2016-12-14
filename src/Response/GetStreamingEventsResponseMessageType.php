@@ -18,7 +18,9 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConnectionStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConnectionStatusType
      */
     public $ConnectionStatus;
 

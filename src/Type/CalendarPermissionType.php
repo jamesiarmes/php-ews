@@ -17,7 +17,9 @@ class CalendarPermissionType extends BasePermissionType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarPermissionLevelType
      */
     public $CalendarPermissionLevel;
 
@@ -26,7 +28,9 @@ class CalendarPermissionType extends BasePermissionType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
      */
     public $ReadItems;
 }

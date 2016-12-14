@@ -37,7 +37,9 @@ abstract class BasePermissionType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $DeleteItems;
 
@@ -46,7 +48,9 @@ abstract class BasePermissionType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PermissionActionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PermissionActionType
      */
     public $EditItems;
 

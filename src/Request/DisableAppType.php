@@ -17,7 +17,9 @@ class DisableAppType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DisableReasonType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DisableReasonType
      */
     public $DisableReason;
 

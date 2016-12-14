@@ -87,7 +87,9 @@ class TaskType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\TaskDelegateStateType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\TaskDelegateStateType
      */
     public $DelegationState;
 
@@ -213,7 +215,9 @@ class TaskType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\TaskStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\TaskStatusType
      */
     public $Status;
 

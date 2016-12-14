@@ -12,6 +12,8 @@ use \jamesiarmes\PhpEws\Enumeration\PhoneNumberKeyType;
 use \jamesiarmes\PhpEws\Enumeration\PhysicalAddressKeyType;
 use \jamesiarmes\PhpEws\Enumeration\ResponseClassType;
 
+use \jamesiarmes\PhpEws\Type\BodyType;
+use \jamesiarmes\PhpEws\Type\ContactItemType;
 use \jamesiarmes\PhpEws\Type\EmailAddressDictionaryEntryType;
 use \jamesiarmes\PhpEws\Type\EmailAddressDictionaryType;
 use \jamesiarmes\PhpEws\Type\ExtendedPropertyType;
@@ -30,7 +32,7 @@ $client = new Client($host, $username, $password, $version);
 
 // Build the request object.
 $request = new CreateItemType();
-$contact = new \jamesiarmes\PhpEws\Type\ContactItemType();
+$contact = new ContactItemType();
 $contact->GivenName = 'Homer';
 $contact->Surname = 'Simpson';
 $contact->PhoneNumbers = new PhoneNumberDictionaryType();
@@ -40,15 +42,13 @@ $contact->ExtendedProperty = new ExtendedPropertyType();
 
 // Set an email address.
 $email = new EmailAddressDictionaryEntryType();
-$email->Key = new EmailAddressKeyType();
-$email->Key->_ = EmailAddressKeyType::EMAIL_ADDRESS_1;
+$email->Key = EmailAddressKeyType::EMAIL_ADDRESS_1;
 $email->_ = 'hsimpson@example.com';
 $contact->EmailAddresses->Entry[] = $email;
 
 // Set an address.
 $address = new PhysicalAddressDictionaryEntryType();
-$address->Key = new PhysicalAddressKeyType();
-$address->Key->_ = PhysicalAddressKeyType::HOME;
+$address->Key = PhysicalAddressKeyType::HOME;
 $address->Street = '742 Evergreen Terrace';
 $address->City = 'Springfield';
 $address->State = 'PA';
@@ -58,13 +58,12 @@ $contact->PhysicalAddresses->Entry[] = $address;
 
 // Set a phone number.
 $phone = new PhoneNumberDictionaryEntryType();
-$phone->Key = new PhoneNumberKeyType();
-$phone->Key->_ = PhoneNumberKeyType::HOME_PHONE;
+$phone->Key = PhoneNumberKeyType::HOME_PHONE;
 $phone->_ = '(610) 555-3223';
 $contact->PhoneNumbers->Entry[] = $phone;
 
 // Set contact title as an extended property.
-$property = new \jamesiarmes\PhpEws\Type\ExtendedPropertyType();
+$property = new ExtendedPropertyType();
 $property->ExtendedFieldURI = new PathToExtendedFieldType();
 $property->ExtendedFieldURI->PropertyTag = '0x3A45';
 $property->ExtendedFieldURI->PropertyType = MapiPropertyTypeType::STRING;
@@ -72,13 +71,11 @@ $property->Value = 'Mr.';
 $contact->ExtendedProperty = $property;
 
 // Set the "file as" mapping to "first name last name".
-$contact->FileAsMapping = new FileAsMappingType();
-$contact->FileAsMapping->_ = FileAsMappingType::FIRST_SPACE_LAST;
+$contact->FileAsMapping = FileAsMappingType::FIRST_SPACE_LAST;
 
 // Set the contact body (this is the "Notes" field in Outlook).
-$contact->Body = new \jamesiarmes\PhpEws\Type\BodyType();
-$contact->Body->BodyType = new BodyTypeType();
-$contact->Body->BodyType->_ = BodyTypeType::TEXT;
+$contact->Body = new BodyType();
+$contact->Body->BodyType = BodyTypeType::TEXT;
 $contact->Body->_ = 'Test body.';
 
 $request->Items->Contact[] = $contact;

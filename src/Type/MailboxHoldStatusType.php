@@ -37,7 +37,9 @@ class MailboxHoldStatusType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\HoldStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\HoldStatusType
      */
     public $Status;
 }

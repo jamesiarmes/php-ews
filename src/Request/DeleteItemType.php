@@ -22,7 +22,9 @@ class DeleteItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\AffectedTaskOccurrencesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\AffectedTaskOccurrencesType
      */
     public $AffectedTaskOccurrences;
 
@@ -33,7 +35,9 @@ class DeleteItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DisposalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DisposalType
      */
     public $DeleteType;
 
@@ -58,7 +62,9 @@ class DeleteItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingCancellations;
 

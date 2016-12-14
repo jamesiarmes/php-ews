@@ -95,7 +95,9 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ContactSourceType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ContactSourceType
      */
     public $ContactSource;
 
@@ -159,7 +161,9 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FileAsMappingType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FileAsMappingType
      */
     public $FileAsMapping;
 
@@ -354,7 +358,9 @@ class ContactItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PhysicalAddressIndexType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PhysicalAddressIndexType
      */
     public $PostalAddressIndex;
 

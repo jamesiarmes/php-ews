@@ -22,7 +22,9 @@ class MailboxData extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MeetingAttendeeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MeetingAttendeeType
      */
     public $AttendeeType;
 

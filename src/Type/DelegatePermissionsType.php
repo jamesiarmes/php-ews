@@ -19,7 +19,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $CalendarFolderPermissionLevel;
 
@@ -28,7 +30,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $ContactsFolderPermissionLevel;
 
@@ -37,7 +41,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $InboxFolderPermissionLevel;
 
@@ -46,7 +52,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $JournalFolderPermissionLevel;
 
@@ -55,7 +63,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $NotesFolderPermissionLevel;
 
@@ -64,7 +74,9 @@ class DelegatePermissionsType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DelegateFolderPermissionLevelType
      */
     public $TasksFolderPermissionLevel;
 }

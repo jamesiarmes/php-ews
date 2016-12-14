@@ -67,7 +67,9 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\AppointmentState
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\AppointmentState
      */
     public $AppointmentState;
 
@@ -76,7 +78,9 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarItemTypeType
      */
     public $CalendarItemType;
 
@@ -86,7 +90,9 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConferenceType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConferenceType
      */
     public $ConferenceType;
 
@@ -246,7 +252,9 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -304,7 +312,9 @@ class CalendarItemType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
      */
     public $MyResponseType;
 

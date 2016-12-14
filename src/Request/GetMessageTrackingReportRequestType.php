@@ -20,7 +20,9 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\Scope
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\Scope
      */
     public $Scope;
 
@@ -31,7 +33,9 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MessageTrackingReportTemplateType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MessageTrackingReportTemplateType
      */
     public $ReportTemplate;
 

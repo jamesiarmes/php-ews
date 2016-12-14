@@ -37,7 +37,9 @@ class SerializableTimeZoneTime extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $DayOfWeek;
 

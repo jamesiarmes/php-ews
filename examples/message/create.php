@@ -29,8 +29,7 @@ $request = new CreateItemType();
 $request->Items = new NonEmptyArrayOfAllItemsType();
 
 // Save the message, but do not send it.
-$request->MessageDisposition= new MessageDispositionType();
-$request->MessageDisposition->_ = MessageDispositionType::SAVE_ONLY;
+$request->MessageDisposition = MessageDispositionType::SAVE_ONLY;
 
 // Create the message.
 $message = new MessageType();
@@ -50,8 +49,7 @@ $message->ToRecipients->Mailbox[] = $recipient;
 
 // Set the message body.
 $message->Body = new BodyType();
-$message->Body->BodyType = new BodyTypeType();
-$message->Body->BodyType->_ = BodyTypeType::TEXT;
+$message->Body->BodyType = BodyTypeType::TEXT;
 $message->Body->_ = <<<BODY
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere ante mauris, ultrices suscipit metus sollicitudin luctus. Donec quis orci mi. Donec molestie lobortis ligula, sed blandit nibh varius ut. Donec semper, risus id mollis eleifend, ante justo tristique arcu, eu ornare justo ex ut tellus. Aenean condimentum orci blandit, dapibus nulla nec, condimentum massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non nunc id lectus tempor condimentum. Nulla eu pretium urna. Sed sed nunc sapien. Donec ornare orci interdum, fermentum augue sit amet, pharetra dui. Vivamus varius justo mi, ut maximus augue fermentum sed. Vestibulum ac lorem condimentum leo pharetra porttitor. Suspendisse eu mauris ultrices, mollis diam vel, fringilla lorem.
 

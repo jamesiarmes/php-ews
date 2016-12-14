@@ -37,7 +37,9 @@ class ClientAccessTokenRequestType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ClientAccessTokenTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ClientAccessTokenTypeType
      */
     public $TokenType;
 }

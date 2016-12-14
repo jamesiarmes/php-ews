@@ -22,6 +22,9 @@
 - Custom exception class.
 - Invalid schema versions.
 
+### Deprecated
+- Instantiating enumeration classes, reference the constants instead.
+
 ## 0.1.1 - 2015-02-19
 
 ### Added

@@ -29,7 +29,9 @@ class PreviewItemResponseShapeType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PreviewItemBaseShapeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PreviewItemBaseShapeType
      */
     public $BaseShape;
 }

@@ -51,7 +51,9 @@ class GetConversationItemsType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
      */
     public $MailboxScope;
 
@@ -69,7 +71,9 @@ class GetConversationItemsType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConversationNodeSortOrder
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConversationNodeSortOrder
      */
     public $SortOrder;
 }

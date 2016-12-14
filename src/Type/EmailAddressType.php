@@ -35,7 +35,9 @@ class EmailAddressType extends BaseEmailAddressType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
      */
     public $MailboxType;
 
@@ -54,7 +56,9 @@ class EmailAddressType extends BaseEmailAddressType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\RoutingType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\RoutingType
      */
     public $RoutingType;
 }

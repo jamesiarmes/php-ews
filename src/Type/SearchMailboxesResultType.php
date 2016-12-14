@@ -28,7 +28,9 @@ class SearchMailboxesResultType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SearchResultType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SearchResultType
      */
     public $ResultType;
 

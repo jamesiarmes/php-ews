@@ -26,7 +26,9 @@ class GetUserPhotoType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\UserPhotoSizeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\UserPhotoSizeType
      */
     public $SizeRequested;
 
@@ -35,7 +37,9 @@ class GetUserPhotoType extends BaseRequestType
      *
      * @since Exchange 2016
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\UserPhotoTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\UserPhotoTypeType
      */
     public $TypeRequested;
 }

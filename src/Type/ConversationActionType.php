@@ -22,7 +22,9 @@ class ConversationActionType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConversationActionTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConversationActionTypeType
      */
     public $Action;
 
@@ -79,7 +81,9 @@ class ConversationActionType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DisposalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DisposalType
      */
     public $DeleteType;
 

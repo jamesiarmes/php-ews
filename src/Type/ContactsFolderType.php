@@ -27,7 +27,9 @@ class ContactsFolderType extends BaseFolderType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PermissionReadAccessType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PermissionReadAccessType
      */
     public $SharingEffectiveRights;
 }

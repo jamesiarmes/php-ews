@@ -32,7 +32,9 @@ class PrivateCatalogAddInsType extends Type
      *
      * @since Exchange 2016
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\AddInStateType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\AddInStateType
      *
      * @todo Update once documentation exists.
      */

@@ -30,7 +30,9 @@ class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MonthNamesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MonthNamesType
      */
     public $Month;
 }

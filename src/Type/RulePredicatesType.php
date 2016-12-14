@@ -92,7 +92,9 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FlaggedForActionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FlaggedForActionType
      */
     public $FlaggedForAction;
 
@@ -132,7 +134,9 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -283,7 +287,9 @@ class RulePredicatesType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 

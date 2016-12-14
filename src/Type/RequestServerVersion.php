@@ -19,7 +19,9 @@ class RequestServerVersion extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ExchangeVersionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ExchangeVersionType
      */
     public $Version;
 }

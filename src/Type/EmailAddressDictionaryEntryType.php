@@ -31,7 +31,9 @@ class EmailAddressDictionaryEntryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\EmailAddressKeyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\EmailAddressKeyType
      */
     public $Key;
 
@@ -42,7 +44,9 @@ class EmailAddressDictionaryEntryType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailboxTypeType
      */
     public $MailboxType;
 
@@ -64,7 +68,9 @@ class EmailAddressDictionaryEntryType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\RoutingType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\RoutingType
      */
     public $RoutingType;
 }

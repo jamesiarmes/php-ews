@@ -38,7 +38,9 @@ class FindConversationType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
      */
     public $MailboxScope;
 
@@ -90,7 +92,9 @@ class FindConversationType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConversationQueryTraversalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConversationQueryTraversalType
      */
     public $Traversal;
 
@@ -101,7 +105,9 @@ class FindConversationType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ViewFilterType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ViewFilterType
      */
     public $ViewFilter;
 }

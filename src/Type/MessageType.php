@@ -131,7 +131,9 @@ class MessageType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sender;
 

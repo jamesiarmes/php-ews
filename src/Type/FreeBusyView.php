@@ -30,7 +30,9 @@ class FreeBusyView extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FreeBusyViewType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FreeBusyViewType
      */
     public $FreeBusyViewType;
 

@@ -20,7 +20,9 @@ class GetUserOofSettingsResponse extends Response
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ExternalAudience
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ExternalAudience
      */
     public $AllowExternalOof;
 

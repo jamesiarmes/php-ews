@@ -24,7 +24,9 @@ class IndexedPageViewType extends BasePagingType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\IndexBasePointType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\IndexBasePointType
      */
     public $BasePoint;
 

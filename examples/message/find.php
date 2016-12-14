@@ -11,6 +11,7 @@ use \jamesiarmes\PhpEws\Enumeration\DistinguishedFolderIdNameType;
 use \jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType;
 use \jamesiarmes\PhpEws\Enumeration\ResponseClassType;
 
+use \jamesiarmes\PhpEws\Type\AndType;
 use \jamesiarmes\PhpEws\Type\ConstantValueType;
 use \jamesiarmes\PhpEws\Type\DistinguishedFolderIdType;
 use \jamesiarmes\PhpEws\Type\FieldURIOrConstantType;
@@ -18,6 +19,7 @@ use \jamesiarmes\PhpEws\Type\IsGreaterThanOrEqualToType;
 use \jamesiarmes\PhpEws\Type\IsLessThanOrEqualToType;
 use \jamesiarmes\PhpEws\Type\ItemResponseShapeType;
 use \jamesiarmes\PhpEws\Type\PathToUnindexedFieldType;
+use \jamesiarmes\PhpEws\Type\RestrictionType;
 
 // Replace with the date range you want to search in. As is, this will find all
 // messages within the current calendar year.
@@ -54,8 +56,8 @@ $less_than->FieldURIOrConstant->Constant = new ConstantValueType();
 $less_than->FieldURIOrConstant->Constant->Value = $end_date->format('c');
 
 // Build the restriction.
-$request->Restriction = new \jamesiarmes\PhpEws\Type\RestrictionType();
-$request->Restriction->And = new \jamesiarmes\PhpEws\Type\AndType();
+$request->Restriction = new RestrictionType();
+$request->Restriction->And = new AndType();
 $request->Restriction->And->IsGreaterThanOrEqualTo = $greater_than;
 $request->Restriction->And->IsLessThanOrEqualTo = $less_than;
 

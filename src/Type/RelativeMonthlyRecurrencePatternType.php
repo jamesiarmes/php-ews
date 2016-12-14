@@ -18,7 +18,9 @@ class RelativeMonthlyRecurrencePatternType extends
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekIndexType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DayOfWeekIndexType
      */
     public $DayOfWeekIndex;
 
@@ -28,7 +30,9 @@ class RelativeMonthlyRecurrencePatternType extends
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $DaysOfWeek;
 }

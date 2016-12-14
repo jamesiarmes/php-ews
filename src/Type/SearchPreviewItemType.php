@@ -78,7 +78,9 @@ class SearchPreviewItemType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -87,7 +89,9 @@ class SearchPreviewItemType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 

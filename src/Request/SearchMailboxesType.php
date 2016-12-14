@@ -37,7 +37,9 @@ class SearchMailboxesType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SearchPageDirectionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SearchPageDirectionType
      */
     public $PageDirection;
 
@@ -76,7 +78,9 @@ class SearchMailboxesType extends BaseRequestType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SearchResultType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SearchResultType
      */
     public $ResultType;
 

@@ -141,7 +141,9 @@ class FindItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ItemQueryTraversalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ItemQueryTraversalType
      */
     public $Traversal;
 }

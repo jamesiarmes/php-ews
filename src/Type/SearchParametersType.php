@@ -39,7 +39,9 @@ class SearchParametersType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SearchFolderTraversalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SearchFolderTraversalType
      */
     public $Traversal;
 }

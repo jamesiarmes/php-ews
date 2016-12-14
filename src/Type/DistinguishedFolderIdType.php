@@ -32,7 +32,9 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DistinguishedFolderIdNameType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DistinguishedFolderIdNameType
      */
     public $Id;
 

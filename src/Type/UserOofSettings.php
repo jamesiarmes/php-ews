@@ -32,7 +32,9 @@ class UserOofSettings extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ExternalAudience
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ExternalAudience
      */
     public $ExternalAudience;
 
@@ -61,7 +63,9 @@ class UserOofSettings extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\OofState
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\OofState
      */
     public $OofState;
 }

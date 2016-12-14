@@ -21,7 +21,9 @@ class UploadItemType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CreateActionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CreateActionType
      */
     public $CreateAction;
 

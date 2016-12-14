@@ -7,11 +7,13 @@ use \jamesiarmes\PhpEws\Request\CreateItemType;
 use \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAllItemsType;
 use \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttendeesType;
 
+use \jamesiarmes\PhpEws\Enumeration\BodyTypeType;
 use \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType;
 use \jamesiarmes\PhpEws\Enumeration\ResponseClassType;
 use \jamesiarmes\PhpEws\Enumeration\RoutingType;
 
 use \jamesiarmes\PhpEws\Type\AttendeeType;
+use \jamesiarmes\PhpEws\Type\BodyType;
 use \jamesiarmes\PhpEws\Type\CalendarItemType;
 use \jamesiarmes\PhpEws\Type\EmailAddressType;
 
@@ -39,16 +41,20 @@ $client = new Client($host, $username, $password, $version);
 
 // Build the request,
 $request = new CreateItemType();
-$request->SendMeetingInvitations = new CalendarItemCreateOrDeleteOperationType();
-$request->SendMeetingInvitations->_ = CalendarItemCreateOrDeleteOperationType::SEND_ONLY_TO_ALL;
+$request->SendMeetingInvitations = CalendarItemCreateOrDeleteOperationType::SEND_ONLY_TO_ALL;
 $request->Items = new NonEmptyArrayOfAllItemsType();
 
 // Build the event to be added.
 $event = new CalendarItemType();
 $event->RequiredAttendees = new NonEmptyArrayOfAttendeesType();
 $event->Start = $start->format('c');
-$event->End = $start->format('c');
+$event->End = $end->format('c');
 $event->title = 'EWS Test Event';
+
+// Set the event body.
+$event->Body = new BodyType();
+$event->Body->_ = 'This is the event body';
+$event->Body->BodyType = BodyTypeType::TEXT;
 
 // Iterate over the guests, adding each as an attendee to the request.
 foreach ($guests as $guest) {
@@ -56,8 +62,7 @@ foreach ($guests as $guest) {
     $attendee->Mailbox = new EmailAddressType();
     $attendee->Mailbox->EmailAddress = $guest['email'];
     $attendee->Mailbox->Name = $guest['name'];
-    $attendee->Mailbox->RoutingType = new RoutingType();
-    $attendee->Mailbox->RoutingType->_ = RoutingType::SMTP;
+    $attendee->Mailbox->RoutingType = RoutingType::SMTP;
     $event->RequiredAttendees->Attendee[] = $attendee;
 }
 
@@ -83,5 +88,3 @@ foreach ($response_messages as $response_message) {
         fwrite(STDOUT, "Created event $id\n");
     }
 }
-
-

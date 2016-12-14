@@ -19,7 +19,9 @@ class ArrayOfItemClassType extends ArrayType
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType[]
+     * @var string[]
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ItemClassType[]
      */
     public $ItemClass = array();
 }

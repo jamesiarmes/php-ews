@@ -37,7 +37,9 @@ class MailboxSearchScopeType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailboxSearchLocationType
      */
     public $SearchScope;
 }

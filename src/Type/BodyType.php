@@ -17,7 +17,9 @@ class BodyType extends StringType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\BodyTypeType
      */
     public $BodyType;
 

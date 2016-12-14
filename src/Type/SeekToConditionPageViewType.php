@@ -26,7 +26,9 @@ class SeekToConditionPageViewType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\IndexBasePointType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\IndexBasePointType
      */
     public $BasePoint;
 

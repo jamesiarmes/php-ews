@@ -31,7 +31,9 @@ class CreateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MessageDispositionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MessageDispositionType
      */
     public $MessageDisposition;
 
@@ -55,7 +57,9 @@ class CreateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarItemCreateOrDeleteOperationType
      */
     public $SendMeetingInvitations;
 }

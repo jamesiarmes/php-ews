@@ -27,7 +27,9 @@ class ContainsExpressionType extends SearchExpressionType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ContainmentComparisonType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ContainmentComparisonType
      */
     public $ContainmentComparison;
 
@@ -36,7 +38,9 @@ class ContainsExpressionType extends SearchExpressionType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ContainmentModeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ContainmentModeType
      */
     public $ContainmentMode;
 }

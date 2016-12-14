@@ -18,7 +18,9 @@ class DistributionListType extends ItemType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ContactSourceType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ContactSourceType
      */
     public $ContactSource;
 

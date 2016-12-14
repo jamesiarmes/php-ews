@@ -17,7 +17,9 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $DayOfWeek;
 
@@ -27,7 +29,9 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\Occurrence
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\Occurrence
      */
     public $Occurrence;
 }

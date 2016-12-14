@@ -75,7 +75,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarItemTypeType
      */
     public $CalendarItemType;
 
@@ -84,7 +86,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConferenceType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConferenceType
      */
     public $ConferenceType;
 
@@ -165,7 +169,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $IntendedFreeBusyStatus;
 
@@ -233,7 +239,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $LegacyFreeBusyStatus;
 
@@ -251,7 +259,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MeetingRequestTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MeetingRequestTypeType
      */
     public $MeetingRequestType;
 
@@ -300,7 +310,9 @@ class MeetingRequestMessageType extends MeetingMessageType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
      */
     public $MyResponseType;
 

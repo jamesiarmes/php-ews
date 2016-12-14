@@ -17,7 +17,9 @@ class DeleteFolderType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DisposalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DisposalType
      */
     public $DeleteType;
 

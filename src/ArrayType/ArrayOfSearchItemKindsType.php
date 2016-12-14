@@ -19,7 +19,9 @@ class ArrayOfSearchItemKindsType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SearchItemKindType[]
+     * @var string[]
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SearchItemKindType[]
      */
     public $SearchItemKind = array();
 }

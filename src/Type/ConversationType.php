@@ -50,7 +50,9 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FlagStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FlagStatusType
      */
     public $FlagStatus;
 
@@ -69,7 +71,9 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FlagStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FlagStatusType
      */
     public $GlobalFlagStatus;
 
@@ -89,7 +93,9 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $GlobalImportance;
 
@@ -200,7 +206,9 @@ class ConversationType extends Type
      *
      * @since Exchange 2010 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 

@@ -34,7 +34,9 @@ class InvalidRecipientType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\InvalidRecipientResponseCodeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\InvalidRecipientResponseCodeType
      */
     public $ResponseCode;
 

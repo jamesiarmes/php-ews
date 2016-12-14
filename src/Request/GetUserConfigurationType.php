@@ -30,7 +30,9 @@ class GetUserConfigurationType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\UserConfigurationPropertyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\UserConfigurationPropertyType
      */
     public $UserConfigurationProperties;
 }

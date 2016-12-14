@@ -18,7 +18,9 @@ class DistinguishedGroupByType extends BaseGroupByType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\StandardGroupByType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\StandardGroupByType
      */
     public $StandardGroupBy;
 }

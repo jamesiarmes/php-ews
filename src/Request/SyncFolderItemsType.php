@@ -66,7 +66,9 @@ class SyncFolderItemsType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SyncFolderItemsScopeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SyncFolderItemsScopeType
      */
     public $SyncScope;
 

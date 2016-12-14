@@ -73,7 +73,9 @@ class FindFolderType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\FolderQueryTraversalType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\FolderQueryTraversalType
      */
     public $Traversal;
 }

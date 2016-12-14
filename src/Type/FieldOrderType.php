@@ -47,7 +47,9 @@ class FieldOrderType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SortDirectionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SortDirectionType
      */
     public $Order;
 }

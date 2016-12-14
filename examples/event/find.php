@@ -34,12 +34,10 @@ $request->ParentFolderIds = new NonEmptyArrayOfBaseFolderIdsType();
 
 // Return all event properties.
 $request->ItemShape = new ItemResponseShapeType();
-$request->ItemShape->BaseShape = new DefaultShapeNamesType();
-$request->ItemShape->BaseShape->_ = DefaultShapeNamesType::ALL_PROPERTIES;
+$request->ItemShape->BaseShape = DefaultShapeNamesType::ALL_PROPERTIES;
 
 $folder_id = new DistinguishedFolderIdType();
-$folder_id->Id = new DistinguishedFolderIdNameType();
-$folder_id->Id->_ = DistinguishedFolderIdNameType::CALENDAR;
+$folder_id->Id = DistinguishedFolderIdNameType::CALENDAR;
 $request->ParentFolderIds->DistinguishedFolderId[] = $folder_id;
 
 $request->CalendarView = new CalendarViewType();

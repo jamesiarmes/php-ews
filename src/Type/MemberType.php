@@ -43,7 +43,9 @@ class MemberType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MemberStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MemberStatusType
      */
     public $Status;
 }

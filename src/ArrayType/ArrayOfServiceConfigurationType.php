@@ -19,7 +19,9 @@ class ArrayOfServiceConfigurationType extends ArrayType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ServiceConfigurationType[]
+     * @var string[]
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ServiceConfigurationType[]
      */
     public $ConfigurationName = array();
 }

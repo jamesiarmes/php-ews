@@ -94,7 +94,9 @@ class MailTips extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MailTipTypes
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MailTipTypes
      */
     public $PendingMailTips;
 

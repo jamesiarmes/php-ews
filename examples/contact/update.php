@@ -41,8 +41,7 @@ $client = new Client($host, $username, $password, $version);
 
 // Build the request.
 $request = new UpdateItemType();
-$request->ConflictResolution = new ConflictResolutionType();
-$request->ConflictResolution->_ = ConflictResolutionType::ALWAYS_OVERWRITE;
+$request->ConflictResolution = ConflictResolutionType::ALWAYS_OVERWRITE;
 
 // Iterate over the contacts to be updated.
 foreach ($contact_updates as $update) {

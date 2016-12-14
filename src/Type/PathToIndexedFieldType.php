@@ -28,7 +28,9 @@ class PathToIndexedFieldType extends BasePathToElementType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DictionaryURIType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DictionaryURIType
      */
     public $FieldURI;
 }

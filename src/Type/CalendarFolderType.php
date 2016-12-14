@@ -27,7 +27,9 @@ class CalendarFolderType extends BaseFolderType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarPermissionReadAccessType
      */
     public $SharingEffectiveRights;
 }

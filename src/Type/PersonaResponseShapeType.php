@@ -28,7 +28,9 @@ class PersonaResponseShapeType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
      */
     public $BaseShape;
 }

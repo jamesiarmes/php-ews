@@ -31,7 +31,9 @@ class ImAddressDictionaryEntryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImAddressKeyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImAddressKeyType
      */
     public $Key;
 }

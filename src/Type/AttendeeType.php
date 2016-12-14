@@ -41,7 +41,9 @@ class AttendeeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResponseTypeType
      */
     public $ResponseType;
 }

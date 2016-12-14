@@ -31,7 +31,9 @@ class PhoneNumberDictionaryEntryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PhoneNumberKeyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PhoneNumberKeyType
      */
     public $Key;
 }

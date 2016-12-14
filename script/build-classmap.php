@@ -2,14 +2,11 @@
 <?php
 /**
  * Builds the SOAP classmap.
- *
- * @todo Ensure that StringType maps to String.
- * @todo Determine how to handle duplicate keys in the resulting class map.
  */
 
 // Define source code paths.
 $base_path = dirname(__DIR__);
-$src_path = "$base_path/src/jamesiarmes/PhpEws";
+$src_path = "$base_path/src";
 
 require_once "$base_path/vendor/autoload.php";
 
@@ -22,7 +19,7 @@ $overrides = array(
 // Iterate over the different type namespaces, building out the mapping for
 // each.
 $map = array();
-foreach (array('ArrayType', 'Enumeration', 'Request', 'Response', 'Type') as $namespace) {
+foreach (array('ArrayType', 'Request', 'Response', 'Type') as $namespace) {
     $i = count($map);
     $map[$i] = array('namespace' => $namespace, 'map' => array());
 

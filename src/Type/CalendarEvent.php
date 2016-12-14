@@ -47,7 +47,9 @@ class CalendarEvent extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\LegacyFreeBusyType
      */
     public $BusyType;
 

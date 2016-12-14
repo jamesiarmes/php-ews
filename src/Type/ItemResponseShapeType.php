@@ -30,7 +30,9 @@ class ItemResponseShapeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
      */
     public $BaseShape;
 
@@ -39,7 +41,9 @@ class ItemResponseShapeType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\BodyTypeResponseType
      */
     public $BodyType;
 

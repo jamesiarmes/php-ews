@@ -17,7 +17,9 @@ class PermissionType extends BasePermissionType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PermissionLevelType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PermissionLevelType
      */
     public $PermissionLevel;
 
@@ -26,7 +28,9 @@ class PermissionType extends BasePermissionType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PermissionReadAccessType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PermissionReadAccessType
      */
     public $ReadItems;
 }

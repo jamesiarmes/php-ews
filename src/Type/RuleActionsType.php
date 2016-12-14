@@ -66,7 +66,9 @@ class RuleActionsType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $MarkImportance;
 

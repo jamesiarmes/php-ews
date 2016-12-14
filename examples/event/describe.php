@@ -33,8 +33,7 @@ $client->setTimezone($timezone);
 // Build the request.
 $request = new GetItemType();
 $request->ItemShape = new ItemResponseShapeType();
-$request->ItemShape->BaseShape = new DefaultShapeNamesType();
-$request->ItemShape->BaseShape->_ = DefaultShapeNamesType::ALL_PROPERTIES;
+$request->ItemShape->BaseShape = DefaultShapeNamesType::ALL_PROPERTIES;
 $request->ItemIds = new NonEmptyArrayOfBaseItemIdsType();
 
 // Iterate over the event ids, setting each one on the request.

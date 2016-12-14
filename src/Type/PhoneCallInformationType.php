@@ -21,7 +21,9 @@ class PhoneCallInformationType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConnectionFailureCauseType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConnectionFailureCauseType
      */
     public $ConnectionFailureCause;
 
@@ -32,7 +34,9 @@ class PhoneCallInformationType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PhoneCallStateType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PhoneCallStateType
      */
     public $PhoneCallState;
 

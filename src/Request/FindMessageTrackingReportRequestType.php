@@ -94,7 +94,9 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\Scope
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\Scope
      */
     public $Scope;
 

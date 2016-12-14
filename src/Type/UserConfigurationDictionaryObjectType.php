@@ -19,7 +19,9 @@ class UserConfigurationDictionaryObjectType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\UserConfigurationDictionaryObjectTypesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\UserConfigurationDictionaryObjectTypesType
      */
     public $Type;
 

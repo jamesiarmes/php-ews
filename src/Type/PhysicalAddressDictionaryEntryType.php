@@ -40,7 +40,9 @@ class PhysicalAddressDictionaryEntryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\PhysicalAddressKeyType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\PhysicalAddressKeyType
      */
     public $Key;
 

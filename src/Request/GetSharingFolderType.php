@@ -20,7 +20,9 @@ class GetSharingFolderType extends BaseRequestType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SharingDataType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SharingDataType
      */
     public $DataType;
 

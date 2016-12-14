@@ -64,7 +64,9 @@ class RetentionPolicyTagType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\RetentionActionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\RetentionActionType
      */
     public $RetentionAction;
 
@@ -91,7 +93,9 @@ class RetentionPolicyTagType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ElcFolderType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ElcFolderType
      */
     public $Type;
 }

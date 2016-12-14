@@ -27,8 +27,7 @@ $request->ContactsView = new ContactsViewType();
 
 // Find contacts in the contacts folder.
 $folder_id = new DistinguishedFolderIdType();
-$folder_id->Id = new DistinguishedFolderIdNameType();
-$folder_id->Id->_ = DistinguishedFolderIdNameType::CONTACTS;
+$folder_id->Id = DistinguishedFolderIdNameType::CONTACTS;
 $request->ParentFolderIds->DistinguishedFolderId[] = $folder_id;
 
 $response = $client->FindItem($request);

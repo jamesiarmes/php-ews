@@ -50,7 +50,9 @@ class Suggestion extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SuggestionQuality
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SuggestionQuality
      */
     public $SuggestionQuality;
 }

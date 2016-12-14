@@ -17,7 +17,9 @@ class PathToUnindexedFieldType extends BasePathToElementType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType
      */
     public $FieldURI;
 }

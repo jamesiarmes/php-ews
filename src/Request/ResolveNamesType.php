@@ -17,7 +17,9 @@ class ResolveNamesType extends BaseRequestType
      *
      * @since Exchange 2010 SP2
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType
      */
     public $ContactDataShape;
 
@@ -63,7 +65,9 @@ class ResolveNamesType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResolveNamesSearchScopeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResolveNamesSearchScopeType
      */
     public $SearchScope;
 

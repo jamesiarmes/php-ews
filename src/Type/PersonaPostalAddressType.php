@@ -84,7 +84,9 @@ class PersonaPostalAddressType extends Type
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\LocationSourceType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\LocationSourceType
      */
     public $LocationSource;
 

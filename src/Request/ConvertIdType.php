@@ -23,7 +23,9 @@ class ConvertIdType extends BaseRequestType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\IdFormatType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\IdFormatType
      */
     public $DestinationFormat;
 

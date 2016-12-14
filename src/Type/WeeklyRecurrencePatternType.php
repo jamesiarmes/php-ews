@@ -17,7 +17,9 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DaysOfWeekType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DaysOfWeekType
      */
     public $DaysOfWeek;
 
@@ -26,7 +28,9 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DayOfWeekType
      */
     public $FirstDayOfWeek;
 }

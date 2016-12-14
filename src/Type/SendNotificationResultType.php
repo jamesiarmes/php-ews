@@ -19,7 +19,9 @@ class SendNotificationResultType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SubscriptionStatusType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SubscriptionStatusType
      */
     public $SubscriptionStatus;
 }

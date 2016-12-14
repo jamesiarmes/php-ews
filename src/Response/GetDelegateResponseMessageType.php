@@ -18,7 +18,9 @@ class GetDelegateResponseMessageType extends BaseDelegateResponseMessageType
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DeliverMeetingRequestsType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DeliverMeetingRequestsType
      */
     public $DeliverMeetingRequests;
 }

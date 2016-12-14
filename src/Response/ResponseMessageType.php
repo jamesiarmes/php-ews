@@ -50,7 +50,9 @@ class ResponseMessageType extends Response
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResponseClassType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResponseClassType
      */
     public $ResponseClass;
 
@@ -60,7 +62,9 @@ class ResponseMessageType extends Response
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ResponseCodeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ResponseCodeType
      */
     public $ResponseCode;
 }

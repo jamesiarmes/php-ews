@@ -21,7 +21,9 @@ class RuleValidationErrorType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\RuleValidationErrorCodeType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\RuleValidationErrorCodeType
      */
     public $ErrorCode;
 
@@ -39,7 +41,9 @@ class RuleValidationErrorType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\RuleFieldURIType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\RuleFieldURIType
      */
     public $FieldUri;
 

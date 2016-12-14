@@ -19,7 +19,9 @@ class UpdateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ConflictResolutionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ConflictResolutionType
      */
     public $ConflictResolution;
 
@@ -42,7 +44,9 @@ class UpdateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\MessageDispositionType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\MessageDispositionType
      */
     public $MessageDisposition;
 
@@ -65,7 +69,9 @@ class UpdateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\CalendarItemUpdateOperationType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\CalendarItemUpdateOperationType
      */
     public $SendMeetingInvitationsOrCancellations;
 

@@ -29,7 +29,9 @@ class UserIdType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\DistinguishedUserType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\DistinguishedUserType
      */
     public $DistinguishedUser;
 

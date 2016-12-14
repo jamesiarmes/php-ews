@@ -161,7 +161,9 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ImportanceChoicesType
      */
     public $Importance;
 
@@ -244,7 +246,9 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\ItemClassType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\ItemClassType
      */
     public $ItemClass;
 
@@ -370,7 +374,9 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
+     * @var string
+     *
+     * @see \jamesiarmes\PhpEws\Enumeration\SensitivityChoicesType
      */
     public $Sensitivity;
 
