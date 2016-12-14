@@ -22,7 +22,7 @@ class MembersListType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\MemberType
+     * @var \jamesiarmes\PhpEws\Type\MemberType[]
      */
-    public $Member;
+    public $Member = array();
 }
