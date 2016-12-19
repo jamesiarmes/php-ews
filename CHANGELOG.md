@@ -17,6 +17,7 @@
 - Autodiscovery now supports Exchange 2013 and 2016.
 - Properties on array types in responses should always be an array now.
 - SOAP client and headers are only reinitialized/rebuilt when necessary.
+- Default Microsoft Exchange version is now 2013.
 
 ### Removed
 - Custom exception class.

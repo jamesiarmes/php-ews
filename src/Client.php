@@ -161,7 +161,7 @@ class Client
         $server = null,
         $username = null,
         $password = null,
-        $version = self::VERSION_2007
+        $version = self::VERSION_2013
     ) {
         // Set the object properties.
         $this->setServer($server);
