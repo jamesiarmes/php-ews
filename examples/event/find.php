@@ -63,6 +63,7 @@ foreach ($response_messages as $response_message) {
         $start = new DateTime($item->Start);
         $end = new DateTime($item->End);
         $output = 'Found event ' . $item->ItemId->Id . "\n"
+            . '  Change Key: ' . $item->ItemId->ChangeKey . "\n"
             . '  Title: ' . $item->Subject . "\n"
             . '  Start: ' . $start->format('l, F jS, Y g:ia') . "\n"
             . '  End:   ' . $end->format('l, F jS, Y g:ia') . "\n\n";
