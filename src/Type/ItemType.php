@@ -22,7 +22,7 @@ class ItemType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\NonEmptyArrayOfAttachmentsType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfAttachmentsType
      */
     public $Attachments;
 

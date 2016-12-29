@@ -17,7 +17,7 @@ class CreateAttachmentType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ArrayOfAttachmentsType
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfAttachmentsType
      */
     public $Attachments;
 

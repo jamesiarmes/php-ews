@@ -5,7 +5,7 @@
  * This class is generated using the build-classmap.php script. To make changes
  * to this file should be made there or in the ClassMap.mustache template.
  *
- * Last updated on: 2016-12-14 06:06:01 UTC
+ * Last updated on: 2016-12-28 00:57:24 UTC
  */
 
 namespace jamesiarmes\PhpEws;
@@ -61,6 +61,7 @@ class ClassMap {
             'NonEmptyArrayOfPeriodsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfPeriodsType',
             'NonEmptyArrayOfAllItemsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfAllItemsType',
             'ArrayOfSuggestion' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfSuggestion',
+            'ArrayOfBinaryType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfBinaryType',
             'ArrayOfPeopleQuerySource' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfPeopleQuerySource',
             'ArrayOfPostalAddressAttributedValuesType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfPostalAddressAttributedValuesType',
             'ArrayOfUserIdType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfUserIdType',
@@ -114,9 +115,11 @@ class ClassMap {
             'NonEmptyArrayOfItemChangesType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfItemChangesType',
             'ArrayOfSearchItemKindsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfSearchItemKindsType',
             'NonEmptyArrayOfResponseObjectsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfResponseObjectsType',
+            'ArrayOfAttachmentsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfAttachmentsType',
             'ArrayOfRulesType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfRulesType',
             'ArrayOfCalendarEvent' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfCalendarEvent',
             'NonEmptyArrayOfRequestAttachmentIdsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfRequestAttachmentIdsType',
+            'NonEmptyArrayOfAttachmentsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfAttachmentsType',
             'NonEmptyArrayOfBaseFolderIdsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfBaseFolderIdsType',
             'NonEmptyArrayOfPathsToElementType' => '\\jamesiarmes\\PhpEws\\ArrayType\\NonEmptyArrayOfPathsToElementType',
             'ArrayOfTransitionsType' => '\\jamesiarmes\\PhpEws\\ArrayType\\ArrayOfTransitionsType',
@@ -496,7 +499,6 @@ class ClassMap {
             'ChangeDescriptionType' => '\\jamesiarmes\\PhpEws\\Type\\ChangeDescriptionType',
             'FolderIdType' => '\\jamesiarmes\\PhpEws\\Type\\FolderIdType',
             'DeletedOccurrenceInfoType' => '\\jamesiarmes\\PhpEws\\Type\\DeletedOccurrenceInfoType',
-            'ArrayOfBinaryType' => '\\jamesiarmes\\PhpEws\\Type\\ArrayOfBinaryType',
             'SuggestionDayResult' => '\\jamesiarmes\\PhpEws\\Type\\SuggestionDayResult',
             'GroupByType' => '\\jamesiarmes\\PhpEws\\Type\\GroupByType',
             'UnifiedMessageServiceConfiguration' => '\\jamesiarmes\\PhpEws\\Type\\UnifiedMessageServiceConfiguration',
@@ -614,7 +616,6 @@ class ClassMap {
             'SearchExpressionType' => '\\jamesiarmes\\PhpEws\\Type\\SearchExpressionType',
             'TasksFolderType' => '\\jamesiarmes\\PhpEws\\Type\\TasksFolderType',
             'AppendToFolderFieldType' => '\\jamesiarmes\\PhpEws\\Type\\AppendToFolderFieldType',
-            'ArrayOfAttachmentsType' => '\\jamesiarmes\\PhpEws\\Type\\ArrayOfAttachmentsType',
             'TimeZoneType' => '\\jamesiarmes\\PhpEws\\Type\\TimeZoneType',
             'NotificationType' => '\\jamesiarmes\\PhpEws\\Type\\NotificationType',
             'ExtendedPropertyAttributedValueType' => '\\jamesiarmes\\PhpEws\\Type\\ExtendedPropertyAttributedValueType',
@@ -635,7 +636,6 @@ class ClassMap {
             'SmartResponseType' => '\\jamesiarmes\\PhpEws\\Type\\SmartResponseType',
             'NumberedRecurrenceRangeType' => '\\jamesiarmes\\PhpEws\\Type\\NumberedRecurrenceRangeType',
             'ItemChangeDescriptionType' => '\\jamesiarmes\\PhpEws\\Type\\ItemChangeDescriptionType',
-            'NonEmptyArrayOfAttachmentsType' => '\\jamesiarmes\\PhpEws\\Type\\NonEmptyArrayOfAttachmentsType',
             'BasePathToElementType' => '\\jamesiarmes\\PhpEws\\Type\\BasePathToElementType',
             'BaseSubscriptionRequestType' => '\\jamesiarmes\\PhpEws\\Type\\BaseSubscriptionRequestType',
             'CalendarEventDetails' => '\\jamesiarmes\\PhpEws\\Type\\CalendarEventDetails',
