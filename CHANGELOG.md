@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 1.0.0-beta.1 - 2016-12-30
+
 ### Added
 - Composer support.
 - Appropriate base classes.
