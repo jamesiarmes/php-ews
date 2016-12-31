@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#examples').accordion({
+    $('#example-menu').accordion({
         collapsible: true,
         active: false
     });
