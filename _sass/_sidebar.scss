@@ -1,26 +1,9 @@
 /**
  * Sidebar styles
  */
-.sidebar.right {
-  float: right;
-  margin-left: 10px;
-  max-width: 300px;
-  padding-right: 0;
-}
-
-.column-4 { width: 33%; }
-
-.sidebar h3 {
-  border: 1px solid #d8d8d8;
-  border-radius: 8px 8px 0 0;
-  padding: 9px 10px 10px;
-  margin: 0;
-}
-
-.sidebar ul {
-  border: 1px solid #d8d8d8;
-  border-radius: 0 0 8px 8px;
-  padding-bottom: 10px;
-  padding-top: 5px;
-
+#examples {
+  position: absolute;
+  right: 10px;
+  transform: translate(-10px, -40px);
+  width: 300px;
 }

@@ -1,9 +1,12 @@
-<div class="sidebar-right sidebar right column-4 widescreen-only">
+<div id="examples" class="sidebar-right sidebar right column-4 widescreen-only">
     <h3>Examples</h3>
-    <ul class="fact-list smaller">
-        {% assign examples = site.example | where: 'category', page.category | sort: 'title' %}
-        {% for example in examples %}
-        <li><a href="{{example.url | prepend:site.baseurl }}">{{ example.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <div>
+        <ul class="fact-list smaller">
+            {% assign examples = site.example | where: 'category', page.category | sort: 'title' %}
+            {% for example in examples %}
+            <li><a href="{{example.url | prepend:site.baseurl }}">{{ example.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
+<script src="{{ "/js/sidebar.js" | prepend: site.baseurl }}"></script>
