@@ -2,7 +2,7 @@
 title:  "Folder: List"
 date:   2012-06-12
 updated: 2012-09-11
-category: "0.1"
+category: 0.1
 tags: folder
 ---
 This example shows how to retrieve a list of folders given its parent folder.

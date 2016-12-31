@@ -2,7 +2,7 @@
 title:  "Calendar: Synchronization"
 date:   2014-11-04
 updated: 2014-11-04
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 More information on the topic can be found here:

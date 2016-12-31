@@ -2,7 +2,7 @@
 title:  "Email: List"
 date:   2012-06-12
 updated: 2015-11-10
-category: "0.1"
+category: 0.1
 tags: email
 ---
 This example shows how to retrieve all emails from your inbox.

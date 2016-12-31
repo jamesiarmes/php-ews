@@ -2,7 +2,7 @@
 title:  "Email: List with Page Limit"
 date:   2013-11-27
 updated: 2015-04-07
-category: "0.1"
+category: 0.1
 tags: email
 ---
 Example to show how to get email list with page and limit.

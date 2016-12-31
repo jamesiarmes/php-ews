@@ -2,7 +2,7 @@
 title:  "Search Expression: Simple Conditions"
 date:   2012-09-07
 updated: 2015-10-02
-category: "0.1"
+category: 0.1
 tags: search
 ---
 The following examples demonstrate how to use single search expressions to

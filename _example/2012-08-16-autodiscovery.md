@@ -2,7 +2,7 @@
 title:  "Autodiscovery"
 date:   2012-08-16
 updated: 2015-12-28
-category: "0.1"
+category: 0.1
 tags: autodiscovery
 ---
 You can use the `EWSAutodiscover` class to detect the correct URL for your

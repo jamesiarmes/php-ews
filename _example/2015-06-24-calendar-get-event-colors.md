@@ -2,7 +2,7 @@
 title:  "Calendar: Get Event Colors"
 date:   2015-06-24
 updated: 2015-06-24
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Retrieving calendar events that have a category assigned returns only the

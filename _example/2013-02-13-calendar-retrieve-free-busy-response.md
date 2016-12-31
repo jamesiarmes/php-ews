@@ -2,7 +2,7 @@
 title:  "Calendar: Retrieve Free Busy Response"
 date:   2013-02-13
 updated: 2016-07-14
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 **Note:** This works for Exchange Server 2007 & 2010

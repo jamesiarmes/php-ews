@@ -2,7 +2,7 @@
 title:  "Email: Send with Attachment"
 date:   2012-06-12
 updated: 2012-08-12
-category: "0.1"
+category: 0.1
 tags: email, attachments
 ---
 Example on how to send an email with an attachment.

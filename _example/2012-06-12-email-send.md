@@ -2,7 +2,7 @@
 title:  "Email: Send"
 date:   2012-06-12
 updated: 2012-06-12
-category: "0.1"
+category: 0.1
 tags: email
 ---
 Example of how to send a simple email message.

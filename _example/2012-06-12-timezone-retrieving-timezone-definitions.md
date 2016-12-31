@@ -2,7 +2,7 @@
 title:  "Timezone: Retrieving Timezone Definitions"
 date:   2012-06-12
 updated: 2012-06-12
-category: "0.1"
+category: 0.1
 tags: timezone
 ---
 There are two examples for retrieving timezone definitions below. The first will

@@ -2,7 +2,7 @@
 title:  "Email: Retrieve Attachments"
 date:   2012-06-12
 updated: 2014-11-30
-category: "0.1"
+category: 0.1
 tags: email, attachments
 ---
 ```php?start_inline=1

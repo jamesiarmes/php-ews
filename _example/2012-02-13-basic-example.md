@@ -2,7 +2,7 @@
 title:  "Basic Example"
 date:   2012-02-13
 updated: 2012-02-13
-category: "0.1"
+category: 0.1
 tags: folder
 ---
 A lot of people have been asking for examples and documentation for this

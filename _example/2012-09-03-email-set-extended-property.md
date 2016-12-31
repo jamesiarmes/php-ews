@@ -2,7 +2,7 @@
 title:  "Email: Set Extended Property"
 date:   2012-09-03
 updated: 2012-09-03
-category: "0.1"
+category: 0.1
 tags: email, mapi
 ---
 When creating an email message using `CreateItem()`, it is saved as a draft and

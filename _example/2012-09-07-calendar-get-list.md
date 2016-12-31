@@ -2,7 +2,7 @@
 title:  "Calendar: Get List (Retrieving Id and ChangeKey)"
 date:   2012-09-07
 updated: 2015-08-17
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Exchange uses two parameters Id and ChangeKey to identify items such as calendar

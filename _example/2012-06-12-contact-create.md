@@ -2,7 +2,7 @@
 title:  "Contact: Create"
 date:   2012-06-12
 updated: 2012-06-12
-category: "0.1"
+category: 0.1
 tags: contact
 ---
 Below is an example of how to create a contact. There are other options

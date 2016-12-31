@@ -2,7 +2,7 @@
 title:  "Calendar: Retrieve Extended Properties"
 date:   2014-10-03
 updated: 2014-10-03
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Extended properties can be retrieved from a calendar entry, in this example,

@@ -2,7 +2,7 @@
 title:  "Email: Get Raw Message"
 date:   2012-08-30
 updated: 2015-08-30
-category: "0.1"
+category: 0.1
 tags: email
 ---
 This is the easiest way to download a raw message using EWS and write it to

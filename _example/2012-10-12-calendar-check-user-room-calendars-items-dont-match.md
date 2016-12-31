@@ -2,7 +2,7 @@
 title:  "Calendar: Check User and Room Calendars for Items That Don't Match"
 date:   2012-10-12
 updated: 2012-10-12
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Check user calendars for events that use a room as a location. Compare events to

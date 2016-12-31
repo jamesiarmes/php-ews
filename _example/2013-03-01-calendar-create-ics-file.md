@@ -2,7 +2,7 @@
 title:  "Calendar: Create ICS File"
 date:   2013-03-01
 updated: 2013-03-01
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Simple form to create an ICS (iCalendar) file.

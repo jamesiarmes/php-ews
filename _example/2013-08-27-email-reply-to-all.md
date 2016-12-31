@@ -2,7 +2,7 @@
 title:  "Email: Reply to All"
 date:   2013-08-27
 updated: 2016-08-19
-category: "0.1"
+category: 0.1
 tags: email
 ---
 ```php?start_inline=1

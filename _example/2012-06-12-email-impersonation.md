@@ -2,7 +2,7 @@
 title:  "Email: Impersonation"
 date:   2012-06-12
 updated: 2015-06-12
-category: "0.1"
+category: 0.1
 tags: email, impersonation
 ---
 An example of how to send an email using impersonation. Before impersonation

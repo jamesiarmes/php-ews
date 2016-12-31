@@ -2,7 +2,7 @@
 title:  "Contact: Update"
 date:   2012-06-12
 updated: 2012-06-12
-category: "0.1"
+category: 0.1
 tags: contact
 ---
 This example shows example on how to update 3 types of fields: simple, indexed and extended

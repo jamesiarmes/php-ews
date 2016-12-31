@@ -2,7 +2,7 @@
 title:  "Email: Retrieve Extended Properties"
 date:   2012-09-03
 updated: 2015-08-19
-category: "0.1"
+category: 0.1
 tags: email, mapi
 ---
 To view or manipulate certain message flags such as replied/forwarded/draft, you

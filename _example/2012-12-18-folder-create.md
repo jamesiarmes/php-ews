@@ -2,7 +2,7 @@
 title:  "Folder: Create"
 date:   2012-12-18
 updated: 2012-12-18
-category: "0.1"
+category: 0.1
 tags: folder
 ---
 Use the following to create a folder. You can make it a subfolder of a

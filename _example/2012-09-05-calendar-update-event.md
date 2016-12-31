@@ -2,7 +2,7 @@
 title:  "Calendar: Update Event"
 date:   2012-09-05
 updated: 2016-01-23
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 This example shows how to update an existing event.

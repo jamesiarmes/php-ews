@@ -2,7 +2,7 @@
 title:  "Contact: Set and Update Photo"
 date:   2014-08-06
 updated: 2014-08-06
-category: "0.1"
+category: 0.1
 tags: contact
 ---
 ```php?start_inline=1

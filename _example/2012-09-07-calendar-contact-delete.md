@@ -2,7 +2,7 @@
 title:  "Calendar and Contact: Delete"
 date:   2012-09-07
 updated: 2012-10-31
-category: "0.1"
+category: 0.1
 tags: calendar, contact
 ---
 This example shows how to delete any item with Id and ChangeKey parameters.

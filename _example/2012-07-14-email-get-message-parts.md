@@ -2,7 +2,7 @@
 title:  "Email: Get Message Parts"
 date:   2012-07-14
 updated: 2012-07-14
-category: "0.1"
+category: 0.1
 tags: email
 ---
 This example demonstrates how to retrieve the parts of a message.

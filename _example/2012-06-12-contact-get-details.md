@@ -2,7 +2,7 @@
 title:  "Contact: Get Details"
 date:   2012-06-12
 updated: 2012-06-12
-category: "0.1"
+category: 0.1
 tags: contact
 ---
 ```php?start_inline=1

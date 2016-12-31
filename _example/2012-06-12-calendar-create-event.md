@@ -2,7 +2,7 @@
 title:  "Calendar: Create Event"
 date:   2012-06-12
 updated: 2012-10-11
-category: "0.1"
+category: 0.1
 tags: calendar
 ---
 Example of creating a basic event.
