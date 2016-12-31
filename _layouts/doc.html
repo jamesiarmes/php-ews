@@ -9,7 +9,9 @@ layout: default
 </div>
 
 <div class="container page-stuff">
-  {% include sidebar.html %}
+  {% if page.category == 0.1 %}
+    {% include sidebar.html %}
+  {% endif %}
 
   {{ content }}
 </div>
