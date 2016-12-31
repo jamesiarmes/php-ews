@@ -18,9 +18,10 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        {% for page in site.pages %}
+        {% assign pages = site.pages | reverse %}
+        {% for page in pages %}
         {% if page.title %}
-        <li><a href="{{page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+        <li><a href="{{page.permalink | prepend: site.baseurl }}">{{page.menu-title}}</a></li>
 
         {% endif %}
 
