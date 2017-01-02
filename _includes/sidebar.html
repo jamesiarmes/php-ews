@@ -4,7 +4,11 @@
         <ul class="fact-list smaller">
             {% assign examples = site.example | where: 'category', page.category | sort: 'title' %}
             {% for example in examples %}
-            <li><a href="{{example.url | prepend:site.baseurl }}">{{ example.title }}</a></li>
+                {% if example.url == page.url %}
+                     <li>{{ example.title }}</li>
+                {% else %}
+                    <li><a href="{{example.url | prepend:site.baseurl }}">{{ example.title }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>
