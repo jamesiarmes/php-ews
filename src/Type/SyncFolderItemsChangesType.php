@@ -21,18 +21,18 @@ class SyncFolderItemsChangesType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsCreateOrUpdateType
+     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsCreateOrUpdateType[]
      */
-    public $Create;
+    public $Create = array();
 
     /**
      * Identifies a single item to delete in the local client store.
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsDeleteType
+     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsDeleteType[]
      */
-    public $Delete;
+    public $Delete = array();
 
     /**
      * Returned in SyncFolderItems operation responses when an item has been
@@ -42,16 +42,16 @@ class SyncFolderItemsChangesType extends Type
      *
      * @since Exchange 2007 SP1
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsReadFlagType
+     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsReadFlagType[]
      */
-    public $ReadFlagChange;
+    public $ReadFlagChange = array();
 
     /**
      * Identifies a single item to update in the local client store.
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsCreateOrUpdateType
+     * @var \jamesiarmes\PhpEws\Type\SyncFolderItemsCreateOrUpdateType[]
      */
-    public $Update;
+    public $Update = array();
 }
