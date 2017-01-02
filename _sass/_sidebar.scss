@@ -6,4 +6,8 @@
   right: 10px;
   transform: translate(-10px, -40px);
   width: 300px;
+
+  .ui-accordion-content {
+    padding: 1em 1em 1em 0;
+  }
 }
