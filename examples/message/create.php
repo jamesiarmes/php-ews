@@ -83,4 +83,3 @@ foreach ($response_messages as $response_message) {
         fwrite(STDOUT, "Created message $id\n");
     }
 }
-

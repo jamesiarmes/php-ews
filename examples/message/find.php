@@ -8,8 +8,8 @@ use \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfBaseFolderIdsType;
 
 use \jamesiarmes\PhpEws\Enumeration\DefaultShapeNamesType;
 use \jamesiarmes\PhpEws\Enumeration\DistinguishedFolderIdNameType;
-use \jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType;
 use \jamesiarmes\PhpEws\Enumeration\ResponseClassType;
+use \jamesiarmes\PhpEws\Enumeration\UnindexedFieldURIType;
 
 use \jamesiarmes\PhpEws\Type\AndType;
 use \jamesiarmes\PhpEws\Type\ConstantValueType;
@@ -61,7 +61,7 @@ $request->Restriction->And = new AndType();
 $request->Restriction->And->IsGreaterThanOrEqualTo = $greater_than;
 $request->Restriction->And->IsLessThanOrEqualTo = $less_than;
 
-// Return all event properties.
+// Return all message properties.
 $request->ItemShape = new ItemResponseShapeType();
 $request->ItemShape->BaseShape = DefaultShapeNamesType::ALL_PROPERTIES;
 
@@ -78,7 +78,7 @@ foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
         $message = $response_message->ResponseCode;
-        fwrite(STDERR, "Failed to search for events with \"$message\"\n");
+        fwrite(STDERR, "Failed to search for messages with \"$message\"\n");
         continue;
     }
 
@@ -86,6 +86,7 @@ foreach ($response_messages as $response_message) {
     $items = $response_message->RootFolder->Items->Message;
     foreach ($items as $item) {
         $subject = $item->Subject;
-        fwrite(STDOUT, "$subject\n");
+        $id = $item->ItemId->Id;
+        fwrite(STDOUT, "$subject: $id\n");
     }
 }
