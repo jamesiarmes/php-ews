@@ -18,7 +18,7 @@ use \jamesiarmes\PhpEws\Type\ItemIdType;
 
 // Replace with appropriate contact id and photo path.
 $contact_id = 'AAMkADk0N2E4OTQxLWRlOTYtNGUxZC05NzE1LTU4ZmI5NGVkZTZmYQBGAAAAAADeofKHfJ96S5ndHNLg9VfeBwAr1MfeoTJdQ7jgaw/bSgljAAAAAAEOAAAr1MfeoTJdQ7jgaw/bSgljAABjon+LAAA=';
-$file_path = '/home/jarmes/Dropbox/mangatar.jpg';
+$file_path = '../assets/contact.jpg';
 
 // Set connection information.
 $host = '';
@@ -41,7 +41,7 @@ $request->Attachments = new ArrayOfAttachmentsType();
 // Build the file attachment for the contact photo.
 $attachment = new FileAttachmentType();
 $attachment->Content = $file->openFile()->fread($file->getSize());
-$attachment->Name = 'contact-photo.jpg';
+$attachment->Name = $file->getBasename();
 $attachment->ContentType = finfo_file($finfo, $file_path);
 $attachment->IsContactPhoto = true;
 $request->Attachments->FileAttachment[] = $attachment;
