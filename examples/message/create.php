@@ -1,4 +1,10 @@
 <?php
+/**
+ * This example shows how to create a simple message as a draft. If you wish to
+ * send this immediately, change the message disposition to match your desired
+ * operation. To add attachments to this message see the message/add-attachment
+ * example. To send this message later, see the message/send example.
+ */
 require_once '../../vendor/autoload.php';
 
 use \jamesiarmes\PhpEws\Client;
@@ -79,7 +85,8 @@ foreach ($response_messages as $response_message) {
 
     // Iterate over the created messages, printing the id for each.
     foreach ($response_message->Items->Message as $item) {
-        $id = $item->ItemId->Id;
-        fwrite(STDOUT, "Created message $id\n");
+        $output = '- Id: ' . $item->ItemId->Id . "\n";
+        $output .= '- Change key: ' . $item->ItemId->ChangeKey . "\n";
+        fwrite(STDOUT, "Message created successfully.\n$output");
     }
 }
