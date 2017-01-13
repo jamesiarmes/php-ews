@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 1.0.0-beta.2 - 2017-01-12
+
+### Added
+- Autodiscover, user, event, message and timezone examples.
+
+### Changed
+- Set default value to array for some properties that were not set.
+
 ## 1.0.0-beta.1 - 2016-12-30
 
 ### Added
