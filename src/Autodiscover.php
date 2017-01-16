@@ -834,11 +834,9 @@ class Autodiscover
             case 0:
                 return Client::VERSION_2007;
             case 1:
-                return Client::VERSION_2007_SP1;
             case 2:
-                return Client::VERSION_2007_SP2;
             case 3:
-                return Client::VERSION_2007_SP3;
+                return Client::VERSION_2007_SP1;
             default:
                 return Client::VERSION_2007;
         }

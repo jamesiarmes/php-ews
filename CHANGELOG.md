@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Fixed Exchange 2007 version parsing in autodiscovery.
+
 ## 1.0.0-beta.2 - 2017-01-12
 
 ### Added
