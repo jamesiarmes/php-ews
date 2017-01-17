@@ -31,5 +31,5 @@ class PushSubscriptionRequestType extends BaseSubscriptionRequestType
      *
      * @var string
      */
-    public $Url;
+    public $URL;
 }
