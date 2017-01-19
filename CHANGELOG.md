@@ -4,6 +4,7 @@
 
 ### Changed
 - Fixed Exchange 2007 version parsing in autodiscovery.
+- Fixed event title in event/create example.
 
 ## 1.0.0-beta.2 - 2017-01-12
 

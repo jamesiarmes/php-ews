@@ -49,7 +49,7 @@ $event = new CalendarItemType();
 $event->RequiredAttendees = new NonEmptyArrayOfAttendeesType();
 $event->Start = $start->format('c');
 $event->End = $end->format('c');
-$event->title = 'EWS Test Event';
+$event->Subject = 'EWS Test Event';
 
 // Set the event body.
 $event->Body = new BodyType();
