@@ -5,6 +5,7 @@
 ### Changed
 - Fixed Exchange 2007 version parsing in autodiscovery.
 - Fixed event title in event/create example.
+- Fixed capitalization of URL property on PushSubscriptionRequestType.
 
 ## 1.0.0-beta.2 - 2017-01-12
 
