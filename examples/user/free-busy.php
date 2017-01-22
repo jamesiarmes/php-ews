@@ -67,8 +67,12 @@ foreach ($response->FreeBusyResponseArray->FreeBusyResponse as $availability) {
     // Make sure the request succeeded.
     $response_message = $availability->ResponseMessage;
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
-        fwrite(STDERR, "Failed to get user availability with \"$message\"\n");
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
+        fwrite(
+            STDERR,
+            "Failed to get user availability with \"$code: $message\"\n"
+        );
         continue;
     }
 

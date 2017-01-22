@@ -55,8 +55,9 @@ $response_messages = $response->ResponseMessages->SendItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
-        fwrite(STDERR, "Message failed to send with \"$message\"\n");
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
+        fwrite(STDERR, "Message failed to send with \"$code: $message\"\n");
         continue;
     }
 

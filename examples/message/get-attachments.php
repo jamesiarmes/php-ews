@@ -63,8 +63,9 @@ $response_messages = $response->ResponseMessages->GetItemResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
-        fwrite(STDERR, "Failed to get message with \"$message\"\n");
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
+        fwrite(STDERR, "Failed to get message with \"$code: $message\"\n");
         continue;
     }
 
@@ -104,8 +105,12 @@ foreach ($response_messages as $response_message) {
         // Make sure the request succeeded.
         if ($attachment_response_message->ResponseClass
             != ResponseClassType::SUCCESS) {
-            $message = $attachment_response_message->ResponseCode;
-            fwrite(STDERR, "Failed to get attachment with \"$message\"\n");
+            $code = $response_message->ResponseCode;
+            $message = $response_message->MessageText;
+            fwrite(
+                STDERR,
+                "Failed to get attachment with \"$code: $message\"\n"
+            );
             continue;
         }
 

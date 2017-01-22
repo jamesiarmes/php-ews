@@ -41,10 +41,11 @@ $response_messages = $response->ResponseMessages
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
         fwrite(
             STDERR,
-            "Failed to get User Configuration with \"$message\"\n"
+            "Failed to get User Configuration with \"$code: $message\"\n"
         );
         continue;
     }

@@ -47,8 +47,9 @@ $response_messages = $response->ResponseMessages->DeleteFolderResponseMessage;
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
-        fwrite(STDERR, "Folder failed to delete with \"$message\"\n");
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
+        fwrite(STDERR, "Folder failed to delete with \"$code: $message\"\n");
         continue;
     }
 }

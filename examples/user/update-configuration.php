@@ -101,10 +101,11 @@ $response_messages = $response->ResponseMessages
 foreach ($response_messages as $response_message) {
     // Make sure the request succeeded.
     if ($response_message->ResponseClass != ResponseClassType::SUCCESS) {
-        $message = $response_message->ResponseCode;
+        $code = $response_message->ResponseCode;
+        $message = $response_message->MessageText;
         fwrite(
             STDERR,
-            "User Configuration failed to update with \"$message\"\n"
+            "User Configuration failed to update with \"$code: $message\"\n"
         );
         continue;
     }
