@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Example for a message with an inline attachment.
+
 ### Changed
 - Fixed Exchange 2007 version parsing in autodiscovery.
 - Fixed event title in event/create example.
