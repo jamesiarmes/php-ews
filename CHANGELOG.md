@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 1.0.0-beta.3 - 2017-01-21
+
 ### Added
 - Example for a message with an inline attachment.
 
