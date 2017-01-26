@@ -345,7 +345,7 @@ class Autodiscover
     {
         // Discovery not yet attempted.
         if ($this->discovered === null) {
-            $this->discover();
+            $this->discovered = $this->discover();
         }
 
         // Discovery not successful.
