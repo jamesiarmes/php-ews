@@ -16,8 +16,3 @@ $ca_path = '/path/to/your/cacert.pem';
 $discovery = new Autodiscover($email, $password);
 $discovery->setCAInfo($ca_path);
 $client = $discovery->newEWS();
-
-// If autodiscovery failed, throw an exception.
-if (!$client) {
-    throw new Exception('Autodiscovery failed.');
-}

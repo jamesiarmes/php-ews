@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Autodiscovery failure now throws a RuntimeException.
+
 ## 1.0.0-beta.3 - 2017-01-21
 
 ### Added

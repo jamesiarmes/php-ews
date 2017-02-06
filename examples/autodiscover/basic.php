@@ -22,8 +22,3 @@ $password = '';
 
 // Simplest usage, no special options.
 $client = Autodiscover::getEWS($email, $password);
-
-// If autodiscovery failed, throw an exception.
-if (!$client) {
-    throw new Exception('Autodiscovery failed.');
-}

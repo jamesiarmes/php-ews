@@ -238,10 +238,11 @@ class Autodiscover
      * Execute the full discovery chain of events in the correct sequence
      * until a valid response is received, or all methods have failed.
      *
-     * @return integer|boolean
-     *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
+     * @return integer
+     *   One of the AUTODISCOVERED_VIA_* constants.
      *
-     * @todo Throw an exception on failure.
+     * @throws \RuntimeException
+     *   When all autodiscovery methods fail.
      */
     public function discover()
     {
@@ -257,6 +258,10 @@ class Autodiscover
 
         if ($result === false) {
             $result = $this->trySRVRecord();
+        }
+
+        if ($result === false) {
+            throw new \RuntimeException('Autodiscovery failed.');
         }
 
         return $result;
@@ -304,8 +309,6 @@ class Autodiscover
      *
      * @param string $version_hex
      *   Hexadecimal version string.
-     *
-     * @todo Update to include Exchange 2013 versions.
      */
     public function parseServerVersion($version_hex)
     {
@@ -413,8 +416,6 @@ class Autodiscover
      *
      * @return integer|boolean
      *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
-     *
-     * @todo Throw an exception on failure.
      */
     public function tryTLD()
     {
@@ -428,8 +429,6 @@ class Autodiscover
      *
      * @return integer|boolean
      *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
-     *
-     * @todo Throw an exception on failure.
      */
     public function trySubdomain()
     {
@@ -445,8 +444,6 @@ class Autodiscover
      *
      * @return integer|boolean
      *   One of the AUTODISCOVERED_VIA_* constants or false on failure.
-     *
-     * @todo Throw an exception on failure.
      */
     public function trySubdomainUnauthenticatedGet()
     {
@@ -490,8 +487,6 @@ class Autodiscover
      *
      * @return integer|boolean
      *   The value of self::AUTODISCOVERED_VIA_SRV_RECORD or false.
-     *
-     * @todo Throw an exception on failure.
      */
     public function trySRVRecord()
     {
