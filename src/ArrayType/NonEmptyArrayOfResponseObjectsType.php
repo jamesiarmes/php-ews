@@ -71,6 +71,16 @@ class NonEmptyArrayOfResponseObjectsType extends ArrayType
     public $PostReplyItem = array();
 
     /**
+     * Specifies a response object that indicates that the meeting attendee can
+     * propose a new meeting time.
+     *
+     * @since Exchange 2013 SP1
+     *
+     * @var \jamesiarmes\PhpEws\Type\ProposeNewTimeType[]
+     */
+    public $ProposeNewTime = array();
+
+    /**
      * Removes an item from the Exchange store.
      *
      * @since Exchange 2007

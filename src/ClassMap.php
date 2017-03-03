@@ -5,7 +5,7 @@
  * This class is generated using the build-classmap.php script. To make changes
  * to this file should be made there or in the ClassMap.mustache template.
  *
- * Last updated on: 2016-12-28 00:57:24 UTC
+ * Last updated on: 2017-03-03 00:53:44 UTC
  */
 
 namespace jamesiarmes\PhpEws;
@@ -489,6 +489,7 @@ class ClassMap {
             'DeleteItemFieldType' => '\\jamesiarmes\\PhpEws\\Type\\DeleteItemFieldType',
             'BodyContentType' => '\\jamesiarmes\\PhpEws\\Type\\BodyContentType',
             'InstalledAppType' => '\\jamesiarmes\\PhpEws\\Type\\InstalledAppType',
+            'ProposeNewTimeType' => '\\jamesiarmes\\PhpEws\\Type\\ProposeNewTimeType',
             'PhoneNumberDictionaryType' => '\\jamesiarmes\\PhpEws\\Type\\PhoneNumberDictionaryType',
             'TooBigGroupAttendeeConflictData' => '\\jamesiarmes\\PhpEws\\Type\\TooBigGroupAttendeeConflictData',
             'SuggestionsViewOptionsType' => '\\jamesiarmes\\PhpEws\\Type\\SuggestionsViewOptionsType',
