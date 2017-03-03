@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## 1.0.0-rc.1 - 2017-03-02
+
+### Added
+- ProposeNewTimeType implementation.
+
 ## 1.0.0-beta.4 - 2017-02-12
 
 ### Changed
