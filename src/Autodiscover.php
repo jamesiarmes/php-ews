@@ -641,7 +641,7 @@ class Autodiscover
                 return false;
             case 'redirectAddr':
                 $this->redirect = array(
-                    'redirectAddr' => $response['Account']['redirectAddr']
+                    'redirectAddr' => $response['Account']['RedirectAddr']
                 );
                 return false;
             case 'settings':
