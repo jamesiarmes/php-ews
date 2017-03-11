@@ -636,7 +636,7 @@ class Autodiscover
         switch ($response['Account']['Action']) {
             case 'redirectUrl':
                 $this->redirect = array(
-                    'redirectUrl' => $response['Account']['redirectUrl']
+                    'redirectUrl' => $response['Account']['RedirectUrl']
                 );
                 return false;
             case 'redirectAddr':

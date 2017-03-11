@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+- Fixed capitalization of URL property on PushSubscriptionRequestType.
+- Fixed capitalization of redirect element in autodiscovery.
+
 ## 1.0.0-rc.1 - 2017-03-02
 
 ### Added
@@ -20,7 +24,6 @@
 ### Changed
 - Fixed Exchange 2007 version parsing in autodiscovery.
 - Fixed event title in event/create example.
-- Fixed capitalization of URL property on PushSubscriptionRequestType.
 - Improved error messages in examples.
 
 ## 1.0.0-beta.2 - 2017-01-12
