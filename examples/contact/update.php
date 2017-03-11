@@ -7,6 +7,7 @@ use \jamesiarmes\PhpEws\Request\UpdateItemType;
 use \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemChangeDescriptionsType;
 
 use \jamesiarmes\PhpEws\Enumeration\ConflictResolutionType;
+use \jamesiarmes\PhpEws\Enumeration\DictionaryURIType;
 use \jamesiarmes\PhpEws\Enumeration\EmailAddressKeyType;
 use \jamesiarmes\PhpEws\Enumeration\ResponseClassType;
 
@@ -56,7 +57,7 @@ foreach ($contact_updates as $update) {
     if (!empty($update['email'])) {
         $field = new SetItemFieldType();
         $field->IndexedFieldURI = new PathToIndexedFieldType();
-        $field->IndexedFieldURI->FieldURI = 'contacts:EmailAddress';
+        $field->IndexedFieldURI->FieldURI = DictionaryURIType::CONTACTS_EMAIL_ADDRESS;
         $field->IndexedFieldURI->FieldIndex = EmailAddressKeyType::EMAIL_ADDRESS_1;
         $field->Contact = new ContactItemType();
         $field->Contact->EmailAddresses = new EmailAddressDictionaryType();
@@ -69,7 +70,7 @@ foreach ($contact_updates as $update) {
     } else {
         $field = new DeleteItemFieldType();
         $field->IndexedFieldURI = new PathToUnindexedFieldType();
-        $field->IndexedFieldURI->FieldURI = 'contacts:EmailAddress';
+        $field->IndexedFieldURI->FieldURI = DictionaryURIType::CONTACTS_EMAIL_ADDRESS;
         $field->IndexedFieldURI->FieldIndex = EmailAddressKeyType::EMAIL_ADDRESS_1;
         $change->Updates->DeleteItemField[] = $field;
     }
