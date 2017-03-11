@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 1.0.0-rc.2 - 2017-03-11
+
 ### Changed
 - Fixed capitalization of URL property on PushSubscriptionRequestType.
 - Fixed capitalization of redirect element in autodiscovery.
