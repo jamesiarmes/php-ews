@@ -120,6 +120,7 @@ foreach ($response_messages as $response_message) {
         foreach ($attachments as $attachment) {
             $path = "$file_destination/" . $attachment->Name;
             file_put_contents($path, $attachment->Content);
+            fwrite(STDOUT, "Created attachment $path\n");
         }
     }
 }

@@ -6,6 +6,7 @@
 - Fixed capitalization of URL property on PushSubscriptionRequestType.
 - Fixed capitalization of redirect element in autodiscovery.
 - Updated contact/update example to use a constant for the field URI.
+- Added output for downloaded attachments in message/get-attachments example.
 
 ## 1.0.0-rc.1 - 2017-03-02
 
