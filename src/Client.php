@@ -277,6 +277,14 @@ class Client
     }
 
     /**
+     * Gets the version property
+     */
+    public function GetVersion()
+    {
+        return $this->version;
+    }
+
+    /**
      * Adds one or more delegates to a principal's mailbox and sets specific
      * access permissions.
      *
