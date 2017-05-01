@@ -86,8 +86,8 @@ class OAuthSoapClient extends SoapClient
 
 		if (!is_null($this->anchor_mailbox))
 		{
-			$headers['X-AnchorMailbox'] = $this->anchor_mailbox;
-			$headers['X-PreferServerAffinity'] = true;
+			$headers[] = 'X-AnchorMailbox: ' . $this->anchor_mailbox;
+			$headers[] = 'X-PreferServerAffinity: ' . true;
 		}
 
         $this->__last_request_headers = $headers;
