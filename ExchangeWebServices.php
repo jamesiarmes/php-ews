@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Contains ExchangeWebServices.
  */
@@ -10,6 +11,16 @@
  */
 class ExchangeWebServices
 {
+    /**
+     * @var boolean Whether to write SOAP response to a file. Used with $last_path.
+     */
+    protected $write_to_file;
+
+    /**
+     * @var callable Where to output binary content.
+     */
+    protected $cache_name_callback = array();
+
     /**
      * Microsoft Exchange 2007
      *
@@ -90,7 +101,7 @@ class ExchangeWebServices
     /**
      * SOAP client used to make the request
      *
-     * @var NTLMSoapClient_Exchange or OAuthSoapClient_Exchange
+     * @var NTLMSoapClient_Exchange|OAuthSoapClient_Exchange
      */
     protected $soap;
 
@@ -134,6 +145,15 @@ class ExchangeWebServices
      */
     protected $version;
 
+    protected $xml_parser;
+
+    /**
+     * A directory to output to for curl.
+     *
+     * @var string
+     */
+    protected $file_output;
+
     /**
      * Constructor for the ExchangeWebServices class
      *
@@ -143,6 +163,9 @@ class ExchangeWebServices
      * @param string $version one of the ExchangeWebServices::VERSION_* constants
      * @param string $auth_method The method used to authorize exchange
      * @param string $access_token The access token
+     * @param bool   $write_to_file Whether to write curl response to file.
+     * @param string $file_output The file location to output calls to.
+     * @param callable $cache_name_callback Path to write binary cache files.
      */
     public function __construct(
         $server = null,
@@ -150,7 +173,10 @@ class ExchangeWebServices
         $password = null,
         $version = self::VERSION_2007,
         $auth_method = self::NTLM_AUTH,
-        $access_token = null
+        $access_token = null,
+        $write_to_file = false,
+        $file_output = '/tmp/transfer_output',
+        callable $cache_name_callback = null
     ) {
         // Set the object properties.
         $this->setServer($server);
@@ -159,6 +185,54 @@ class ExchangeWebServices
         $this->setVersion($version);
         $this->setAuthMethod($auth_method);
         $this->setAccessToken($access_token);
+        $this->setWriteToFile($write_to_file);
+        $this->file_output = $file_output;
+
+        // set up dir if writing to file is occuring
+        if ($write_to_file && !file_exists($this->file_output))
+        {
+            mkdir($this->file_output, 0777);
+        }
+
+        if (is_callable($cache_name_callback))
+        {
+            $this->setCacheNameCallback($cache_name_callback);
+        }
+    }
+
+    /**
+     * @param string $method
+     * @param mixed  $arg
+     */
+    public function __call($method, $args)
+    {
+        call_user_func_array([$this, $method], $args);
+    }
+
+    /**
+     * Where to write binary content when parsed. Paired with $write_to_file
+     *
+     * @param callable $cache_name_callback Location on disk to write binary content.
+     */
+    public function setCacheNameCallback(callable $cache_name_callback)
+    {
+        $this->cache_name_callback[] = $cache_name_callback;
+    }
+
+    /**
+     * @param bool $write_to_file Determine if we want to write the curl output to disk.
+     */
+    public function setWriteToFile($write_to_file)
+    {
+        $this->write_to_file = $write_to_file;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getWriteToFile()
+    {
+        return $this->write_to_file;
     }
 
     /**
@@ -171,10 +245,12 @@ class ExchangeWebServices
         return $this->initializeSoapClient();
     }
 
-     /**
+    /**
      * Sets the authorizing method.
      *
      * @param string $auth_method The method to use for authorization, either NTLM or OAuth
+	 *
+	 * @return bool
      */
     public function setAuthMethod($auth_method)
     {
@@ -187,6 +263,8 @@ class ExchangeWebServices
      * Sets the access token. This is needed for OAuth authorization.
      *
      * @param string $access_token The access token to use
+	 *
+	 * @return bool
      */
     public function setAccessToken($access_token)
     {
@@ -199,10 +277,17 @@ class ExchangeWebServices
      * Sets the impersonation property.
      *
      * @param EWSType_ExchangeImpersonationType $impersonation
+	 *
+	 * @return bool
      */
     public function setImpersonation($impersonation)
     {
         $this->impersonation = $impersonation;
+
+        if ($this->soap)
+        {
+            $this->soap->setAnchorMailBox($impersonation->ConnectingSID->PrimarySmtpAddress);
+        }
 
         return true;
     }
@@ -211,6 +296,7 @@ class ExchangeWebServices
      * Sets the password property.
      *
      * @param string $password
+	 * @return bool
      */
     public function setPassword($password)
     {
@@ -223,6 +309,7 @@ class ExchangeWebServices
      * Sets the server property.
      *
      * @param string $server
+	 * @return bool
      */
     public function setServer($server)
     {
@@ -235,6 +322,7 @@ class ExchangeWebServices
      * Sets the user name property.
      *
      * @param string $username
+	 * @return bool
      */
     public function setUsername($username)
     {
@@ -247,6 +335,7 @@ class ExchangeWebServices
      * Sets the version property.
      *
      * @param string $version
+	 * @return bool
      */
     public function setVersion($version)
     {
@@ -269,7 +358,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'AddDelegateResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -289,7 +379,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'ApplyConversationActionResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -306,7 +397,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'ConvertIdResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -322,7 +414,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CopyFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -338,7 +431,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CopyItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -355,7 +449,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CreateAttachmentResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -372,7 +467,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CreateFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -388,7 +484,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CreateItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -404,7 +501,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CreateUserConfigurationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -420,7 +518,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'CreatemanagedFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -437,7 +536,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'DeleteAttachmentResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -453,7 +553,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'DeleteFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -469,7 +570,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'DeleteItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -485,7 +587,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'DeleteUserConfigurationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -501,7 +604,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'DisconnectPhoneCallResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -521,7 +625,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'EmptyFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -537,7 +642,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'ExpandDLResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -553,7 +659,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'ExportItemsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -569,7 +676,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'FindConversationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -586,7 +694,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'FindFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -602,7 +711,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'FindItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -618,7 +728,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'FindMessageTrackingReportResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -634,7 +745,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetAttachmentResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -650,7 +762,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetDelegateResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -667,7 +780,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetEventsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -683,7 +797,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -699,7 +814,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetInboxRulesResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -715,7 +831,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -731,7 +848,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetMailTipsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -747,7 +865,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetMessageTrackingReportResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -763,7 +882,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetPasswordExpirationDateResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -779,7 +899,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetPhoneCallInformationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -795,7 +916,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetRoomListsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -811,7 +933,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetRoomsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -828,7 +951,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetServerTimeZonesResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -844,7 +968,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetServiceConfigurationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -860,7 +985,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetSharingFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -876,7 +1002,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetSharingMetadataResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -892,7 +1019,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetStreamingEventsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -909,7 +1037,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetUserAvailabilityResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -925,7 +1054,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetUserConfigurationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -941,7 +1071,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'GetUserOofSettingsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -957,7 +1088,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'MoveFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -973,7 +1105,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'MoveItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -989,7 +1122,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'PlayOnPhoneResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1006,7 +1140,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'RefreshSharingFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1022,7 +1157,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'RemoveDelegateResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1038,7 +1174,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'ResolveNamesResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1054,7 +1191,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'SendItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1070,7 +1208,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'SetUserOofSettingsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1086,7 +1225,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'SubscribeResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1103,7 +1243,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'SyncFolderHierarchyResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1119,7 +1260,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'SyncFolderItemsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1139,7 +1281,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UnsubscribeResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1155,7 +1298,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UpdateDelegateResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1171,7 +1315,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UpdateFolderResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1188,7 +1333,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UpdateInboxRulesResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1204,7 +1350,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UpdateItemResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1220,7 +1367,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UpdateUserConfigurationResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1236,7 +1384,8 @@ class ExchangeWebServices
         $this->initializeSoapClient();
         $response = $this->soap->{__FUNCTION__}($request);
 
-        return $this->processResponse($response);
+        $parsed_xml = $this->processResponse($response, 'UploadItemsResponse');
+        return $parsed_xml;
     }
 
     /**
@@ -1268,7 +1417,9 @@ class ExchangeWebServices
                         'version' => $this->version,
                         'location' => 'https://'.$this->server.'/EWS/Exchange.asmx',
                         'impersonation' => $this->impersonation,
-                    )
+                    ),
+                    $this->file_output,
+                    $this->write_to_file
                 );
                 break;
         }
@@ -1280,21 +1431,191 @@ class ExchangeWebServices
      * Process a response to verify that it succeeded and take the appropriate
      * action
      *
-     * @throws EWS_Exception
      *
      * @param stdClass $response
-     * @return EWSType
-     *
-     * @todo Map the response to a real object.
+     * @param string $property_offset
+     * @return \EWSType
+     * @throws \EWS_Exception @todo Map the response to a real object.
      */
-    protected function processResponse($response)
+    protected function processResponse($response, $property_offset)
     {
         // If the soap call failed then we need to thow an exception.
         $code = $this->soap->getResponseCode();
-        if ($code != 200) {
-            throw new EWS_Exception('SOAP client returned status of '.$code, $code);
+        if ($code != 200)
+        {
+            throw new EWS_Exception('SOAP client returned status of ' . $code, $code);
         }
 
-        return $response;
+        $this->soap->closeConnection();
+
+        if (!$this->write_to_file)
+        {
+            return $response;
+        }
+        else
+        {
+            $this->xml_parser = new XMLReader();
+            $this->xml_parser->open($response, null, LIBXML_PARSEHUGE);
+        }
+
+        $xml = $this->parseFullXML();
+        unlink($response);
+
+        gc_collect_cycles();
+
+        $this->xml_parser->close();
+
+        $full = $xml->Envelope->Body;
+
+        if (is_null($full))
+        {
+            throw new EWS_Exception(
+                'XML Parse Error'
+            );
+        }
+        elseif (!isset($xml->Envelope->Body->{$property_offset}))
+        {
+            throw new EWS_Exception(
+                'XML Parse Error'
+            );
+        }
+
+        return $xml->Envelope->Body->{$property_offset};
+    }
+
+    /**
+     * Run through the xml parser to return an object from XML saved on disk.
+     *
+     * @return \stdClass
+     */
+    public function parseFullXML()
+    {
+        $assoc = new \stdClass;
+
+        while ($this->xml_parser->read())
+        {
+            if ($this->xml_parser->nodeType == XMLReader::END_ELEMENT)
+            {
+                break;
+            }
+
+            $name = $this->xml_parser->localName;
+
+
+            if ($this->xml_parser->nodeType == XMLReader::ELEMENT && !$this->xml_parser->isEmptyElement)
+            {
+                if (isset($assoc->{$name}))
+                {
+                    if (!is_array($assoc->{$name}))
+                    {
+                        $place_holder = $assoc->{$name};
+                        $assoc->{$name} = array();
+                        $assoc->{$name}[] = $place_holder;
+                    }
+
+                    $assoc->{$name}[] = $this->parseFullXML();
+                }
+                else
+                {
+                    $assoc->{$name} = $this->parseFullXML();
+                }
+
+                if ($this->xml_parser->hasAttributes)
+                {
+                    while ($this->xml_parser->moveToNextAttribute())
+                    {
+                        $attribute_name = $this->xml_parser->localName;
+
+                        if (!isset($assoc->{$name}))
+                        {
+                            $assoc->{$name} = new \stdClass;
+                        }
+
+                        if (is_array($assoc->{$name}))
+                        {
+                            if (isset($assoc->{$name}[count($assoc->{$name}) - 1]) && !isset($assoc->{$name}[count($assoc->{$name}) - 1]->{$attribute_name}))
+                            {
+                                if (!is_object($assoc->{$name}[count($assoc->{$name}) - 1]))
+                                {
+                                    $assoc->{$name}[count($assoc->{$name}) - 1] = new \stdClass;
+                                }
+
+                                $assoc->{$name}[count($assoc->{$name}) - 1]->{$attribute_name} = $this->xml_parser->value;
+                            }
+                            else
+                            {
+                                $assoc->{$name}[] = array($attribute_name => $this->xml_parser->value);
+                            }
+
+                            continue;
+                        }
+
+                        if (!isset($assoc->{$name}->{$attribute_name}) && is_object($assoc->{$name}))
+                        {
+                            $assoc->{$name}->{$attribute_name} = new \stdClass;
+                            $assoc->{$name}->{$attribute_name} = $this->xml_parser->value;
+                            continue;
+                        }
+                        elseif (isset($assoc->{$name}->{$attribute_name}) && !is_array($assoc->{$name}->{$attribute_name}))
+                        {
+                            $first_elm = $assoc->{$name}->{$attribute_name};
+                            $assoc->{$name} = array();
+                            $assoc->{$name}[] = $first_elm;
+                            $assoc->{$name}[] = array($attribute_name => $this->xml_parser->value);
+                        }
+                    }
+                }
+            }
+            elseif ($this->xml_parser->isEmptyElement)
+            {
+                if ($this->xml_parser->hasAttributes)
+                {
+                    while ($this->xml_parser->moveToNextAttribute())
+                    {
+                        $attribute_name = $this->xml_parser->localName;
+
+                        if (!isset($assoc->{$name}))
+                        {
+                            $assoc->{$name} = new \stdClass;
+                        }
+
+                        if (is_array($assoc->{$name}))
+                        {
+                            $assoc->{$name}[] = array($attribute_name => $this->xml_parser->value);
+                            continue;
+                        }
+
+                        if (!isset($assoc->{$name}->{$attribute_name}) && is_object($assoc->{$name}))
+                        {
+                            $assoc->{$name}->{$attribute_name} = new \stdClass;
+                            $assoc->{$name}->{$attribute_name} = $this->xml_parser->value;
+                            continue;
+                        }
+                        elseif (isset($assoc->{$name}->{$attribute_name}) && !is_array($assoc->{$name}->{$attribute_name}))
+                        {
+                            $first_elm = $assoc->{$name}->{$attribute_name};
+                            $assoc->{$name} = array();
+                            $assoc->{$name}[] = $first_elm;
+                            $assoc->{$name}[] = array($attribute_name => $this->xml_parser->value);
+                        }
+                    }
+                }
+            }
+            elseif ($this->xml_parser->nodeType == XMLReader::TEXT)
+            {
+                $assoc = $this->xml_parser->value;
+            }
+        }
+
+        if (isset($assoc->MimeContent) && isset($assoc->ItemId->Id) && is_callable($this->cache_name_callback[0]))
+        {
+            $file_path = $this->cache_name_callback[0](basename(str_replace('/', '', $assoc->ItemId->Id)));
+            $cache_handle = fopen($file_path, 'w');
+            fwrite($cache_handle, base64_decode($assoc->MimeContent));
+            fclose($cache_handle);
+            $assoc->MimeContent = $file_path;
+        }
+
+        return $assoc;
     }
 }

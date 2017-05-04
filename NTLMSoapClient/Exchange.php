@@ -71,4 +71,14 @@ class NTLMSoapClient_Exchange extends NTLMSoapClient
     {
         return curl_getinfo($this->ch, CURLINFO_HTTP_CODE);
     }
+
+    /**
+     * Close the curl resource handler.
+     *
+     * @return void
+     */
+    public function closeConnection()
+    {
+        curl_close($this->ch);
+    }
 }
