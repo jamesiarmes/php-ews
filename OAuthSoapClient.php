@@ -42,20 +42,25 @@ class OAuthSoapClient extends SoapClient
      */
     protected $file_handler;
 
-    protected $write_to_file;
     /**
-     * cURL resource used to make the SOAP request
-     *
-     * @var resource
+     * @var bool Write to file flag
+     */
+    protected $write_to_file;
+
+    /**
+     * @var resource cURL resource used to make the SOAP request
      */
     protected $ch;
 
     /**
-     * Whether or not to validate ssl certificates
-     *
-     * @var boolean
+     * @var boolean Whether or not to validate ssl certificates
      */
     protected $validate = false;
+
+    /**
+     * @var string User agent string to attach to the requests
+     */
+    protected $user_agent = 'barracuda-php-ews-LSdbnCFJzf';
 
     /**
      * Performs a SOAP request
@@ -78,9 +83,11 @@ class OAuthSoapClient extends SoapClient
         $headers = array(
             'Method: POST',
             'Connection: Keep-Alive',
-            'User-Agent: PHP-SOAP-CURL',
+            'User-Agent: ' . $this->user_agent,
+            'client-request-id: ' . $this->generateClientRequestId(),
+            'return-client-request-id: ' . true,
             'Content-Type: text/xml; charset=utf-8',
-            'SOAPAction: "'.$action.'"',
+            'SOAPAction: "' . $action . '"',
             'Authorization: Bearer ' . $this->access_token
         );
 
@@ -170,6 +177,21 @@ class OAuthSoapClient extends SoapClient
         }
 
         return $xml;
+    }
+
+    /**
+     * Generate a guid for the client request.
+     *
+     * @return string The guid to use for the request.
+     */
+    public function generateClientRequestId()
+    {
+        $rand_string = md5(uniqid(mt_rand(), true));
+        return substr($rand_string, 0, 8) . '-' .
+            substr($rand_string, 8, 4) . '-' .
+            substr($rand_string, 12, 4) . '-' .
+            substr($rand_string, 16, 4) . '-' .
+            substr($rand_string, 20);
     }
 
     /**
