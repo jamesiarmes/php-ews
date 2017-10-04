@@ -9,12 +9,11 @@
       "email": "jamesiarmes@gmail.com"
     }
   ],
-  "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
     "php": ">=5.3.9",
     "ext-soap": "*",
-    "jamesiarmes/php-ntlm": "~1.0.0"
+    "jamesiarmes/php-ntlm": "~1.0"
   },
   "require-dev": {
     "mustache/mustache": "~2.0"
