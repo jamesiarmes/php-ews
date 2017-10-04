@@ -17,7 +17,7 @@ google:
     tracking-id: "UA-3412924-3" #paste your tracking id here
 
 baseurl: "/php-ews" # the subpath of your site, e.g. /blog
-url: "http://jamesiarmes.github.io/php-ews" # the base hostname & protocol for your site
+url: "http://jamesarmes.com" # the base hostname & protocol for your site
 twitter_username: jamesiarmes
 github_username:  jamesiarmes
 
