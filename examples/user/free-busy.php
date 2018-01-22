@@ -52,7 +52,7 @@ $request->FreeBusyViewOptions->RequestedView = FreeBusyViewType::DETAILED;
 // Add the user to get availability for.
 $mailbox = new MailboxData();
 $mailbox->Email = new EmailAddressType();
-$mailbox->Email->Address = $username;
+$mailbox->Email->Address = $email;
 $mailbox->Email->RoutingType = 'SMTP';
 $mailbox->AttendeeType = 'Required';
 $mailbox->ExcludeConflicts = false;
@@ -90,4 +90,9 @@ foreach ($response->FreeBusyResponseArray->FreeBusyResponse as $availability) {
             . $end_time->format('H:i') . "\n";
         fwrite(STDOUT, $output);
     }
+
+    // Just dump the array for $email user as an example
+        $freebusy_user = $availability->FreeBusyView->CalendarEventArray;
+        print_r ($freebusy_user);
+
 }
