@@ -32,7 +32,7 @@ handle autoloading of classes.
 ```json
 {
     "require": {
-        "php-ews/php-ews": "dev-master"
+        "php-ews/php-ews": "~1.0"
     }
 }
 ```

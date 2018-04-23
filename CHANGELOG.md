@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## 1.0.0 - 2017-10-03
+
+First stable release.
+
+### Changed
+- Updated minimum required version of php-ntlm.
+
 ## 1.0.0-rc.2 - 2017-03-11
 
 ### Changed
