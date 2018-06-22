@@ -118,7 +118,7 @@ foreach ($response_messages as $response_message) {
         $attachments = $attachment_response_message->Attachments
             ->FileAttachment;
         foreach ($attachments as $attachment) {
-            $path = "$file_destination/" . $attachment->Name;
+            $path = $file_destination . '/' . str_replace(['/','\\',chr(0)], '', $attachment->Name);
             file_put_contents($path, $attachment->Content);
             fwrite(STDOUT, "Created attachment $path\n");
         }
