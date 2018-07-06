@@ -12,5 +12,25 @@ namespace jamesiarmes\PhpEws\Type;
  */
 class MeetingResponseMessageType extends MeetingMessageType
 {
+    /**
+     * Indicates the date and time of a proposed start for the meeting.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $ProposedStart;
 
+    /**
+     * Indicates the date and time of a proposed end for the meeting.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     *
+     * @todo Make a DateTime object.
+     */
+    public $ProposedEnd;
 }
