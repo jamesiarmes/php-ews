@@ -155,6 +155,11 @@ class ExchangeWebServices
     protected $file_output;
 
     /**
+     * @var bool Whether or not to get response headers
+     */
+    protected $enable_response_headers = false;
+
+	/**
      * Constructor for the ExchangeWebServices class
      *
      * @param string $server
@@ -1424,6 +1429,7 @@ class ExchangeWebServices
                 break;
         }
 
+        $this->soap->setEnableResponseHeaders($this->enable_response_headers);
         return $this->soap;
     }
 
@@ -1627,7 +1633,7 @@ class ExchangeWebServices
      */
     public function setEnableResponseHeaders($enable_response_headers)
     {
-        return $this->soap->setEnableResponseHeaders($enable_response_headers);
+        $this->enable_response_headers = $enable_response_headers;
     }
 
     /**
@@ -1641,7 +1647,7 @@ class ExchangeWebServices
     }
 
     /**
-     * The response headers of the last call, only if setEnableResponseHeaders(true) called
+     * The response headers of the last call, only if setDownloadResponseHeaders(true) called
      *
      * @return string response headers
      */
