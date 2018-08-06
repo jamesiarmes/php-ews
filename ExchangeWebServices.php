@@ -1641,7 +1641,7 @@ class ExchangeWebServices
     }
 
     /**
-     * The response headers of the last call, only if setDownloadResponseHeaders(true) called
+     * The response headers of the last call, only if setEnableResponseHeaders(true) called
      *
      * @return string response headers
      */
