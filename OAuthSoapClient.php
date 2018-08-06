@@ -63,6 +63,21 @@ class OAuthSoapClient extends SoapClient
     protected $user_agent = 'barracuda-php-ews-LSdbnCFJzf';
 
     /**
+     * @var bool Whether or not to get response headers
+     */
+    protected $enable_response_headers = false;
+
+    /**
+     * @var array The last response headers that were got
+     */
+    protected $__last_request_headers = [];
+
+    /**
+     * @var array If $enable_response_headers true, the last response headers that were got
+     */
+    protected $__last_response_headers = [];
+
+    /**
      * Performs a SOAP request
      *
      * @link http://php.net/manual/en/function.soap-soapclient-dorequest.php
@@ -110,6 +125,11 @@ class OAuthSoapClient extends SoapClient
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
 
         $xml = '';
+
+        if ($this->enable_response_headers)
+        {
+            curl_setopt($this->ch, CURLOPT_HEADERFUNCTION, array($this, 'curlWriteHeader'));
+        }
 
         if ($this->write_to_file)
         {
@@ -195,6 +215,19 @@ class OAuthSoapClient extends SoapClient
     }
 
     /**
+     * Callback for curl write response headers, only called if $get_response_headers is true
+     *
+     * @param resource $curl_handle The curl handle.
+     * @param string   $data        The data received from the curl.
+     * @return int     $length      The number of bytes received/processed by the curl.
+     */
+    public function curlWriteHeader($curl_handle, $data)
+    {
+        $this->__last_response_headers[] = trim($data);
+        return strlen($data);
+    }
+
+    /**
      * Callback for curl write function. This is used to sanitize invalid input received from microsoft.
      *
      * @param resource $curl_handle The curl handle.
@@ -244,7 +277,19 @@ class OAuthSoapClient extends SoapClient
      */
     public function __getLastRequestHeaders()
     {
-        return implode('n', $this->__last_request_headers) . "\n";
+        return implode("\n", $this->__last_request_headers) . "\n";
+    }
+
+    /**
+     * Returns last SOAP response headers
+     *
+     * @link http://php.net/manual/en/soapclient.getlastresponseheaders.php
+     *
+     * @return string the last soap response headers
+     */
+    public function __getLastResponseHeaders()
+    {
+        return implode("\n", $this->__last_response_headers) . "\n";
     }
 
     /**
@@ -258,5 +303,15 @@ class OAuthSoapClient extends SoapClient
         $this->validate = $validate;
 
         return true;
+    }
+
+    /**
+     * Sets whether to download response headers. If set, call __getLastResponseHeaders() to get them
+     *
+     * @param bool $enable_response_headers
+     */
+    public function setEnableResponseHeaders($enable_response_headers)
+    {
+        $this->enable_response_headers = $enable_response_headers;
     }
 }

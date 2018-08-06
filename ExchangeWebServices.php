@@ -1618,4 +1618,35 @@ class ExchangeWebServices
 
         return $assoc;
     }
+
+    /**
+     * Sets whether to get response headers during a call.
+     * Set this before the call, then after the call, call getResponseHeaders() to get them.
+     *
+     * @param bool $enable_response_headers
+     */
+    public function setEnableResponseHeaders($enable_response_headers)
+    {
+        return $this->soap->setEnableResponseHeaders($enable_response_headers);
+    }
+
+    /**
+     * The request headers of the last call
+     *
+     * @return string Request headers
+     */
+    public function getRequestHeaders()
+    {
+        return $this->soap->__getLastRequestHeaders();
+    }
+
+    /**
+     * The response headers of the last call, only if setDownloadResponseHeaders(true) called
+     *
+     * @return string response headers
+     */
+    public function getResponseHeaders()
+    {
+        return $this->soap->__getLastResponseHeaders();
+    }
 }
