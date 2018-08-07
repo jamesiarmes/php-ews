@@ -60,7 +60,7 @@ class OAuthSoapClient extends SoapClient
     /**
      * @var string User agent string to attach to the requests
      */
-    protected $user_agent = 'barracuda-php-ews-LSdbnCFJzf';
+    protected $user_agent = 'github-php-ews-generic';
 
     /**
      * @var bool Whether or not to get response headers
@@ -313,5 +313,15 @@ class OAuthSoapClient extends SoapClient
     public function setEnableResponseHeaders($enable_response_headers)
     {
         $this->enable_response_headers = $enable_response_headers;
+    }
+
+    /**
+     * Set the user agent to be used for calls
+     *
+     * @param string $user_agent The user agent to be used for calls
+     */
+    public function setUserAgent($user_agent)
+    {
+        $this->user_agent = $user_agent;
     }
 }

@@ -159,6 +159,11 @@ class ExchangeWebServices
      */
     protected $enable_response_headers = false;
 
+    /**
+     * @var string User agent string to attach to the requests
+     */
+    protected $user_agent = 'github-php-ews-generic';
+
 	/**
      * Constructor for the ExchangeWebServices class
      *
@@ -1430,6 +1435,7 @@ class ExchangeWebServices
         }
 
         $this->soap->setEnableResponseHeaders($this->enable_response_headers);
+        $this->soap->setUserAgent($this->user_agent);
         return $this->soap;
     }
 
@@ -1654,5 +1660,15 @@ class ExchangeWebServices
     public function getResponseHeaders()
     {
         return $this->soap->__getLastResponseHeaders();
+    }
+
+    /**
+     * Set the user agent to be used for calls
+     *
+     * @param string $user_agent The user agent to be used for calls
+     */
+    public function setUserAgent($user_agent)
+    {
+        $this->user_agent = $user_agent;
     }
 }
