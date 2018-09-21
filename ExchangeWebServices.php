@@ -164,7 +164,17 @@ class ExchangeWebServices
      */
     protected $user_agent = 'github-php-ews-generic';
 
-	/**
+    /**
+     * @var int The timeout in seconds waiting for a connection, or -1 to not set a connection timeout
+     */
+    protected $connection_timeout = -1;
+
+    /**
+     * @var int The timeout in seconds waiting for a response
+     */
+    protected $response_timeout = 300;
+
+     /**
      * Constructor for the ExchangeWebServices class
      *
      * @param string $server
@@ -1436,6 +1446,7 @@ class ExchangeWebServices
 
         $this->soap->setEnableResponseHeaders($this->enable_response_headers);
         $this->soap->setUserAgent($this->user_agent);
+        $this->soap->setTimeouts($this->connection_timeout, $this->response_timeout);
         return $this->soap;
     }
 
@@ -1670,5 +1681,17 @@ class ExchangeWebServices
     public function setUserAgent($user_agent)
     {
         $this->user_agent = $user_agent;
+    }
+
+    /**
+     * Set the timeouts used for the connection
+     *
+     * @param int $connection_timeout The timeout in seconds waiting for a connection, or -1 to not set a connection timeout
+     * @param int $response_timeout The timeout in seconds waiting for a response
+     */
+    public function setTimeouts($connection_timeout, $response_timeout)
+    {
+        $this->connection_timeout = $connection_timeout;
+        $this->response_timeout = $response_timeout;
     }
 }

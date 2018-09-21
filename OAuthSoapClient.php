@@ -78,6 +78,16 @@ class OAuthSoapClient extends SoapClient
     protected $__last_response_headers = [];
 
     /**
+     * @var int The timeout in seconds waiting for a connection, or -1 to not set a connection timeout
+     */
+    protected $connection_timeout = -1;
+
+    /**
+     * @var int The timeout in seconds waiting for a response
+     */
+    protected $response_timeout = 300;
+
+    /**
      * Performs a SOAP request
      *
      * @link http://php.net/manual/en/function.soap-soapclient-dorequest.php
@@ -115,7 +125,11 @@ class OAuthSoapClient extends SoapClient
         $this->__last_request_headers = $headers;
         $this->ch = curl_init($location);
 
-        curl_setopt($this->ch, CURLOPT_TIMEOUT, 300);
+        if ($this->connection_timeout != -1)
+        {
+            curl_setopt($this->ch, CURLOPT_CONNECTTIMEOUT, $this->connection_timeout);
+        }
+        curl_setopt($this->ch, CURLOPT_TIMEOUT, $this->response_timeout);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $this->validate);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, $this->validate);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
@@ -323,5 +337,17 @@ class OAuthSoapClient extends SoapClient
     public function setUserAgent($user_agent)
     {
         $this->user_agent = $user_agent;
+    }
+
+    /**
+     * Set the timeouts used for the connection
+     *
+     * @param int $connection_timeout The timeout in seconds waiting for a connection, or -1 to not set a connection timeout
+     * @param int $response_timeout The timeout in seconds waiting for a response
+     */
+    public function setTimeouts($connection_timeout, $response_timeout)
+    {
+        $this->connection_timeout = $connection_timeout;
+        $this->response_timeout = $response_timeout;
     }
 }
