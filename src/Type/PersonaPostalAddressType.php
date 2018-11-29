@@ -128,13 +128,13 @@ class PersonaPostalAddressType extends Type
     public $PostalCode;
 
     /**
-	 * Represents the state of residence for a contact item.
-	 *
-	 * @since Exchange 2013
-	 *
-	 * @var string
-	 */
-	public $State;
+     * Represents the state of residence for a contact item.
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    public $State;
 
     /**
      * Represents a street address for a contact item.
@@ -146,13 +146,13 @@ class PersonaPostalAddressType extends Type
     public $Street;
 
     /**
-	 * Specifies the type of postal address or phone number.
+     * Specifies the type of postal address or phone number.
      *
      * For example, "Home" or "Business".
-	 *
-	 * @since Exchange 2013
-	 *
-	 * @var string
-	 */
-	public $Type;
+     *
+     * @since Exchange 2013
+     *
+     * @var string
+     */
+    public $Type;
 }

@@ -60,8 +60,7 @@ foreach ($response_messages as $response_message) {
     }
 
     // Iterate over the created folders.
-    foreach ($response_message->Folders->CalendarFolder as $folder)
-    {
+    foreach ($response_message->Folders->CalendarFolder as $folder) {
         $id = $folder->FolderId->Id;
         fwrite(STDOUT, "Created folder $id\n");
     }

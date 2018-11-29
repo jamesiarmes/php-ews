@@ -49,13 +49,13 @@ class FindPeopleType extends BaseRequestType
     public $ParentFolderId;
 
     /**
-	 * Specifies the set of persona properties.
+     * Specifies the set of persona properties.
      *
-	 * @since Exchange 2013
-	 *
-	 * @var \jamesiarmes\PhpEws\Type\PersonaResponseShapeType
-	 */
-	public $PersonaShape;
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\PersonaResponseShapeType
+     */
+    public $PersonaShape;
 
     /**
      * Specifies the source data for the query.
@@ -76,13 +76,13 @@ class FindPeopleType extends BaseRequestType
     public $QueryString;
 
     /**
-	 * Represents the restriction or query that is used to filter items.
-	 *
-	 * @since Exchange 2013
-	 *
-	 * @var \jamesiarmes\PhpEws\Type\RestrictionType
-	 */
-	public $Restriction;
+     * Represents the restriction or query that is used to filter items.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\Type\RestrictionType
+     */
+    public $Restriction;
 
     /**
      * Internal use only.
@@ -94,13 +94,13 @@ class FindPeopleType extends BaseRequestType
     public $SearchPeopleSuggestionIndex;
 
     /**
-	 * Defines how items are sorted.
-	 *
-	 * @since Exchange 2013
-	 *
-	 * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFieldOrdersType
-	 */
-	public $SortOrder;
+     * Defines how items are sorted.
+     *
+     * @since Exchange 2013
+     *
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfFieldOrdersType
+     */
+    public $SortOrder;
 
     /**
      * Specifies the query string for topic searches.

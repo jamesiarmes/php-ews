@@ -16,7 +16,8 @@
     "jamesiarmes/php-ntlm": "~1.0"
   },
   "require-dev": {
-    "mustache/mustache": "~2.0"
+    "mustache/mustache": "~2.0",
+    "squizlabs/php_codesniffer": "*"
   },
   "config": {
     "bin-dir": "bin"

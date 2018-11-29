@@ -32,7 +32,7 @@ foreach (array('ArrayType', 'Request', 'Response', 'Type') as $namespace) {
         // If there is an override for this class, rename the base name to
         // match.
         $classname = $basename = basename($file, '.php');
-        if (isset($overrides["$namespace\\\\$basename"]))  {
+        if (isset($overrides["$namespace\\\\$basename"])) {
             $basename = $overrides["$namespace\\\\$basename"];
         }
 

@@ -38,12 +38,12 @@ $client->setTimezone($timezone);
 $request = new SyncFolderItemsType();
 $request->SyncState = $sync_state;
 $request->MaxChangesReturned = 512;
-$request->ItemShape = new ItemResponseShapeType;
+$request->ItemShape = new ItemResponseShapeType();
 $request->ItemShape->BaseShape = DefaultShapeNamesType::ALL_PROPERTIES;
-$request->SyncFolderId = new TargetFolderIdType;
+$request->SyncFolderId = new TargetFolderIdType();
 
 // Set the folder to sync events from.
-$folder = new DistinguishedFolderIdType;
+$folder = new DistinguishedFolderIdType();
 $folder->Id = DistinguishedFolderIdNameType::CALENDAR;
 $request->SyncFolderId->DistinguishedFolderId = $folder;
 

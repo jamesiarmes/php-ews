@@ -361,10 +361,8 @@ class Autodiscover
 
         // Pick out the host from the EXPR (Exchange RPC over HTTP).
         foreach ($this->discovered['Account']['Protocol'] as $protocol) {
-            if (
-                ($protocol['Type'] == 'EXCH' || $protocol['Type'] == 'EXPR')
-                && isset($protocol['ServerVersion'])
-            ) {
+            if (($protocol['Type'] == 'EXCH' || $protocol['Type'] == 'EXPR')
+                && isset($protocol['ServerVersion'])) {
                 if ($version === null) {
                     $sv = $this->parseServerVersion($protocol['ServerVersion']);
                     if ($sv !== false) {
@@ -468,10 +466,8 @@ class Autodiscover
         $this->last_curl_errno  = curl_errno($ch);
         $this->last_curl_error  = curl_error($ch);
 
-        if (
-            $this->last_info['http_code'] == 302
-            || $this->last_info['http_code'] == 301
-        ) {
+        if ($this->last_info['http_code'] == 302
+            || $this->last_info['http_code'] == 301) {
             if ($this->tryViaUrl($this->last_response_headers['location'])) {
                 return self::AUTODISCOVERED_VIA_UNAUTHENTICATED_GET;
             }
@@ -824,7 +820,8 @@ class Autodiscover
      *   Minor server version.
      * @return string Server version.
      */
-    protected function parseVersion2007($minorversion) {
+    protected function parseVersion2007($minorversion)
+    {
         switch ($minorversion) {
             case 0:
                 return Client::VERSION_2007;
@@ -844,7 +841,8 @@ class Autodiscover
      *   Minor server version.
      * @return string Server version.
      */
-    protected function parseVersion2010($minorversion) {
+    protected function parseVersion2010($minorversion)
+    {
         switch ($minorversion) {
             case 0:
                 return Client::VERSION_2010;
@@ -864,7 +862,8 @@ class Autodiscover
      *   Major build version.
      * @return string Server version.
      */
-    protected function parseVersion2013($majorbuild) {
+    protected function parseVersion2013($majorbuild)
+    {
         return ($majorbuild == 847
             ? Client::VERSION_2013_SP1
             : Client::VERSION_2013);
@@ -875,7 +874,8 @@ class Autodiscover
      *
      * @return string Server version.
      */
-    protected function parseVersion2016() {
+    protected function parseVersion2016()
+    {
         return Client::VERSION_2016;
     }
 

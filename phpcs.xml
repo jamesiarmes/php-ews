@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ruleset name="PHP EWS">
+    <description>
+        Coding standard for the PHP EWS library that is based on the PHPCS sniff
+        with some changes to keep consistency with the Exchange Web Services
+        API.
+    </description>
+
+    <rule ref="PSR1">
+        <!-- EWS uses StudlyCaps for operation and element names. -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+    </rule>
+    <rule ref="PSR2">
+        <!-- Some classes use $_ as a valid property name. -->
+        <exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <properties>
+            <property name="lineLimit" value="80" />
+            <property name="absoluteLineLimit" value="120" />
+        </properties>
+
+        <!-- This is an auto-generated file, allow long lines. -->
+        <exclude-pattern>src/ClassMap.php</exclude-pattern>
+        <!-- There are sample ids in the examples that may exceed the limit. -->
+        <exclude-pattern>examples/*</exclude-pattern>
+    </rule>
+</ruleset>
