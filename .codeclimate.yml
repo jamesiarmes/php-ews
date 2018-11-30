@@ -1,4 +1,10 @@
 plugins:
+  editorconfig:
+    enabled: true
+    exclude_patterns:
+      - "examples/assets/*"
+      - "src/assets/*"
+      - "templates/*"
   phpcodesniffer:
     enabled: true
     config:

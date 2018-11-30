@@ -14,10 +14,10 @@ required to form a request.
 Dependencies
 ------------
 
- * Composer
- * PHP 5.4 or greater
- * cURL with NTLM support (7.30.0+ recommended)
- * Exchange 2007 or later
+* Composer
+* PHP 5.4 or greater
+* cURL with NTLM support (7.30.0+ recommended)
+* Exchange 2007 or later
 
 **Note: Not all operations or request elements are supported on all versions of
 Exchange.**
@@ -50,18 +50,18 @@ $ews = new Client($server, $username, $password, $version);
 
 The `Client` class takes four parameters for its constructor:
 
- * `$server`: The url to the exchange server you wish to connect to, without
- the protocol. Example: mail.example.com. If you have trouble determining the
- correct url, you could try using the
- [`\jamesiarmes\PhpEws\Autodiscover`](https://github.com/jamesiarmes/php-ews/wiki/Autodiscovery)
- class.
- * `$username`: The user to connect to the server with. This is usually the
- local portion of the users email address. Example: "user" if the email address
- is "user@example.com".
- * `$password`: The user's plain-text password.
- * `$version` (optional): The version of the Exchange sever to connect to. Valid
- values can be found at `\jamesiarmes\PhpEws\Client::VERSION_*`. Defaults to
- Exchange 2007.
+* `$server`: The url to the exchange server you wish to connect to, without
+the protocol. Example: mail.example.com. If you have trouble determining the
+correct url, you could try using the
+[`\jamesiarmes\PhpEws\Autodiscover`](https://github.com/jamesiarmes/php-ews/wiki/Autodiscovery)
+class.
+* `$username`: The user to connect to the server with. This is usually the
+local portion of the users email address. Example: "user" if the email address
+is "user@example.com".
+* `$password`: The user's plain-text password.
+* `$version` (optional): The version of the Exchange sever to connect to. Valid
+values can be found at `\jamesiarmes\PhpEws\Client::VERSION_*`. Defaults to
+Exchange 2007.
 
 Once you have your `\jamesiarmes\PhpEws\Client` object, you need to build your
 request object. The type of object depends on the operation you are calling. If
