@@ -17,7 +17,8 @@
   },
   "require-dev": {
     "mustache/mustache": "~2.0",
-    "squizlabs/php_codesniffer": "*"
+    "squizlabs/php_codesniffer": "*",
+    "phpmd/phpmd" : "@stable"
   },
   "config": {
     "bin-dir": "bin"

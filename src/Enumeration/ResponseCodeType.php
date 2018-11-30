@@ -11,6 +11,8 @@ use \jamesiarmes\PhpEws\Enumeration;
  * Provides status information about a request.
  *
  * @package php-ews\Enumeration
+ *
+ * @SuppressWarnings(PHPMD.ExcessiveClassLength)
  */
 class ResponseCodeType extends Enumeration
 {

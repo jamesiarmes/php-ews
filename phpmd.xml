@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ruleset name="PHP EWS">
+    <description>
+        Custom Mess Detector ruleset for PHP EWS that only runs rules that are
+        appropriate based on this library's design to be as consistent with
+        Exchange Web Services API as possible.
+    </description>
+
+    <rule ref="rulesets/cleancode.xml"/>
+    <rule ref="rulesets/unusedcode.xml"/>
+
+    <rule ref="rulesets/codesize.xml">
+        <!-- Classes can have many pubic fields (properties) and methods. -->
+        <exclude name="ExcessivePublicCount"/>
+        <exclude name="TooManyFields"/>
+        <exclude name="TooManyPublicMethods"/>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml">
+        <!-- Operation and element names don't follow these rules. -->
+        <exclude name="CamelCaseMethodName"/>
+        <exclude name="CamelCaseParameterName"/>
+        <exclude name="CamelCasePropertyName"/>
+        <exclude name="CamelCaseVariableName"/>
+    </rule>
+
+    <rule ref="rulesets/design.xml">
+        <!-- Type inheritance matches that defined in the schema and may violate
+             these. -->
+        <exclude name="CouplingBetweenObjects"/>
+        <exclude name="DepthOfInheritance"/>
+        <exclude name="NumberOfChildren"/>
+    </rule>
+
+    <rule ref="rulesets/naming.xml">
+        <!-- Property names match element names and may be longer. -->
+        <exclude name="LongVariable"/>
+        <!-- We need to allow some exceptions for short variables, so exclude it
+             here. -->
+        <exclude name="ShortVariable"/>
+    </rule>
+
+    <!-- Re-add the short variable rule but add exceptions for valid
+         properties. -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <priority>1</priority>
+        <properties>
+            <property name="exceptions" value="_,ch,Id,ID,Or,To" />
+        </properties>
+    </rule>
+</ruleset>

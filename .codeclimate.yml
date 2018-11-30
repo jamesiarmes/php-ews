@@ -4,3 +4,7 @@ plugins:
     config:
       file_extensions: "php"
       standard: "phpcs.xml"
+  phpmd:
+    enabled: true
+    config:
+      rulesets: "phpmd.xml"

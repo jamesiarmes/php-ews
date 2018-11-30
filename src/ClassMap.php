@@ -5,7 +5,7 @@
  * This class is generated using the build-classmap.php script. To make changes
  * to this file should be made there or in the ClassMap.mustache template.
  *
- * Last updated on: 2018-11-29 04:03:57 UTC
+ * Last updated on: 2018-11-30 04:32:49 UTC
  */
 
 namespace jamesiarmes\PhpEws;
@@ -17,7 +17,14 @@ namespace jamesiarmes\PhpEws;
  */
 class ClassMap
 {
-    public static function getMap()
+    /**
+     * Returns the PHP EWS class map to be used for processing SOAP calls.
+     *
+     * @return string[]
+     *
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     */
+    public function getMap()
     {
         return array(
             // Map for ArrayType classes.

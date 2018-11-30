@@ -31,6 +31,12 @@ namespace jamesiarmes\PhpEws;
  * @link https://www.testexchangeconnectivity.com/
  *
  * @package php-ews\AutoDiscovery
+ *
+ * @todo This class is quite large; it should be refactored into smaller
+ * classes.
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 class Autodiscover
 {
@@ -225,11 +231,11 @@ class Autodiscover
     {
         $this->email = $email;
         $this->password = $password;
+
         if ($username === null) {
-            $this->username = $email;
-        } else {
-            $this->username = $username;
+            $username = $email;
         }
+        $this->username = $username;
 
         $this->setTLD();
     }
@@ -288,6 +294,8 @@ class Autodiscover
      * @param boolean $skip
      *   Whether or not to skip SSL certificate verification.
      * @return self
+     *
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
      */
     public function skipSSLVerification($skip = true)
     {
@@ -724,6 +732,9 @@ class Autodiscover
      *   Header string to read.
      * @return integer
      *   Bytes read.
+     *
+     * @todo Determine if we can remove $_ch here.
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function readHeaders($_ch, $str)
     {
@@ -774,15 +785,15 @@ class Autodiscover
             case XML_ELEMENT_NODE:
                 for ($i = 0, $m = $node->childNodes->length; $i < $m; $i++) {
                     $child = $node->childNodes->item($i);
-                    $v = $this->nodeToArray($child);
+                    $value = $this->nodeToArray($child);
                     if (isset($child->tagName)) {
-                        $t = $child->tagName;
-                        if (!isset($output[$t])) {
-                            $output[$t] = array();
+                        $tag = $child->tagName;
+                        if (!isset($output[$tag])) {
+                            $output[$tag] = array();
                         }
-                        $output[$t][] = $v;
-                    } elseif ($v || $v === '0') {
-                        $output = (string) $v;
+                        $output[$tag][] = $value;
+                    } elseif ($value || $value === '0') {
+                        $output = (string) $value;
                     }
                 }
 
@@ -795,15 +806,15 @@ class Autodiscover
 
                 if (is_array($output)) {
                     if ($node->attributes->length) {
-                        $a = array();
+                        $attributes = array();
                         foreach ($node->attributes as $attrName => $attrNode) {
-                            $a[$attrName] = (string) $attrNode->value;
+                            $attributes[$attrName] = (string) $attrNode->value;
                         }
-                        $output['@attributes'] = $a;
+                        $output['@attributes'] = $attributes;
                     }
-                    foreach ($output as $t => $v) {
-                        if (is_array($v) && count($v) == 1 && $t != '@attributes') {
-                            $output[$t] = $v[0];
+                    foreach ($output as $tag => $value) {
+                        if (is_array($value) && count($value) == 1 && $tag != '@attributes') {
+                            $output[$tag] = $value[0];
                         }
                     }
                 }

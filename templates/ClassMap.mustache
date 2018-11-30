@@ -17,7 +17,14 @@ namespace jamesiarmes\PhpEws;
  */
 class ClassMap
 {
-    public static function getMap()
+    /**
+     * Returns the PHP EWS class map to be used for processing SOAP calls.
+     *
+     * @return string[]
+     *
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     */
+    public function getMap()
     {
         return array(
           {{#maps}}

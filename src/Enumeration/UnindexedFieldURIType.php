@@ -11,6 +11,8 @@ use \jamesiarmes\PhpEws\Enumeration;
  * Defines frequently referenced properties by URI.
  *
  * @package php-ews\Enumeration
+ *
+ * @SuppressWarnings(PHPMD.ExcessiveClassLength)
  */
 class UnindexedFieldURIType extends Enumeration
 {
