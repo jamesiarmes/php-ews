@@ -4,17 +4,16 @@ Microsoft Exchange version:
 
 Description of problem:
 
-
 Example request:
 
 ```php
-
+// Formatted example request.
 ```
 
 Example response:
 
 ```
-
+// Formatted example response.
 ```
 
 Additional details:
