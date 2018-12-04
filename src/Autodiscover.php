@@ -325,9 +325,9 @@ class Autodiscover
             $svbinary = '0' . $svbinary;
         }
 
-        $majorversion = base_convert(substr($svbinary, 4, 6), 2, 10);
-        $minorversion = base_convert(substr($svbinary, 10, 6), 2, 10);
-        $majorbuild = base_convert(substr($svbinary, 17, 15), 2, 10);
+        $majorversion = (int) base_convert(substr($svbinary, 4, 6), 2, 10);
+        $minorversion = (int) base_convert(substr($svbinary, 10, 6), 2, 10);
+        $majorbuild = (int) base_convert(substr($svbinary, 17, 15), 2, 10);
 
         switch ($majorversion) {
             case 8:
@@ -692,6 +692,8 @@ class Autodiscover
      * Return the generated Autodiscover XML request body.
      *
      * @return string
+     *
+     * @suppress PhanTypeMismatchArgumentInternal
      */
     public function getAutodiscoverRequest()
     {
@@ -773,6 +775,8 @@ class Autodiscover
      * @return mixed
      *
      * @link https://github.com/gaarf/XML-string-to-PHP-array
+     *
+     * @suppress PhanTypeMismatchArgument, PhanUndeclaredProperty
      */
     protected function nodeToArray($node)
     {

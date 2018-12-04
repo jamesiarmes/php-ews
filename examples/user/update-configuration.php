@@ -86,10 +86,10 @@ foreach ($options as $option) {
     $entry =  new UserConfigurationDictionaryEntryType();
     $entry->DictionaryKey = new UserConfigurationDictionaryObjectType();
     $entry->DictionaryKey->Type = UserConfigurationDictionaryObjectTypesType::STRING;
-    $entry->DictionaryKey->Value = $option['name'];
+    $entry->DictionaryKey->Value[] = $option['name'];
     $entry->DictionaryValue = new UserConfigurationDictionaryObjectType();
     $entry->DictionaryValue->Type = $option['type'];
-    $entry->DictionaryValue->Value = $option['value'];
+    $entry->DictionaryValue->Value[] = $option['value'];
     $request->UserConfiguration->Dictionary->DictionaryEntry[] = $entry;
 }
 

@@ -46,7 +46,7 @@ $request->MailboxDataArray = new ArrayOfMailboxData();
 $request->FreeBusyViewOptions->TimeWindow = new Duration();
 $request->FreeBusyViewOptions->TimeWindow->StartTime = $start->format('c');
 $request->FreeBusyViewOptions->TimeWindow->EndTime = $end->format('c');
-$request->FreeBusyViewOptions->MergedFreeBusyIntervalInMinutes = '30';
+$request->FreeBusyViewOptions->MergedFreeBusyIntervalInMinutes = 30;
 $request->FreeBusyViewOptions->RequestedView = FreeBusyViewType::DETAILED;
 
 // Add the user to get availability for.

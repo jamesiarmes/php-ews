@@ -22,7 +22,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $AbsoluteDenominator = array();
 
@@ -32,7 +32,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var boolean
+     * @var boolean[]
      */
     public $IncludesLastItemInRange = array();
 
@@ -42,7 +42,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var string
+     * @var string[]
      */
     public $IndexedPagingOffset = array();
 
@@ -61,7 +61,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $NumeratorOffset = array();
 
@@ -70,7 +70,7 @@ class ArrayOfDLExpansionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $TotalItemsInView = array();
 }

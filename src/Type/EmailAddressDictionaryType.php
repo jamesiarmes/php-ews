@@ -19,7 +19,7 @@ class EmailAddressDictionaryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\EmailAddressDictionaryEntryType
+     * @var \jamesiarmes\PhpEws\Type\EmailAddressDictionaryEntryType[]
      */
     public $Entry;
 }

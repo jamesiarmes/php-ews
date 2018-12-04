@@ -110,9 +110,9 @@ class Client
     protected $server;
 
     /**
-     * SOAP client used to make the request
+     * SOAP client used to make the request.
      *
-     * @var \jamesiarmes\PhpNtlm\SoapClient
+     * @var null|\jamesiarmes\PhpNtlm\SoapClient
      */
     protected $soap;
 
@@ -1642,6 +1642,8 @@ class Client
      *   The request object for the operation.
      * @return \jamesiarmes\PhpEws\Response
      *   The response object for the operation.
+     *
+     * @suppress PhanTypeMismatchReturn
      */
     protected function makeRequest($operation, $request)
     {

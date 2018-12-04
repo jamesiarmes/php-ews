@@ -32,6 +32,6 @@ class ArrayOfStringsType extends ArrayType
      */
     public function __toString()
     {
-        return $this->String;
+        return join(',', $this->String);
     }
 }

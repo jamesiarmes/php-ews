@@ -5,8 +5,6 @@
 
 namespace jamesiarmes\PhpEws\Type;
 
-use \jamesiarmes\PhpEws\Type;
-
 /**
  * Identifies the root item of a deleted item.
  *

@@ -1,3 +1,6 @@
+checks:
+  similar-code:
+    enabled: false
 plugins:
   editorconfig:
     enabled: true
@@ -16,3 +19,5 @@ plugins:
     enabled: true
     config:
       rulesets: "phpmd.xml"
+  phan:
+    enabled: true

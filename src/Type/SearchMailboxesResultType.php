@@ -89,29 +89,29 @@ class SearchMailboxesResultType extends Type
     public $Items;
 
     /**
-     *
+     * Specifies a list of mailboxes that failed on search.
      *
      * @since Exchange 2013
      *
-     * @var
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfFailedSearchMailboxesType
      */
     public $FailedMailboxes;
 
     /**
-     *
+     * Specifies a list of one or more refiners.
      *
      * @since Exchange 2013
      *
-     * @var
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfSearchRefinerItemsType
      */
     public $Refiners;
 
     /**
-     *
+     * Specifies a list of one or more mailbox stats.
      *
      * @since Exchange 2013
      *
-     * @var
+     * @var \jamesiarmes\PhpEws\ArrayType\ArrayOfMailboxStatisticsItemsType
      */
     public $MailboxStats;
 }

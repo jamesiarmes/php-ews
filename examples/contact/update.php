@@ -65,11 +65,11 @@ foreach ($contact_updates as $update) {
         $entry = new EmailAddressDictionaryEntryType();
         $entry->_ = $update['email'];
         $entry->Key = EmailAddressKeyType::EMAIL_ADDRESS_1;
-        $field->Contact->EmailAddresses->Entry = $entry;
+        $field->Contact->EmailAddresses->Entry[] = $entry;
         $change->Updates->SetItemField[] = $field;
     } else {
         $field = new DeleteItemFieldType();
-        $field->IndexedFieldURI = new PathToUnindexedFieldType();
+        $field->IndexedFieldURI = new PathToIndexedFieldType();
         $field->IndexedFieldURI->FieldURI = DictionaryURIType::CONTACTS_EMAIL_ADDRESS;
         $field->IndexedFieldURI->FieldIndex = EmailAddressKeyType::EMAIL_ADDRESS_1;
         $change->Updates->DeleteItemField[] = $field;

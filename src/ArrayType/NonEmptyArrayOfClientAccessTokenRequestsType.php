@@ -19,7 +19,7 @@ class NonEmptyArrayOfClientAccessTokenRequestsType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\ClientAccessTokenRequestType
+     * @var \jamesiarmes\PhpEws\Type\ClientAccessTokenRequestType[]
      */
     public $TokenRequest = array();
 }

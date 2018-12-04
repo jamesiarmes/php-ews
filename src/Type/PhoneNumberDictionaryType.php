@@ -19,7 +19,7 @@ class PhoneNumberDictionaryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\PhoneNumberDictionaryEntryType
+     * @var \jamesiarmes\PhpEws\Type\PhoneNumberDictionaryEntryType[]
      */
     public $Entry;
 }

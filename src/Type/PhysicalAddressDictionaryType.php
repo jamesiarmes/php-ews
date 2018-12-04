@@ -20,7 +20,7 @@ class PhysicalAddressDictionaryType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\PhysicalAddressDictionaryEntryType
+     * @var \jamesiarmes\PhpEws\Type\PhysicalAddressDictionaryEntryType[]
      */
     public $Entry;
 }

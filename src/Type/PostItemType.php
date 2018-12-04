@@ -5,8 +5,6 @@
 
 namespace jamesiarmes\PhpEws\Type;
 
-use \jamesiarmes\PhpEws\Type;
-
 /**
  * Represents a post item in the Exchange store.
  *
