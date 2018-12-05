@@ -22,7 +22,7 @@ class ArrayOfResolutionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $AbsoluteDenominator = array();
 
@@ -32,7 +32,7 @@ class ArrayOfResolutionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var boolean
+     * @var boolean[]
      */
     public $IncludesLastItemInRange = array();
 
@@ -42,7 +42,7 @@ class ArrayOfResolutionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $IndexedPagingOffset = array();
 
@@ -52,7 +52,7 @@ class ArrayOfResolutionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $NumeratorOffset = array();
 
@@ -70,7 +70,7 @@ class ArrayOfResolutionType extends ArrayType
      *
      * @since Exchange 2007
      *
-     * @var integer
+     * @var integer[]
      */
     public $TotalItemsInView = array();
 }

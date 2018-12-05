@@ -1,0 +1,23 @@
+checks:
+  similar-code:
+    enabled: false
+plugins:
+  editorconfig:
+    enabled: true
+    exclude_patterns:
+      - "examples/assets/*"
+      - "src/assets/*"
+      - "templates/*"
+  markdownlint:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php"
+      standard: "phpcs.xml"
+  phpmd:
+    enabled: true
+    config:
+      rulesets: "phpmd.xml"
+  phan:
+    enabled: true

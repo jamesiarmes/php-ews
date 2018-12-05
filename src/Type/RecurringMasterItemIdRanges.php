@@ -5,8 +5,6 @@
 
 namespace jamesiarmes\PhpEws\Type;
 
-use jamesiarmes\PhpEws\Type;
-
 /**
  * Defines an occurrence range.
  *

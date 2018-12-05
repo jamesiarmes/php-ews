@@ -19,7 +19,7 @@ class NonEmptyArrayOfReminderItemActionType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\ReminderItemActionType
+     * @var \jamesiarmes\PhpEws\Type\ReminderItemActionType[]
      */
     public $ReminderItemAction = array();
 }

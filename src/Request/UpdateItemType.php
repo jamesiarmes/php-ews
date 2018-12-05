@@ -31,7 +31,7 @@ class UpdateItemType extends BaseRequestType
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemChangesType
+     * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfItemChangesType[]
      */
     public $ItemChanges;
 

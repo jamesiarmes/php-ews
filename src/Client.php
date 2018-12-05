@@ -11,6 +11,10 @@ use \jamesiarmes\PhpNtlm\SoapClient;
  * Base class of the Exchange Web Services application.
  *
  * @package php-ews\Client
+ *
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassLength)
+ * @SuppressWarnings(PHPMD.TooManyMethods)
  */
 class Client
 {
@@ -106,9 +110,9 @@ class Client
     protected $server;
 
     /**
-     * SOAP client used to make the request
+     * SOAP client used to make the request.
      *
-     * @var \jamesiarmes\PhpNtlm\SoapClient
+     * @var null|\jamesiarmes\PhpNtlm\SoapClient
      */
     protected $soap;
 
@@ -1606,13 +1610,27 @@ class Client
                 'user' => $this->username,
                 'password' => $this->password,
                 'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-                'classmap' => ClassMap::getMap(),
+                'classmap' => $this->classMap(),
                 'curlopts' => $this->curl_options,
                 'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
             )
         );
 
         return $this->soap;
+    }
+
+    /**
+     * The class map used to process SOAP requests and responses.
+     *
+     * @return string[]
+     *
+     * @see \jamesiarmes\PhpEws\ClassMap::getMap()
+     */
+    protected function classMap()
+    {
+        $class_map = new ClassMap();
+
+        return $class_map->getMap();
     }
 
     /**
@@ -1624,6 +1642,8 @@ class Client
      *   The request object for the operation.
      * @return \jamesiarmes\PhpEws\Response
      *   The response object for the operation.
+     *
+     * @suppress PhanTypeMismatchReturn
      */
     protected function makeRequest($operation, $request)
     {

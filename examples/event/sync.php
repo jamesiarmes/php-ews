@@ -38,12 +38,12 @@ $client->setTimezone($timezone);
 $request = new SyncFolderItemsType();
 $request->SyncState = $sync_state;
 $request->MaxChangesReturned = 512;
-$request->ItemShape = new ItemResponseShapeType;
+$request->ItemShape = new ItemResponseShapeType();
 $request->ItemShape->BaseShape = DefaultShapeNamesType::ALL_PROPERTIES;
-$request->SyncFolderId = new TargetFolderIdType;
+$request->SyncFolderId = new TargetFolderIdType();
 
 // Set the folder to sync events from.
-$folder = new DistinguishedFolderIdType;
+$folder = new DistinguishedFolderIdType();
 $folder->Id = DistinguishedFolderIdNameType::CALENDAR;
 $request->SyncFolderId->DistinguishedFolderId = $folder;
 
@@ -76,9 +76,8 @@ foreach ($response_messages as $response_message) {
     // Iterate over all events that have been read.
     fwrite(STDOUT, "\nThe following events have been read:\n");
     foreach ($response_message->Changes->ReadFlagChange as $change) {
-        $id = $change->CalendarItem->ItemId->Id;
-        $title = $change->CalendarItem->Subject;
-        fwrite(STDOUT, "- $title: $id\n");
+        $id = $change->ItemId->Id;
+        fwrite(STDOUT, "- $id\n");
     }
 
     // Iterate over all events that have been updated.
@@ -92,8 +91,7 @@ foreach ($response_messages as $response_message) {
     // Iterate over all events that have been deleted.
     fwrite(STDOUT, "\nThe following events have been deleted:\n");
     foreach ($response_message->Changes->Delete as $change) {
-        $id = $change->CalendarItem->ItemId->Id;
-        $title = $change->CalendarItem->Subject;
-        fwrite(STDOUT, "- $title: $id\n");
+        $id = $change->ItemId->Id;
+        fwrite(STDOUT, "- $id\n");
     }
 }

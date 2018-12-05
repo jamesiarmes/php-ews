@@ -15,6 +15,38 @@ use \jamesiarmes\PhpEws\Enumeration\UserConfigurationPropertyType;
 use \jamesiarmes\PhpEws\Type\DistinguishedFolderIdType;
 use \jamesiarmes\PhpEws\Type\UserConfigurationNameType;
 
+// Define the index for background and text colors for each category. You'd
+// probably want to do this in a method somewhere, but PHP CS complains about it
+// if we define a function here.
+$colors = array(
+    -1 => array('background' => 'FFFFFF', 'text' => 'black'),
+    0 => array('background' => 'D6252E', 'text' => 'black'),
+    1 => array('background' => 'F06C15', 'text' => 'black'),
+    2 => array('background' => 'FFCA4C', 'text' => 'black'),
+    3 => array('background' => 'FFFE3D', 'text' => 'black'),
+    4 => array('background' => '4AB63F', 'text' => 'black'),
+    5 => array('background' => '40BD95', 'text' => 'black'),
+    6 => array('background' => '859A52', 'text' => 'black'),
+    7 => array('background' => '3267B8', 'text' => 'black'),
+    8 => array('background' => '613DB4', 'text' => 'black'),
+    9 => array('background' => 'A34E78', 'text' => 'black'),
+    10 => array('background' => 'C4CCDD', 'text' => 'black'),
+    11 => array('background' => '8C9CBD', 'text' => 'black'),
+    12 => array('background' => 'C4C4C4', 'text' => 'black'),
+    13 => array('background' => 'A5A5A5', 'text' => 'black'),
+    14 => array('background' => '1C1C1C', 'text' => 'white'),
+    15 => array('background' => 'AF1E25', 'text' => 'white'),
+    16 => array('background' => 'B14F0D', 'text' => 'white'),
+    17 => array('background' => 'AB7B05', 'text' => 'white'),
+    18 => array('background' => '999400', 'text' => 'black'),
+    19 => array('background' => '35792B', 'text' => 'black'),
+    20 => array('background' => '2E7D64', 'text' => 'black'),
+    21 => array('background' => '5F6C3A', 'text' => 'black'),
+    22 => array('background' => '2A5191', 'text' => 'white'),
+    23 => array('background' => '50328F', 'text' => 'white'),
+    24 => array('background' => '82375F', 'text' => 'white'),
+);
+
 // Set connection information.
 $host = '';
 $username = '';
@@ -63,53 +95,11 @@ foreach ($response_messages as $response_message) {
     // Iterate over the children of the data, which would be the actual
     // categories.
     foreach ($data->children() as $child) {
-        $colors = getColors((Integer) $child['color']);
+        $category_colors = $colors[(int) $child['color']];
 
         $output = $child['name'] . "\n"
-            . '- Background: ' . $colors['background'] . "\n"
-            . '- Text:       ' . $colors['text'] . "\n\n";
+            . '- Background: ' . $category_colors['background'] . "\n"
+            . '- Text:       ' . $category_colors['text'] . "\n\n";
         fwrite(STDOUT, $output);
     }
-}
-
-/**
- * Returns the background and text colors for a category color index.
- *
- * @param integer $index
- *   Color index to get the details for.
- * @return array
- *   The background and text colors corresponding to the index.
- */
-function getColors($index)
-{
-    $colors = array(
-        -1 => array('background' => 'FFFFFF', 'text' => 'black'),
-        0 => array('background' => 'D6252E', 'text' => 'black'),
-        1 => array('background' => 'F06C15', 'text' => 'black'),
-        2 => array('background' => 'FFCA4C', 'text' => 'black'),
-        3 => array('background' => 'FFFE3D', 'text' => 'black'),
-        4 => array('background' => '4AB63F', 'text' => 'black'),
-        5 => array('background' => '40BD95', 'text' => 'black'),
-        6 => array('background' => '859A52', 'text' => 'black'),
-        7 => array('background' => '3267B8', 'text' => 'black'),
-        8 => array('background' => '613DB4', 'text' => 'black'),
-        9 => array('background' => 'A34E78', 'text' => 'black'),
-        10 => array('background' => 'C4CCDD', 'text' => 'black'),
-        11 => array('background' => '8C9CBD', 'text' => 'black'),
-        12 => array('background' => 'C4C4C4', 'text' => 'black'),
-        13 => array('background' => 'A5A5A5', 'text' => 'black'),
-        14 => array('background' => '1C1C1C', 'text' => 'white'),
-        15 => array('background' => 'AF1E25', 'text' => 'white'),
-        16 => array('background' => 'B14F0D', 'text' => 'white'),
-        17 => array('background' => 'AB7B05', 'text' => 'white'),
-        18 => array('background' => '999400', 'text' => 'black'),
-        19 => array('background' => '35792B', 'text' => 'black'),
-        20 => array('background' => '2E7D64', 'text' => 'black'),
-        21 => array('background' => '5F6C3A', 'text' => 'black'),
-        22 => array('background' => '2A5191', 'text' => 'white'),
-        23 => array('background' => '50328F', 'text' => 'white'),
-        24 => array('background' => '82375F', 'text' => 'white'),
-    );
-
-    return $colors[$index];
 }

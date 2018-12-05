@@ -85,7 +85,7 @@ foreach ($response_messages as $response_message) {
     // Iterate over the found folders.
     foreach ($folders as $folder) {
         $name = $folder->DisplayName;
-        $id = $folder->FolderId->Id;;
+        $id = $folder->FolderId->Id;
         fwrite(STDOUT, "Found folder \"$name\": $id\n");
     }
 }

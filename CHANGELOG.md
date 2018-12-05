@@ -7,11 +7,13 @@
 First stable release.
 
 ### Changed
+
 - Updated minimum required version of php-ntlm.
 
 ## 1.0.0-rc.2 - 2017-03-11
 
 ### Changed
+
 - Fixed capitalization of URL property on PushSubscriptionRequestType.
 - Fixed capitalization of redirect element in autodiscovery.
 - Updated contact/update example to use a constant for the field URI.
@@ -20,19 +22,23 @@ First stable release.
 ## 1.0.0-rc.1 - 2017-03-02
 
 ### Added
+
 - ProposeNewTimeType implementation.
 
 ## 1.0.0-beta.4 - 2017-02-12
 
 ### Changed
+
 - Autodiscovery failure now throws a RuntimeException.
 
 ## 1.0.0-beta.3 - 2017-01-21
 
 ### Added
+
 - Example for a message with an inline attachment.
 
 ### Changed
+
 - Fixed Exchange 2007 version parsing in autodiscovery.
 - Fixed event title in event/create example.
 - Improved error messages in examples.
@@ -40,14 +46,17 @@ First stable release.
 ## 1.0.0-beta.2 - 2017-01-12
 
 ### Added
+
 - Autodiscover, user, event, message and timezone examples.
 
 ### Changed
+
 - Set default value to array for some properties that were not set.
 
 ## 1.0.0-beta.1 - 2016-12-30
 
 ### Added
+
 - Composer support.
 - Appropriate base classes.
 - Missing Exchange 2010 and 2013 operations.
@@ -56,6 +65,7 @@ First stable release.
 - Method to set the timezone for requests.
 
 ### Changed
+
 - Renamed and namespaced all classes to be PSR-4 compatible.
 - Updated various code documentation.
 - Assets now match the latest for Exchange 2016/Exchange Online.
@@ -65,18 +75,22 @@ First stable release.
 - Default Microsoft Exchange version is now 2013.
 
 ### Removed
+
 - Custom exception class.
 - Invalid schema versions.
 
 ### Deprecated
+
 - Instantiating enumeration classes, reference the constants instead.
 
 ## 0.1.1 - 2015-02-19
 
 ### Added
+
 - Added CHANGELOG.txt.
 
 ### Changed
+
 - Fixed EWSType_DistinguishedFolderIdNameType::JUNK value.
 - Fixed missing quote in README.txt.
 

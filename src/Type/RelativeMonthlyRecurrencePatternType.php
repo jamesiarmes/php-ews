@@ -10,8 +10,7 @@ namespace jamesiarmes\PhpEws\Type;
  *
  * @package php-ews\Type
  */
-class RelativeMonthlyRecurrencePatternType extends
-    IntervalRecurrencePatternBaseType
+class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBaseType
 {
     /**
      * Describes which week is used in a relative monthly recurrence pattern.

@@ -336,7 +336,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\ResponseMessageType[]
      */
     public $MarkAllItemsAsReadResponseMessage = array();
 
@@ -345,7 +345,7 @@ class ArrayOfResponseMessagesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Response\MarkAsJunkResponseMessageType
+     * @var \jamesiarmes\PhpEws\Response\MarkAsJunkResponseMessageType[]
      */
     public $MarkAsJunkResponseMessage = array();
 

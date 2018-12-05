@@ -38,7 +38,6 @@ $contact->Surname = 'Simpson';
 $contact->PhoneNumbers = new PhoneNumberDictionaryType();
 $contact->EmailAddresses = new EmailAddressDictionaryType();
 $contact->PhoneNumbers = new PhoneNumberDictionaryType();
-$contact->ExtendedProperty = new ExtendedPropertyType();
 
 // Set an email address.
 $email = new EmailAddressDictionaryEntryType();
@@ -68,7 +67,7 @@ $property->ExtendedFieldURI = new PathToExtendedFieldType();
 $property->ExtendedFieldURI->PropertyTag = '0x3A45';
 $property->ExtendedFieldURI->PropertyType = MapiPropertyTypeType::STRING;
 $property->Value = 'Mr.';
-$contact->ExtendedProperty = $property;
+$contact->ExtendedProperty[] = $property;
 
 // Set the "file as" mapping to "first name last name".
 $contact->FileAsMapping = FileAsMappingType::FIRST_SPACE_LAST;

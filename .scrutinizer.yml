@@ -1,11 +1,11 @@
 checks:
-    php:
-        code_rating: true
-        duplication: true
+  php:
+    code_rating: true
+    duplication: true
 tools:
-    php_code_sniffer:
-        config:
-            standard: "PSR2"
+  php_code_sniffer:
+    config:
+      standard: "PSR2"
 filter:
-    excluded_paths:
-        - "examples/"
+  excluded_paths:
+    - "examples/"

@@ -19,7 +19,7 @@ class ArrayOfConversationNodesType extends ArrayType
      *
      * @since Exchange 2013
      *
-     * @var \jamesiarmes\PhpEws\Type\ConversationNodeType
+     * @var \jamesiarmes\PhpEws\Type\ConversationNodeType[]
      */
     public $ConversationNode = array();
 }

@@ -11,8 +11,7 @@ namespace jamesiarmes\PhpEws\Response;
  *
  * @package php-ews\Type
  */
-class FindMailboxStatisticsByKeywordsResponseMessageType extends
-    ResponseMessageType
+class FindMailboxStatisticsByKeywordsResponseMessageType extends ResponseMessageType
 {
     /**
      * Specifies the result of a mailbox search.

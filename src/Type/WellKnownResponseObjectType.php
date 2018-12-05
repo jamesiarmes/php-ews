@@ -5,8 +5,6 @@
 
 namespace jamesiarmes\PhpEws\Type;
 
-use \jamesiarmes\PhpEws\Type;
-
 /**
  * Base class fot meeting request replies.
  *
