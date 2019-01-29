@@ -266,6 +266,24 @@ class Autodiscover
             $result = $this->trySRVRecord();
         }
 
+	if ($result === false and is_array($this->redirect) && array_key_exists('redirectAddr', $this->redirect)) {
+		// redirect was found. Try again with the new address
+		$this->email = $this->redirect['redirectAddr'];
+		$this->username = $this->redirect['redirectAddr'];
+		$this->setTLD();
+		$result = $this->discover();
+	}
+
+	if ($result === false and is_array($this->redirect) && array_key_exists('redirectUrl', $this->redirect)) {
+		// redirect was found. Try again with the new URL
+		// https://stackoverflow.com/questions/27745/getting-parts-of-a-url-regex
+		$regExp = "/^(.*:)//([A-Za-z0-9\-\.]+)(:[0-9]+)?(.*)$/";
+		if (preg_match($regExp, $this->redirect['redirectUrl'], $matches)) {
+			$this->tld = $matches[2];
+			$result = $this->discover();
+		}
+	}
+
         if ($result === false) {
             throw new \RuntimeException('Autodiscovery failed.');
         }
