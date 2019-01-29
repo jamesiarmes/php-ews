@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+### Added
+
+- Missing `MeetingResponseMessageType` properties.
+- Additional development dependencies.
+
+### Changed
+
+- Updated minimum PHP version to 7.1.0.
+- Fixed `ArrayOfTransitionsType::Id` default value.
+- Fixed file write vulnerability in the get attachments example.
+
+### Notes
+
+- Starting with this version, the minimum required PHP version will match the
+oldest version supported by PHP.
+
 ## 1.0.0 - 2017-10-03
 
 First stable release.

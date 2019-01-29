@@ -11,7 +11,7 @@
   ],
   "prefer-stable": true,
   "require": {
-    "php": ">=5.3.9",
+    "php": ">=7.1.0",
     "ext-soap": "*",
     "jamesiarmes/php-ntlm": "~1.0"
   },
