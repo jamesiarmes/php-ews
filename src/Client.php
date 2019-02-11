@@ -1604,6 +1604,9 @@ class Client
      */
     protected function initializeSoapClient()
     {
+        // Enable entity loader (required for loading the WSDL)
+        $entityLoaderDisabled = \libxml_disable_entity_loader(false);
+        
         $this->soap = new SoapClient(
             dirname(__FILE__) . '/assets/services.wsdl',
             array(
@@ -1615,6 +1618,9 @@ class Client
                 'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
             )
         );
+        
+        // Reset previous setting
+        \libxml_disable_entity_loader($entityLoaderDisabled);
 
         return $this->soap;
     }
