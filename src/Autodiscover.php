@@ -252,18 +252,31 @@ class Autodiscover
      */
     public function discover()
     {
-        $result = $this->tryTLD();
+        $result = false;
+        $actions = array(
+            'tryTLD',
+            'trySubdomain',
+            'trySubdomainUnauthenticatedGet',
+            'trySRVRecord'
+        );
+        $action = 0;
+        $bailout = 10;
+        $redirectCount = 0;
+        $maxRedirects = 5;
 
-        if ($result === false) {
-            $result = $this->trySubdomain();
-        }
-
-        if ($result === false) {
-            $result = $this->trySubdomainUnauthenticatedGet();
-        }
-
-        if ($result === false) {
-            $result = $this->trySRVRecord();
+        while (!$result && ($action < count($actions)) && $bailout--) {
+            if (is_array($this->redirect) && $redirectCount < $maxRedirects) {
+                $redirectCount++;
+                if ($this->email != $this->redirect['redirectAddr']) {
+                    $action = 0;
+                    $this->email = $this->redirect['redirectAddr'];
+                    $this->redirect = false;
+                    $this->setTLD();
+                }
+                continue;
+            }
+            $result = $this->$actions[$action]();
+            $action++;
         }
 
         if ($result === false) {
