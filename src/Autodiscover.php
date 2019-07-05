@@ -261,9 +261,12 @@ class Autodiscover
         );
         $action = 0;
         $bailout = 10;
+        $redirectCount = 0;
+        $maxRedirects = 5;
 
         while (!$result && ($action < count($actions)) && $bailout--) {
-            if (is_array($this->redirect)) {
+            if (is_array($this->redirect) && $redirectCount < $maxRedirects) {
+                $redirectCount++;
                 if ($this->email != $this->redirect['redirectAddr']) {
                     $action = 0;
                     $this->email = $this->redirect['redirectAddr'];
