@@ -136,6 +136,13 @@ class Client
      * @var \jamesiarmes\PhpEws\Type\ExchangeImpersonationType
      */
     protected $impersonation;
+    
+    /**
+     * Culture to use when opening a mailbox.
+     *
+     * @var string
+     */
+    protected $mailboxCulture;
 
     /**
      * Microsoft Exchange version that we are going to connect to
@@ -213,6 +220,17 @@ class Client
 
         // We need to re-build the SOAP headers.
         $this->headers = array();
+    }
+    
+    /**
+     * Sets the mailbox culture (locale) to use when opening a mailbox.
+     * The possible values for this element are described by RFC 3066.
+     *
+     * @param string $locale
+     */
+    public function setMailboxCulture($locale)
+    {
+        $this->mailboxCulture = $locale;
     }
 
     /**
@@ -1702,6 +1720,15 @@ class Client
                 'http://schemas.microsoft.com/exchange/services/2006/types',
                 'ExchangeImpersonation',
                 $this->impersonation
+            );
+        }
+        
+        // If a mailbox culture was set add it to the headers.
+        if (!empty($this->culture)) {
+            $this->headers[] = new \SoapHeader(
+                'http://schemas.microsoft.com/exchange/services/2006/types',
+                'MailboxCulture',
+                $this->culture
             );
         }
 
