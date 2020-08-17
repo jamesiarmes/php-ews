@@ -60,6 +60,13 @@ class DictionaryURIType extends Enumeration
     const CONTACTS_PHYSICAL_ADDRESS_COUNTRY = 'contacts:PhysicalAddress:Country';
 
     /**
+     * Represents the country or region of a contact.
+     *
+     * @var string
+     */
+    const CONTACTS_PHYSICAL_ADDRESS_COUNTRY_OR_REGION = 'contacts:PhysicalAddress:CountryOrRegion';
+
+    /**
      * Represents the postal code of a contact.
      *
      * @since Exchange 2007
