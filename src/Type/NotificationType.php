@@ -20,7 +20,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\MovedCopiedEventType
+     * @var \jamesiarmes\PhpEws\Type\MovedCopiedEventType[]
      */
     public $CopiedEvent;
 
@@ -29,7 +29,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType
+     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType[]
      */
     public $CreatedEvent;
 
@@ -38,7 +38,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType
+     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType[]
      */
     public $DeletedEvent;
 
@@ -47,7 +47,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2010
      *
-     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType
+     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType[]
      */
     public $FreeBusyChangedEvent;
 
@@ -56,7 +56,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\ModifiedEventType
+     * @var \jamesiarmes\PhpEws\Type\ModifiedEventType[]
      */
     public $ModifiedEvent;
 
@@ -76,7 +76,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\MovedCopiedEventType
+     * @var \jamesiarmes\PhpEws\Type\MovedCopiedEventType[]
      */
     public $MovedEvent;
 
@@ -85,7 +85,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType
+     * @var \jamesiarmes\PhpEws\Type\BaseObjectChangedEventType[]
      */
     public $NewMailEvent;
 
@@ -105,7 +105,7 @@ class NotificationType extends Type
      *
      * @since Exchange 2007
      *
-     * @var \jamesiarmes\PhpEws\Type\BaseNotificationEventType
+     * @var \jamesiarmes\PhpEws\Type\BaseNotificationEventType[]
      */
     public $StatusEvent;
 
