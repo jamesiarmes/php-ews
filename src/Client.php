@@ -103,6 +103,13 @@ class Client
     protected $password;
 
     /**
+     * Token to use when connecting to the Exchange server.
+     *
+     * @var string
+     */
+    protected $token;
+
+    /**
      * Location of the Exchange server.
      *
      * @var string
@@ -163,16 +170,25 @@ class Client
      */
     public function __construct(
         $server = null,
-        $username = null,
-        $password = null,
         $version = self::VERSION_2013
     ) {
         // Set the object properties.
         $this->setServer($server);
-        $this->setUsername($username);
-        $this->setPassword($password);
         $this->setVersion($version);
     }
+
+	public function authWithUserAndPass($username, $password) {
+
+        $this->setUsername($username);
+        $this->setPassword($password);
+
+	}
+
+	public function authWithOauth2($token) {
+
+        $this->setOath2Token($token);
+
+	}
 
     /**
      * Returns the SOAP Client that may be used to make calls against the server
@@ -236,6 +252,19 @@ class Client
     public function setServer($server)
     {
         $this->server = $server;
+
+        // We need to reinitialize the SOAP client.
+        $this->soap = null;
+    }
+
+    /**
+     * Sets the oath2 token
+     *
+     * @param string $token
+     */
+    public function setOath2Token($token)
+    {
+        $this->token = $token;
 
         // We need to reinitialize the SOAP client.
         $this->soap = null;
@@ -1604,16 +1633,29 @@ class Client
      */
     protected function initializeSoapClient()
     {
+
+		$authArray = array(
+			'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
+			'classmap' => $this->classMap(),
+			'curlopts' => $this->curl_options,
+			'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
+		); 
+
+		if(!empty($this->token)) {
+
+			$authArray["oauth"] = $this->token; 
+
+		}
+		else {
+
+			$authArray["user"] = $this->username; 
+			$authArray["password"] = $this->password; 
+
+		}
+
         $this->soap = new SoapClient(
             dirname(__FILE__) . '/assets/services.wsdl',
-            array(
-                'user' => $this->username,
-                'password' => $this->password,
-                'location' => 'https://' . $this->server . '/EWS/Exchange.asmx',
-                'classmap' => $this->classMap(),
-                'curlopts' => $this->curl_options,
-                'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
-            )
+            $authArray
         );
 
         return $this->soap;
