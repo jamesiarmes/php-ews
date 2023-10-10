@@ -31,5 +31,5 @@ class GetStreamingEventsType extends BaseRequestType
      *
      * @var \jamesiarmes\PhpEws\ArrayType\NonEmptyArrayOfSubscriptionIdsType
      */
-    public $SubscriptionId;
+    public $SubscriptionIds;
 }
