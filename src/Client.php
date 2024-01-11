@@ -16,6 +16,7 @@ use \jamesiarmes\PhpNtlm\SoapClient;
  * @SuppressWarnings(PHPMD.ExcessiveClassLength)
  * @SuppressWarnings(PHPMD.TooManyMethods)
  */
+#[\AllowDynamicProperties]
 class Client
 {
     /**

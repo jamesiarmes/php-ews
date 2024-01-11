@@ -10,6 +10,7 @@ namespace jamesiarmes\PhpEws\Type;
  *
  * @package php-ews\Type
  */
+#[\AllowDynamicProperties]
 class FolderType extends BaseFolderType
 {
     /**
